@@ -639,7 +639,7 @@ class wcpcsu_Shortcode
                                                         $wpcsu_img = $aazz_thumb['0'];
                                                     }
                                                 ?>
-                                                <div class="atw_grid--single">
+                                                <div class="atw_grid--single atw_grid_<?= $g_column;?> atw_tab_<?= $g_tablet?> atw_mobile_<?= $g_mobile;?>">
                                                     <div class="atw_item atw--single_item">
                                                         <div class="atw_item_top">
                                                             <div class="product-color owl-carousel">
@@ -905,7 +905,7 @@ class wcpcsu_Shortcode
                                                         }
                                                         ?>
 
-                                                        <div class="atw_grid--single">
+                                                        <div class="atw_grid--single atw_grid_<?= $g_column;?> atw_tab_<?= $g_tablet?> atw_mobile_<?= $g_mobile;?>">
                                                             <div class="atw_item atw--single_item atw_card atw_card_rounded">
                                                                 <div class="atw_item_top">
                                                                     <?php
