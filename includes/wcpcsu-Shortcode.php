@@ -40,6 +40,9 @@ class wcpcsu_Shortcode
         $header = !empty($header) ? $header : 'center';
         $h_title_show   = !empty($h_title_show) ? $h_title_show : 'no';
         $display_full_title   = !empty($display_full_title) ? $display_full_title : 'no';
+        $g_column          = !empty($g_column) ? intval($g_column) : 3;
+        $g_tablet   = !empty($g_tablet) ? intval($g_tablet) : 3;
+        $g_mobile   = !empty($g_mobile) ? intval($g_mobile) : 1;
 
         $common_args = array(
             'post_type'      => 'product',
@@ -636,7 +639,7 @@ class wcpcsu_Shortcode
                                                         $wpcsu_img = $aazz_thumb['0'];
                                                     }
                                                 ?>
-                                                <div class="atw_grid--single">
+                                                <div class="atw_grid--single atw_grid_<?= $g_column;?> atw_tab_<?= $g_tablet?> atw_mobile_<?= $g_mobile;?>">
                                                     <div class="atw_item atw--single_item">
                                                         <div class="atw_item_top">
                                                             <div class="product-color owl-carousel">
@@ -767,7 +770,7 @@ class wcpcsu_Shortcode
                                                             $wpcsu_img = $aazz_thumb['0'];
                                                         }
                                                         ?>
-                                                        <div class="atw_grid--single">
+                                                        <div class="atw_grid--single atw_grid_<?= $g_column;?> atw_tab_<?= $g_tablet?> atw_mobile_<?= $g_mobile;?>">
                                                             <div class="atw_item atw--single_item">
                                                                 <div class="atw_item_top">
                                                                     <?php
@@ -902,7 +905,7 @@ class wcpcsu_Shortcode
                                                         }
                                                         ?>
 
-                                                        <div class="atw_grid--single">
+                                                        <div class="atw_grid--single atw_grid_<?= $g_column;?> atw_tab_<?= $g_tablet?> atw_mobile_<?= $g_mobile;?>">
                                                             <div class="atw_item atw--single_item atw_card atw_card_rounded">
                                                                 <div class="atw_item_top">
                                                                     <?php

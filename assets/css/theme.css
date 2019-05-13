@@ -762,11 +762,28 @@
 }
 
 .atw_wrapper .atw_grid_wrapper .atw_grid--single{
-  width: 33.33%;
   padding-left: 15px;
   padding-right: 15px;
 }
 
+.atw_wrapper .atw_grid_wrapper .atw_grid_6 {
+  width: 16.66%;
+}
+.atw_wrapper .atw_grid_wrapper .atw_grid_5 {
+  width: 20%;
+}
+.atw_wrapper .atw_grid_wrapper .atw_grid_4 {
+  width: 25%;
+}
+.atw_wrapper .atw_grid_wrapper .atw_grid_3 {
+  width: 33.33%;
+}
+.atw_wrapper .atw_grid_wrapper .atw_grid_2 {
+  width: 50%;
+}
+.atw_wrapper .atw_grid_wrapper .atw_grid_1 {
+  width: 100%;
+}
 
 
 /*****************************
@@ -774,6 +791,78 @@
 *****************************/
 /*this is responsive scss*/
 /* 992 TO 1199 */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  .atw_wrapper .atw_grid_wrapper .atw_tab_4 {
+    width: 25%;
+  }
+  .atw_wrapper .atw_grid_wrapper .atw_tab_3 {
+    width: 33.33%;
+  }
+  .atw_wrapper .atw_grid_wrapper .atw_tab_2 {
+    width: 50%;
+  }
+  .atw_wrapper .atw_grid_wrapper .atw_tab_1 {
+    width: 100%;
+  }
+
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+  .atw_wrapper .atw_grid_wrapper .atw_tab_4 {
+    width: 25%;
+  }
+  .atw_wrapper .atw_grid_wrapper .atw_tab_3 {
+    width: 33.33%;
+  }
+  .atw_wrapper .atw_grid_wrapper .atw_tab_2 {
+    width: 50%;
+  }
+  .atw_wrapper .atw_grid_wrapper .atw_tab_1 {
+    width: 100%;
+  }
+
+}
+@media (min-width: 481px) and (max-width: 767px) {
+
+  .atw_wrapper .atw_grid_wrapper .atw_mobile_4 {
+    width: 25%;
+  }
+  .atw_wrapper .atw_grid_wrapper .atw_mobile_3 {
+    width: 33.33%;
+  }
+  .atw_wrapper .atw_grid_wrapper .atw_mobile_2 {
+    width: 50%;
+  }
+  .atw_wrapper .atw_grid_wrapper .atw_mobile_1 {
+    width: 100%;
+  }
+
+}
+@media (min-width: 320px) and (max-width: 480px) {
+
+  .atw_wrapper .atw_grid_wrapper .atw_mobile_4 {
+    width: 25%;
+  }
+  .atw_wrapper .atw_grid_wrapper .atw_mobile_3 {
+    width: 33.33%;
+  }
+  .atw_wrapper .atw_grid_wrapper .atw_mobile_2 {
+    width: 50%;
+  }
+  .atw_wrapper .atw_grid_wrapper .atw_mobile_1 {
+    width: 100%;
+  }
+
+}
+
+
+
+
+
+
 @media (min-width: 992px) and (max-width: 1199px) {
   #atw_style5 .atw--single_item .atw_item_top .atw_overlay_content {
     left: 20px;
