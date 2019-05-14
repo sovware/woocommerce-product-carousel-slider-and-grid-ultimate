@@ -25,6 +25,19 @@
   outline: 0;
 }
 
+.atw_wrapper .add_to_cart_button,
+.atw_wrapper a.button,
+.atw_wrapper a.button.product_type_external{
+  font-size: 14px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  line-height: 20px;
+}
+.atw_wrapper .atw_item .atw_item_bottom .atw_item_title a,
+.atw_wrapper .atw--single_item .atw_item_top .atw_post_view{
+  text-decoration: none;
+}
+
 .divider {
   height: 1px;
   margin: 90px 0;
