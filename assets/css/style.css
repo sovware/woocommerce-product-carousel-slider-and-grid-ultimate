@@ -27,16 +27,48 @@
 
 .atw_wrapper .add_to_cart_button,
 .atw_wrapper a.button,
-.atw_wrapper a.button.product_type_external{
+.atw_wrapper a.button.product_type_external,
+.atw_wrapper .added_to_cart{
   font-size: 14px;
   padding-top: 10px;
   padding-bottom: 10px;
   line-height: 20px;
 }
-.atw_wrapper .atw_item .atw_item_bottom .atw_item_title a,
-.atw_wrapper .atw--single_item .atw_item_top .atw_post_view{
-  text-decoration: none;
+.atw_wrapper .add_to_cart_button,
+.atw_wrapper a.button,
+.atw_wrapper a.button.product_type_external,
+.atw_wrapper .added_to_cart,
+.atw_wrapper a.added_to_cart{
+  font-size: 14px !important;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+  line-height: 20px !important;
+  border-radius: 3px;
+  text-transform: none !important;
+  white-space: inherit;
 }
+
+.atw_wrapper .add_to_cart_button:hover,
+.atw_wrapper a.button:hover,
+.atw_wrapper a.button.product_type_external:hover,
+.atw_wrapper .added_to_cart:hover,
+.atw_wrapper a.added_to_cart:hover{
+  text-transform: none;
+  box-shadow: none;
+}
+
+.atw_wrapper .atw_item .atw_item_bottom .atw_item_title a,
+.atw_wrapper .atw_item .atw_item_bottom .atw_item_title a:hover,
+.atw_wrapper .atw--single_item .atw_item_top .atw_post_view,
+.atw_wrapper .atw--single_item .atw_item_top .atw_post_view:hover{
+  text-decoration: none;
+  box-shadow:none;
+  border: 0 none;
+}
+.atw_wrapper .cart .add_to_cart_inline{
+  margin-bottom: 0;
+}
+
 
 .divider {
   height: 1px;
@@ -802,6 +834,20 @@
           flex-grow: 0;
 }
 
+#atw_style6 .atw--single_item .atw_item_bottom .atw_item_info .atw_rating{
+  margin-bottom: 15px;
+}
+#atw_style6 .atw--single_item .atw_item_bottom .atw_item_info .atw_price{
+  line-height: normal;
+  margin-bottom: 15px;
+}
+.atw_wrapper .atw_title h3{
+  line-height: normal;
+}
+.atw_wrapper .added_to_cart{
+  padding: 10px 20px !important;
+}
+
 /*****************************
 	RESPONSIVE
 *****************************/
@@ -844,5 +890,7 @@
     padding-right: 15px;
   }
 }
+
+
 
 /*# sourceMappingURL=maps/style.css.map */
