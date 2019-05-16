@@ -102,7 +102,7 @@ Post Grid and Carousel Ultimate plugin is very easy to use. Just follow the foll
 
 == Changelog ==
 = 1.3.1 =
-* Fix: add to cart issue on popup
+* Fix: Add to cart issue on popup
 = 1.3.0 =
 * Add: Language file
 * Add: Option to display title on single line
