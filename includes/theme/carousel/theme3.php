@@ -8,8 +8,6 @@
 
     }
 
-
-
     #atw_style11 .atw__title11:before {
 
         content: none;
@@ -23,15 +21,11 @@
 
     }
 
-
-
     #atw_style11 .atw__title11 h3 {
 
         text-align: left;
 
     }
-
-
 
     #atw_style11 .atw_wrapper .atw_title {
 
@@ -57,8 +51,6 @@
 
     }
 
-
-
     #atw_style11 .atw--single_item .atw_item_top {
 
         -webkit-border-radius: 5px;
@@ -71,8 +63,6 @@
 
     }
 
-
-
     #atw_style11 .atw--single_item .atw_item_top .badge--left {
 
         left: 0;
@@ -81,8 +71,6 @@
 
     }
 
-
-
     #atw_style11 .atw--single_item .atw_item_top .badge--right {
 
         right: 0;
@@ -90,8 +78,6 @@
         top: 0;
 
     }
-
-
 
     #atw_style11 .atw--single_item .atw_item_top .atw_item_view {
 
@@ -141,8 +127,6 @@
 
     }
 
-
-
     #atw_style11 .atw--single_item .atw_item_top .atw_item_view a {
 
         padding: 12px 25px;
@@ -174,8 +158,6 @@
 
     }
 
-
-
     #atw_style11 .atw--single_item .atw_item_bottom .atw_item_info {
 
         padding: 20px 0;
@@ -183,8 +165,6 @@
         text-align: center;
 
     }
-
-
 
     #atw_style11 .atw--single_item .atw_item_bottom .atw_item_info .atw_item_title {
 
@@ -198,8 +178,6 @@
 
     }
 
-
-
     #atw_style11 .atw--single_item .atw_item_bottom .atw_item_info .atw_item_title a {
         color: <?php echo !empty($title_font_color) ? $title_font_color : '#363940';?> !important;
         font-size: <?php echo !empty($title_font_size) ? $title_font_size : '16px';?>!important;
@@ -209,23 +187,17 @@
         display: block;
     }
 
-
-
     #atw_style11 .atw--single_item .atw_item_bottom .atw_item_info .atw_item_title a:hover {
 
         color: <?php echo !empty($title_hover_font_color) ? $title_hover_font_color : '#ff5500';?>!important;
 
     }
 
-
-
     #atw_style11 .atw--single_item .atw_item_bottom .atw_item_info .atw_price, #atw_style11 .atw--single_item .atw_item_bottom .atw_item_info .atw_rating {
 
         display: block;
 
     }
-
-
 
     #atw_style11 .atw--single_item .atw_item_bottom .atw_item_info .atw_price {
 
@@ -237,8 +209,6 @@
 
     }
 
-
-
     #atw_style11 .atw--single_item:hover .atw_item_top .atw_item_view {
 
         visibility: visible;
@@ -249,15 +219,11 @@
 
     }
 
-
-
     #atw_style11 .atw--single_item:hover .atw_item_top .atw_item_view a {
 
         margin-top: 0;
 
     }
-
-
 
     #atw_style11 .atw_slider_controls .slider--control<?php echo $rand_id;?> {
 
@@ -293,8 +259,6 @@
 
     }
 
-
-
     #atw_style11 .atw_slider_controls .slider--control<?php echo $rand_id;?>:hover {
 
         border-color: <?php echo !empty($nav_border_hover) ? $nav_border_hover : '#ff5500';?>;
@@ -305,8 +269,6 @@
 
     }
 
-
-
     #atw_style11 .atw_slider_controls .slider--control<?php echo $rand_id; ?>.icon-arrow-left {
 
         left: auto;
@@ -315,15 +277,13 @@
 
     }
 
-
-
     #atw_style11 .atw_slider_controls .slider--control<?php echo $rand_id; ?>.icon-arrow-right {
 
         right: 25px;
 
     }
 
-    .woocommerce .woocommerce-product-rating{
+    .atw_wrapper .woocommerce .woocommerce-product-rating{
 
         display: flex;
 
@@ -331,15 +291,11 @@
 
     }
 
-
-
-    .woocommerce .woocommerce-product-rating .star-rating{
+    .atw_wrapper .woocommerce .woocommerce-product-rating .star-rating{
 
         color: <?php echo !empty($ratings_color) ? $ratings_color : '#FEB507';?>;
 
     }
-
-
 
     /*# sourceMappingURL=maps/theme11.css.map */
 
@@ -381,8 +337,6 @@
 
     }
 
-
-
     #atw_style11 .cart .add_to_cart_inline .add_to_cart_button  {
 
         color: <?php echo !empty($cart_font_color) ? $cart_font_color : '#ff5500';?>!important;
@@ -391,8 +345,6 @@
 
     }
 
-
-
     #atw_style11 .cart .add_to_cart_inline .add_to_cart_button:hover {
 
         color: <?php echo !empty($cart_button_hover_font_color) ? $cart_button_hover_font_color : '#ff5500';?>!important;
@@ -400,8 +352,6 @@
         background: <?php echo !empty($cart_button_hover_color) ? $cart_button_hover_color : '#ffffff';?>!important;
 
     }
-
-
 
     #atw_style11 .add_to_cart_button.added {
 
@@ -412,7 +362,6 @@
         padding: 17px 25px !important;
     }
 
-
     .atw_wrapper #atw_style11 .atw_floated_badge a{
 
         color: <?php echo !empty($ribbon_font_color) ? $ribbon_font_color : '#fff';?> !important;
@@ -422,8 +371,6 @@
         border: <?php echo !empty($ribbon_bg_color) ? $ribbon_bg_color : '#ff5500';?> !important;
 
     }
-
-
 
     #atw_style11 .atw_title  h3{
 

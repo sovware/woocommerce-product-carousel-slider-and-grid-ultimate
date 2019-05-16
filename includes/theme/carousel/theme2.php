@@ -260,7 +260,7 @@
 
     }
 
-    .woocommerce .woocommerce-product-rating {
+    .atw_wrapper .woocommerce .woocommerce-product-rating {
 
         display: flex;
 
@@ -270,7 +270,7 @@
 
 
 
-    .woocommerce .woocommerce-product-rating .star-rating {
+    .atw_wrapper .woocommerce .woocommerce-product-rating .star-rating {
 
         color: <?php echo !empty($ratings_color) ? $ratings_color : '#FEB507';?>;
 

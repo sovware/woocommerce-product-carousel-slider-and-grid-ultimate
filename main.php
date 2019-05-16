@@ -166,7 +166,6 @@ Final class Woocmmerce_Product_carousel_slider_ultimate
         wp_register_style('featherlight-style', WCPCSU_URL . 'assets/css/featherlight.css');
         wp_register_style('wcpcsu-style', WCPCSU_URL . 'assets/css/style.css');
         wp_register_script('wcpcsu-owl-carousel',WCPCSU_URL . 'assets/js/owl.carousel.min.js',array('jquery'));
-        wp_register_script('wcpcsu-tab', WCPCSU_URL . 'assets/js/tab.js',array('jquery'));
         wp_register_script('wcpcsu-featherlight', WCPCSU_URL . 'assets/js/featherlight.js',array('jquery'));
         wp_register_script('wcpcsu-custom', WCPCSU_URL . 'assets/js/custom.js',array('jquery'));
     }
