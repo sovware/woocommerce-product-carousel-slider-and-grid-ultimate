@@ -102,10 +102,10 @@ Post Grid and Carousel Ultimate plugin is very easy to use. Just follow the foll
 
 == Changelog ==
 = 1.3.0 =
-* Added: language file
-* Added: Option to display title on single line
-* Fixed: style issue
-* Tweak: improve cropping system
+* Add: Language file
+* Add: Option to display title on single line
+* Fix: Style issue
+* Tweak: Improved cropping system
 = 1.2.0 =
 * Added: rtl support
 * Fixed: badge issue
