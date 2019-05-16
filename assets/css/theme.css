@@ -357,6 +357,10 @@
   border-color: #ff5500;
 }
 
+#atw_style11 .atw--single_item .atw_item_top .atw_item_view a {
+  padding: 12px 25px !important;
+}
+
 .atw_wrapper .tab-content .tab-pane {
   display: block;
   height: 0;
