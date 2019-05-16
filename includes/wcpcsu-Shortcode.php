@@ -376,7 +376,11 @@ class wcpcsu_Shortcode
                                                                             <h1 style="font-size: 40px; margin-bottom: 30px"><?php the_title();?></h1>
                                                                             <span class="atw_product_price" style="display: block; margin-bottom: 30px; color: red; font-size: 20px;"><?php echo $product->get_price_html(); ?></span>
                                                                             <p><?php echo get_the_content();?></p>
-                                                                            <?php echo do_shortcode('[add_to_cart id="'.get_the_ID().'" show_price = "false"]'); ?>
+                                                                            <?php
+            if("yes" == $display_cart) {
+                echo do_shortcode('[add_to_cart id="' . get_the_ID() . '" show_price = "false"]');
+            }
+                                                                            ?>
                                                                         </div>
                                                                     </div>
                                                                 </section>
@@ -787,7 +791,11 @@ class wcpcsu_Shortcode
                                                                                 <h1 style="font-size: 40px; margin-bottom: 30px"><?php the_title();?></h1>
                                                                                 <span class="atw_product_price" style="display: block; margin-bottom: 30px; color: red; font-size: 20px;"><?php echo $product->get_price_html(); ?></span>
                                                                                 <p><?php echo get_the_content();?></p>
-                                                                                <?php echo do_shortcode('[add_to_cart id="'.get_the_ID().'" show_price = "false"]'); ?>
+                                                                                <?php
+            if("yes" == $display_cart) {
+                echo do_shortcode('[add_to_cart id="' . get_the_ID() . '" show_price = "false"]');
+            }
+                ?>
                                                                             </div>
                                                                         </div>
                                                                     </section>
