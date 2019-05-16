@@ -1,0 +1,541 @@
+# WordPress Blank Pot
+# Copyright (C) 2014 ...
+# This file is distributed under the GNU General Public License v2 or later.
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: WordPress Blank Pot v1.0.0\n"
+"POT-Creation-Date: 2019-05-16 12:03+0600\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Your Name <you@example.com>\n"
+"Language-Team: Your Team <translations@example.com>\n"
+"Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Textdomain-Support: yesX-Generator: Poedit 1.6.4\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;esc_html_e;esc_html_x:1,2c;esc_html__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_attr__;_ex:1,2c;_nx:4c,1,2;"
+"_nx_noop:4c,1,2;_x:1,2c;_n:1,2;_n_noop:1,2;__ngettext:1,2;"
+"__ngettext_noop:1,2;_c,_nc:4c,1,2\n"
+"X-Poedit-Basepath: ..\n"
+"Language: en_US\n"
+"X-Generator: Poedit 2.2.1\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: includes/settings/carousel.php:17 includes/settings/grid.php:8
+msgid "Select Theme"
+msgstr ""
+
+#: includes/settings/carousel.php:43
+msgid "Auto Play"
+msgstr ""
+
+#: includes/settings/carousel.php:52 includes/settings/carousel.php:76
+#: includes/settings/carousel.php:99 includes/settings/carousel.php:249
+#: includes/settings/general.php:39 includes/settings/general.php:92
+#: includes/settings/general.php:156 includes/settings/general.php:202
+#: includes/settings/general.php:229 includes/settings/general.php:253
+#: includes/settings/general.php:281 includes/settings/general.php:303
+#: includes/settings/general.php:325 includes/settings/general.php:347
+msgid "Yes"
+msgstr ""
+
+#: includes/settings/carousel.php:59 includes/settings/carousel.php:81
+#: includes/settings/carousel.php:107 includes/settings/carousel.php:259
+#: includes/settings/general.php:48 includes/settings/general.php:101
+#: includes/settings/general.php:162 includes/settings/general.php:203
+#: includes/settings/general.php:230 includes/settings/general.php:254
+#: includes/settings/general.php:286 includes/settings/general.php:308
+#: includes/settings/general.php:331 includes/settings/general.php:349
+msgid "No"
+msgstr ""
+
+#: includes/settings/carousel.php:68
+msgid "Repeat Product"
+msgstr ""
+
+#: includes/settings/carousel.php:90
+msgid "Stop on Hover"
+msgstr ""
+
+#: includes/settings/carousel.php:117
+msgid "Products to display on Desktop)"
+msgstr ""
+
+#: includes/settings/carousel.php:125
+msgid ""
+"Maximum amount of items to display at a time on Desktop that screen "
+"size larger than 1198px"
+msgstr ""
+
+#: includes/settings/carousel.php:133
+msgid "Products to display on Laptop"
+msgstr ""
+
+#: includes/settings/carousel.php:141
+msgid ""
+"Maximum amount of items to display at a time on Desktop that screen "
+"size larger than 978px"
+msgstr ""
+
+#: includes/settings/carousel.php:148
+msgid "Products to Display on Tablet"
+msgstr ""
+
+#: includes/settings/carousel.php:156
+msgid "Maximum amount of items to display at a time on Tablet"
+msgstr ""
+
+#: includes/settings/carousel.php:163
+msgid "Products to Display on Mobile"
+msgstr ""
+
+#: includes/settings/carousel.php:171
+msgid "Maximum amount of items to display at a time on Mobile"
+msgstr ""
+
+#: includes/settings/carousel.php:178
+msgid "Slide Speed"
+msgstr ""
+
+#: includes/settings/carousel.php:186
+msgid "Here 1000 is equal to 1 second. So provide a speed accordingly"
+msgstr ""
+
+#: includes/settings/carousel.php:193
+msgid "Slide Timeout"
+msgstr ""
+
+#: includes/settings/carousel.php:201
+msgid "Here 1000 is equal to 1 second. So provide a timeout accordingly"
+msgstr ""
+
+#: includes/settings/carousel.php:208
+msgid "Scroll"
+msgstr ""
+
+#: includes/settings/carousel.php:219
+msgid "Per Item"
+msgstr ""
+
+#: includes/settings/carousel.php:227
+msgid "Per Page"
+msgstr ""
+
+#: includes/settings/carousel.php:238
+msgid "Navigation Show"
+msgstr ""
+
+#: includes/settings/carousel.php:270
+msgid "Navigation Arrow Color"
+msgstr ""
+
+#: includes/settings/carousel.php:284
+msgid "Navigation Background Color"
+msgstr ""
+
+#: includes/settings/carousel.php:298
+msgid "Navigation Border Color"
+msgstr ""
+
+#: includes/settings/carousel.php:312
+msgid "Navigation Hover Arrow Color"
+msgstr ""
+
+#: includes/settings/carousel.php:326
+msgid "Navigaiton Hover Background Color"
+msgstr ""
+
+#: includes/settings/carousel.php:340
+msgid "Navigaiton Hover Border Color"
+msgstr ""
+
+#: includes/settings/general.php:15
+msgid "Layout"
+msgstr ""
+
+#: includes/settings/general.php:28
+msgid "Display Full Title"
+msgstr ""
+
+#: includes/settings/general.php:58
+msgid "Total Products to Display"
+msgstr ""
+
+#: includes/settings/general.php:62
+msgid "How many products to display in the carousel slider"
+msgstr ""
+
+#: includes/settings/general.php:68
+msgid "Header Title"
+msgstr ""
+
+#: includes/settings/general.php:81
+msgid "Display Header"
+msgstr ""
+
+#: includes/settings/general.php:110
+msgid "Header Position"
+msgstr ""
+
+#: includes/settings/general.php:120
+msgid "Center"
+msgstr ""
+
+#: includes/settings/general.php:129
+msgid "Left"
+msgstr ""
+
+#: includes/settings/general.php:137
+msgid "Right"
+msgstr ""
+
+#: includes/settings/general.php:148
+msgid "Display Product Title"
+msgstr ""
+
+#: includes/settings/general.php:170
+msgid "Products Type"
+msgstr ""
+
+#: includes/settings/general.php:174
+msgid "Latest Products"
+msgstr ""
+
+#: includes/settings/general.php:175
+msgid "Older Products"
+msgstr ""
+
+#: includes/settings/general.php:176
+msgid "Featured Products"
+msgstr ""
+
+#: includes/settings/general.php:178
+msgid "What type of products to display in the carousel slider"
+msgstr ""
+
+#: includes/settings/general.php:181
+msgid "On Sale Products"
+msgstr ""
+
+#: includes/settings/general.php:182
+msgid "Best Selling Products"
+msgstr ""
+
+#: includes/settings/general.php:183
+msgid "Top Rated Products"
+msgstr ""
+
+#: includes/settings/general.php:184
+msgid "Random Products"
+msgstr ""
+
+#: includes/settings/general.php:185
+msgid "Category Products"
+msgstr ""
+
+#: includes/settings/general.php:186
+msgid "Products by ID"
+msgstr ""
+
+#: includes/settings/general.php:187
+msgid "Products by SKU"
+msgstr ""
+
+#: includes/settings/general.php:188
+msgid "Products by Tags"
+msgstr ""
+
+#: includes/settings/general.php:189
+msgid "Products by Year"
+msgstr ""
+
+#: includes/settings/general.php:190
+msgid "Products by Month"
+msgstr ""
+
+#: includes/settings/general.php:198
+msgid "Display \"Sale\" Ribbon"
+msgstr ""
+
+#: includes/settings/general.php:205
+msgid "Whether to show the \"Sale\" ribbon for On-Sale products or not"
+msgstr ""
+
+#: includes/settings/general.php:210 includes/wcpcsu-Shortcode.php:239
+#: includes/wcpcsu-Shortcode.php:394 includes/wcpcsu-Shortcode.php:522
+#: includes/wcpcsu-Shortcode.php:672 includes/wcpcsu-Shortcode.php:805
+#: includes/wcpcsu-Shortcode.php:923
+msgid "Sale!"
+msgstr ""
+
+#: includes/settings/general.php:213
+msgid "Enter the text for the sale ribbon. Default text is \"Sale!\"."
+msgstr ""
+
+#: includes/settings/general.php:225
+msgid "Display \"Featured\" Ribbon"
+msgstr ""
+
+#: includes/settings/general.php:232
+msgid ""
+"Whether to show the \"Featured\" ribbon for featured products or not."
+msgstr ""
+
+#: includes/settings/general.php:236 includes/wcpcsu-Shortcode.php:256
+#: includes/wcpcsu-Shortcode.php:411 includes/wcpcsu-Shortcode.php:539
+#: includes/wcpcsu-Shortcode.php:689 includes/wcpcsu-Shortcode.php:822
+#: includes/wcpcsu-Shortcode.php:940
+msgid "Featured!"
+msgstr ""
+
+#: includes/settings/general.php:239
+msgid ""
+"Enter the text for the featured ribbon. Default text is \"Featured!\"."
+msgstr ""
+
+#: includes/settings/general.php:249
+msgid "Display the \"Sold Out\" Ribbon"
+msgstr ""
+
+#: includes/settings/general.php:256
+msgid ""
+"Whether to display the \"Sold Out\" ribbon for out-of-stock products "
+"or not"
+msgstr ""
+
+#: includes/settings/general.php:262 includes/wcpcsu-Shortcode.php:275
+#: includes/wcpcsu-Shortcode.php:430 includes/wcpcsu-Shortcode.php:558
+#: includes/wcpcsu-Shortcode.php:708 includes/wcpcsu-Shortcode.php:841
+#: includes/wcpcsu-Shortcode.php:959
+msgid "Sold Out!"
+msgstr ""
+
+#: includes/settings/general.php:265
+msgid ""
+"Enter the text for the sold out ribbon. Default text is \"Sold Out!\"."
+msgstr ""
+
+#: includes/settings/general.php:275
+msgid "Display Product Price"
+msgstr ""
+
+#: includes/settings/general.php:295
+msgid "Display Product Ratings"
+msgstr ""
+
+#: includes/settings/general.php:317
+msgid "Display \"Add to Cart\" button"
+msgstr ""
+
+#: includes/settings/general.php:340
+msgid "Image Resize & Crop"
+msgstr ""
+
+#: includes/settings/general.php:351
+msgid ""
+"If the product images are not in the same size, this feature is "
+"helpful. It automatically resizes and crops. Note: your image must be "
+"higher than/equal to the cropping size set below. Otherwise, you may "
+"need to enable image upscaling feature from the settings below."
+msgstr ""
+
+#: includes/settings/general.php:358
+msgid "Image Width"
+msgstr ""
+
+#: includes/settings/general.php:362
+msgid "Image cropping width"
+msgstr ""
+
+#: includes/settings/general.php:369
+msgid "Image Height"
+msgstr ""
+
+#: includes/settings/general.php:373
+msgid "Image cropping height"
+msgstr ""
+
+#: includes/settings/grid.php:33
+msgid "Select Columns"
+msgstr ""
+
+#: includes/settings/grid.php:48
+msgid "Select Columns for Tablet"
+msgstr ""
+
+#: includes/settings/grid.php:63
+msgid "Select Columns for Mobile"
+msgstr ""
+
+#: includes/settings/settings.php:7
+msgid "Shortcodes"
+msgstr ""
+
+#: includes/settings/settings.php:8
+msgid "General Settings"
+msgstr ""
+
+#: includes/settings/settings.php:9
+msgid "Carousel Settings"
+msgstr ""
+
+#: includes/settings/settings.php:10
+msgid "Grid Settings"
+msgstr ""
+
+#: includes/settings/settings.php:11
+msgid "Style Settings"
+msgstr ""
+
+#: includes/settings/settings.php:21
+msgid "Shortcode"
+msgstr ""
+
+#: includes/settings/settings.php:22
+msgid ""
+"Copy this shortcode and paste on page or post where you want to "
+"display logos.Use PHP code to your themes file to display them."
+msgstr ""
+
+#: includes/settings/settings.php:26
+msgid "PHP Code:"
+msgstr ""
+
+#: includes/settings/style.php:7
+msgid "Header Font Size"
+msgstr ""
+
+#: includes/settings/style.php:18
+msgid "Header Font Color"
+msgstr ""
+
+#: includes/settings/style.php:32
+msgid "Product Title Font Size"
+msgstr ""
+
+#: includes/settings/style.php:42
+msgid "Product Title Font Color"
+msgstr ""
+
+#: includes/settings/style.php:52
+msgid "Product Title Hover Font Color"
+msgstr ""
+
+#: includes/settings/style.php:64
+msgid "Product Price Font Size"
+msgstr ""
+
+#: includes/settings/style.php:76
+msgid "Product Price Font Color"
+msgstr ""
+
+#: includes/settings/style.php:88
+msgid "Product Ratings Color"
+msgstr ""
+
+#: includes/settings/style.php:98
+msgid "Product Ratings Size"
+msgstr ""
+
+#: includes/settings/style.php:109
+msgid "\"Add to Cart\" Font Color"
+msgstr ""
+
+#: includes/settings/style.php:119
+msgid "\"Add to Cart\" Button Background Color"
+msgstr ""
+
+#: includes/settings/style.php:129
+msgid "\"Add to Cart\" Button Hover Background Color"
+msgstr ""
+
+#: includes/settings/style.php:139
+msgid "\"Add to Cart\" Hover Font Color"
+msgstr ""
+
+#: includes/settings/style.php:149
+msgid "Ribbon Background Color"
+msgstr ""
+
+#: includes/settings/style.php:159
+msgid "Ribbon Font Color"
+msgstr ""
+
+#: includes/wcpcsu-Shortcode.php:1014
+msgid "No products found"
+msgstr ""
+
+#: includes/wcpcsu-custom-post.php:21 includes/wcpcsu-custom-post.php:22
+msgid "Add New"
+msgstr ""
+
+#: includes/wcpcsu-custom-post.php:23
+msgid "Edit Woocommerce Product Grid Carousel Slider Ultimate"
+msgstr ""
+
+#: includes/wcpcsu-custom-post.php:24
+msgid "View Woocommerce Product Grid Carousel Slider Ultimate"
+msgstr ""
+
+#: includes/wcpcsu-custom-post.php:25
+msgid "All Woocommerce Product Ultimate"
+msgstr ""
+
+#: includes/wcpcsu-custom-post.php:26
+msgid "Search Woocommerce Product Grid Carousel Slider Ultimate"
+msgstr ""
+
+#: includes/wcpcsu-custom-post.php:27
+msgid "Parent Woocommerce Product Grid Carousel Slider Ultimate:"
+msgstr ""
+
+#: includes/wcpcsu-custom-post.php:28
+msgid "No Woocommerce Product Grid Carousel Slider Ultimate found."
+msgstr ""
+
+#: includes/wcpcsu-custom-post.php:29
+msgid ""
+"No Woocommerce Product Grid Carousel Slider Ultimate found in Trash."
+msgstr ""
+
+#: includes/wcpcsu-custom-post.php:34
+msgid "Description."
+msgstr ""
+
+#: includes/wcpcsu-custom-post.php:56
+msgid "All Titles"
+msgstr ""
+
+#: includes/wcpcsu-custom-post.php:57
+msgid "All Shortcodes"
+msgstr ""
+
+#: includes/wcpcsu-custom-post.php:59
+msgid "Created at"
+msgstr ""
+
+#: includes/wcpcsu-meta-box.php:17
+msgid "Settings & Shortcode Generator"
+msgstr ""
+
+#: main.php:109
+msgid "Support"
+msgstr ""
+
+#: main.php:109
+msgid "Usage & Support"
+msgstr ""
+
+#: main.php:142
+msgid ""
+"WooCommerce plugin is not activated. Please install and activate it to "
+"use"
+msgstr ""
+
+#: main.php:142
+msgid "WooCommerce Product Carousel Slider Ultimate Plugin"
+msgstr ""

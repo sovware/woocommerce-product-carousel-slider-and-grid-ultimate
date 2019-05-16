@@ -128,7 +128,7 @@
         margin: 0;
 
     }
-    
+
     #atw_style1 .atw_item .atw_item_bottom .atw_item_title a, #atw_style2 .atw_item .atw_item_bottom .atw_item_title a {
         color: <?php echo !empty($title_font_color) ? $title_font_color : '#363940';?>!important;
         font-size: <?php echo !empty($title_font_size) ? $title_font_size : '16px';?>!important;

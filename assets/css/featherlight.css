@@ -10,10 +10,10 @@
 		line-height: 1em;
 		font-size: 12px;
 	}
-	.add_to_cart_inline {
+	.featherlight-content .add_to_cart_inline {
 		border:none !important;
 	}
-	.add_to_cart_button {
+	.featherlight-content .add_to_cart_button {
 		background: #ff5500!important;
 		color: #fff!important;
 	}
