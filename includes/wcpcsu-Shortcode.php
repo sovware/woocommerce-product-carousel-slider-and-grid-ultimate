@@ -212,7 +212,7 @@ class wcpcsu_Shortcode
                                                     <div class="product-color owl-carousel">
                                                         <div>
                                                             <?php
-                                            if ( has_post_thumbnail( $loop->post->ID ) ) { echo '<img src="'.esc_url($wpcsu_img).'" class="wpcsp-thumb"  alt="'.get_the_title().'" />'; } else { echo '<img src="'.wc_placeholder_img_src().'" alt="Placeholder" />'; }
+                                            if ( has_post_thumbnail( $loop->post->ID ) ) { echo '<a href=""><img src="'.esc_url($wpcsu_img).'" class="wpcsp-thumb"  alt="'.get_the_title().'" /></a>'; } else { echo '<a href=""><img src="'.wc_placeholder_img_src().'" alt="Placeholder" /></a>'; }
                                                              ?>
                                                         </div>
                                                     </div>
@@ -362,7 +362,7 @@ class wcpcsu_Shortcode
                                                             <div class="atw_item_top">
 
                                                                 <?php
-                                                                    if ( has_post_thumbnail( $loop->post->ID ) ) { echo '<img src="'.esc_url($wpcsu_img).'" data-featherlight="#f'.$rand_id.'" class="wpcsp-thumb"  alt="'.get_the_title().'" />'; } else { echo '<img src="'.wc_placeholder_img_src().'" alt="Placeholder" />'; }
+                                                                    if ( has_post_thumbnail( $loop->post->ID ) ) { echo '<a href=""><img src="'.esc_url($wpcsu_img).'" data-featherlight="#f'.$rand_id.'" class="wpcsp-thumb"  alt="'.get_the_title().'" /></a>'; } else { echo '<a href=""><img src="'.wc_placeholder_img_src().'" alt="Placeholder" /><a>'; }
                                                                 ?>
 
                                                                 <a  class="atw_post_view">
@@ -371,7 +371,7 @@ class wcpcsu_Shortcode
                                                                 <section style="display: none">
                                                                     <div class="lightbox" style="display: flex;" id="f<?php echo get_the_id();?>">
                                                                         <div class="atw_image_l" style="margin-right: 30px;"><?php
-                                                                            if ( has_post_thumbnail( $loop->post->ID ) ) { echo '<img src="'.esc_url($wpcsu_img).'" class="wpcsp-thumb"  alt="'.get_the_title().'" />'; } else { echo '<img src="'.wc_placeholder_img_src().'" alt="Placeholder" />'; }?></div>
+                                                                            if ( has_post_thumbnail( $loop->post->ID ) ) { echo '<a href=""><img src="'.esc_url($wpcsu_img).'" class="wpcsp-thumb"  alt="'.get_the_title().'" /></a>'; } else { echo '<a href=""><img src="'.wc_placeholder_img_src().'" alt="Placeholder" /></a>'; }?></div>
                                                                         <div class="atw_product_desc">
                                                                             <h1 style="font-size: 40px; margin-bottom: 30px"><?php the_title();?></h1>
                                                                             <span class="atw_product_price" style="display: block; margin-bottom: 30px; color: red; font-size: 20px;"><?php echo $product->get_price_html(); ?></span>
@@ -510,7 +510,7 @@ class wcpcsu_Shortcode
                                                 <div class="atw_item atw--single_item atw_card atw_card_rounded">
                                                     <div class="atw_item_top">
                                                         <?php
-                                                            if ( has_post_thumbnail( $loop->post->ID ) ) { echo '<img src="'.esc_url($wpcsu_img).'" class="wpcsp-thumb"  alt="'.get_the_title().'" />'; } else { echo '<img src="'.wc_placeholder_img_src().'" alt="Placeholder" />'; }
+                                                            if ( has_post_thumbnail( $loop->post->ID ) ) { echo '<a href=""><img src="'.esc_url($wpcsu_img).'" class="wpcsp-thumb"  alt="'.get_the_title().'" /></a>'; } else { echo '<a href=""><img src="'.wc_placeholder_img_src().'" alt="Placeholder" /></a>'; }
                                                         ?>
                                                         <?php
                                                         if( !empty($display_sale_ribbon) && $display_sale_ribbon == "yes") {
@@ -649,7 +649,7 @@ class wcpcsu_Shortcode
                                                             <div class="product-color owl-carousel">
                                                                 <div>
                                                                      <?php
-                                                                     if ( has_post_thumbnail( $loop->post->ID ) ) { echo '<img src="'.esc_url($wpcsu_img).'" class="wpcsp-thumb"  alt="'.get_the_title().'" />'; } else { echo '<img src="'.wc_placeholder_img_src().'" alt="Placeholder" />'; }
+                                                                     if ( has_post_thumbnail( $loop->post->ID ) ) { echo '<a href=""><img src="'.esc_url($wpcsu_img).'" class="wpcsp-thumb"  alt="'.get_the_title().'" /></a>'; } else { echo '<a href=""><img src="'.wc_placeholder_img_src().'" alt="Placeholder" /></a>'; }
                                                                      ?>
                                                                 </div>
                                                             </div>
@@ -778,7 +778,7 @@ class wcpcsu_Shortcode
                                                             <div class="atw_item atw--single_item">
                                                                 <div class="atw_item_top">
                                                                     <?php
-                                                                        if ( has_post_thumbnail( $loop->post->ID ) ) { echo '<img src="'.esc_url($wpcsu_img).'" class="wpcsp-thumb"  alt="'.get_the_title().'" />'; } else { echo '<img src="'.wc_placeholder_img_src().'" alt="Placeholder" />'; }
+                                                                        if ( has_post_thumbnail( $loop->post->ID ) ) { echo '<a href=""><img src="'.esc_url($wpcsu_img).'" class="wpcsp-thumb"  alt="'.get_the_title().'" /></a>'; } else { echo '<a href=""><img src="'.wc_placeholder_img_src().'" alt="Placeholder" /></a>'; }
                                                                     ?>
                                                                     <a  data-featherlight= "#f<?php echo get_the_id();?>" class="atw_post_view">
                                                                         <span class="icon-eye"></span>
@@ -786,7 +786,7 @@ class wcpcsu_Shortcode
                                                                     <section style="display: none">
                                                                         <div class="lightbox" style="display: flex;" id="f<?php echo get_the_id();?>">
                                                                             <div class="atw_image_l" style="margin-right: 30px;"><?php
-                                                                                if ( has_post_thumbnail( $loop->post->ID ) ) { echo '<img src="'.esc_url($wpcsu_img).'" class="wpcsp-thumb"  alt="'.get_the_title().'" />'; } else { echo '<img src="'.wc_placeholder_img_src().'" alt="Placeholder" />'; }?></div>
+                                                                                if ( has_post_thumbnail( $loop->post->ID ) ) { echo '<a href=""><img src="'.esc_url($wpcsu_img).'" class="wpcsp-thumb"  alt="'.get_the_title().'" /></a>'; } else { echo '<a href=""><img src="'.wc_placeholder_img_src().'" alt="Placeholder" /></a>'; }?></div>
                                                                             <div class="atw_product_desc">
                                                                                 <h1 style="font-size: 40px; margin-bottom: 30px"><?php the_title();?></h1>
                                                                                 <span class="atw_product_price" style="display: block; margin-bottom: 30px; color: red; font-size: 20px;"><?php echo $product->get_price_html(); ?></span>
@@ -917,7 +917,7 @@ class wcpcsu_Shortcode
                                                             <div class="atw_item atw--single_item atw_card atw_card_rounded">
                                                                 <div class="atw_item_top">
                                                                     <?php
-                                                                    if ( has_post_thumbnail( $loop->post->ID ) ) { echo '<img src="'.esc_url($wpcsu_img).'" class="wpcsp-thumb"  alt="'.get_the_title().'" />'; } else { echo '<img src="'.wc_placeholder_img_src().'" alt="Placeholder" />'; }
+                                                                    if ( has_post_thumbnail( $loop->post->ID ) ) { echo '<a href=""><img src="'.esc_url($wpcsu_img).'" class="wpcsp-thumb"  alt="'.get_the_title().'" /></a>'; } else { echo '<a href=""><img src="'.wc_placeholder_img_src().'" alt="Placeholder" /></a>'; }
                                                                     if( !empty($display_sale_ribbon) && $display_sale_ribbon == "yes") {
                                                                         echo '<div class="atw_floated_badge badge--right">';
                                                                         if ( $product->is_on_sale() ) {
