@@ -3,7 +3,7 @@
 Plugin Name: WooCommerce Product Carousel, Slider and Grid Ultimate
 Plugin URI:  https://aazztech.com/product/woocommerce-product-carousel-slider-grid-ultimate-pro
 Description: It is a fully responsive and mobile friendly WooCommerce Product Carousel, Slider and Grid plugin which comes with lots of features.
-Version:     1.3.1
+Version:     1.3.2
 Author:      AazzTech
 Author URI:  https://aazztech.com
 License:     GPL2
@@ -133,6 +133,7 @@ Final class Woocmmerce_Product_carousel_slider_ultimate
         require_once WCPCSU_INC_DIR . 'wcpcsu-meta-box.php';
         require_once WCPCSU_INC_DIR . 'wcpcsu-Shortcode.php';
         require_once WCPCSU_INC_DIR . 'aq_resizer.php';
+        require_once WCPCSU_INC_DIR . 'helper-functions.php';
     }
 
     public function WCPCSU_admin_notice() { ?>

@@ -3,7 +3,7 @@ Contributors: AazzTech
 Tags: woocommerce carousel, woocommerce slider, woocommerce grid, woocommerce product slider, woocommerce product carousel
 Requires at least: 4.0
 Tested up to: 5.2
-Stable tag: 1.3.1
+Stable tag: 1.3.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -63,6 +63,7 @@ More amazing features available in [__Pro version__](https://aazztech.com/produc
 *   Ready Ribbons & Custom Ribbons.
 *   Product excerpt and option to limit excerpt words.
 *   Display/hide excerpt with font size and color change options.
+*   Display/hide out of stock products.
 *   Enable/disable hover effect on product image.
 *   Scroll by per item or page.
 *   And many more…
@@ -101,6 +102,8 @@ Post Grid and Carousel Ultimate plugin is very easy to use. Just follow the foll
 12. Backend: Style Settings
 
 == Changelog ==
+= 1.3.2 =
+* Tweak: Images make clickable
 = 1.3.1 =
 * Fix: Add to cart issue on popup
 = 1.3.0 =

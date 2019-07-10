@@ -44,6 +44,7 @@
                 <li>Show total wishlist to any page/post via shortcode.</li>
                 <li>Product excerpt and option to limit excerpt words</li>
                 <li>Display/hide excerpt with font size and color change options</li>
+                <li>Display/hide out of stock products</li>
                 <li>Ready Ribbons & Custom Ribbons.</li>
                 <li>Scroll by per item or page</li>
                 <li>And many more…</li>

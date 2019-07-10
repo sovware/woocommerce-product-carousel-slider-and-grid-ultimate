@@ -1,3 +1,6 @@
+<?php
+$grid_pagination          = !empty($grid_pagination) ? $grid_pagination : 'no';
+?>
 <!--TAB 3  Grid setting -->
 <div id="lcsp-tab-3" class="lcsp-tab-content">
     <div class="cmb2-wrap form-table">
@@ -24,6 +27,31 @@
                         <option disabled>Theme-13 (Pro)</option>
                         <option disabled>Theme-14 (Pro)</option>
                     </select>
+                </div>
+            </div>
+
+            <!--Pagination-->
+            <div class="cmb-row cmb-type-radio">
+                <div class="cmb-th">
+                    <label for="lcsp_ap"><?php esc_html_e('Display Pagination', WCPCSU_TEXTDOMAIN); ?></label>
+                </div>
+                <div class="cmb-td">
+                    <ul class="cmb2-radio-list cmb2-list">
+                        <li>
+                            <input type="radio" class="cmb2-option"
+                                   name="wcpscu[grid_pagination]"
+                                   id="grid_pagination"
+                                   value="yes" <?php checked('yes', $grid_pagination, true); ?>>
+                            <label for="grid_pagination"><?php esc_html_e('Yes', WCPCSU_TEXTDOMAIN); ?></label>
+                        </li>
+                        <li>
+                            <input type="radio" class="cmb2-option"
+                                   name="wcpscu[grid_pagination]"
+                                   id="grid_pagination2"
+                                   value="no" <?php checked('no', $grid_pagination, true); ?>>
+                            <label for="grid_pagination2"><?php esc_html_e('No', WCPCSU_TEXTDOMAIN); ?></label>
+                        </li>
+                    </ul>
                 </div>
             </div>
 

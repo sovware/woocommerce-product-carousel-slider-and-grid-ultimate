@@ -21,46 +21,47 @@ class wcpcsu_Shortcode
         $data_array = Woocmmerce_Product_carousel_slider_ultimate::unserialize_and_decode24($enc_data);
         $value = is_array($data_array) ? $data_array : array();
         extract($value);
-        $rand_id = rand();
-
-        $total_products = !empty($total_products) ? $total_products : 6;
-        $layout         = !empty($layout) ? $layout : 'carousel';
-        $products_type  = !empty($products_type) ? $products_type : 'latest';
-        $img_crop = !empty($img_crop) ? $img_crop : 'yes';
-        $crop_image_width = !empty($crop_image_width) ? intval($crop_image_width) : 300;
-        $crop_image_height = !empty($crop_image_height) ? intval($crop_image_height) : 300;
-        $c_theme  			= !empty($c_theme) ? $c_theme : 'c_theme1';
-        $g_theme  			= !empty($g_theme) ? $g_theme : 'g_theme1';
-        $display_title = !empty($display_title) ? $display_title : 'yes';
-        $display_price = !empty($display_price) ? $display_price : 'yes';
-        $display_ratings = !empty($display_ratings) ? $display_ratings : 'yes';
-        $display_cart = !empty($display_cart) ? $display_cart : 'yes';
-        $nav_show = !empty($nav_show) ? $nav_show : 'yes';
-        $ribbon = !empty($ribbon) ? $ribbon : 'discount';
-        $header = !empty($header) ? $header : 'center';
-        $h_title_show   = !empty($h_title_show) ? $h_title_show : 'no';
-        $display_full_title   = !empty($display_full_title) ? $display_full_title : 'no';
-        $g_column          = !empty($g_column) ? intval($g_column) : 3;
-        $g_tablet   = !empty($g_tablet) ? intval($g_tablet) : 3;
-        $g_mobile   = !empty($g_mobile) ? intval($g_mobile) : 1;
-
+        $rand_id                 = rand();
+        $total_products          = !empty($total_products) ? $total_products : 6;
+        $layout                  = !empty($layout) ? $layout : 'carousel';
+        $products_type           = !empty($products_type) ? $products_type : 'latest';
+        $img_crop                = !empty($img_crop) ? $img_crop : 'yes';
+        $crop_image_width        = !empty($crop_image_width) ? intval($crop_image_width) : 300;
+        $crop_image_height       = !empty($crop_image_height) ? intval($crop_image_height) : 300;
+        $c_theme  			     = !empty($c_theme) ? $c_theme : 'c_theme1';
+        $g_theme  			     = !empty($g_theme) ? $g_theme : 'g_theme1';
+        $display_title           = !empty($display_title) ? $display_title : 'yes';
+        $display_price           = !empty($display_price) ? $display_price : 'yes';
+        $display_ratings         = !empty($display_ratings) ? $display_ratings : 'yes';
+        $display_cart            = !empty($display_cart) ? $display_cart : 'yes';
+        $nav_show                = !empty($nav_show) ? $nav_show : 'yes';
+        $ribbon                  = !empty($ribbon) ? $ribbon : 'discount';
+        $header                  = !empty($header) ? $header : 'center';
+        $h_title_show            = !empty($h_title_show) ? $h_title_show : 'no';
+        $display_full_title      = !empty($display_full_title) ? $display_full_title : 'no';
+        $g_column                = !empty($g_column) ? intval($g_column) : 3;
+        $g_tablet                = !empty($g_tablet) ? intval($g_tablet) : 3;
+        $g_mobile                = !empty($g_mobile) ? intval($g_mobile) : 1;
+        $grid_pagination         = !empty($grid_pagination) ? $grid_pagination : 'no';
+        $paged                   =  wcpcsu_get_paged_num();
         $common_args = array(
             'post_type'      => 'product',
             'posts_per_page' => !empty($total_products) ? intval($total_products) : 12,
             'post_status'    => 'publish',
             'meta_query'     => array(
                 array(
-                    'key' => '_stock_status',
-                    'value' => 'outofstock',
-                    'compare' => 'NOT IN'
+                    'key'       => '_stock_status',
+                    'value'     => 'outofstock',
+                    'compare'   => 'NOT IN'
                 )
             )
         );
-
+        if('grid' == $layout && 'yes' == $grid_pagination) {
+            $common_args['paged']    = $paged;
+        }
         if ($products_type == "latest") {
             $args = $common_args;
         }
-
         elseif ($products_type == "older") {
             $older_args = array(
                 'orderby'     => 'date',
@@ -68,7 +69,6 @@ class wcpcsu_Shortcode
             );
             $args = array_merge($common_args, $older_args);
         }
-
         elseif ($products_type == "featured") {
             $meta_query  = WC()->query->get_meta_query();
             $tax_query   = WC()->query->get_tax_query();
@@ -212,7 +212,7 @@ class wcpcsu_Shortcode
                                                     <div class="product-color owl-carousel">
                                                         <div>
                                                             <?php
-                                            if ( has_post_thumbnail( $loop->post->ID ) ) { echo '<a href=""><img src="'.esc_url($wpcsu_img).'" class="wpcsp-thumb"  alt="'.get_the_title().'" /></a>'; } else { echo '<a href=""><img src="'.wc_placeholder_img_src().'" alt="Placeholder" /></a>'; }
+                                            if ( has_post_thumbnail( $loop->post->ID ) ) { echo '<a href="'.get_the_permalink().'"><img src="'.esc_url($wpcsu_img).'" class="wpcsp-thumb"  alt="'.get_the_title().'" /></a>'; } else { echo '<a href="'.get_the_permalink().'"><img src="'.wc_placeholder_img_src().'" alt="Placeholder" /></a>'; }
                                                              ?>
                                                         </div>
                                                     </div>
@@ -232,7 +232,7 @@ class wcpcsu_Shortcode
                                                             echo !empty($sale_ribbon_text)
                                                                 ?  apply_filters(
                                                                     'woocommerce_sale_flash',
-                                                                    '<a href="" class="float-d-ratio">' . esc_html($sale_ribbon_text) . '</a>',
+                                                                    '<a href="'.get_the_permalink().'" class="float-d-ratio">' . esc_html($sale_ribbon_text) . '</a>',
                                                                     $post, $product )
                                                                 : apply_filters(
                                                                     'woocommerce_sale_flash',
@@ -267,12 +267,12 @@ class wcpcsu_Shortcode
 
                                                             echo !empty($sold_out_ribbon_text)
                                                                 ?  apply_filters( 'wpcsp_sold_out_ribbon',
-                                                                    '<a href="" class="float-d-ratio">' . esc_html($sold_out_ribbon_text) . '</a>',
+                                                                    '<a href="'.get_the_permalink().'" class="float-d-ratio">' . esc_html($sold_out_ribbon_text) . '</a>',
                                                                     $post, $product )
 
                                                                 : apply_filters(
                                                                     'wpcsp_sold_out_ribbon',
-                                                                    '<a href="" class="float-d-ratio">' . esc_html__( 'Sold Out!', WPCSP_TEXTDOMAIN ) . '</a>',
+                                                                    '<a href="'.get_the_permalink().'" class="float-d-ratio">' . esc_html__( 'Sold Out!', WPCSP_TEXTDOMAIN ) . '</a>',
                                                                     $post, $product );
 
                                                         }
@@ -362,7 +362,7 @@ class wcpcsu_Shortcode
                                                             <div class="atw_item_top">
 
                                                                 <?php
-                                                                    if ( has_post_thumbnail( $loop->post->ID ) ) { echo '<a href=""><img src="'.esc_url($wpcsu_img).'" data-featherlight="#f'.$rand_id.'" class="wpcsp-thumb"  alt="'.get_the_title().'" /></a>'; } else { echo '<a href=""><img src="'.wc_placeholder_img_src().'" alt="Placeholder" /><a>'; }
+                                                                    if ( has_post_thumbnail( $loop->post->ID ) ) { echo '<a href=""><img src="'.esc_url($wpcsu_img).'" data-featherlight="#f'.$rand_id.'" class="wpcsp-thumb"  alt="'.get_the_title().'" /></a>'; } else { echo '<a href="'.get_the_permalink().'"><img src="'.wc_placeholder_img_src().'" alt="Placeholder" /><a>'; }
                                                                 ?>
 
                                                                 <a  class="atw_post_view">
@@ -395,7 +395,7 @@ class wcpcsu_Shortcode
                                                                     $post, $product )
                                                                     : apply_filters(
                                                                     'woocommerce_sale_flash',
-                                                                    '<a href="" class="float-d-ratio">' . esc_html__( 'Sale!', WPCSP_TEXTDOMAIN ) . '</a>',
+                                                                    '<a href="'.get_the_permalink().'" class="float-d-ratio">' . esc_html__( 'Sale!', WPCSP_TEXTDOMAIN ) . '</a>',
                                                                     $post, $product );
 
                                                                     }
@@ -408,11 +408,11 @@ class wcpcsu_Shortcode
                                                                     if ( $product->is_featured() ) {
                                                                     echo !empty($feature_ribbon_text)
                                                                     ?  apply_filters( 'wpcsp_featured_ribbon',
-                                                                    '<a href="" class="float-d-ratio">' . esc_html($feature_ribbon_text) . '</a>',
+                                                                    '<a href="'.get_the_permalink().'" class="float-d-ratio">' . esc_html($feature_ribbon_text) . '</a>',
                                                                     $post, $product )
                                                                     : apply_filters(
                                                                     'wpcsp_featured_ribbon',
-                                                                    '<a href="" class="float-d-ratio">' . esc_html__( 'Featured!', WPCSP_TEXTDOMAIN ) . '</a>',
+                                                                    '<a href="'.get_the_permalink().'" class="float-d-ratio">' . esc_html__( 'Featured!', WPCSP_TEXTDOMAIN ) . '</a>',
                                                                     $post, $product );
                                                                     }
                                                                     echo '</div>';
@@ -426,12 +426,12 @@ class wcpcsu_Shortcode
 
                                                                     echo !empty($sold_out_ribbon_text)
                                                                     ?  apply_filters( 'wpcsp_sold_out_ribbon',
-                                                                    '<a href="" class="float-d-ratio">' . esc_html($sold_out_ribbon_text) . '</a>',
+                                                                    '<a href="'.get_the_permalink().'" class="float-d-ratio">' . esc_html($sold_out_ribbon_text) . '</a>',
                                                                     $post, $product )
 
                                                                     : apply_filters(
                                                                     'wpcsp_sold_out_ribbon',
-                                                                    '<a href="" class="float-d-ratio">' . esc_html__( 'Sold Out!', WPCSP_TEXTDOMAIN ) . '</a>',
+                                                                    '<a href="'.get_the_permalink().'" class="float-d-ratio">' . esc_html__( 'Sold Out!', WPCSP_TEXTDOMAIN ) . '</a>',
                                                                     $post, $product );
 
                                                                     }
@@ -510,7 +510,7 @@ class wcpcsu_Shortcode
                                                 <div class="atw_item atw--single_item atw_card atw_card_rounded">
                                                     <div class="atw_item_top">
                                                         <?php
-                                                            if ( has_post_thumbnail( $loop->post->ID ) ) { echo '<a href=""><img src="'.esc_url($wpcsu_img).'" class="wpcsp-thumb"  alt="'.get_the_title().'" /></a>'; } else { echo '<a href=""><img src="'.wc_placeholder_img_src().'" alt="Placeholder" /></a>'; }
+                                                            if ( has_post_thumbnail( $loop->post->ID ) ) { echo '<a href="'.get_the_permalink().'"><img src="'.esc_url($wpcsu_img).'" class="wpcsp-thumb"  alt="'.get_the_title().'" /></a>'; } else { echo '<a href=""><img src="'.wc_placeholder_img_src().'" alt="Placeholder" /></a>'; }
                                                         ?>
                                                         <?php
                                                         if( !empty($display_sale_ribbon) && $display_sale_ribbon == "yes") {
@@ -536,11 +536,11 @@ class wcpcsu_Shortcode
                                                             if ( $product->is_featured() ) {
                                                                 echo !empty($feature_ribbon_text)
                                                                     ?  apply_filters( 'wpcsp_featured_ribbon',
-                                                                        '<a href="" class="float-d-ratio">' . esc_html($feature_ribbon_text) . '</a>',
+                                                                        '<a href="'.get_the_permalink().'" class="float-d-ratio">' . esc_html($feature_ribbon_text) . '</a>',
                                                                         $post, $product )
                                                                     : apply_filters(
                                                                         'wpcsp_featured_ribbon',
-                                                                        '<a href="" class="float-d-ratio">' . esc_html__( 'Featured!', WPCSP_TEXTDOMAIN ) . '</a>',
+                                                                        '<a href="'.get_the_permalink().'" class="float-d-ratio">' . esc_html__( 'Featured!', WPCSP_TEXTDOMAIN ) . '</a>',
                                                                         $post, $product );
                                                             }
                                                             echo '</div>';
@@ -554,12 +554,12 @@ class wcpcsu_Shortcode
 
                                                                 echo !empty($sold_out_ribbon_text)
                                                                     ?  apply_filters( 'wpcsp_sold_out_ribbon',
-                                                                        '<a href="" class="float-d-ratio">' . esc_html($sold_out_ribbon_text) . '</a>',
+                                                                        '<a href="'.get_the_permalink().'" class="float-d-ratio">' . esc_html($sold_out_ribbon_text) . '</a>',
                                                                         $post, $product )
 
                                                                     : apply_filters(
                                                                         'wpcsp_sold_out_ribbon',
-                                                                        '<a href="" class="float-d-ratio">' . esc_html__( 'Sold Out!', WPCSP_TEXTDOMAIN ) . '</a>',
+                                                                        '<a href="'.get_the_permalink().'" class="float-d-ratio">' . esc_html__( 'Sold Out!', WPCSP_TEXTDOMAIN ) . '</a>',
                                                                         $post, $product );
 
                                                             }
@@ -649,7 +649,7 @@ class wcpcsu_Shortcode
                                                             <div class="product-color owl-carousel">
                                                                 <div>
                                                                      <?php
-                                                                     if ( has_post_thumbnail( $loop->post->ID ) ) { echo '<a href=""><img src="'.esc_url($wpcsu_img).'" class="wpcsp-thumb"  alt="'.get_the_title().'" /></a>'; } else { echo '<a href=""><img src="'.wc_placeholder_img_src().'" alt="Placeholder" /></a>'; }
+                                                                     if ( has_post_thumbnail( $loop->post->ID ) ) { echo '<a href="'.get_the_permalink().'"><img src="'.esc_url($wpcsu_img).'" class="wpcsp-thumb"  alt="'.get_the_title().'" /></a>'; } else { echo '<a href=""><img src="'.wc_placeholder_img_src().'" alt="Placeholder" /></a>'; }
                                                                      ?>
                                                                 </div>
                                                             </div>
@@ -669,11 +669,11 @@ class wcpcsu_Shortcode
                                                                     echo !empty($sale_ribbon_text)
                                                                         ?  apply_filters(
                                                                             'woocommerce_sale_flash',
-                                                                            '<a href="" class="float-d-ratio">' . esc_html($sale_ribbon_text) . '</a>',
+                                                                            '<a href="'.get_the_permalink().'" class="float-d-ratio">' . esc_html($sale_ribbon_text) . '</a>',
                                                                             $post, $product )
                                                                         : apply_filters(
                                                                             'woocommerce_sale_flash',
-                                                                            '<a href="" class="float-d-ratio">' . esc_html__( 'Sale!', WPCSP_TEXTDOMAIN ) . '</a>',
+                                                                            '<a href="'.get_the_permalink().'" class="float-d-ratio">' . esc_html__( 'Sale!', WPCSP_TEXTDOMAIN ) . '</a>',
                                                                             $post, $product );
 
                                                                 }
@@ -686,11 +686,11 @@ class wcpcsu_Shortcode
                                                                 if ( $product->is_featured() ) {
                                                                     echo !empty($feature_ribbon_text)
                                                                         ?  apply_filters( 'wpcsp_featured_ribbon',
-                                                                            '<a href="" class="float-d-ratio">' . esc_html($feature_ribbon_text) . '</a>',
+                                                                            '<a href="'.get_the_permalink().'" class="float-d-ratio">' . esc_html($feature_ribbon_text) . '</a>',
                                                                             $post, $product )
                                                                         : apply_filters(
                                                                             'wpcsp_featured_ribbon',
-                                                                            '<a href="" class="float-d-ratio">' . esc_html__( 'Featured!', WPCSP_TEXTDOMAIN ) . '</a>',
+                                                                            '<a href="'.get_the_permalink().'" class="float-d-ratio">' . esc_html__( 'Featured!', WPCSP_TEXTDOMAIN ) . '</a>',
                                                                             $post, $product );
                                                                 }
                                                                 echo '</div>';
@@ -704,12 +704,12 @@ class wcpcsu_Shortcode
 
                                                                     echo !empty($sold_out_ribbon_text)
                                                                         ?  apply_filters( 'wpcsp_sold_out_ribbon',
-                                                                            '<a href="" class="float-d-ratio">' . esc_html($sold_out_ribbon_text) . '</a>',
+                                                                            '<a href="'.get_the_permalink().'" class="float-d-ratio">' . esc_html($sold_out_ribbon_text) . '</a>',
                                                                             $post, $product )
 
                                                                         : apply_filters(
                                                                             'wpcsp_sold_out_ribbon',
-                                                                            '<a href="" class="float-d-ratio">' . esc_html__( 'Sold Out!', WPCSP_TEXTDOMAIN ) . '</a>',
+                                                                            '<a href="'.get_the_permalink().'" class="float-d-ratio">' . esc_html__( 'Sold Out!', WPCSP_TEXTDOMAIN ) . '</a>',
                                                                             $post, $product );
 
                                                                 }
@@ -742,12 +742,26 @@ class wcpcsu_Shortcode
                                                 </div>
                                                 <?php
                                                endwhile;
+                                               wp_reset_postdata();
                                                ?>
                                             </div>
                                         </div>
+                                        <?php
+                                        $grid_pagination = !empty($grid_pagination) ? $grid_pagination : '';
+                                        if ('yes' == $grid_pagination) {
+                                            ?>
+                                            <div class="row atbd_listing_pagination">
+                                                <div class="col-md-12">
+                                                    <?php
+                                                    $paged = !empty($paged) ? $paged : '';
+                                                    echo wcpcsu_pagination($loop, $paged);
+                                                    ?>
+                                                </div>
+                                            </div>
+                                        <?php } ?>
+
                                     </div>
                                     <!-- end #atw_style2 -->
-
                                     <?php
                                     }elseif('g_theme2' == $g_theme) {
                                     include WCPCSU_INC_DIR . 'theme/carousel/theme2.php';
@@ -786,7 +800,7 @@ class wcpcsu_Shortcode
                                                                     <section style="display: none">
                                                                         <div class="lightbox" style="display: flex;" id="f<?php echo get_the_id();?>">
                                                                             <div class="atw_image_l" style="margin-right: 30px;"><?php
-                                                                                if ( has_post_thumbnail( $loop->post->ID ) ) { echo '<a href=""><img src="'.esc_url($wpcsu_img).'" class="wpcsp-thumb"  alt="'.get_the_title().'" /></a>'; } else { echo '<a href=""><img src="'.wc_placeholder_img_src().'" alt="Placeholder" /></a>'; }?></div>
+                                                                                if ( has_post_thumbnail( $loop->post->ID ) ) { echo '<a href="'.get_the_permalink().'"><img src="'.esc_url($wpcsu_img).'" class="wpcsp-thumb"  alt="'.get_the_title().'" /></a>'; } else { echo '<a href="'.get_the_permalink().'"><img src="'.wc_placeholder_img_src().'" alt="Placeholder" /></a>'; }?></div>
                                                                             <div class="atw_product_desc">
                                                                                 <h1 style="font-size: 40px; margin-bottom: 30px"><?php the_title();?></h1>
                                                                                 <span class="atw_product_price" style="display: block; margin-bottom: 30px; color: red; font-size: 20px;"><?php echo $product->get_price_html(); ?></span>
@@ -823,11 +837,11 @@ class wcpcsu_Shortcode
                                                                         if ( $product->is_featured() ) {
                                                                             echo !empty($feature_ribbon_text)
                                                                                 ?  apply_filters( 'wpcsp_featured_ribbon',
-                                                                                    '<a href="" class="float-d-ratio">' . esc_html($feature_ribbon_text) . '</a>',
+                                                                                    '<a href="'.get_the_permalink().'" class="float-d-ratio">' . esc_html($feature_ribbon_text) . '</a>',
                                                                                     $post, $product )
                                                                                 : apply_filters(
                                                                                     'wpcsp_featured_ribbon',
-                                                                                    '<a href="" class="float-d-ratio">' . esc_html__( 'Featured!', WPCSP_TEXTDOMAIN ) . '</a>',
+                                                                                    '<a href="'.get_the_permalink().'" class="float-d-ratio">' . esc_html__( 'Featured!', WPCSP_TEXTDOMAIN ) . '</a>',
                                                                                     $post, $product );
                                                                         }
                                                                         echo '</div>';
@@ -841,7 +855,7 @@ class wcpcsu_Shortcode
 
                                                                             echo !empty($sold_out_ribbon_text)
                                                                                 ?  apply_filters( 'wpcsp_sold_out_ribbon',
-                                                                                    '<a href="" class="float-d-ratio">' . esc_html($sold_out_ribbon_text) . '</a>',
+                                                                                    '<a href="'.get_the_permalink().'" class="float-d-ratio">' . esc_html($sold_out_ribbon_text) . '</a>',
                                                                                     $post, $product )
 
                                                                                 : apply_filters(
@@ -880,10 +894,24 @@ class wcpcsu_Shortcode
                                                         </div>
                                                         <?php
                                                         endwhile;
+                                                        wp_reset_postdata();
                                                         ?>
                                                     </div>
                                                 </div>
                                                 <!-- Ends: .atw_slider_wrapper -->
+                                                <?php
+                                                $grid_pagination = !empty($grid_pagination) ? $grid_pagination : '';
+                                                if ('yes' == $grid_pagination) {
+                                                    ?>
+                                                    <div class="row atbd_listing_pagination">
+                                                        <div class="col-md-12">
+                                                            <?php
+                                                            $paged = !empty($paged) ? $paged : '';
+                                                            echo wcpcsu_pagination($loop, $paged);
+                                                            ?>
+                                                        </div>
+                                                    </div>
+                                                <?php } ?>
                                             </div>
                                             <!-- Ends: .atw_style3 -->
 
@@ -917,7 +945,7 @@ class wcpcsu_Shortcode
                                                             <div class="atw_item atw--single_item atw_card atw_card_rounded">
                                                                 <div class="atw_item_top">
                                                                     <?php
-                                                                    if ( has_post_thumbnail( $loop->post->ID ) ) { echo '<a href=""><img src="'.esc_url($wpcsu_img).'" class="wpcsp-thumb"  alt="'.get_the_title().'" /></a>'; } else { echo '<a href=""><img src="'.wc_placeholder_img_src().'" alt="Placeholder" /></a>'; }
+                                                                    if ( has_post_thumbnail( $loop->post->ID ) ) { echo '<a href="'.get_the_permalink().'"><img src="'.esc_url($wpcsu_img).'" class="wpcsp-thumb"  alt="'.get_the_title().'" /></a>'; } else { echo '<a href="'.get_the_permalink().'"><img src="'.wc_placeholder_img_src().'" alt="Placeholder" /></a>'; }
                                                                     if( !empty($display_sale_ribbon) && $display_sale_ribbon == "yes") {
                                                                         echo '<div class="atw_floated_badge badge--right">';
                                                                         if ( $product->is_on_sale() ) {
@@ -941,11 +969,11 @@ class wcpcsu_Shortcode
                                                                         if ( $product->is_featured() ) {
                                                                             echo !empty($feature_ribbon_text)
                                                                                 ?  apply_filters( 'wpcsp_featured_ribbon',
-                                                                                    '<a href="" class="float-d-ratio">' . esc_html($feature_ribbon_text) . '</a>',
+                                                                                    '<a href="'.get_the_permalink().'" class="float-d-ratio">' . esc_html($feature_ribbon_text) . '</a>',
                                                                                     $post, $product )
                                                                                 : apply_filters(
                                                                                     'wpcsp_featured_ribbon',
-                                                                                    '<a href="" class="float-d-ratio">' . esc_html__( 'Featured!', WPCSP_TEXTDOMAIN ) . '</a>',
+                                                                                    '<a href="'.get_the_permalink().'" class="float-d-ratio">' . esc_html__( 'Featured!', WPCSP_TEXTDOMAIN ) . '</a>',
                                                                                     $post, $product );
                                                                         }
                                                                         echo '</div>';
@@ -959,12 +987,12 @@ class wcpcsu_Shortcode
 
                                                                             echo !empty($sold_out_ribbon_text)
                                                                                 ?  apply_filters( 'wpcsp_sold_out_ribbon',
-                                                                                    '<a href="" class="float-d-ratio">' . esc_html($sold_out_ribbon_text) . '</a>',
+                                                                                    '<a href="'.get_the_permalink().'" class="float-d-ratio">' . esc_html($sold_out_ribbon_text) . '</a>',
                                                                                     $post, $product )
 
                                                                                 : apply_filters(
                                                                                     'wpcsp_sold_out_ribbon',
-                                                                                    '<a href="" class="float-d-ratio">' . esc_html__( 'Sold Out!', WPCSP_TEXTDOMAIN ) . '</a>',
+                                                                                    '<a href="'.get_the_permalink().'" class="float-d-ratio">' . esc_html__( 'Sold Out!', WPCSP_TEXTDOMAIN ) . '</a>',
                                                                                     $post, $product );
 
                                                                         }
@@ -1002,10 +1030,25 @@ class wcpcsu_Shortcode
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <?php endwhile; ?>
+                                                        <?php endwhile;
+                                                        wp_reset_postdata();
+                                                        ?>
                                                     </div>
                                                 </div>
                                                 <!-- Ends: .atw_slider_wrapper -->
+                                                <?php
+                                                $grid_pagination = !empty($grid_pagination) ? $grid_pagination : '';
+                                                if ('yes' == $grid_pagination) {
+                                                    ?>
+                                                    <div class="row atbd_listing_pagination">
+                                                        <div class="col-md-12">
+                                                            <?php
+                                                            $paged = !empty($paged) ? $paged : '';
+                                                            echo wcpcsu_pagination($loop, $paged);
+                                                            ?>
+                                                        </div>
+                                                    </div>
+                                                <?php } ?>
                                             </div>
                                             <!-- Ends: .atw_style3 -->
 

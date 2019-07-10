@@ -18,7 +18,6 @@
     }
 
 
-
     #atw_style1 .atw_item .atw_badge, #atw_style2 .atw_item .atw_badge {
 
         right: 10px;
