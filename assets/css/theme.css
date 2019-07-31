@@ -790,6 +790,87 @@
 }
 
 
+/* Pagination Style */
+.atbd_listing_pagination .nav-links{
+  text-align: center !important;
+  padding-right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+.atbd_listing_pagination .pagination{
+  border: 0 none;
+  box-shadow: none;
+  float: none;
+  width: 100%;
+  font-weight: normal;
+  margin: 0;
+}
+.atbd_listing_pagination .pagination:before,
+.atbd_listing_pagination .pagination:after{
+  content: none;
+}
+.atbd_listing_pagination .nav-links .page-numbers{
+  width: 35px !important;
+  height: 35px;
+  display: inline-flex !important;
+  border: 1px solid #e4e4ed;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50% !important;
+  margin: 0 5px 0 0;
+  padding: 0;
+  font-size: 13px;
+  color: #666;
+}
+.atbd_listing_pagination .nav-links .page-numbers:not(.dots):hover{
+  background: #444444 !important;
+  border-color: #444444;
+  color: #fff;
+}
+
+.atbd_listing_pagination .nav-links .page-numbers.current{
+  background: #444444;
+  border-color: #444444;
+  color: #fff;
+}
+
+.atbd_listing_pagination .nav-links .page-numbers.prev,
+.atbd_listing_pagination .nav-links .page-numbers.next{
+  float: none;
+  position: relative;
+  left: auto;
+  right: auto;
+  background: none;
+  color: #666;
+}
+.atbd_listing_pagination .nav-links .page-numbers.prev:hover,
+.atbd_listing_pagination .nav-links .page-numbers.next:hover{
+  background: #444444 !important;
+  border-color: #444444;
+  color: #fff;
+}
+.atbd_listing_pagination .nav-links .page-numbers:last-child{
+  margin-right: 0;
+}
+.atbd_listing_pagination .nav-links .page-numbers:before,
+.atbd_listing_pagination .nav-links .page-numbers:after,
+.atbd_listing_pagination .nav-links:before,
+.atbd_listing_pagination .nav-links:after{
+  content: none !important;
+}
+.atbd_listing_pagination .nav-links .page-numbers span{
+  height: auto;
+  border: 0 none;
+  font-size: 12px;
+}
+.atbd_listing_pagination .nav-links .page-numbers .fa{
+  font-size: 11px;
+  line-height: 0;
+}
+
+
 /*****************************
 	RESPONSIVE
 *****************************/
@@ -845,6 +926,7 @@
   }
 
 }
+
 @media (min-width: 320px) and (max-width: 480px) {
 
   .atw_wrapper .atw_grid_wrapper .atw_mobile_4 {
@@ -861,11 +943,6 @@
   }
 
 }
-
-
-
-
-
 
 @media (min-width: 992px) and (max-width: 1199px) {
   #atw_style5 .atw--single_item .atw_item_top .atw_overlay_content {
