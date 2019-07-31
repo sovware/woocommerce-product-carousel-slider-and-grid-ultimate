@@ -870,6 +870,27 @@
   line-height: 0;
 }
 
+/* Lightbox Modal */
+.featherlight .featherlight-inner p{
+  font-size: 15px;
+  line-height: 24px;
+}
+.featherlight .featherlight-inner p.add_to_cart_inline{
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.featherlight .featherlight-inner .atw_product_desc h1{
+  font-size: 30px !important;
+}
+.featherlight .featherlight-content{
+  overflow: hidden !important;
+}
+.featherlight-content .add_to_cart_button,
+.featherlight-content .add_to_cart_inline .button{
+  padding: 10px 15px;
+  border-radius: 3px;
+}
+
 
 /*****************************
 	RESPONSIVE
