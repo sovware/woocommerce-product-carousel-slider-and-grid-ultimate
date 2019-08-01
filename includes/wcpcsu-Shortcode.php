@@ -79,9 +79,6 @@ class wcpcsu_Shortcode
                 'terms'    => 'featured',
                 'operator' => 'IN',
             );
-
-
-
             $featured_args = array(
                 'meta_query' => $meta_query,
                 'tax_query' => $tax_query,
@@ -92,16 +89,10 @@ class wcpcsu_Shortcode
         else {
             $args = $common_args;
         }
-
-
         $loop = new WP_Query( $args );
 
         if($loop -> have_posts()) {
             ?>
-
-
-
-
             <!-- Style 02 -->
             <div class="atw_wrapper">
                 <div class="atw_container">
@@ -362,7 +353,7 @@ class wcpcsu_Shortcode
                                                             <div class="atw_item_top">
 
                                                                 <?php
-                                                                    if ( has_post_thumbnail( $loop->post->ID ) ) { echo '<a href=""><img src="'.esc_url($wpcsu_img).'" data-featherlight="#f'.$rand_id.'" class="wpcsp-thumb"  alt="'.get_the_title().'" /></a>'; } else { echo '<a href="'.get_the_permalink().'"><img src="'.wc_placeholder_img_src().'" alt="Placeholder" /><a>'; }
+                                                                    if ( has_post_thumbnail( $loop->post->ID ) ) { echo '<a href="'.get_the_permalink().'"><img src="'.esc_url($wpcsu_img).'" data-featherlight="#f'.$rand_id.'" class="wpcsp-thumb"  alt="'.get_the_title().'" /></a>'; } else { echo '<a href="'.get_the_permalink().'"><img src="'.wc_placeholder_img_src().'" alt="Placeholder" /><a>'; }
                                                                 ?>
 
                                                                 <a  class="atw_post_view">
@@ -792,7 +783,7 @@ class wcpcsu_Shortcode
                                                             <div class="atw_item atw--single_item">
                                                                 <div class="atw_item_top">
                                                                     <?php
-                                                                        if ( has_post_thumbnail( $loop->post->ID ) ) { echo '<a href=""><img src="'.esc_url($wpcsu_img).'" class="wpcsp-thumb"  alt="'.get_the_title().'" /></a>'; } else { echo '<a href=""><img src="'.wc_placeholder_img_src().'" alt="Placeholder" /></a>'; }
+                                                                        if ( has_post_thumbnail( $loop->post->ID ) ) { echo '<a href="'.get_the_permalink().'"><img src="'.esc_url($wpcsu_img).'" class="wpcsp-thumb"  alt="'.get_the_title().'" /></a>'; } else { echo '<a href="'.get_the_permalink().'"><img src="'.wc_placeholder_img_src().'" alt="Placeholder" /></a>'; }
                                                                     ?>
                                                                     <a  data-featherlight= "#f<?php echo get_the_id();?>" class="atw_post_view">
                                                                         <span class="icon-eye"></span>

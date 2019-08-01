@@ -17,12 +17,14 @@ $(".lcsp-tabs-menu a").click(function(event) {
         if($(this).val() === 'carousel') {
             $("#tab2").css('display', 'block');
             $("#tab3").css('display', 'none');
+            $("#wcpscu_total_pdt").html("Total Products to Display");
         }
 
 
         if($(this).val() === 'grid'){
             $("#tab2").css('display', 'none');
             $("#tab3").css('display', 'block');
+            $("#wcpscu_total_pdt").html("Products Per Page");
         }
 
     });

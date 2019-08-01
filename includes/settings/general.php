@@ -4,6 +4,7 @@ $h_title_show         = !empty($h_title_show) ? $h_title_show : 'no';
 $display_full_title   = !empty($display_full_title) ? $display_full_title : 'yes';
 $ribbon = !empty($ribbon) ? $ribbon : 'discount';
 $header = !empty($header) ? $header : 'center';
+$total_products_label = (!empty($layout) && 'grid' == $layout) ? __("Products Per Page",WCPCSU_TEXTDOMAIN) : __("Total Products to Display",WCPCSU_TEXTDOMAIN);
 ?>
 
 <div id="lcsp-tab-5" class="lcsp-tab-content">
@@ -55,7 +56,7 @@ $header = !empty($header) ? $header : 'center';
             <!-- Total Products -->
             <div class="cmb-row cmb-type-text-medium">
                 <div class="cmb-th">
-                    <label for="wcpscu_total_products"><?php esc_html_e('Total Products to Display', WCPCSU_TEXTDOMAIN); ?></label>
+                    <label for="wcpscu_total_products" id="wcpscu_total_pdt"><?php echo !empty($total_products_label) ? $total_products_label : __("Total Products to Display",WCPCSU_TEXTDOMAIN); ?></label>
                 </div>
                 <div class="cmb-td">
                     <input type="text" class="cmb2-text-small" name="wcpscu[total_products]" id="wcpscu_total_products" value="<?php echo !empty($total_products) ? intval($total_products) : 12; ?>">
