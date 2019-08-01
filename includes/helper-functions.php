@@ -16,8 +16,8 @@ if (!function_exists('wcpcsu_pagination')) {
             'format' => '?paged=%#%',
             'current' => max(1, $paged),
             'total' => $custom_post_query->max_num_pages,
-            'prev_text' => apply_filters('wcpcsu_pagination_prev_text', '<span class="la la-chevron-left"></span>'),
-            'next_text' => apply_filters('wcpcsu_pagination_next_text', '<span class="la la-chevron-right"></span>'),
+            'prev_text' => apply_filters('wcpcsu_pagination_prev_text', '<span class="la la-angle-left"></span>'),
+            'next_text' => apply_filters('wcpcsu_pagination_next_text', '<span class="la la-angle-right"></span>'),
         ));
         if ($links) {
             $navigation = _navigation_markup($links, 'pagination', ' ');

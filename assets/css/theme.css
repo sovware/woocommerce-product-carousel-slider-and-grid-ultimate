@@ -850,6 +850,7 @@
   background: #444444 !important;
   border-color: #444444;
   color: #fff;
+  box-shadow: none;
 }
 .atbd_listing_pagination .nav-links .page-numbers:last-child{
   margin-right: 0;
