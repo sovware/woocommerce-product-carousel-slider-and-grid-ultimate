@@ -353,7 +353,7 @@ class wcpcsu_Shortcode
                                                             <div class="atw_item_top">
 
                                                                 <?php
-                                                                    if ( has_post_thumbnail( $loop->post->ID ) ) { echo '<a href="'.get_the_permalink().'"><img src="'.esc_url($wpcsu_img).'" data-featherlight="#f'.$rand_id.'" class="wpcsp-thumb"  alt="'.get_the_title().'" /></a>'; } else { echo '<a href="'.get_the_permalink().'"><img src="'.wc_placeholder_img_src().'" alt="Placeholder" /><a>'; }
+                                                                    if ( has_post_thumbnail( $loop->post->ID ) ) { echo '<a href=""><img src="'.esc_url($wpcsu_img).'" class="wpcsp-thumb"  alt="'.get_the_title().'" /></a>'; } else { echo '<a href="'.get_the_permalink().'"><img src="'.wc_placeholder_img_src().'" alt="Placeholder" /><a>'; }
                                                                 ?>
 
                                                                 <a  class="atw_post_view">
