@@ -353,12 +353,13 @@ class wcpcsu_Shortcode
                                                             <div class="atw_item_top">
 
                                                                 <?php
-                                                                    if ( has_post_thumbnail( $loop->post->ID ) ) { echo '<a href=""><img src="'.esc_url($wpcsu_img).'" class="wpcsp-thumb"  alt="'.get_the_title().'" /></a>'; } else { echo '<a href="'.get_the_permalink().'"><img src="'.wc_placeholder_img_src().'" alt="Placeholder" /><a>'; }
+                                                                    if ( has_post_thumbnail( $loop->post->ID ) ) { echo '<a href="'.get_the_permalink().'"><img src="'.esc_url($wpcsu_img).'" class="wpcsp-thumb"  alt="'.get_the_title().'" /></a>'; } else { echo '<a href="'.get_the_permalink().'"><img src="'.wc_placeholder_img_src().'" alt="Placeholder" /><a>'; }
                                                                 ?>
-
+                                                                <?php if(!empty($quick_view) && 'yes' == $quick_view) { ?>
                                                                 <a  class="atw_post_view">
                                                                     <span class="icon-eye" data-featherlight="#f<?php echo get_the_id();?>"></span>
                                                                 </a>
+                                                                <?php } ?>
                                                                 <section style="display: none">
                                                                     <div class="lightbox" style="display: flex;" id="f<?php echo get_the_id();?>">
                                                                         <div class="atw_image_l" style="margin-right: 30px;"><?php
@@ -785,9 +786,11 @@ class wcpcsu_Shortcode
                                                                     <?php
                                                                         if ( has_post_thumbnail( $loop->post->ID ) ) { echo '<a href="'.get_the_permalink().'"><img src="'.esc_url($wpcsu_img).'" class="wpcsp-thumb"  alt="'.get_the_title().'" /></a>'; } else { echo '<a href="'.get_the_permalink().'"><img src="'.wc_placeholder_img_src().'" alt="Placeholder" /></a>'; }
                                                                     ?>
+                                                                    <?php if(!empty($quick_view) && 'yes' == $quick_view) { ?>
                                                                     <a  data-featherlight= "#f<?php echo get_the_id();?>" class="atw_post_view">
                                                                         <span class="icon-eye"></span>
                                                                     </a>
+                                                                    <?php } ?>
                                                                     <section style="display: none">
                                                                         <div class="lightbox" style="display: flex;" id="f<?php echo get_the_id();?>">
                                                                             <div class="atw_image_l" style="margin-right: 30px;"><?php

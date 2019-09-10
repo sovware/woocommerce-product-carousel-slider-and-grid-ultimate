@@ -44,4 +44,13 @@ $(".lcsp-tabs-menu a").click(function(event) {
 
 
     });
+    // quick view hide
+    $('#quick_view').hide();
+    if($("#g_theme").val() === "g_theme2" && $("#c_theme").val() === "c_theme2"){
+        $('#quick_view').show();
+    }
+
+
+
+
 });

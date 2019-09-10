@@ -335,6 +335,29 @@ $total_products_label = (!empty($layout) && 'grid' == $layout) ? __("Products Pe
                 </div>
             </div>
 
+            <!--Display "Quick View" button-->
+            <div class="cmb-row cmb-type-radio" id="quick_view">
+                <div class="cmb-th">
+                    <label for="wcpscu_quick_view"><?php esc_html_e('Display "Quick View Icon"', WCPCSU_TEXTDOMAIN); ?></label>
+                </div>
+                <div class="cmb-td">
+                    <ul class="cmb2-radio-list cmb2-list">
+                        <li>
+                            <input type="radio" class="cmb2-option" name="wcpscu[quick_view]" id="wcpscu_quick_view1"
+                                   value="yes" <?php if(empty($quick_view) || 'yes' === $quick_view) { echo 'checked'; } ?>
+                            >
+                            <label for="wcpscu_quick_view1"><?php esc_html_e('Yes', WCPCSU_TEXTDOMAIN); ?></label>
+                        </li>
+                        <li>
+                            <input type="radio" class="cmb2-option" name="wcpscu[quick_view]" id="wcpscu_quick_view2"
+                                   value="no" <?php if (!empty($quick_view)) { checked('no', $quick_view); } ?>
+                            >
+                            <label for="wcpscu_quick_view2"><?php esc_html_e('No', WCPCSU_TEXTDOMAIN); ?></label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
             <!--Enable image cropping and resizing-->
             <div class="cmb-row cmb-type-radio">
                 <div class="cmb-th">
