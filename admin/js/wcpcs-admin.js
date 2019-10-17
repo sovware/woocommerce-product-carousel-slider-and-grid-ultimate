@@ -42,15 +42,5 @@ $(".lcsp-tabs-menu a").click(function(event) {
         ('c_theme1' == $this.val() ) ? $('#theme1').show() : $('#theme1').hide();
         ('c_theme2' == $this.val() ) ? $('#theme2').show() : $('#theme2').hide();
 
-
     });
-    // quick view hide
-    $('#quick_view').hide();
-    if($("#g_theme").val() === "g_theme2" && $("#c_theme").val() === "c_theme2"){
-        $('#quick_view').show();
-    }
-
-
-
-
 });

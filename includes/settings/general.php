@@ -334,9 +334,8 @@ $total_products_label = (!empty($layout) && 'grid' == $layout) ? __("Products Pe
                     </ul>
                 </div>
             </div>
-
             <!--Display "Quick View" button-->
-            <div class="cmb-row cmb-type-radio" id="quick_view">
+            <div class="cmb-row cmb-type-radio">
                 <div class="cmb-th">
                     <label for="wcpscu_quick_view"><?php esc_html_e('Display "Quick View Icon"', WCPCSU_TEXTDOMAIN); ?></label>
                 </div>
