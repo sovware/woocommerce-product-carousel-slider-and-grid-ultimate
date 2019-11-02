@@ -8,16 +8,11 @@
 
     }
 
-
-
     #atw_style6 .atw__title6:before {
 
         content: none;
 
     }
-
-
-
     #atw_style6 .atw--single_item:hover .atw_item_top .atw_post_view {
 
         top: 50%;
@@ -27,9 +22,6 @@
         opacity: 1;
 
     }
-
-
-
     #atw_style6 .atw--single_item .atw_item_top .atw_post_view {
 
         -webkit-border-radius: 50%;
@@ -54,11 +46,11 @@
 
         font-size: 14px;
 
-        color: #fff;
+        color: <?php echo !empty($quick_view_icon_color) ? $quick_view_icon_color : '#fff';?>;
 
         text-align: center;
 
-        background: #ff5500;
+        background: <?php echo !empty($quick_view_icon_back_color) ? $quick_view_icon_back_color : '#ff5500';?>;
 
         display: flex;
         align-items: center;

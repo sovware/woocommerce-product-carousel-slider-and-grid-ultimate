@@ -153,21 +153,22 @@
                 </div>
             </div>
 
-
             <div class="cmb-row cmb-type-colorpicker">
                 <div class="cmb-th">
-                    <label for="wcpscu_ribbon_font_color"><?php esc_html_e('Ribbon Font Color', WCPCSU_TEXTDOMAIN); ?></label>
+                    <label for="wcpscu_ribbon_font_color"><?php esc_html_e('Quick View Icon Color', WCPCSU_TEXTDOMAIN); ?></label>
                 </div>
                 <div class="cmb-td">
-                    <input type="text" class="cmb2-text-small cpa-color-picker" name="wcpscu[ribbon_font_color]" id="wcpscu_ribbon_font_color" value="<?php if(!empty($ribbon_font_color)) { echo $ribbon_font_color; } else { echo "#fff"; }  ?>">
+                    <input type="text" class="cmb2-text-small cpa-color-picker" name="wcpscu[quick_view_icon_color]" id="wcpscu_ribbon_font_color" value="<?php if(!empty($quick_view_icon_color)) { echo $quick_view_icon_color; } else { echo "#fff"; }  ?>">
                 </div>
             </div>
-
-
-
-
-
-
+            <div class="cmb-row cmb-type-colorpicker">
+                <div class="cmb-th">
+                    <label for="wcpscu_ribbon_font_color"><?php esc_html_e('Quick View Icon Background Color', WCPCSU_TEXTDOMAIN); ?></label>
+                </div>
+                <div class="cmb-td">
+                    <input type="text" class="cmb2-text-small cpa-color-picker" name="wcpscu[quick_view_icon_back_color]" id="wcpscu_ribbon_font_color" value="<?php if(!empty($quick_view_icon_back_color)) { echo $quick_view_icon_back_color; } else { echo "#ff5500"; }  ?>">
+                </div>
+            </div>
 
         </div> <!-- end cmb2-metabox -->
     </div> <!-- end cmb2-wrap -->
