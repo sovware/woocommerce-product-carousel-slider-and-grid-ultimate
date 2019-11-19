@@ -62,6 +62,19 @@ $nav_show          = !empty($nav_show) ? $nav_show : 'yes';
                 </div>
             </div>
 
+            <!--Select theme-->
+            <div class="cmb-row cmb-type-radio">
+                <div class="cmb-th">
+                    <label for="lcsp_ap"><?php esc_html_e('AutoPlay Type', WCPCSU_TEXTDOMAIN); ?></label>
+                </div>
+                <div class="cmb-td">
+                    <select id="c_theme" name="wcpscu[a_play_type]">
+                        <option value="normal">Normal</option>
+                        <option value="marquee" <?php if(!empty($a_play_type) && $a_play_type == "marquee"){ echo "selected";}?>>Marquee</option>
+                    </select>
+                </div>
+            </div>
+
             <!--Repeat Product-->
             <div class="cmb-row cmb-type-radio">
                 <div class="cmb-th">
@@ -85,6 +98,7 @@ $nav_show          = !empty($nav_show) ? $nav_show : 'yes';
             </div>
 
             <!--Stop on hover-->
+            <?php if(empty($a_play_type) || 'marquee' != $a_play_type) { ?>
             <div class="cmb-row cmb-type-radio">
                 <div class="cmb-th">
                     <label for="lcsp_soh"><?php esc_html_e('Stop on Hover', WCPCSU_TEXTDOMAIN); ?></label>
@@ -110,11 +124,12 @@ $nav_show          = !empty($nav_show) ? $nav_show : 'yes';
                     </ul>
                 </div>
             </div>
+            <?php } ?>
             <!--Items on desktop-->
             <div class="cmb-row cmb-type-text-medium">
                 <div class="cmb-th">
                     <label for="lcsp_li_desktop">
-                        <?php esc_html_e('Products to display on Desktop)', WCPCSU_TEXTDOMAIN); ?>
+                        <?php esc_html_e('Products to display on Desktop', WCPCSU_TEXTDOMAIN); ?>
                     </label>
                 </div>
                 <div class="cmb-td">
@@ -187,6 +202,7 @@ $nav_show          = !empty($nav_show) ? $nav_show : 'yes';
                 </div>
             </div>
             <!--slide Timeout-->
+            <?php if(empty($a_play_type) || 'marquee' != $a_play_type) { ?>
             <div class="cmb-row cmb-type-text-medium">
                 <div class="cmb-th">
                     <label for="lcsp_ss">
@@ -201,7 +217,9 @@ $nav_show          = !empty($nav_show) ? $nav_show : 'yes';
                     <p class="cmb2-metabox-description"><?php esc_html_e('Here 1000 is equal to 1 second. So provide a timeout accordingly', WCPCSU_TEXTDOMAIN); ?></p>
                 </div>
             </div>
+            <?php } ?>
             <!--Scrolling-->
+            <?php if(empty($a_play_type) || 'marquee' != $a_play_type) { ?>
             <div class="cmb-row cmb-type-radio">
                 <div class="cmb-th">
                     <label for="lcsp_spp">
@@ -230,7 +248,7 @@ $nav_show          = !empty($nav_show) ? $nav_show : 'yes';
                     </ul>
                 </div>
             </div> <!-- end cmb2-metabox -->
-
+            <?php } ?>
             <!-- Navigation show/hide -->
             <div class="cmb-row cmb-type-radio">
                 <div class="cmb-th">

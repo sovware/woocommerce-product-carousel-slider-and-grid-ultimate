@@ -43,6 +43,7 @@ class wcpcsu_Shortcode
         $g_tablet                = !empty($g_tablet) ? intval($g_tablet) : 3;
         $g_mobile                = !empty($g_mobile) ? intval($g_mobile) : 1;
         $grid_pagination         = !empty($grid_pagination) ? $grid_pagination : 'no';
+        $slide_time              = !empty( $slide_time)  ? $slide_time : '2000' ;
         $paged                   =  wcpcsu_get_paged_num();
         $common_args = array(
             'post_type'      => 'product',
@@ -120,7 +121,11 @@ class wcpcsu_Shortcode
                                 autoplayHoverPause:<?php echo (!empty( $stop_hover) && 'true'== $stop_hover) ? 'true' : 'false' ; ?>,
                                  slideBy:<?php echo (!empty( $scrool) && 'true' === $scrool) ? '\'page\'' : ((!empty( $scrol_direction) && 'right'== $scrol_direction) ? -1 : 1); ?>,
                                 autoplaySpeed: <?php echo (!empty( $slide_speed))  ? $slide_speed : '4000' ; ?>,
-                                autoplayTimeout:<?php echo (!empty( $slide_time))  ? $slide_time : '2000' ; ?>,
+                                autoplayTimeout:<?php echo (!empty( $a_play_type) && 'marquee' == $a_play_type)  ? 0 : $slide_time ; ?>,
+                                <?php
+                                if('marquee' == $a_play_type) { ?>
+                                slideTransition: "linear",
+                                <?php } ?>
                                 responsive: {
                                     0 : {
                                         items:1
