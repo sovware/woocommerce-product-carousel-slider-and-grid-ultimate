@@ -62,7 +62,7 @@ $nav_show          = !empty($nav_show) ? $nav_show : 'yes';
                 </div>
             </div>
 
-            <!--Select theme-->
+            <!--AutoPlay Type-->
             <div class="cmb-row cmb-type-radio">
                 <div class="cmb-th">
                     <label for="lcsp_ap"><?php esc_html_e('AutoPlay Type', WCPCSU_TEXTDOMAIN); ?></label>

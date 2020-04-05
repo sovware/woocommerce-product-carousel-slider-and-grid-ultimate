@@ -119,11 +119,11 @@ class wcpcsu_Shortcode
                                 autoplay: <?php echo (!empty( $A_play) && 'yes'== $A_play) ? 'true':'false'; ?>,
                                 margin: 30,
                                 autoplayHoverPause:<?php echo (!empty( $stop_hover) && 'true'== $stop_hover) ? 'true' : 'false' ; ?>,
-                                 slideBy:<?php echo (!empty( $scrool) && 'true' === $scrool) ? '\'page\'' : ((!empty( $scrol_direction) && 'right'== $scrol_direction) ? -1 : 1); ?>,
+                                slideBy:<?php echo (!empty( $scrool) && 'true' === $scrool) ? '\'page\'' : ((!empty( $scrol_direction) && 'right'== $scrol_direction) ? -1 : 1); ?>,
                                 autoplaySpeed: <?php echo (!empty( $slide_speed))  ? $slide_speed : '4000' ; ?>,
                                 autoplayTimeout:<?php echo (!empty( $a_play_type) && 'marquee' == $a_play_type)  ? 0 : $slide_time ; ?>,
                                 <?php
-                                if('marquee' == $a_play_type) { ?>
+                                if(!empty( $a_play_type) && 'marquee' == $a_play_type) { ?>
                                 slideTransition: "linear",
                                 <?php } ?>
                                 responsive: {
