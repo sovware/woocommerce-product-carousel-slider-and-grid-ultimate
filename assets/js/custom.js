@@ -14,4 +14,15 @@
             $(this).remove();
         });
 
+    $('[data-vc-tabs]').on('click', function () {
+        window.dispatchEvent(new Event('resize'));
+    });
+
+    if($(".owl-carousel").length > 0){
+        $(window).on("load", function () {
+            setTimeout(function () {
+                window.dispatchEvent(new Event('resize'));
+            }, 500)
+        })
+    }
 })(jQuery);
