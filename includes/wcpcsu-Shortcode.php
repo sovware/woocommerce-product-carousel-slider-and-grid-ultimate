@@ -109,7 +109,9 @@ class wcpcsu_Shortcode
                     (function($){
                         jQuery(document).ready(function() {
                             'use strict';
-
+                            $(".atw_slider_wrapper").each(function (ind, elm) {
+                                $(elm).css({"display": "block"});
+                            });
                             // this object contains general option for owl carousel instances
                             var defaultOptions = {
                                 loop:<?php echo (!empty($repeat_product) && 'no' == $repeat_product) ? 'false' : 'true';?>,

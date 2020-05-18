@@ -920,6 +920,8 @@
   }
 }
 
-
+.atw_slider_wrapper{
+  display: none;
+}
 
 /*# sourceMappingURL=maps/style.css.map */
