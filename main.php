@@ -11,7 +11,7 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Domain Path: /languages/
 Text Domain: woo-product-carousel-slider-and-grid-ultimate
 WC requires at least: 3.0
-WC tested up to: 4.1
+WC tested up to: 4.2
  */
 defined('ABSPATH') || die('Direct access is not allow');
 /**
