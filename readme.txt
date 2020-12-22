@@ -2,8 +2,8 @@
 Contributors: AazzTech
 Tags: woocommerce carousel, woocommerce slider, woocommerce grid, woocommerce product slider, woocommerce product carousel
 Requires at least: 4.0
-Tested up to: 5.4
-Stable tag: 1.7.4
+Tested up to: 5.6
+Stable tag: 1.7.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -49,7 +49,7 @@ You can generate dynamic shortcodes just by a few mouse click and then use the s
 *   Translation ready.
 *   Many more…
 
-More amazing features available in [__Pro version__](https://aazztech.com/product/woocommerce-product-carousel-slider-grid-ultimate-pro/).
+More amazing features available in [__Pro version__](https://wpwax.com/product/woocommerce-product-carousel-slider-grid-ultimate-pro/).
 
 = Features of the Pro version =
 *   15 different themes for Carousel & Slider.
@@ -102,6 +102,12 @@ Post Grid and Carousel Ultimate plugin is very easy to use. Just follow the foll
 12. Backend: Style Settings
 
 == Changelog ==
+= 1.7.6 =
+* Add: WordPress 5.6 compatibility
+* Add: WooCommerce 4.8 compatibility
+= 1.7.5 =
+* Add: WordPress 5.5 compatibility
+* Add: WooCommerce 4.3 compatibility
 = 1.7.4 =
 * Fix: Carousel issue
 = 1.7.3 =
