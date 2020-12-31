@@ -1,5 +1,5 @@
 ﻿=== WooCommerce Product Carousel, Slider & Grid Ultimate ===
-Contributors: AazzTech
+Contributors: wpwax
 Tags: woocommerce carousel, woocommerce slider, woocommerce grid, woocommerce product slider, woocommerce product carousel
 Requires at least: 4.0
 Tested up to: 5.6
