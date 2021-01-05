@@ -7,7 +7,7 @@ $header = !empty($header) ? $header : 'center';
 $total_products_label = (!empty($layout) && 'grid' == $layout) ? __("Products Per Page",WCPCSU_TEXTDOMAIN) : __("Total Products to Display",WCPCSU_TEXTDOMAIN);
 ?>
 
-<div id="lcsp-tab-5" class="lcsp-tab-content">
+<div id="lcsp-tab-5" class="lcsp-tab-content" style="display:block">
     <div class="cmb2-wrap form-table">
         <div id="cmb2-metabox" class="cmb2-metabox cmb-field-list">
 
@@ -16,10 +16,27 @@ $total_products_label = (!empty($layout) && 'grid' == $layout) ? __("Products Pe
                     <label for="lcsp_slider_title"><?php esc_html_e('Layout', WCPCSU_TEXTDOMAIN); ?></label>
                 </div>
                 <div class="cmb-td">
-                    <select  name="wcpscu[layout]" id="lcg">
+                    <!-- <select  name="wcpscu[layout]" id="lcg">
                         <option value="carousel">Carousel</option>
                         <option value="grid" <?php if(!empty($layout) && $layout == "grid"){ echo "selected";}?>>Grid</option>
-                    </select>
+                    </select> -->
+
+                    <div class="cmd-switch">
+                        <div class=" cmd-switch-carousel">
+                            <div class="cmd-switch-item cmd-switch-carousel-img">
+                                <img src="" alt="carousel">
+                            </div>
+                            <p>Carousel</p>
+                        </div>
+                        <div class=" cmd-switch-grid">
+                        <?php var_dump( plugin_dir_url( _FILE_ ) );?>
+                            <div class=" cmd-switch-item cmd-switch-grid-img">
+                                <img src="<?php plugin_dir_url( _FILE_ ) .'../../admin/img/grid.jpg' ?>" alt="grid">
+                            </div>
+                            
+                            <p>Grid</p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
