@@ -29,9 +29,8 @@ $total_products_label = (!empty($layout) && 'grid' == $layout) ? __("Products Pe
                             <p>Carousel</p>
                         </div>
                         <div class=" cmd-switch-grid">
-                        <?php var_dump( plugin_dir_url( _FILE_ ) );?>
                             <div class=" cmd-switch-item cmd-switch-grid-img">
-                                <img src="<?php plugin_dir_url( _FILE_ ) .'../../admin/img/grid.jpg' ?>" alt="grid">
+                                <img src="<?php echo WCPCSU_URL .'admin/img/grid.jpg' ?>" alt="grid">
                             </div>
                             
                             <p>Grid</p>
