@@ -618,10 +618,82 @@ ul.adl_pro_features {
     text-align: center;
 }
 .cmd-switch-item{
-    width: 101px;
-    height: 54px;
-    border:1px solid #E3E6EF;
+
+    border: 1px solid #E3E6EF;
     border-radius: 2px;
+    padding: 0px 12px 0 12px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.cmd-switch-item.active{
+    border: 2px solid #00BC5E;
+}
+
+.cmd-switch-item.active .cmd-switch-item-icon{
+    display: block;
+    position: absolute;
+    top: -1px;
+    right: 0;
+    content: '';
+}
+
+.cmd-switch-item.active .cmd-switch-item-icon i{
+    font-size: 16px;
+    color: #00BC5E;
+}
+
+.cmb-theme-wrapper{
+    display: flex;
+    align-items: center;
+}
+.cmb-theme-wrapper a{
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 25px;
+    color: #2C99FF;
+}
+
+.meta-box-sortables select.c_theme{
+    width: 250px;
+    border: 1px solid #E3E6EF;
+    background-color: #F4F5F7;
+    color: #5A5F7D;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 25px;
+    height: 44px;
+    margin: 0;
+    margin-right: 15px;
+    padding: 0 15px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    position: relative;
+    
+}
+
+.meta-box-sortables select.c_theme:after{
+    position: absolute;
+    content: "\f078";
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 900;
+}
+
+
+.cmd-switch-carousel,
+.cmd-switch-grid{
+    max-width: 101px;
+}
+.cmd-switch-item-icon{
+    display: none;
+}
+
+.cmd-switch-item img{
+    max-width: 100%;
 }
 .cmd-switch p{
     font-size: 13px;
@@ -633,6 +705,52 @@ ul.adl_pro_features {
 
 .cmd-switch-grid{
     margin-left: 10px;
+}
+
+/* Switch input */
+.cmb2-wrap .cmb2-radio-switch{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #E9E9E9;
+    width: 93px;
+    height: 34px;
+    border-radius: 17px;
+}
+
+.cmb2-wrap .cmb2-radio-switch li{
+    margin: 0;
+}
+.cmb2-wrap .cmb2-radio-switch input{
+    display: none;
+}
+.cmb2-wrap .cmb2-radio-switch input[type=radio] + label{
+    padding: 7px 12px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: normal;
+    color: #9B9EAF;
+}
+.cmb2-wrap .cmb2-radio-switch input.cmb2-radio-switch1{
+    border-radius: 15px 0 0 15px;
+    background: red;
+    color: white;
+}
+.cmb2-wrap .cmb2-radio-switch input.cmb2-radio-switch1[type=radio]:checked + label{
+    background: #20B126;
+    border-radius: 15px 0 0 15px;
+    color: white;
+}
+
+.cmb2-wrap .cmb2-radio-switch input.cmb2-radio-switch2[type=radio]{
+    border-radius: 0 15px 15px 0;
+    background: red;
+    color: white;
+}
+.cmb2-wrap .cmb2-radio-switch input.cmb2-radio-switch2[type=radio]:checked + label{
+    background: #FB6665;
+    border-radius: 0 15px 15px 0;
+    color: white;
 }
 
 @media (max-width: 1600.98px) {

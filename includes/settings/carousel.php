@@ -11,31 +11,6 @@ $nav_show          = !empty($nav_show) ? $nav_show : 'yes';
 <div id="lcsp-tab-2" class="lcsp-tab-content">
     <div class="cmb2-wrap form-table">
         <div id="cmb2-metabox" class="cmb2-metabox cmb-field-list">
-            <!--Select theme-->
-            <div class="cmb-row cmb-type-radio">
-                <div class="cmb-th">
-                    <label for="lcsp_ap"><?php esc_html_e('Select Theme', WCPCSU_TEXTDOMAIN); ?></label>
-                </div>
-                <div class="cmb-td">
-                    <select id="c_theme" name="wcpscu[c_theme]">
-                        <option value="c_theme1">Theme-1</option>
-                        <option value="c_theme2" <?php if(!empty($c_theme) && $c_theme == "c_theme2"){ echo "selected";}?>>Theme-2</option>
-                        <option value="c_theme3" <?php if(!empty($c_theme) && $c_theme == "c_theme3"){ echo "selected";}?>>Theme-3</option>
-                        <option disabled>Theme-4 (Pro)</option>
-                        <option disabled>Theme-5 (Pro)</option>
-                        <option disabled>Theme-6 (Pro)</option>
-                        <option disabled>Theme-7 (Pro)</option>
-                        <option disabled>Theme-8 (Pro)</option>
-                        <option disabled>Theme-9 (Pro)</option>
-                        <option disabled>Theme-10 (Pro)</option>
-                        <option disabled>Theme-11 (Pro)</option>
-                        <option disabled>Theme-12 (Pro)</option>
-                        <option disabled>Theme-13 (Pro)</option>
-                        <option disabled>Theme-14 (Pro)</option>
-                        <option disabled>Theme-15 (Pro)</option>
-                    </select>
-                </div>
-            </div>
 
             <!--Auto Play-->
             <div class="cmb-row cmb-type-radio">
@@ -43,19 +18,15 @@ $nav_show          = !empty($nav_show) ? $nav_show : 'yes';
                     <label for="lcsp_ap"><?php esc_html_e('Auto Play', WCPCSU_TEXTDOMAIN); ?></label>
                 </div>
                 <div class="cmb-td">
-                    <ul class="cmb2-radio-list cmb2-list">
+                    <ul class="cmb2-radio-list cmb2-list cmb2-radio-switch">
                         <li>
-                            <input type="radio" class="cmb2-option"
-                                   name="wcpscu[A_play]"
-                                   id="lcsp_ap1"
-                                   value="yes" <?php checked('yes', $A_play, true); ?>>
+                            <input type="radio" class="cmb2-option cmb2-radio-switch1" name="wcpscu[A_play]"
+                                id="lcsp_ap1" value="yes" <?php checked('yes', $A_play, true); ?>>
                             <label for="lcsp_ap1"><?php esc_html_e('Yes', WCPCSU_TEXTDOMAIN); ?></label>
                         </li>
                         <li>
-                            <input type="radio" class="cmb2-option"
-                                   name="wcpscu[A_play]"
-                                   id="lcsp_ap2"
-                                   value="no" <?php checked('no', $A_play, true); ?>>
+                            <input type="radio" class="cmb2-option cmb2-radio-switch2" name="wcpscu[A_play]"
+                                id="lcsp_ap2" value="no" <?php checked('no', $A_play, true); ?>>
                             <label for="lcsp_ap2"><?php esc_html_e('No', WCPCSU_TEXTDOMAIN); ?></label>
                         </li>
                     </ul>
@@ -68,10 +39,23 @@ $nav_show          = !empty($nav_show) ? $nav_show : 'yes';
                     <label for="lcsp_ap"><?php esc_html_e('AutoPlay Type', WCPCSU_TEXTDOMAIN); ?></label>
                 </div>
                 <div class="cmb-td">
-                    <select id="c_theme" name="wcpscu[a_play_type]">
+                    <!-- <select id="c_theme" name="wcpscu[a_play_type]">
                         <option value="normal">Normal</option>
-                        <option value="marquee" <?php if(!empty($a_play_type) && $a_play_type == "marquee"){ echo "selected";}?>>Marquee</option>
-                    </select>
+                        <option value="marquee"
+                            <?php if(!empty($a_play_type) && $a_play_type == "marquee"){ echo "selected";}?>>Marquee
+                        </option>
+                    </select> -->
+                    <ul class="cmb2-radio-list cmb2-list">
+                        <li>
+                            <input type="radio" class="cmb2-option" name="wcpscu[auto_product]"
+                                id="wcpscu_repeat_product11" value="Normal" checked>
+                            <label for="wcpscu_repeat_product11">Normal</label>
+                        </li>
+                        <li><input type="radio" class="cmb2-option" name="wcpscu[auto_product]"
+                                id="wcpscu_repeat_product22" value="Marquee">
+                            <label for="wcpscu_repeat_product22">Marquee</label>
+                        </li>
+                    </ul>
                 </div>
             </div>
 
@@ -81,16 +65,16 @@ $nav_show          = !empty($nav_show) ? $nav_show : 'yes';
                     <label for="wcpscu_repeat_product"><?php esc_html_e('Repeat Product', WCPCSU_TEXTDOMAIN); ?></label>
                 </div>
                 <div class="cmb-td">
-                    <ul class="cmb2-radio-list cmb2-list">
+                    <ul class="cmb2-radio-list cmb2-list cmb2-radio-switch">
                         <li>
-                            <input type="radio" class="cmb2-option" name="wcpscu[repeat_product]" id="wcpscu_repeat_product1"
-                                   value="yes" <?php if(empty($repeat_product) || 'yes' === $repeat_product) { echo 'checked'; } ?>
-                            >
+                            <input type="radio" class="cmb2-option cmb2-radio-switch1" name="wcpscu[repeat_product]"
+                                id="wcpscu_repeat_product1" value="yes"
+                                <?php if(empty($repeat_product) || 'yes' === $repeat_product) { echo 'checked'; } ?>>
                             <label for="wcpscu_repeat_product1"><?php esc_html_e('Yes', WCPCSU_TEXTDOMAIN); ?></label>
                         </li>
-                        <li><input type="radio" class="cmb2-option" name="wcpscu[repeat_product]" id="wcpscu_repeat_product2"
-                                   value="no" <?php if (!empty($repeat_product)) { checked('no', $repeat_product); } ?>
-                            >
+                        <li><input type="radio" class="cmb2-option cmb2-radio-switch2" name="wcpscu[repeat_product]"
+                                id="wcpscu_repeat_product2" value="no"
+                                <?php if (!empty($repeat_product)) { checked('no', $repeat_product); } ?>>
                             <label for="wcpscu_repeat_product2"><?php _e('No', WCPCSU_TEXTDOMAIN); ?></label>
                         </li>
                     </ul>
@@ -104,19 +88,15 @@ $nav_show          = !empty($nav_show) ? $nav_show : 'yes';
                     <label for="lcsp_soh"><?php esc_html_e('Stop on Hover', WCPCSU_TEXTDOMAIN); ?></label>
                 </div>
                 <div class="cmb-td">
-                    <ul class="cmb2-radio-list cmb2-list">
-                        <li><input type="radio" class="cmb2-option"
-                                   name="wcpscu[stop_hover]"
-                                   id="lcsp_soh1"
-                                   value="true" <?php checked('true', $stop_hover, true); ?>>
+                    <ul class="cmb2-radio-list cmb2-list cmb2-radio-switch">
+                        <li><input type="radio" class="cmb2-option cmb2-radio-switch1" name="wcpscu[stop_hover]" id="lcsp_soh1"
+                                value="true" <?php checked('true', $stop_hover, true); ?>>
                             <label for="lcsp_soh1">
                                 <?php esc_html_e('Yes', WCPCSU_TEXTDOMAIN); ?>
                             </label>
                         </li>
-                        <li><input type="radio" class="cmb2-option"
-                                   name="wcpscu[stop_hover]"
-                                   id="lcsp_soh2"
-                                   value="false" <?php checked('false', $stop_hover, true);  ?>>
+                        <li><input type="radio" class="cmb2-option cmb2-radio-switch2" name="wcpscu[stop_hover]" id="lcsp_soh2"
+                                value="false" <?php checked('false', $stop_hover, true);  ?>>
                             <label for="lcsp_soh2">
                                 <?php esc_html_e('No', WCPCSU_TEXTDOMAIN); ?>
                             </label>
@@ -133,11 +113,11 @@ $nav_show          = !empty($nav_show) ? $nav_show : 'yes';
                     </label>
                 </div>
                 <div class="cmb-td">
-                    <input type="text" class="cmb2-text-small"
-                           name="wcpscu[c_desktop]"
-                           id="lcsp_li_desktop"
-                           value="<?php echo !empty($c_desktop) ? intval($c_desktop) : 4; ?>">
-                    <p class="cmb2-metabox-description"><?php esc_html_e('Maximum amount of items to display at a time on Desktop that screen size larger than 1198px', WCPCSU_TEXTDOMAIN); ?></p>
+                    <input type="text" class="cmb2-text-small" name="wcpscu[c_desktop]" id="lcsp_li_desktop"
+                        value="<?php echo !empty($c_desktop) ? intval($c_desktop) : 4; ?>">
+                    <p class="cmb2-metabox-description">
+                        <?php esc_html_e('Maximum amount of items to display at a time on Desktop that screen size larger than 1198px', WCPCSU_TEXTDOMAIN); ?>
+                    </p>
 
                 </div>
             </div>
@@ -149,11 +129,11 @@ $nav_show          = !empty($nav_show) ? $nav_show : 'yes';
                     </label>
                 </div>
                 <div class="cmb-td">
-                    <input type="text" class="cmb2-text-small"
-                           name="wcpscu[c_desktop_small]"
-                           id="lcsp_li_desktop_small"
-                           value="<?php echo !empty($c_desktop_small) ? intval($c_desktop_small) : 3; ?>">
-                    <p class="cmb2-metabox-description"><?php esc_html_e('Maximum amount of items to display at a time on Desktop that screen size larger than 978px', WCPCSU_TEXTDOMAIN); ?></p>
+                    <input type="text" class="cmb2-text-small" name="wcpscu[c_desktop_small]" id="lcsp_li_desktop_small"
+                        value="<?php echo !empty($c_desktop_small) ? intval($c_desktop_small) : 3; ?>">
+                    <p class="cmb2-metabox-description">
+                        <?php esc_html_e('Maximum amount of items to display at a time on Desktop that screen size larger than 978px', WCPCSU_TEXTDOMAIN); ?>
+                    </p>
                 </div>
             </div>
             <!--items on tablet-->
@@ -164,11 +144,11 @@ $nav_show          = !empty($nav_show) ? $nav_show : 'yes';
                     </label>
                 </div>
                 <div class="cmb-td">
-                    <input type="text" class="cmb2-text-small"
-                           name="wcpscu[c_tablet]"
-                           id="lcsp_li_tablet"
-                           value="<?php echo !empty($c_tablet) ? intval($c_tablet) : 3; ?>">
-                    <p class="cmb2-metabox-description"><?php esc_html_e('Maximum amount of items to display at a time on Tablet', WCPCSU_TEXTDOMAIN); ?></p>
+                    <input type="text" class="cmb2-text-small" name="wcpscu[c_tablet]" id="lcsp_li_tablet"
+                        value="<?php echo !empty($c_tablet) ? intval($c_tablet) : 3; ?>">
+                    <p class="cmb2-metabox-description">
+                        <?php esc_html_e('Maximum amount of items to display at a time on Tablet', WCPCSU_TEXTDOMAIN); ?>
+                    </p>
                 </div>
             </div>
             <!--items on mobile-->
@@ -179,11 +159,11 @@ $nav_show          = !empty($nav_show) ? $nav_show : 'yes';
                     </label>
                 </div>
                 <div class="cmb-td">
-                    <input type="text" class="cmb2-text-small"
-                           name="wcpscu[c_mobile]"
-                           id="lcsp_li_mobile"
-                           value="<?php echo !empty($c_mobile) ? intval($c_mobile) : 2; ?>">
-                    <p class="cmb2-metabox-description"><?php esc_html_e('Maximum amount of items to display at a time on Mobile', WCPCSU_TEXTDOMAIN); ?></p>
+                    <input type="text" class="cmb2-text-small" name="wcpscu[c_mobile]" id="lcsp_li_mobile"
+                        value="<?php echo !empty($c_mobile) ? intval($c_mobile) : 2; ?>">
+                    <p class="cmb2-metabox-description">
+                        <?php esc_html_e('Maximum amount of items to display at a time on Mobile', WCPCSU_TEXTDOMAIN); ?>
+                    </p>
                 </div>
             </div>
             <!--slide speed-->
@@ -194,11 +174,11 @@ $nav_show          = !empty($nav_show) ? $nav_show : 'yes';
                     </label>
                 </div>
                 <div class="cmb-td">
-                    <input type="text" class="cmb2-text-small"
-                           name="wcpscu[slide_speed]"
-                           id="wcpscu[slide_speed]"
-                           value="<?php echo !empty($slide_speed) ? intval($slide_speed) : 4000; ?>">
-                    <p class="cmb2-metabox-description"><?php esc_html_e('Here 1000 is equal to 1 second. So provide a speed accordingly', WCPCSU_TEXTDOMAIN); ?></p>
+                    <input type="text" class="cmb2-text-small" name="wcpscu[slide_speed]" id="wcpscu[slide_speed]"
+                        value="<?php echo !empty($slide_speed) ? intval($slide_speed) : 4000; ?>">
+                    <p class="cmb2-metabox-description">
+                        <?php esc_html_e('Here 1000 is equal to 1 second. So provide a speed accordingly', WCPCSU_TEXTDOMAIN); ?>
+                    </p>
                 </div>
             </div>
             <!--slide Timeout-->
@@ -210,11 +190,11 @@ $nav_show          = !empty($nav_show) ? $nav_show : 'yes';
                     </label>
                 </div>
                 <div class="cmb-td">
-                    <input type="text" class="cmb2-text-small"
-                           name="wcpscu[slide_time]"
-                           id="wcpscu[slide_time]"
-                           value="<?php echo !empty($slide_time) ? intval($slide_time) : 2000; ?>">
-                    <p class="cmb2-metabox-description"><?php esc_html_e('Here 1000 is equal to 1 second. So provide a timeout accordingly', WCPCSU_TEXTDOMAIN); ?></p>
+                    <input type="text" class="cmb2-text-small" name="wcpscu[slide_time]" id="wcpscu[slide_time]"
+                        value="<?php echo !empty($slide_time) ? intval($slide_time) : 2000; ?>">
+                    <p class="cmb2-metabox-description">
+                        <?php esc_html_e('Here 1000 is equal to 1 second. So provide a timeout accordingly', WCPCSU_TEXTDOMAIN); ?>
+                    </p>
                 </div>
             </div>
             <?php } ?>
@@ -229,18 +209,14 @@ $nav_show          = !empty($nav_show) ? $nav_show : 'yes';
                 <div class="cmb-td">
                     <ul class="cmb2-radio-list cmb2-list">
                         <li>
-                            <input type="radio" class="cmb2-option"
-                                   name="wcpscu[scrool]"
-                                   id="lcsp_spp1"
-                                   value="false" <?php checked('false', $scrool, true); ?>>
+                            <input type="radio" class="cmb2-option" name="wcpscu[scrool]" id="lcsp_spp1" value="false"
+                                <?php checked('false', $scrool, true); ?>>
                             <label for="lcsp_spp1">
                                 <?php esc_html_e('Per Item', WCPCSU_TEXTDOMAIN); ?>
                             </label>
                         </li>
-                        <li><input type="radio" class="cmb2-option"
-                                   name="wcpscu[scrool]"
-                                   id="lcsp_spp2"
-                                   value="true" <?php checked('true', $scrool, true); ?>>
+                        <li><input type="radio" class="cmb2-option" name="wcpscu[scrool]" id="lcsp_spp2" value="true"
+                                <?php checked('true', $scrool, true); ?>>
                             <label for="lcsp_spp2">
                                 <?php esc_html_e('Per Page', WCPCSU_TEXTDOMAIN); ?>
                             </label>
@@ -257,22 +233,17 @@ $nav_show          = !empty($nav_show) ? $nav_show : 'yes';
                     </label>
                 </div>
                 <div class="cmb-td">
-                    <ul class="cmb2-radio-list cmb2-list">
+                    <ul class="cmb2-radio-list cmb2-list  cmb2-radio-switch">
                         <li>
-                            <input type="radio" class="cmb2-option"
-                                   name="wcpscu[nav_show]"
-                                   id="wcpscu[c10_nav]1"
-                                   value="yes" <?php checked('yes', $nav_show, true);  ?>>
+                            <input type="radio" class="cmb2-option  cmb2-radio-switch1" name="wcpscu[nav_show]" id="wcpscu[c10_nav]1"
+                                value="yes" <?php checked('yes', $nav_show, true);  ?>>
                             <label for="wcpscu[c10_nav]1">
                                 <?php esc_html_e('Yes', WCPCSU_TEXTDOMAIN); ?>
                             </label>
                         </li>
                         <li>
-                            <input type="radio"
-                                   class="cmb2-option"
-                                   name="wcpscu[nav_show]"
-                                   id="wcpscu[c10_nav]2"
-                                   value="no" <?php checked('no', $nav_show, true);  ?>>
+                            <input type="radio" class="cmb2-option  cmb2-radio-switch2" name="wcpscu[nav_show]" id="wcpscu[c10_nav]2"
+                                value="no" <?php checked('no', $nav_show, true);  ?>>
                             <label for="wcpscu[c10_nav]2">
                                 <?php esc_html_e('No', WCPCSU_TEXTDOMAIN); ?>
                             </label>
@@ -289,9 +260,8 @@ $nav_show          = !empty($nav_show) ? $nav_show : 'yes';
                     </label>
                 </div>
                 <div class="cmb-td">
-                    <input type="text" name="wcpscu[nav_arrow_color]"
-                           class="cpa-color-picker"
-                           value="<?php if(empty($nav_arrow_color)) { echo "#9192a3";}else{ echo $nav_arrow_color;}?>" />
+                    <input type="text" name="wcpscu[nav_arrow_color]" class="cpa-color-picker"
+                        value="<?php if(empty($nav_arrow_color)) { echo "#9192a3";}else{ echo $nav_arrow_color;}?>" />
                 </div>
             </div>
 
@@ -303,9 +273,8 @@ $nav_show          = !empty($nav_show) ? $nav_show : 'yes';
                     </label>
                 </div>
                 <div class="cmb-td">
-                    <input type="text" name="wcpscu[nav_back_color]"
-                           class="cpa-color-picker"
-                           value="<?php if(!empty($nav_back_color)) { echo $nav_back_color ;}else{ echo "#fff" ;}?>" />
+                    <input type="text" name="wcpscu[nav_back_color]" class="cpa-color-picker"
+                        value="<?php if(!empty($nav_back_color)) { echo $nav_back_color ;}else{ echo "#fff" ;}?>" />
                 </div>
             </div>
 
@@ -317,9 +286,8 @@ $nav_show          = !empty($nav_show) ? $nav_show : 'yes';
                     </label>
                 </div>
                 <div class="cmb-td">
-                    <input type="text" name="wcpscu[nav_border_color]"
-                           class="cpa-color-picker"
-                           value="<?php if(!empty($nav_border_color)) { echo $nav_border_color ;}else{ echo "#e4e4ed" ;}?>" />
+                    <input type="text" name="wcpscu[nav_border_color]" class="cpa-color-picker"
+                        value="<?php if(!empty($nav_border_color)) { echo $nav_border_color ;}else{ echo "#e4e4ed" ;}?>" />
                 </div>
             </div>
 
@@ -331,9 +299,8 @@ $nav_show          = !empty($nav_show) ? $nav_show : 'yes';
                     </label>
                 </div>
                 <div class="cmb-td">
-                    <input type="text" name="wcpscu[nav_arrow_hover_color]"
-                           class="cpa-color-picker"
-                           value="<?php if(empty($nav_arrow_hover_color)) { echo "#9192a3";}else{ echo $nav_arrow_hover_color;}?>" />
+                    <input type="text" name="wcpscu[nav_arrow_hover_color]" class="cpa-color-picker"
+                        value="<?php if(empty($nav_arrow_hover_color)) { echo "#9192a3";}else{ echo $nav_arrow_hover_color;}?>" />
                 </div>
             </div>
 
@@ -345,9 +312,8 @@ $nav_show          = !empty($nav_show) ? $nav_show : 'yes';
                     </label>
                 </div>
                 <div class="cmb-td">
-                    <input type="text" name="wcpscu[nav_back_hover_color]"
-                           class="cpa-color-picker"
-                           value="<?php if(empty($nav_back_hover_color)) { echo "#ffffff";}else{ echo $nav_back_hover_color;}?>" />
+                    <input type="text" name="wcpscu[nav_back_hover_color]" class="cpa-color-picker"
+                        value="<?php if(empty($nav_back_hover_color)) { echo "#ffffff";}else{ echo $nav_back_hover_color;}?>" />
                 </div>
             </div>
 
@@ -359,9 +325,8 @@ $nav_show          = !empty($nav_show) ? $nav_show : 'yes';
                     </label>
                 </div>
                 <div class="cmb-td">
-                    <input type="text" name="wcpscu[nav_border_hover]"
-                           class="cpa-color-picker"
-                           value="<?php if(empty($nav_border_hover)) { echo "#ff5500";}else{ echo $nav_border_hover;}?>" />
+                    <input type="text" name="wcpscu[nav_border_hover]" class="cpa-color-picker"
+                        value="<?php if(empty($nav_border_hover)) { echo "#ff5500";}else{ echo $nav_border_hover;}?>" />
                 </div>
             </div>
 
