@@ -14,14 +14,14 @@ $(".lcsp-tabs-menu a").click(function(event) {
     //Layout select
     $("#lcg").change(function() {
 
-        if($(this).val() === 'carousel') {
+        if($(this).html() === 'carousel') {
             $("#tab2").css('display', 'block');
             $("#tab3").css('display', 'none');
             $("#wcpscu_total_pdt").html("Total Products to Display");
         }
 
 
-        if($(this).val() === 'grid'){
+        if($(this).html() === 'grid'){
             $("#tab2").css('display', 'none');
             $("#tab3").css('display', 'block');
             $("#wcpscu_total_pdt").html("Products Per Page");

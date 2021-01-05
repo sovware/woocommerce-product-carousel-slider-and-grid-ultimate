@@ -21,19 +21,17 @@ $total_products_label = (!empty($layout) && 'grid' == $layout) ? __("Products Pe
                         <option value="grid" <?php if(!empty($layout) && $layout == "grid"){ echo "selected";}?>>Grid</option>
                     </select> -->
 
-                    <div class="cmd-switch">
-                        <div class=" cmd-switch-carousel">
+                    <div class="cmd-switch" id="lcg">
+                        <div class=" cmd-switch-carousel carousel">
                             <div class="cmd-switch-item cmd-switch-carousel-img">
-                                <img src="" alt="carousel">
+                                <img src="../../admin/img/carousel.jpg" alt="carousel">
                             </div>
                             <p>Carousel</p>
                         </div>
-                        <div class=" cmd-switch-grid">
-                        <?php var_dump( plugin_dir_url( _FILE_ ) );?>
+                        <div class=" cmd-switch-grid grid">
                             <div class=" cmd-switch-item cmd-switch-grid-img">
-                                <img src="<?php plugin_dir_url( _FILE_ ) .'../../admin/img/grid.jpg' ?>" alt="grid">
+                                <img src="../../admin/img/grid.jpg" alt="grid">
                             </div>
-                            
                             <p>Grid</p>
                         </div>
                     </div>

@@ -623,6 +623,13 @@ ul.adl_pro_features {
     border:1px solid #E3E6EF;
     border-radius: 2px;
 }
+.cmd-switch p{
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 25px;
+    color: #5A5F7D;
+    margin: 0;
+}
 
 .cmd-switch-grid{
     margin-left: 10px;
