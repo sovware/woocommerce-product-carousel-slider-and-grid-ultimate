@@ -103,5 +103,8 @@ $grid_pagination          = !empty($grid_pagination) ? $grid_pagination : 'no';
 
 
         </div> <!-- end cmb2-metabox -->
+        <div class="cmb2-save-setting">
+            <button type="button">Save Settings</button>
+        </div>
     </div> <!-- end cmb2-wrap -->
 </div> <!-- end lcsp-tab-2

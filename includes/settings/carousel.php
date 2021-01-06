@@ -116,14 +116,16 @@ $nav_show          = !empty($nav_show) ? $nav_show : 'yes';
                     <div class="cmb-product-columns">
                         <div class="input-group">
                             <div class="input-group-prepend">
-                                <div class="input-group-text" id="btnGroupAddon"><span class="fas fa-desktop"></span></div>
+                                <div class="input-group-text" id="btnGroupAddon"><span class="fas fa-desktop"></span>
+                                </div>
                             </div>
                             <input type="text" class="cmb2-text-small" name="wcpscu[c_desktop]" id="lcsp_li_desktop"
                                 value="<?php echo !empty($c_desktop) ? intval($c_desktop) : 4; ?>">
                         </div>
                         <div class="input-group">
                             <div class="input-group-prepend">
-                                <div class="input-group-text" id="btnGroupAddon"><span class="fas fa-laptop"></span></div>
+                                <div class="input-group-text" id="btnGroupAddon"><span class="fas fa-laptop"></span>
+                                </div>
                             </div>
                             <input type="text" class="cmb2-text-small" name="wcpscu[c_desktop_small]"
                                 id="lcsp_li_desktop_small"
@@ -131,14 +133,16 @@ $nav_show          = !empty($nav_show) ? $nav_show : 'yes';
                         </div>
                         <div class="input-group">
                             <div class="input-group-prepend">
-                                <div class="input-group-text" id="btnGroupAddon"><span class="fas fa-tablet-alt"></span></div>
+                                <div class="input-group-text" id="btnGroupAddon"><span class="fas fa-tablet-alt"></span>
+                                </div>
                             </div>
                             <input type="text" class="cmb2-text-small" name="wcpscu[c_tablet]" id="lcsp_li_tablet"
                                 value="<?php echo !empty($c_tablet) ? intval($c_tablet) : 2; ?>">
                         </div>
                         <div class="input-group">
                             <div class="input-group-prepend">
-                                <div class="input-group-text" id="btnGroupAddon"><span class="fas fa-mobile-alt"></span></div>
+                                <div class="input-group-text" id="btnGroupAddon"><span class="fas fa-mobile-alt"></span>
+                                </div>
                             </div>
                             <input type="text" class="cmb2-text-small" name="wcpscu[c_mobile]" id="lcsp_li_mobile"
                                 value="<?php echo !empty($c_mobile) ? intval($c_mobile) : 1; ?>">
@@ -241,82 +245,59 @@ $nav_show          = !empty($nav_show) ? $nav_show : 'yes';
             <div class="cmb-row cmb-type-radio">
                 <div class="cmb-th">
                     <label for="wcpscu[nav_arrow_color]">
-                        <?php esc_html_e('Navigation Arrow Color', WCPCSU_TEXTDOMAIN); ?>
+                        Navigation Style
                     </label>
                 </div>
                 <div class="cmb-td">
-                    <input type="text" name="wcpscu[nav_arrow_color]" class="cpa-color-picker"
-                        value="<?php if(empty($nav_arrow_color)) { echo "#9192a3";}else{ echo $nav_arrow_color;}?>" />
+                    <div class="cmb-navigation">
+                        <div class="cmb-navigation-item">
+                            <label for="wcpscu[nav_arrow_color]">
+                                <?php esc_html_e('Navigation Arrow Color', WCPCSU_TEXTDOMAIN); ?>
+                            </label>
+                            <input type="text" name="wcpscu[nav_arrow_color]" class="cpa-color-picker"
+                                value="<?php if(empty($nav_arrow_color)) { echo "#9192a3";}else{ echo $nav_arrow_color;}?>" />
+                        </div>
+                        <div class="cmb-navigation-item">
+                            <label for="wcpscu[nav_back_color]">
+                                <?php esc_html_e('Navigation Background Color', WCPCSU_TEXTDOMAIN); ?>
+                            </label>
+                            <input type="text" name="wcpscu[nav_back_color]" class="cpa-color-picker"
+                                value="<?php if(!empty($nav_back_color)) { echo $nav_back_color ;}else{ echo "#fff" ;}?>" />
+                        </div>
+                        <div class="cmb-navigation-item">
+                            <label for="wcpscu[nav_border_color]">
+                                <?php esc_html_e('Navigation Border Color', WCPCSU_TEXTDOMAIN); ?>
+                            </label>
+                            <input type="text" name="wcpscu[nav_border_color]" class="cpa-color-picker"
+                                value="<?php if(!empty($nav_border_color)) { echo $nav_border_color ;}else{ echo "#e4e4ed" ;}?>" />
+                        </div>
+                        <div class="cmb-navigation-item">
+                            <label for="wcpscu[nav_arrow_hover_color]">
+                                <?php esc_html_e('Navigation Hover Arrow Color', WCPCSU_TEXTDOMAIN); ?>
+                            </label>
+                            <input type="text" name="wcpscu[nav_arrow_hover_color]" class="cpa-color-picker"
+                                value="<?php if(empty($nav_arrow_hover_color)) { echo "#9192a3";}else{ echo $nav_arrow_hover_color;}?>" />
+                        </div>
+                        <div class="cmb-navigation-item">
+                            <label for="wcpscu[nav_back_hover_color]">
+                                <?php esc_html_e('Navigaiton Hover Background Color', WCPCSU_TEXTDOMAIN); ?>
+                            </label>
+                            <input type="text" name="wcpscu[nav_back_hover_color]" class="cpa-color-picker"
+                                value="<?php if(empty($nav_back_hover_color)) { echo "#ffffff";}else{ echo $nav_back_hover_color;}?>" />
+                        </div>
+                        <div class="cmb-navigation-item">
+                            <label for="wcpscu[nav_border_hover]">
+                                <?php esc_html_e('Navigaiton Hover Border Color', WCPCSU_TEXTDOMAIN); ?>
+                            </label>
+                            <input type="text" name="wcpscu[nav_border_hover]" class="cpa-color-picker"
+                                value="<?php if(empty($nav_border_hover)) { echo "#ff5500";}else{ echo $nav_border_hover;}?>" />
+                        </div>
+                    </div>
                 </div>
             </div>
-
-            <!-- Navigation Backgroudn color -->
-            <div class="cmb-row cmb-type-radio">
-                <div class="cmb-th">
-                    <label for="wcpscu[nav_back_color]">
-                        <?php esc_html_e('Navigation Background Color', WCPCSU_TEXTDOMAIN); ?>
-                    </label>
-                </div>
-                <div class="cmb-td">
-                    <input type="text" name="wcpscu[nav_back_color]" class="cpa-color-picker"
-                        value="<?php if(!empty($nav_back_color)) { echo $nav_back_color ;}else{ echo "#fff" ;}?>" />
-                </div>
-            </div>
-
-            <!-- Navigation Border color -->
-            <div class="cmb-row cmb-type-radio">
-                <div class="cmb-th">
-                    <label for="wcpscu[nav_border_color]">
-                        <?php esc_html_e('Navigation Border Color', WCPCSU_TEXTDOMAIN); ?>
-                    </label>
-                </div>
-                <div class="cmb-td">
-                    <input type="text" name="wcpscu[nav_border_color]" class="cpa-color-picker"
-                        value="<?php if(!empty($nav_border_color)) { echo $nav_border_color ;}else{ echo "#e4e4ed" ;}?>" />
-                </div>
-            </div>
-
-            <!-- Navigation Hover arrow color -->
-            <div class="cmb-row cmb-type-radio">
-                <div class="cmb-th">
-                    <label for="wcpscu[nav_arrow_hover_color]">
-                        <?php esc_html_e('Navigation Hover Arrow Color', WCPCSU_TEXTDOMAIN); ?>
-                    </label>
-                </div>
-                <div class="cmb-td">
-                    <input type="text" name="wcpscu[nav_arrow_hover_color]" class="cpa-color-picker"
-                        value="<?php if(empty($nav_arrow_hover_color)) { echo "#9192a3";}else{ echo $nav_arrow_hover_color;}?>" />
-                </div>
-            </div>
-
-            <!-- Navigation Hover Background color -->
-            <div class="cmb-row cmb-type-radio">
-                <div class="cmb-th">
-                    <label for="wcpscu[nav_back_hover_color]">
-                        <?php esc_html_e('Navigaiton Hover Background Color', WCPCSU_TEXTDOMAIN); ?>
-                    </label>
-                </div>
-                <div class="cmb-td">
-                    <input type="text" name="wcpscu[nav_back_hover_color]" class="cpa-color-picker"
-                        value="<?php if(empty($nav_back_hover_color)) { echo "#ffffff";}else{ echo $nav_back_hover_color;}?>" />
-                </div>
-            </div>
-
-            <!-- Navigation Hover border color -->
-            <div class="cmb-row cmb-type-radio">
-                <div class="cmb-th">
-                    <label for="wcpscu[nav_border_hover]">
-                        <?php esc_html_e('Navigaiton Hover Border Color', WCPCSU_TEXTDOMAIN); ?>
-                    </label>
-                </div>
-                <div class="cmb-td">
-                    <input type="text" name="wcpscu[nav_border_hover]" class="cpa-color-picker"
-                        value="<?php if(empty($nav_border_hover)) { echo "#ff5500";}else{ echo $nav_border_hover;}?>" />
-                </div>
-            </div>
-
-
+        </div>
+        <div class="cmb2-save-setting">
+            <button type="button">Save Settings</button>
         </div>
     </div> <!-- end cmb2-wrap -->
-
 </div> <!-- end lcsp-tab-2 -->
