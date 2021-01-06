@@ -89,14 +89,14 @@ $nav_show          = !empty($nav_show) ? $nav_show : 'yes';
                 </div>
                 <div class="cmb-td">
                     <ul class="cmb2-radio-list cmb2-list cmb2-radio-switch">
-                        <li><input type="radio" class="cmb2-option cmb2-radio-switch1" name="wcpscu[stop_hover]" id="lcsp_soh1"
-                                value="true" <?php checked('true', $stop_hover, true); ?>>
+                        <li><input type="radio" class="cmb2-option cmb2-radio-switch1" name="wcpscu[stop_hover]"
+                                id="lcsp_soh1" value="true" <?php checked('true', $stop_hover, true); ?>>
                             <label for="lcsp_soh1">
                                 <?php esc_html_e('Yes', WCPCSU_TEXTDOMAIN); ?>
                             </label>
                         </li>
-                        <li><input type="radio" class="cmb2-option cmb2-radio-switch2" name="wcpscu[stop_hover]" id="lcsp_soh2"
-                                value="false" <?php checked('false', $stop_hover, true);  ?>>
+                        <li><input type="radio" class="cmb2-option cmb2-radio-switch2" name="wcpscu[stop_hover]"
+                                id="lcsp_soh2" value="false" <?php checked('false', $stop_hover, true);  ?>>
                             <label for="lcsp_soh2">
                                 <?php esc_html_e('No', WCPCSU_TEXTDOMAIN); ?>
                             </label>
@@ -109,61 +109,46 @@ $nav_show          = !empty($nav_show) ? $nav_show : 'yes';
             <div class="cmb-row cmb-type-text-medium">
                 <div class="cmb-th">
                     <label for="lcsp_li_desktop">
-                        <?php esc_html_e('Products to display on Desktop', WCPCSU_TEXTDOMAIN); ?>
+                        <?php esc_html_e('Products Column(s', WCPCSU_TEXTDOMAIN); ?>
                     </label>
                 </div>
                 <div class="cmb-td">
-                    <input type="text" class="cmb2-text-small" name="wcpscu[c_desktop]" id="lcsp_li_desktop"
-                        value="<?php echo !empty($c_desktop) ? intval($c_desktop) : 4; ?>">
+                    <div class="cmb-product-columns">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text" id="btnGroupAddon"><span class="fas fa-desktop"></span></div>
+                            </div>
+                            <input type="text" class="cmb2-text-small" name="wcpscu[c_desktop]" id="lcsp_li_desktop"
+                                value="<?php echo !empty($c_desktop) ? intval($c_desktop) : 4; ?>">
+                        </div>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text" id="btnGroupAddon"><span class="fas fa-laptop"></span></div>
+                            </div>
+                            <input type="text" class="cmb2-text-small" name="wcpscu[c_desktop_small]"
+                                id="lcsp_li_desktop_small"
+                                value="<?php echo !empty($c_desktop_small) ? intval($c_desktop_small) : 3; ?>">
+                        </div>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text" id="btnGroupAddon"><span class="fas fa-tablet-alt"></span></div>
+                            </div>
+                            <input type="text" class="cmb2-text-small" name="wcpscu[c_tablet]" id="lcsp_li_tablet"
+                                value="<?php echo !empty($c_tablet) ? intval($c_tablet) : 2; ?>">
+                        </div>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text" id="btnGroupAddon"><span class="fas fa-mobile-alt"></span></div>
+                            </div>
+                            <input type="text" class="cmb2-text-small" name="wcpscu[c_mobile]" id="lcsp_li_mobile"
+                                value="<?php echo !empty($c_mobile) ? intval($c_mobile) : 1; ?>">
+                        </div>
+                    </div>
+
                     <p class="cmb2-metabox-description">
-                        <?php esc_html_e('Maximum amount of items to display at a time on Desktop that screen size larger than 1198px', WCPCSU_TEXTDOMAIN); ?>
+                        <?php esc_html_e('Set products column(s) in different devices.', WCPCSU_TEXTDOMAIN); ?>
                     </p>
 
-                </div>
-            </div>
-            <!--Item on smaller desktop or laptop-->
-            <div class="cmb-row cmb-type-text-medium">
-                <div class="cmb-th">
-                    <label for="lcsp_li_desktop_small">
-                        <?php esc_html_e('Products to display on Laptop', WCPCSU_TEXTDOMAIN); ?>
-                    </label>
-                </div>
-                <div class="cmb-td">
-                    <input type="text" class="cmb2-text-small" name="wcpscu[c_desktop_small]" id="lcsp_li_desktop_small"
-                        value="<?php echo !empty($c_desktop_small) ? intval($c_desktop_small) : 3; ?>">
-                    <p class="cmb2-metabox-description">
-                        <?php esc_html_e('Maximum amount of items to display at a time on Desktop that screen size larger than 978px', WCPCSU_TEXTDOMAIN); ?>
-                    </p>
-                </div>
-            </div>
-            <!--items on tablet-->
-            <div class="cmb-row cmb-type-text-medium">
-                <div class="cmb-th">
-                    <label for="lcsp_li_tablet">
-                        <?php esc_html_e('Products to Display on Tablet', WCPCSU_TEXTDOMAIN); ?>
-                    </label>
-                </div>
-                <div class="cmb-td">
-                    <input type="text" class="cmb2-text-small" name="wcpscu[c_tablet]" id="lcsp_li_tablet"
-                        value="<?php echo !empty($c_tablet) ? intval($c_tablet) : 3; ?>">
-                    <p class="cmb2-metabox-description">
-                        <?php esc_html_e('Maximum amount of items to display at a time on Tablet', WCPCSU_TEXTDOMAIN); ?>
-                    </p>
-                </div>
-            </div>
-            <!--items on mobile-->
-            <div class="cmb-row cmb-type-text-medium">
-                <div class="cmb-th">
-                    <label for="lcsp_li_mobile">
-                        <?php esc_html_e('Products to Display on Mobile', WCPCSU_TEXTDOMAIN); ?>
-                    </label>
-                </div>
-                <div class="cmb-td">
-                    <input type="text" class="cmb2-text-small" name="wcpscu[c_mobile]" id="lcsp_li_mobile"
-                        value="<?php echo !empty($c_mobile) ? intval($c_mobile) : 2; ?>">
-                    <p class="cmb2-metabox-description">
-                        <?php esc_html_e('Maximum amount of items to display at a time on Mobile', WCPCSU_TEXTDOMAIN); ?>
-                    </p>
                 </div>
             </div>
             <!--slide speed-->
@@ -235,15 +220,15 @@ $nav_show          = !empty($nav_show) ? $nav_show : 'yes';
                 <div class="cmb-td">
                     <ul class="cmb2-radio-list cmb2-list  cmb2-radio-switch">
                         <li>
-                            <input type="radio" class="cmb2-option  cmb2-radio-switch1" name="wcpscu[nav_show]" id="wcpscu[c10_nav]1"
-                                value="yes" <?php checked('yes', $nav_show, true);  ?>>
+                            <input type="radio" class="cmb2-option  cmb2-radio-switch1" name="wcpscu[nav_show]"
+                                id="wcpscu[c10_nav]1" value="yes" <?php checked('yes', $nav_show, true);  ?>>
                             <label for="wcpscu[c10_nav]1">
                                 <?php esc_html_e('Yes', WCPCSU_TEXTDOMAIN); ?>
                             </label>
                         </li>
                         <li>
-                            <input type="radio" class="cmb2-option  cmb2-radio-switch2" name="wcpscu[nav_show]" id="wcpscu[c10_nav]2"
-                                value="no" <?php checked('no', $nav_show, true);  ?>>
+                            <input type="radio" class="cmb2-option  cmb2-radio-switch2" name="wcpscu[nav_show]"
+                                id="wcpscu[c10_nav]2" value="no" <?php checked('no', $nav_show, true);  ?>>
                             <label for="wcpscu[c10_nav]2">
                                 <?php esc_html_e('No', WCPCSU_TEXTDOMAIN); ?>
                             </label>
