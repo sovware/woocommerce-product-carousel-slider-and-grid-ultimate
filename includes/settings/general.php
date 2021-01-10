@@ -17,15 +17,15 @@ $total_products_label = (!empty($layout) && 'grid' == $layout) ? __("Products Pe
                 </div>
                 <div class="cmb-td">
                     <div class="cmd-switch">
-                        <div class=" cmd-switch-carousel">
-                            <div class="cmd-switch-item cmd-switch-carousel-img active">
+                        <div class=" cmd-switch-carousel active">
+                            <div class="cmd-switch-item cmd-switch-carousel-img " data-value="carousel">
                                 <span class="cmd-switch-item-icon"><i class="fas fa-check-square"></i></span>
                                 <img src="<?php echo WCPCSU_URL .'admin/img/carousel.jpg' ?>" alt="grid">
                             </div>
                             <p>Carousel</p>
                         </div>
                         <div class=" cmd-switch-grid">
-                            <div class=" cmd-switch-item cmd-switch-grid-img">
+                            <div class=" cmd-switch-item cmd-switch-grid-img" data-value="grid">
                                 <span class="cmd-switch-item-icon"><i class="fas fa-check-square"></i></span>
                                 <img src="<?php echo WCPCSU_URL .'admin/img/grid.jpg' ?>" alt="grid">
                             </div>
@@ -34,7 +34,7 @@ $total_products_label = (!empty($layout) && 'grid' == $layout) ? __("Products Pe
                     </div>
                 </div>
             </div>
-            <div class="cmb-row cmb-type-text-medium">
+            <!-- <div class="cmb-row cmb-type-text-medium">
                 <div class="cmb-th">
                     <label for="lcsp_slider_title"><?php esc_html_e('Layout', WCPCSU_TEXTDOMAIN); ?></label>
                 </div>
@@ -45,7 +45,7 @@ $total_products_label = (!empty($layout) && 'grid' == $layout) ? __("Products Pe
                         </option>
                     </select>
                 </div>
-            </div>
+            </div> -->
             <!--Select theme-->
             <div class="cmb-row cmb-type-radio">
                 <div class="cmb-th">
