@@ -1405,11 +1405,12 @@ input[type=radio]:checked::before {
     box-shadow: none;
 }
 
-.wpcs-admin-header h1 {
+h1.wpcs-admin-header{
     font-size: 24px;
     font-weight: 500;
     line-height: 24px;
     color: #272B41;
+    padding: 0 5px;
 }
 
 
