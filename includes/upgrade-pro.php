@@ -1,56 +1,109 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+    crossorigin="anonymous" />
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 <div class="adl_support_wrapper">
     <!--Support Block-->
     <div class="wrap wrap_left">
         <div class="postbox wpcs-admin-extra">
+            <h3 class="wpcs-admin-extra-heading">Usage</h3>
+            <div class="postbox-inline-body">
+                <p>Using WooCommerce Product Carousel, Slider & Grid is very easy. Just follow the following steps and
+                    you
+                    are ready to go.</p>
+                <p><strong>Step - 1:</strong> Create new product carousel by clicking on the 'Add New' from the
+                    "Woocommerce Product Ultimate"
+                    menu.
+                </p>
+                <p><strong>Step - 1:</strong> Customize different options of the carousel and click on the 'Publish'
+                    button.</p>
+                <p><strong>Step - 1:</strong> Copy the shortcode from the bottom of the page. For example: [wcpcsu
+                    id="123"]</p>
+                <p><strong>Step - 1:</strong> Paste the shortcode on any page or post where you would like to display
+                    the product carousel.</p>
 
-            <h3>Usage</h3>
-            <p>Using WooCommerce Product Carousel, Slider & Grid is very easy. Just follow the following steps and you are ready to go.</p>
-            <p>1. Create new product carousel by clicking on the 'Add New' from the "Woocommerce Product Ultimate" menu.</p>
-            <p>2. Customize different options of the carousel and click on the 'Publish' button.</p>
-            <p>3. Copy the shortcode from the bottom of the page. For example: [wcpcsu id="123"]</p>
-            <p>4. Paste the shortcode on any page or post where you would like to display the product carousel.</p>
-            <br>
-
-            <h3>Support Forum</h3>
-            <p> If you need any helps, please don't hesitate to post it on <a href="https://wordpress.org/support/plugin/woocommerce-product-carousel-slider-grid-ultimate" target="_blank"> wordpress.org</a> or <a href="https://aazztech.com/support" target="_blank"> aazztech.com</a> support forum.</p>
-            <br>
-
-            <h3>More features</h3>
-            <p><p>Upgrading to the <a href="https://aazztech.com/product/woocommerce-product-carousel-slider-grid-ultimate-pro/" target="_blank">Premium Version</a> would unlock more amazing features of the plugin.</p></p>
-            <p>
-                <a class="button button-primary" href="https://aazztech.com/demos/woocommerce-product-carousel-slider-grid-ultimate-pro-screenshots/" target="_blank">Backend Screenshots</a>
-
-                <a class="button button-primary" href="https://aazztech.com/demos/plugins/woocommerce-product-carousel-slider-and-grid-ultimate-demo-slider/" target="_blank">Live Preview</a>
-
-                <a class="button button-primary" href="https://aazztech.com/product/woocommerce-product-carousel-slider-grid-ultimate-pro/" target="_blank">Upgrade to Pro</a>
-            </p>
-
+                <div class="postbox-inline-video">
+                    <h3>Watch the Video</h3>
+                    <iframe src="https://www.youtube-nocookie.com/embed/LKFHEx7AorE" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
         </div>
+        <div class=" wpcs-admin-extra postbox">
+            <h3 class="wpcs-admin-extra-heading">Support Forum</h3>
+            <div class="postbox-inline-body">
+                <!-- <p> If you need any helps, please don't hesitate to post it on <a
+                        href="https://wordpress.org/support/plugin/woocommerce-product-carousel-slider-grid-ultimate"
+                        target="_blank"> wordpress.org</a> or <a href="https://aazztech.com/support" target="_blank">
+                        aazztech.com</a> support forum.</p> -->
+                <p>Need help? Get special care from our dedicated support team.</p>
+                <div class="wpcs-admin-extra-bottom">
+                    <a href="https://aazztech.com/support" class="wpcs-feature-btn btn">Get Support</a>
+                </div>
+
+            </div>
+        </div>
+        <!-- <div class=" wpcs-admin-extra postbox">
+            <h3 class="wpcs-admin-extra-heading">More features</h3>
+            <div class="postbox-inline-body">
+                <p>Upgrading to the <a
+                        href="https://aazztech.com/product/woocommerce-product-carousel-slider-grid-ultimate-pro/"
+                        target="_blank">Premium Version</a> would unlock more amazing features of the plugin.</p>
+                <div class="wpcs-admin-extra-bottom">
+                    <a class="wpcs-feature-btn btn"
+                        href="https://aazztech.com/demos/woocommerce-product-carousel-slider-grid-ultimate-pro-screenshots/"
+                        target="_blank">Backend Screenshots</a>
+
+                    <a class="wpcs-feature-btn btn"
+                        href="https://aazztech.com/demos/plugins/woocommerce-product-carousel-slider-and-grid-ultimate-demo-slider/"
+                        target="_blank">Live Preview</a>
+
+                    <a class="wpcs-feature-btn btn"
+                        href="https://aazztech.com/product/woocommerce-product-carousel-slider-grid-ultimate-pro/"
+                        target="_blank">Upgrade to Pro</a>
+                </div>
+            </div>
+        </div> -->
     </div>
 
     <!--Upgrade Block-->
     <div class="wrap wrap_right">
         <div class="postbox wpcs-admin-extra adl-upgrade-content-wrapper-right">
+            <div class="wpcs-admin-extra-top">
+                <img src="<?php echo WCPCSU_URL .'admin/img/star-support.png' ?>" alt="grid">
+                <h3>Get More Features!</h3>
+                <p>We've added <span>100+</span> more features in our Premium Version of this plugin.
+                    Let’s see some amazing features:</p>
+            </div>
 
-            <h3>Need more features?</h3>
             <ul class="adl_pro_features">
-                <li>15 different themes for Carousel & Slider</li>
-                <li>15 different themes for Grid.</li>
-                <li>3 different themes for Widget.</li>
-                <li>On sale, best selling, top rated and featured products display.</li>
-                <li>Display by ID, sku, tags, category, month and year.</li>
-                <li>Display products randomly</li>
-                <li>Add to wishlist</li>
-                <li>Show total wishlist to any page/post via shortcode.</li>
-                <li>Product excerpt and option to limit excerpt words</li>
-                <li>Display/hide excerpt with font size and color change options</li>
-                <li>Display/hide out of stock products</li>
-                <li>Ready Ribbons & Custom Ribbons.</li>
-                <li>Scroll by per item or page</li>
-                <li>And many more…</li>
+                <li> <span class="fas fa-check"></span> 15 different themes for Carousel & Slider</li>
+                <li> <span class="fas fa-check"></span> 15 different themes for Grid.</li>
+                <li> <span class="fas fa-check"></span> 3 different themes for Widget.</li>
+                <li> <span class="fas fa-check"></span> On sale, best selling, top rated and featured products display.
+                </li>
+                <li> <span class="fas fa-check"></span> Display by ID, sku, tags, category, month and year.</li>
+                <li> <span class="fas fa-check"></span> Display products randomly</li>
+                <li> <span class="fas fa-check"></span> Add to wishlist</li>
+                <li> <span class="fas fa-check"></span> Show total wishlist to any page/post via shortcode.</li>
+                <li> <span class="fas fa-check"></span> Product excerpt and option to limit excerpt words</li>
+                <li> <span class="fas fa-check"></span> Display/hide excerpt with font size and color change options
+                </li>
+                <li> <span class="fas fa-check"></span> Display/hide out of stock products</li>
+                <li> <span class="fas fa-check"></span> Ready Ribbons & Custom Ribbons.</li>
+                <li> <span class="fas fa-check"></span> Scroll by per item or page</li>
+                <li> <span class="fas fa-check"></span> And many more…</li>
             </ul>
-            <p class="text-center"><a target="_blank" href="https://aazztech.com/product/woocommerce-product-carousel-slider-grid-ultimate-pro/" class="button button-primary">Click here to know more</a></p>
-            <p class="text-center"><a target="_blank" href="https://aazztech.com/product/woocommerce-product-carousel-slider-grid-ultimate-pro/" class="button button-primary">Get the Pro Version Now!</a></p>
+            <div class="wpcs-admin-extra-bottom">
+                <a target="_blank"
+                    href="https://aazztech.com/product/woocommerce-product-carousel-slider-grid-ultimate-pro/"
+                    class="wpcs-feature-btn btn">View All Features</a>
+                <a target="_blank"
+                    href="https://aazztech.com/product/woocommerce-product-carousel-slider-grid-ultimate-pro/"
+                    class="wpcs-version-btn btn">Get Pro Version</a>
+            </div>
         </div>
     </div>
 </div>

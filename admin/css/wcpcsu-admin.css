@@ -1,3 +1,74 @@
+/* Default Overwrite */
+/* #poststuff #post-body.columns-2{
+    margin-right: 0;
+}
+
+ #post-body-content{
+    min-width: unset;
+}
+
+#post-body.columns-2 #postbox-container-1{
+    float: right;
+    margin-right: 0;
+    width: auto;
+}
+#poststuff .postbox-container{
+    width: 82.30%;
+    margin-right: 0;
+}
+
+#post-body-content, .edit-form-section{
+    margin-bottom: 0;
+}
+
+#comment-link-box, #edit-slug-box{
+    margin-top: 2px;
+} */
+
+.notice,
+div.error,
+div.updated {
+    margin: 15px 20px 2px 0;
+    border-color: #C6D0DC;
+}
+
+.notice-error,
+div.error {
+    border-left-color: #ff408c;
+}
+
+#postbox-container-2 .postbox-header {
+    clear: both;
+    background: white;
+    padding: 6px;
+    border-radius: 4px;
+    box-shadow: 0 3px 5px rgba(173, 180, 210, .05);
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    border-bottom: none;
+}
+
+
+.postbox-header {
+    clear: both;
+    background: white;
+    padding: 6px;
+    border-radius: 4px;
+    box-shadow: 0 3px 5px rgba(173, 180, 210, .05);
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #E3E6EF;
+
+}
+
+#postbox-container-2 .postbox-header {
+    border-bottom: none;
+}
+
+/* //Extension css */
+
 body.post-type-wcpcsu-custom-post {
     font-family: 'Roboto', sans-serif;
 }
@@ -253,6 +324,7 @@ body.post-type-wcpcsu-custom-post {
     width: 140px;
     height: 40px;
     margin-right: 10px;
+    margin-top: 4px;
 }
 
 .cmb-header-font-styles .input-group input {
@@ -652,7 +724,7 @@ ul.lcs_pro_features {
 
 /* css for support page*/
 .adl_support_wrapper .wrap.wrap_left {
-    width: calc(100% - 350px);
+    width: calc(100% - 614px);
 }
 
 .adl_support_wrapper .wrap {
@@ -661,46 +733,31 @@ ul.lcs_pro_features {
 }
 
 .adl_support_wrapper .wrap.wrap_right {
-    width: 300px;
-}
-
-.adl_support_wrapper .wrap.wrap_right .postbox {
-    background: #f0f9dc;
-    padding: 0 0 10px;
-}
-
-ul.adl_pro_features {
-    padding: 0 23px;
+    width: 570px;
 }
 
 .adl_pro_features li {
-    font-size: 13px;
+    font-size: 14px;
     line-height: 22px;
     color: #333;
     position: relative;
-    margin-bottom: 6px;
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 14px;
+    font-weight: 500;
 }
 
-.adl_pro_features li:before {
-    content: "\f522";
-    font-family: 'dashicons', 'sans-serif';
-    margin-right: 4px;
-    display: inline-block;
-    vertical-align: -1.9px;
-}
-
-.adl-upgrade-content-wrapper-right h3 {
-    font-size: 15px;
-    font-weight: normal;
-    color: #ffffff;
-    background: #0085ba;
-    text-align: center;
-    padding: 12px 0;
-    margin: 0;
-}
-
-.adl_support_wrapper .wrap.wrap_right .text-center {
-    text-align: center;
+.adl_pro_features li span {
+    min-width: 18px;
+    height: 18px;
+    background-color: #00BC5E;
+    border-radius: 50%;
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    font-size: 9px;
+    margin-right: 10px;
 }
 
 .wrap .wpcs-admin-extra {
@@ -1160,6 +1217,144 @@ input[type=radio]:checked::before {
     line-height: 25px;
 }
 
+/* usage abd support */
+.wpcs-admin-extra-top {
+    flex-flow: column;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.wpcs-admin-extra-top img {
+    width: 90px;
+    height: 90px;
+    max-width: 100%;
+}
+
+.wpcs-admin-extra-top p {
+    color: #5A5F7D;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-bottom: 10px;
+}
+
+.wpcs-admin-extra-top p span {
+    color: #FF408C;
+    font-weight: 700;
+}
+
+.wpcs-admin-extra-heading {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #272B41;
+}
+
+.wpcs-admin-extra .wpcs-admin-extra-heading {
+    padding: 28px 30px;
+    border-bottom: 1px solid #F1F2F6;
+    margin: 0;
+}
+
+.adl_pro_features {
+    margin-bottom: 40px;
+}
+
+.adl_support_wrapper .postbox {
+    background: white;
+    border-radius: 4px;
+    border: none;
+    box-shadow: 0 3px 5px rgba(173, 180, 210, .05);
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.adl_support_wrapper .wrap_right .postbox {
+    padding: 50px 30px;
+}
+
+.postbox-inline-body {
+    padding: 30px;
+
+}
+
+.postbox-inline-body p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #5A5F7D;
+    margin: 0;
+}
+
+.postbox-inline-body p strong {
+    font-size: 15px;
+    color: #272B41;
+}
+
+
+.postbox-inline-body p:not(:last-child) {
+    margin-bottom: 14px;
+}
+
+.postbox-inline-body p:first-child {
+    margin-bottom: 17px;
+}
+
+.postbox-inline-video iframe {
+    width: 100%;
+    height: 430px;
+    max-height: 100%;
+    border-radius: 4px;
+}
+
+.postbox-inline-video h3 {
+    color: #272B41;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: center;
+    margin: 56px 0 20px 0;
+}
+
+.adl-upgrade-content-wrapper-right h3 {
+    color: #272B41;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.wpcs-admin-extra-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -5px;
+}
+
+.wpcs-admin-extra-bottom .btn {
+    padding: 8px 20px;
+    border-radius: 4px;
+    margin: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 25px;
+    text-decoration: none;
+    color: white;
+}
+
+.wpcs-feature-btn {
+    background: #834EFF;
+    border: 1px solid #834EFF;
+}
+
+.wpcs-version-btn {
+    background: #FF408C;
+    border: 1px solid #FF408C;
+}
+
+
+
+
 /* Responsive style */
 
 @media (max-width: 1600.98px) {
@@ -1171,6 +1366,37 @@ input[type=radio]:checked::before {
     .cmb2-metabox-card3 textarea {
         width: 100%;
         min-width: 180px;
+    }
+}
+
+@media (max-width: 1399.99px) {
+    .adl_support_wrapper .wrap.wrap_left {
+        width: calc(100% - 404px);
+    }
+
+    .adl_support_wrapper .wrap.wrap_right {
+        width: 360px;
+    }
+}
+
+@media (max-width: 960.99px) {
+    .adl_support_wrapper {
+        overflow: hidden;
+    }
+
+    .adl_support_wrapper .wrap.wrap_left {
+        width: auto;
+        margin: 15px 13px 0 5px;
+    }
+
+    .adl_support_wrapper .wrap.wrap_right {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 782px) {
+    .cmb2-wrap li {
+        margin: 1px 0 5px;
     }
 }
 

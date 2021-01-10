@@ -109,7 +109,7 @@ $nav_show          = !empty($nav_show) ? $nav_show : 'yes';
             <div class="cmb-row cmb-type-text-medium">
                 <div class="cmb-th">
                     <label for="lcsp_li_desktop">
-                        <?php esc_html_e('Products Column(s', WCPCSU_TEXTDOMAIN); ?>
+                        <?php esc_html_e('Products Column', WCPCSU_TEXTDOMAIN); ?>
                     </label>
                 </div>
                 <div class="cmb-td">
