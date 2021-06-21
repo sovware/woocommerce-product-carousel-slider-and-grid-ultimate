@@ -11,7 +11,7 @@
     <div class="wpcu-product">
         <div class="wpcu-product__img">
             <a href="<?php echo get_the_permalink(); ?>">
-                <img src="<?php esc_url($wpcsu_img); ?>" alt="">
+                <img src="<?php echo wc_placeholder_img_src(); ?>" alt="">
             </a>
             <div class="overlay-content-bottom">
             <?php echo do_shortcode('[add_to_cart id="'.get_the_ID().'"]');?>
