@@ -14,15 +14,19 @@
                 <img src="<?php echo wc_placeholder_img_src(); ?>" alt="">
             </a>
             <div class="overlay-content-bottom">
-            <?php echo do_shortcode('[add_to_cart id="'.get_the_ID().'"]');?>
+            <?php echo do_shortcode('[add_to_cart id="' . get_the_ID() . '" show_price = "false"]'); ?>
             </div>
         </div>
         <div class="wpcu-product__details">
             <h2 class="wpcu-product__title"><a href="<?php echo get_the_permalink(); ?>"><?php echo get_the_title(); ?></a></h2>
             <p class="wpcu-product__price wpcu-product__price--discount">
-                <s><?php echo $product->get_price_html(); ?></s> 
+                <?php 
+                if(  empty( $sale_price ) ) { ?>
+                <span><?php echo $product->get_regular_price(); ?></span> 
                 <?php  
-                if( ! empty( $sale_price ) ) { ?>
+                } else { ?>
+                <s><?php echo $product->get_regular_price(); ?></s> 
+                - <span><?php echo $product->get_sale_price(); ?></span> 
                 <span><?php echo $this->aazz_show_discount_percentage(); ?></span>
                 <?php } ?>
             </p>
