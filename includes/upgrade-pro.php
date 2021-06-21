@@ -35,10 +35,6 @@
         <div class=" wpcs-admin-extra postbox">
             <h3 class="wpcs-admin-extra-heading">Support Forum</h3>
             <div class="postbox-inline-body">
-                <!-- <p> If you need any helps, please don't hesitate to post it on <a
-                        href="https://wordpress.org/support/plugin/woocommerce-product-carousel-slider-grid-ultimate"
-                        target="_blank"> wordpress.org</a> or <a href="https://aazztech.com/support" target="_blank">
-                        aazztech.com</a> support forum.</p> -->
                 <p>Need help? Get special care from our dedicated support team.</p>
                 <div class="wpcs-admin-extra-bottom">
                     <a href="https://aazztech.com/support" class="wpcs-feature-btn btn">Get Support</a>
@@ -46,27 +42,6 @@
 
             </div>
         </div>
-        <!-- <div class=" wpcs-admin-extra postbox">
-            <h3 class="wpcs-admin-extra-heading">More features</h3>
-            <div class="postbox-inline-body">
-                <p>Upgrading to the <a
-                        href="https://aazztech.com/product/woocommerce-product-carousel-slider-grid-ultimate-pro/"
-                        target="_blank">Premium Version</a> would unlock more amazing features of the plugin.</p>
-                <div class="wpcs-admin-extra-bottom">
-                    <a class="wpcs-feature-btn btn"
-                        href="https://aazztech.com/demos/woocommerce-product-carousel-slider-grid-ultimate-pro-screenshots/"
-                        target="_blank">Backend Screenshots</a>
-
-                    <a class="wpcs-feature-btn btn"
-                        href="https://aazztech.com/demos/plugins/woocommerce-product-carousel-slider-and-grid-ultimate-demo-slider/"
-                        target="_blank">Live Preview</a>
-
-                    <a class="wpcs-feature-btn btn"
-                        href="https://aazztech.com/product/woocommerce-product-carousel-slider-grid-ultimate-pro/"
-                        target="_blank">Upgrade to Pro</a>
-                </div>
-            </div>
-        </div> -->
     </div>
 
     <!--Upgrade Block-->

@@ -50,5 +50,42 @@ if (!function_exists('wcpcsu_get_paged_num')) {
 
     }
 
-
 }
+
+if ( ! function_exists('wpcsu_load_dependencies') ) :
+    function wpcsu_load_dependencies($files = 'all', $directory = WCPCSU_INC_DIR, $ext = '.php')
+    {
+        if ( ! file_exists( $directory ) ) return; // vail if the directory does not exist
+
+        switch( $files ) {
+            case is_array( $files ) && 'all' !== strtolower( $files[0] ):
+                // include one or more file looping through the $files array
+                load_some_file( $files, $directory );
+                break;
+            case ! is_array( $files ) && 'all' !== $files:
+                //load a single file here
+                ( file_exists( $directory . $files . $ext ) ) ? require_once $directory . $files . $ext : null;
+                break;
+            case 'all' == $files || 'all' == strtolower( $files[0] ):
+                // load all php file here
+                load_all_files( $directory );
+                break;
+        }
+
+        return false;
+
+    }
+endif;
+
+if ( ! function_exists('load_all_files') ):
+    function load_all_files( $dir = '', $ext = '.php' )
+    {
+        if ( ! file_exists( $dir ) ) return;
+        foreach ( scandir( $dir ) as $file ) {
+            // require once all the files with the given ext. eg. .php
+            if ( preg_match( "/{$ext}$/i", $file ) ) {
+                require_once( $dir . $file );
+            }
+        }
+    }
+endif;

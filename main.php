@@ -95,7 +95,7 @@ Final class Woocmmerce_Product_carousel_slider_ultimate
         if ( ! defined( 'WCPCSU_FILE' ) ) { define( 'WCPCSU_FILE', __FILE__ ); }
         if ( ! defined( 'WCPCSU_BASE' ) ) { define( 'WCPCSU_BASE', plugin_basename( __FILE__ ) ); }
         // Plugin Text domain File.
-        if ( ! defined( 'WCPCSU_TEXTDOMAIN' ) ) { define( 'WCPCSU_TEXTDOMAIN', 'woo-product-carousel-slider-and-grid-ultimate' ); }
+        if ( ! defined( 'WCPCSU_TEXTDOMAIN' ) ) { define( 'WCPCSU_TEXTDOMAIN', 'woocommerce-product-carousel-slider-and-grid-ultimate' ); }
         // Plugin Includes Path
         if ( !defined('WCPCSU_INC_DIR') ) { define('WCPCSU_INC_DIR', WCPCSU_DIR.'includes/'); }
         // Plugin Language File Path
@@ -105,7 +105,7 @@ Final class Woocmmerce_Product_carousel_slider_ultimate
     }
 
     public function upgrade_to_pro () {
-        add_submenu_page( 'edit.php?post_type=wcpcsu-custom-post', esc_html__('Support', WCPCSU_TEXTDOMAIN), esc_html__('Usage & Support', WCPCSU_TEXTDOMAIN), 'manage_options', 'support', array( self::$instance, 'support_view' ) );
+        add_submenu_page( 'edit.php?post_type=wcpcsu-custom-post', esc_html__( 'Support', WCPCSU_TEXTDOMAIN ), esc_html__( 'Usage & Support', WCPCSU_TEXTDOMAIN ), 'manage_options', 'support', array( self::$instance, 'support_view' ) );
     }
 
     public function support_view () {
@@ -117,7 +117,7 @@ Final class Woocmmerce_Product_carousel_slider_ultimate
      */
     public function wcpcsu_load_textdomain()
     {
-        load_plugin_textdomain( WCPCSU_TEXTDOMAIN,false,WCPCSU_LANG_DIR );
+        load_plugin_textdomain( WCPCSU_TEXTDOMAIN, false, WCPCSU_LANG_DIR );
     }
 
     /**
@@ -128,11 +128,9 @@ Final class Woocmmerce_Product_carousel_slider_ultimate
      * @return void
      */
     public function wcpcsu_include(){
-        require_once WCPCSU_INC_DIR . 'wcpcsu-custom-post.php';
-        require_once WCPCSU_INC_DIR . 'wcpcsu-meta-box.php';
-        require_once WCPCSU_INC_DIR . 'wcpcsu-Shortcode.php';
-        require_once WCPCSU_INC_DIR . 'aq_resizer.php';
+       
         require_once WCPCSU_INC_DIR . 'helper-functions.php';
+        wpcsu_load_dependencies( 'all', WCPCSU_INC_DIR . 'classes/' );
     }
 
     public function WCPCSU_admin_notice() { ?>
@@ -158,16 +156,7 @@ Final class Woocmmerce_Product_carousel_slider_ultimate
     }
 
     public function template_enqueue_file () {
-        wp_register_style('wcpcsu-animate', WCPCSU_URL . 'assets/css/animate.css');
-        wp_register_style('wcpcsu-line-awesome', WCPCSU_URL . 'assets/css/line-awesome.css');
-        wp_register_style('wcpcsu-owl-carousel', WCPCSU_URL . 'assets/css/owl.carousel.css');
-        wp_register_style('wcpcsu-simple-line-icon', WCPCSU_URL . 'assets/css/simple-line-icons.css');
-        wp_register_style('wcpcsu-theme', WCPCSU_URL . 'assets/css/theme.css');
-        wp_register_style('featherlight-style', WCPCSU_URL . 'assets/css/featherlight.css');
-        wp_register_style('wcpcsu-style', WCPCSU_URL . 'assets/css/style.css');
-        wp_register_script('wcpcsu-owl-carousel',WCPCSU_URL . 'assets/js/owl.carousel.min.js',array('jquery'));
-        wp_register_script('wcpcsu-featherlight', WCPCSU_URL . 'assets/js/featherlight.js',array('jquery'));
-        wp_register_script('wcpcsu-custom', WCPCSU_URL . 'assets/js/custom.js',array('jquery'));
+        wp_register_style( 'wcpcsu-main', WCPCSU_URL . 'assets/css/style.css' );
     }
 
     /**
@@ -197,10 +186,5 @@ function WCPCSU() {
 
 // Get WCPCSU ( Woocommerce Product Carousel Slider Ultimate plugin ) Running.
 WCPCSU();
-function wpcsu_image_cropping($attachmentId, $width, $height, $crop = true, $quality = 100)
-{
-    $resizer = new Wpcsu_Image_resizer($attachmentId);
 
-    return $resizer->resize($width, $height, $crop, $quality);
-}
 
