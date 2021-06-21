@@ -16,16 +16,20 @@
             </a>
             <div class="wpcu-overlay-content-bottom">
                 <div class="wpcu-button wpcu-button--primary">
-                    <?php echo do_shortcode('[add_to_cart id="'.get_the_ID().'"]');?>
+                <?php echo do_shortcode('[add_to_cart id="' . get_the_ID() . '" show_price = "false"]'); ?>
                 </div>
             </div>
         </div>
         <div class="wpcu-product__details">
             <h2 class="wpcu-product__title"><a href="<?php echo get_the_permalink(); ?>"><?php echo get_the_title(); ?></a></h2>
             <p class="wpcu-product__price wpcu-product__price--discount">
-                <?php echo $product->get_price_html(); ?>
                 <?php
-                if( ! empty( $sale_price ) ) { ?>
+                if(  empty( $sale_price ) ) { ?>
+                <span><?php echo $product->get_regular_price(); ?></span>
+                <?php
+                } else { ?>
+                <?php echo $product->get_regular_price(); ?>
+                - <span><?php echo $product->get_sale_price(); ?></span>
                 <span><?php echo $this->aazz_show_discount_percentage(); ?></span>
                 <?php } ?>
             </p>
