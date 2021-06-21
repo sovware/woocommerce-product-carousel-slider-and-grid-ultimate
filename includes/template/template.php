@@ -1,6 +1,7 @@
-<div class="wpcu-products" id="theme-one">
+<div class="wpcu-products wpcu-grid-one" id="theme-one">
+    <div class="wpcu-row wpcu-column-4 wpcu-column-md-2">
     <?php
-    
+
     while($loop->have_posts()) : $loop->the_post();
     global $post,$product;
     $aazz_thumb = wp_get_attachment_image_src( get_post_thumbnail_id(get_the_ID()), 'large' );
@@ -13,15 +14,17 @@
             <a href="<?php echo get_the_permalink(); ?>">
                 <img src="<?php echo wc_placeholder_img_src(); ?>" alt="">
             </a>
-            <div class="overlay-content-bottom">
-            <?php echo do_shortcode('[add_to_cart id="'.get_the_ID().'"]');?>
+            <div class="wpcu-overlay-content-bottom">
+                <div class="wpcu-button wpcu-button--primary">
+                    <?php echo do_shortcode('[add_to_cart id="'.get_the_ID().'"]');?>
+                </div>
             </div>
         </div>
         <div class="wpcu-product__details">
             <h2 class="wpcu-product__title"><a href="<?php echo get_the_permalink(); ?>"><?php echo get_the_title(); ?></a></h2>
             <p class="wpcu-product__price wpcu-product__price--discount">
-                <s><?php echo $product->get_price_html(); ?></s> 
-                <?php  
+                <?php echo $product->get_price_html(); ?>
+                <?php
                 if( ! empty( $sale_price ) ) { ?>
                 <span><?php echo $this->aazz_show_discount_percentage(); ?></span>
                 <?php } ?>
@@ -40,4 +43,5 @@
     </div><!-- ends: .wpcu-product -->
     <?php
 endwhile; ?>
+</div>
 </div><!-- ends: .wpcu-products -->
