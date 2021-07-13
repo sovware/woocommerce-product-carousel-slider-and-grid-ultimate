@@ -5,49 +5,50 @@ class wcpcsu_Shortcode
 {
     public function __construct ()
     {
-        add_shortcode('wcpcsu', array($this,'wcpcsu_shoortcode_method'));
+        add_shortcode( 'wcpcsu', array( $this,'wcpcsu_shoortcode_method' ) );
     }
 
-    public function wcpcsu_shoortcode_method ($atts, $content = null) {
+    public function wcpcsu_shoortcode_method( $atts, $content = null ) {
         ob_start();
         global $product;
-        $atts = shortcode_atts(array(
+        $atts = shortcode_atts( array(
             'id'    =>  ''
-        ), $atts);
+        ), $atts );
         $post_id = $atts['id'];
         $this->wcpcsu_style_files();
         // get the array of data from the post meta
         $enc_data = get_post_meta( $post_id, 'wcpscu', true );
-        $data_array = Woocmmerce_Product_carousel_slider_ultimate::unserialize_and_decode24($enc_data);
-        $value = is_array($data_array) ? $data_array : array();
-        extract($value);
+        $data_array = Woocmmerce_Product_carousel_slider_ultimate::unserialize_and_decode24( $enc_data );
+        $value = is_array( $data_array ) ? $data_array : array();
+        extract( $value );
         $rand_id                 = rand();
-        $total_products          = !empty($total_products) ? $total_products : 6;
-        $layout                  = !empty($layout) ? $layout : 'carousel';
-        $products_type           = !empty($products_type) ? $products_type : 'latest';
-        $img_crop                = !empty($img_crop) ? $img_crop : 'yes';
-        $crop_image_width        = !empty($crop_image_width) ? intval($crop_image_width) : 300;
-        $crop_image_height       = !empty($crop_image_height) ? intval($crop_image_height) : 300;
-        $c_theme  			     = !empty($c_theme) ? $c_theme : 'c_theme1';
-        $g_theme  			     = !empty($g_theme) ? $g_theme : 'g_theme1';
-        $display_title           = !empty($display_title) ? $display_title : 'yes';
-        $display_price           = !empty($display_price) ? $display_price : 'yes';
-        $display_ratings         = !empty($display_ratings) ? $display_ratings : 'yes';
-        $display_cart            = !empty($display_cart) ? $display_cart : 'yes';
-        $nav_show                = !empty($nav_show) ? $nav_show : 'yes';
-        $ribbon                  = !empty($ribbon) ? $ribbon : 'discount';
-        $header                  = !empty($header) ? $header : 'center';
-        $h_title_show            = !empty($h_title_show) ? $h_title_show : 'no';
-        $display_full_title      = !empty($display_full_title) ? $display_full_title : 'no';
-        $g_column                = !empty($g_column) ? intval($g_column) : 3;
-        $g_tablet                = !empty($g_tablet) ? intval($g_tablet) : 3;
-        $g_mobile                = !empty($g_mobile) ? intval($g_mobile) : 1;
-        $grid_pagination         = !empty($grid_pagination) ? $grid_pagination : 'no';
-        $slide_time              = !empty( $slide_time)  ? $slide_time : '2000' ;
+        $total_products          = ! empty( $total_products ) ? $total_products : 6;
+        $layout                  = ! empty( $layout ) ? $layout : 'carousel';
+        $products_type           = ! empty( $products_type ) ? $products_type : 'latest';
+        $img_crop                = ! empty( $img_crop ) ? $img_crop : 'yes';
+        $crop_image_width        = ! empty( $crop_image_width ) ? intval( $crop_image_width ) : 300;
+        $crop_image_height       = ! empty( $crop_image_height ) ? intval( $crop_image_height ) : 300;
+        $c_theme  			     = ! empty( $c_theme ) ? $c_theme : 'c_theme1';
+        $g_theme  			     = ! empty( $g_theme ) ? $g_theme : 'g_theme1';
+        $display_title           = ! empty( $display_title ) ? $display_title : 'yes';
+        $display_price           = ! empty( $display_price ) ? $display_price : 'yes';
+        $display_ratings         = ! empty( $display_ratings ) ? $display_ratings : 'yes';
+        $display_cart            = ! empty( $display_cart ) ? $display_cart : 'yes';
+        $nav_show                = ! empty( $nav_show ) ? $nav_show : 'yes';
+        $ribbon                  = ! empty( $ribbon ) ? $ribbon : 'discount';
+        $header                  = ! empty( $header ) ? $header : 'center';
+        $h_title_show            = ! empty( $h_title_show ) ? $h_title_show : 'no';
+        $display_full_title      = ! empty( $display_full_title ) ? $display_full_title : 'no';
+        $g_column                = ! empty( $g_column ) ? intval( $g_column ) : 3;
+        $g_tablet                = ! empty( $g_tablet ) ? intval( $g_tablet ) : 3;
+        $g_mobile                = ! empty( $g_mobile ) ? intval( $g_mobile ) : 1;
+        $grid_pagination         = ! empty( $grid_pagination ) ? $grid_pagination : 'no';
+        $slide_time              = ! empty( $slide_time )  ? $slide_time : '2000' ;
         $paged                   =  wcpcsu_get_paged_num();
+        
         $common_args = array(
             'post_type'      => 'product',
-            'posts_per_page' => !empty($total_products) ? intval($total_products) : 12,
+            'posts_per_page' => ! empty( $total_products ) ? intval( $total_products ) : 12,
             'post_status'    => 'publish',
             'meta_query'     => array(
                 array(
@@ -57,20 +58,20 @@ class wcpcsu_Shortcode
                 )
             )
         );
-        if('grid' == $layout && 'yes' == $grid_pagination) {
+        if( 'grid' == $layout && 'yes' == $grid_pagination ) {
             $common_args['paged']    = $paged;
         }
-        if ($products_type == "latest") {
+        if( $products_type == "latest" ) {
             $args = $common_args;
         }
-        elseif ($products_type == "older") {
+        elseif( $products_type == "older" ) {
             $older_args = array(
                 'orderby'     => 'date',
                 'order'       => 'ASC'
             );
-            $args = array_merge($common_args, $older_args);
+            $args = array_merge( $common_args, $older_args );
         }
-        elseif ($products_type == "featured") {
+        elseif( $products_type == "featured" ) {
             $meta_query  = WC()->query->get_meta_query();
             $tax_query   = WC()->query->get_tax_query();
 
@@ -84,7 +85,7 @@ class wcpcsu_Shortcode
                 'meta_query' => $meta_query,
                 'tax_query' => $tax_query,
             );
-            $args = array_merge($common_args, $featured_args);
+            $args = array_merge( $common_args, $featured_args );
         }
 
         else {
@@ -92,7 +93,7 @@ class wcpcsu_Shortcode
         }
         $loop = new WP_Query( $args );
 
-        if( $loop->have_posts()) {
+        if( $loop->have_posts() ) {
             wp_enqueue_style( 'wcpcsu-main' );
             include WCPCSU_INC_DIR . 'template/template.php';
         }else{

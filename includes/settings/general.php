@@ -17,19 +17,21 @@ $total_products_label = (!empty($layout) && 'grid' == $layout) ? __("Products Pe
                 </div>
                 <div class="cmb-td">
                     <div class="cmd-switch">
-                        <div class=" cmd-switch-carousel active">
-                            <div class="cmd-switch-item cmd-switch-carousel-img " data-value="carousel">
+                        <div class="cmd-switch-carousel <?php echo ( empty( $layout ) || 'carousel' == $layout ) ? 'active' : ''; ?>">
+                            <div class="cmd-switch-item cmd-switch-carousel-img" data-value="carousel">
                                 <span class="cmd-switch-item-icon"><i class="fas fa-check-square"></i></span>
-                                <img src="<?php echo WCPCSU_URL .'admin/img/carousel.jpg' ?>" alt="grid">
+                                <img src="<?php echo WCPCSU_URL .'admin/img/carousel.jpg' ?>" alt="carousel">
+                                <input type="radio" name="wcpscu[layout]" class="wcpscu_radio_layout wcpscu_carousel_layout" value="carousel">
                             </div>
-                            <p>Carousel</p>
+                            <p><?php _e( 'Carousel', WCPCSU_TEXTDOMAIN );?></p>
                         </div>
-                        <div class=" cmd-switch-grid">
+                        <div class="cmd-switch-grid <?php echo ( ! empty( $layout ) && 'grid' == $layout ) ? 'active' : ''; ?>">
                             <div class=" cmd-switch-item cmd-switch-grid-img" data-value="grid">
                                 <span class="cmd-switch-item-icon"><i class="fas fa-check-square"></i></span>
                                 <img src="<?php echo WCPCSU_URL .'admin/img/grid.jpg' ?>" alt="grid">
+                                <input type="radio" name="wcpscu[layout]" class="wcpscu_radio_layout wcpscu_grid_layout" value="grid">
                             </div>
-                            <p>Grid</p>
+                            <p><?php _e( 'Grid', WCPCSU_TEXTDOMAIN );?></p>
                         </div>
                     </div>
                 </div>

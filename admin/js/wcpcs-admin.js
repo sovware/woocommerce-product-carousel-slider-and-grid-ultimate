@@ -42,6 +42,7 @@ jQuery(document).ready(function ($) {
 
     $(".cmd-switch-carousel").on('click',function (e) {
         e.preventDefault();
+        $(".wcpscu_carousel_layout").attr('checked', true);
         $("#tab2").css('display', 'block');
         $("#tab3").css('display', 'none');
         $("#wcpscu_total_pdt").html("Total Products to Display");
@@ -49,6 +50,7 @@ jQuery(document).ready(function ($) {
 
     $(".cmd-switch-grid").on('click',function (e) {
         e.preventDefault();
+        $(".wcpscu_grid_layout").attr('checked', true);
         $("#tab2").css('display', 'none');
         $("#tab3").css('display', 'block');
         $("#wcpscu_total_pdt").html("Products Per Page");
@@ -72,4 +74,8 @@ jQuery(document).ready(function ($) {
         ('c_theme2' == $this.val()) ? $('#theme2').show(): $('#theme2').hide();
 
     });
+
+    $('.wcpscu_radio_layout').hide();
+    
+
 });
