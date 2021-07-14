@@ -55,7 +55,7 @@ $total_products_label = (!empty($layout) && 'grid' == $layout) ? __("Products Pe
                 </div>
                 <div class="cmb-td">
                     <div class="cmb-theme-wrapper">
-                        <select id="theme_" class="theme_" name="wcpscu[theme]">
+                        <select id="theme_" class="wcpscu_theme" name="wcpscu[theme]">
                             <option value="theme_1">Theme-1</option>
                             <option value="theme_2"
                                 <?php if(!empty($theme_) && $theme_ == "theme_2"){ echo "selected";}?>>Theme-2

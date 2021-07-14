@@ -60,18 +60,19 @@ jQuery(document).ready(function ($) {
 
 
 
-    $('#theme1, #theme2').hide();
+    $('.theme_1').hide();
 
-    var $theme = $('#c_theme'); // get theme jQuery object
+    var $theme = $('.wcpscu_theme'); // get theme jQuery object
 
     var currentTheme = $theme.val(); // get current theme
 
-    $('#' + currentTheme).show(); // show current theme
+    $('.' + currentTheme).show(); // show current theme
     $theme.on('change', function () {
         var $this = $(this);
 
-        ('c_theme1' == $this.val()) ? $('#theme1').show(): $('#theme1').hide();
-        ('c_theme2' == $this.val()) ? $('#theme2').show(): $('#theme2').hide();
+        ('theme_1' == $this.val()) ? $('.theme_1').show(): $('.theme_1').hide();
+        ('theme_2' == $this.val()) ? $('.theme_2').show(): $('.theme_2').hide();
+        ('theme_3' == $this.val()) ? $('.theme_3').show(): $('.theme_3').hide();
 
     });
 

@@ -45,7 +45,6 @@ class wcpcsu_Shortcode
         $grid_pagination         = ! empty( $grid_pagination ) ? $grid_pagination : 'no';
         $slide_time              = ! empty( $slide_time )  ? $slide_time : '2000' ;
         $paged                   =  wcpcsu_get_paged_num();
-        
         $common_args = array(
             'post_type'      => 'product',
             'posts_per_page' => ! empty( $total_products ) ? intval( $total_products ) : 12,
@@ -147,14 +146,8 @@ class wcpcsu_Shortcode
     }
 
     public function wcpcsu_style_files () {
-        wp_enqueue_style('wcpcsu-animate');
-        wp_enqueue_style('wcpcsu-line-awesome');
-        wp_enqueue_style('wcpcsu-simple-line-icon');
-        wp_enqueue_style('wcpcsu-theme');
-        wp_enqueue_style('featherlight-style');
+    
         wp_enqueue_style('wcpcsu-style');
-
-        wp_enqueue_script('wcpcsu-featherlight');
         wp_enqueue_script('wcpcsu-main-js');
     }
 }
