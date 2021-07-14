@@ -12,10 +12,10 @@
     <div class="wpcu-product">
         <div class="wpcu-product__img">
             <a href="<?php echo get_the_permalink(); ?>">
-                <img src="<?php echo wc_placeholder_img_src(); ?>" alt="">
+                <img src="https://via.placeholder.com/500x500" alt="">
             </a>
             <div class="wpcu-overlay-content-bottom">
-                <div class="wpcu-button wpcu-button--primary">
+                <div class="wpcu-button">
                     <?php echo do_shortcode('[add_to_cart id="' . get_the_ID() . '" show_price = "false"]'); ?>
                 </div>
             </div>
@@ -28,9 +28,9 @@
                 <span>$<?php echo $product->get_regular_price(); ?></span>
                 <?php
                 } else { ?>
-                <s>$<?php echo $product->get_regular_price(); ?></s>
                 <span>$<?php echo $product->get_sale_price(); ?></span>
-                <span><?php echo $this->aazz_show_discount_percentage(); ?></span>
+                <s>$<?php echo $product->get_regular_price(); ?></s>
+                <span class="wpcu-product__price__discount-badge"><?php echo $this->aazz_show_discount_percentage(); ?></span>
                 <?php } ?>
             </div>
             <div class="wpcu-product__rating">

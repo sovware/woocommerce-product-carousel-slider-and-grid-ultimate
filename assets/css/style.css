@@ -4,11 +4,14 @@
     Author: wpWax
     Version: 1.0
 */
+/* Import font */
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600&display=swap");
 /* General Styles */
 .wpcu-products {
   max-width: 100% !important;
   width: 100%;
   padding: 0 15px;
+  font-family: "Rubik", sans-serif;
 }
 
 /* wpcu grid */
@@ -118,11 +121,68 @@
             flex: 0 0 25%;
   }
 }
-/*
+/*===============================
     Elements & Components
+=================================*/
+/*
+    * Buttons
+    ? Modifiers: --sm, --rounded, --rounded-circle, --icon-circle
 */
-/* Buttons */
+.wpcu-button {
+  display: inline-block;
+}
 .wpcu-button p {
   margin: 0;
+  display: inline-block;
 }
-/*# sourceMappingURL=maps/style.css.map */
+.wpcu-button .button {
+  min-height: 40px;
+  background: #ff5500;
+  color: #fff;
+  border-radius: 0;
+  text-transform: uppercase;
+  font-size: 12px;
+  padding: 0 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-decoration: none !important;
+}
+.wpcu-button .button:hover {
+  text-decoration: none !important;
+  border: 0 none;
+}
+.wpcu-button--sm .button {
+  min-height: 35px;
+  padding: 0 12px;
+}
+.wpcu-button--rounded .button {
+  border-radius: 3px;
+}
+.wpcu-button--rounded-circle .button {
+  border-radius: 20px;
+}
+
+/*
+    TODO: more components/elements will add here
+*/
+/* Product title */
+.wpcu-product__title {
+  margin: 0 !important;
+  line-height: normal;
+  font-size: unset;
+  font-family: inherit !important;
+}
+.wpcu-product__title a {
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: normal;
+  color: #363940;
+  letter-spacing: normal;
+}
