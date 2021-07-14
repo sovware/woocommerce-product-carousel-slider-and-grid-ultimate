@@ -157,6 +157,7 @@ Final class Woocmmerce_Product_carousel_slider_ultimate
 
     public function template_enqueue_file () {
         wp_register_style( 'wcpcsu-main', WCPCSU_URL . 'assets/css/style.css' );
+        wp_register_script( 'wcpcsu-main-js', WCPCSU_URL . 'assets/js/main.js' );
     }
 
     /**

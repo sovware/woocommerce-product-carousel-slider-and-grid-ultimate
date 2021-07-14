@@ -6,7 +6,7 @@ $grid_pagination          = !empty($grid_pagination) ? $grid_pagination : 'no';
     <div class="cmb2-wrap form-table">
         <div id="cmb2-metabox" class="cmb2-metabox cmb-field-list">
             <!--Select theme-->
-            <div class="cmb-row cmb-type-radio">
+            <!-- <div class="cmb-row cmb-type-radio">
                 <div class="cmb-th">
                     <label for="lcsp_ap"><?php esc_html_e('Select Theme', WCPCSU_TEXTDOMAIN); ?></label>
                 </div>
@@ -28,7 +28,7 @@ $grid_pagination          = !empty($grid_pagination) ? $grid_pagination : 'no';
                         <option disabled>Theme-14 (Pro)</option>
                     </select>
                 </div>
-            </div>
+            </div> -->
 
             <!--Pagination-->
             <div class="cmb-row cmb-type-radio">

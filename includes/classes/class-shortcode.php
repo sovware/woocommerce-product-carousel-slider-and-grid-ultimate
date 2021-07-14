@@ -155,6 +155,6 @@ class wcpcsu_Shortcode
         wp_enqueue_style('wcpcsu-style');
 
         wp_enqueue_script('wcpcsu-featherlight');
-        wp_enqueue_script('wcpcsu-custom');
+        wp_enqueue_script('wcpcsu-main-js');
     }
 }
