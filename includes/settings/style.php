@@ -9,7 +9,7 @@
                 </div>
                 <div class="cmb-td">
                     <div class="cmb-header-font-styles">
-                        <label for="wcpscu_header_title_font_size">Font Size</label>
+                        <label for="wcpscu_header_title_font_size"><?php esc_html_e('Font Size', WCPCSU_TEXTDOMAIN); ?></label>
                         <div class="input-group">
                             <input type="text" class="cmb2-text-small" name="wcpscu[header_font_size]"
                                 id="wcpscu_header_title_font_size"
@@ -36,32 +36,32 @@
                     <label
                         for="wcpscu_title_font_size"><?php esc_html_e('Product Title Font', WCPCSU_TEXTDOMAIN); ?></label>
                 </div>
-                <div class="cmb-td">
+                <div class="cmb-td theme_1">
                     <div class="cmb-header-font-styles">
-                        <label for="wcpscu_header_title_font_size">Font Size</label>
+                        <label for="wcpscu_header_title_font_size"><?php esc_html_e('Font Size', WCPCSU_TEXTDOMAIN); ?></label>
                         <div class="input-group">
-                            <input type="text" class="cmb2-text-small" name="wcpscu[title_font_size]"
+                            <input type="text" class="cmb2-text-small" name="wcpscu[title_font_size][theme_1]"
                                 id="wcpscu_title_font_size"
-                                value="<?php if(!empty($title_font_size)) { echo $title_font_size; } else { echo "16"; } ?>">
+                                value="<?php echo ! empty( $title_font_size['theme_1'] ) ? esc_attr( $title_font_size['theme_1'] ) : 16; ?>"> 
                             <div class="input-group-prepend">
-                                <div class="input-group-text" id="btnGroupAddon">px</span>
+                                <div class="input-group-text" id="btnGroupAddon"><?php esc_html_e('px', WCPCSU_TEXTDOMAIN); ?></span>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="cmb-navigation-item">
                         <label
-                            for="wcpscu_title_font_color"><?php esc_html_e('Font Color', WCPCSU_TEXTDOMAIN); ?></label>
-                        <input type="text" class="cmb2-text-small cpa-color-picker" name="wcpscu[title_font_color]"
+                            for="wcpscu_title_font_color"><?php esc_html_e( 'Font Color', WCPCSU_TEXTDOMAIN ); ?></label>
+                        <input type="text" class="cmb2-text-small cpa-color-picker" name="wcpscu[title_font_color][theme_1]"
                             id="wcpscu_title_font_color"
-                            value="<?php if(!empty($title_font_color)) { echo $title_font_color; } else { echo "#363940"; } ?>">
+                            value="<?php echo ! empty( $title_font_color['theme_1'] ) ? esc_attr( $title_font_color['theme_1'] ) : '#363940'; ?>">
                     </div>
                     <div class="cmb-navigation-item">
                         <label
                             for="wcpscu_title_hover_font_color"><?php esc_html_e('Hover Font Color', WCPCSU_TEXTDOMAIN); ?></label>
                         <input type="text" class="cmb2-text-small cpa-color-picker"
-                            name="wcpscu[title_hover_font_color]" id="wcpscu_title_hover_font_color"
-                            value="<?php if(!empty($title_hover_font_color)) { echo $title_hover_font_color; } else { echo "#ff5500"; } ?>">
+                            name="wcpscu[title_hover_font_color][theme_1]" id="wcpscu_title_hover_font_color"
+                            value="<?php echo ! empty( $title_hover_font_color['theme_1'] ) ? esc_attr( $title_hover_font_color['theme_1'] ) : '#ff5500'; ?>">
                     </div>
                 </div>
             </div>
