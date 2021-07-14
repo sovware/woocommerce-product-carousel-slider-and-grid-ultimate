@@ -1,5 +1,5 @@
 <div class="wpcu-products wpcu-grid-one" id="theme-one">
-    <div class="wpcu-row wpcu-column-4 wpcu-column-md-2">
+    <div class="wpcu-row wpcu-column-5 wpcu-column-md-2">
     <?php
 
     while($loop->have_posts()) : $loop->the_post();
@@ -16,7 +16,7 @@
             </a>
             <div class="wpcu-overlay-content-bottom">
                 <div class="wpcu-button wpcu-button--primary">
-                <?php echo do_shortcode('[add_to_cart id="' . get_the_ID() . '" show_price = "false"]'); ?>
+                    <?php echo do_shortcode('[add_to_cart id="' . get_the_ID() . '" show_price = "false"]'); ?>
                 </div>
             </div>
         </div>

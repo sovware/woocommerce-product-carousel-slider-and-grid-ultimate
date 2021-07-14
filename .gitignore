@@ -1,1 +1,7 @@
+/node_modules
 /.idea
+/gulpfile.js
+/package-lock.json
+/package.json
+/assets/css/style.scss
+/assets/css/maps
