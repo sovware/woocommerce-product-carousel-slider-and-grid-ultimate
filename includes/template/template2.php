@@ -1,4 +1,4 @@
-<div class="wpcu-products wpcu-grid-one wpcu-lazy-load" id="theme-one">
+<div class="wpcu-products wpcu-grid-two wpcu-lazy-load" id="theme-one">
     <div class="wpcu-row wpcu-column-5 wpcu-column-md-2">
         <?php
 
@@ -15,10 +15,8 @@
                     <a href="<?php echo get_the_permalink(); ?>">
                         <img src="<?php echo $wpcsu_img; ?>" alt="">
                     </a>
-                    <div class="wpcu-overlay-content-bottom">
-                        <div class="wpcu-button">
-                            <?php echo do_shortcode('[add_to_cart id="' . get_the_ID() . '" show_price = "false"]'); ?>
-                        </div>
+                    <div class="wpcu-overlay-content">
+
                     </div>
                 </div>
                 <div class="wpcu-product__details">
@@ -45,6 +43,9 @@
                                 <span class="total-rating">(<?php echo $product->get_rating_count();?>)</span>
                             </div>
                         </div>
+                    </div>
+                    <div class="wpcu-button wpcu-button--outlined">
+                        <?php echo do_shortcode('[add_to_cart id="' . get_the_ID() . '" show_price = "false"]'); ?>
                     </div>
                 </div>
             </div>
