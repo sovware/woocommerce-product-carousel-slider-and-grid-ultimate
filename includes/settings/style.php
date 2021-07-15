@@ -64,6 +64,34 @@
                             value="<?php echo ! empty( $title_hover_font_color['theme_1'] ) ? esc_attr( $title_hover_font_color['theme_1'] ) : '#ff5500'; ?>">
                     </div>
                 </div>
+                <div class="cmb-td theme_2">
+                    <div class="cmb-header-font-styles">
+                        <label for="wcpscu_header_title_font_size"><?php esc_html_e('Font Size', WCPCSU_TEXTDOMAIN); ?></label>
+                        <div class="input-group">
+                            <input type="text" class="cmb2-text-small" name="wcpscu[title_font_size][theme_1]"
+                                id="wcpscu_title_font_size"
+                                value="<?php echo ! empty( $title_font_size['theme_2'] ) ? esc_attr( $title_font_size['theme_2'] ) : 16; ?>"> 
+                            <div class="input-group-prepend">
+                                <div class="input-group-text" id="btnGroupAddon"><?php esc_html_e('px', WCPCSU_TEXTDOMAIN); ?></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cmb-navigation-item">
+                        <label
+                            for="wcpscu_title_font_color"><?php esc_html_e( 'Font Color', WCPCSU_TEXTDOMAIN ); ?></label>
+                        <input type="text" class="cmb2-text-small cpa-color-picker" name="wcpscu[title_font_color][theme_2]"
+                            id="wcpscu_title_font_color"
+                            value="<?php echo ! empty( $title_font_color['theme_2'] ) ? esc_attr( $title_font_color['theme_2'] ) : '#363940'; ?>">
+                    </div>
+                    <div class="cmb-navigation-item">
+                        <label
+                            for="wcpscu_title_hover_font_color"><?php esc_html_e('Hover Font Color', WCPCSU_TEXTDOMAIN); ?></label>
+                        <input type="text" class="cmb2-text-small cpa-color-picker"
+                            name="wcpscu[title_hover_font_color][theme_2]" id="wcpscu_title_hover_font_color"
+                            value="<?php echo ! empty( $title_hover_font_color['theme_2'] ) ? esc_attr( $title_hover_font_color['theme_2'] ) : '#ff5500'; ?>">
+                    </div>
+                </div>
             </div>
 
             <div class="cmb-row cmb-type-text-medium">

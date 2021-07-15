@@ -148,6 +148,8 @@ class wcpcsu_Shortcode
     public function wcpcsu_style_files () {
 
         wp_enqueue_style('wcpcsu-style');
+        wp_enqueue_style('wcpcsu-tingle');
         wp_enqueue_script('wcpcsu-main-js');
+        wp_enqueue_script('wcpcsu-tingle-js');
     }
 }
