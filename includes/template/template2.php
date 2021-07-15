@@ -15,8 +15,8 @@
                     <a href="<?php echo get_the_permalink(); ?>">
                         <img src="<?php echo $wpcsu_img; ?>" alt="">
                     </a>
-                    <div class="wpcu-overlay-content">
-
+                    <div class="wpcu-button wpcu-button--icon-circle">
+                        <a href="#">span</a>
                     </div>
                 </div>
                 <div class="wpcu-product__details">
