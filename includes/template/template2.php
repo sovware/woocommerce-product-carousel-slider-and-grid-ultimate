@@ -15,25 +15,18 @@
                     <a href="<?php echo get_the_permalink(); ?>">
                         <img src="<?php echo $wpcsu_img; ?>" alt="">
                     </a>
-                    <div class="wpcu-button wpcu-button--icon-circle">
-                        <a href="#">span</a>
+                    <div class="wpcu-product__cover-content wpcu-product__cover-content--middle">
+                        <div class="wpcu-button wpcu-button--icon-circle wpcu-btn-modal-js" data-wpcu-target="wpcu-product-01">
+                            <a href="#"><img class="wpcu-svg" src="<?php echo WCPCSU_URL .'assets/icons/eye.svg' ?>" alt=""></a>
+                        </div>
                     </div>
+                    <div class="wpcu-product__cover-content wpcu-product__cover-content--top-right">
+                        <span class="wpcu-badge wpcu-badge--primary wpcu-badge--rounded-circle">-20%</span>
+                    </div>
+
                 </div>
                 <div class="wpcu-product__details">
-                    <h2 class="wpcu-product__title"><a
-                            href="<?php echo get_the_permalink(); ?>"><?php echo get_the_title(); ?></a></h2>
-                    <div class="wpcu-product__price">
-                        <?php
-                if(  empty( $sale_price ) ) { ?>
-                        <span class="wpcu-product__price__sale">$<?php echo $product->get_regular_price(); ?></span>
-                        <?php
-                } else { ?>
-                        <span class="wpcu-product__price__sale">$<?php echo $product->get_sale_price(); ?></span>
-                        <s>$<?php echo $product->get_regular_price(); ?></s>
-                        <span
-                            class="wpcu-badge wpcu-badge--sm wpcu-badge--outlined wpcu-badge--rounded">-<?php echo $this->aazz_show_discount_percentage(); ?></span>
-                        <?php } ?>
-                    </div>
+                    <h2 class="wpcu-product__title"><a href="<?php echo get_the_permalink(); ?>"><?php echo get_the_title(); ?></a></h2>
                     <div class="wpcu-product__rating">
                         <div class="atw_rating woocommerce">
                             <div class="woocommerce-product-rating">
@@ -44,7 +37,18 @@
                             </div>
                         </div>
                     </div>
-                    <div class="wpcu-button wpcu-button--outlined">
+                    <div class="wpcu-product__price">
+                        <?php
+                if(  empty( $sale_price ) ) { ?>
+                        <span class="wpcu-product__price__sale">$<?php echo $product->get_regular_price(); ?></span>
+                        <?php
+                } else { ?>
+                        <span class="wpcu-product__price__sale">$<?php echo $product->get_sale_price(); ?></span>
+                        <s>$<?php echo $product->get_regular_price(); ?></s>
+                        <?php } ?>
+                    </div>
+
+                    <div class="wpcu-button wpcu-button--outlined wpcu-button--rounded-circle">
                         <?php echo do_shortcode('[add_to_cart id="' . get_the_ID() . '" show_price = "false"]'); ?>
                     </div>
                 </div>
@@ -54,3 +58,17 @@
 endwhile; ?>
     </div>
 </div><!-- ends: .wpcu-products -->
+
+<div class="wpcu-modal wpcu-modal-js wpcu-fade wpcu-product-01">
+	<div class="wpcu-modal__dialog">
+		<div class="wpcu-modal__content">
+			<form id="wpcu-report-abuse-form">
+				<a href="" class="wpcu-modal-close wpcu-modal-close-js"><span aria-hidden="true">×</span></a>
+
+				<div class="wpcu-modal__body">
+					content
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

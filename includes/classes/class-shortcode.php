@@ -94,7 +94,7 @@ class wcpcsu_Shortcode
 
         if( $loop->have_posts() ) {
             wp_enqueue_style( 'wcpcsu-main' );
-            include WCPCSU_INC_DIR . 'template/template2.php';
+            include WCPCSU_INC_DIR . 'template/carousel1.php';
         }else{
             _e('No products found', WCPCSU_TEXTDOMAIN);
         }
@@ -148,8 +148,10 @@ class wcpcsu_Shortcode
     public function wcpcsu_style_files () {
 
         wp_enqueue_style('wcpcsu-style');
-        wp_enqueue_style('wcpcsu-tingle');
+        wp_enqueue_style('wcpcsu-swmodal');
+        wp_enqueue_style('wcpcsu-swiper');
+        wp_enqueue_script('wcpcsu-swmodal-js');
+        wp_enqueue_script('wcpcsu-swiper-js');
         wp_enqueue_script('wcpcsu-main-js');
-        wp_enqueue_script('wcpcsu-tingle-js');
     }
 }

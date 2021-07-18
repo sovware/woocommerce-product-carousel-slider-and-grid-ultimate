@@ -128,7 +128,7 @@ Final class Woocmmerce_Product_carousel_slider_ultimate
      * @return void
      */
     public function wcpcsu_include(){
-       
+
         require_once WCPCSU_INC_DIR . 'helper-functions.php';
         wpcsu_load_dependencies( 'all', WCPCSU_INC_DIR . 'classes/' );
     }
@@ -157,9 +157,11 @@ Final class Woocmmerce_Product_carousel_slider_ultimate
 
     public function template_enqueue_file () {
         wp_register_style( 'wcpcsu-main', WCPCSU_URL . 'assets/css/style.css' );
-        wp_register_style( 'wcpcsu-tingle', WCPCSU_URL . 'assets/css/tingle.css' );
+        wp_register_style( 'wcpcsu-swmodal', WCPCSU_URL . 'assets/css/swmodal.css' );
+        wp_register_style( 'wcpcsu-swiper', WCPCSU_URL . 'assets/css/swiper-bundle.min.css' );
         wp_register_script( 'wcpcsu-main-js', WCPCSU_URL . 'assets/js/main.js' );
-        wp_register_script( 'wcpcsu-tingle-js', WCPCSU_URL . 'assets/js/tingle.js' );
+        wp_register_script( 'wcpcsu-swmodal-js', WCPCSU_URL . 'assets/js/swmodal.js' );
+        wp_register_script( 'wcpcsu-swiper-js', WCPCSU_URL . 'assets/js/swiper-bundle.min.js' );
     }
 
     /**

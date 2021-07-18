@@ -1,0 +1,31 @@
+/*===========================
+ Style: Grid Three
+===========================*/
+.wpcu-grid-three{
+    .wpcu-product{
+        @include e(content){
+            border: 1px solid $borderColor;
+            border-radius: 6px;
+            padding: 10px;
+        }
+        @include e(img){
+            margin-bottom: 20px;
+            img{
+                border-radius: 6px;
+            }
+        }
+        @include e(details){
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin: -6px 0 6px;
+
+            .wpcu-product__title,
+            .wpcu-product__price,
+            .wpcu-product__rating {
+                padding: 6px 0;
+            }
+        }
+    }
+}

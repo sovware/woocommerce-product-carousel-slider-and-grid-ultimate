@@ -1,0 +1,43 @@
+/*===========================
+ Style: Grid Two
+===========================*/
+.wpcu-grid-two{
+    .wpcu-product{
+        @include e(img){
+            position: relative;
+            margin-bottom: 20px;
+            .wpcu-product__cover-content--middle{
+                transition: 0.3s ease;
+                opacity: 0;
+                visibility: hidden;
+                pointer-events: none;
+            }
+        }
+        @include e(details){
+            text-align: center;
+            margin: -6px 0;
+
+            .wpcu-product__title,
+            .wpcu-product__price,
+            .wpcu-product__rating,
+            .wpcu-button {
+                padding: 6px 0;
+            }
+        }
+        @include e(price) {
+            justify-content: center;
+        }
+        @include e(rating) {
+            .woocommerce-product-rating {
+                justify-content: center;
+            }
+        }
+        &:hover{
+            .wpcu-product__cover-content--middle{
+                opacity: 1;
+                visibility: visible;
+                pointer-events: all;
+            }
+        }
+    }
+}

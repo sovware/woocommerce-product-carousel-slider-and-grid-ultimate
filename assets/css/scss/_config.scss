@@ -1,0 +1,20 @@
+//Mixin
+//BEM Element and Modifier
+@mixin e($element) {
+    &__#{$element} {
+        @content;
+    }
+}
+
+@mixin m($modifier) {
+    &--#{$modifier} {
+        @content;
+    }
+}
+
+//variables
+$primary: #ff5500;
+$rating: #feb507;
+$borderColor: #e4e4ed;
+$textLight: #9192a3;
+$textDark: #000000;
