@@ -26,44 +26,43 @@
         const images = document.querySelectorAll(query);
         images.forEach(image => {
             fetch(image.src)
-            .then(res => res.text())
-            .then(data => {
-            const parser = new DOMParser();
-            const svg = parser.parseFromString(data, 'image/svg+xml').querySelector('svg');
+                .then(res => res.text())
+                .then(data => {
+                    const parser = new DOMParser();
+                    const svg = parser.parseFromString(data, 'image/svg+xml').querySelector('svg');
 
-            if (image.id) svg.id = image.id;
-            if (image.className) svg.classList = image.classList;
+                    if (image.id) svg.id = image.id;
+                    if (image.className) svg.classList = image.classList;
 
-            image.parentNode.replaceChild(svg, image);
-            })
-            .then(callback)
-            .catch(error => console.error(error))
+                    image.parentNode.replaceChild(svg, image);
+                })
+                .then(callback)
+                .catch(error => console.error(error))
         });
     }
     convertImages('img.wpcu-svg');
 
-    /* carousel one */
-    const swiper = new Swiper('.wpcu-carousel-one', {
-        slidesPerView: 4,
-        spaceBetween: 30,
-        navigation: {
-            nextEl: '.wpcu-carousel-nav__btn--next',
-            prevEl: '.wpcu-carousel-nav__btn--prev',
-        },
-        breakpoints: {
-            320: {
-                slidesPerView: 2,
-                spaceBetween: 20
+
+    /* Check WPCU Carousel Data */
+    let checkData = function (data, value) {
+        return typeof data === 'undefined' ? value : data;
+    };
+    /* WPCU Carousel */
+    let wpcuCarousel = document.querySelectorAll('.wpcu-carousel');
+    wpcuCarousel.forEach(function (el) {
+        let swiper = new Swiper(el, {
+            slidesPerView: checkData(parseInt(el.dataset.wpcuItems), 4),
+            spaceBetween: checkData(parseInt(el.dataset.wpcuMargin), 30),
+            loop: checkData(el.dataset.wpcuLoop, true),
+            slidesPerGroup: checkData(parseInt(el.dataset.wpcuPerslide), 1),
+            speed: checkData(parseInt(el.dataset.wpcuSpeed), 3000),
+            autoplay: checkData(JSON.parse(el.dataset.wpcuAutoplay), {}),
+            navigation: {
+                nextEl: '.wpcu-carousel-nav__btn--next',
+                prevEl: '.wpcu-carousel-nav__btn--prev',
             },
-            480: {
-                slidesPerView: 3,
-                spaceBetween: 30
-            },
-            640: {
-                slidesPerView: 4,
-                spaceBetween: 40
-            }
-        }
-    })
+            breakpoints: checkData(JSON.parse(el.dataset.wpcuResponsive), {})
+        })
+    });
 
 })();

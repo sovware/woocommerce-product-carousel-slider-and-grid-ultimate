@@ -34,9 +34,9 @@
         .button {
             border: 1px solid $borderColor;
             background: none;
-            color: $textLight;
+            color: $textLight !important;
             &:hover{
-                color: #fff;
+                color: #fff !important;
                 background: $primary;
                 border-color: $primary;
             }
@@ -84,7 +84,9 @@
             border-color: #fff;
             color: $textDark !important;
             &:hover{
-                color: $textDark;
+                color: #fff !important;
+                border-color: $primary;
+                background: $primary;
             }
         }
     }

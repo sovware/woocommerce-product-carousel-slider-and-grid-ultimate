@@ -49,7 +49,7 @@
 
 /* Carousel nav style */
 .wpcu-carousel-nav {
-  margin: 0 -3px;
+  margin: 0 -5px;
   padding: 0 15px;
 }
 .wpcu-carousel-nav__btn {
@@ -65,7 +65,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 0 3px;
+  margin: 0 5px;
   cursor: pointer;
   -webkit-transition: 0.3s ease;
   -o-transition: 0.3s ease;
@@ -122,6 +122,20 @@
 .wpcu-carousel-nav--space-between .wpcu-carousel-nav__btn--next {
   margin-right: -20px;
 }
+.wpcu-carousel-nav--top-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-bottom: 30px;
+  padding: 0;
+}
+
 /* wpcu grid */
 .wpcu-row {
   display: -webkit-box;
@@ -290,10 +304,10 @@
 .wpcu-button--outlined .button {
   border: 1px solid #e4e4ed;
   background: none;
-  color: #9192a3;
+  color: #9192a3 !important;
 }
 .wpcu-button--outlined .button:hover {
-  color: #fff;
+  color: #fff !important;
   background: #ff5500;
   border-color: #ff5500;
 }
@@ -332,7 +346,9 @@
   color: #000000 !important;
 }
 .wpcu-button--light .button:hover {
-  color: #000000;
+  color: #fff !important;
+  border-color: #ff5500;
+  background: #ff5500;
 }
 
 /* Badges */
@@ -619,6 +635,14 @@
 .wpcu-grid-three .wpcu-product__img img {
   border-radius: 6px;
 }
+.wpcu-grid-three .wpcu-product__img .wpcu-product__cover-content--middle {
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
 .wpcu-grid-three .wpcu-product__details {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -637,6 +661,11 @@
 .wpcu-grid-three .wpcu-product__details .wpcu-product__price,
 .wpcu-grid-three .wpcu-product__details .wpcu-product__rating {
   padding: 6px 0;
+}
+.wpcu-grid-three .wpcu-product:hover .wpcu-product__cover-content--middle {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
 }
 
 /*===========================
