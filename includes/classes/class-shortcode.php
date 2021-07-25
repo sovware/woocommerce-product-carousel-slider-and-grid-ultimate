@@ -44,6 +44,23 @@ class wcpcsu_Shortcode
         $g_mobile                = ! empty( $g_mobile ) ? intval( $g_mobile ) : 1;
         $grid_pagination         = ! empty( $grid_pagination ) ? $grid_pagination : 'no';
         $slide_time              = ! empty( $slide_time )  ? $slide_time : '2000' ;
+
+        $theme                          = ! empty( $theme ) ? $theme : 'theme_1';
+        $title_font_size                = ! empty( $title_font_size[$theme] ) ? $title_font_size[$theme] : '16';
+        $title_font_color               = ! empty( $title_font_color[$theme] ) ? $title_font_color[$theme] : '#363940';
+        $title_hover_font_color         = ! empty( $title_hover_font_color[$theme] ) ? $title_hover_font_color[$theme] : '#ff5500';
+        $price_font_size                = ! empty( $price_font_size[$theme] ) ? $price_font_size[$theme] : '14';
+        $price_font_color               = ! empty( $price_font_color[$theme] ) ? $price_font_color[$theme] : '#ff5500';
+        $ratings_size                   = ! empty( $ratings_size[$theme] ) ? $ratings_size[$theme] : '1em';
+        $ratings_color                  = ! empty( $ratings_color[$theme] ) ? $ratings_color[$theme] : '#FEB507';
+        $cart_font_color                = ! empty( $cart_font_color[$theme] ) ? $cart_font_color[$theme] : '#ffffff';
+        $cart_bg_color                  = ! empty( $cart_bg_color[$theme] ) ? $cart_bg_color[$theme] : '#ff5500';
+        $cart_button_hover_color        = ! empty( $cart_button_hover_color[$theme] ) ? $cart_button_hover_color[$theme] : '#9A9A9A';
+        $cart_button_hover_font_color   = ! empty( $cart_button_hover_font_color[$theme] ) ? $cart_button_hover_font_color[$theme] : '#ffffff';
+        $ribbon_bg_color                = ! empty( $ribbon_bg_color[$theme] ) ? $ribbon_bg_color[$theme] : '#A4C741';
+        $quick_view_icon_color          = ! empty( $quick_view_icon_color[$theme] ) ? $quick_view_icon_color[$theme] : '#ffffff';
+        $quick_view_icon_back_color     = ! empty( $quick_view_icon_back_color[$theme] ) ? $quick_view_icon_back_color[$theme] : '#ff5500';
+
         $paged                   =  wcpcsu_get_paged_num();
         $common_args = array(
             'post_type'      => 'product',
@@ -94,7 +111,7 @@ class wcpcsu_Shortcode
 
         if( $loop->have_posts() ) {
             wp_enqueue_style( 'wcpcsu-main' );
-            include WCPCSU_INC_DIR . 'template/carousel3.php';
+            include WCPCSU_INC_DIR . 'template/' . $layout . '/' . $theme . '.php';
         }else{
             _e('No products found', WCPCSU_TEXTDOMAIN);
         }

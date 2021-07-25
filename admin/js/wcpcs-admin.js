@@ -60,7 +60,7 @@ jQuery(document).ready(function ($) {
 
 
 
-    $('.theme_1').hide();
+    $('.theme_1, .theme_2, .theme_3').hide();
 
     var $theme = $('.wcpscu_theme'); // get theme jQuery object
 
