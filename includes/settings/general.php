@@ -5,6 +5,7 @@ $display_full_title   = !empty($display_full_title) ? $display_full_title : 'yes
 $ribbon = !empty($ribbon) ? $ribbon : 'discount';
 $header = !empty($header) ? $header : 'center';
 $total_products_label = (!empty($layout) && 'grid' == $layout) ? __("Products Per Page",WCPCSU_TEXTDOMAIN) : __("Total Products to Display",WCPCSU_TEXTDOMAIN);
+$theme                = ! empty( $theme ) ? $theme : 'theme_1';
 ?>
 
 <div id="lcsp-tab-5" class="lcsp-tab-content" style="display:block">
@@ -56,12 +57,10 @@ $total_products_label = (!empty($layout) && 'grid' == $layout) ? __("Products Pe
                 <div class="cmb-td">
                     <div class="cmb-theme-wrapper">
                         <select id="theme_" class="wcpscu_theme" name="wcpscu[theme]">
-                            <option value="theme_1">Theme-1</option>
-                            <option value="theme_2"
-                                <?php if(!empty($theme_) && $theme_ == "theme_2"){ echo "selected";}?>>Theme-2
+                            <option value="theme_1" <?php selected( $theme, 'theme_1'); ?> >Theme-1</option>
+                            <option value="theme_2" <?php selected( $theme, 'theme_2'); ?>>Theme-2
                             </option>
-                            <option value="theme_3"
-                                <?php if(!empty($theme_) && $theme_ == "theme_3"){ echo "selected";}?>>Theme-3
+                            <option value="theme_3" <?php selected( $theme, 'theme_3'); ?>>Theme-3
                             </option>
                             <option disabled>Theme-4 (Pro)</option>
                             <option disabled>Theme-5 (Pro)</option>
