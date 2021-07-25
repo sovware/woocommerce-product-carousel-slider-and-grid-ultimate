@@ -4,6 +4,34 @@
     Author: wpWax
     Version: 1.0
 */
+
+/* These codes need to be placed in scss files before compile it again */
+:root{
+  /* Grid/Carousel Header */
+  --headerFontSize: inherit;
+  --headerFontColor: inherit;
+  /* Product Title */
+  --productTitleSize: 16px;
+  --productTitleColor: #363940;
+  --productTitleColorHover: #000;
+  /* Product Price */
+  --productPriceSize: 16px;
+  --productPriceColor: #ff5500;
+  /* Product Ratings */
+  --productRatingSize: 16px;
+  --productRatingColor: #feb507;
+  /* "Add to Cart" Button */
+  --buttonColor: #fff;
+  --buttonColorHover: #fff;
+  --buttonBgColor: #ff5500;
+  --buttonBgColorHover: #d54500;
+  /* Ribbon */
+  --ribbonBgColor: #ff5500;
+  /* Quick view icon */
+  --qvIconColor: #fff;
+  --qvBgColor: #ff5500;
+}
+
 /* Import font */
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap");
 /* General Styles */
@@ -277,8 +305,8 @@
 }
 .wpcu-button .button {
   min-height: 40px;
-  background: #ff5500;
-  color: #fff;
+  background: var(--buttonBgColor);
+  color: var(--buttonColor);
   border-radius: 0;
   text-transform: uppercase;
   font-size: 12px;
@@ -300,6 +328,8 @@
 }
 .wpcu-button .button:hover {
   text-decoration: none !important;
+  background: var(--buttonBgColorHover);
+  color: var(--buttonColorHover);
 }
 .wpcu-button--outlined .button {
   border: 1px solid #e4e4ed;
@@ -334,11 +364,12 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: #ff5500;
+  background: var(--qvBgColor);
 }
 .wpcu-button--icon-circle a svg {
   width: 14px;
-  fill: #fff;
+  height: 14px;
+  fill: var(--qvIconColor);
 }
 .wpcu-button--light .button {
   background: #fff;
@@ -368,7 +399,7 @@
 }
 .wpcu-badge--primary {
   color: #fff;
-  background: #ff5500;
+  background: var(--ribbonBgColor);
 }
 .wpcu-badge--sm {
   height: 20px;
@@ -398,10 +429,14 @@
 }
 .wpcu-product__title a {
   text-decoration: none;
-  font-size: 15px;
+  font-size: var(--productTitleSize);
   font-weight: normal;
-  color: #363940;
+  color: var(--productTitleColor);
   letter-spacing: normal;
+  transition: 0.3s ease;
+}
+.wpcu-product__title a:hover{
+  color: var(--productTitleColorHover);
 }
 
 /* Product Price */
@@ -419,9 +454,9 @@
 }
 .wpcu-product__price__sale {
   display: inline-block;
-  font-size: 16px;
+  font-size: var(--productPriceSize);
   line-height: normal;
-  color: #ff5500;
+  color: var(--productPriceColor);
   margin: 0 4px;
 }
 .wpcu-product__price s {
@@ -451,10 +486,12 @@
   padding-top: 12px;
 }
 .wpcu-product__rating .star-rating:before {
-  color: #feb507;
+  color: var(--productRatingColor);
+  font-size: var(--productRatingSize);
 }
 .wpcu-product__rating .star-rating span:before {
-  color: #feb507;
+  color: var(--productRatingColor);
+  font-size: var(--productRatingSize);
 }
 .wpcu-product__rating .total-rating {
   font-size: 14px;
@@ -671,8 +708,3 @@
 /*===========================
  Style: Carousel one
 ===========================*/
-
-
-
-/* These codes need to be placed in scss files before compile it again */
-
