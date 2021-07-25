@@ -111,7 +111,7 @@ class wcpcsu_Shortcode
 
         if( $loop->have_posts() ) {
             wp_enqueue_style( 'wcpcsu-main' );
-            include WCPCSU_INC_DIR . 'template/carousel3.php';
+            include WCPCSU_INC_DIR . 'template/' . $layout . '/' . $theme . '.php';
         }else{
             _e('No products found', WCPCSU_TEXTDOMAIN);
         }
