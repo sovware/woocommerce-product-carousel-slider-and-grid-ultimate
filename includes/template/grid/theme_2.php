@@ -16,7 +16,7 @@
                         <img src="<?php echo $wpcsu_img; ?>" alt="">
                     </a>
                     <div class="wpcu-product__cover-content wpcu-product__cover-content--middle">
-                        <div class="wpcu-button wpcu-button--icon-circle wpcu-btn-modal-js" data-wpcu-target="wpcu-product-01">
+                        <div class="wpcu-button wpcu-button--icon-circle wpcu-btn-modal-js" data-wpcu-target="wpcu-product-01" data-product-id="<?php echo get_the_ID(); ?>" data-nonce="<?php  echo wp_create_nonce('wcpcsu_quick_view_' . get_the_ID() ); ?>">
                             <a href="#"><img class="wpcu-svg" src="<?php echo WCPCSU_URL .'assets/icons/eye.svg' ?>" alt=""></a>
                         </div>
                     </div>
@@ -66,7 +66,7 @@ endwhile; ?>
 				<a href="" class="wpcu-modal-close wpcu-modal-close-js"><span aria-hidden="true">×</span></a>
 
 				<div class="wpcu-modal__body">
-					content
+	
 				</div>
 			</form>
 		</div>

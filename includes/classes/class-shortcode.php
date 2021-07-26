@@ -6,6 +6,8 @@ class wcpcsu_Shortcode
     public function __construct ()
     {
         add_shortcode( 'wcpcsu', array( $this,'wcpcsu_shoortcode_method' ) );
+        add_action( 'wp_ajax_ajax_quick_view', array( $this, 'ajax_quick_view' ) );
+        add_action( 'wp_ajax_nopriv_ajax_quick_view', array( $this, 'ajax_quick_view') );
     }
 
     public function wcpcsu_shoortcode_method( $atts, $content = null ) {
@@ -170,5 +172,35 @@ class wcpcsu_Shortcode
         wp_enqueue_script('wcpcsu-swmodal-js');
         wp_enqueue_script('wcpcsu-swiper-js');
         wp_enqueue_script('wcpcsu-main-js');
+    }
+
+    public function ajax_quick_view() {
+        $nonce          = ! empty( $_POST['nonce'] ) ? $_POST['nonce'] : '';
+        $product_id     = ! empty( $_POST['product_id'] ) ? $_POST['product_id'] : '';
+        if( ! wp_verify_nonce( $nonce, 'wcpcsu_quick_view_' . $product_id ) ) {
+            die();
+        }
+        ob_start(); 
+        $product     = wc_get_product( $product_id );
+        $wpcsu_thumb = wp_get_attachment_image_src( get_post_thumbnail_id( $product_id ), 'large' );
+        $wpcsu_img   = $wpcsu_thumb['0'];
+        ?>
+        <div>
+            <div class='title'><?php echo get_the_title( $product_id );?></div>
+            <?php if ( ! empty( $wpcsu_img ) ) { ?>
+            <div class='image'>
+                <img src="<?php echo $wpcsu_img; ?>" alt="<?php echo get_the_title( $product_id );?>">
+            </div>
+            <?php } ?>
+            <div class='description'>
+                <?php echo $product->get_description(); ?>
+            </div>
+            <div class='price'><?php echo $product->get_price_html(); ?></div>
+            <div class='add_to_cart'><?php echo do_shortcode('[add_to_cart id="' . $product_id . '" show_price = "false"]'); ?></div>
+        </div>
+        <?php
+        $template = ob_get_clean();
+
+        wp_send_json( $template );
     }
 }
