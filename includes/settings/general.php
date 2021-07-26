@@ -22,7 +22,7 @@ $theme                = ! empty( $theme ) ? $theme : 'theme_1';
                             <div class="cmd-switch-item cmd-switch-carousel-img" data-value="carousel">
                                 <span class="cmd-switch-item-icon"><i class="fas fa-check-square"></i></span>
                                 <img src="<?php echo WCPCSU_URL .'admin/img/carousel.jpg' ?>" alt="carousel">
-                                <input type="radio" name="wcpscu[layout]" class="wcpscu_radio_layout wcpscu_carousel_layout" value="carousel">
+                                <input type="radio" name="wcpscu[layout]" class="wcpscu_radio_layout wcpscu_carousel_layout" value="carousel" <?php echo ( empty( $layout ) || 'carousel' == $layout ) ? 'checked' : ''; ?>>
                             </div>
                             <p><?php _e( 'Carousel', WCPCSU_TEXTDOMAIN );?></p>
                         </div>
@@ -30,7 +30,7 @@ $theme                = ! empty( $theme ) ? $theme : 'theme_1';
                             <div class=" cmd-switch-item cmd-switch-grid-img" data-value="grid">
                                 <span class="cmd-switch-item-icon"><i class="fas fa-check-square"></i></span>
                                 <img src="<?php echo WCPCSU_URL .'admin/img/grid.jpg' ?>" alt="grid">
-                                <input type="radio" name="wcpscu[layout]" class="wcpscu_radio_layout wcpscu_grid_layout" value="grid">
+                                <input type="radio" name="wcpscu[layout]" class="wcpscu_radio_layout wcpscu_grid_layout" value="grid" <?php echo ( empty( $layout ) || 'carousel' == $layout ) ? 'checked' : ''; ?>>
                             </div>
                             <p><?php _e( 'Grid', WCPCSU_TEXTDOMAIN );?></p>
                         </div>
