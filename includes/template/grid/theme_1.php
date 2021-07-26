@@ -1,4 +1,24 @@
-<div class="wpcu-products wpcu-grid-one wpcu-lazy-load" id="theme-one" style="--headerFontSize: inherit; --headerFontColor: inherit; --productTitleSize: 15px; --productTitleColor: #363940; --productTitleColorHover: #000; --productPriceSize: 16px; --productPriceColor: #ff5500; --productRatingSize: 16px; --productRatingColor: #feb507; --buttonColor: #fff; --buttonColorHover: #fff; --buttonBgColor: #ff5500; --buttonBgColorHover: #d54500; --ribbonBgColor: #ff5500; --qvIconColor: #fff; --qvBgColor: #ff5500;">
+<div
+class="wpcu-products wpcu-grid-one wpcu-lazy-load"
+id="theme-one"
+style="
+    --headerFontSize: inherit;
+    --headerFontColor: inherit;
+    --productTitleSize: 15px;
+    --productTitleColor: #363940;
+    --productTitleColorHover: #000;
+    --productPriceSize: 16px;
+    --productPriceColor: #ff5500;
+    --productRatingSize: 16px;
+    --productRatingColor: #feb507;
+    --buttonColor: #fff;
+    --buttonColorHover: #fff;
+    --buttonBgColor: #ff5500;
+    --buttonBgColorHover: #d54500;
+    --ribbonBgColor: #ff5500;
+    --qvIconColor: #fff;
+    --qvBgColor: #ff5500;
+">
     <div class="wpcu-row wpcu-column-5 wpcu-column-md-2">
         <?php
 
