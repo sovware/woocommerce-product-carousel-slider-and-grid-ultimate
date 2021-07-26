@@ -61,7 +61,7 @@ class wcpcsu_Shortcode
         $quick_view_icon_color          = ! empty( $quick_view_icon_color[$theme] ) ? $quick_view_icon_color[$theme] : '#ffffff';
         $quick_view_icon_back_color     = ! empty( $quick_view_icon_back_color[$theme] ) ? $quick_view_icon_back_color[$theme] : '#ff5500';
 
-        $paged                   =  wcpcsu_get_paged_num();
+        $paged                          =  wcpcsu_get_paged_num();
         $common_args = array(
             'post_type'      => 'product',
             'posts_per_page' => ! empty( $total_products ) ? intval( $total_products ) : 12,
