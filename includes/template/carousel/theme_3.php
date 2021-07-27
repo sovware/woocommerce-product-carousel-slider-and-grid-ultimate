@@ -1,4 +1,21 @@
-<div class="wpcu-products wpcu-grid-three wpcu-lazy-load wpcu-carousel" id="carousel-two" data-wpcu-items="5" data-wpcu-margin="30" data-wpcu-loop="true" data-wpcu-perslide="1" data-wpcu-speed="300" data-wpcu-autoplay='{"delay": "3000", "pauseOnMouseEnter": "true", "disableOnInteraction": "false"}' data-wpcu-responsive='{"320": {"slidesPerView": "2", "spaceBetween": "20"}, "480": {"slidesPerView": "3", "spaceBetween": "30"}, "640": {"slidesPerView": "4", "spaceBetween": "30"}}'>
+<div
+    class="wpcu-products wpcu-theme-three wpcu-lazy-load wpcu-carousel"
+    data-wpcu-items="5"
+    data-wpcu-margin="30"
+    data-wpcu-loop="true"
+    data-wpcu-perslide="1"
+    data-wpcu-speed="300"
+    data-wpcu-autoplay='{
+        "delay": "3000",
+        "pauseOnMouseEnter": "true",
+        "disableOnInteraction": "false"
+    }'
+    data-wpcu-responsive='{
+        "320": {"slidesPerView": "2", "spaceBetween": "20"},
+        "480": {"slidesPerView": "3", "spaceBetween": "30"},
+        "640": {"slidesPerView": "4", "spaceBetween": "30"}
+    }'
+>
     <!-- If we need navigation buttons -->
     <div class="wpcu-carousel-nav wpcu-carousel-nav--top-right">
         <div class="wpcu-carousel-nav__btn wpcu-carousel-nav__btn--prev">

@@ -1,4 +1,4 @@
-<div class="wpcu-products wpcu-grid-two wpcu-lazy-load" id="theme-one">
+<div class="wpcu-products wpcu-theme-two wpcu-lazy-load">
     <div class="wpcu-row wpcu-column-5 wpcu-column-md-2">
         <?php
 
@@ -66,7 +66,7 @@ endwhile; ?>
 				<a href="" class="wpcu-modal-close wpcu-modal-close-js"><span aria-hidden="true">×</span></a>
 
 				<div class="wpcu-modal__body">
-	
+
 				</div>
 			</form>
 		</div>

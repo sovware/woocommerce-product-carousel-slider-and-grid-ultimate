@@ -1,6 +1,5 @@
 <div
-class="wpcu-products wpcu-grid-one wpcu-lazy-load"
-id="theme-one"
+class="wpcu-products wpcu-theme-one wpcu-lazy-load"
 style="
     --headerFontSize: inherit;
     --headerFontColor: inherit;

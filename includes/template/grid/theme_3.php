@@ -1,4 +1,4 @@
-<div class="wpcu-products wpcu-grid-three wpcu-lazy-load" id="theme-one">
+<div class="wpcu-products wpcu-theme-three wpcu-lazy-load">
     <div class="wpcu-row wpcu-column-5 wpcu-column-md-2">
         <?php
 
