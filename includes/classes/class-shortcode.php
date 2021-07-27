@@ -111,9 +111,69 @@ class wcpcsu_Shortcode
         }
         $loop = new WP_Query( $args );
 
-        if( $loop->have_posts() ) {
-            wp_enqueue_style( 'wcpcsu-main' );
-            include WCPCSU_INC_DIR . 'template/' . $layout . '/' . $theme . '.php';
+        if( $loop->have_posts() ) { ?>
+        <div
+        class="wpcu-products wpcu-<?php echo $theme; ?> wpcu-lazy-load <?php echo ( 'carousel' == $layout ) ? 'wpcu-carousel' : ''; ?>"
+        style="
+            --headerFontSize: inherit;
+            --headerFontColor: inherit;
+            --productTitleSize: 15px;
+            --productTitleColor: #363940;
+            --productTitleColorHover: #000;
+            --productPriceSize: 16px;
+            --productPriceColor: #ff5500;
+            --productRatingSize: 16px;
+            --productRatingColor: #feb507;
+            --buttonColor: #fff;
+            --buttonColorHover: #fff;
+            --buttonBgColor: #ff5500;
+            --buttonBgColorHover: #d54500;
+            --ribbonBgColor: #ff5500;
+            --qvIconColor: #fff;
+            --qvBgColor: #ff5500;
+        "
+        <?php if( 'carousel' == $layout ) { ?>
+        data-wpcu-items="4"
+        data-wpcu-margin="30"
+        data-wpcu-loop="true"
+        data-wpcu-perslide="1"
+        data-wpcu-speed="300"
+        data-wpcu-autoplay='{
+            "delay": "3000",
+            "pauseOnMouseEnter": "true",
+            "disableOnInteraction": "false"
+        }'
+        data-wpcu-responsive='{
+            "320": {"slidesPerView": "2", "spaceBetween": "20"},
+            "480": {"slidesPerView": "3", "spaceBetween": "30"},
+            "640": {"slidesPerView": "4", "spaceBetween": "30"}
+        }'
+        <?php } ?>
+        >
+        <div class="<?php echo ( 'carousel' == $layout ) ? 'swiper-wrapper' : 'wpcu-row wpcu-column-5 wpcu-column-md-2'; ?>">
+        <?php
+            while($loop->have_posts()) : $loop->the_post();
+            global $post,$product;
+            $aazz_thumb = wp_get_attachment_image_src( get_post_thumbnail_id(get_the_ID()), 'large' );
+            $wpcsu_img = $aazz_thumb['0'];
+            $sale_price = $product->get_sale_price();
+            $ratings = (($product->get_average_rating()/5)*100);
+            
+            include WCPCSU_INC_DIR . 'template/theme/' . $theme . '.php';
+
+            endwhile;
+            wp_reset_postdata();
+            if( 'theme_2' == $theme ){
+                include WCPCSU_INC_DIR . 'template/quick-view.php';
+            }
+            ?>
+            
+            </div>
+            <?php if( 'carousel' == $layout ) { 
+                include WCPCSU_INC_DIR . 'template/navigation.php';
+             } ?>    
+        </div><!-- ends: .wpcu-products -->
+        <?php
         }else{
             _e('No products found', WCPCSU_TEXTDOMAIN);
         }
@@ -165,7 +225,7 @@ class wcpcsu_Shortcode
     }
 
     public function wcpcsu_style_files () {
-
+        wp_enqueue_style( 'wcpcsu-main' );
         wp_enqueue_style('wcpcsu-style');
         wp_enqueue_style('wcpcsu-swmodal');
         wp_enqueue_style('wcpcsu-swiper');

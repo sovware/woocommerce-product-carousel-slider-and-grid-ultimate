@@ -37,18 +37,6 @@ $theme                = ! empty( $theme ) ? $theme : 'theme_1';
                     </div>
                 </div>
             </div>
-            <!-- <div class="cmb-row cmb-type-text-medium">
-                <div class="cmb-th">
-                    <label for="lcsp_slider_title"><?php esc_html_e('Layout', WCPCSU_TEXTDOMAIN); ?></label>
-                </div>
-                <div class="cmb-td">
-                    <select name="wcpscu[layout]" id="lcg">
-                        <option value="carousel">Carousel</option>
-                        <option value="grid" <?php if(!empty($layout) && $layout == "grid"){ echo "selected";}?>>Grid
-                        </option>
-                    </select>
-                </div>
-            </div> -->
             <!--Select theme-->
             <div class="cmb-row cmb-type-radio">
                 <div class="cmb-th">

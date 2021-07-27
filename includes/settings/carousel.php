@@ -1,11 +1,12 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) die( 'Are you cheating??? Accessing this file directly is forbidden.' );
-$stop_hover      = !empty($stop_hover) ? $stop_hover : 'true';
-$A_play          = !empty($A_play) ? $A_play : 'yes';
-$pagination      = !empty($pagination) ? $pagination : 'yes';
-$scrol_direction = !empty($scrol_direction) ? $scrol_direction : 'left';
-$scrool          = !empty($scrool) ? $scrool : 'false';
-$nav_show          = !empty($nav_show) ? $nav_show : 'yes';
+$stop_hover      = ! empty( $stop_hover ) ? $stop_hover : 'true';
+$A_play          = ! empty( $A_play ) ? $A_play : 'yes';
+$pagination      = ! empty( $pagination ) ? $pagination : 'yes';
+$scrol_direction = ! empty( $scrol_direction ) ? $scrol_direction : 'left';
+$scrool          = ! empty( $scrool ) ? $scrool : 'false';
+$nav_show        = ! empty( $nav_show ) ? $nav_show : 'yes';
+$nav_position    = ! empty( $nav_position ) ? $nav_position : 'bottom_right';
 ?>
 <!--TAB 2  Carousel setting -->
 <div id="lcsp-tab-2" class="lcsp-tab-content">
@@ -240,7 +241,26 @@ $nav_show          = !empty($nav_show) ? $nav_show : 'yes';
                     </ul>
                 </div>
             </div>
-
+            <div class="cmb-row cmb-type-radio">
+                <div class="cmb-th">
+                    <label for="lcsp_ap"><?php esc_html_e('Navigation Position', WCPCSU_TEXTDOMAIN); ?></label>
+                </div>
+                <div class="cmb-td">
+                    <div class="cmb-theme-wrapper">
+                        <select id="theme_" class="wcpscu_theme" name="wcpscu[nav_position]">
+                            <option value="top_left" <?php selected( $nav_position, 'top_left'); ?> >Top Left</option>
+                            <option value="top_right" <?php selected( $nav_position, 'top_right'); ?>>Top Right
+                            </option>
+                            <option value="middle" <?php selected( $nav_position, 'middle'); ?>>Middle
+                            </option>
+                            <option value="bottom_left" <?php selected( $nav_position, 'bottom_left'); ?>>Bottom Left
+                            </option>
+                            <option value="bottom_right" <?php selected( $nav_position, 'bottom_right'); ?>>Bottom Right
+                            </option>
+                        </select>
+                    </div>
+                </div>
+            </div>
             <!-- Navigation arrow color -->
             <div class="cmb-row cmb-type-radio">
                 <div class="cmb-th">
@@ -295,9 +315,6 @@ $nav_show          = !empty($nav_show) ? $nav_show : 'yes';
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="cmb2-save-setting">
-            <button type="button">Save Settings</button>
         </div>
     </div> <!-- end cmb2-wrap -->
 </div> <!-- end lcsp-tab-2 -->
