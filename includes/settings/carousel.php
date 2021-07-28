@@ -21,12 +21,12 @@ $nav_position    = ! empty( $nav_position ) ? $nav_position : 'bottom_right';
                 <div class="cmb-td">
                     <ul class="cmb2-radio-list cmb2-list cmb2-radio-switch">
                         <li>
-                            <input type="radio" class="cmb2-option cmb2-radio-switch1" name="wcpscu[A_play]"
+                            <input type="radio" class="cmb2-option wcpcu_auto_play cmb2-radio-switch1" name="wcpscu[A_play]"
                                 id="lcsp_ap1" value="yes" <?php checked('yes', $A_play, true); ?>>
                             <label for="lcsp_ap1"><?php esc_html_e('Yes', WCPCSU_TEXTDOMAIN); ?></label>
                         </li>
                         <li>
-                            <input type="radio" class="cmb2-option cmb2-radio-switch2" name="wcpscu[A_play]"
+                            <input type="radio" class="cmb2-option wcpcu_auto_play cmb2-radio-switch2" name="wcpscu[A_play]"
                                 id="lcsp_ap2" value="no" <?php checked('no', $A_play, true); ?>>
                             <label for="lcsp_ap2"><?php esc_html_e('No', WCPCSU_TEXTDOMAIN); ?></label>
                         </li>
@@ -57,7 +57,7 @@ $nav_position    = ! empty( $nav_position ) ? $nav_position : 'bottom_right';
             </div>
 
             <!--Stop on hover-->
-            <div class="cmb-row cmb-type-radio">
+            <div class="cmb-row cmb-type-radio wpcu_auto_play_depend">
                 <div class="cmb-th">
                     <label for="lcsp_soh"><?php esc_html_e('Stop on Hover', WCPCSU_TEXTDOMAIN); ?></label>
                 </div>
@@ -144,8 +144,7 @@ $nav_position    = ! empty( $nav_position ) ? $nav_position : 'bottom_right';
                 </div>
             </div>
             <!--slide Timeout-->
-            <?php if(empty($a_play_type) || 'marquee' != $a_play_type) { ?>
-            <div class="cmb-row cmb-type-text-medium">
+            <div class="cmb-row cmb-type-text-medium wpcu_auto_play_depend">
                 <div class="cmb-th">
                     <label for="lcsp_ss">
                         <?php esc_html_e('Slide Timeout', WCPCSU_TEXTDOMAIN); ?>
@@ -159,9 +158,7 @@ $nav_position    = ! empty( $nav_position ) ? $nav_position : 'bottom_right';
                     </p>
                 </div>
             </div>
-            <?php } ?>
             <!--Scrolling-->
-            <?php if(empty($a_play_type) || 'marquee' != $a_play_type) { ?>
             <div class="cmb-row cmb-type-radio">
                 <div class="cmb-th">
                     <label for="lcsp_spp">
@@ -186,7 +183,6 @@ $nav_position    = ! empty( $nav_position ) ? $nav_position : 'bottom_right';
                     </ul>
                 </div>
             </div> <!-- end cmb2-metabox -->
-            <?php } ?>
             <!-- Navigation show/hide -->
             <div class="cmb-row cmb-type-radio">
                 <div class="cmb-th">

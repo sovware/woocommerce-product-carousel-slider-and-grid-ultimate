@@ -60,6 +60,20 @@ jQuery(document).ready(function ($) {
     });
 
     $('.wcpscu_radio_layout').hide();
+
+    if( $("input[name='wcpscu[A_play]']:checked").val() === 'yes' ) {
+        $('.wpcu_auto_play_depend').show();
+    } else {
+        $('.wpcu_auto_play_depend').hide();
+    }
+
+    $('.wcpcu_auto_play').on('click', function(){ 
+        if( $(this).val() === 'yes' ) {
+            $('.wpcu_auto_play_depend').show();
+        } else {
+            $('.wpcu_auto_play_depend').hide();
+        }
+    });
     
 
 });
