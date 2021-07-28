@@ -555,7 +555,7 @@ $discount_ribbon_position   = ! empty( $discount_ribbon_position ) ? $discount_r
                 </div>
             </div>
             <!--Display "Quick View" button-->
-            <div class="cmb-row cmb-type-radio">
+            <div class="cmb-row cmb-type-radio theme_2">
                 <div class="cmb-th">
                     <label
                         for="wcpscu_quick_view"><?php esc_html_e('Display "Quick View Icon"', WCPCSU_TEXTDOMAIN); ?></label>
