@@ -30,11 +30,8 @@ class wcpcsu_Shortcode
         $img_crop                = ! empty( $img_crop ) ? $img_crop : 'yes';
         $crop_image_width        = ! empty( $crop_image_width ) ? intval( $crop_image_width ) : 300;
         $crop_image_height       = ! empty( $crop_image_height ) ? intval( $crop_image_height ) : 300;
-        $c_theme  			     = ! empty( $c_theme ) ? $c_theme : 'c_theme1';
-        $g_theme  			     = ! empty( $g_theme ) ? $g_theme : 'g_theme1';
-        $display_title           = ! empty( $display_title ) ? $display_title : 'yes';
         $display_price           = ! empty( $display_price ) ? $display_price : 'yes';
-        $display_ratings         = ! empty( $display_ratings ) ? $display_ratings : 'yes';
+       
         $display_cart            = ! empty( $display_cart ) ? $display_cart : 'yes';
         $nav_show                = ! empty( $nav_show ) ? $nav_show : 'yes';
         $ribbon                  = ! empty( $ribbon ) ? $ribbon : 'discount';
@@ -46,6 +43,26 @@ class wcpcsu_Shortcode
         $g_mobile                = ! empty( $g_mobile ) ? intval( $g_mobile ) : 1;
         $grid_pagination         = ! empty( $grid_pagination ) ? $grid_pagination : 'no';
         $slide_time              = ! empty( $slide_time )  ? $slide_time : '2000' ;
+
+        $display_title           = ! empty( $display_title ) ? $display_title : 'yes';
+        $display_cart            = ! empty( $display_cart ) ? $display_cart : 'yes';
+        $display_price           = ! empty( $display_price ) ? $display_price : 'yes';
+        $display_ratings         = ! empty( $display_ratings ) ? $display_ratings : 'yes';
+        $quick_view              = ! empty( $quick_view ) ? $quick_view : 'yes';
+
+        $ribbon_args = array(
+            'display_sale_ribbon'        => ! empty( $display_sale_ribbon ) ? $display_sale_ribbon : 'no',
+            'sale_ribbon_text'           => ! empty( $sale_ribbon_text ) ? $sale_ribbon_text : '',
+            'sale_ribbon_position'       => ! empty( $sale_ribbon_position ) ? $sale_ribbon_position : 'top_left',
+            'display_featured_ribbon'    => ! empty( $display_featured_ribbon ) ? $display_featured_ribbon : 'no',
+            'feature_ribbon_text'        => ! empty( $feature_ribbon_text ) ? $feature_ribbon_text : '',
+            'featured_ribbon_position'   => ! empty( $featured_ribbon_position ) ? $featured_ribbon_position : 'top_right',
+            'display_sold_out_ribbon'    => ! empty( $display_sold_out_ribbon ) ? $display_sold_out_ribbon : 'no',
+            'sold_out_ribbon_text'       => ! empty( $sold_out_ribbon_text ) ? $sold_out_ribbon_text : '',
+            'sold_out_ribbon_position'   => ! empty( $sold_out_ribbon_position ) ? $sold_out_ribbon_position : 'bottom_left',
+            'display_discount_ribbon'    => ! empty( $display_discount_ribbon ) ? $display_discount_ribbon : 'no',
+            'discount_ribbon_position'   => ! empty( $discount_ribbon_position ) ? $discount_ribbon_position : 'bottom_right',
+        );
 
         $theme                          = ! empty( $theme ) ? $theme : 'theme_1';
         $title_font_size                = ! empty( $title_font_size[$theme] ) ? $title_font_size[$theme] : '16';
@@ -111,26 +128,35 @@ class wcpcsu_Shortcode
         }
         $loop = new WP_Query( $args );
 
+       
+        $A_play                     = ! empty( $A_play ) ? $A_play : 'yes';
+        $repeat_product             = ! empty( $repeat_product ) ? $repeat_product : 'yes';
+        $stop_hover                 = ! empty( $stop_hover ) ? $stop_hover : 'yes';
+        $carousel_desktop_column    = ! empty( $c_desktop ) ? $c_desktop : 4;
+        $carousel_laptop_column     = ! empty( $c_desktop_small ) ? $c_desktop_small : 3;
+        $carousel_tablet_column     = ! empty( $c_tablet ) ? $c_tablet : 2;
+        $carousel_mobile_column     = ! empty( $c_mobile ) ? $c_mobile : 1;
+
         if( $loop->have_posts() ) { ?>
         <div
         class="wpcu-products wpcu-<?php echo $theme; ?> wpcu-lazy-load <?php echo ( 'carousel' == $layout ) ? 'wpcu-carousel' : ''; ?>"
         style="
             --headerFontSize: inherit;
             --headerFontColor: inherit;
-            --productTitleSize: 15px;
-            --productTitleColor: #363940;
-            --productTitleColorHover: #000;
-            --productPriceSize: 16px;
-            --productPriceColor: #ff5500;
-            --productRatingSize: 16px;
-            --productRatingColor: #feb507;
-            --buttonColor: #fff;
-            --buttonColorHover: #fff;
-            --buttonBgColor: #ff5500;
-            --buttonBgColorHover: #d54500;
-            --ribbonBgColor: #ff5500;
-            --qvIconColor: #fff;
-            --qvBgColor: #ff5500;
+            --productTitleSize: <?php echo $title_font_size; ?>px;
+            --productTitleColor: <?php echo $title_font_color; ?>;
+            --productTitleColorHover: <?php echo $title_hover_font_color; ?>;
+            --productPriceSize: <?php echo $price_font_size; ?>px;
+            --productPriceColor: <?php echo $price_font_color; ?>;
+            --productRatingSize: <?php echo $ratings_size; ?>px;
+            --productRatingColor: <?php echo $ratings_color; ?>;
+            --buttonColor: <?php echo $cart_font_color; ?>;
+            --buttonColorHover: <?php echo $cart_button_hover_font_color; ?>;
+            --buttonBgColor: <?php echo $cart_bg_color; ?>;
+            --buttonBgColorHover: <?php echo $cart_button_hover_color; ?>;
+            --ribbonBgColor: <?php echo $ribbon_bg_color; ?>;
+            --qvIconColor: <?php echo $quick_view_icon_color; ?>;
+            --qvBgColor: <?php echo $quick_view_icon_back_color; ?>;
         "
         <?php if( 'carousel' == $layout ) { ?>
         data-wpcu-items="4"
@@ -150,12 +176,18 @@ class wcpcsu_Shortcode
         }'
         <?php } ?>
         >
-        <div class="<?php echo ( 'carousel' == $layout ) ? 'swiper-wrapper' : 'wpcu-row wpcu-column-5 wpcu-column-md-2'; ?>">
+        <div class="<?php echo ( 'carousel' == $layout ) ? 'swiper-wrapper' : 'wpcu-row wpcu-column-5 wpcu-column-md-2 wpcu-column-sm-1'; ?>">
         <?php
             while($loop->have_posts()) : $loop->the_post();
             global $post,$product;
-            $aazz_thumb = wp_get_attachment_image_src( get_post_thumbnail_id(get_the_ID()), 'large' );
-            $wpcsu_img = $aazz_thumb['0'];
+            $thumb = get_post_thumbnail_id();
+            // crop the image if the cropping is enabled.
+            if ('yes' === $img_crop){
+                $wpcsu_img = wpcsu_image_cropping($thumb, $crop_image_width, $crop_image_height, true, 100)['url'];
+            }else{
+                $aazz_thumb = wp_get_attachment_image_src( get_post_thumbnail_id(get_the_ID()), 'large' );
+                $wpcsu_img = $aazz_thumb['0'];
+            }
             $sale_price = $product->get_sale_price();
             $ratings = (($product->get_average_rating()/5)*100);
             
@@ -188,9 +220,9 @@ class wcpcsu_Shortcode
         if ( $product->is_on_sale() ) {
 
             if ( ! $product->is_type( 'variable' ) ) {
-
-                $max_percentage = ( ( $product->get_regular_price() - $product->get_sale_price() ) / $product->get_regular_price() ) * 100;
-
+                if( 0 < $product->get_regular_price() && 0 < $product->get_sale_price()) {
+                    $max_percentage = ( ( $product->get_regular_price() - $product->get_sale_price() ) / $product->get_regular_price() ) * 100;
+                }
             } else {
 
                 $max_percentage = 0;
@@ -207,7 +239,7 @@ class wcpcsu_Shortcode
 
             }
 
-            return round($max_percentage) . "%";
+            return ! empty( $max_percentage ) ? round($max_percentage) . "%" : '';
 
         }
 

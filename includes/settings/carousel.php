@@ -34,32 +34,6 @@ $nav_position    = ! empty( $nav_position ) ? $nav_position : 'bottom_right';
                 </div>
             </div>
 
-            <!--AutoPlay Type-->
-            <div class="cmb-row cmb-type-radio">
-                <div class="cmb-th">
-                    <label for="lcsp_ap"><?php esc_html_e('AutoPlay Type', WCPCSU_TEXTDOMAIN); ?></label>
-                </div>
-                <div class="cmb-td">
-                    <!-- <select id="c_theme" name="wcpscu[a_play_type]">
-                        <option value="normal">Normal</option>
-                        <option value="marquee"
-                            <?php if(!empty($a_play_type) && $a_play_type == "marquee"){ echo "selected";}?>>Marquee
-                        </option>
-                    </select> -->
-                    <ul class="cmb2-radio-list cmb2-list">
-                        <li>
-                            <input type="radio" class="cmb2-option" name="wcpscu[auto_product]"
-                                id="wcpscu_repeat_product11" value="Normal" checked>
-                            <label for="wcpscu_repeat_product11">Normal</label>
-                        </li>
-                        <li><input type="radio" class="cmb2-option" name="wcpscu[auto_product]"
-                                id="wcpscu_repeat_product22" value="Marquee">
-                            <label for="wcpscu_repeat_product22">Marquee</label>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
             <!--Repeat Product-->
             <div class="cmb-row cmb-type-radio">
                 <div class="cmb-th">
@@ -83,7 +57,6 @@ $nav_position    = ! empty( $nav_position ) ? $nav_position : 'bottom_right';
             </div>
 
             <!--Stop on hover-->
-            <?php if(empty($a_play_type) || 'marquee' != $a_play_type) { ?>
             <div class="cmb-row cmb-type-radio">
                 <div class="cmb-th">
                     <label for="lcsp_soh"><?php esc_html_e('Stop on Hover', WCPCSU_TEXTDOMAIN); ?></label>
@@ -105,7 +78,6 @@ $nav_position    = ! empty( $nav_position ) ? $nav_position : 'bottom_right';
                     </ul>
                 </div>
             </div>
-            <?php } ?>
             <!--Items on desktop-->
             <div class="cmb-row cmb-type-text-medium">
                 <div class="cmb-th">

@@ -196,5 +196,11 @@ function WCPCSU() {
 
 // Get WCPCSU ( Woocommerce Product Carousel Slider Ultimate plugin ) Running.
 WCPCSU();
+function wpcsu_image_cropping( $attachmentId, $width, $height, $crop = true, $quality = 100 )
+{
+    $resizer = new Wpcsu_Image_Resizer( $attachmentId );
+
+    return $resizer->resize( $width, $height, $crop, $quality );
+}
 
 

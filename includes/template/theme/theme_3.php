@@ -2,28 +2,24 @@
     <div class="wpcu-product__content">
         <div class="wpcu-product__img wpcu-pos-relative">
             <a href="<?php echo get_the_permalink(); ?>">
-                <img src="<?php echo $wpcsu_img; ?>" alt="">
+                <img src="<?php echo $wpcsu_img; ?>" alt="<?php echo get_the_title(); ?>">
             </a>
-            <div class="wpcu-product__cover-content wpcu-product__cover-content--top-left">
-                <span class="wpcu-badge wpcu-badge--primary wpcu-badge--text-lg wpcu-badge--rounded-circle">-20%</span>
-            </div>
-            <div class="wpcu-product__cover-content wpcu-product__cover-content--top-right">
-                <span class="wpcu-badge wpcu-badge--primary wpcu-badge--text-lg wpcu-badge--rounded-circle">-20%</span>
-            </div>
-            <div class="wpcu-product__cover-content wpcu-product__cover-content--bottom-left">
-                <span class="wpcu-badge wpcu-badge--primary wpcu-badge--text-lg wpcu-badge--rounded-circle">-20%</span>
-            </div>
-            <div class="wpcu-product__cover-content wpcu-product__cover-content--bottom-right">
-                <span class="wpcu-badge wpcu-badge--primary wpcu-badge--text-lg wpcu-badge--rounded-circle">-20%</span>
-            </div>
+
+            <?php wpcsu_ribbon_badge( $ribbon_args, $this->aazz_show_discount_percentage() ); ?>
+
+            <?php if( 'yes' == $display_cart ) { ?>
             <div class="wpcu-product__cover-content wpcu-product__cover-content--middle">
                 <div class="wpcu-button wpcu-button--light wpcu-button--rounded-circle">
                     <?php echo do_shortcode('[add_to_cart id="' . get_the_ID() . '" show_price = "false"]'); ?>
                 </div>
             </div>
+            <?php } ?>
         </div>
         <div class="wpcu-product__details">
+            <?php if( 'yes' == $display_title ) { ?>
             <h2 class="wpcu-product__title"><a href="<?php echo get_the_permalink(); ?>"><?php echo get_the_title(); ?></a></h2>
+            <?php } ?>
+            <?php if( 'yes' == $display_price && ! empty( $product->get_regular_price() ) ) { ?> 
             <div class="wpcu-product__price">
                 <?php
         if(  empty( $sale_price ) ) { ?>
@@ -34,6 +30,8 @@
                 <s>$<?php echo $product->get_regular_price(); ?></s>
                 <?php } ?>
             </div>
+            <?php } ?>
+            <?php if( 'yes' == $display_ratings ) { ?>
             <div class="wpcu-product__rating">
                 <div class="atw_rating woocommerce">
                     <div class="woocommerce-product-rating">
@@ -44,6 +42,7 @@
                     </div>
                 </div>
             </div>
+            <?php } ?>
         </div>
     </div>
 </div><!-- ends: .wpcu-product -->
