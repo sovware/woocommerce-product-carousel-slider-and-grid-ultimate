@@ -275,12 +275,12 @@
                     <div class="theme_1"> 
                         <input type="text" class="cmb2-text-small cpa-color-picker" name="wcpscu[ribbon_bg_color][theme_1]"
                             id="wcpscu_ribbon_bg_color"
-                            value="<?php echo ! empty( $ribbon_bg_color['theme_1'] ) ? esc_attr( $ribbon_bg_color['theme_1'] ) : '#A4C741'; ?>">
+                            value="<?php echo ! empty( $ribbon_bg_color['theme_1'] ) ? esc_attr( $ribbon_bg_color['theme_1'] ) : '#ff5500'; ?>">
                     </div>
                     <div class="theme_2"> 
                         <input type="text" class="cmb2-text-small cpa-color-picker" name="wcpscu[ribbon_bg_color][theme_2]"
                             id="wcpscu_ribbon_bg_color"
-                            value="<?php echo ! empty( $ribbon_bg_color['theme_2'] ) ? esc_attr( $ribbon_bg_color['theme_2'] ) : '#A4C741'; ?>">
+                            value="<?php echo ! empty( $ribbon_bg_color['theme_2'] ) ? esc_attr( $ribbon_bg_color['theme_2'] ) : '#ff5500'; ?>">
                     </div>
                     <div class="theme_3"> 
                     <input type="text" class="cmb2-text-small cpa-color-picker" name="wcpscu[ribbon_bg_color][theme_3]"

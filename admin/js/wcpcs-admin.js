@@ -11,25 +11,6 @@ jQuery(document).ready(function ($) {
     //color picker
     jQuery('.cpa-color-picker').wpColorPicker();
 
-    //Layout select
-    $("#lcg").change(function () {
-
-        if ($(this).val() === 'carousel') {
-            $("#tab2").css('display', 'block');
-            $("#tab3").css('display', 'none');
-            $("#wcpscu_total_pdt").html("Total Products to Display");
-        }
-
-
-
-        if ($(this).val() === 'grid') {
-            $("#tab2").css('display', 'none');
-            $("#tab3").css('display', 'block');
-            $("#wcpscu_total_pdt").html("Products Per Page");
-        }
-
-    });
-
 
     $('.cmd-switch > div').on('click', function (e) {
         e.preventDefault();
@@ -42,6 +23,7 @@ jQuery(document).ready(function ($) {
 
     $(".cmd-switch-carousel").on('click',function (e) {
         e.preventDefault();
+        $(".wcpscu_grid_layout").removeAttr('checked');
         $(".wcpscu_carousel_layout").attr('checked', true);
         $("#tab2").css('display', 'block');
         $("#tab3").css('display', 'none');
@@ -50,6 +32,7 @@ jQuery(document).ready(function ($) {
 
     $(".cmd-switch-grid").on('click',function (e) {
         e.preventDefault();
+        $(".wcpscu_carousel_layout").removeAttr('checked');
         $(".wcpscu_grid_layout").attr('checked', true);
         $("#tab2").css('display', 'none');
         $("#tab3").css('display', 'block');
