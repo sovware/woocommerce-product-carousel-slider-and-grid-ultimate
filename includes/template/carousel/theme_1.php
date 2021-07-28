@@ -7,7 +7,7 @@
     data-wpcu-speed="300"
     data-wpcu-autoplay='{
         "delay": "3000",
-        "pauseOnMouseEnter": "true",
+        "pauseOnMouseEnter": "false",
         "disableOnInteraction": "false"
     }'
     data-wpcu-responsive='{
