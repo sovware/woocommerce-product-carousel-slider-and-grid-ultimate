@@ -164,11 +164,17 @@ class wcpcsu_Shortcode
         data-wpcu-loop="true"
         data-wpcu-perslide="1"
         data-wpcu-speed="300"
-        data-wpcu-autoplay='{
+        data-wpcu-autoplay='
+        <?php if( 'yes' == $A_play ) { ?>
+        {
             "delay": "3000",
             "pauseOnMouseEnter": "true",
             "disableOnInteraction": "false"
-        }'
+        }
+        <?php } else { ?>
+        false
+        <?php } ?>
+        '
         data-wpcu-responsive='{
             "320": {"slidesPerView": "2", "spaceBetween": "20"},
             "480": {"slidesPerView": "3", "spaceBetween": "30"},
