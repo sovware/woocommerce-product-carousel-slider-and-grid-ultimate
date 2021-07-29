@@ -35,7 +35,6 @@ class wcpcsu_Shortcode
         $display_price           = ! empty( $display_price ) ? $display_price : 'yes';
 
         $display_cart            = ! empty( $display_cart ) ? $display_cart : 'yes';
-        $nav_show                = ! empty( $nav_show ) ? $nav_show : 'yes';
         $ribbon                  = ! empty( $ribbon ) ? $ribbon : 'discount';
         $header                  = ! empty( $header ) ? $header : 'center';
         $h_title_show            = ! empty( $h_title_show ) ? $h_title_show : 'no';
@@ -95,18 +94,27 @@ class wcpcsu_Shortcode
         $carousel_tablet_column     = ! empty( $c_tablet ) ? $c_tablet : 2;
         $carousel_mobile_column     = ! empty( $c_mobile ) ? $c_mobile : 1;
 
+        // carousel navigation settings 
+        $nav_show                   = ! empty( $nav_show ) ? $nav_show : 'yes';
+        $nav_position               = ! empty( $nav_position ) ? $nav_position : 'middle';
+        $nav_arrow_color            = ! empty( $nav_arrow_color ) ? $nav_arrow_color : '#333';
+        $nav_back_color             = ! empty( $nav_back_color ) ? $nav_back_color : '#fff';
+        $nav_border_color           = ! empty( $nav_border_color ) ? $nav_border_color : '#e4e4ed';
+        $nav_arrow_hover_color      = ! empty( $nav_arrow_hover_color ) ? $nav_arrow_hover_color : '#fff';
+        $nav_back_hover_color       = ! empty( $nav_back_hover_color ) ? $nav_back_hover_color : '#ff5500';
+        $nav_border_hover           = ! empty( $nav_border_hover ) ? $nav_border_hover : '#ff5500';
         //grid pagination settings
-        $pagi_color                     = ! empty( $pagi_color ) ? $pagi_color : '#9192a3';
-        $pagi_border_color              = ! empty( $pagi_border_color ) ? $pagi_border_color : '#9192a3';
-        $pagi_back_color                = ! empty( $pagi_back_color ) ? $pagi_back_color : '#9192a3';
+        $pagi_color                 = ! empty( $pagi_color ) ? $pagi_color : '#333';
+        $pagi_border_color          = ! empty( $pagi_border_color ) ? $pagi_border_color : '#e4e4e4';
+        $pagi_back_color            = ! empty( $pagi_back_color ) ? $pagi_back_color : '#fff';
 
-        $pagi_hover_color               = ! empty( $pagi_hover_color ) ? $pagi_hover_color : '#9192a3';
-        $pagi_hover_border_color        = ! empty( $pagi_hover_border_color ) ? $pagi_hover_border_color : '#9192a3';
-        $pagi_hover_back_color          = ! empty( $pagi_hover_back_color ) ? $pagi_hover_back_color : '#9192a3';
+        $pagi_hover_color           = ! empty( $pagi_hover_color ) ? $pagi_hover_color : '#fff';
+        $pagi_hover_border_color    = ! empty( $pagi_hover_border_color ) ? $pagi_hover_border_color : '#ff5500';
+        $pagi_hover_back_color      = ! empty( $pagi_hover_back_color ) ? $pagi_hover_back_color : '#ff5500';
 
-        $pagi_active_color                = ! empty( $pagi_active_color ) ? $pagi_active_color : '#9192a3';
-        $pagi_active_border_color               = ! empty( $pagi_active_border_color ) ? $pagi_active_border_color : '#9192a3';
-        $pagi_active_back_color        = ! empty( $pagi_active_back_color ) ? $pagi_active_back_color : '#9192a3';
+        $pagi_active_color          = ! empty( $pagi_active_color ) ? $pagi_active_color : '#fff';
+        $pagi_active_border_color   = ! empty( $pagi_active_border_color ) ? $pagi_active_border_color : '#ff5500';
+        $pagi_active_back_color     = ! empty( $pagi_active_back_color ) ? $pagi_active_back_color : '#ff5500';
 
 
         if( $loop->have_posts() ) { ?>
