@@ -94,7 +94,7 @@ class wcpcsu_Shortcode
         $carousel_tablet_column     = ! empty( $c_tablet ) ? $c_tablet : 2;
         $carousel_mobile_column     = ! empty( $c_mobile ) ? $c_mobile : 1;
 
-        // carousel navigation settings 
+        // carousel navigation settings
         $nav_show                   = ! empty( $nav_show ) ? $nav_show : 'yes';
         $nav_position               = ! empty( $nav_position ) ? $nav_position : 'middle';
         $nav_arrow_color            = ! empty( $nav_arrow_color ) ? $nav_arrow_color : '#333';
@@ -326,17 +326,17 @@ class wcpcsu_Shortcode
         $wpcsu_img   = $wpcsu_thumb['0'];
         ?>
         <div>
-            <div class='title'><?php echo get_the_title( $product_id );?></div>
+            <div class='wpcu-modal__product-title'><h2><?php echo get_the_title( $product_id );?></h2></div>
             <?php if ( ! empty( $wpcsu_img ) ) { ?>
-            <div class='image'>
+            <div class='wpcu-modal__product-image'>
                 <img src="<?php echo $wpcsu_img; ?>" alt="<?php echo get_the_title( $product_id );?>">
             </div>
             <?php } ?>
-            <div class='description'>
-                <?php echo $product->get_description(); ?>
+            <div class='wpcu-modal__product-description'>
+                <p><?php echo $product->get_description(); ?></p>
             </div>
-            <div class='price'><?php echo $product->get_price_html(); ?></div>
-            <div class='add_to_cart'><?php echo do_shortcode('[add_to_cart id="' . $product_id . '" show_price = "false"]'); ?></div>
+            <div class='wpcu-modal__product-price'><?php echo $product->get_price_html(); ?></div>
+            <div class='wpcu-modal__product-action'><?php echo do_shortcode('[add_to_cart id="' . $product_id . '" show_price = "false"]'); ?></div>
         </div>
         <?php
         $template = ob_get_clean();

@@ -5,7 +5,7 @@ $grid_pagination          = !empty($grid_pagination) ? $grid_pagination : 'no';
 <div id="lcsp-tab-3" class="lcsp-tab-content">
     <div class="cmb2-wrap form-table">
         <div id="cmb2-metabox" class="cmb2-metabox cmb-field-list">
-            
+
             <!--Select Column for desktop-->
             <div class="cmb-row cmb-type-radio">
                 <div class="cmb-th">
@@ -92,11 +92,6 @@ $grid_pagination          = !empty($grid_pagination) ? $grid_pagination : 'no';
                             <input type="text" name="wcpscu[pagi_color]" class="cpa-color-picker"
                                 value="<?php ! empty( $pagi_color ) ? $pagi_color : "#333"; ?>" />
                         </div>
-                        
-                    </div>
-                </div>
-                <div class="cmb-td">
-                    <div class="cmb-pagination">
                         <div class="cmb-pagination-item">
                             <label for="wcpscu[pagi_border_color]">
                                 <?php esc_html_e('Pagination Border Color', WCPCSU_TEXTDOMAIN); ?>
@@ -104,11 +99,6 @@ $grid_pagination          = !empty($grid_pagination) ? $grid_pagination : 'no';
                             <input type="text" name="wcpscu[pagi_border_color]" class="cpa-color-picker"
                                 value="<?php ! empty( $pagi_border_color ) ? $pagi_border_color : "#e4e4e4"; ?>" />
                         </div>
-                        
-                    </div>
-                </div>
-                <div class="cmb-td">
-                    <div class="cmb-pagination">
                         <div class="cmb-pagination-item">
                             <label for="wcpscu[pagi_back_color]">
                                 <?php esc_html_e('Pagination Background Color', WCPCSU_TEXTDOMAIN); ?>
@@ -116,10 +106,6 @@ $grid_pagination          = !empty($grid_pagination) ? $grid_pagination : 'no';
                             <input type="text" name="wcpscu[pagi_back_color]" class="cpa-color-picker"
                                 value="<?php ! empty( $pagi_back_color ) ? $pagi_back_color : "#fff"; ?>" />
                         </div>
-                    </div>
-                </div>
-                <div class="cmb-td">
-                    <div class="cmb-pagination">
                         <div class="cmb-pagination-item">
                             <label for="wcpscu[pagi_hover_color]">
                                 <?php esc_html_e('Pagination Hover Color', WCPCSU_TEXTDOMAIN); ?>
@@ -127,11 +113,6 @@ $grid_pagination          = !empty($grid_pagination) ? $grid_pagination : 'no';
                             <input type="text" name="wcpscu[pagi_hover_color]" class="cpa-color-picker"
                                 value="<?php ! empty( $pagi_hover_color ) ? $pagi_hover_color : "#fff"; ?>" />
                         </div>
-                        
-                    </div>
-                </div>
-                <div class="cmb-td">
-                    <div class="cmb-pagination">
                         <div class="cmb-pagination-item">
                             <label for="wcpscu[pagi_hover_border_color]">
                                 <?php esc_html_e('Pagination Hover Border Color', WCPCSU_TEXTDOMAIN); ?>
@@ -139,11 +120,6 @@ $grid_pagination          = !empty($grid_pagination) ? $grid_pagination : 'no';
                             <input type="text" name="wcpscu[pagi_hover_border_color]" class="cpa-color-picker"
                                 value="<?php ! empty( $pagi_hover_border_color ) ? $pagi_hover_border_color : "#ff5500"; ?>" />
                         </div>
-                        
-                    </div>
-                </div>
-                <div class="cmb-td">
-                    <div class="cmb-pagination">
                         <div class="cmb-pagination-item">
                             <label for="wcpscu[pagi_hover_back_color]">
                                 <?php esc_html_e('Pagination Hover Background Color', WCPCSU_TEXTDOMAIN); ?>
@@ -151,12 +127,6 @@ $grid_pagination          = !empty($grid_pagination) ? $grid_pagination : 'no';
                             <input type="text" name="wcpscu[pagi_hover_back_color]" class="cpa-color-picker"
                                 value="<?php ! empty( $pagi_hover_back_color ) ? $pagi_hover_back_color : "#ff5500"; ?>" />
                         </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="cmb-td">
-                    <div class="cmb-pagination">
                         <div class="cmb-pagination-item">
                             <label for="wcpscu[pagi_active_color]">
                                 <?php esc_html_e('Pagination Active Color', WCPCSU_TEXTDOMAIN); ?>
@@ -164,11 +134,6 @@ $grid_pagination          = !empty($grid_pagination) ? $grid_pagination : 'no';
                             <input type="text" name="wcpscu[pagi_active_color]" class="cpa-color-picker"
                                 value="<?php ! empty( $pagi_active_color ) ? $pagi_active_color : "#fff"; ?>" />
                         </div>
-                        
-                    </div>
-                </div>
-                <div class="cmb-td">
-                    <div class="cmb-pagination">
                         <div class="cmb-pagination-item">
                             <label for="wcpscu[pagi_active_border_color]">
                                 <?php esc_html_e('Pagination Active Border Color', WCPCSU_TEXTDOMAIN); ?>
@@ -176,11 +141,6 @@ $grid_pagination          = !empty($grid_pagination) ? $grid_pagination : 'no';
                             <input type="text" name="wcpscu[pagi_active_border_color]" class="cpa-color-picker"
                                 value="<?php ! empty( $pagi_active_border_color ) ? $pagi_active_border_color : "#ff5500"; ?>" />
                         </div>
-                        
-                    </div>
-                </div>
-                <div class="cmb-td">
-                    <div class="cmb-pagination">
                         <div class="cmb-pagination-item">
                             <label for="wcpscu[pagi_active_back_color]">
                                 <?php esc_html_e('Pagination Active Background Color', WCPCSU_TEXTDOMAIN); ?>
@@ -190,7 +150,7 @@ $grid_pagination          = !empty($grid_pagination) ? $grid_pagination : 'no';
                         </div>
                     </div>
                 </div>
-
+            </div>
         </div> <!-- end cmb2-metabox -->
     </div> <!-- end cmb2-wrap -->
 </div> <!-- end lcsp-tab-2

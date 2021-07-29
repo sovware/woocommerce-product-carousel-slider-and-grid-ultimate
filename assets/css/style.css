@@ -794,7 +794,7 @@
   position: absolute;
   width: 40px;
   height: 40px;
-  border: 2px solid #333;
+  border: 2px solid #ff5500;
   border-right-color: transparent;
   left: 50%;
   top: 50%;
@@ -944,4 +944,16 @@
   background: var(--pagActiveBgColor);
   border-color: var(--pagActiveBorderColor);
   color: var(--pagActiveColor);
+}
+
+/* paginations style */
+.wpcu-carousel-pagination{
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.wpcu-carousel-pagination .swiper-pagination-bullet-active{
+  background: #ff5500;
 }

@@ -23,3 +23,6 @@
         <img src="<?php echo WCPCSU_URL .'assets/icons/arrow-right.svg' ?>" alt="" class="wpcu-svg">
     </div>
 </div>
+
+<!-- wpcu-carousel-pagination -->
+<div class="wpcu-carousel-pagination"></div>
