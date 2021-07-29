@@ -1,10 +1,11 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) die( 'Are you cheating??? Accessing this file directly is forbidden.' );
-$h_title_show               = !empty($h_title_show) ? $h_title_show : 'no';
-$display_full_title         = !empty($display_full_title) ? $display_full_title : 'yes';
-$ribbon                     = !empty($ribbon) ? $ribbon : 'discount';
-$header                     = !empty($header) ? $header : 'center';
-$total_products_label       = (!empty($layout) && 'grid' == $layout) ? __("Products Per Page",WCPCSU_TEXTDOMAIN) : __("Total Products to Display",WCPCSU_TEXTDOMAIN);
+$layout                     = ! empty( $layout ) ? $layout : 'carousel';
+$h_title_show               = ! empty( $h_title_show ) ? $h_title_show : 'no';
+$display_full_title         = ! empty( $display_full_title ) ? $display_full_title : 'yes';
+$ribbon                     = ! empty( $ribbon ) ? $ribbon : 'discount';
+$header                     = ! empty( $header ) ? $header : 'center';
+$total_products_label       = ( ! empty( $layout ) && 'grid' == $layout ) ? __( "Products Per Page",WCPCSU_TEXTDOMAIN ) : __("Total Products to Display",WCPCSU_TEXTDOMAIN );
 $theme                      = ! empty( $theme ) ? $theme : 'theme_1';
 $display_sale_ribbon        = ! empty( $display_sale_ribbon ) ? $display_sale_ribbon : 'no';
 $sale_ribbon_position       = ! empty( $sale_ribbon_position ) ? $sale_ribbon_position : 'top_left';
@@ -26,19 +27,19 @@ $discount_ribbon_position   = ! empty( $discount_ribbon_position ) ? $discount_r
                 </div>
                 <div class="cmb-td">
                     <div class="cmd-switch">
-                        <div class="cmd-switch-carousel <?php echo ( empty( $layout ) || 'carousel' == $layout ) ? 'active' : ''; ?>">
+                        <div class="cmd-switch-carousel <?php echo ( 'carousel' == $layout ) ? 'active' : ''; ?>">
                             <div class="cmd-switch-item cmd-switch-carousel-img" data-value="carousel">
                                 <span class="cmd-switch-item-icon"><i class="fas fa-check-square"></i></span>
                                 <img src="<?php echo WCPCSU_URL .'admin/img/carousel.jpg' ?>" alt="carousel">
-                                <input type="radio" name="wcpscu[layout]" class="wcpscu_radio_layout wcpscu_carousel_layout" value="carousel" <?php echo ( empty( $layout ) || 'carousel' == $layout ) ? 'checked' : ''; ?>>
+                                <input type="radio" name="wcpscu[layout]" class="wcpscu_radio_layout wcpscu_carousel_layout" value="carousel" <?php checked( $layout, 'carousel' ); ?>>
                             </div>
                             <p><?php _e( 'Carousel', WCPCSU_TEXTDOMAIN );?></p>
                         </div>
-                        <div class="cmd-switch-grid <?php echo ( ! empty( $layout ) && 'grid' == $layout ) ? 'active' : ''; ?>">
+                        <div class="cmd-switch-grid <?php echo ( 'grid' == $layout ) ? 'active' : ''; ?>">
                             <div class=" cmd-switch-item cmd-switch-grid-img" data-value="grid">
                                 <span class="cmd-switch-item-icon"><i class="fas fa-check-square"></i></span>
                                 <img src="<?php echo WCPCSU_URL .'admin/img/grid.jpg' ?>" alt="grid">
-                                <input type="radio" name="wcpscu[layout]" class="wcpscu_radio_layout wcpscu_grid_layout" value="grid" <?php echo ( empty( $layout ) || 'carousel' == $layout ) ? 'checked' : ''; ?>>
+                                <input type="radio" name="wcpscu[layout]" class="wcpscu_radio_layout wcpscu_grid_layout" value="grid" <?php checked( $layout, 'grid' ); ?>>
                             </div>
                             <p><?php _e( 'Grid', WCPCSU_TEXTDOMAIN );?></p>
                         </div>
@@ -554,7 +555,7 @@ $discount_ribbon_position   = ! empty( $discount_ribbon_position ) ? $discount_r
                 </div>
             </div>
             <!--Display "Quick View" button-->
-            <div class="cmb-row cmb-type-radio">
+            <div class="cmb-row cmb-type-radio theme_2">
                 <div class="cmb-th">
                     <label
                         for="wcpscu_quick_view"><?php esc_html_e('Display "Quick View Icon"', WCPCSU_TEXTDOMAIN); ?></label>

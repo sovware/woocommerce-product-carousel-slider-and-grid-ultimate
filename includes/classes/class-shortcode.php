@@ -39,7 +39,7 @@ class wcpcsu_Shortcode
         $h_title_show            = ! empty( $h_title_show ) ? $h_title_show : 'no';
         $display_full_title      = ! empty( $display_full_title ) ? $display_full_title : 'no';
         $g_column                = ! empty( $g_column ) ? intval( $g_column ) : 3;
-        $g_tablet                = ! empty( $g_tablet ) ? intval( $g_tablet ) : 3;
+        $g_tablet                = ! empty( $g_tablet ) ? intval( $g_tablet ) : 2;
         $g_mobile                = ! empty( $g_mobile ) ? intval( $g_mobile ) : 1;
         $grid_pagination         = ! empty( $grid_pagination ) ? $grid_pagination : 'no';
         $slide_time              = ! empty( $slide_time )  ? $slide_time : '2000' ;
@@ -163,7 +163,9 @@ class wcpcsu_Shortcode
         data-wpcu-loop="<?php echo $repeat_product; ?>"
         data-wpcu-perslide="1"
         data-wpcu-speed="300"
-        data-wpcu-autoplay='{
+        data-wpcu-autoplay='
+        <?php if( 'yes' == $A_play ) { ?>
+        {
             "delay": "3000",
             "pauseOnMouseEnter": true,
             "disableOnInteraction": false}'
@@ -174,7 +176,7 @@ class wcpcsu_Shortcode
             "1199": {"slidesPerView": "<?php echo $carousel_desktop_column; ?>", "spaceBetween": "30"}}'
         <?php } ?>
         >
-        <div class="<?php echo ( 'carousel' == $layout ) ? 'swiper-wrapper' : 'wpcu-row wpcu-column-5 wpcu-column-md-2 wpcu-column-sm-1'; ?>">
+        <div class="<?php echo ( 'carousel' == $layout ) ? 'swiper-wrapper' : 'wpcu-row wpcu-column-' . $g_column . ' wpcu-column-md-' . $g_tablet . ' wpcu-column-sm-' . $g_mobile . ''; ?>">
         <?php
             while($loop->have_posts()) : $loop->the_post();
             global $post,$product;
