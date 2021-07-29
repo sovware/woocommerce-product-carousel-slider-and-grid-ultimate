@@ -905,7 +905,20 @@
 }
 .wpcu-pagination .pagination .nav-links .page-numbers{
   color: #333;
-  margin: 0;
+  margin: 5px;
+  font-size: 14px;
+  text-decoration: none;
+  border: 1px solid #e4e4ed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background: #fff;
+  width: 34px;
+  min-width: 34px;
+  height: 34px;
+  min-height: 34px;
+  border-radius: 3px;
 }
 .wpcu-pagination{}
 .wpcu-pagination{}
