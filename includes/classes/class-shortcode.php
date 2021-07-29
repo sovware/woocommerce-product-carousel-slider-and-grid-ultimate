@@ -168,8 +168,8 @@ class wcpcsu_Shortcode
         <?php if( 'yes' == $A_play ) { ?>
         {
             "delay": "3000",
-            "pauseOnMouseEnter": true,
-            "disableOnInteraction": false
+            "pauseOnMouseEnter": "true",
+            "disableOnInteraction": "false"
         }
         <?php } else { ?>
         false
