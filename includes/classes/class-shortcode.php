@@ -16,11 +16,13 @@ class wcpcsu_Shortcode
         $atts = shortcode_atts( array(
             'id'    =>  ''
         ), $atts );
-        $post_id = $atts['id'];
+        $post_id =  ! empty( $atts['id'] ) ? $atts['id'] : '';
         $this->wcpcsu_style_files();
         // get the array of data from the post meta
         $enc_data = get_post_meta( $post_id, 'wcpscu', true );
         $data_array = Woocmmerce_Product_carousel_slider_ultimate::unserialize_and_decode24( $enc_data );
+
+
         $value = is_array( $data_array ) ? $data_array : array();
         extract( $value );
         $rand_id                 = rand();
@@ -82,54 +84,9 @@ class wcpcsu_Shortcode
 
         $paged                          =  wcpcsu_get_paged_num();
         $paged                          = ! empty( $paged ) ? $paged : '';
-        $common_args = array(
-            'post_type'      => 'product',
-            'posts_per_page' => ! empty( $total_products ) ? intval( $total_products ) : 12,
-            'post_status'    => 'publish',
-            'meta_query'     => array(
-                array(
-                    'key'       => '_stock_status',
-                    'value'     => 'outofstock',
-                    'compare'   => 'NOT IN'
-                )
-            )
-        );
-        if( 'grid' == $layout && 'yes' == $grid_pagination ) {
-            $common_args['paged']    = $paged;
-        }
-        if( $products_type == "latest" ) {
-            $args = $common_args;
-        }
-        elseif( $products_type == "older" ) {
-            $older_args = array(
-                'orderby'     => 'date',
-                'order'       => 'ASC'
-            );
-            $args = array_merge( $common_args, $older_args );
-        }
-        elseif( $products_type == "featured" ) {
-            $meta_query  = WC()->query->get_meta_query();
-            $tax_query   = WC()->query->get_tax_query();
+        $loop                           = $this->parse_query( $data_array );
 
-            $tax_query[] = array(
-                'taxonomy' => 'product_visibility',
-                'field'    => 'name',
-                'terms'    => 'featured',
-                'operator' => 'IN',
-            );
-            $featured_args = array(
-                'meta_query' => $meta_query,
-                'tax_query' => $tax_query,
-            );
-            $args = array_merge( $common_args, $featured_args );
-        }
-
-        else {
-            $args = $common_args;
-        }
-        $loop = new WP_Query( $args );
-
-       
+        // carousel settings
         $A_play                     = ! empty( $A_play ) ? $A_play : 'yes';
         $repeat_product             = ! empty( $repeat_product ) ? $repeat_product : 'yes';
         $stop_hover                 = ! empty( $stop_hover ) ? $stop_hover : 'yes';
@@ -137,6 +94,20 @@ class wcpcsu_Shortcode
         $carousel_laptop_column     = ! empty( $c_desktop_small ) ? $c_desktop_small : 3;
         $carousel_tablet_column     = ! empty( $c_tablet ) ? $c_tablet : 2;
         $carousel_mobile_column     = ! empty( $c_mobile ) ? $c_mobile : 1;
+
+        //grid pagination settings
+        $pagi_color                     = ! empty( $pagi_color ) ? $pagi_color : '#9192a3';
+        $pagi_border_color              = ! empty( $pagi_border_color ) ? $pagi_border_color : '#9192a3';
+        $pagi_back_color                = ! empty( $pagi_back_color ) ? $pagi_back_color : '#9192a3';
+
+        $pagi_hover_color               = ! empty( $pagi_hover_color ) ? $pagi_hover_color : '#9192a3';
+        $pagi_hover_border_color        = ! empty( $pagi_hover_border_color ) ? $pagi_hover_border_color : '#9192a3';
+        $pagi_hover_back_color          = ! empty( $pagi_hover_back_color ) ? $pagi_hover_back_color : '#9192a3';
+
+        $pagi_active_color                = ! empty( $pagi_active_color ) ? $pagi_active_color : '#9192a3';
+        $pagi_active_border_color               = ! empty( $pagi_active_border_color ) ? $pagi_active_border_color : '#9192a3';
+        $pagi_active_back_color        = ! empty( $pagi_active_back_color ) ? $pagi_active_back_color : '#9192a3';
+
 
         if( $loop->have_posts() ) { ?>
         <div
@@ -221,6 +192,61 @@ class wcpcsu_Shortcode
         }
 
         return ob_get_clean();
+    }
+
+    public function parse_query( $data_array ) {
+        $value = is_array( $data_array ) ? $data_array : array();
+        extract( $value );
+        $paged                          =  wcpcsu_get_paged_num();
+        $paged                          = ! empty( $paged ) ? $paged : '';
+        $common_args = array(
+            'post_type'      => 'product',
+            'posts_per_page' => ! empty( $total_products ) ? intval( $total_products ) : 12,
+            'post_status'    => 'publish',
+            'meta_query'     => array(
+                array(
+                    'key'       => '_stock_status',
+                    'value'     => 'outofstock',
+                    'compare'   => 'NOT IN'
+                )
+            )
+        );
+        if( 'grid' == $layout && 'yes' == $grid_pagination ) {
+            $common_args['paged']    = $paged;
+        }
+        if( $products_type == "latest" ) {
+            $args = $common_args;
+        }
+        elseif( $products_type == "older" ) {
+            $older_args = array(
+                'orderby'     => 'date',
+                'order'       => 'ASC'
+            );
+            $args = array_merge( $common_args, $older_args );
+        }
+        elseif( $products_type == "featured" ) {
+            $meta_query  = WC()->query->get_meta_query();
+            $tax_query   = WC()->query->get_tax_query();
+
+            $tax_query[] = array(
+                'taxonomy' => 'product_visibility',
+                'field'    => 'name',
+                'terms'    => 'featured',
+                'operator' => 'IN',
+            );
+            $featured_args = array(
+                'meta_query' => $meta_query,
+                'tax_query' => $tax_query,
+            );
+            $args = array_merge( $common_args, $featured_args );
+        }
+
+        else {
+            $args = $common_args;
+        }
+        $loop = new WP_Query( $args );
+
+        return $loop;
     }
 
     function aazz_show_discount_percentage() {
