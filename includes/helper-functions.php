@@ -11,15 +11,15 @@ if (!function_exists('wcpcsu_pagination')) {
     {
         $navigation = '';
         $largeNumber = 999999999; // we need a large number here
-        $links = paginate_links(array(
-            'base' => str_replace($largeNumber, '%#%', esc_url(get_pagenum_link($largeNumber))),
+        $links = paginate_links( array(
+            'base' => str_replace( $largeNumber, '%#%', esc_url( get_pagenum_link( $largeNumber ) ) ),
             'format' => '?paged=%#%',
-            'current' => max(1, $paged),
+            'current' => max( 1, $paged ),
             'total' => $custom_post_query->max_num_pages,
             'prev_text' => apply_filters('wcpcsu_pagination_prev_text', '<img src="' .  WCPCSU_URL . 'assets/icons/arrow-left.svg" alt="" class="wpcu-svg">'),
             'next_text' => apply_filters('wcpcsu_pagination_next_text', '<img src="' .  WCPCSU_URL . 'assets/icons/arrow-right.svg" alt="" class="wpcu-svg">'),
-        ));
-        if ($links) {
+        ) );
+        if( $links ) {
             $navigation = _navigation_markup($links, 'pagination', ' ');
         }
         return apply_filters('wcpcsu_pagination', $navigation, $links, $custom_post_query, $paged);
