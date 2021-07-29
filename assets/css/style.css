@@ -8,8 +8,8 @@
 /* These codes need to be placed in scss files before compile it again */
 :root{
   /* Grid/Carousel Header */
-  --headerFontSize: inherit;
-  --headerFontColor: inherit;
+  --headerFontSize: 24px;
+  --headerFontColor: #000;
   /* Product Title */
   --productTitleSize: 16px;
   --productTitleColor: #363940;
@@ -30,6 +30,23 @@
   /* Quick view icon */
   --qvIconColor: #fff;
   --qvBgColor: #ff5500;
+  /* Navigaiton */
+  --navArrowColor: #333;
+  --navArrowColorHover: #fff;
+  --navBgColor: #fff;
+  --navBgColorHover: #ff5500;
+  --navBorderColor: #e4e4ed;
+  --navBorderColorHover: #ff5500;
+  /* Pagination */
+  --pagColor: red;
+  --pagColorHover: red;
+  --pagBorderColor: red;
+  --pagBorderColorHover: red;
+  --pagBgColor: red;
+  --pagBgColorHover: red;
+  --pagActiveColor: red;
+  --pagActiveBorderColor: red;
+  --pagActiveBgColor: red;
 }
 
 /* Import font */
@@ -86,7 +103,7 @@
 .wpcu-carousel-nav__btn {
   width: 40px;
   height: 40px;
-  border: 1px solid #e4e4ed;
+  border: 1px solid var(--navBorderColor);
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -101,17 +118,18 @@
   -webkit-transition: 0.3s ease;
   -o-transition: 0.3s ease;
   transition: 0.3s ease;
-  background: #fff;
+  background: var(--navBgColor);
 }
 .wpcu-carousel-nav__btn svg {
   width: 6px;
+  fill: var(--navArrowColor);
 }
 .wpcu-carousel-nav__btn:hover {
-  border-color: #ff5500;
-  background: #ff5500;
+  border-color: var(--navBorderColorHover);
+  background: var(--navBgColorHover);
 }
 .wpcu-carousel-nav__btn:hover svg {
-  fill: #fff !important;
+  fill: var(--navArrowColorHover) !important;
 }
 .wpcu-carousel-nav--circle .wpcu-carousel-nav__btn {
   border-radius: 50%;
@@ -335,10 +353,11 @@
   margin: 0;
   display: inline-block;
 }
-.wpcu-button .button {
+.wpcu-button .button,
+.wpcu-button .added_to_cart {
   min-height: 40px;
-  background: var(--buttonBgColor);
-  color: var(--buttonColor);
+  background: var(--buttonBgColor) !important;
+  color: var(--buttonColor) !important;
   border-radius: 0;
   text-transform: uppercase;
   font-size: 12px;
@@ -358,29 +377,35 @@
   transition: 0.3s ease;
   border: 1px solid transparent;
 }
-.wpcu-button .button:hover {
+.wpcu-button .button:hover,
+.wpcu-button .added_to_cart:hover {
   text-decoration: none !important;
-  background: var(--buttonBgColorHover);
-  color: var(--buttonColorHover);
+  background: var(--buttonBgColorHover) !important;
+  color: var(--buttonColorHover) !important;
 }
-.wpcu-button--outlined .button {
+.wpcu-button--outlined .button,
+.wpcu-button--outlined .added_to_cart {
   border: 1px solid #e4e4ed;
-  background: none;
+  background: #fff !important;
   color: #9192a3 !important;
 }
-.wpcu-button--outlined .button:hover {
-  color: #fff !important;
-  background: #ff5500;
-  border-color: #ff5500;
+.wpcu-button--outlined .button:hover,
+.wpcu-button--outlined .added_to_cart:hover {
+  color: var(--buttonColor) !important;
+  background: var(--buttonBgColorHover) !important;
+  border-color: var(--buttonBgColorHover) !important;
 }
-.wpcu-button--sm .button {
+.wpcu-button--sm .button,
+.wpcu-button--sm .added_to_cart {
   min-height: 35px;
   padding: 0 12px;
 }
-.wpcu-button--rounded .button {
+.wpcu-button--rounded .button,
+.wpcu-button--rounded .added_to_cart {
   border-radius: 3px;
 }
-.wpcu-button--rounded-circle .button {
+.wpcu-button--rounded-circle .button,
+.wpcu-button--rounded-circle .added_to_cart {
   border-radius: 20px;
 }
 .wpcu-button--icon-circle a {
@@ -413,6 +438,11 @@
   border-color: #ff5500;
   background: #ff5500;
 }
+/* Button tweaks */
+.wpcu-button .button.added{
+  display: none;
+}
+
 
 /* Badges */
 .wpcu-badge {
@@ -844,3 +874,38 @@
 .wpcu-modal .wpcu-modal__product-action p a.added{
   display: none;
 }
+
+/* Header style */
+.wpcu-products__header{
+  margin-bottom: 30px;
+}
+.wpcu-products__header.wpcu-products__header--middle{
+  text-align: center;
+}
+.wpcu-products__header.wpcu-products__header--right{
+  text-align: right;
+}
+.wpcu-products__header h2{
+  font-size: var(--headerFontSize);
+  color: var(--headerFontColor);
+  font-weight: 500;
+}
+
+/* Pagination style */
+.wpcu-pagination{}
+.wpcu-pagination .pagination{
+  margin: 0;
+  padding: 0;
+  border: 0 none;
+  width: 100%;
+  max-width: 100%;
+}
+.wpcu-pagination .pagination .nav-links{
+  margin: 30px 0 0 0;
+}
+.wpcu-pagination .pagination .nav-links .page-numbers{
+  color: #333;
+  margin: 0;
+}
+.wpcu-pagination{}
+.wpcu-pagination{}

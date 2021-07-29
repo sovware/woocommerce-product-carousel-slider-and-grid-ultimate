@@ -96,7 +96,7 @@ if ( ! function_exists('wpcsu_ribbon_badge') ) :
         global $product;
         $value = is_array( $ribbon_args ) ? $ribbon_args : array();
         extract( $value );
-        
+
 
         if( ( 'yes' == $display_sale_ribbon && 'top_left' == $sale_ribbon_position && $product->is_on_sale() ) || ( 'yes' == $display_featured_ribbon && 'top_left' == $featured_ribbon_position && $product->is_featured() ) || ( 'yes' == $display_sold_out_ribbon && 'top_left' == $sold_out_ribbon_position && ! $product->is_in_stock() ) || ( 'yes' == $display_discount_ribbon && 'top_left' == $discount_ribbon_position && $product->get_sale_price() ) ) { ?>
             <div class="wpcu-product__cover-content wpcu-product__cover-content--top-left">
@@ -116,10 +116,10 @@ if ( ! function_exists('wpcsu_ribbon_badge') ) :
                 <?php if( 'yes' == $display_discount_ribbon && 'top_left' == $discount_ribbon_position && $product->get_sale_price() ) { ?>
                 <span class="wpcu-badge wpcu-badge--primary wpcu-badge--text-lg wpcu-badge--rounded-circle"><?php echo ! empty( $discount ) ? '-'.$discount : ''; ?></span>
                 <?php } ?>
-                
+
             </div>
             <?php } ?>
-            
+
             <?php if( ( 'yes' == $display_sale_ribbon && 'top_right' == $sale_ribbon_position && $product->is_on_sale() ) || ( 'yes' == $display_featured_ribbon && 'top_right' == $featured_ribbon_position && $product->is_featured() ) || ( 'yes' == $display_sold_out_ribbon && 'top_right' == $sold_out_ribbon_position && ! $product->is_in_stock() ) || ( 'yes' == $display_discount_ribbon && 'top_right' == $discount_ribbon_position ) && $product->get_sale_price() ) { ?>
             <div class="wpcu-product__cover-content wpcu-product__cover-content--top-right">
 
@@ -138,7 +138,7 @@ if ( ! function_exists('wpcsu_ribbon_badge') ) :
                 <?php if( 'yes' == $display_discount_ribbon && 'top_right' == $discount_ribbon_position && $product->get_sale_price() ) { ?>
                 <span class="wpcu-badge wpcu-badge--primary wpcu-badge--text-lg wpcu-badge--rounded-circle"><?php echo ! empty( $discount ) ? '-'.$discount : ''; ?></span>
                 <?php } ?>
-                
+
             </div>
             <?php } ?>
 
@@ -160,7 +160,7 @@ if ( ! function_exists('wpcsu_ribbon_badge') ) :
                 <?php if( 'yes' == $display_discount_ribbon && 'bottom_left' == $discount_ribbon_position && $product->get_sale_price() ) { ?>
                 <span class="wpcu-badge wpcu-badge--primary wpcu-badge--text-lg wpcu-badge--rounded-circle"><?php echo ! empty( $discount ) ? '-'.$discount : ''; ?></span>
                 <?php } ?>
-                
+
             </div>
             <?php } ?>
 
@@ -182,10 +182,10 @@ if ( ! function_exists('wpcsu_ribbon_badge') ) :
                 <?php if( 'yes' == $display_discount_ribbon && 'bottom_right' == $discount_ribbon_position && $product->get_sale_price() ) { ?>
                 <span class="wpcu-badge wpcu-badge--primary wpcu-badge--text-lg wpcu-badge--rounded-circle"><?php echo ! empty( $discount ) ? '-'.$discount : ''; ?></span>
                 <?php } ?>
-                
+
             </div>
-            <?php } 
-        
+            <?php }
+
 
     }
 endif;
