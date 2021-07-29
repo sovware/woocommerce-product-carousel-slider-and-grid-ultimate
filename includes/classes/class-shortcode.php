@@ -200,9 +200,6 @@ class wcpcsu_Shortcode
 
             endwhile;
             wp_reset_postdata();
-            if( 'theme_2' == $theme ){
-                include WCPCSU_INC_DIR . 'template/quick-view.php';
-            }
             ?>
 
             </div>
@@ -210,6 +207,11 @@ class wcpcsu_Shortcode
                 include WCPCSU_INC_DIR . 'template/navigation.php';
              } ?>
         </div><!-- ends: .wpcu-products -->
+        <?php
+            if( 'theme_2' == $theme ){
+                include WCPCSU_INC_DIR . 'template/quick-view.php';
+            }
+        ?>
         <?php
         }else{
             _e('No products found', WCPCSU_TEXTDOMAIN);
