@@ -81,6 +81,7 @@ class wcpcsu_Shortcode
         $quick_view_icon_back_color     = ! empty( $quick_view_icon_back_color[$theme] ) ? $quick_view_icon_back_color[$theme] : '#ff5500';
 
         $paged                          =  wcpcsu_get_paged_num();
+        $paged                          = ! empty( $paged ) ? $paged : '';
         $common_args = array(
             'post_type'      => 'product',
             'posts_per_page' => ! empty( $total_products ) ? intval( $total_products ) : 12,
@@ -210,6 +211,9 @@ class wcpcsu_Shortcode
             <?php if( 'carousel' == $layout ) { 
                 include WCPCSU_INC_DIR . 'template/navigation.php';
              } ?>    
+             <?php if( 'grid' == $layout && 'yes' == $grid_pagination ) { 
+                include WCPCSU_INC_DIR . 'template/pagination.php';
+             } ?>
         </div><!-- ends: .wpcu-products -->
         <?php
         }else{
