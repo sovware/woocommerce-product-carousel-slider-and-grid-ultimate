@@ -243,42 +243,42 @@ $nav_position    = ! empty( $nav_position ) ? $nav_position : 'bottom_right';
                                 <?php esc_html_e('Navigation Arrow Color', WCPCSU_TEXTDOMAIN); ?>
                             </label>
                             <input type="text" name="wcpscu[nav_arrow_color]" class="cpa-color-picker"
-                                value="<?php if(empty($nav_arrow_color)) { echo "#9192a3";}else{ echo $nav_arrow_color;}?>" />
+                                value="<?php echo ! empty( $nav_arrow_color ) ? $nav_arrow_color : '#333'; ?>" />
                         </div>
                         <div class="cmb-navigation-item">
                             <label for="wcpscu[nav_back_color]">
                                 <?php esc_html_e('Navigation Background Color', WCPCSU_TEXTDOMAIN); ?>
                             </label>
                             <input type="text" name="wcpscu[nav_back_color]" class="cpa-color-picker"
-                                value="<?php if(!empty($nav_back_color)) { echo $nav_back_color ;}else{ echo "#fff" ;}?>" />
+                                value="<?php echo ! empty( $nav_back_color ) ? $nav_back_color : '#fff'; ?>" />
                         </div>
                         <div class="cmb-navigation-item">
                             <label for="wcpscu[nav_border_color]">
                                 <?php esc_html_e('Navigation Border Color', WCPCSU_TEXTDOMAIN); ?>
                             </label>
                             <input type="text" name="wcpscu[nav_border_color]" class="cpa-color-picker"
-                                value="<?php if(!empty($nav_border_color)) { echo $nav_border_color ;}else{ echo "#e4e4ed" ;}?>" />
+                                value="<?php echo ! empty( $nav_border_color ) ? $nav_border_color : '#e4e4ed'; ?>" />
                         </div>
                         <div class="cmb-navigation-item">
                             <label for="wcpscu[nav_arrow_hover_color]">
                                 <?php esc_html_e('Navigation Hover Arrow Color', WCPCSU_TEXTDOMAIN); ?>
                             </label>
                             <input type="text" name="wcpscu[nav_arrow_hover_color]" class="cpa-color-picker"
-                                value="<?php if(empty($nav_arrow_hover_color)) { echo "#9192a3";}else{ echo $nav_arrow_hover_color;}?>" />
+                                value="<?php echo ! empty( $nav_arrow_hover_color ) ? $nav_arrow_hover_color : '#fff'; ?>" />
                         </div>
                         <div class="cmb-navigation-item">
                             <label for="wcpscu[nav_back_hover_color]">
                                 <?php esc_html_e('Navigaiton Hover Background Color', WCPCSU_TEXTDOMAIN); ?>
                             </label>
                             <input type="text" name="wcpscu[nav_back_hover_color]" class="cpa-color-picker"
-                                value="<?php if(empty($nav_back_hover_color)) { echo "#ffffff";}else{ echo $nav_back_hover_color;}?>" />
+                                value="<?php echo ! empty( $nav_back_hover_color ) ? $nav_back_hover_color : '#ff5500'; ?>" />
                         </div>
                         <div class="cmb-navigation-item">
                             <label for="wcpscu[nav_border_hover]">
                                 <?php esc_html_e('Navigaiton Hover Border Color', WCPCSU_TEXTDOMAIN); ?>
                             </label>
                             <input type="text" name="wcpscu[nav_border_hover]" class="cpa-color-picker"
-                                value="<?php if(empty($nav_border_hover)) { echo "#ff5500";}else{ echo $nav_border_hover;}?>" />
+                                value="<?php echo ! empty( $nav_border_hover ) ? $nav_border_hover : '#ff5500'; ?>" />
                         </div>
                     </div>
                 </div>

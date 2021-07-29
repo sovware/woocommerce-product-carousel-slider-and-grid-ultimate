@@ -1414,7 +1414,20 @@ h1.wpcs-admin-header{
     padding: 0 5px;
 }
 
-
+#sale_ribbon_text_wrapper label,
+#featured_ribbon_text_wrapper label,
+#discount_ribbon_text_wrapper label,
+#sold_out_ribbon_text_wrapper label{
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 25px;
+    color: #5A5F7D;
+    margin: 10px 0 4px;
+}
+#sale_ribbon_text_wrapper input{
+    margin: 0;
+}
 
 
 /* Responsive style */
