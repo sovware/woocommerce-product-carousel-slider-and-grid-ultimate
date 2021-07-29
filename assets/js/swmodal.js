@@ -3,6 +3,7 @@
   let wpcuModal = document.querySelector('.wpcu-modal-js');
   $( 'body' ).on( 'click', '.wpcu-btn-modal-js', function( e ) {
       e.preventDefault();
+      $('.wpcu-modal').addClass('wpcu-modal--loading');
       var data_target = $(this).attr("data-wpcu-target");
       var product_id  = $(this).attr("data-product-id");
       var nonce       = $(this).attr("data-nonce");
@@ -16,9 +17,10 @@
             nonce : nonce
         },
         success: function(html) {
+            $('.wpcu-modal').removeClass('wpcu-modal--loading');
             $('.wpcu-modal__body').empty().append(html);
         },
-    
+
     });
   });
 
