@@ -104,17 +104,17 @@ class wcpcsu_Shortcode
         $nav_back_hover_color       = ! empty( $nav_back_hover_color ) ? $nav_back_hover_color : '#ff5500';
         $nav_border_hover           = ! empty( $nav_border_hover ) ? $nav_border_hover : '#ff5500';
         //grid pagination settings
-        $pagi_color                 = ! empty( $pagi_color ) ? $pagi_color : '#9192a3';
-        $pagi_border_color          = ! empty( $pagi_border_color ) ? $pagi_border_color : '#9192a3';
-        $pagi_back_color            = ! empty( $pagi_back_color ) ? $pagi_back_color : '#9192a3';
+        $pagi_color                 = ! empty( $pagi_color ) ? $pagi_color : '#333';
+        $pagi_border_color          = ! empty( $pagi_border_color ) ? $pagi_border_color : '#e4e4e4';
+        $pagi_back_color            = ! empty( $pagi_back_color ) ? $pagi_back_color : '#fff';
 
-        $pagi_hover_color           = ! empty( $pagi_hover_color ) ? $pagi_hover_color : '#9192a3';
-        $pagi_hover_border_color    = ! empty( $pagi_hover_border_color ) ? $pagi_hover_border_color : '#9192a3';
-        $pagi_hover_back_color      = ! empty( $pagi_hover_back_color ) ? $pagi_hover_back_color : '#9192a3';
+        $pagi_hover_color           = ! empty( $pagi_hover_color ) ? $pagi_hover_color : '#fff';
+        $pagi_hover_border_color    = ! empty( $pagi_hover_border_color ) ? $pagi_hover_border_color : '#ff5500';
+        $pagi_hover_back_color      = ! empty( $pagi_hover_back_color ) ? $pagi_hover_back_color : '#ff5500';
 
-        $pagi_active_color          = ! empty( $pagi_active_color ) ? $pagi_active_color : '#9192a3';
-        $pagi_active_border_color   = ! empty( $pagi_active_border_color ) ? $pagi_active_border_color : '#9192a3';
-        $pagi_active_back_color     = ! empty( $pagi_active_back_color ) ? $pagi_active_back_color : '#9192a3';
+        $pagi_active_color          = ! empty( $pagi_active_color ) ? $pagi_active_color : '#fff';
+        $pagi_active_border_color   = ! empty( $pagi_active_border_color ) ? $pagi_active_border_color : '#ff5500';
+        $pagi_active_back_color     = ! empty( $pagi_active_back_color ) ? $pagi_active_back_color : '#ff5500';
 
 
         if( $loop->have_posts() ) { ?>

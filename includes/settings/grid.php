@@ -90,7 +90,7 @@ $grid_pagination          = !empty($grid_pagination) ? $grid_pagination : 'no';
                                 <?php esc_html_e('Pagination Color', WCPCSU_TEXTDOMAIN); ?>
                             </label>
                             <input type="text" name="wcpscu[pagi_color]" class="cpa-color-picker"
-                                value="<?php ! empty( $pagi_color ) ? $pagi_color : "#9192a3"; ?>" />
+                                value="<?php ! empty( $pagi_color ) ? $pagi_color : "#333"; ?>" />
                         </div>
                         
                     </div>
@@ -102,7 +102,7 @@ $grid_pagination          = !empty($grid_pagination) ? $grid_pagination : 'no';
                                 <?php esc_html_e('Pagination Border Color', WCPCSU_TEXTDOMAIN); ?>
                             </label>
                             <input type="text" name="wcpscu[pagi_border_color]" class="cpa-color-picker"
-                                value="<?php ! empty( $pagi_border_color ) ? $pagi_border_color : "#9192a3"; ?>" />
+                                value="<?php ! empty( $pagi_border_color ) ? $pagi_border_color : "#e4e4e4"; ?>" />
                         </div>
                         
                     </div>
@@ -114,7 +114,7 @@ $grid_pagination          = !empty($grid_pagination) ? $grid_pagination : 'no';
                                 <?php esc_html_e('Pagination Background Color', WCPCSU_TEXTDOMAIN); ?>
                             </label>
                             <input type="text" name="wcpscu[pagi_back_color]" class="cpa-color-picker"
-                                value="<?php ! empty( $pagi_back_color ) ? $pagi_back_color : "#9192a3"; ?>" />
+                                value="<?php ! empty( $pagi_back_color ) ? $pagi_back_color : "#fff"; ?>" />
                         </div>
                     </div>
                 </div>
@@ -125,7 +125,7 @@ $grid_pagination          = !empty($grid_pagination) ? $grid_pagination : 'no';
                                 <?php esc_html_e('Pagination Hover Color', WCPCSU_TEXTDOMAIN); ?>
                             </label>
                             <input type="text" name="wcpscu[pagi_hover_color]" class="cpa-color-picker"
-                                value="<?php ! empty( $pagi_hover_color ) ? $pagi_hover_color : "#9192a3"; ?>" />
+                                value="<?php ! empty( $pagi_hover_color ) ? $pagi_hover_color : "#fff"; ?>" />
                         </div>
                         
                     </div>
@@ -137,7 +137,7 @@ $grid_pagination          = !empty($grid_pagination) ? $grid_pagination : 'no';
                                 <?php esc_html_e('Pagination Hover Border Color', WCPCSU_TEXTDOMAIN); ?>
                             </label>
                             <input type="text" name="wcpscu[pagi_hover_border_color]" class="cpa-color-picker"
-                                value="<?php ! empty( $pagi_hover_border_color ) ? $pagi_hover_border_color : "#9192a3"; ?>" />
+                                value="<?php ! empty( $pagi_hover_border_color ) ? $pagi_hover_border_color : "#ff5500"; ?>" />
                         </div>
                         
                     </div>
@@ -149,7 +149,7 @@ $grid_pagination          = !empty($grid_pagination) ? $grid_pagination : 'no';
                                 <?php esc_html_e('Pagination Hover Background Color', WCPCSU_TEXTDOMAIN); ?>
                             </label>
                             <input type="text" name="wcpscu[pagi_hover_back_color]" class="cpa-color-picker"
-                                value="<?php ! empty( $pagi_hover_back_color ) ? $pagi_hover_back_color : "#9192a3"; ?>" />
+                                value="<?php ! empty( $pagi_hover_back_color ) ? $pagi_hover_back_color : "#ff5500"; ?>" />
                         </div>
                     </div>
                 </div>
@@ -162,7 +162,7 @@ $grid_pagination          = !empty($grid_pagination) ? $grid_pagination : 'no';
                                 <?php esc_html_e('Pagination Active Color', WCPCSU_TEXTDOMAIN); ?>
                             </label>
                             <input type="text" name="wcpscu[pagi_active_color]" class="cpa-color-picker"
-                                value="<?php ! empty( $pagi_active_color ) ? $pagi_active_color : "#9192a3"; ?>" />
+                                value="<?php ! empty( $pagi_active_color ) ? $pagi_active_color : "#fff"; ?>" />
                         </div>
                         
                     </div>
@@ -174,7 +174,7 @@ $grid_pagination          = !empty($grid_pagination) ? $grid_pagination : 'no';
                                 <?php esc_html_e('Pagination Active Border Color', WCPCSU_TEXTDOMAIN); ?>
                             </label>
                             <input type="text" name="wcpscu[pagi_active_border_color]" class="cpa-color-picker"
-                                value="<?php ! empty( $pagi_active_border_color ) ? $pagi_active_border_color : "#9192a3"; ?>" />
+                                value="<?php ! empty( $pagi_active_border_color ) ? $pagi_active_border_color : "#ff5500"; ?>" />
                         </div>
                         
                     </div>
@@ -186,7 +186,7 @@ $grid_pagination          = !empty($grid_pagination) ? $grid_pagination : 'no';
                                 <?php esc_html_e('Pagination Active Background Color', WCPCSU_TEXTDOMAIN); ?>
                             </label>
                             <input type="text" name="wcpscu[pagi_active_back_color]" class="cpa-color-picker"
-                                value="<?php ! empty( $pagi_active_back_color ) ? $pagi_active_back_color : "#9192a3"; ?>" />
+                                value="<?php ! empty( $pagi_active_back_color ) ? $pagi_active_back_color : "#ff5500"; ?>" />
                         </div>
                     </div>
                 </div>

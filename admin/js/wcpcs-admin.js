@@ -90,6 +90,21 @@ jQuery(document).ready(function ($) {
             $('.wpcu_navigation_depend').hide();
         }
     });
+
+    //caraousel pagination dependable
+    if( $("input[name='wcpscu[carousel_pagination]']:checked").val() === 'yes' ) {
+        $('.wpcu_carousel_pagination_depend').show();
+    } else {
+        $('.wpcu_carousel_pagination_depend').hide();
+    }
+
+    $('.wcpcu_carousel_pagination').on('click', function(){ 
+        if( $(this).val() === 'yes' ) {
+            $('.wpcu_carousel_pagination_depend').show();
+        } else {
+            $('.wpcu_carousel_pagination_depend').hide();
+        }
+    });
     
 
 });
