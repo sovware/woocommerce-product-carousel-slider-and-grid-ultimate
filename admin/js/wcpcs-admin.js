@@ -61,6 +61,7 @@ jQuery(document).ready(function ($) {
 
     $('.wcpscu_radio_layout').hide();
 
+    // autoplay dependable
     if( $("input[name='wcpscu[A_play]']:checked").val() === 'yes' ) {
         $('.wpcu_auto_play_depend').show();
     } else {
@@ -72,6 +73,21 @@ jQuery(document).ready(function ($) {
             $('.wpcu_auto_play_depend').show();
         } else {
             $('.wpcu_auto_play_depend').hide();
+        }
+    });
+
+    //navigation dependable
+    if( $("input[name='wcpscu[nav_show]']:checked").val() === 'yes' ) {
+        $('.wpcu_navigation_depend').show();
+    } else {
+        $('.wpcu_navigation_depend').hide();
+    }
+
+    $('.wcpcu_navigation').on('click', function(){ 
+        if( $(this).val() === 'yes' ) {
+            $('.wpcu_navigation_depend').show();
+        } else {
+            $('.wpcu_navigation_depend').hide();
         }
     });
     

@@ -193,14 +193,14 @@ $nav_position    = ! empty( $nav_position ) ? $nav_position : 'bottom_right';
                 <div class="cmb-td">
                     <ul class="cmb2-radio-list cmb2-list  cmb2-radio-switch">
                         <li>
-                            <input type="radio" class="cmb2-option  cmb2-radio-switch1" name="wcpscu[nav_show]"
+                            <input type="radio" class="cmb2-option wcpcu_navigation cmb2-radio-switch1" name="wcpscu[nav_show]"
                                 id="wcpscu[c10_nav]1" value="yes" <?php checked('yes', $nav_show, true);  ?>>
                             <label for="wcpscu[c10_nav]1">
                                 <?php esc_html_e('Yes', WCPCSU_TEXTDOMAIN); ?>
                             </label>
                         </li>
                         <li>
-                            <input type="radio" class="cmb2-option  cmb2-radio-switch2" name="wcpscu[nav_show]"
+                            <input type="radio" class="cmb2-option wcpcu_navigation cmb2-radio-switch2" name="wcpscu[nav_show]"
                                 id="wcpscu[c10_nav]2" value="no" <?php checked('no', $nav_show, true);  ?>>
                             <label for="wcpscu[c10_nav]2">
                                 <?php esc_html_e('No', WCPCSU_TEXTDOMAIN); ?>
@@ -209,7 +209,7 @@ $nav_position    = ! empty( $nav_position ) ? $nav_position : 'bottom_right';
                     </ul>
                 </div>
             </div>
-            <div class="cmb-row cmb-type-radio">
+            <div class="cmb-row cmb-type-radio wpcu_navigation_depend">
                 <div class="cmb-th">
                     <label for="lcsp_ap"><?php esc_html_e('Navigation Position', WCPCSU_TEXTDOMAIN); ?></label>
                 </div>
@@ -230,7 +230,7 @@ $nav_position    = ! empty( $nav_position ) ? $nav_position : 'bottom_right';
                 </div>
             </div>
             <!-- Navigation arrow color -->
-            <div class="cmb-row cmb-type-radio">
+            <div class="cmb-row cmb-type-radio wpcu_navigation_depend">
                 <div class="cmb-th">
                     <label for="wcpscu[nav_arrow_color]">
                         Navigation Style
