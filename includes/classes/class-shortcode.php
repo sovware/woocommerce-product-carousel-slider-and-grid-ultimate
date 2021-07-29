@@ -168,7 +168,12 @@ class wcpcsu_Shortcode
         {
             "delay": "3000",
             "pauseOnMouseEnter": true,
-            "disableOnInteraction": false}'
+            "disableOnInteraction": false
+        }
+        <?php } else { ?>
+        false
+        <?php } ?>
+        '
         data-wpcu-responsive='{
             "575": {"slidesPerView": "<?php echo $$carousel_mobile_column; ?>", "spaceBetween": "20"},
             "767": {"slidesPerView": "<?php echo $$carousel_tablet_column; ?>", "spaceBetween": "30"},
