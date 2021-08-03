@@ -18,3 +18,46 @@ $rating: #feb507;
 $borderColor: #e4e4ed;
 $textLight: #9192a3;
 $textDark: #000000;
+
+:root {
+    /* Grid/Carousel Header */
+    --headerFontSize: 24px;
+    --headerFontColor: #000;
+    /* Product Title */
+    --productTitleSize: 16px;
+    --productTitleColor: #363940;
+    --productTitleColorHover: #000;
+    /* Product Price */
+    --productPriceSize: 16px;
+    --productPriceColor: #ff5500;
+    /* Product Ratings */
+    --productRatingSize: 16px;
+    --productRatingColor: #feb507;
+    /* "Add to Cart" Button */
+    --buttonColor: #fff;
+    --buttonColorHover: #fff;
+    --buttonBgColor: #ff5500;
+    --buttonBgColorHover: #d54500;
+    /* Ribbon */
+    --ribbonBgColor: #ff5500;
+    /* Quick view icon */
+    --qvIconColor: #fff;
+    --qvBgColor: #ff5500;
+    /* Navigaiton */
+    --navArrowColor: #333;
+    --navArrowColorHover: #fff;
+    --navBgColor: #fff;
+    --navBgColorHover: #ff5500;
+    --navBorderColor: #e4e4ed;
+    --navBorderColorHover: #ff5500;
+    /* Pagination */
+    --pagColor: #333;
+    --pagColorHover: #fff;
+    --pagBorderColor: #e4e4e4;
+    --pagBorderColorHover: #ff5500;
+    --pagBgColor: #fff;
+    --pagBgColorHover: #ff5500;
+    --pagActiveColor: #fff;
+    --pagActiveBorderColor: #ff5500;
+    --pagActiveBgColor: #ff5500;
+}

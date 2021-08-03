@@ -1,0 +1,77 @@
+/*===========================
+ Pagination styles
+===========================*/
+.wpcu-pagination .pagination {
+    margin: 0;
+    padding: 0;
+    border: 0 none;
+    width: 100%;
+    max-width: 100%;
+}
+
+.wpcu-pagination .pagination .nav-links {
+    margin: 25px -5px -5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wpcu-pagination.wpcu-pagination--left .pagination .nav-links {
+    justify-content: flex-start;
+}
+
+.wpcu-pagination.wpcu-pagination--right .pagination .nav-links {
+    justify-content: flex-end;
+}
+
+.wpcu-pagination .pagination .nav-links .page-numbers {
+    color: var(--pagColor);
+    margin: 5px;
+    font-size: 14px;
+    text-decoration: none;
+    border: 1px solid var(--pagBorderColor);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    background: var(--pagBgColor);
+    width: 34px;
+    min-width: 34px;
+    height: 34px;
+    min-height: 34px;
+    border-radius: 3px;
+    transition: 0.3s ease;
+}
+
+.wpcu-pagination .pagination .nav-links .page-numbers svg {
+    fill: var(--pagColor);
+}
+
+.wpcu-pagination .pagination .nav-links .page-numbers:hover svg {
+    fill: var(--pagColorHover);
+}
+
+.wpcu-pagination .pagination .nav-links .page-numbers:hover {
+    background: var(--pagBgColorHover);
+    border-color: var(--pagBorderColorHover);
+    color: var(--pagColorHover);
+}
+
+.wpcu-pagination .pagination .nav-links .page-numbers.current {
+    background: var(--pagActiveBgColor);
+    border-color: var(--pagActiveBorderColor);
+    color: var(--pagActiveColor);
+}
+
+/* Carousel bullets pagination */
+.wpcu-carousel-pagination {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.wpcu-carousel-pagination .swiper-pagination-bullet-active {
+    background: #ff5500;
+}

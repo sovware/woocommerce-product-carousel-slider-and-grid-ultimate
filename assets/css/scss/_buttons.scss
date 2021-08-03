@@ -10,10 +10,11 @@
         display: inline-block;
     }
 
-    .button {
+    .button,
+    .added_to_cart {
         min-height: 40px;
-        background: $primary;
-        color: #fff;
+        background: var(--buttonBgColor) !important;
+        color: var(--buttonColor) !important;
         border-radius: 0;
         text-transform: uppercase;
         font-size: 12px;
@@ -27,37 +28,43 @@
 
         &:hover {
             text-decoration: none !important;
+            background: var(--buttonBgColorHover) !important;
+            color: var(--buttonColorHover) !important;
         }
     }
 
     @include m(outlined) {
-        .button {
+        .button,
+        .added_to_cart {
             border: 1px solid $borderColor;
-            background: none;
+            background: #fff !important;
             color: $textLight !important;
             &:hover{
-                color: #fff !important;
-                background: $primary;
-                border-color: $primary;
+                color: var(--buttonColor) !important;
+                background: var(--buttonBgColorHover) !important;
+                border-color: var(--buttonBgColorHover) !important;
             }
         }
     }
 
     @include m(sm) {
-        .button {
+        .button,
+        .added_to_cart {
             min-height: 35px;
             padding: 0 12px;
         }
     }
 
     @include m(rounded) {
-        .button {
+        .button,
+        .added_to_cart {
             border-radius: 3px;
         }
     }
 
     @include m(rounded-circle) {
-        .button {
+        .button,
+        .added_to_cart {
             border-radius: 20px;
         }
     }
@@ -70,11 +77,12 @@
             width: 40px;
             height: 40px;
             border-radius: 50%;
-            background: $primary;
+            background: var(--qvBgColor);
 
             svg {
                 width: 14px;
-                fill: #fff;
+                height: 14px;
+                fill: var(--qvIconColor);
             }
         }
     }
@@ -90,4 +98,8 @@
             }
         }
     }
+}
+/* Button tweaks */
+.wpcu-button .button.added{
+    display: none;
 }

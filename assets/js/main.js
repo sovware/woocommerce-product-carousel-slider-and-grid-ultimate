@@ -61,6 +61,11 @@
                 nextEl: '.wpcu-carousel-nav__btn--next',
                 prevEl: '.wpcu-carousel-nav__btn--prev',
             },
+            pagination: {
+                el: '.wpcu-carousel-pagination',
+                type: 'bullets',
+                clickable: true
+            },
             breakpoints: checkData(JSON.parse(el.dataset.wpcuResponsive), {})
         })
     });

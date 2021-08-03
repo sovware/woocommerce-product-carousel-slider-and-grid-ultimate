@@ -1,10 +1,20 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) die( 'Are you cheating??? Accessing this file directly is forbidden.' );
-$h_title_show         = !empty($h_title_show) ? $h_title_show : 'no';
-$display_full_title   = !empty($display_full_title) ? $display_full_title : 'yes';
-$ribbon = !empty($ribbon) ? $ribbon : 'discount';
-$header = !empty($header) ? $header : 'center';
-$total_products_label = (!empty($layout) && 'grid' == $layout) ? __("Products Per Page",WCPCSU_TEXTDOMAIN) : __("Total Products to Display",WCPCSU_TEXTDOMAIN);
+$layout                     = ! empty( $layout ) ? $layout : 'carousel';
+$h_title_show               = ! empty( $h_title_show ) ? $h_title_show : 'no';
+$display_full_title         = ! empty( $display_full_title ) ? $display_full_title : 'yes';
+$ribbon                     = ! empty( $ribbon ) ? $ribbon : 'discount';
+$header                     = ! empty( $header ) ? $header : 'center';
+$total_products_label       = ( ! empty( $layout ) && 'grid' == $layout ) ? __( "Products Per Page",WCPCSU_TEXTDOMAIN ) : __("Total Products to Display",WCPCSU_TEXTDOMAIN );
+$theme                      = ! empty( $theme ) ? $theme : 'theme_1';
+$display_sale_ribbon        = ! empty( $display_sale_ribbon ) ? $display_sale_ribbon : 'no';
+$sale_ribbon_position       = ! empty( $sale_ribbon_position ) ? $sale_ribbon_position : 'top_left';
+$display_featured_ribbon    = ! empty( $display_featured_ribbon ) ? $display_featured_ribbon : 'no';    
+$featured_ribbon_position   = ! empty( $featured_ribbon_position ) ? $featured_ribbon_position : 'top_right';
+$display_sold_out_ribbon    = ! empty( $display_sold_out_ribbon ) ? $display_sold_out_ribbon : 'no';
+$sold_out_ribbon_position   = ! empty( $sold_out_ribbon_position ) ? $sold_out_ribbon_position : 'bottom_left';
+$display_discount_ribbon    = ! empty( $display_discount_ribbon ) ? $display_discount_ribbon : 'no';
+$discount_ribbon_position   = ! empty( $discount_ribbon_position ) ? $discount_ribbon_position : 'bottom_right';
 ?>
 
 <div id="lcsp-tab-5" class="lcsp-tab-content" style="display:block">
@@ -17,37 +27,25 @@ $total_products_label = (!empty($layout) && 'grid' == $layout) ? __("Products Pe
                 </div>
                 <div class="cmb-td">
                     <div class="cmd-switch">
-                        <div class="cmd-switch-carousel <?php echo ( empty( $layout ) || 'carousel' == $layout ) ? 'active' : ''; ?>">
+                        <div class="cmd-switch-carousel <?php echo ( 'carousel' == $layout ) ? 'active' : ''; ?>">
                             <div class="cmd-switch-item cmd-switch-carousel-img" data-value="carousel">
                                 <span class="cmd-switch-item-icon"><i class="fas fa-check-square"></i></span>
                                 <img src="<?php echo WCPCSU_URL .'admin/img/carousel.jpg' ?>" alt="carousel">
-                                <input type="radio" name="wcpscu[layout]" class="wcpscu_radio_layout wcpscu_carousel_layout" value="carousel">
+                                <input type="radio" name="wcpscu[layout]" class="wcpscu_radio_layout wcpscu_carousel_layout" value="carousel" <?php checked( $layout, 'carousel' ); ?>>
                             </div>
                             <p><?php _e( 'Carousel', WCPCSU_TEXTDOMAIN );?></p>
                         </div>
-                        <div class="cmd-switch-grid <?php echo ( ! empty( $layout ) && 'grid' == $layout ) ? 'active' : ''; ?>">
+                        <div class="cmd-switch-grid <?php echo ( 'grid' == $layout ) ? 'active' : ''; ?>">
                             <div class=" cmd-switch-item cmd-switch-grid-img" data-value="grid">
                                 <span class="cmd-switch-item-icon"><i class="fas fa-check-square"></i></span>
                                 <img src="<?php echo WCPCSU_URL .'admin/img/grid.jpg' ?>" alt="grid">
-                                <input type="radio" name="wcpscu[layout]" class="wcpscu_radio_layout wcpscu_grid_layout" value="grid">
+                                <input type="radio" name="wcpscu[layout]" class="wcpscu_radio_layout wcpscu_grid_layout" value="grid" <?php checked( $layout, 'grid' ); ?>>
                             </div>
                             <p><?php _e( 'Grid', WCPCSU_TEXTDOMAIN );?></p>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- <div class="cmb-row cmb-type-text-medium">
-                <div class="cmb-th">
-                    <label for="lcsp_slider_title"><?php esc_html_e('Layout', WCPCSU_TEXTDOMAIN); ?></label>
-                </div>
-                <div class="cmb-td">
-                    <select name="wcpscu[layout]" id="lcg">
-                        <option value="carousel">Carousel</option>
-                        <option value="grid" <?php if(!empty($layout) && $layout == "grid"){ echo "selected";}?>>Grid
-                        </option>
-                    </select>
-                </div>
-            </div> -->
             <!--Select theme-->
             <div class="cmb-row cmb-type-radio">
                 <div class="cmb-th">
@@ -56,12 +54,10 @@ $total_products_label = (!empty($layout) && 'grid' == $layout) ? __("Products Pe
                 <div class="cmb-td">
                     <div class="cmb-theme-wrapper">
                         <select id="theme_" class="wcpscu_theme" name="wcpscu[theme]">
-                            <option value="theme_1">Theme-1</option>
-                            <option value="theme_2"
-                                <?php if(!empty($theme_) && $theme_ == "theme_2"){ echo "selected";}?>>Theme-2
+                            <option value="theme_1" <?php selected( $theme, 'theme_1'); ?> >Theme-1</option>
+                            <option value="theme_2" <?php selected( $theme, 'theme_2'); ?>>Theme-2
                             </option>
-                            <option value="theme_3"
-                                <?php if(!empty($theme_) && $theme_ == "theme_3"){ echo "selected";}?>>Theme-3
+                            <option value="theme_3" <?php selected( $theme, 'theme_3'); ?>>Theme-3
                             </option>
                             <option disabled>Theme-4 (Pro)</option>
                             <option disabled>Theme-5 (Pro)</option>
@@ -290,13 +286,13 @@ $total_products_label = (!empty($layout) && 'grid' == $layout) ? __("Products Pe
                     <ul class="cmb2-radio-list cmb2-list cmb2-radio-switch">
                         <li><input type="radio" class="cmb2-option cmb2-radio-switch1"
                                 name="wcpscu[display_sale_ribbon]" id="wcpscu_display_sale_ribbon1" value="yes"
-                                <?php if(empty($display_sale_ribbon) || 'yes' === $display_sale_ribbon) { echo 'checked'; } ?>>
+                                <?php checked( $display_sale_ribbon, 'yes' ); ?>>
                             <label
                                 for="wcpscu_display_sale_ribbon1"><?php esc_html_e('Yes', WCPCSU_TEXTDOMAIN); ?></label>
                         </li>
                         <li><input type="radio" class="cmb2-option cmb2-radio-switch2"
                                 name="wcpscu[display_sale_ribbon]" id="wcpscu_display_sale_ribbon2" value="no"
-                                <?php if (!empty($display_sale_ribbon)) { checked('no', $display_sale_ribbon); } ?>>
+                                <?php checked( $display_sale_ribbon, 'no' ); ?>>
                             <label
                                 for="wcpscu_display_sale_ribbon2"><?php esc_html_e('No', WCPCSU_TEXTDOMAIN); ?></label>
                         </li>
@@ -307,13 +303,29 @@ $total_products_label = (!empty($layout) && 'grid' == $layout) ? __("Products Pe
 
                     <!--Text for the sale ribbon-->
                     <div id="sale_ribbon_text_wrapper">
+                        <label for="wcpscu_sale_ribbon_text">
+                                <?php esc_html_e( 'Text', WCPCSU_TEXTDOMAIN ); ?>
+                            </label>
                         <input type="text" class="cmb2-text-medium" name="wcpscu[sale_ribbon_text]"
                             id="wcpscu_sale_ribbon_text"
                             value="<?php echo !empty($sale_ribbon_text) ?  $sale_ribbon_text : esc_html__('Sale!', WCPCSU_TEXTDOMAIN); ?>"
                             placeholder="e.g. Sale!">
-                        <p class="cmb2-metabox-description">
-                            <?php esc_html_e('Enter the text for the sale ribbon. Default text is "Sale!".', WCPCSU_TEXTDOMAIN); ?>
-                        </p>
+                    </div>
+
+                    <!--Position of sale ribbon -->
+                    <div id="sale_ribbon_text_wrapper">
+                        <label for="sale_ribbon_position">
+                                <?php esc_html_e( 'Position', WCPCSU_TEXTDOMAIN ); ?>
+                        </label>
+                        <select id="sale_ribbon_position" class="sale_ribbon_position" name="wcpscu[sale_ribbon_position]">
+                            <option value="top_left" <?php selected( $sale_ribbon_position, 'top_left'); ?> >Top Left</option>
+                            <option value="top_right" <?php selected( $sale_ribbon_position, 'top_right'); ?>>Top Right
+                            </option>
+                            <option value="bottom_left" <?php selected( $sale_ribbon_position, 'bottom_left'); ?>>Bottom Left
+                            </option>
+                            <option value="bottom_right" <?php selected( $sale_ribbon_position, 'bottom_right'); ?>>Bottom Right
+                            </option>
+                        </select>
                     </div>
 
                 </div>
@@ -324,20 +336,19 @@ $total_products_label = (!empty($layout) && 'grid' == $layout) ? __("Products Pe
             <!--Display "Featured" Ribbon-->
             <div class="cmb-row cmb-type-radio" id="feature_ribbon_wrapper">
                 <div class="cmb-th">
-                    <label
-                        for="wcpscu_display_featured_ribbon"><?php esc_html_e('Display "Featured" Badge', WCPCSU_TEXTDOMAIN); ?></label>
+                    <label for="wcpscu_display_featured_ribbon"><?php esc_html_e('Display "Featured" Badge', WCPCSU_TEXTDOMAIN); ?></label>
                 </div>
                 <div class="cmb-td">
                     <ul class="cmb2-radio-list cmb2-list cmb2-radio-switch">
                         <li><input type="radio" class="cmb2-option cmb2-radio-switch1"
                                 name="wcpscu[display_featured_ribbon]" id="wcpscu_display_featured_ribbon1" value="yes"
-                                <?php if(empty($display_featured_ribbon) || 'yes' === $display_featured_ribbon) { echo 'checked'; } ?>>
+                                <?php checked( $display_featured_ribbon, 'yes' ); ?>>
                             <label
                                 for="wcpscu_display_featured_ribbon1"><?php esc_html_e('Yes', WCPCSU_TEXTDOMAIN); ?></label>
                         </li>
                         <li><input type="radio" class="cmb2-option cmb2-radio-switch2"
                                 name="wcpscu[display_featured_ribbon]" id="wcpscu_display_featured_ribbon2" value="no"
-                                <?php if (!empty($display_featured_ribbon)) { checked('no', $display_featured_ribbon); } ?>>
+                                <?php checked( $display_featured_ribbon, 'no' ); ?>>
                             <label
                                 for="wcpscu_display_featured_ribbon2"><?php esc_html_e('No', WCPCSU_TEXTDOMAIN); ?></label>
                         </li>
@@ -355,6 +366,22 @@ $total_products_label = (!empty($layout) && 'grid' == $layout) ? __("Products Pe
                             <?php esc_html_e('Enter the text for the featured ribbon. Default text is "Featured!".', WCPCSU_TEXTDOMAIN); ?>
                         </p>
                     </div>
+
+                    <!--Position of Featured ribbon -->
+                    <div id="featured_ribbon_text_wrapper">
+                        <label for="featured_ribbon_position">
+                                <?php esc_html_e( 'Position', WCPCSU_TEXTDOMAIN ); ?>
+                        </label>
+                        <select id="featured_ribbon_position" class="featured_ribbon_position" name="wcpscu[featured_ribbon_position]">
+                            <option value="top_left" <?php selected( $featured_ribbon_position, 'top_left'); ?> >Top Left</option>
+                            <option value="top_right" <?php selected( $featured_ribbon_position, 'top_right'); ?>>Top Right
+                            </option>
+                            <option value="bottom_left" <?php selected( $featured_ribbon_position, 'bottom_left'); ?>>Bottom Left
+                            </option>
+                            <option value="bottom_right" <?php selected( $featured_ribbon_position, 'bottom_right'); ?>>Bottom Right
+                            </option>
+                        </select>
+                    </div>
                 </div>
             </div>
 
@@ -369,13 +396,13 @@ $total_products_label = (!empty($layout) && 'grid' == $layout) ? __("Products Pe
                     <ul class="cmb2-radio-list cmb2-list cmb2-radio-switch">
                         <li><input type="radio" class="cmb2-option cmb2-radio-switch1"
                                 name="wcpscu[display_sold_out_ribbon]" id="wcpscu_display_sold_out_ribbon1" value="yes"
-                                <?php if(empty($display_sold_out_ribbon) || 'yes' === $display_sold_out_ribbon) { echo 'checked'; } ?>>
+                                <?php checked( $display_sold_out_ribbon, 'yes' ); ?>>
                             <label
                                 for="wcpscu_display_sold_out_ribbon1"><?php esc_html_e('Yes', WCPCSU_TEXTDOMAIN); ?></label>
                         </li>
                         <li><input type="radio" class="cmb2-option cmb2-radio-switch2"
                                 name="wcpscu[display_sold_out_ribbon]" id="wcpscu_display_sold_out_ribbon2" value="no"
-                                <?php if (!empty($display_sold_out_ribbon)) { checked('no', $display_sold_out_ribbon); } ?>>
+                                <?php checked( $display_sold_out_ribbon, 'no' ); ?>>
                             <label
                                 for="wcpscu_display_sold_out_ribbon2"><?php esc_html_e('No', WCPCSU_TEXTDOMAIN); ?></label>
                         </li>
@@ -394,6 +421,66 @@ $total_products_label = (!empty($layout) && 'grid' == $layout) ? __("Products Pe
                         <p class="cmb2-metabox-description">
                             <?php esc_html_e('Enter the text for the sold out ribbon. Default text is "Sold Out!".', WCPCSU_TEXTDOMAIN); ?>
                         </p>
+                    </div>
+
+                    <!--Position of Featured ribbon -->
+                    <div id="sold_out_ribbon_text_wrapper">
+                        <label for="sold_out_ribbon_position">
+                                <?php esc_html_e( 'Position', WCPCSU_TEXTDOMAIN ); ?>
+                        </label>
+                        <select id="sold_out_ribbon_position" class="sold_out_ribbon_position" name="wcpscu[sold_out_ribbon_position]">
+                            <option value="top_left" <?php selected( $sold_out_ribbon_position, 'top_left'); ?> >Top Left</option>
+                            <option value="top_right" <?php selected( $sold_out_ribbon_position, 'top_right'); ?>>Top Right
+                            </option>
+                            <option value="bottom_left" <?php selected( $sold_out_ribbon_position, 'bottom_left'); ?>>Bottom Left
+                            </option>
+                            <option value="bottom_right" <?php selected( $sold_out_ribbon_position, 'bottom_right'); ?>>Bottom Right
+                            </option>
+                        </select>
+                    </div>
+
+                </div>
+            </div>
+
+            <!--Show ribbon for sold out products-->
+            <div class="cmb-row cmb-type-radio" id="discount_ribbon_wrapper">
+                <div class="cmb-th">
+                    <label
+                        for="wcpscu_display_discount_ribbon"><?php esc_html_e('Display the "Discount" Badge', WCPCSU_TEXTDOMAIN); ?></label>
+                </div>
+                <div class="cmb-td">
+                    <ul class="cmb2-radio-list cmb2-list cmb2-radio-switch">
+                        <li><input type="radio" class="cmb2-option cmb2-radio-switch1"
+                                name="wcpscu[display_discount_ribbon]" id="wcpscu_display_discount_ribbon1" value="yes"
+                                <?php checked( $display_discount_ribbon, 'yes' ); ?>>
+                            <label
+                                for="wcpscu_display_discount_ribbon1"><?php esc_html_e('Yes', WCPCSU_TEXTDOMAIN); ?></label>
+                        </li>
+                        <li><input type="radio" class="cmb2-option cmb2-radio-switch2"
+                                name="wcpscu[display_discount_ribbon]" id="wcpscu_display_discount_ribbon2" value="no"
+                                <?php checked( $display_discount_ribbon, 'no' ); ?>>
+                            <label
+                                for="wcpscu_display_discount_ribbon2"><?php esc_html_e('No', WCPCSU_TEXTDOMAIN); ?></label>
+                        </li>
+                    </ul>
+                    <!-- <p class="cmb2-metabox-description">
+                        <?php esc_html_e('Whether to display the "Sold Out" ribbon for out-of-stock products or not', WCPCSU_TEXTDOMAIN); ?>
+                    </p> -->
+
+                    <!--Position of Featured ribbon -->
+                    <div id="discount_ribbon_text_wrapper">
+                        <label for="discount_ribbon_position">
+                                <?php esc_html_e( 'Position', WCPCSU_TEXTDOMAIN ); ?>
+                        </label>
+                        <select id="discount_ribbon_position" class="discount_ribbon_position" name="wcpscu[discount_ribbon_position]">
+                            <option value="top_left" <?php selected( $discount_ribbon_position, 'top_left'); ?> >Top Left</option>
+                            <option value="top_right" <?php selected( $discount_ribbon_position, 'top_right'); ?>>Top Right
+                            </option>
+                            <option value="bottom_left" <?php selected( $discount_ribbon_position, 'bottom_left'); ?>>Bottom Left
+                            </option>
+                            <option value="bottom_right" <?php selected( $discount_ribbon_position, 'bottom_right'); ?>>Bottom Right
+                            </option>
+                        </select>
                     </div>
 
                 </div>
@@ -468,7 +555,7 @@ $total_products_label = (!empty($layout) && 'grid' == $layout) ? __("Products Pe
                 </div>
             </div>
             <!--Display "Quick View" button-->
-            <div class="cmb-row cmb-type-radio">
+            <div class="cmb-row cmb-type-radio theme_2">
                 <div class="cmb-th">
                     <label
                         for="wcpscu_quick_view"><?php esc_html_e('Display "Quick View Icon"', WCPCSU_TEXTDOMAIN); ?></label>
@@ -548,9 +635,6 @@ $total_products_label = (!empty($layout) && 'grid' == $layout) ? __("Products Pe
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="cmb2-save-setting">
-            <button type="button">Save Settings</button>
         </div>
     </div> <!-- end cmb2-metabox -->
 </div> <!-- end cmb2-wrap -->

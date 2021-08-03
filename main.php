@@ -162,6 +162,11 @@ Final class Woocmmerce_Product_carousel_slider_ultimate
         wp_register_script( 'wcpcsu-main-js', WCPCSU_URL . 'assets/js/main.js' );
         wp_register_script( 'wcpcsu-swmodal-js', WCPCSU_URL . 'assets/js/swmodal.js' );
         wp_register_script( 'wcpcsu-swiper-js', WCPCSU_URL . 'assets/js/swiper-bundle.min.js' );
+
+        wp_localize_script('wcpcsu-swmodal-js','wcpcsu_quick_view',array(
+            'ajax_url'           => admin_url( 'admin-ajax.php' ),
+    
+        ));
     }
 
     /**
@@ -191,5 +196,11 @@ function WCPCSU() {
 
 // Get WCPCSU ( Woocommerce Product Carousel Slider Ultimate plugin ) Running.
 WCPCSU();
+function wpcsu_image_cropping( $attachmentId, $width, $height, $crop = true, $quality = 100 )
+{
+    $resizer = new Wpcsu_Image_Resizer( $attachmentId );
+
+    return $resizer->resize( $width, $height, $crop, $quality );
+}
 
 

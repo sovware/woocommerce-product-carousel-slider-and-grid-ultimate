@@ -22,7 +22,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: calc(100% - 5rem);
   pointer-events: none;
 }
 
@@ -36,6 +35,9 @@
   pointer-events: auto;
   border-radius: 3px;
   position: relative;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .wpcu-modal__content .wpcu-modal__header {
@@ -53,8 +55,6 @@
   position: absolute;
   right: 15px;
   top: 10px;
-  line-height: 1.45;
-  padding: 6px;
   text-decoration: none;
 }
 
@@ -75,6 +75,10 @@
 
 .wpcu-modal__content .wpcu-modal__footer .wpcu-modal__action button {
   margin: 7.5px;
+}
+
+.wpcu-modal__dialog{
+  height: 550px;
 }
 
 .wpcu-modal__dialog.wpcu-modal--lg {
@@ -105,45 +109,38 @@
   opacity: 1;
   visibility: visible;
   transition: 0.3s ease;
+  pointer-events: all;
 }
 
 /* Responsive CSS */
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199.98px) {
-  .at-modal-content.at-modal-xl,
-  .at-modal-content.at-modal-lg,
-  .at-modal-content.at-modal-md,
-  .at-modal-content.at-modal-sm {
+  .wpcu-modal__dialog {
     width: calc(100% - 60px);
+    height: 500px;
   }
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991.98px) {
-  .at-modal-content.at-modal-xl,
-  .at-modal-content.at-modal-lg,
-  .at-modal-content.at-modal-md,
-  .at-modal-content.at-modal-sm {
+  .wpcu-modal__dialog {
     width: calc(100% - 60px);
+    height: 400px;
   }
 }
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) {
-  .at-modal-content.at-modal-xl,
-  .at-modal-content.at-modal-lg,
-  .at-modal-content.at-modal-md,
-  .at-modal-content.at-modal-sm {
+  .wpcu-modal__dialog {
     width: calc(100% - 60px);
+    height: 400px;
   }
 }
 
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
-  .at-modal-content.at-modal-xl,
-  .at-modal-content.at-modal-lg,
-  .at-modal-content.at-modal-md,
-  .at-modal-content.at-modal-sm {
+  .wpcu-modal__dialog {
     width: calc(100% - 30px);
+    height: 250px;
   }
 }

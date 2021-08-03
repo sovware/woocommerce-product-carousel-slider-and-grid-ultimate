@@ -11,25 +11,6 @@ jQuery(document).ready(function ($) {
     //color picker
     jQuery('.cpa-color-picker').wpColorPicker();
 
-    //Layout select
-    $("#lcg").change(function () {
-
-        if ($(this).val() === 'carousel') {
-            $("#tab2").css('display', 'block');
-            $("#tab3").css('display', 'none');
-            $("#wcpscu_total_pdt").html("Total Products to Display");
-        }
-
-
-
-        if ($(this).val() === 'grid') {
-            $("#tab2").css('display', 'none');
-            $("#tab3").css('display', 'block');
-            $("#wcpscu_total_pdt").html("Products Per Page");
-        }
-
-    });
-
 
     $('.cmd-switch > div').on('click', function (e) {
         e.preventDefault();
@@ -42,6 +23,7 @@ jQuery(document).ready(function ($) {
 
     $(".cmd-switch-carousel").on('click',function (e) {
         e.preventDefault();
+        $(".wcpscu_grid_layout").removeAttr('checked');
         $(".wcpscu_carousel_layout").attr('checked', true);
         $("#tab2").css('display', 'block');
         $("#tab3").css('display', 'none');
@@ -50,6 +32,7 @@ jQuery(document).ready(function ($) {
 
     $(".cmd-switch-grid").on('click',function (e) {
         e.preventDefault();
+        $(".wcpscu_carousel_layout").removeAttr('checked');
         $(".wcpscu_grid_layout").attr('checked', true);
         $("#tab2").css('display', 'none');
         $("#tab3").css('display', 'block');
@@ -60,7 +43,7 @@ jQuery(document).ready(function ($) {
 
 
 
-    $('.theme_1').hide();
+    $('.theme_1, .theme_2, .theme_3').hide();
 
     var $theme = $('.wcpscu_theme'); // get theme jQuery object
 
@@ -77,6 +60,51 @@ jQuery(document).ready(function ($) {
     });
 
     $('.wcpscu_radio_layout').hide();
+
+    // autoplay dependable
+    if( $("input[name='wcpscu[A_play]']:checked").val() === 'yes' ) {
+        $('.wpcu_auto_play_depend').show();
+    } else {
+        $('.wpcu_auto_play_depend').hide();
+    }
+
+    $('.wcpcu_auto_play').on('click', function(){ 
+        if( $(this).val() === 'yes' ) {
+            $('.wpcu_auto_play_depend').show();
+        } else {
+            $('.wpcu_auto_play_depend').hide();
+        }
+    });
+
+    //navigation dependable
+    if( $("input[name='wcpscu[nav_show]']:checked").val() === 'yes' ) {
+        $('.wpcu_navigation_depend').show();
+    } else {
+        $('.wpcu_navigation_depend').hide();
+    }
+
+    $('.wcpcu_navigation').on('click', function(){ 
+        if( $(this).val() === 'yes' ) {
+            $('.wpcu_navigation_depend').show();
+        } else {
+            $('.wpcu_navigation_depend').hide();
+        }
+    });
+
+    //caraousel pagination dependable
+    if( $("input[name='wcpscu[carousel_pagination]']:checked").val() === 'yes' ) {
+        $('.wpcu_carousel_pagination_depend').show();
+    } else {
+        $('.wpcu_carousel_pagination_depend').hide();
+    }
+
+    $('.wcpcu_carousel_pagination').on('click', function(){ 
+        if( $(this).val() === 'yes' ) {
+            $('.wpcu_carousel_pagination_depend').show();
+        } else {
+            $('.wpcu_carousel_pagination_depend').hide();
+        }
+    });
     
 
 });

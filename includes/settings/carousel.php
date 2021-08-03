@@ -1,11 +1,13 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) die( 'Are you cheating??? Accessing this file directly is forbidden.' );
-$stop_hover      = !empty($stop_hover) ? $stop_hover : 'true';
-$A_play          = !empty($A_play) ? $A_play : 'yes';
-$pagination      = !empty($pagination) ? $pagination : 'yes';
-$scrol_direction = !empty($scrol_direction) ? $scrol_direction : 'left';
-$scrool          = !empty($scrool) ? $scrool : 'false';
-$nav_show          = !empty($nav_show) ? $nav_show : 'yes';
+$stop_hover             = ! empty( $stop_hover ) ? $stop_hover : 'true';
+$A_play                 = ! empty( $A_play ) ? $A_play : 'yes';
+$pagination             = ! empty( $pagination ) ? $pagination : 'yes';
+$scrol_direction        = ! empty( $scrol_direction ) ? $scrol_direction : 'left';
+$scrool                 = ! empty( $scrool ) ? $scrool : 'false';
+$nav_show               = ! empty( $nav_show ) ? $nav_show : 'yes';
+$nav_position           = ! empty( $nav_position ) ? $nav_position : 'bottom_right';
+$carousel_pagination    = ! empty( $carousel_pagination ) ? $carousel_pagination : 'no';
 ?>
 <!--TAB 2  Carousel setting -->
 <div id="lcsp-tab-2" class="lcsp-tab-content">
@@ -20,40 +22,14 @@ $nav_show          = !empty($nav_show) ? $nav_show : 'yes';
                 <div class="cmb-td">
                     <ul class="cmb2-radio-list cmb2-list cmb2-radio-switch">
                         <li>
-                            <input type="radio" class="cmb2-option cmb2-radio-switch1" name="wcpscu[A_play]"
+                            <input type="radio" class="cmb2-option wcpcu_auto_play cmb2-radio-switch1" name="wcpscu[A_play]"
                                 id="lcsp_ap1" value="yes" <?php checked('yes', $A_play, true); ?>>
                             <label for="lcsp_ap1"><?php esc_html_e('Yes', WCPCSU_TEXTDOMAIN); ?></label>
                         </li>
                         <li>
-                            <input type="radio" class="cmb2-option cmb2-radio-switch2" name="wcpscu[A_play]"
+                            <input type="radio" class="cmb2-option wcpcu_auto_play cmb2-radio-switch2" name="wcpscu[A_play]"
                                 id="lcsp_ap2" value="no" <?php checked('no', $A_play, true); ?>>
                             <label for="lcsp_ap2"><?php esc_html_e('No', WCPCSU_TEXTDOMAIN); ?></label>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <!--AutoPlay Type-->
-            <div class="cmb-row cmb-type-radio">
-                <div class="cmb-th">
-                    <label for="lcsp_ap"><?php esc_html_e('AutoPlay Type', WCPCSU_TEXTDOMAIN); ?></label>
-                </div>
-                <div class="cmb-td">
-                    <!-- <select id="c_theme" name="wcpscu[a_play_type]">
-                        <option value="normal">Normal</option>
-                        <option value="marquee"
-                            <?php if(!empty($a_play_type) && $a_play_type == "marquee"){ echo "selected";}?>>Marquee
-                        </option>
-                    </select> -->
-                    <ul class="cmb2-radio-list cmb2-list">
-                        <li>
-                            <input type="radio" class="cmb2-option" name="wcpscu[auto_product]"
-                                id="wcpscu_repeat_product11" value="Normal" checked>
-                            <label for="wcpscu_repeat_product11">Normal</label>
-                        </li>
-                        <li><input type="radio" class="cmb2-option" name="wcpscu[auto_product]"
-                                id="wcpscu_repeat_product22" value="Marquee">
-                            <label for="wcpscu_repeat_product22">Marquee</label>
                         </li>
                     </ul>
                 </div>
@@ -82,8 +58,7 @@ $nav_show          = !empty($nav_show) ? $nav_show : 'yes';
             </div>
 
             <!--Stop on hover-->
-            <?php if(empty($a_play_type) || 'marquee' != $a_play_type) { ?>
-            <div class="cmb-row cmb-type-radio">
+            <div class="cmb-row cmb-type-radio wpcu_auto_play_depend">
                 <div class="cmb-th">
                     <label for="lcsp_soh"><?php esc_html_e('Stop on Hover', WCPCSU_TEXTDOMAIN); ?></label>
                 </div>
@@ -104,7 +79,6 @@ $nav_show          = !empty($nav_show) ? $nav_show : 'yes';
                     </ul>
                 </div>
             </div>
-            <?php } ?>
             <!--Items on desktop-->
             <div class="cmb-row cmb-type-text-medium">
                 <div class="cmb-th">
@@ -171,8 +145,7 @@ $nav_show          = !empty($nav_show) ? $nav_show : 'yes';
                 </div>
             </div>
             <!--slide Timeout-->
-            <?php if(empty($a_play_type) || 'marquee' != $a_play_type) { ?>
-            <div class="cmb-row cmb-type-text-medium">
+            <div class="cmb-row cmb-type-text-medium wpcu_auto_play_depend">
                 <div class="cmb-th">
                     <label for="lcsp_ss">
                         <?php esc_html_e('Slide Timeout', WCPCSU_TEXTDOMAIN); ?>
@@ -186,9 +159,7 @@ $nav_show          = !empty($nav_show) ? $nav_show : 'yes';
                     </p>
                 </div>
             </div>
-            <?php } ?>
             <!--Scrolling-->
-            <?php if(empty($a_play_type) || 'marquee' != $a_play_type) { ?>
             <div class="cmb-row cmb-type-radio">
                 <div class="cmb-th">
                     <label for="lcsp_spp">
@@ -213,7 +184,6 @@ $nav_show          = !empty($nav_show) ? $nav_show : 'yes';
                     </ul>
                 </div>
             </div> <!-- end cmb2-metabox -->
-            <?php } ?>
             <!-- Navigation show/hide -->
             <div class="cmb-row cmb-type-radio">
                 <div class="cmb-th">
@@ -224,14 +194,14 @@ $nav_show          = !empty($nav_show) ? $nav_show : 'yes';
                 <div class="cmb-td">
                     <ul class="cmb2-radio-list cmb2-list  cmb2-radio-switch">
                         <li>
-                            <input type="radio" class="cmb2-option  cmb2-radio-switch1" name="wcpscu[nav_show]"
+                            <input type="radio" class="cmb2-option wcpcu_navigation cmb2-radio-switch1" name="wcpscu[nav_show]"
                                 id="wcpscu[c10_nav]1" value="yes" <?php checked('yes', $nav_show, true);  ?>>
                             <label for="wcpscu[c10_nav]1">
                                 <?php esc_html_e('Yes', WCPCSU_TEXTDOMAIN); ?>
                             </label>
                         </li>
                         <li>
-                            <input type="radio" class="cmb2-option  cmb2-radio-switch2" name="wcpscu[nav_show]"
+                            <input type="radio" class="cmb2-option wcpcu_navigation cmb2-radio-switch2" name="wcpscu[nav_show]"
                                 id="wcpscu[c10_nav]2" value="no" <?php checked('no', $nav_show, true);  ?>>
                             <label for="wcpscu[c10_nav]2">
                                 <?php esc_html_e('No', WCPCSU_TEXTDOMAIN); ?>
@@ -240,9 +210,28 @@ $nav_show          = !empty($nav_show) ? $nav_show : 'yes';
                     </ul>
                 </div>
             </div>
-
-            <!-- Navigation arrow color -->
-            <div class="cmb-row cmb-type-radio">
+            <div class="cmb-row cmb-type-radio wpcu_navigation_depend">
+                <div class="cmb-th">
+                    <label for="lcsp_ap"><?php esc_html_e('Navigation Position', WCPCSU_TEXTDOMAIN); ?></label>
+                </div>
+                <div class="cmb-td">
+                    <div class="cmb-theme-wrapper">
+                        <select id="theme_" class="wcpscu_theme" name="wcpscu[nav_position]">
+                            <option value="top_left" <?php selected( $nav_position, 'top_left'); ?> >Top Left</option>
+                            <option value="top_right" <?php selected( $nav_position, 'top_right'); ?>>Top Right
+                            </option>
+                            <option value="middle" <?php selected( $nav_position, 'middle'); ?>>Middle
+                            </option>
+                            <option value="bottom_left" <?php selected( $nav_position, 'bottom_left'); ?>>Bottom Left
+                            </option>
+                            <option value="bottom_right" <?php selected( $nav_position, 'bottom_right'); ?>>Bottom Right
+                            </option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <!-- Navigation color -->
+            <div class="cmb-row cmb-type-radio wpcu_navigation_depend">
                 <div class="cmb-th">
                     <label for="wcpscu[nav_arrow_color]">
                         Navigation Style
@@ -255,49 +244,99 @@ $nav_show          = !empty($nav_show) ? $nav_show : 'yes';
                                 <?php esc_html_e('Navigation Arrow Color', WCPCSU_TEXTDOMAIN); ?>
                             </label>
                             <input type="text" name="wcpscu[nav_arrow_color]" class="cpa-color-picker"
-                                value="<?php if(empty($nav_arrow_color)) { echo "#9192a3";}else{ echo $nav_arrow_color;}?>" />
+                                value="<?php echo ! empty( $nav_arrow_color ) ? $nav_arrow_color : '#333'; ?>" />
                         </div>
                         <div class="cmb-navigation-item">
                             <label for="wcpscu[nav_back_color]">
                                 <?php esc_html_e('Navigation Background Color', WCPCSU_TEXTDOMAIN); ?>
                             </label>
                             <input type="text" name="wcpscu[nav_back_color]" class="cpa-color-picker"
-                                value="<?php if(!empty($nav_back_color)) { echo $nav_back_color ;}else{ echo "#fff" ;}?>" />
+                                value="<?php echo ! empty( $nav_back_color ) ? $nav_back_color : '#fff'; ?>" />
                         </div>
                         <div class="cmb-navigation-item">
                             <label for="wcpscu[nav_border_color]">
                                 <?php esc_html_e('Navigation Border Color', WCPCSU_TEXTDOMAIN); ?>
                             </label>
                             <input type="text" name="wcpscu[nav_border_color]" class="cpa-color-picker"
-                                value="<?php if(!empty($nav_border_color)) { echo $nav_border_color ;}else{ echo "#e4e4ed" ;}?>" />
+                                value="<?php echo ! empty( $nav_border_color ) ? $nav_border_color : '#e4e4ed'; ?>" />
                         </div>
                         <div class="cmb-navigation-item">
                             <label for="wcpscu[nav_arrow_hover_color]">
                                 <?php esc_html_e('Navigation Hover Arrow Color', WCPCSU_TEXTDOMAIN); ?>
                             </label>
                             <input type="text" name="wcpscu[nav_arrow_hover_color]" class="cpa-color-picker"
-                                value="<?php if(empty($nav_arrow_hover_color)) { echo "#9192a3";}else{ echo $nav_arrow_hover_color;}?>" />
+                                value="<?php echo ! empty( $nav_arrow_hover_color ) ? $nav_arrow_hover_color : '#fff'; ?>" />
                         </div>
                         <div class="cmb-navigation-item">
                             <label for="wcpscu[nav_back_hover_color]">
                                 <?php esc_html_e('Navigaiton Hover Background Color', WCPCSU_TEXTDOMAIN); ?>
                             </label>
                             <input type="text" name="wcpscu[nav_back_hover_color]" class="cpa-color-picker"
-                                value="<?php if(empty($nav_back_hover_color)) { echo "#ffffff";}else{ echo $nav_back_hover_color;}?>" />
+                                value="<?php echo ! empty( $nav_back_hover_color ) ? $nav_back_hover_color : '#ff5500'; ?>" />
                         </div>
                         <div class="cmb-navigation-item">
                             <label for="wcpscu[nav_border_hover]">
                                 <?php esc_html_e('Navigaiton Hover Border Color', WCPCSU_TEXTDOMAIN); ?>
                             </label>
                             <input type="text" name="wcpscu[nav_border_hover]" class="cpa-color-picker"
-                                value="<?php if(empty($nav_border_hover)) { echo "#ff5500";}else{ echo $nav_border_hover;}?>" />
+                                value="<?php echo ! empty( $nav_border_hover ) ? $nav_border_hover : '#ff5500'; ?>" />
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="cmb2-save-setting">
-            <button type="button">Save Settings</button>
+            <!-- Navigation show/hide -->
+            <div class="cmb-row cmb-type-radio">
+                <div class="cmb-th">
+                    <label for="wcpscu[carousel_pagination]">
+                        <?php esc_html_e('Pagination Show', WCPCSU_TEXTDOMAIN); ?>
+                    </label>
+                </div>
+                <div class="cmb-td">
+                    <ul class="cmb2-radio-list cmb2-list  cmb2-radio-switch">
+                        <li>
+                            <input type="radio" class="cmb2-option wcpcu_carousel_pagination cmb2-radio-switch1" name="wcpscu[carousel_pagination]"
+                                id="wcpscu[carousel_pagination]1" value="yes" <?php checked('yes', $carousel_pagination, true);  ?>>
+                            <label for="wcpscu[carousel_pagination]1">
+                                <?php esc_html_e('Yes', WCPCSU_TEXTDOMAIN); ?>
+                            </label>
+                        </li>
+                        <li>
+                            <input type="radio" class="cmb2-option wcpcu_carousel_pagination cmb2-radio-switch2" name="wcpscu[carousel_pagination]"
+                                id="wcpscu[carousel_pagination]2" value="no" <?php checked('no', $carousel_pagination, true);  ?>>
+                            <label for="wcpscu[carousel_pagination]2">
+                                <?php esc_html_e('No', WCPCSU_TEXTDOMAIN); ?>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="cmb-row cmb-type-radio wpcu_carousel_pagination_depend">
+                <div class="cmb-th">
+                    <label for="wcpscu[dots_color]">
+                        Pagination Style
+                    </label>
+                </div>
+                <div class="cmb-td">
+                    <div class="cmb-navigation">
+                        <div class="cmb-navigation-item">
+                            <label for="wcpscu[dots_color]">
+                                <?php esc_html_e('Dots Color', WCPCSU_TEXTDOMAIN); ?>
+                            </label>
+                            <input type="text" name="wcpscu[dots_color]" class="cpa-color-picker"
+                                value="<?php echo ! empty( $dots_color ) ? $dots_color : '#333'; ?>" />
+                        </div>
+                        <div class="cmb-navigation-item">
+                            <label for="wcpscu[dots_active_color]">
+                                <?php esc_html_e('Dots Active Color', WCPCSU_TEXTDOMAIN); ?>
+                            </label>
+                            <input type="text" name="wcpscu[dots_active_color]" class="cpa-color-picker"
+                                value="<?php echo ! empty( $dots_active_color ) ? $dots_active_color : '#fff'; ?>" />
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
         </div>
     </div> <!-- end cmb2-wrap -->
 </div> <!-- end lcsp-tab-2 -->
