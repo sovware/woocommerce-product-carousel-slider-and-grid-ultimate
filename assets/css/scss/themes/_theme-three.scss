@@ -7,6 +7,7 @@
             border: 1px solid $borderColor;
             border-radius: 6px;
             padding: 10px;
+            background: #fff;
         }
         @include e(img){
             margin-bottom: 20px;
