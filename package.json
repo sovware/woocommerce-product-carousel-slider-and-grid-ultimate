@@ -1,0 +1,26 @@
+{
+  "name": "woocommerce-product-carousel-slider-and-grid-ultimate",
+  "version": "1.0.0",
+  "description": "=== WooCommerce Product Carousel, Slider & Grid Ultimate ===\r Contributors: wpwax\r Tags: woocommerce carousel, woocommerce slider, woocommerce grid, woocommerce product slider, woocommerce product carousel\r Requires at least: 4.0\r Tested up to: 5.6\r Stable tag: 1.7.6\r License: GPLv2 or later\r License URI: http://www.gnu.org/licenses/gpl-2.0.html",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Armanul46/woocommerce-product-carousel-slider-and-grid-ultimate.git"
+  },
+  "author": "wpWax",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Armanul46/woocommerce-product-carousel-slider-and-grid-ultimate/issues"
+  },
+  "homepage": "https://github.com/Armanul46/woocommerce-product-carousel-slider-and-grid-ultimate#readme",
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "sass": "^1.35.2"
+  }
+}
