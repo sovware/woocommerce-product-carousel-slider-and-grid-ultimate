@@ -45,22 +45,23 @@
     @include e(btn){
         width:40px;
         height: 40px;
-        border: 1px solid $borderColor;
+        border: 1px solid var(--navBorderColor);
         display: inline-flex;
         align-items: center;
         justify-content: center;
         margin: 0 5px;
         cursor: pointer;
         transition: 0.3s ease;
-        background: #fff;
+        background: var(--navBgColor);
         svg{
             width: 6px;
+            fill: var(--navArrowColor);
         }
         &:hover{
-            border-color: $primary;
-            background: $primary;
+            border-color: var(--navBorderColorHover);
+            background: var(--navBgColorHover);
             svg{
-                fill: #fff !important;
+                fill: var(--navArrowColorHover) !important;
             }
         }
     }
@@ -69,13 +70,27 @@
             border-radius: 50%;
         }
     }
-    @include m(bottom){
+    @include m(bottom-left){
+        margin-top: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 0;
+    }
+    @include m(bottom-middle){
         margin-top: 35px;
         display: flex;
         align-items: center;
         justify-content: center;
     }
-    @include m(space-between){
+    @include m(bottom-right){
+        margin-top: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 0;
+    }
+    @include m(middle){
         position: absolute;
         width: 100%;
         left: 0;
@@ -99,4 +114,41 @@
         margin-bottom: 30px;
         padding: 0;
     }
+    @include m(top-left){
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-bottom: 30px;
+        padding: 0;
+    }
+    @include m(top-middle){
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 30px;
+        padding: 0;
+    }
 }
+
+
+/* Product image tweaks */
+.wpcu-product .wpcu-product__img img{
+    width: 100%;
+}
+
+
+/* Header style */
+.wpcu-products__header{
+    margin-bottom: 30px;
+  }
+  .wpcu-products__header.wpcu-products__header--middle{
+    text-align: center;
+  }
+  .wpcu-products__header.wpcu-products__header--right{
+    text-align: right;
+  }
+  .wpcu-products__header h2{
+    font-size: var(--headerFontSize);
+    color: var(--headerFontColor);
+    font-weight: 500;
+  }

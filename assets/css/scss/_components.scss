@@ -7,10 +7,14 @@
 
     a {
         text-decoration: none;
-        font-size: 15px;
+        font-size: var(--productTitleSize);
         font-weight: normal;
-        color: #363940;
+        color: var(--productTitleColor);
         letter-spacing: normal;
+        transition: 0.3s ease;
+        &:hover{
+            color: var(--productTitleColorHover);
+        }
     }
 }
 
@@ -24,9 +28,9 @@
 
     @include e(sale) {
         display: inline-block;
-        font-size: 16px;
+        font-size: var(--productPriceSize);
         line-height: normal;
-        color: $primary;
+        color: var(--productPriceColor);
         margin: 0 4px;
     }
 
@@ -58,12 +62,14 @@
         }
 
         &:before {
-            color: $rating;
+            color: var(--productRatingColor);
+            font-size: var(--productRatingSize);
         }
 
         span {
             &:before {
-                color: $rating;
+                color: var(--productRatingColor);
+                font-size: var(--productRatingSize);
             }
         }
     }
