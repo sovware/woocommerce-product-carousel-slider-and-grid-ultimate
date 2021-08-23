@@ -24,8 +24,8 @@ function styleCss(done) {
         done();
 }
 gulp.task('allTask', gulp.series(styleCss));
-        /*-- Watch --*/
-        function watchFiles() {
+/*-- Watch --*/
+function watchFiles() {
         gulp.watch(src.scss, gulp.series(styleCss));
 }
 
