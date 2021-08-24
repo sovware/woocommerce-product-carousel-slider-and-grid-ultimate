@@ -59,18 +59,18 @@ $discount_ribbon_position   = ! empty( $discount_ribbon_position ) ? $discount_r
                             </option>
                             <option value="theme_3" <?php selected( $theme, 'theme_3'); ?>>Theme-3
                             </option>
-                            <option disabled>Theme-4 (Pro)</option>
-                            <option disabled>Theme-5 (Pro)</option>
-                            <option disabled>Theme-6 (Pro)</option>
-                            <option disabled>Theme-7 (Pro)</option>
-                            <option disabled>Theme-8 (Pro)</option>
-                            <option disabled>Theme-9 (Pro)</option>
-                            <option disabled>Theme-10 (Pro)</option>
-                            <option disabled>Theme-11 (Pro)</option>
-                            <option disabled>Theme-12 (Pro)</option>
-                            <option disabled>Theme-13 (Pro)</option>
-                            <option disabled>Theme-14 (Pro)</option>
-                            <option disabled>Theme-15 (Pro)</option>
+                            <option value="theme_4" <?php selected( $theme, 'theme_4'); ?>>Theme-4</option>
+                            <option value="theme_5" <?php selected( $theme, 'theme_5'); ?>>Theme-5</option>
+                            <option value="theme_6" <?php selected( $theme, 'theme_6'); ?>>Theme-6</option>
+                            <option value="theme_7" <?php selected( $theme, 'theme_7'); ?>>Theme-7</option>
+                            <option value="theme_8" <?php selected( $theme, 'theme_8'); ?>>Theme-8</option>
+                            <option value="theme_9" <?php selected( $theme, 'theme_9'); ?>>Theme-9</option>
+                            <option value="theme_10" <?php selected( $theme, 'theme_10'); ?>>Theme-10</option>
+                            <option value="theme_11" <?php selected( $theme, 'theme_11'); ?>>Theme-11</option>
+                            <option value="theme_12" <?php selected( $theme, 'theme_12'); ?>>Theme-12</option>
+                            <option value="theme_13" <?php selected( $theme, 'theme_13'); ?>>Theme-13</option>
+                            <option value="theme_14" <?php selected( $theme, 'theme_14'); ?>>Theme-14</option>
+                            <option value="theme_15" <?php selected( $theme, 'theme_15'); ?>>Theme-15</option>
                         </select>
                         <a href="#">View All Themes</a>
                     </div>
