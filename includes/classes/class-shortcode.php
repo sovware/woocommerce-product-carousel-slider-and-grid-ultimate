@@ -33,7 +33,7 @@ class wcpcsu_Shortcode
         $crop_image_width        = ! empty( $crop_image_width ) ? intval( $crop_image_width ) : 300;
         $crop_image_height       = ! empty( $crop_image_height ) ? intval( $crop_image_height ) : 300;
         $display_price           = ! empty( $display_price ) ? $display_price : 'yes';
-
+       
         $display_cart            = ! empty( $display_cart ) ? $display_cart : 'yes';
         $ribbon                  = ! empty( $ribbon ) ? $ribbon : 'discount';
         $header                  = ! empty( $header ) ? $header : 'center';
@@ -94,7 +94,7 @@ class wcpcsu_Shortcode
         $carousel_tablet_column     = ! empty( $c_tablet ) ? $c_tablet : 2;
         $carousel_mobile_column     = ! empty( $c_mobile ) ? $c_mobile : 1;
 
-        // carousel navigation settings
+        // carousel navigation settings 
         $nav_show                   = ! empty( $nav_show ) ? $nav_show : 'yes';
         $nav_position               = ! empty( $nav_position ) ? $nav_position : 'middle';
         $nav_arrow_color            = ! empty( $nav_arrow_color ) ? $nav_arrow_color : '#333';
@@ -103,6 +103,9 @@ class wcpcsu_Shortcode
         $nav_arrow_hover_color      = ! empty( $nav_arrow_hover_color ) ? $nav_arrow_hover_color : '#fff';
         $nav_back_hover_color       = ! empty( $nav_back_hover_color ) ? $nav_back_hover_color : '#ff5500';
         $nav_border_hover           = ! empty( $nav_border_hover ) ? $nav_border_hover : '#ff5500';
+
+        // carousel pagination settings 
+        $carousel_pagination        = ! empty( $carousel_pagination ) ? $carousel_pagination : 'no';
         //grid pagination settings
         $pagi_color                 = ! empty( $pagi_color ) ? $pagi_color : '#333';
         $pagi_border_color          = ! empty( $pagi_border_color ) ? $pagi_border_color : '#e4e4e4';
@@ -116,11 +119,12 @@ class wcpcsu_Shortcode
         $pagi_active_border_color   = ! empty( $pagi_active_border_color ) ? $pagi_active_border_color : '#ff5500';
         $pagi_active_back_color     = ! empty( $pagi_active_back_color ) ? $pagi_active_back_color : '#ff5500';
 
-
         if( $loop->have_posts() ) { ?>
         <div
         class="wpcu-products wpcu-<?php echo $theme; ?> wpcu-lazy-load <?php echo ( 'carousel' == $layout ) ? 'wpcu-carousel' : ''; ?>"
         style="
+            --headerFontSize: inherit;
+            --headerFontColor: inherit;
             --productTitleSize: <?php echo $title_font_size; ?>px;
             --productTitleColor: <?php echo $title_font_color; ?>;
             --productTitleColorHover: <?php echo $title_hover_font_color; ?>;
@@ -142,17 +146,11 @@ class wcpcsu_Shortcode
         data-wpcu-loop="true"
         data-wpcu-perslide="1"
         data-wpcu-speed="300"
-        data-wpcu-autoplay='
-        <?php if( 'yes' == $A_play ) { ?>
-        {
+        data-wpcu-autoplay='{
             "delay": "3000",
             "pauseOnMouseEnter": "false",
             "disableOnInteraction": "false"
-        }
-        <?php } else { ?>
-        false
-        <?php } ?>
-        '
+        }'
         data-wpcu-responsive='{
             "320": {"slidesPerView": "2", "spaceBetween": "20"},
             "480": {"slidesPerView": "3", "spaceBetween": "30"},
@@ -160,10 +158,9 @@ class wcpcsu_Shortcode
         }'
         <?php } ?>
         >
-        <!-- .wpcu-products__header--middle/.wpcu-products__header--right -->
-        <div class="wpcu-products__header wpcu-products__header--middle" style="--headerFontSize: 24px; --headerFontColor: #000;">
-            <h2>Carousel/Grid Products</h2>
-        </div>
+        <?php if( 'carousel' == $layout && ( 'top-left' == $nav_position || 'top-right' == $nav_position || 'top-middle' == $nav_position ) ) { 
+                include WCPCSU_INC_DIR . 'template/navigation.php';
+        } ?>  
         <div class="<?php echo ( 'carousel' == $layout ) ? 'swiper-wrapper' : 'wpcu-row wpcu-column-' . $g_column . ' wpcu-column-md-' . $g_tablet . ' wpcu-column-sm-' . $g_mobile . ''; ?>">
         <?php
             while($loop->have_posts()) : $loop->the_post();
@@ -178,18 +175,18 @@ class wcpcsu_Shortcode
             }
             $sale_price = $product->get_sale_price();
             $ratings = (($product->get_average_rating()/5)*100);
-
+            
             include WCPCSU_INC_DIR . 'template/theme/' . $theme . '.php';
 
             endwhile;
             wp_reset_postdata();
             ?>
-
+            
             </div>
-            <?php if( 'carousel' == $layout ) {
+            <?php if( 'carousel' == $layout && ( 'bottom-left' == $nav_position || 'bottom-right' == $nav_position || 'bottom-middle' == $nav_position ) ) { 
                 include WCPCSU_INC_DIR . 'template/navigation.php';
              } ?>
-             <?php if( 'grid' == $layout && 'yes' == $grid_pagination ) {
+             <?php if( 'yes' == $grid_pagination || 'yes' ==  $carousel_pagination ) { 
                 include WCPCSU_INC_DIR . 'template/pagination.php';
              } ?>
         </div><!-- ends: .wpcu-products -->
@@ -320,23 +317,23 @@ class wcpcsu_Shortcode
         if( ! wp_verify_nonce( $nonce, 'wcpcsu_quick_view_' . $product_id ) ) {
             die();
         }
-        ob_start();
+        ob_start(); 
         $product     = wc_get_product( $product_id );
         $wpcsu_thumb = wp_get_attachment_image_src( get_post_thumbnail_id( $product_id ), 'large' );
         $wpcsu_img   = $wpcsu_thumb['0'];
         ?>
         <div>
-            <div class='wpcu-modal__product-title'><h2><?php echo get_the_title( $product_id );?></h2></div>
+            <div class='title'><?php echo get_the_title( $product_id );?></div>
             <?php if ( ! empty( $wpcsu_img ) ) { ?>
-            <div class='wpcu-modal__product-image'>
+            <div class='image'>
                 <img src="<?php echo $wpcsu_img; ?>" alt="<?php echo get_the_title( $product_id );?>">
             </div>
             <?php } ?>
-            <div class='wpcu-modal__product-description'>
-                <p><?php echo $product->get_description(); ?></p>
+            <div class='description'>
+                <?php echo $product->get_description(); ?>
             </div>
-            <div class='wpcu-modal__product-price'><?php echo $product->get_price_html(); ?></div>
-            <div class='wpcu-modal__product-action'><?php echo do_shortcode('[add_to_cart id="' . $product_id . '" show_price = "false"]'); ?></div>
+            <div class='price'><?php echo $product->get_price_html(); ?></div>
+            <div class='add_to_cart'><?php echo do_shortcode('[add_to_cart id="' . $product_id . '" show_price = "false"]'); ?></div>
         </div>
         <?php
         $template = ob_get_clean();

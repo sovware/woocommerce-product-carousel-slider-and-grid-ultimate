@@ -6,7 +6,7 @@ $pagination             = ! empty( $pagination ) ? $pagination : 'yes';
 $scrol_direction        = ! empty( $scrol_direction ) ? $scrol_direction : 'left';
 $scrool                 = ! empty( $scrool ) ? $scrool : 'false';
 $nav_show               = ! empty( $nav_show ) ? $nav_show : 'yes';
-$nav_position           = ! empty( $nav_position ) ? $nav_position : 'bottom_right';
+$nav_position           = ! empty( $nav_position ) ? $nav_position : 'bottom-right';
 $carousel_pagination    = ! empty( $carousel_pagination ) ? $carousel_pagination : 'no';
 ?>
 <!--TAB 2  Carousel setting -->
@@ -217,14 +217,14 @@ $carousel_pagination    = ! empty( $carousel_pagination ) ? $carousel_pagination
                 <div class="cmb-td">
                     <div class="cmb-theme-wrapper">
                         <select id="theme_" class="wcpscu_theme" name="wcpscu[nav_position]">
-                            <option value="top_left" <?php selected( $nav_position, 'top_left'); ?> >Top Left</option>
-                            <option value="top_right" <?php selected( $nav_position, 'top_right'); ?>>Top Right
+                            <option value="top-left" <?php selected( $nav_position, 'top-left'); ?> >Top Left</option>
+                            <option value="top-right" <?php selected( $nav_position, 'top-right'); ?>>Top Right
                             </option>
                             <option value="middle" <?php selected( $nav_position, 'middle'); ?>>Middle
                             </option>
-                            <option value="bottom_left" <?php selected( $nav_position, 'bottom_left'); ?>>Bottom Left
+                            <option value="bottom-left" <?php selected( $nav_position, 'bottom-left'); ?>>Bottom Left
                             </option>
-                            <option value="bottom_right" <?php selected( $nav_position, 'bottom_right'); ?>>Bottom Right
+                            <option value="bottom-right" <?php selected( $nav_position, 'bottom-right'); ?>>Bottom Right
                             </option>
                         </select>
                     </div>
