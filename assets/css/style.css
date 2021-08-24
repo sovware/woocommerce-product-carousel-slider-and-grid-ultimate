@@ -396,14 +396,15 @@
   display: inline-block;
 }
 .wpcu-button .button,
-.wpcu-button .added_to_cart {
+.wpcu-button .added_to_cart,
+.wpcu-button .button.added {
   min-height: 40px;
   background: var(--buttonBgColor) !important;
   color: var(--buttonColor) !important;
   border-radius: 0;
   text-transform: uppercase;
   font-size: 12px;
-  padding: 13px 15px;
+  padding: 0 15px !important;
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important;
@@ -421,7 +422,8 @@
   line-height: unset !important;
 }
 .wpcu-button .button:hover,
-.wpcu-button .added_to_cart:hover {
+.wpcu-button .added_to_cart:hover,
+.wpcu-button .button.added:hover {
   text-decoration: none !important;
   background: var(--buttonBgColorHover) !important;
   color: var(--buttonColorHover) !important;
@@ -484,7 +486,7 @@
 
 /* Button tweaks */
 .wpcu-button .button.added {
-  display: none;
+  display: none !important;
 }
 
 /* Badges */
@@ -820,7 +822,7 @@
 }
 
 .wpcu-modal .wpcu-modal__product-action p a.added {
-  display: none;
+  display: none !important;
 }
 
 /*===========================

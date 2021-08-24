@@ -11,14 +11,15 @@
     }
 
     .button,
-    .added_to_cart {
+    .added_to_cart,
+    .button.added {
         min-height: 40px;
         background: var(--buttonBgColor) !important;
         color: var(--buttonColor) !important;
         border-radius: 0;
         text-transform: uppercase;
         font-size: 12px;
-        padding: 13px 15px;
+        padding: 0 15px !important;
         display: flex !important;
         align-items: center;
         justify-content: center;
@@ -102,5 +103,5 @@
 }
 /* Button tweaks */
 .wpcu-button .button.added{
-    display: none;
+    display: none !important;
 }
