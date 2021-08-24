@@ -138,7 +138,7 @@ $carousel_pagination    = ! empty( $carousel_pagination ) ? $carousel_pagination
                 </div>
                 <div class="cmb-td">
                     <input type="text" class="cmb2-text-small" name="wcpscu[slide_speed]" id="wcpscu[slide_speed]"
-                        value="<?php echo !empty($slide_speed) ? intval($slide_speed) : 4000; ?>">
+                        value="<?php echo !empty($slide_speed) ? intval($slide_speed) : 2000; ?>">
                     <p class="cmb2-metabox-description">
                         <?php esc_html_e('Here 1000 is equal to 1 second. So provide a speed accordingly', WCPCSU_TEXTDOMAIN); ?>
                     </p>

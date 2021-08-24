@@ -86,9 +86,10 @@ class wcpcsu_Shortcode
         $loop                           = $this->parse_query( $data_array );
 
         // carousel settings
+        $slide_speed                = ! empty( $slide_speed ) ? $slide_speed : '2000';
         $A_play                     = ! empty( $A_play ) ? $A_play : 'yes';
         $repeat_product             = ! empty( $repeat_product ) ? $repeat_product : 'yes';
-        $stop_hover                 = ! empty( $stop_hover ) ? $stop_hover : 'yes';
+        $stop_hover                 = ! empty( $stop_hover ) ? $stop_hover : true;
         $carousel_desktop_column    = ! empty( $c_desktop ) ? $c_desktop : 4;
         $carousel_laptop_column     = ! empty( $c_desktop_small ) ? $c_desktop_small : 3;
         $carousel_tablet_column     = ! empty( $c_tablet ) ? $c_tablet : 2;
@@ -118,7 +119,6 @@ class wcpcsu_Shortcode
         $pagi_active_color          = ! empty( $pagi_active_color ) ? $pagi_active_color : '#fff';
         $pagi_active_border_color   = ! empty( $pagi_active_border_color ) ? $pagi_active_border_color : '#ff5500';
         $pagi_active_back_color     = ! empty( $pagi_active_back_color ) ? $pagi_active_back_color : '#ff5500';
-
         if( $loop->have_posts() ) { ?>
         <div
         class="wpcu-products wpcu-<?php echo $theme; ?> wpcu-lazy-load <?php echo ( 'carousel' == $layout ) ? 'wpcu-carousel' : ''; ?>"
@@ -143,15 +143,21 @@ class wcpcsu_Shortcode
         <?php if( 'carousel' == $layout ) { ?>
         data-wpcu-items="4"
         data-wpcu-margin="30"
-        data-wpcu-loop="false"
+        data-wpcu-loop="<?php echo ( 'yes' == $repeat_product ) ? 'true' : 'false'; ?>"
         data-wpcu-perslide="1"
-        data-wpcu-speed="300"
-        data-wpcu-autoplay='{
-            "delay": "1000",
-            "pauseOnMouseEnter": false,
+        data-wpcu-speed="<?php echo $slide_speed; ?>"
+        data-wpcu-autoplay='
+        <?php if( 'yes' == $A_play ) { ?>
+        {
+            "delay": "<?php echo $slide_time; ?>",
+            "pauseOnMouseEnter": <?php echo ( 'true' == $stop_hover ) ? "true" : "false"; ?>,
             "disableOnInteraction": false,
             "stopOnLastSlide": true
-        }'
+        }
+        <?php } else { ?>
+            false
+        <?php } ?>    
+        '
         data-wpcu-responsive='{
             "575": {"slidesPerView": "2", "spaceBetween": "20"},
             "767": {"slidesPerView": "3", "spaceBetween": "30"},
@@ -188,7 +194,7 @@ class wcpcsu_Shortcode
             <?php if( 'carousel' == $layout && ( 'bottom-left' == $nav_position || 'bottom-right' == $nav_position || 'bottom-middle' == $nav_position ) ) {
                 include WCPCSU_INC_DIR . 'template/navigation.php';
              } ?>
-             <?php if( 'yes' == $grid_pagination || 'yes' ==  $carousel_pagination ) {
+             <?php if( ( 'grid' == $layout && 'yes' == $grid_pagination ) || ( 'carousel' == $layout && 'yes' ==  $carousel_pagination ) ) {
                 include WCPCSU_INC_DIR . 'template/pagination.php';
              } ?>
         </div><!-- ends: .wpcu-products -->
