@@ -19,12 +19,13 @@
         text-transform: uppercase;
         font-size: 12px;
         padding: 13px 15px;
-        display: flex;
+        display: flex !important;
         align-items: center;
         justify-content: center;
         text-decoration: none !important;
         transition: 0.3s ease;
         border: 1px solid transparent;
+        line-height: unset !important;
 
         &:hover {
             text-decoration: none !important;

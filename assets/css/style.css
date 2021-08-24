@@ -58,6 +58,11 @@
   position: relative;
 }
 
+/* Product image tweaks */
+.wpcu-product .wpcu-product__img img {
+  width: 100%;
+}
+
 /* Lazy load */
 .wpcu-lazy-load {
   position: relative;
@@ -232,11 +237,6 @@
   padding: 0;
 }
 
-/* Product image tweaks */
-.wpcu-product .wpcu-product__img img {
-  width: 100%;
-}
-
 /* Header style */
 .wpcu-products__header {
   margin-bottom: 30px;
@@ -404,9 +404,9 @@
   text-transform: uppercase;
   font-size: 12px;
   padding: 13px 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -418,6 +418,7 @@
   -o-transition: 0.3s ease;
   transition: 0.3s ease;
   border: 1px solid transparent;
+  line-height: unset !important;
 }
 .wpcu-button .button:hover,
 .wpcu-button .added_to_cart:hover {
@@ -527,13 +528,16 @@
 /* Product title */
 .wpcu-product__title {
   margin: 0 !important;
-  line-height: normal;
-  font-size: unset;
+  line-height: normal !important;
+  font-size: unset !important;
   font-family: inherit !important;
 }
+.wpcu-product__title::before {
+  content: none;
+}
 .wpcu-product__title a {
-  text-decoration: none;
-  font-size: var(--productTitleSize);
+  text-decoration: none !important;
+  font-size: var(--productTitleSize) !important;
   font-weight: normal;
   color: var(--productTitleColor);
   letter-spacing: normal;
@@ -714,6 +718,11 @@
           animation: wpcu-rotate 2s linear infinite;
 }
 
+.wpcu-modal .wpcu-modal__content .wpcu-modal__body .add_to_cart_inline {
+  border: 0 none !important;
+  padding: 0 !important;
+}
+
 .wpcu-modal .wpcu-modal-close {
   width: 40px;
   height: 40px;
@@ -740,6 +749,10 @@
   font-size: 25px;
   font-weight: 500;
   margin-bottom: 20px;
+  margin-top: 0;
+}
+.wpcu-modal .wpcu-modal__product-title::before {
+  content: none;
 }
 
 .wpcu-modal .wpcu-modal__product-image {
@@ -757,11 +770,16 @@
 .wpcu-modal .wpcu-modal__product-price .amount {
   font-size: 22px;
   font-weight: 600;
-  color: #ff5500;
+  color: var(--productPriceColor);
 }
 
 .wpcu-modal .wpcu-modal__product-price ins {
   text-decoration: none;
+}
+
+.wpcu-modal .wpcu-modal__product-price del bdi {
+  font-weight: 300;
+  color: #9192a3;
 }
 
 .wpcu-modal .wpcu-modal__product-description {
@@ -785,10 +803,10 @@
   padding: 0 30px;
   font-size: 16px;
   font-weight: 500;
-  color: #fff;
-  background: #000000;
+  color: var(--buttonColor);
+  background: var(--buttonBgColor) !important;
   border: 0 none;
-  text-decoration: none;
+  text-decoration: none !important;
   display: inline-block;
 }
 
@@ -796,8 +814,8 @@
 .wpcu-modal .wpcu-modal__product-action p a:focus,
 .wpcu-modal .wpcu-modal__product-action p a:active {
   text-decoration: none !important;
-  background: #000000 !important;
-  color: #fff;
+  background: var(--buttonBgColorHover) !important;
+  color: var(--buttonColorHover);
   border-radius: 5px;
 }
 

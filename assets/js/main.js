@@ -53,7 +53,7 @@
         let swiper = new Swiper(el, {
             slidesPerView: checkData(parseInt(el.dataset.wpcuItems), 4),
             spaceBetween: checkData(parseInt(el.dataset.wpcuMargin), 30),
-            loop: checkData(el.dataset.wpcuLoop, true),
+            loop: checkData(JSON.parse(el.dataset.wpcuLoop.toLowerCase()), false),
             slidesPerGroup: checkData(parseInt(el.dataset.wpcuPerslide), 1),
             speed: checkData(parseInt(el.dataset.wpcuSpeed), 3000),
             autoplay: checkData(JSON.parse(el.dataset.wpcuAutoplay), {}),
@@ -68,6 +68,7 @@
             },
             breakpoints: checkData(JSON.parse(el.dataset.wpcuResponsive), {})
         })
+        console.log(swiper);
     });
 
 })();

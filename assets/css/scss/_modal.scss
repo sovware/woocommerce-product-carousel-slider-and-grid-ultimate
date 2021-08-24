@@ -33,6 +33,13 @@
     animation: wpcu-rotate 2s linear infinite;
 }
 
+.wpcu-modal .wpcu-modal__content .wpcu-modal__body{
+    .add_to_cart_inline{
+        border: 0 none !important;
+        padding: 0 !important;
+    }
+}
+
 .wpcu-modal .wpcu-modal-close {
     width: 40px;
     height: 40px;
@@ -53,6 +60,10 @@
     font-size: 25px;
     font-weight: 500;
     margin-bottom: 20px;
+    margin-top: 0;
+    &::before{
+        content: none;
+    }
 }
 
 .wpcu-modal .wpcu-modal__product-image {
@@ -70,11 +81,16 @@
 .wpcu-modal .wpcu-modal__product-price .amount {
     font-size: 22px;
     font-weight: 600;
-    color: #ff5500;
+    color: var(--productPriceColor);
 }
 
 .wpcu-modal .wpcu-modal__product-price ins {
     text-decoration: none;
+}
+
+.wpcu-modal .wpcu-modal__product-price del bdi{
+    font-weight: 300;
+    color: #9192a3;
 }
 
 .wpcu-modal .wpcu-modal__product-description {
@@ -98,10 +114,10 @@
     padding: 0 30px;
     font-size: 16px;
     font-weight: 500;
-    color: #fff;
-    background: #000000;
+    color: var(--buttonColor);
+    background: var(--buttonBgColor) !important;
     border: 0 none;
-    text-decoration: none;
+    text-decoration: none !important;
     display: inline-block;
 }
 
@@ -109,8 +125,8 @@
 .wpcu-modal .wpcu-modal__product-action p a:focus,
 .wpcu-modal .wpcu-modal__product-action p a:active {
     text-decoration: none !important;
-    background: #000000 !important;
-    color: #fff;
+    background: var(--buttonBgColorHover) !important;
+    color: var(--buttonColorHover);
     border-radius: 5px;
 }
 

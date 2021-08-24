@@ -1,13 +1,16 @@
 /* Product title */
 .wpcu-product__title {
     margin: 0 !important;
-    line-height: normal;
-    font-size: unset;
+    line-height: normal !important;
+    font-size: unset !important;
     font-family: inherit !important;
+    &::before{
+        content: none;
+    }
 
     a {
-        text-decoration: none;
-        font-size: var(--productTitleSize);
+        text-decoration: none !important;
+        font-size: var(--productTitleSize) !important;
         font-weight: normal;
         color: var(--productTitleColor);
         letter-spacing: normal;
