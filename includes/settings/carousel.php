@@ -1,6 +1,6 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) die( 'Are you cheating??? Accessing this file directly is forbidden.' );
-$stop_hover             = ! empty( $stop_hover ) ? $stop_hover : 'true';
+$stop_hover             = ! empty( $stop_hover ) ? $stop_hover : 'no';
 $A_play                 = ! empty( $A_play ) ? $A_play : 'yes';
 $pagination             = ! empty( $pagination ) ? $pagination : 'yes';
 $scrol_direction        = ! empty( $scrol_direction ) ? $scrol_direction : 'left';
@@ -333,7 +333,7 @@ $carousel_pagination    = ! empty( $carousel_pagination ) ? $carousel_pagination
                             <input type="text" name="wcpscu[dots_active_color]" class="cpa-color-picker"
                                 value="<?php echo ! empty( $dots_active_color ) ? $dots_active_color : '#fff'; ?>" />
                         </div>
-                        
+
                     </div>
                 </div>
             </div>
