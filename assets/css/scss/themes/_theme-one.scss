@@ -4,32 +4,7 @@
 .wpcu-theme_1 {
     .wpcu-product {
         @include e(img) {
-            position: relative;
             margin-bottom: 20px;
-
-            .wpcu-overlay-content-bottom {
-                padding: 0 15px;
-                position: absolute;
-                left: 0;
-                bottom: 0;
-                width: 100%;
-                text-align: center;
-                visibility: hidden;
-                opacity: 0;
-                pointer-events: none;
-                transition: 0.3s ease;
-            }
-        }
-
-        @include e(content) {
-            &:hover {
-                .wpcu-overlay-content-bottom {
-                    visibility: visible;
-                    opacity: 1;
-                    pointer-events: all;
-                    bottom: 20px;
-                }
-            }
         }
 
         @include e(details) {

@@ -7,6 +7,22 @@
 .wpcu-pos-relative{
     position: relative;
 }
+.wpcu-d-flex{
+    display: flex;
+}
+.wpcu-space-between{
+    justify-content: space-between;
+}
+.wpcu-flex-center{
+    justify-content: center;
+}
+.wpcu-flex-column{
+    flex-direction: column;
+}
+.wpcu-flex-align-center{
+    align-items: center;
+}
+
 .wpcu-tr-0{
     top:0;
     right: 0;
@@ -22,4 +38,17 @@
 .wpcu-bl-0{
     bottom:0;
     left: 0;
+}
+.wpcu-mb-10{
+    margin-bottom: 10px !important;
+}
+.wpcu-mb-15{
+    margin-bottom: 15px !important;
+}
+
+/* Utility responsiveness */
+@media (max-width: 575px){
+    .wpxu-d-sm-block{
+        display: block;
+    }
 }

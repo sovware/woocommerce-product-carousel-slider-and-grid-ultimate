@@ -61,7 +61,7 @@
         margin: 0;
 
         span {
-            padding-top: 12px;
+            padding-top: 20px;
         }
 
         &:before {
@@ -119,5 +119,80 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+    }
+}
+
+.wpcu-product{
+    @include e(img) {
+        position: relative;
+        .wpcu-overlay-content-bottom {
+            padding: 0 15px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            visibility: hidden;
+            opacity: 0;
+            pointer-events: none;
+            transition: 0.3s ease;
+        }
+    }
+    @include e(content) {
+        &:hover {
+            .wpcu-overlay-content-bottom {
+                visibility: visible;
+                opacity: 1;
+                pointer-events: all;
+                bottom: 20px;
+            }
+        }
+    }
+}
+
+/*
+    Product action icons in hover
+    * Add to cart
+    * Zoom
+    * Add to Wishlist
+    * Compare
+*/
+.wpcu-product__action-icons{
+    background: #fff;
+    padding: 17px 10px;
+    margin: 0 -15px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    a{
+        font-size: 18px;
+        padding: 0 15px;
+        transition: 0.3s ease;
+        color: var(--textDefault);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        svg{
+            width: 18px;
+            height: auto;
+            transition: 0.3s ease;
+        }
+        &:hover{
+            svg{
+                fill: var(--primaryColor);
+            }
+        }
+    }
+    @include m(boxed){
+        background: none;
+        margin: -3px;
+        a{
+            border: 1px solid #e4e4ed;
+            background: #fff;
+            width: 45px;
+            height: 45px;
+            padding: 0;
+            margin: 3px;
+        }
     }
 }

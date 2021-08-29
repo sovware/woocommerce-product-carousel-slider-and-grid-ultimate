@@ -7,6 +7,9 @@
 /* Import font */
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap");
 :root {
+  /* Default variables */
+  --primaryColor: #ff5500;
+  --textDefault: #363940;
   /* Grid/Carousel Header */
   --headerFontSize: 24px;
   --headerFontColor: #000;
@@ -526,6 +529,16 @@
   text-transform: uppercase;
   font-weight: 500;
 }
+.wpcu-badge--circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--ribbonBgColor);
+  color: #fff;
+  font-size: 14px;
+  font-weight: normal;
+  padding: 8px;
+}
 
 /* Product title */
 .wpcu-product__title {
@@ -595,7 +608,7 @@
   margin: 0;
 }
 .wpcu-product__rating .star-rating span {
-  padding-top: 12px;
+  padding-top: 20px;
 }
 .wpcu-product__rating .star-rating:before {
   color: var(--productRatingColor);
@@ -651,6 +664,91 @@
           transform: translate(-50%, -50%);
 }
 
+.wpcu-product__img {
+  position: relative;
+}
+.wpcu-product__img .wpcu-overlay-content-bottom {
+  padding: 0 15px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+.wpcu-product__content:hover .wpcu-overlay-content-bottom {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: all;
+  bottom: 20px;
+}
+
+/*
+    Product action icons in hover
+    * Add to cart
+    * Zoom
+    * Add to Wishlist
+    * Compare
+*/
+.wpcu-product__action-icons {
+  background: #fff;
+  padding: 17px 10px;
+  margin: 0 -15px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.wpcu-product__action-icons a {
+  font-size: 18px;
+  padding: 0 15px;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+  color: var(--textDefault);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.wpcu-product__action-icons a svg {
+  width: 18px;
+  height: auto;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+.wpcu-product__action-icons a:hover svg {
+  fill: var(--primaryColor);
+}
+.wpcu-product__action-icons--boxed {
+  background: none;
+  margin: -3px;
+}
+.wpcu-product__action-icons--boxed a {
+  border: 1px solid #e4e4ed;
+  background: #fff;
+  width: 45px;
+  height: 45px;
+  padding: 0;
+  margin: 3px;
+}
+
 /*===========================
  Utility Classes
 ===========================*/
@@ -660,6 +758,37 @@
 
 .wpcu-pos-relative {
   position: relative;
+}
+
+.wpcu-d-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.wpcu-space-between {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.wpcu-flex-center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.wpcu-flex-column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.wpcu-flex-align-center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .wpcu-tr-0 {
@@ -682,6 +811,20 @@
   left: 0;
 }
 
+.wpcu-mb-10 {
+  margin-bottom: 10px !important;
+}
+
+.wpcu-mb-15 {
+  margin-bottom: 15px !important;
+}
+
+/* Utility responsiveness */
+@media (max-width: 575px) {
+  .wpxu-d-sm-block {
+    display: block;
+  }
+}
 /*===========================
  Modal Styles
 ===========================*/
@@ -932,28 +1075,7 @@
  Style: Theme One
 ===========================*/
 .wpcu-theme_1 .wpcu-product__img {
-  position: relative;
   margin-bottom: 20px;
-}
-.wpcu-theme_1 .wpcu-product__img .wpcu-overlay-content-bottom {
-  padding: 0 15px;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-  visibility: hidden;
-  opacity: 0;
-  pointer-events: none;
-  -webkit-transition: 0.3s ease;
-  -o-transition: 0.3s ease;
-  transition: 0.3s ease;
-}
-.wpcu-theme_1 .wpcu-product__content:hover .wpcu-overlay-content-bottom {
-  visibility: visible;
-  opacity: 1;
-  pointer-events: all;
-  bottom: 20px;
 }
 .wpcu-theme_1 .wpcu-product__details {
   text-align: center;
@@ -1062,6 +1184,20 @@
   opacity: 1;
   visibility: visible;
   pointer-events: all;
+}
+
+/*===========================
+ Style: Theme Four
+===========================*/
+.wpcu-theme_4 .wpcu-product__details {
+  margin-top: 17px;
+}
+
+/*===========================
+ Style: Theme Five
+===========================*/
+.wpcu-theme_5 .wpcu-product__details {
+  margin-top: 17px;
 }
 
 /*===========================

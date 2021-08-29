@@ -1,0 +1,10 @@
+/*===========================
+ Style: Theme Five
+===========================*/
+.wpcu-theme_5{
+    .wpcu-product{
+        @include e(details){
+            margin-top: 17px;
+        }
+    }
+}
