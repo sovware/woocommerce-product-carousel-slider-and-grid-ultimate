@@ -1,0 +1,102 @@
+/*===========================
+ Style: Theme six
+===========================*/
+.wpcu-theme_6 {
+    .wpcu-product {
+        @include e(details) {
+            margin-top: 17px;
+        }
+
+        @include e(cover-content) {
+            @include m(top-left) {
+                top: 8px;
+                left: 10px;
+            }
+
+            @include m(top-right) {
+                top: 8px;
+                right: 10px;
+            }
+
+            @include m(bottom-right) {
+                bottom: 10px;
+                right: 10px;
+            }
+
+            @include m(bottom-left) {
+                bottom: 10px;
+                left: 10px;
+            }
+
+            .wpcu-product__action-icons {
+                overflow: hidden;
+
+                a {
+                    position: relative;
+                    right: -65px;
+                    visibility: hidden;
+                    opacity: 0;
+                    pointer-events: none;
+                }
+            }
+        }
+
+
+
+        @include e(content) {
+            .wpcu-product-price-action {
+                .wpcu-product__price {
+                    transition: 0.3s ease;
+                }
+
+                .wpcu-button {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    opacity: 0;
+                    visibility: hidden;
+                    pointer-events: none;
+                    transition: 0.3s ease;
+                }
+            }
+        }
+
+        @include e(content){
+            &:hover {
+                .wpcu-product__action-icons a {
+                    right: 0;
+                    visibility: visible;
+                    opacity: 1;
+                    pointer-events: all;
+                }
+
+                .wpcu-product__action-icons a {
+                    &:first-child {
+                        transition: 0.3s ease;
+                    }
+
+                    &:nth-child(2) {
+                        transition: 0.4s ease;
+                    }
+
+                    &:nth-child(3) {
+                        transition: 0.5s ease;
+                    }
+                }
+
+                .wpcu-product-price-action {
+                    .wpcu-product__price {
+                        visibility: hidden;
+                        opacity: 0;
+                        pointer-events: none;
+                    }
+                    .wpcu-button{
+                        visibility: visible;
+                        opacity: 1;
+                        pointer-events: all;
+                    }
+                }
+            }
+        }
+    }
+}

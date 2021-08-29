@@ -120,6 +120,9 @@
         left: 50%;
         transform: translate(-50%, -50%);
     }
+    .wpcu-product__action-icons{
+        padding: 0;
+    }
 }
 
 .wpcu-product{
@@ -194,5 +197,8 @@
             padding: 0;
             margin: 3px;
         }
+    }
+    @include m(vertical){
+        flex-direction: column;
     }
 }
