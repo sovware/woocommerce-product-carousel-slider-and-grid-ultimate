@@ -43,7 +43,7 @@ jQuery(document).ready(function ($) {
 
 
 
-    $('.theme_1, .theme_2, .theme_3').hide();
+    $('.wcpscu_cart_button, .wcpscu_cart_icon, .theme_1, .theme_2, .theme_3, .theme_4, .theme_5').hide();
 
     var $theme = $('.wcpscu_theme'); // get theme jQuery object
 
@@ -53,11 +53,28 @@ jQuery(document).ready(function ($) {
     $theme.on('change', function () {
         var $this = $(this);
 
-        ('theme_1' == $this.val()) ? $('.theme_1').show(): $('.theme_1').hide();
-        ('theme_2' == $this.val()) ? $('.theme_2').show(): $('.theme_2').hide();
-        ('theme_3' == $this.val()) ? $('.theme_3').show(): $('.theme_3').hide();
+        ('theme_1' == $this.val()) ? $('.theme_1').show() : $('.theme_1').hide();
+        ('theme_2' == $this.val()) ? $('.theme_2').show() : $('.theme_2').hide();
+        ('theme_3' == $this.val()) ? $('.theme_3').show() : $('.theme_3').hide();
+        ('theme_4' == $this.val()) ? $('.theme_4').show() : $('.theme_4').hide();
+        ('theme_5' == $this.val()) ? $('.theme_5').show() : $('.theme_5').hide();
 
+        if( $this.val() == 'theme_4' && $this.val() == 'theme_5' ) {
+            $('.wcpscu_cart_button').hide();
+            $('.wcpscu_cart_icon').show();
+        } else {
+            $('.wcpscu_cart_button').show();
+            $('.wcpscu_cart_icon').hide();
+        }
     });
+
+    if( $('.wcpscu_theme').val() == 'theme_4' ||  $('.wcpscu_theme').val() == 'theme_5' ) {
+        $('.wcpscu_cart_button').hide();
+        $('.wcpscu_cart_icon').show();
+    } else {
+        $('.wcpscu_cart_button').show();
+        $('.wcpscu_cart_icon').hide();
+    }
 
     $('.wcpscu_radio_layout').hide();
 
@@ -91,7 +108,7 @@ jQuery(document).ready(function ($) {
         }
     });
 
-    //caraousel pagination dependable
+    //carausel pagination dependable
     if( $("input[name='wcpscu[carousel_pagination]']:checked").val() === 'yes' ) {
         $('.wpcu_carousel_pagination_depend').show();
     } else {
@@ -105,6 +122,173 @@ jQuery(document).ready(function ($) {
             $('.wpcu_carousel_pagination_depend').hide();
         }
     });
+
+    
+
+    //product type
+    $('#random_products_bycategory, #wcpscup_products_bycategory, #top_rated_products_bycategory, .specific-categories.top_rated, #wcpscup_products_bycategory1, #wcpscup_products_bycategory2, #wcpscup_products_bycategory3, #wcpscup_products_bycategory4, #wcpscup_products_bycategory5, #wcpscup_products_byid, #wcpscup_prodcuts_bysku, #wcpscup_products_bytag, #wcpscup_prodcuts_from_year, #wcpscup_prodcuts_from_month, #wcpscup_prodcuts_from_month_year, .specific-categories.latest, .specific-categories.older, .specific-categories.onsale, .specific-categories.bestselling, .specific-categories.featured, .specific-categories.random, #custom_ribbon, #prodcuts_from_days_ago, .specific-days').hide();
+
+    $('input[type="radio"]').click(function() {
+        if($(this).attr('id') == 'wcpscup_products_type') {
+            $('#wcpscup_products_bycategory, .specific-categories.latest, #prodcuts_from_days_ago, .specific-days').show();
+        }
+        else {
+            $('#wcpscup_products_bycategory, .specific-categories.latest, #prodcuts_from_days_ago, .specific-days').hide();
+        }
+    });
+
+    $('input[type="radio"]').click(function() {
+        if($(this).attr('id') == 'wcpscup_products_type1') {
+            $('#wcpscup_products_bycategory1, .specific-categories.onsale').show();
+        }
+        else {
+            $('#wcpscup_products_bycategory1, .specific-categories.onsale').hide();
+        }
+    });
+
+    $('input[type="radio"]').click(function() {
+        if($(this).attr('id') == 'wcpscup_products_type2') {
+            $('#wcpscup_products_bycategory2, .specific-categories.bestselling').show();
+        }
+        else {
+            $('#wcpscup_products_bycategory2, .specific-categories.bestselling').hide();
+        }
+    });
+
+    $('input[type="radio"]').click(function() {
+        if($(this).attr('id') == 'wcpscup_products_type3') {
+            $('#wcpscup_products_bycategory3, .specific-categories.featured').show();
+        }
+        else {
+            $('#wcpscup_products_bycategory3, .specific-categories.featured').hide();
+        }
+    });
+
+    $('input[type="radio"]').click(function() {
+        if($(this).attr('id') == 'wcpscup_products_type4') {
+            $('#wcpscup_products_byid').show();
+        }
+        else {
+            $('#wcpscup_products_byid').hide();
+        }
+    });
+
+    $('input[type="radio"]').click(function() {
+        if($(this).attr('id') == 'wcpscup_products_type5') {
+            $('#wcpscup_prodcuts_bysku').show();
+        }
+        else {
+            $('#wcpscup_prodcuts_bysku').hide();
+        }
+    });
+
+    $('input[type="radio"]').click(function() {
+        if($(this).attr('id') == 'wcpscup_products_type6') {
+            $('#wcpscup_products_bytag').show();
+        }
+        else {
+            $('#wcpscup_products_bytag').hide();
+        }
+    });
+
+    $('input[type="radio"]').click(function() {
+        if($(this).attr('id') == 'wcpscup_products_type7') {
+            $('#wcpscup_prodcuts_from_year').show();
+        }
+        else {
+            $('#wcpscup_prodcuts_from_year').hide();
+        }
+    });
+
+    $('input[type="radio"]').click(function() {
+        if($(this).attr('id') == 'wcpscup_products_type8') {
+            $('#wcpscup_prodcuts_from_month, #wcpscup_prodcuts_from_month_year').show();
+        }
+        else {
+            $('#wcpscup_prodcuts_from_month, #wcpscup_prodcuts_from_month_year').hide();
+        }
+    });
+
+    $('input[type="radio"]').click(function() {
+        if($(this).attr('id') == 'wcpscup_products_type9') {
+            $('#wcpscup_products_bycategory4, .specific-categories.older').show();
+        }
+        else {
+            $('#wcpscup_products_bycategory4, .specific-categories.older').hide();
+        }
+    });
+
+    $('input[type="radio"]').click(function() {
+        if($(this).attr('id') == 'wcpscup_products_type_rand') {
+            $('#random_products_bycategory, .specific-categories.random').show();
+        }
+        else {
+            $('#random_products_bycategory, .specific-categories.random').hide();
+        }
+    });
+
+    $('input[type="radio"]').click(function() {
+        if($(this).attr('id') == 'wcpscup_products_type_top_rated') {
+            $('#top_rated_products_bycategory, .specific-categories.top_rated').show();
+        }
+        else {
+            $('#top_rated_products_bycategory, .specific-categories.top_rated').hide();
+        }
+    });
+
+    $('input[type="radio"]').click(function() {
+        if($(this).attr('id') == 'wcpscup_products_type10') {
+            $('#wcpscup_products_bycategory5').show();
+        }
+        else {
+            $('#wcpscup_products_bycategory5').hide();
+        }
+    });
+
+
+
+    if( $('input[id=wcpscup_products_type]').is(':checked') ) {
+        $('#wcpscup_products_bycategory, .specific-categories.latest').addClass('wcpscup_active');
+    }
+    if( $('input[id=wcpscup_products_type1]').is(':checked') ) {
+        $('#wcpscup_products_bycategory1, .specific-categories.onsale').addClass('wcpscup_active');
+    }
+    if( $('input[id=wcpscup_products_type2]').is(':checked') ) {
+        $('#wcpscup_products_bycategory2, .specific-categories.bestselling').addClass('wcpscup_active');
+    }
+    if( $('input[id=wcpscup_products_type3]').is(':checked') ) {
+        $('#wcpscup_products_bycategory3, .specific-categories.featured').addClass('wcpscup_active');
+    }
+    if( $('input[id=wcpscup_products_type4]').is(':checked') ) {
+        $('#wcpscup_products_byid').addClass('wcpscup_active');
+    }
+    if( $('input[id=wcpscup_products_type5]').is(':checked') ) {
+        $('#wcpscup_prodcuts_bysku').addClass('wcpscup_active');
+    }
+    if( $('input[id=wcpscup_products_type6]').is(':checked') ) {
+        $('#wcpscup_products_bytag').addClass('wcpscup_active');
+    }
+    if( $('input[id=wcpscup_products_type7]').is(':checked') ) {
+        $('#wcpscup_prodcuts_from_year').addClass('wcpscup_active');
+    }
+    if( $('input[id=wcpscup_products_type8]').is(':checked') ) {
+        $('#wcpscup_prodcuts_from_month, #wcpscup_prodcuts_from_month_year').addClass('wcpscup_active');
+    }
+    if( $('input[id=wcpscup_products_type9]').is(':checked') ) {
+        $('#wcpscup_products_bycategory4, .specific-categories.older').addClass('wcpscup_active');
+    }
+    if( $('input[id=wcpscup_products_type_rand]').is(':checked') ) {
+        $('#random_products_bycategory, .specific-categories.random').addClass('wcpscup_active');
+    }
+    if( $('input[id=wcpscup_products_type_top_rated]').is(':checked') ) {
+        $('#top_rated_products_bycategory, .specific-categories.top_rated').addClass('wcpscup_active');
+    }
+    if( $('input[id=wcpscup_products_type10]').is(':checked') ) {
+        $('#wcpscup_products_bycategory5').addClass('wcpscup_active');
+    }
+    if( $('input[id=wcpscup_products_type_days_ago]').is(':checked') ) {
+        $('#prodcuts_from_days_ago').addClass('wcpscup_active');
+    }
     
 
 });

@@ -46,6 +46,15 @@
                             <input type="text" class="cmb2-text-small theme_3" name="wcpscu[title_font_size][theme_3]"
                             id="wcpscu_title_font_size"
                             value="<?php echo ! empty( $title_font_size['theme_3'] ) ? esc_attr( $title_font_size['theme_3'] ) : 16; ?>">
+                            <input type="text" class="cmb2-text-small theme_4" name="wcpscu[title_font_size][theme_4]"
+                            id="wcpscu_title_font_size"
+                            value="<?php echo ! empty( $title_font_size['theme_4'] ) ? esc_attr( $title_font_size['theme_4'] ) : 15; ?>">
+                            <input type="text" class="cmb2-text-small theme_5" name="wcpscu[title_font_size][theme_5]"
+                            id="wcpscu_title_font_size"
+                            value="<?php echo ! empty( $title_font_size['theme_5'] ) ? esc_attr( $title_font_size['theme_5'] ) : 15; ?>">
+                            <input type="text" class="cmb2-text-small theme_6" name="wcpscu[title_font_size][theme_6]"
+                            id="wcpscu_title_font_size"
+                            value="<?php echo ! empty( $title_font_size['theme_6'] ) ? esc_attr( $title_font_size['theme_6'] ) : 15; ?>">
                             <div class="input-group-prepend">
                                 <div class="input-group-text" id="btnGroupAddon"><?php esc_html_e('px', WCPCSU_TEXTDOMAIN); ?></span>
                                 </div>
@@ -65,10 +74,25 @@
                                 value="<?php echo ! empty( $title_font_color['theme_2'] ) ? esc_attr( $title_font_color['theme_2'] ) : '#363940'; ?>">
                         </div>
                         <div class="theme_3"> 
-                        <input type="text" class="cmb2-text-small cpa-color-picker" name="wcpscu[title_font_color][theme_3]"
-                            id="wcpscu_title_font_color"
-                            value="<?php echo ! empty( $title_font_color['theme_3'] ) ? esc_attr( $title_font_color['theme_3'] ) : '#363940'; ?>">
-                        </div>    
+                            <input type="text" class="cmb2-text-small cpa-color-picker" name="wcpscu[title_font_color][theme_3]"
+                                id="wcpscu_title_font_color"
+                                value="<?php echo ! empty( $title_font_color['theme_3'] ) ? esc_attr( $title_font_color['theme_3'] ) : '#363940'; ?>">
+                        </div>
+                        <div class="theme_4"> 
+                            <input type="text" class="cmb2-text-small cpa-color-picker" name="wcpscu[title_font_color][theme_4]"
+                                id="wcpscu_title_font_color"
+                                value="<?php echo ! empty( $title_font_color['theme_4'] ) ? esc_attr( $title_font_color['theme_4'] ) : '#363940'; ?>">
+                        </div>
+                        <div class="theme_5"> 
+                            <input type="text" class="cmb2-text-small cpa-color-picker" name="wcpscu[title_font_color][theme_5]"
+                                id="wcpscu_title_font_color"
+                                value="<?php echo ! empty( $title_font_color['theme_5'] ) ? esc_attr( $title_font_color['theme_5'] ) : '#363940'; ?>">
+                        </div>
+                        <div class="theme_6"> 
+                            <input type="text" class="cmb2-text-small cpa-color-picker" name="wcpscu[title_font_color][theme_6]"
+                                id="wcpscu_title_font_color"
+                                value="<?php echo ! empty( $title_font_color['theme_6'] ) ? esc_attr( $title_font_color['theme_6'] ) : '#363940'; ?>">
+                        </div>
                     </div>
                     <div class="cmb-navigation-item">
                         <label for="wcpscu_title_hover_font_color"><?php esc_html_e('Hover Font Color', WCPCSU_TEXTDOMAIN); ?></label>
@@ -78,14 +102,29 @@
                                 value="<?php echo ! empty( $title_hover_font_color['theme_1'] ) ? esc_attr( $title_hover_font_color['theme_1'] ) : '#ff5500'; ?>">
                         </div>
                         <div class="theme_2">
-                        <input type="text" class="cmb2-text-small cpa-color-picker theme_2"
-                            name="wcpscu[title_hover_font_color][theme_2]" id="wcpscu_title_hover_font_color"
-                            value="<?php echo ! empty( $title_hover_font_color['theme_2'] ) ? esc_attr( $title_hover_font_color['theme_2'] ) : '#ff5500'; ?>">
+                            <input type="text" class="cmb2-text-small cpa-color-picker theme_2"
+                                name="wcpscu[title_hover_font_color][theme_2]" id="wcpscu_title_hover_font_color"
+                                value="<?php echo ! empty( $title_hover_font_color['theme_2'] ) ? esc_attr( $title_hover_font_color['theme_2'] ) : '#ff5500'; ?>">
                         </div>
                         <div class="theme_3"> 
-                        <input type="text" class="cmb2-text-small cpa-color-picker theme_3"
-                            name="wcpscu[title_hover_font_color][theme_3]" id="wcpscu_title_hover_font_color"
-                            value="<?php echo ! empty( $title_hover_font_color['theme_3'] ) ? esc_attr( $title_hover_font_color['theme_3'] ) : '#ff5500'; ?>">
+                            <input type="text" class="cmb2-text-small cpa-color-picker theme_3"
+                                name="wcpscu[title_hover_font_color][theme_3]" id="wcpscu_title_hover_font_color"
+                                value="<?php echo ! empty( $title_hover_font_color['theme_3'] ) ? esc_attr( $title_hover_font_color['theme_3'] ) : '#ff5500'; ?>">
+                        </div>
+                        <div class="theme_4"> 
+                            <input type="text" class="cmb2-text-small cpa-color-picker theme_4"
+                                name="wcpscu[title_hover_font_color][theme_4]" id="wcpscu_title_hover_font_color"
+                                value="<?php echo ! empty( $title_hover_font_color['theme_4'] ) ? esc_attr( $title_hover_font_color['theme_4'] ) : '#ff5500'; ?>">
+                        </div>
+                        <div class="theme_5">
+                            <input type="text" class="cmb2-text-small cpa-color-picker theme_5"
+                                name="wcpscu[title_hover_font_color][theme_5]" id="wcpscu_title_hover_font_color"
+                                value="<?php echo ! empty( $title_hover_font_color['theme_5'] ) ? esc_attr( $title_hover_font_color['theme_5'] ) : '#ff5500'; ?>">
+                        </div>
+                        <div class="theme_6">
+                            <input type="text" class="cmb2-text-small cpa-color-picker theme_6"
+                                name="wcpscu[title_hover_font_color][theme_6]" id="wcpscu_title_hover_font_color"
+                                value="<?php echo ! empty( $title_hover_font_color['theme_6'] ) ? esc_attr( $title_hover_font_color['theme_6'] ) : '#ff5500'; ?>">
                         </div>
                     </div>
                 </div>
@@ -109,6 +148,15 @@
                             <input type="text" class="cmb2-text-small theme_3" name="wcpscu[price_font_size][theme_3]"
                                 id="wcpscu_price_font_size"
                                 value="<?php echo ! empty( $price_font_size['theme_3'] ) ? esc_attr( $price_font_size['theme_3'] ) : '14'; ?>">
+                            <input type="text" class="cmb2-text-small theme_4" name="wcpscu[price_font_size][theme_4]"
+                            id="wcpscu_price_font_size"
+                            value="<?php echo ! empty( $price_font_size['theme_4'] ) ? esc_attr( $price_font_size['theme_4'] ) : '16'; ?>">
+                            <input type="text" class="cmb2-text-small theme_5" name="wcpscu[price_font_size][theme_5]"
+                            id="wcpscu_price_font_size"
+                            value="<?php echo ! empty( $price_font_size['theme_5'] ) ? esc_attr( $price_font_size['theme_5'] ) : '16'; ?>">
+                            <input type="text" class="cmb2-text-small theme_6" name="wcpscu[price_font_size][theme_6]"
+                            id="wcpscu_price_font_size"
+                            value="<?php echo ! empty( $price_font_size['theme_6'] ) ? esc_attr( $price_font_size['theme_6'] ) : '16'; ?>">
                             <div class="input-group-prepend">
                                 <div class="input-group-text" id="btnGroupAddon">px</span>
                                 </div>
@@ -131,6 +179,21 @@
                             <input type="text" class="cmb2-text-small cpa-color-picker theme_3" name="wcpscu[price_font_color][theme_3]"
                                 id="wcpscu_price_font_color"
                                 value="<?php echo ! empty( $price_font_color['theme_3'] ) ? esc_attr( $price_font_color['theme_3'] ) : '#0f9cf5'; ?>">
+                        </div>
+                        <div class="theme_4"> 
+                            <input type="text" class="cmb2-text-small cpa-color-picker theme_4" name="wcpscu[price_font_color][theme_4]"
+                                id="wcpscu_price_font_color"
+                                value="<?php echo ! empty( $price_font_color['theme_4'] ) ? esc_attr( $price_font_color['theme_4'] ) : '#ff5500'; ?>">
+                        </div>
+                        <div class="theme_5"> 
+                            <input type="text" class="cmb2-text-small cpa-color-picker theme_5" name="wcpscu[price_font_color][theme_5]"
+                                id="wcpscu_price_font_color"
+                                value="<?php echo ! empty( $price_font_color['theme_5'] ) ? esc_attr( $price_font_color['theme_5'] ) : '#ff5500'; ?>">
+                        </div>
+                        <div class="theme_6"> 
+                            <input type="text" class="cmb2-text-small cpa-color-picker theme_6" name="wcpscu[price_font_color][theme_6]"
+                                id="wcpscu_price_font_color"
+                                value="<?php echo ! empty( $price_font_color['theme_6'] ) ? esc_attr( $price_font_color['theme_6'] ) : '#ff5500'; ?>">
                         </div>
                     </div>
 
@@ -155,10 +218,15 @@
                             <input type="text" class="cmb2-text-small theme_3" name="wcpscu[ratings_size][theme_3]"
                                 id="wcpscu_ratings_size"
                                 value="<?php echo ! empty( $ratings_size['theme_3'] ) ? esc_attr( $ratings_size['theme_3'] ) : '1em'; ?>">
-                            <div class="input-group-prepend">
-                                <div class="input-group-text" id="btnGroupAddon">em</span>
-                                </div>
-                            </div>
+                            <input type="text" class="cmb2-text-small theme_4" name="wcpscu[ratings_size][theme_4]"
+                            id="wcpscu_ratings_size"
+                            value="<?php echo ! empty( $ratings_size['theme_4'] ) ? esc_attr( $ratings_size['theme_4'] ) : '16px'; ?>">
+                            <input type="text" class="cmb2-text-small theme_5" name="wcpscu[ratings_size][theme_5]"
+                            id="wcpscu_ratings_size"
+                            value="<?php echo ! empty( $ratings_size['theme_5'] ) ? esc_attr( $ratings_size['theme_5'] ) : '16px'; ?>">
+                            <input type="text" class="cmb2-text-small theme_6" name="wcpscu[ratings_size][theme_6]"
+                            id="wcpscu_ratings_size"
+                            value="<?php echo ! empty( $ratings_size['theme_6'] ) ? esc_attr( $ratings_size['theme_6'] ) : '16px'; ?>">
                         </div>
                     </div>
                     <div class="cmb-navigation-item">
@@ -178,11 +246,21 @@
                             id="wcpscu_ratings_color"
                             value="<?php echo ! empty( $ratings_color['theme_3'] ) ? esc_attr( $ratings_color['theme_3'] ) : '#FEB507'; ?>">
                         </div>
+                        <div class="theme_4"> 
+                        <input type="text" class="cmb2-text-small cpa-color-picker" name="wcpscu[ratings_color][theme_4]"
+                            id="wcpscu_ratings_color"
+                            value="<?php echo ! empty( $ratings_color['theme_4'] ) ? esc_attr( $ratings_color['theme_4'] ) : '#feb507'; ?>">
+                        </div>
+                        <div class="theme_5"> 
+                        <input type="text" class="cmb2-text-small cpa-color-picker" name="wcpscu[ratings_color][theme_5]"
+                            id="wcpscu_ratings_color"
+                            value="<?php echo ! empty( $ratings_color['theme_5'] ) ? esc_attr( $ratings_color['theme_5'] ) : '#feb507'; ?>">
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="cmb-row cmb-type-colorpicker">
+            <div class="cmb-row cmb-type-colorpicker wcpscu_cart_button">
                 <div class="cmb-th">
                     <label
                         for="wcpscu_cart_font_color"><?php esc_html_e('"Add to Cart" Button ', WCPCSU_TEXTDOMAIN); ?></label>
@@ -265,6 +343,43 @@
                 </div>
             </div>
 
+            <div class="cmb-row cmb-type-colorpicker wcpscu_cart_icon">
+                <div class="cmb-th">
+                    <label
+                        for="wcpscu_cart_icon_font_color"><?php esc_html_e('"Add to Cart" Icon ', WCPCSU_TEXTDOMAIN); ?></label>
+                </div>
+                <div class="cmb-td">
+                    <div class="cmb-navigation-item">
+                        <label for="wcpscu_cart_icon_font_color">
+                            <?php esc_html_e('Font Color', WCPCSU_TEXTDOMAIN); ?>
+                        </label>
+                        <div class="theme_4"> 
+                            <input type="text" class="cmb2-text-small cpa-color-picker" name="wcpscu[cart_icon_font_color][theme_4]"
+                                id="wcpscu_cart_icon_font_color"
+                                value="<?php echo ! empty( $cart_icon_font_color['theme_4'] ) ? esc_attr( $cart_icon_font_color['theme_4'] ) : '#363940'; ?>">
+                        </div>
+                        <div class="theme_5">
+                            <input type="text" class="cmb2-text-small cpa-color-picker" name="wcpscu[cart_icon_font_color][theme_5]"
+                                id="wcpscu_cart_icon_font_color"
+                                value="<?php echo ! empty( $cart_icon_font_color['theme_5'] ) ? esc_attr( $cart_icon_font_color['theme_5'] ) : '#363940'; ?>">
+                        </div>
+                    </div>
+                    <div class="cmb-navigation-item">
+                        <label for="wcpscu_cart_icon_hover_color"><?php esc_html_e('hover Color', WCPCSU_TEXTDOMAIN); ?></label>
+                        <div class="theme_4"> 
+                            <input type="text" class="cmb2-text-small cpa-color-picker" name="wcpscu[cart_icon_hover_color][theme_4]"
+                                id="wcpscu_cart_icon_hover_color"
+                                value="<?php echo ! empty( $cart_icon_hover_color['theme_4'] ) ? esc_attr( $cart_icon_hover_color['theme_4'] ) : '#ff5500'; ?>">
+                        </div>
+                        <div class="theme_5"> 
+                            <input type="text" class="cmb2-text-small cpa-color-picker" name="wcpscu[cart_icon_hover_color][theme_5]"
+                                id="wcpscu_cart_icon_hover_color"
+                                value="<?php echo ! empty( $cart_icon_hover_color['theme_5'] ) ? esc_attr( $cart_icon_hover_color['theme_5'] ) : '#ff5500'; ?>">
+                        </div>   
+                    </div>
+                </div>
+            </div>
+
 
             <!-- Sale ribbon Style-->
             <div class="cmb-row cmb-type-colorpicker">
@@ -283,9 +398,19 @@
                             value="<?php echo ! empty( $ribbon_bg_color['theme_2'] ) ? esc_attr( $ribbon_bg_color['theme_2'] ) : '#ff5500'; ?>">
                     </div>
                     <div class="theme_3"> 
-                    <input type="text" class="cmb2-text-small cpa-color-picker" name="wcpscu[ribbon_bg_color][theme_3]"
-                        id="wcpscu_ribbon_bg_color"
-                        value="<?php echo ! empty( $ribbon_bg_color['theme_3'] ) ? esc_attr( $ribbon_bg_color['theme_3'] ) : '#0f9cf5'; ?>">
+                        <input type="text" class="cmb2-text-small cpa-color-picker" name="wcpscu[ribbon_bg_color][theme_3]"
+                            id="wcpscu_ribbon_bg_color"
+                            value="<?php echo ! empty( $ribbon_bg_color['theme_3'] ) ? esc_attr( $ribbon_bg_color['theme_3'] ) : '#0f9cf5'; ?>">
+                    </div>
+                    <div class="theme_4"> 
+                        <input type="text" class="cmb2-text-small cpa-color-picker" name="wcpscu[ribbon_bg_color][theme_4]"
+                            id="wcpscu_ribbon_bg_color"
+                            value="<?php echo ! empty( $ribbon_bg_color['theme_4'] ) ? esc_attr( $ribbon_bg_color['theme_4'] ) : '#ff5500'; ?>">
+                    </div>
+                    <div class="theme_5"> 
+                        <input type="text" class="cmb2-text-small cpa-color-picker" name="wcpscu[ribbon_bg_color][theme_5]"
+                            id="wcpscu_ribbon_bg_color"
+                            value="<?php echo ! empty( $ribbon_bg_color['theme_5'] ) ? esc_attr( $ribbon_bg_color['theme_5'] ) : '#ff5500'; ?>">
                     </div>
                 </div>
             </div>
