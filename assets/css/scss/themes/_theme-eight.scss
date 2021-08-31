@@ -1,0 +1,38 @@
+/*===========================
+ Style: Theme Eight
+===========================*/
+.wpcu-theme_8 {
+    .wpcu-product {
+        @include e(cover-content) {
+            @include m(top-left) {
+                top: 8px;
+                left: 10px;
+            }
+
+            @include m(top-right) {
+                top: 8px;
+                right: 10px;
+            }
+
+            @include m(bottom-right) {
+                bottom: 10px;
+                right: 10px;
+            }
+
+            @include m(bottom-left) {
+                bottom: 10px;
+                left: 10px;
+            }
+        }
+        @include e(action-icons){
+            padding: 0;
+        }
+        @include e(content){
+            &:hover{
+                .wpcu-overlay-content-bottom{
+                    bottom: 0;
+                }
+            }
+        }
+    }
+}
