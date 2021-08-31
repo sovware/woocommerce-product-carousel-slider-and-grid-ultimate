@@ -7,6 +7,9 @@
 .wpcu-pos-relative{
     position: relative;
 }
+.wpcu-d-block{
+    display: block;
+}
 .wpcu-d-flex{
     display: flex;
 }
@@ -45,6 +48,7 @@
 .wpcu-mb-15{
     margin-bottom: 15px !important;
 }
+
 
 /* Utility responsiveness */
 @media (max-width: 575px){

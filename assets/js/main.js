@@ -1,4 +1,4 @@
-(function () {
+(function ($) {
     /*
         Plugin: WooCommerce Product Carousel, Slider & Grid Ultimate
         Plugin URI: https://wordpress.org/plugins/woo-product-carousel-slider-and-grid-ultimate/
@@ -71,4 +71,4 @@
         console.log(swiper);
     });
 
-})();
+})(jQuery);

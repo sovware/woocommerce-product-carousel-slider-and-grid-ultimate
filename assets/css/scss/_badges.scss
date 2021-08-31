@@ -12,6 +12,11 @@
         background: var(--ribbonBgColor);
     }
 
+    @include m(secondary){
+        color: #fff;
+        background: var(--ribbonBgColor2);
+    }
+
     @include m(sm) {
         height: 20px;
         padding: 0 7px;

@@ -1,6 +1,6 @@
 /*
     * Buttons
-    ? Modifiers: --sm, --rounded, --rounded-circle, --icon-circle, --outlined, --light
+    ? Modifiers: --sm, --lg, --rounded, --rounded-circle, --icon-circle, --outlined, --light
 */
 .wpcu-button {
     display: inline-block;
@@ -53,6 +53,14 @@
         .button,
         .added_to_cart {
             min-height: 35px;
+            padding: 0 12px;
+        }
+    }
+
+    @include m(lg) {
+        .button,
+        .added_to_cart {
+            min-height: 45px;
             padding: 0 12px;
         }
     }

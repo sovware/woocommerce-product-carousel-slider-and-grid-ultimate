@@ -23,9 +23,7 @@
         }
 
         @include e(rating) {
-            .woocommerce-product-rating {
-                justify-content: center;
-            }
+            justify-content: center;
         }
     }
 }

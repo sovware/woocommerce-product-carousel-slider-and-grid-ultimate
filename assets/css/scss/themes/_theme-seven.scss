@@ -1,0 +1,41 @@
+/*===========================
+ Style: Theme Seven
+===========================*/
+.wpcu-theme_7{
+    .wpcu-product{
+        @include e(details){
+            margin-top: 17px;
+        }
+        @include e(price){
+            .wpcu-badge{
+                margin-left: auto;
+            }
+        }
+        @include e("cover-content--middle"){
+            background: #fff;
+            padding: 45px 20px;
+            visibility: hidden;
+            opacity: 0;
+            pointer-events: none;
+            transition: 0.3s ease;
+            box-shadow: 0 10px 10px rgba(#544d7c, 0.1);
+            .wpcu-button{
+                p{
+                    display: block;
+                }
+            }
+        }
+        @include e(action-icons){
+            margin-bottom: 10px;
+        }
+        @include e(content){
+            &:hover{
+                .wpcu-product__cover-content--middle{
+                    visibility: visible;
+                    opacity: 1;
+                    pointer-events: all;
+                }
+            }
+        }
+    }
+}
