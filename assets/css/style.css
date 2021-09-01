@@ -55,6 +55,12 @@
   --pagActiveColor: #fff;
   --pagActiveBorderColor: #ff5500;
   --pagActiveBgColor: #ff5500;
+  /* Quick view button */
+  --quickViewBtnBg: #363940;
+  --quickViewBtnBgHover: #000;
+  --quickViewBtnColor: #fff;
+  --quickViewBtnColorHover: #fff;
+  --quickViewBtnSize: 14px;
 }
 
 /* General Styles */
@@ -502,6 +508,29 @@
   background: #ff5500;
 }
 
+/* Quick view button */
+.wpcu-quick-view-btn {
+  min-height: 32px;
+  background: var(--quickViewBtnBg) !important;
+  color: var(--quickViewBtnColor) !important;
+  font-size: var(--quickViewBtnSize) !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 5px 15px;
+  text-decoration: none !important;
+}
+.wpcu-quick-view-btn:hover {
+  background: var(--quickViewBtnBgHover) !important;
+  color: var(--quickViewBtnColorHover) !important;
+}
+
 /* Button tweaks */
 .wpcu-button .button.added {
   display: none !important;
@@ -718,6 +747,10 @@
 
 .wpcu-product__img {
   position: relative;
+}
+.wpcu-product__img a {
+  line-height: 0;
+  display: block;
 }
 .wpcu-product__img .wpcu-overlay-content-bottom {
   padding: 0 15px;
@@ -1494,4 +1527,45 @@
 }
 .wpcu-theme_9 .wpcu-product--card__footer .wpcu-product__action-icons {
   padding: 0;
+}
+
+/*===========================
+ Style: Theme Ten
+===========================*/
+.wpcu-theme_10 .wpcu-product__img {
+  position: relative;
+  overflow: hidden;
+}
+.wpcu-theme_10 .wpcu-product__img .wpcu-quick-view-btn {
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 100%;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+.wpcu-theme_10 .wpcu-product__details {
+  text-align: center;
+}
+.wpcu-theme_10 .wpcu-product__action-icons {
+  width: 100%;
+  padding: 0;
+  margin: 20px 0 10px;
+}
+.wpcu-theme_10 .wpcu-product__content {
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+.wpcu-theme_10 .wpcu-product__content:hover {
+  -webkit-box-shadow: 0 10px 10px rgba(84, 77, 124, 0.1);
+          box-shadow: 0 10px 10px rgba(84, 77, 124, 0.1);
+}
+.wpcu-theme_10 .wpcu-product__content:hover .wpcu-quick-view-btn {
+  visibility: visible;
+  opacity: 1;
+  bottom: 0;
 }

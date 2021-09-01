@@ -1,0 +1,39 @@
+/*===========================
+ Style: Theme Ten
+===========================*/
+.wpcu-theme_10{
+    .wpcu-product{
+        @include e(img){
+            position: relative;
+            overflow: hidden;
+            .wpcu-quick-view-btn{
+                position: absolute;
+                left: 0;
+                bottom: -10px;
+                width: 100%;
+                visibility: hidden;
+                opacity: 0;
+                transition: 0.3s ease;
+            }
+        }
+        @include e(details){
+            text-align: center;
+        }
+        @include e(action-icons){
+            width: 100%;
+            padding: 0;
+            margin: 20px 0 10px;
+        }
+        @include e(content){
+            transition: 0.3s ease;
+            &:hover{
+                box-shadow: 0 10px 10px rgba(#544d7c, 0.1);
+                .wpcu-quick-view-btn{
+                    visibility: visible;
+                    opacity: 1;
+                    bottom: 0;
+                }
+            }
+        }
+    }
+}
