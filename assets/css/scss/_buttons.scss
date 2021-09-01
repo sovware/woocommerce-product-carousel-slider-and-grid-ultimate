@@ -109,6 +109,23 @@
         }
     }
 }
+/* Quick view button */
+.wpcu-quick-view-btn{
+    min-height: 32px;
+    background: var(--quickViewBtnBg) !important;
+    color: var(--quickViewBtnColor) !important;
+    font-size: var(--quickViewBtnSize) !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 15px;
+    text-decoration: none !important;
+    &:hover{
+        background: var(--quickViewBtnBgHover) !important;
+        color: var(--quickViewBtnColorHover) !important;
+    }
+}
+
 /* Button tweaks */
 .wpcu-button .button.added{
     display: none !important;

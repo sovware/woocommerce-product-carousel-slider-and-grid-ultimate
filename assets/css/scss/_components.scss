@@ -153,6 +153,10 @@
 .wpcu-product{
     @include e(img) {
         position: relative;
+        a{
+            line-height: 0;
+            display: block;
+        }
         .wpcu-overlay-content-bottom {
             padding: 0 15px;
             position: absolute;
