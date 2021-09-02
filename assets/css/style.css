@@ -1685,7 +1685,7 @@
   background: #fff;
 }
 .wpcu-theme_11 .wpcu-product__details__right .wpcu-button--light a svg {
-  fill: var(--wpcu-primaryColor);
+  fill: var(--wpcu-actionIconColor);
   width: 17px;
 }
 .wpcu-theme_11 .wpcu-product__content {
