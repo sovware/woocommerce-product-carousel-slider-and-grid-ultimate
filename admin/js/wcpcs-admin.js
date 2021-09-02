@@ -43,7 +43,7 @@ jQuery(document).ready(function ($) {
 
 
 
-    $('.wcpscu_cart_button, .wcpscu_cart_icon, .theme_1, .theme_2, .theme_3, .theme_4, .theme_5').hide();
+    $('.wcpscu_cart_button, .wcpscu_cart_icon, .theme_1, .theme_2, .theme_3, .theme_4, .theme_5, .theme_6, .theme_7, .theme_8, .theme_9, .theme_10, .theme_11, .theme_12, .theme_13, .theme_14, .theme_15').hide();
 
     var $theme = $('.wcpscu_theme'); // get theme jQuery object
 
@@ -58,22 +58,40 @@ jQuery(document).ready(function ($) {
         ('theme_3' == $this.val()) ? $('.theme_3').show() : $('.theme_3').hide();
         ('theme_4' == $this.val()) ? $('.theme_4').show() : $('.theme_4').hide();
         ('theme_5' == $this.val()) ? $('.theme_5').show() : $('.theme_5').hide();
+        ('theme_6' == $this.val()) ? $('.theme_6').show() : $('.theme_6').hide();
+        ('theme_7' == $this.val()) ? $('.theme_7').show() : $('.theme_7').hide();
+        ('theme_8' == $this.val()) ? $('.theme_8').show() : $('.theme_8').hide();
+        ('theme_9' == $this.val()) ? $('.theme_9').show() : $('.theme_9').hide();
+        ('theme_10' == $this.val()) ? $('.theme_10').show() : $('.theme_10').hide();
+        ('theme_11' == $this.val()) ? $('.theme_11').show() : $('.theme_11').hide();
+        ('theme_12' == $this.val()) ? $('.theme_12').show() : $('.theme_12').hide();
+        ('theme_13' == $this.val()) ? $('.theme_13').show() : $('.theme_13').hide();
+        ('theme_14' == $this.val()) ? $('.theme_14').show() : $('.theme_14').hide();
+        ('theme_15' == $this.val()) ? $('.theme_15').show() : $('.theme_15').hide();
 
-        if( $this.val() == 'theme_4' && $this.val() == 'theme_5' ) {
-            $('.wcpscu_cart_button').hide();
-            $('.wcpscu_cart_icon').show();
+        if( $this.val() == 'theme_10 ') {
+            $('.wcpscu_quickView_button').show();
         } else {
-            $('.wcpscu_cart_button').show();
-            $('.wcpscu_cart_icon').hide();
+            $('.wcpscu_quickView_button').hide();
+        }
+
+        if( $this.val() == 'theme_4' || $this.val() == 'theme_5' || $this.val() == 'theme_6' || $this.val() == 'theme_7' || $this.val() == 'theme_8' || $this.val() == 'theme_9' || $this.val() == 'theme_10' || $this.val() == 'theme_11' || $this.val() == 'theme_12' || $this.val() == 'theme_13' || $this.val() == 'theme_14' ) {
+            $('.wcpscu_action_icon').show();
+        } else {
+            $('.wcpscu_action_icon').hide();
         }
     });
 
-    if( $('.wcpscu_theme').val() == 'theme_4' ||  $('.wcpscu_theme').val() == 'theme_5' ) {
-        $('.wcpscu_cart_button').hide();
-        $('.wcpscu_cart_icon').show();
+    if( $('.wcpscu_theme').val() == 'theme_10' ) {
+        $('.wcpscu_quickView_button').show();
     } else {
-        $('.wcpscu_cart_button').show();
-        $('.wcpscu_cart_icon').hide();
+        $('.wcpscu_quickView_button').hide();
+    }
+
+    if( $('.wcpscu_theme').val() == 'theme_4' || $('.wcpscu_theme').val() == 'theme_5' || $('.wcpscu_theme').val() == 'theme_6' || $('.wcpscu_theme').val() == 'theme_7' || $('.wcpscu_theme').val() == 'theme_8' || $('.wcpscu_theme').val() == 'theme_9' || $('.wcpscu_theme').val() == 'theme_10' || $('.wcpscu_theme').val() == 'theme_11' || $('.wcpscu_theme').val() == 'theme_12' || $('.wcpscu_theme').val() == 'theme_13' || $('.wcpscu_theme').val() == 'theme_14' ) {
+        $('.wcpscu_action_icon').show();
+    } else {
+        $('.wcpscu_action_icon').hide();
     }
 
     $('.wcpscu_radio_layout').hide();

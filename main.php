@@ -130,6 +130,7 @@ Final class Woocmmerce_Product_carousel_slider_ultimate
     public function wcpcsu_include(){
 
         require_once WCPCSU_INC_DIR . 'helper-functions.php';
+        require_once WCPCSU_INC_DIR . 'wishlist/wishlist.php';
         wpcsu_load_dependencies( 'all', WCPCSU_INC_DIR . 'classes/' );
     }
 

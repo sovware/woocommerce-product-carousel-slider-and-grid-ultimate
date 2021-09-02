@@ -1,0 +1,146 @@
+.ps-theme-woosw {
+    -ms-touch-action: none;
+    touch-action: none;
+    overflow: hidden !important;
+    -ms-overflow-style: none;
+}
+
+@supports (-ms-overflow-style: none) {
+    .ps-theme-woosw {
+        overflow: auto !important;
+    }
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .ps-theme-woosw {
+        overflow: auto !important;
+    }
+}
+
+.ps-theme-woosw.ps-active-x > .ps-scrollbar-x-rail,
+.ps-theme-woosw.ps-active-y > .ps-scrollbar-y-rail {
+    display: block;
+    background-color: transparent;
+}
+
+.ps-theme-woosw.ps-in-scrolling {
+    pointer-events: none;
+}
+
+.ps-theme-woosw.ps-in-scrolling.ps-x > .ps-scrollbar-x-rail {
+    background-color: rgba(0, 0, 0, .1) !important;
+}
+
+.ps-theme-woosw.ps-in-scrolling.ps-x > .ps-scrollbar-x-rail > .ps-scrollbar-x {
+    background-color: rgba(0, 0, 0, .58);
+}
+
+.ps-theme-woosw.ps-in-scrolling.ps-y > .ps-scrollbar-y-rail {
+    background-color: rgba(0, 0, 0, .1) !important;
+}
+
+.ps-theme-woosw.ps-in-scrolling.ps-y > .ps-scrollbar-y-rail > .ps-scrollbar-y {
+    background-color: rgba(0, 0, 0, .58);
+    width: 6px;
+    border-radius: 3px;
+}
+
+.ps-theme-woosw > .ps-scrollbar-x-rail {
+    display: none;
+    position: absolute;
+    /* please don't change 'position' */
+    opacity: 0;
+    transition: background-color .2s linear, opacity .2s linear;
+    bottom: 0;
+    /* there must be 'bottom' for ps-scrollbar-x-rail */
+    height: 6px;
+    border-radius: 3px;
+}
+
+.ps-theme-woosw > .ps-scrollbar-x-rail > .ps-scrollbar-x {
+    position: absolute;
+    /* please don't change 'position' */
+    background-color: rgba(0, 0, 0, .58);
+    border-radius: 0;
+    transition: background-color .2s linear, height .2s linear, width .2s ease-in-out, border-radius .2s ease-in-out;
+    bottom: 0;
+    /* there must be 'bottom' for ps-scrollbar-x */
+    height: 6px !important;
+    border-radius: 3px !important;
+}
+
+.ps-theme-woosw > .ps-scrollbar-x-rail:hover > .ps-scrollbar-x, .ps-theme-woosw > .ps-scrollbar-x-rail:active > .ps-scrollbar-x {
+    height: 6px;
+    border-radius: 3px;
+}
+
+.ps-theme-woosw > .ps-scrollbar-y-rail {
+    display: none;
+    position: absolute;
+    /* please don't change 'position' */
+    opacity: 0;
+    transition: background-color .2s linear, opacity .2s linear;
+    right: 0;
+    /* there must be 'right' for ps-scrollbar-y-rail */
+    width: 6px;
+    border-radius: 3px;
+}
+
+.ps-theme-woosw > .ps-scrollbar-y-rail > .ps-scrollbar-y {
+    position: absolute;
+    /* please don't change 'position' */
+    background-color: rgba(0, 0, 0, .58);
+    /* border-radius: 0; */
+    transition: background-color .2s linear, height .2s linear, width .2s ease-in-out, border-radius .2s ease-in-out;
+    right: 0;
+    /* there must be 'right' for ps-scrollbar-y */
+    width: 6px !important;
+    border-radius: 3px !important;
+}
+
+.ps-theme-woosw > .ps-scrollbar-y-rail:hover > .ps-scrollbar-y, .ps-theme-woosw > .ps-scrollbar-y-rail:active > .ps-scrollbar-y {
+    width: 6px;
+    border-radius: 3px;
+}
+
+.ps-theme-woosw:hover.ps-in-scrolling {
+    pointer-events: none;
+}
+
+.ps-theme-woosw:hover.ps-in-scrolling.ps-x > .ps-scrollbar-x-rail {
+    background-color: rgba(0, 0, 0, .58);
+}
+
+.ps-theme-woosw:hover.ps-in-scrolling.ps-x > .ps-scrollbar-x-rail > .ps-scrollbar-x {
+    background-color: rgba(0, 0, 0, .58);
+    height: 6px;
+    border-radius: 3px;
+}
+
+.ps-theme-woosw:hover.ps-in-scrolling.ps-y > .ps-scrollbar-y-rail {
+    background-color: rgba(0, 0, 0, .58);
+}
+
+.ps-theme-woosw:hover.ps-in-scrolling.ps-y > .ps-scrollbar-y-rail > .ps-scrollbar-y {
+    background-color: rgba(0, 0, 0, .58);
+    width: 6px;
+    border-radius: 3px;
+}
+
+.ps-theme-woosw:hover > .ps-scrollbar-x-rail:hover {
+    background-color: rgba(0, 0, 0, .1);
+    opacity: 1;
+}
+
+.ps-theme-woosw:hover > .ps-scrollbar-x-rail:hover > .ps-scrollbar-x {
+    background-color: rgba(0, 0, 0, .58);
+}
+
+.ps-theme-woosw:hover > .ps-scrollbar-y-rail:hover {
+    background-color: rgba(0, 0, 0, .1);
+    opacity: 1;
+}
+
+.ps-theme-woosw:hover > .ps-scrollbar-y-rail:hover > .ps-scrollbar-y {
+    background-color: rgba(0, 0, 0, .58);
+}

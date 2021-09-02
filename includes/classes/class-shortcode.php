@@ -78,8 +78,12 @@ class wcpcsu_Shortcode
         $cart_button_hover_color        = ! empty( $cart_button_hover_color[$theme] ) ? $cart_button_hover_color[$theme] : '#9A9A9A';
         $cart_button_hover_font_color   = ! empty( $cart_button_hover_font_color[$theme] ) ? $cart_button_hover_font_color[$theme] : '#ffffff';
         $ribbon_bg_color                = ! empty( $ribbon_bg_color[$theme] ) ? $ribbon_bg_color[$theme] : '#A4C741';
-        $quick_view_icon_color          = ! empty( $quick_view_icon_color[$theme] ) ? $quick_view_icon_color[$theme] : '#ffffff';
-        $quick_view_icon_back_color     = ! empty( $quick_view_icon_back_color[$theme] ) ? $quick_view_icon_back_color[$theme] : '#ff5500';
+        $action_icon_font_color         = ! empty( $action_icon_font_color[$theme] ) ? $action_icon_font_color[$theme] : '#363940';
+        $action_icon_hover_color        = ! empty( $action_icon_hover_color[$theme] ) ? $action_icon_hover_color[$theme] : '#363940';
+        $quick_view_button_color        = ! empty( $quick_view_button_color[$theme] ) ? $quick_view_button_color[$theme] : '#ffffff';
+        $quick_view_button_back_color   = ! empty( $quick_view_button_back_color[$theme] ) ? $quick_view_button_back_color[$theme] : '#363940';
+        $quick_view_button_hover_color  = ! empty( $quick_view_button_hover_color[$theme] ) ? $quick_view_button_hover_color[$theme] : '#ffffff';
+        $quick_view_button_hover_back_color   = ! empty( $quick_view_button_hover_back_color[$theme] ) ? $quick_view_button_hover_back_color[$theme] : '#000000';
 
         $paged                          =  wcpcsu_get_paged_num();
         $paged                          = ! empty( $paged ) ? $paged : '';
@@ -147,16 +151,16 @@ class wcpcsu_Shortcode
 
             --wpcu-ribbonBgColor: <?php echo $ribbon_bg_color; ?>;
 
-            --wpcu-actionIconColor: inherit;
-            --wpcu-actionIconColorHover: inherit;
+            --wpcu-actionIconColor: <?php echo $action_icon_font_color; ?>;
+            --wpcu-actionIconColorHover: <?php echo $action_icon_hover_color; ?>;
 
             --wpcu-productTypeColor: inherit;
             --wpcu-productTypeSize: inherit;
 
-            --wpcu-quickViewBtnBg: inherit;
-            --wpcu-quickViewBtnBgHover: inherit;
-            --wpcu-quickViewBtnColor: inherit;
-            --wpcu-quickViewBtnColorHover: inherit;
+            --wpcu-quickViewBtnBg: <?php echo $quick_view_button_back_color; ?>;
+            --wpcu-quickViewBtnBgHover: <?php echo $quick_view_button_hover_back_color; ?>;
+            --wpcu-quickViewBtnColor: <?php echo $quick_view_button_color; ?>;
+            --wpcu-quickViewBtnColorHover: <?php echo $quick_view_button_hover_color; ?>;
             --wpcu-quickViewBtnSize: inherit;
         "
         <?php if( 'carousel' == $layout ) { ?>
@@ -178,10 +182,10 @@ class wcpcsu_Shortcode
         <?php } ?>
         '
         data-wpcu-responsive='{
-            "575": {"slidesPerView": "2", "spaceBetween": "20"},
-            "767": {"slidesPerView": "3", "spaceBetween": "30"},
-            "991": {"slidesPerView": "4", "spaceBetween": "30"},
-            "1199": {"slidesPerView": "4", "spaceBetween": "30"}
+            "575": {"slidesPerView": "<?php echo $carousel_mobile_column; ?>", "spaceBetween": "20"},
+            "767": {"slidesPerView": "<?php echo $carousel_tablet_column; ?>", "spaceBetween": "30"},
+            "991": {"slidesPerView": "<?php echo $carousel_laptop_column; ?>", "spaceBetween": "30"},
+            "1199": {"slidesPerView": "<?php echo $carousel_desktop_column; ?>", "spaceBetween": "30"}
         }'
         <?php } ?>
         >
