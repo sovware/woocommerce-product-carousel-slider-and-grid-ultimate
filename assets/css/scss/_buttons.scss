@@ -108,6 +108,19 @@
             }
         }
     }
+    @include m("white"){
+        .button,
+        .added_to_cart{
+            background: #fff !important;
+            border-color: var(--borderColor);
+            color: var(--buttonColor) !important;
+            &:hover{
+                color: var(--buttonColorHover) !important;
+                background: var(--buttonBgColorHover) !important;
+                border-color: var(--buttonBgColorHover);
+            }
+        }
+    }
 }
 /* Quick view button */
 .wpcu-quick-view-btn{
@@ -115,7 +128,7 @@
     background: var(--quickViewBtnBg) !important;
     color: var(--quickViewBtnColor) !important;
     font-size: var(--quickViewBtnSize) !important;
-    display: flex;
+    display: flex !important;
     align-items: center;
     justify-content: center;
     padding: 5px 15px;
