@@ -520,7 +520,7 @@
 .wpcu-button--white .button,
 .wpcu-button--white .added_to_cart {
   background: #fff !important;
-  border-color: var(--wpcu-wpcu-borderColor);
+  border-color: var(--wpcu-borderColor);
   color: var(--wpcu-buttonColor) !important;
 }
 .wpcu-button--white .button:hover,
@@ -1565,7 +1565,7 @@
   -webkit-transition: 0.3s ease-out;
   -o-transition: 0.3s ease-out;
   transition: 0.3s ease-out;
-  border-top: 1px solid var(--wpcu-wpcu-borderColor);
+  border-top: 1px solid var(--wpcu-borderColor);
   -webkit-box-shadow: 0 10px 10px rgba(84, 77, 124, 0.1);
           box-shadow: 0 10px 10px rgba(84, 77, 124, 0.1);
   position: absolute;
@@ -1583,7 +1583,7 @@
   -o-transition: 0.3s ease;
   transition: 0.3s ease;
   height: 0;
-  border: 1px solid var(--wpcu-wpcu-borderColor);
+  border: 1px solid var(--wpcu-borderColor);
   border-top: 0 none;
 }
 .wpcu-theme_9 .wpcu-product--card__footer .wpcu-product__action-icons {
@@ -1685,7 +1685,7 @@
   background: #fff;
 }
 .wpcu-theme_11 .wpcu-product__details__right .wpcu-button--light a svg {
-  fill: var(--wpcu-wpcu-primaryColor);
+  fill: var(--wpcu-primaryColor);
   width: 17px;
 }
 .wpcu-theme_11 .wpcu-product__content {
@@ -1701,7 +1701,7 @@
   transition: 0.3s ease;
 }
 .wpcu-theme_11 .wpcu-product__content:hover {
-  border-color: var(--wpcu-wpcu-primaryColor);
+  border-color: var(--wpcu-primaryColor);
 }
 .wpcu-theme_11 .wpcu-product__content:hover .wpcu-quick-view-btn {
   visibility: visible;
@@ -1709,7 +1709,7 @@
   top: 50%;
 }
 .wpcu-theme_11 .wpcu-product__content:hover .wpcu-product__details {
-  background: var(--wpcu-wpcu-primaryColor);
+  background: var(--wpcu-primaryColor);
 }
 .wpcu-theme_11 .wpcu-product__content:hover .wpcu-product__details .wpcu-product__title a,
 .wpcu-theme_11 .wpcu-product__content:hover .wpcu-product__details .wpcu-product__price__sale,
@@ -1815,7 +1815,7 @@
   pointer-events: all;
 }
 .wpcu-theme_13 .wpcu-product__excerpt {
-  border-top: 1px solid var(--wpcu-wpcu-borderColor);
+  border-top: 1px solid var(--wpcu-borderColor);
   margin-top: 15px;
   padding-top: 14px;
 }
