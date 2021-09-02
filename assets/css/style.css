@@ -62,6 +62,8 @@
   --quickViewBtnColor: #fff;
   --quickViewBtnColorHover: #fff;
   --quickViewBtnSize: 14px;
+  /* card min height */
+  --cardMinHeight: 445px;
 }
 
 /* General Styles */
@@ -1795,4 +1797,36 @@
   border-top: 1px solid var(--borderColor);
   margin-top: 15px;
   padding-top: 14px;
+}
+
+/*===========================
+ Style: Theme Fourteen
+===========================*/
+.wpcu-theme_14 .wpcu-row {
+  margin: 0;
+}
+.wpcu-theme_14 .wpcu-product {
+  padding: 0;
+  margin: 25px -1px 0;
+  min-height: var(--cardMinHeight);
+}
+.wpcu-theme_14 .wpcu-product__content {
+  height: 100%;
+}
+.wpcu-theme_14 .wpcu-product__details {
+  margin-top: 15px;
+}
+.wpcu-theme_14 .wpcu-product__action-icons {
+  width: 100%;
+  padding: 0;
+  margin: 20px 0 2px;
+}
+.wpcu-theme_14 .wpcu-product__action-icons .wpcu-button {
+  line-height: 0;
+}
+.wpcu-theme_14 .wpcu-product__action-icons .wpcu-button .button {
+  line-height: 20px !important;
+}
+.wpcu-theme_14 .wpcu-product__action-icons a {
+  border-radius: 0;
 }
