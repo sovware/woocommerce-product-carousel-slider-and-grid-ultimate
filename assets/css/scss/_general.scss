@@ -5,12 +5,15 @@
     padding: 0 15px;
     font-family: 'Rubik', sans-serif;
     position: relative;
-    
+
 }
 
 /* Product image tweaks */
-.wpcu-product .wpcu-product__img img {
-    width: 100%;
+.wpcu-product{
+    box-sizing: border-box;
+    .wpcu-product__img img {
+        width: 100%;
+    }
 }
 
 /* Lazy load */
@@ -52,26 +55,26 @@
     @include e(btn) {
         width: 40px;
         height: 40px;
-        border: 1px solid var(--navBorderColor);
+        border: 1px solid var(--wpcu-navBorderColor);
         display: inline-flex;
         align-items: center;
         justify-content: center;
         margin: 0 5px;
         cursor: pointer;
         transition: 0.3s ease;
-        background: var(--navBgColor);
+        background: var(--wpcu-navBgColor);
 
         svg {
             width: 6px;
-            fill: var(--navArrowColor);
+            fill: var(--wpcu-navArrowColor);
         }
 
         &:hover {
-            border-color: var(--navBorderColorHover);
-            background: var(--navBgColorHover);
+            border-color: var(--wpcu-navBorderColorHover);
+            background: var(--wpcu-navBgColorHover);
 
             svg {
-                fill: var(--navArrowColorHover) !important;
+                fill: var(--wpcu-navArrowColorHover) !important;
             }
         }
     }
@@ -165,8 +168,8 @@
 }
 
 .wpcu-products__header h2 {
-    font-size: var(--headerFontSize);
-    color: var(--headerFontColor);
+    font-size: var(--wpcu-headerFontSize);
+    color: var(--wpcu-headerFontColor);
     font-weight: 500;
 }
 

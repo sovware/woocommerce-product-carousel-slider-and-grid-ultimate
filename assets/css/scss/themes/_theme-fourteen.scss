@@ -8,7 +8,7 @@
     .wpcu-product{
         padding: 0;
         margin: 25px -1px 0;
-        min-height: var(--cardMinHeight);
+        min-height: var(--wpcu-cardMinHeight);
         @include e(content){
             height: 100%;
         }

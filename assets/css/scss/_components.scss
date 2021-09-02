@@ -10,13 +10,13 @@
 
     a {
         text-decoration: none !important;
-        font-size: var(--productTitleSize) !important;
+        font-size: var(--wpcu-productTitleSize) !important;
         font-weight: normal;
-        color: var(--productTitleColor);
+        color: var(--wpcu-productTitleColor);
         letter-spacing: normal;
         transition: 0.3s ease;
         &:hover{
-            color: var(--productTitleColorHover);
+            color: var(--wpcu-productTitleColorHover);
         }
     }
 }
@@ -31,8 +31,8 @@
 
 /* Product type */
 .wpcu-product__type{
-    color: var(--productTypeColor);
-    font-size: var(--productTypeSize);
+    color: var(--wpcu-productTypeColor);
+    font-size: var(--wpcu-productTypeSize);
     display: block;
 }
 
@@ -56,9 +56,9 @@
 
     @include e(sale) {
         display: inline-block;
-        font-size: var(--productPriceSize);
+        font-size: var(--wpcu-productPriceSize);
         line-height: normal;
-        color: var(--productPriceColor);
+        color: var(--wpcu-productPriceColor);
         margin: 0 4px;
     }
 
@@ -91,8 +91,8 @@
         font-family: star;
 
         &:before {
-            color: var(--productRatingColor);
-            font-size: var(--productRatingSize);
+            color: var(--wpcu-productRatingColor);
+            font-size: var(--wpcu-productRatingSize);
             content: "\73\73\73\73\73";
             float: left;
             top: 0;
@@ -108,8 +108,8 @@
             left: 0;
             position: absolute;
             &:before {
-                color: var(--productRatingColor);
-                font-size: var(--productRatingSize);
+                color: var(--wpcu-productRatingColor);
+                font-size: var(--wpcu-productRatingSize);
                 content: "\53\53\53\53\53";
                 top: 0;
                 position: absolute;
@@ -218,7 +218,7 @@
         font-size: 18px;
         padding: 0 15px;
         transition: 0.3s ease;
-        color: var(--actionIconColor);
+        color: var(--wpcu-actionIconColor);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -226,11 +226,11 @@
             width: 18px;
             height: auto;
             transition: 0.3s ease;
-            fill: var(--actionIconColor);
+            fill: var(--wpcu-actionIconColor);
         }
         &:hover{
             svg{
-                fill: var(--actionIconColorHover);
+                fill: var(--wpcu-actionIconColorHover);
             }
         }
     }
@@ -238,12 +238,13 @@
         background: none;
         margin: -3px;
         a{
-            border: 1px solid var(--borderColor);
+            border: 1px solid var(--wpcu-borderColor);
             background: #fff;
             width: 45px;
             height: 45px;
             padding: 0;
             margin: 3px;
+            flex: none;
         }
     }
     @include m(sm){
@@ -258,13 +259,14 @@
         background: none;
         margin: -3px;
         a{
-            border: 1px solid var(--borderColor);
+            border: 1px solid var(--wpcu-borderColor);
             background: #fff;
             width: 45px;
             height: 45px;
             border-radius: 50%;
             padding: 0;
             margin: 3px;
+            flex: none;
         }
     }
     @include m(has-btn){
@@ -284,14 +286,14 @@
 .wpcu-product{
     @include m(card){
         .wpcu-product__content{
-            border: 1px solid var(--borderColor);
+            border: 1px solid var(--wpcu-borderColor);
             background: #fff;
         }
         @include e(body){
             padding: 20px;
         }
         @include e(footer){
-            border-top: 1px solid var(--borderColor);
+            border-top: 1px solid var(--wpcu-borderColor);
             padding: 20px;
             display: flex;
             align-items: center;

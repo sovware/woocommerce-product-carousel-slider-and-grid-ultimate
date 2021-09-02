@@ -9,12 +9,12 @@
 
     @include m(primary) {
         color: #fff;
-        background: var(--ribbonBgColor);
+        background: var(--wpcu-ribbonBgColor);
     }
 
     @include m(secondary){
         color: #fff;
-        background: var(--ribbonBgColor2);
+        background: var(--wpcu-ribbonBgColor2);
     }
 
     @include m(sm) {
@@ -44,11 +44,11 @@
         width: 50px;
         height: 50px;
         border-radius: 50%;
-        background: var(--ribbonBgColor);
+        background: var(--wpcu-ribbonBgColor);
         color: #fff;
         font-size: 14px;
         font-weight: normal;
-        padding: 8px;
+        padding: 0;
         white-space: nowrap;
     }
 }

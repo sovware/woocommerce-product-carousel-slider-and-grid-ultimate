@@ -19,10 +19,10 @@
 
             <div class="wpcu-overlay-content-bottom">
                 <div class="wpcu-product__action-icons wpcu-product__action-icons--boxed">
+                    <a href=""><img class="wpcu-svg" src="<?php echo WCPCSU_URL .'assets/icons/handbag.svg' ?>" alt="" /></a>
                     <a href=""><img class="wpcu-svg" src="<?php echo WCPCSU_URL .'assets/icons/eye.svg' ?>" alt="" /></a>
-                    <a href=""><img class="wpcu-svg" src="<?php echo WCPCSU_URL .'assets/icons/eye.svg' ?>" alt="" /></a>
-                    <a href=""><img class="wpcu-svg" src="<?php echo WCPCSU_URL .'assets/icons/eye.svg' ?>" alt="" /></a>
-                    <a href=""><img class="wpcu-svg" src="<?php echo WCPCSU_URL .'assets/icons/eye.svg' ?>" alt="" /></a>
+                    <a href=""><img class="wpcu-svg" src="<?php echo WCPCSU_URL .'assets/icons/heart.svg' ?>" alt="" /></a>
+                    <!-- <a href=""><img class="wpcu-svg" src="<?php //echo WCPCSU_URL .'assets/icons/share.svg' ?>" alt="" /></a> -->
                 </div>
             </div>
         </div>
