@@ -1,0 +1,30 @@
+/*===========================
+ Style: Theme Twelve
+===========================*/
+.wpcu-theme_12{
+    .wpcu-product{
+        @include e(details){
+            margin-top: 15px;
+        }
+        @include e(action-icons){
+            width: 100%;
+            padding: 0;
+            margin: 20px 0 2px;
+            .wpcu-button{
+                line-height: 0;
+                .button{
+                    line-height: 20px !important;
+                }
+            }
+            a{
+                border-radius: 3px;
+            }
+        }
+        @include e(content){
+            transition: 0.3s ease;
+            &:hover{
+                border-color: #68b22e;
+            }
+        }
+    }
+}

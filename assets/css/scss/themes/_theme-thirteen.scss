@@ -1,0 +1,80 @@
+/*===========================
+ Style: Theme Thirteen
+===========================*/
+.wpcu-theme_13{
+    .wpcu-product{
+        @include m(card){
+            @include e(body){
+                padding: 0;
+            }
+        }
+        @include e(details){
+            padding: 20px;
+        }
+        @include e(img){
+            &:before{
+                content: "";
+                width: 100%;
+                height: 100%;
+                background: rgba(0,0,0,0.6);
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index: 1;
+                visibility: hidden;
+                opacity: 0;
+                transition: 0.3s ease;
+            }
+        }
+        @include e("cover-content--middle"){
+            background: none;
+            padding: 20px;
+            visibility: hidden;
+            opacity: 0;
+            pointer-events: none;
+            transition: 0.3s ease;
+            box-shadow: none;
+            z-index: 2;
+            .wpcu-button{
+                p{
+                    display: block;
+                    margin: 0 5px;
+                }
+            }
+        }
+        @include e(action-icons){
+            width: 100%;
+            padding: 0;
+            margin: 20px 0 5px;
+            .wpcu-button{
+                line-height: 0;
+                .button{
+                    line-height: 20px !important;
+                }
+            }
+            a{
+                border-radius: 3px;
+            }
+        }
+        @include e(content){
+            &:hover{
+                .wpcu-product__img{
+                    &:before{
+                        visibility: visible;
+                        opacity: 1;
+                    }
+                }
+                .wpcu-product__cover-content--middle{
+                    visibility: visible;
+                    opacity: 1;
+                    pointer-events: all;
+                }
+            }
+        }
+        @include e(excerpt){
+            border-top: 1px solid var(--borderColor);
+            margin-top: 15px;
+            padding-top: 14px;
+        }
+    }
+}

@@ -21,11 +21,29 @@
     }
 }
 
+/* Product subtitle */
+.wpcu-product__subtitle{
+    font-size: 14px;
+    color: #9192a3;
+    display: block;
+}
+
+
 /* Product type */
 .wpcu-product__type{
     color: var(--productTypeColor);
     font-size: var(--productTypeSize);
     display: block;
+}
+
+/* Product excerpt */
+.wpcu-product__excerpt{
+    p{
+        font-size: 15px;
+        line-height: 1.7;
+        margin: 0;
+        color: #5a6671;
+    }
 }
 
 /* Product Price */
@@ -225,6 +243,14 @@
             height: 45px;
             padding: 0;
             margin: 3px;
+        }
+    }
+    @include m(sm){
+        margin: -5px;
+        a{
+            width: 40px;
+            height: 40px;
+            margin: 5px;
         }
     }
     @include m(circle){
