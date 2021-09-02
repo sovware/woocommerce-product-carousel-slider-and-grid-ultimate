@@ -14,8 +14,8 @@
     .added_to_cart,
     .button.added {
         min-height: 40px;
-        background: var(--buttonBgColor) !important;
-        color: var(--buttonColor) !important;
+        background: var(--wpcu-buttonBgColor) !important;
+        color: var(--wpcu-buttonColor) !important;
         border-radius: 0;
         text-transform: uppercase;
         font-size: 12px;
@@ -30,8 +30,8 @@
 
         &:hover {
             text-decoration: none !important;
-            background: var(--buttonBgColorHover) !important;
-            color: var(--buttonColorHover) !important;
+            background: var(--wpcu-buttonBgColorHover) !important;
+            color: var(--wpcu-buttonColorHover) !important;
         }
     }
 
@@ -42,9 +42,9 @@
             background: #fff !important;
             color: $textLight !important;
             &:hover{
-                color: var(--buttonColor) !important;
-                background: var(--buttonBgColorHover) !important;
-                border-color: var(--buttonBgColorHover) !important;
+                color: var(--wpcu-buttonColor) !important;
+                background: var(--wpcu-buttonBgColorHover) !important;
+                border-color: var(--wpcu-buttonBgColorHover) !important;
             }
         }
     }
@@ -87,12 +87,12 @@
             width: 40px;
             height: 40px;
             border-radius: 50%;
-            background: var(--qvBgColor);
+            background: var(--wpcu-actionIconColor);
 
             svg {
                 width: 14px;
                 height: 14px;
-                fill: var(--qvIconColor);
+                fill: var(--wpcu-actionIconColor);
             }
         }
     }
@@ -112,12 +112,12 @@
         .button,
         .added_to_cart{
             background: #fff !important;
-            border-color: var(--borderColor);
-            color: var(--buttonColor) !important;
+            border-color: var(--wpcu-borderColor);
+            color: var(--wpcu-buttonColor) !important;
             &:hover{
-                color: var(--buttonColorHover) !important;
-                background: var(--buttonBgColorHover) !important;
-                border-color: var(--buttonBgColorHover);
+                color: var(--wpcu-buttonColorHover) !important;
+                background: var(--wpcu-buttonBgColorHover) !important;
+                border-color: var(--wpcu-buttonBgColorHover);
             }
         }
     }
@@ -125,17 +125,17 @@
 /* Quick view button */
 .wpcu-quick-view-btn{
     min-height: 32px;
-    background: var(--quickViewBtnBg) !important;
-    color: var(--quickViewBtnColor) !important;
-    font-size: var(--quickViewBtnSize) !important;
+    background: var(--wpcu-quickViewBtnBg) !important;
+    color: var(--wpcu-quickViewBtnColor) !important;
+    font-size: var(--wpcu-quickViewBtnSize) !important;
     display: flex !important;
     align-items: center;
     justify-content: center;
     padding: 5px 15px;
     text-decoration: none !important;
     &:hover{
-        background: var(--quickViewBtnBgHover) !important;
-        color: var(--quickViewBtnColorHover) !important;
+        background: var(--wpcu-quickViewBtnBgHover) !important;
+        color: var(--wpcu-quickViewBtnColorHover) !important;
     }
 }
 

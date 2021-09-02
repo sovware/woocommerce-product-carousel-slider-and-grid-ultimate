@@ -21,69 +21,76 @@ $textDark: #000000;
 
 :root {
     /* Default variables */
-    --primaryColor: #ff5500;
-    --textDefault: #363940;
-    --borderColor: #e4e4ed;
-    --textLight: #9192a3;
+    --wpcu-primaryColor: #ff5500;
+    --wpcu-textDefault: #363940;
+    --wpcu-borderColor: #e4e4ed;
+    --wpcu-textLight: #9192a3;
 
     /* Grid/Carousel Header */
-    --headerFontSize: 24px;
-    --headerFontColor: #000;
+    --wpcu-headerFontSize: 24px;
+    --wpcu-headerFontColor: #000;
 
     /* Product Title */
-    --productTitleSize: 16px;
-    --productTitleColor: #363940;
-    --productTitleColorHover: #000;
+    --wpcu-productTitleSize: 16px;
+    --wpcu-productTitleColor: #363940;
+    --wpcu-productTitleColorHover: #000;
 
     /* Product type color */
-    --productTypeColor: #9192a3;
-    --productTypeSize: 12px;
+    --wpcu-productTypeColor: #9192a3;
+    --wpcu-productTypeSize: 12px;
 
     /* Product Price */
-    --productPriceSize: 16px;
-    --productPriceColor: #ff5500;
+    --wpcu-productPriceSize: 16px;
+    --wpcu-productPriceColor: #ff5500;
 
     /* Product Ratings */
-    --productRatingSize: 16px;
-    --productRatingColor: #feb507;
+    --wpcu-productRatingSize: 16px;
+    --wpcu-productRatingColor: #feb507;
 
     /* "Add to Cart" Button */
-    --buttonColor: #fff;
-    --buttonColorHover: #fff;
-    --buttonBgColor: #ff5500;
-    --buttonBgColorHover: #d54500;
+    --wpcu-buttonColor: #fff;
+    --wpcu-buttonColorHover: #fff;
+    --wpcu-buttonBgColor: #ff5500;
+    --wpcu-buttonBgColorHover: #d54500;
 
     /* Ribbon */
-    --ribbonBgColor: #ff5500;
-    --ribbonBgColor2: #00b46a;
+    --wpcu-ribbonBgColor: #ff5500;
+    --wpcu-ribbonBgColor2: #00b46a;
 
     /* Quick view icon */
-    --qvIconColor: #fff;
-    --qvBgColor: #ff5500;
+    --wpcu-qvIconColor: #fff;
+    --wpcu-qvBgColor: #ff5500;
 
     /* Navigaiton */
-    --navArrowColor: #333;
-    --navArrowColorHover: #fff;
-    --navBgColor: #fff;
-    --navBgColorHover: #ff5500;
-    --navBorderColor: #e4e4ed;
-    --navBorderColorHover: #ff5500;
+    --wpcu-navArrowColor: #333;
+    --wpcu-navArrowColorHover: #fff;
+    --wpcu-navBgColor: #fff;
+    --wpcu-navBgColorHover: #ff5500;
+    --wpcu-navBorderColor: #e4e4ed;
+    --wpcu-navBorderColorHover: #ff5500;
 
     /* Pagination */
-    --pagColor: #333;
-    --pagColorHover: #fff;
-    --pagBorderColor: #e4e4e4;
-    --pagBorderColorHover: #ff5500;
-    --pagBgColor: #fff;
-    --pagBgColorHover: #ff5500;
-    --pagActiveColor: #fff;
-    --pagActiveBorderColor: #ff5500;
-    --pagActiveBgColor: #ff5500;
+    --wpcu-pagColor: #333;
+    --wpcu-pagColorHover: #fff;
+    --wpcu-pagBorderColor: #e4e4e4;
+    --wpcu-pagBorderColorHover: #ff5500;
+    --wpcu-pagBgColor: #fff;
+    --wpcu-pagBgColorHover: #ff5500;
+    --wpcu-pagActiveColor: #fff;
+    --wpcu-pagActiveBorderColor: #ff5500;
+    --wpcu-pagActiveBgColor: #ff5500;
 
     /* Quick view button */
-    --quickViewBtnBg: #363940;
-    --quickViewBtnBgHover: #000;
-    --quickViewBtnColor: #fff;
-    --quickViewBtnColorHover: #fff;
-    --quickViewBtnSize: 14px;
+    --wpcu-quickViewBtnBg: #363940;
+    --wpcu-quickViewBtnBgHover: #000;
+    --wpcu-quickViewBtnColor: #fff;
+    --wpcu-quickViewBtnColorHover: #fff;
+    --wpcu-quickViewBtnSize: 14px;
+
+    /* card min height */
+    --wpcu-cardMinHeight: 445px;
+
+    /* action icon btn */
+    --wpcu-actionIconColor: #363940;
+    --wpcu-actionIconColorHover: #ff5500;
 }
