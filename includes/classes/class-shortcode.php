@@ -139,6 +139,10 @@ class wcpcsu_Shortcode
             --ribbonBgColor: <?php echo $ribbon_bg_color; ?>;
             --qvIconColor: <?php echo $quick_view_icon_color; ?>;
             --qvBgColor: <?php echo $quick_view_icon_back_color; ?>;
+            --actionIconColor: inherit;
+            --actionIconColorHover: inherit;
+            --productTypeColor: inherit;
+            --productTypeSize: inherit;
         "
         <?php if( 'carousel' == $layout ) { ?>
         data-wpcu-items="4"
@@ -156,7 +160,7 @@ class wcpcsu_Shortcode
         }
         <?php } else { ?>
             false
-        <?php } ?>    
+        <?php } ?>
         '
         data-wpcu-responsive='{
             "575": {"slidesPerView": "2", "spaceBetween": "20"},

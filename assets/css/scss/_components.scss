@@ -218,7 +218,7 @@
         font-size: 18px;
         padding: 0 15px;
         transition: 0.3s ease;
-        color: var(--textDefault);
+        color: var(--actionIconColor);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -226,10 +226,11 @@
             width: 18px;
             height: auto;
             transition: 0.3s ease;
+            fill: var(--actionIconColor);
         }
         &:hover{
             svg{
-                fill: var(--primaryColor);
+                fill: var(--actionIconColorHover);
             }
         }
     }
