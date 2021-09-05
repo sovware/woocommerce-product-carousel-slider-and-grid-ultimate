@@ -43,7 +43,7 @@ jQuery(document).ready(function ($) {
 
 
 
-    $('.wcpscu_cart_button, .wcpscu_cart_icon, .theme_1, .theme_2, .theme_3, .theme_4, .theme_5, .theme_6, .theme_7, .theme_8, .theme_9, .theme_10, .theme_11, .theme_12, .theme_13, .theme_14, .theme_15').hide();
+    $('.wcpscu_cart_icon, .theme_1, .theme_2, .theme_3, .theme_4, .theme_5, .theme_6, .theme_7, .theme_8, .theme_9, .theme_10, .theme_11, .theme_12, .theme_13, .theme_14, .theme_15').hide();
 
     var $theme = $('.wcpscu_theme'); // get theme jQuery object
 

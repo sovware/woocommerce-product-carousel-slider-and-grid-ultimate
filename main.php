@@ -168,6 +168,10 @@ Final class Woocmmerce_Product_carousel_slider_ultimate
             'ajax_url'           => admin_url( 'admin-ajax.php' ),
     
         ));
+        wp_localize_script('wcpcsu-main-js','main_js',array(
+            'handbag_svg'           => WCPCSU_URL .'assets/icons/handbag.svg',
+    
+        ));
     }
 
     /**

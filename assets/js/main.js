@@ -73,5 +73,5 @@
 
     /* Add to cart icon for theme-4, theme-5 and theme-11 */
     $(".wpcu-theme_4 .add_to_cart_button").html(`<img class="wpcu-svg" src="<?php echo WCPCSU_URL .'assets/icons/handbag.svg' ?>" alt="" />`);
-
+    
 })(jQuery);
