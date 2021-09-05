@@ -6,5 +6,30 @@
         @include e(details){
             margin-top: 17px;
         }
+        @include e(action-icons){
+            .woocommerce{
+                padding: 0;
+                a{
+                    padding: 0;
+                    background: #fff;
+                    display: flex;
+                    border-radius: 0;
+                    &:hover{
+                        background: #fff;
+                    }
+                    svg{
+                        width: 18px;
+                    }
+                    &.added{
+                        svg{
+                            fill: var(--wpcu-primaryColor);
+                        }
+                    }
+                    &.added_to_cart{
+                        display: none !important;
+                    }
+                }
+            }
+        }
     }
 }

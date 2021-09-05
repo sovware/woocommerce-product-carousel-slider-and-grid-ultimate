@@ -156,7 +156,10 @@
 
 /* Header style */
 .wpcu-products__header {
-    margin-bottom: 30px;
+    margin-bottom: 30px !important;
+    padding: 0 15px;
+    width: 100% !important;
+    max-width: 100% !important;
 }
 
 .wpcu-products__header.wpcu-products__header--middle {

@@ -7,7 +7,7 @@
     */
 
     // Style reset in buttons p tag
-    document.querySelectorAll('.wpcu-button p.woocommerce').forEach((el, id) => {
+    document.querySelectorAll('.wpcu-button p.woocommerce, p.product').forEach((el, id) => {
         el.setAttribute('style', 'none');
     });
 
@@ -40,7 +40,9 @@
                 .catch(error => console.error(error))
         });
     }
-    convertImages('img.wpcu-svg');
+    window.addEventListener('load', function () {
+        convertImages('img.wpcu-svg');
+    })
 
 
     /* Check WPCU Carousel Data */
@@ -68,10 +70,9 @@
             },
             breakpoints: checkData(JSON.parse(el.dataset.wpcuResponsive), {})
         })
-        console.log(swiper);
     });
 
     /* Add to cart icon for theme-4, theme-5 and theme-11 */
-    $(".wpcu-theme_4 .add_to_cart_button").html(`<img class="wpcu-svg" src="<?php echo WCPCSU_URL .'assets/icons/handbag.svg' ?>" alt="" />`);
-    
+    $(".wpcu-theme_4 .woocommerce a, .wpcu-theme_5 .woocommerce a, .wpcu-theme_11 .woocommerce a").html(`<img class="wpcu-svg" src="${main_js.handbag_svg}" alt="" />`);
+
 })(jQuery);

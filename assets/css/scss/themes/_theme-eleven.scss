@@ -43,6 +43,30 @@
                 }
             }
         }
+        @include e(details__right){
+            .woocommerce{
+                a{
+                    padding: 0;
+                    background: none;
+                    padding: 0 10px !important;
+                    &:hover{
+                        background: none;
+                    }
+                    svg{
+                        width: 18px;
+                    }
+                    &.added{
+                        display: flex !important;
+                        svg{
+                            fill: var(--wpcu-primaryColor);
+                        }
+                    }
+                    &.added_to_cart{
+                        display: none !important;
+                    }
+                }
+            }
+        }
         @include e(content){
             transition: 0.3s ease;
             .wpcu-product__price__sale,

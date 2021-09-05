@@ -234,6 +234,11 @@
             }
         }
     }
+    p.product{
+        padding: 0 15px;
+        line-height: 0;
+        margin: 0;
+    }
     @include m(boxed){
         background: none;
         margin: -3px;
