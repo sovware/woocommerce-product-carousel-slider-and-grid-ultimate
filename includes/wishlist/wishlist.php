@@ -190,7 +190,7 @@ if ( ! function_exists( 'woosw_init' ) ) {
 						}
 
 							echo '<a href="#" class="' . esc_attr( $woosw_class ) . '" data-id="' . esc_attr( $id ) . '">
-							<img class="wpcu-svg" src=' . WCPCSU_URL . 'assets/icons/eye.svg /></a>';
+							<img class="wpcu-svg" src=' . WCPCSU_URL . 'assets/icons/heart.svg /></a>';
 
 					}
 				}
@@ -259,7 +259,7 @@ if ( ! function_exists( 'woosw_init' ) ) {
 							'menu_action'       => get_option( 'woosw_menu_action', 'open_page' ),
 							'popup_content'     => get_option( 'woosw_popup_content', 'list' ),
 							'button_text'       => apply_filters( 'woosw_button_text', get_option( 'woosw_button_text', esc_html__( 'Add to Wishlist', 'woosw' ) ) ),
-							'button_text_added' => '<img class="wpcu-svg src=' . WCPCSU_URL . 'assets/icons/eye.svg />'
+							'button_text_added' => '<img class="wpcu-svg src=' . WCPCSU_URL . 'assets/icons/heart.svg />'
 						)
 					);
 				}

@@ -19,9 +19,10 @@
 
             <div class="wpcu-overlay-content-bottom">
                 <div class="wpcu-product__action-icons wpcu-product__action-icons--boxed">
-                    <a href=""><img class="wpcu-svg" src="<?php echo WCPCSU_URL .'assets/icons/handbag.svg' ?>" alt="" /></a>
-                    <a href=""><img class="wpcu-svg" src="<?php echo WCPCSU_URL .'assets/icons/eye.svg' ?>" alt="" /></a>
-                    <a href=""><img class="wpcu-svg" src="<?php echo WCPCSU_URL .'assets/icons/heart.svg' ?>" alt="" /></a>
+                    <!-- <a href=""><img class="wpcu-svg" src="<?php echo WCPCSU_URL .'assets/icons/handbag.svg' ?>" alt="" /></a> -->
+                    <?php echo do_shortcode('[add_to_cart id="' . get_the_ID() . '" show_price = "false"]'); ?>
+                    <a href="" class="wpcu-btn-modal-js" data-wpcu-target="wpcu-product-01" data-product-id="<?php echo get_the_ID(); ?>" data-nonce="<?php  echo wp_create_nonce('wcpcsu_quick_view_' . get_the_ID() ); ?>"><img class="wpcu-svg" src="<?php echo WCPCSU_URL .'assets/icons/eye.svg' ?>" alt="" /></a>
+                    <?php do_action('wishlist_button');?>
                     <!-- <a href=""><img class="wpcu-svg" src="<?php //echo WCPCSU_URL .'assets/icons/share.svg' ?>" alt="" /></a> -->
                 </div>
             </div>

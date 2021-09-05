@@ -222,7 +222,7 @@ class wcpcsu_Shortcode
              } ?>
         </div><!-- ends: .wpcu-products -->
         <?php
-            if( 'theme_2' == $theme ){
+            if( 'theme_1' != $theme || 'theme_3' != $theme ) {
                 include WCPCSU_INC_DIR . 'template/quick-view.php';
             }
         ?>

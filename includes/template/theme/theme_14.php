@@ -36,13 +36,13 @@
             </div>
 
             <div class="wpcu-product__action-icons wpcu-product__action-icons--has-btn wpcu-product__action-icons--boxed wpcu-product__action-icons--tiled">
-                <a href=""><img class="wpcu-svg" src="<?php echo WCPCSU_URL .'assets/icons/eye.svg' ?>" alt="" /></a>
+                <a href="" class="wpcu-btn-modal-js" data-wpcu-target="wpcu-product-01" data-product-id="<?php echo get_the_ID(); ?>" data-nonce="<?php  echo wp_create_nonce('wcpcsu_quick_view_' . get_the_ID() ); ?>"><img class="wpcu-svg" src="<?php echo WCPCSU_URL .'assets/icons/eye.svg' ?>" alt="" /></a>
                 <?php if( 'yes' == $display_cart ) { ?>
                     <div class="wpcu-button wpcu-button--lg wpcu-button--white">
                         <?php echo do_shortcode('[add_to_cart id="' . get_the_ID() . '" show_price = "false"]'); ?>
                     </div>
                 <?php } ?>
-                <a href=""><img class="wpcu-svg" src="<?php echo WCPCSU_URL .'assets/icons/heart.svg' ?>" alt="" /></a>
+                <?php do_action('wishlist_button');?>
             </div>
         </div>
     </div>

@@ -5,16 +5,14 @@
                 <img src="<?php echo $wpcsu_img; ?>" alt="<?php echo get_the_title(); ?>">
             </a>
 
-            <!-- content top right corner -->
-            <div class="wpcu-product__cover-content wpcu-product__cover-content--top-right">
-                <span class="wpcu-badge wpcu-badge--primary wpcu-badge--circle">-50%</span>
-            </div>
+            <?php wpcsu_ribbon_badge( $ribbon_args, $this->aazz_show_discount_percentage() ); ?>
 
             <div class="wpcu-overlay-content-bottom">
                 <div class="wpcu-product__action-icons">
-                    <a href=""><img class="wpcu-svg" src="<?php echo WCPCSU_URL .'assets/icons/eye.svg' ?>" alt="" /></a>
-                    <a href=""><img class="wpcu-svg" src="<?php echo WCPCSU_URL .'assets/icons/heart.svg' ?>" alt="" /></a>
-                    <a href=""><img class="wpcu-svg" src="<?php echo WCPCSU_URL .'assets/icons/magnifier.svg' ?>" alt="" /></a>
+                    <a href="" class="wpcu-btn-modal-js" data-wpcu-target="wpcu-product-01" data-product-id="<?php echo get_the_ID(); ?>" data-nonce="<?php  echo wp_create_nonce('wcpcsu_quick_view_' . get_the_ID() ); ?>"><img class="wpcu-svg" src="<?php echo WCPCSU_URL .'assets/icons/eye.svg' ?>" alt="" /></a>
+                    <?php do_action('wishlist_button');?>
+                    <!-- <a href=""><img class="wpcu-svg" src="<?php echo WCPCSU_URL .'assets/icons/handbag.svg' ?>" alt="" /></a> -->
+                    <?php echo do_shortcode('[add_to_cart id="' . get_the_ID() . '" show_price = "false"]'); ?>
                 </div>
             </div>
         </div>

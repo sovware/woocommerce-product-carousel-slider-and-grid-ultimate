@@ -5,22 +5,14 @@
                 <img src="<?php echo $wpcsu_img; ?>" alt="<?php echo get_the_title(); ?>">
             </a>
 
-            <!-- content top right corner -->
-            <div class="wpcu-product__cover-content wpcu-product__cover-content--top-left">
-                <span class="wpcu-badge wpcu-badge--secondary wpcu-badge--rounded wpcu-badge--text-lg">Hot</span>
-            </div>
-
-            <!-- content top left corner -->
-            <div class="wpcu-product__cover-content wpcu-product__cover-content--top-right wpcu-badge--text-lg">
-                <span class="wpcu-badge wpcu-badge--primary wpcu-badge--rounded">Sale</span>
-            </div>
+            <?php wpcsu_ribbon_badge( $ribbon_args, $this->aazz_show_discount_percentage() ); ?>
 
             <!-- content middle -->
             <div class="wpcu-product__cover-content wpcu-product__cover-content--middle">
                 <div class="wpcu-product__action-icons wpcu-product__action-icons--boxed">
-                    <a href=""><img class="wpcu-svg" src="<?php echo WCPCSU_URL .'assets/icons/eye.svg' ?>" alt="" /></a>
-                    <a href=""><img class="wpcu-svg" src="<?php echo WCPCSU_URL .'assets/icons/heart.svg' ?>" alt="" /></a>
-                    <a href=""><img class="wpcu-svg" src="<?php echo WCPCSU_URL .'assets/icons/share.svg' ?>" alt="" /></a>
+                    <a href="" class="wpcu-btn-modal-js" data-wpcu-target="wpcu-product-01" data-product-id="<?php echo get_the_ID(); ?>" data-nonce="<?php  echo wp_create_nonce('wcpcsu_quick_view_' . get_the_ID() ); ?>"><img class="wpcu-svg" src="<?php echo WCPCSU_URL .'assets/icons/eye.svg' ?>" alt="" /></a>
+                    <?php do_action('wishlist_button');?>
+                    <!-- <a href=""><img class="wpcu-svg" src="<?php echo WCPCSU_URL .'assets/icons/share.svg' ?>" alt="" /></a> -->
                 </div>
                 <?php if( 'yes' == $display_cart ) { ?>
                     <div class="wpcu-button wpcu-d-block">
