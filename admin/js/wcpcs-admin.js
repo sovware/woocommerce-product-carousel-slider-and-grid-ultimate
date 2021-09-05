@@ -69,7 +69,7 @@ jQuery(document).ready(function ($) {
         ('theme_14' == $this.val()) ? $('.theme_14').show() : $('.theme_14').hide();
         ('theme_15' == $this.val()) ? $('.theme_15').show() : $('.theme_15').hide();
 
-        if( $this.val() == 'theme_10 ') {
+        if( $this.val() == 'theme_10' || $this.val() == 'theme_11' ) {
             $('.wcpscu_quickView_button').show();
         } else {
             $('.wcpscu_quickView_button').hide();
@@ -82,7 +82,7 @@ jQuery(document).ready(function ($) {
         }
     });
 
-    if( $('.wcpscu_theme').val() == 'theme_10' ) {
+    if( $('.wcpscu_theme').val() == 'theme_10' || $('.wcpscu_theme').val() == 'theme_11' ) {
         $('.wcpscu_quickView_button').show();
     } else {
         $('.wcpscu_quickView_button').hide();
