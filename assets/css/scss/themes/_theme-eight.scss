@@ -1,35 +1,49 @@
 /*===========================
  Style: Theme Eight
 ===========================*/
-.wpcu-theme_8 {
-    .wpcu-product {
-        @include e(cover-content) {
-            @include m(top-left) {
-                top: 8px;
-                left: 10px;
+.wpcu-theme_8{
+    .wpcu-product{
+        @include e(img){
+            position: relative;
+            overflow: hidden;
+            .wpcu-quick-view-btn{
+                position: absolute;
+                left: 0;
+                bottom: -10px;
+                width: 100%;
+                visibility: hidden;
+                opacity: 0;
+                transition: 0.3s ease;
             }
-
-            @include m(top-right) {
-                top: 8px;
-                right: 10px;
-            }
-
-            @include m(bottom-right) {
-                bottom: 10px;
-                right: 10px;
-            }
-
-            @include m(bottom-left) {
-                bottom: 10px;
-                left: 10px;
-            }
+        }
+        @include e(details){
+            text-align: center;
+            margin-top: 17px;
         }
         @include e(action-icons){
+            width: 100%;
             padding: 0;
+            margin: 20px 0 10px;
+            .wpcu-button{
+                line-height: 20px;
+                .button.product_type_external{
+                    line-height: 15px !important;
+                }
+                p.product{
+                    padding: 3px;
+                    a{
+                        margin: 0;
+                    }
+                }
+            }
         }
         @include e(content){
+            transition: 0.3s ease;
             &:hover{
-                .wpcu-overlay-content-bottom{
+                box-shadow: 0 10px 10px rgba(#544d7c, 0.1);
+                .wpcu-quick-view-btn{
+                    visibility: visible;
+                    opacity: 1;
                     bottom: 0;
                 }
             }

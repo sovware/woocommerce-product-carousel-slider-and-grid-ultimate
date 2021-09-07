@@ -1,39 +1,35 @@
 /*===========================
  Style: Theme Ten
 ===========================*/
-.wpcu-theme_10{
-    .wpcu-product{
-        @include e(img){
-            position: relative;
-            overflow: hidden;
-            .wpcu-quick-view-btn{
-                position: absolute;
-                left: 0;
-                bottom: -10px;
-                width: 100%;
-                visibility: hidden;
-                opacity: 0;
-                transition: 0.3s ease;
+.wpcu-theme_10 {
+    .wpcu-product {
+        @include e(cover-content) {
+            @include m(top-left) {
+                top: 8px;
+                left: 10px;
             }
-        }
-        @include e(details){
-            text-align: center;
+
+            @include m(top-right) {
+                top: 8px;
+                right: 10px;
+            }
+
+            @include m(bottom-right) {
+                bottom: 10px;
+                right: 10px;
+            }
+
+            @include m(bottom-left) {
+                bottom: 10px;
+                left: 10px;
+            }
         }
         @include e(action-icons){
-            width: 100%;
             padding: 0;
-            margin: 20px 0 10px;
-            .wpcu-button{
-                line-height: 20px;
-            }
         }
         @include e(content){
-            transition: 0.3s ease;
             &:hover{
-                box-shadow: 0 10px 10px rgba(#544d7c, 0.1);
-                .wpcu-quick-view-btn{
-                    visibility: visible;
-                    opacity: 1;
+                .wpcu-overlay-content-bottom{
                     bottom: 0;
                 }
             }

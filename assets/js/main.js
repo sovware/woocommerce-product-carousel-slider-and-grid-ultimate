@@ -11,16 +11,6 @@
         el.setAttribute('style', 'none');
     });
 
-    //Lazy load
-    let lazyLoadContainer = document.querySelectorAll('.wpcu-lazy-load');
-    window.addEventListener('load', () => {
-        if (lazyLoadContainer.length !== 0) {
-            document.querySelectorAll('.wpcu-products').forEach((el) => {
-                el.classList.remove('wpcu-lazy-load');
-            })
-        }
-    })
-
     /* Replace all SVG images with inline SVG */
     const convertImages = (query, callback) => {
         const images = document.querySelectorAll(query);
@@ -40,7 +30,16 @@
                 .catch(error => console.error(error))
         });
     }
-    window.addEventListener('load', function () {
+    convertImages('img.wpcu-svg');
+
+    //Lazy load
+    let lazyLoadContainer = document.querySelectorAll('.wpcu-lazy-load');
+    window.addEventListener('load', () => {
+        if (lazyLoadContainer.length !== 0) {
+            document.querySelectorAll('.wpcu-products').forEach((el) => {
+                el.classList.remove('wpcu-lazy-load');
+            })
+        }
         convertImages('img.wpcu-svg');
     })
 
@@ -56,7 +55,8 @@
             slidesPerView: checkData(parseInt(el.dataset.wpcuItems), 4),
             spaceBetween: checkData(parseInt(el.dataset.wpcuMargin), 30),
             loop: checkData(JSON.parse(el.dataset.wpcuLoop.toLowerCase()), false),
-            slidesPerGroup: checkData(parseInt(el.dataset.wpcuPerslide), 1),
+            slidesPerGroup: checkData(parseInt(el.dataset.wpcuPerslide), 4),
+            loopFillGroupWithBlank: true,
             speed: checkData(parseInt(el.dataset.wpcuSpeed), 3000),
             autoplay: checkData(JSON.parse(el.dataset.wpcuAutoplay), {}),
             navigation: {
@@ -73,6 +73,6 @@
     });
 
     /* Add to cart icon for theme-4, theme-5 and theme-11 */
-    $(".wpcu-theme_4 .woocommerce a, .wpcu-theme_5 .woocommerce a, .wpcu-theme_11 .woocommerce a").html(`<img class="wpcu-svg" src="${main_js.handbag_svg}" alt="" />`);
+    $(".wpcu-theme_4 .woocommerce a, .wpcu-theme_5 .woocommerce a, .wpcu-theme_9 .woocommerce a").html(`<img class="wpcu-svg" src="${main_js.handbag_svg}" alt="" />`);
 
 })(jQuery);

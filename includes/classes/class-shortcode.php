@@ -85,6 +85,16 @@ class wcpcsu_Shortcode
         $cart_button_hover_color        = ! empty( $cart_button_hover_color[$theme] ) ? $cart_button_hover_color[$theme] : '#9A9A9A';
         $cart_button_hover_font_color   = ! empty( $cart_button_hover_font_color[$theme] ) ? $cart_button_hover_font_color[$theme] : '#ffffff';
         $ribbon_bg_color                = ! empty( $ribbon_bg_color[$theme] ) ? $ribbon_bg_color[$theme] : '#A4C741';
+
+        $action_icon_font_color         = ! empty( $action_icon_font_color[$theme] ) ? esc_attr( $action_icon_font_color[$theme] ) : '#363940';
+        $action_icon_hover_color        = ! empty( $action_icon_hover_color[$theme] ) ? esc_attr( $action_icon_hover_color[$theme] ) : '#ff5500';
+
+        $quick_view_button_back_color   = ! empty( $quick_view_button_back_color[$theme] ) ? esc_attr( $quick_view_button_back_color[$theme] ) : '#363940';
+        $quick_view_button_hover_back_color = ! empty( $quick_view_button_hover_back_color[$theme] ) ? esc_attr( $quick_view_button_hover_back_color[$theme] ) : '#000000';
+        $quick_view_button_color        = ! empty( $quick_view_button_color[$theme] ) ? esc_attr( $quick_view_button_color[$theme] ) : '#ffffff';
+        $quick_view_button_hover_color  = ! empty( $quick_view_button_hover_color[$theme] ) ? esc_attr( $quick_view_button_hover_color[$theme] ) : '#ffffff';
+
+
         $quick_view_icon_color          = ! empty( $quick_view_icon_color[$theme] ) ? $quick_view_icon_color[$theme] : '#ffffff';
         $quick_view_icon_back_color     = ! empty( $quick_view_icon_back_color[$theme] ) ? $quick_view_icon_back_color[$theme] : '#ff5500';
 
@@ -127,31 +137,44 @@ class wcpcsu_Shortcode
         $pagi_active_border_color   = ! empty( $pagi_active_border_color ) ? $pagi_active_border_color : '#ff5500';
         $pagi_active_back_color     = ! empty( $pagi_active_back_color ) ? $pagi_active_back_color : '#ff5500';
         if( $loop->have_posts() ) { ?>
-
-            <?php if( 'yes' == $h_title_show ) { ?>
-            <div class="wpcu-products__header"> <!-- .wpcu-products__header--middle /.wpcu-products__header--right -->
-                <h2>The is the title</h2>
-            </div>
-            <?php } ?>
-        <div
-        class="wpcu-products wpcu-<?php echo $theme; ?> wpcu-lazy-load <?php echo ( 'carousel' == $layout ) ? 'wpcu-carousel' : ''; ?>"
+        <div class="wpcu-products__header--middle"> <!-- .wpcu-products__header--middle /.wpcu-products__header--right -->
+            <h2>The is the title</h2>
+        </div>
+        <div class="wpcu-products wpcu-carousel--marquee wpcu-<?php echo $theme; ?> wpcu-lazy-load <?php echo ( 'carousel' == $layout ) ? 'wpcu-carousel' : ''; ?>"
         style="
-            --headerFontSize: inherit;
-            --headerFontColor: inherit;
-            --productTitleSize: <?php echo $title_font_size; ?>px;
-            --productTitleColor: <?php echo $title_font_color; ?>;
-            --productTitleColorHover: <?php echo $title_hover_font_color; ?>;
-            --productPriceSize: <?php echo $price_font_size; ?>px;
-            --productPriceColor: <?php echo $price_font_color; ?>;
-            --productRatingSize: <?php echo $ratings_size; ?>px;
-            --productRatingColor: <?php echo $ratings_color; ?>;
-            --buttonColor: <?php echo $cart_font_color; ?>;
-            --buttonColorHover: <?php echo $cart_button_hover_font_color; ?>;
-            --buttonBgColor: <?php echo $cart_bg_color; ?>;
-            --buttonBgColorHover: <?php echo $cart_button_hover_color; ?>;
-            --ribbonBgColor: <?php echo $ribbon_bg_color; ?>;
-            --qvIconColor: <?php echo $quick_view_icon_color; ?>;
-            --qvBgColor: <?php echo $quick_view_icon_back_color; ?>;
+            --wpcu-headerFontSize: inherit;
+            --wpcu-headerFontColor: inherit;
+
+            --wpcu-productTitleSize: <?php echo $title_font_size; ?>px;
+            --wpcu-productTitleColor: <?php echo $title_font_color; ?>;
+            --wpcu-productTitleColorHover: <?php echo $title_hover_font_color; ?>;
+
+            --wpcu-productPriceSize: <?php echo $price_font_size; ?>px;
+            --wpcu-productPriceColor: <?php echo $price_font_color; ?>;
+
+            --wpcu-productRatingSize: <?php echo $ratings_size; ?>px;
+            --wpcu-productRatingColor: <?php echo $ratings_color; ?>;
+
+            --wpcu-buttonColor: <?php echo $cart_font_color; ?>;
+            --wpcu-buttonColorHover: <?php echo $cart_button_hover_font_color; ?>;
+            --wpcu-buttonBgColor: <?php echo $cart_bg_color; ?>;
+            --wpcu-buttonBgColorHover: <?php echo $cart_button_hover_color; ?>;
+
+            --wpcu-ribbonBgColor: <?php echo $ribbon_bg_color; ?>;
+
+            --wpcu-actionIconColor: <?php echo $action_icon_font_color; ?>;
+            --wpcu-actionIconColorHover: <?php echo $action_icon_hover_color; ?>;
+
+            --wpcu-productTypeColor: inherit;
+            --wpcu-productTypeSize: inherit;
+
+            --wpcu-quickViewBtnBg: <?php echo $quick_view_button_back_color; ?>;
+            --wpcu-quickViewBtnBgHover: <?php echo $quick_view_button_hover_back_color; ?>;
+            --wpcu-quickViewBtnColor: <?php echo $quick_view_button_color; ?>;
+            --wpcu-quickViewBtnColorHover: <?php echo $quick_view_button_hover_color; ?>;
+            --wpcu-quickViewBtnSize: inherit;
+
+            --wpcu-imgHoverScale: scale(1.2);
         "
         <?php if( 'carousel' == $layout ) { ?>
         data-wpcu-items="4"
@@ -162,20 +185,28 @@ class wcpcsu_Shortcode
         data-wpcu-autoplay='
         <?php if( 'yes' == $A_play ) { ?>
         {
-            "delay": "<?php echo $slide_time; ?>",
+            "delay": "0",
             "pauseOnMouseEnter": <?php echo ( 'true' == $stop_hover ) ? "true" : "false"; ?>,
             "disableOnInteraction": false,
-            "stopOnLastSlide": true
+            "stopOnLastSlide": true,
+            "reverseDirection": false
         }
         <?php } else { ?>
             false
         <?php } ?>
         '
         data-wpcu-responsive='{
+<<<<<<< HEAD
             "575": {"slidesPerView": "2", "spaceBetween": "20"},
             "767": {"slidesPerView": "3", "spaceBetween": "30"},
             "991": {"slidesPerView": "4", "spaceBetween": "30"},
             "1199": {"slidesPerView": "4", "spaceBetween": "30"}
+=======
+            "575": {"slidesPerView": "<?php echo $carousel_mobile_column; ?>", "spaceBetween": "20", "slidesPerGroup":"1"},
+            "767": {"slidesPerView": "<?php echo $carousel_tablet_column; ?>", "spaceBetween": "30", "slidesPerGroup":"1"},
+            "991": {"slidesPerView": "<?php echo $carousel_laptop_column; ?>", "spaceBetween": "30", "slidesPerGroup":"1"},
+            "1199": {"slidesPerView": "<?php echo $carousel_desktop_column; ?>", "spaceBetween": "30"}
+>>>>>>> ec3eb7fb572f136fb54bc259286c3734307b773e
         }'
         <?php } ?>
         >

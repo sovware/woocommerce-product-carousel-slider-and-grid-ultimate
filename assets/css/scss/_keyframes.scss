@@ -8,3 +8,9 @@
         transform: rotate(360deg);
     }
 }
+
+@keyframes wpcu-marquee {
+    to {
+        transform: translateX(-100%);
+    }
+}
