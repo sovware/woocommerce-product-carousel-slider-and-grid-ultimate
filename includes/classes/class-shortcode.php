@@ -36,7 +36,7 @@ class wcpcsu_Shortcode
 
         $display_cart            = ! empty( $display_cart ) ? $display_cart : 'yes';
         $ribbon                  = ! empty( $ribbon ) ? $ribbon : 'discount';
-        $header                  = ! empty( $header ) ? $header : 'center';
+        $header_position                  = ! empty( $header_position ) ? $header_position : 'middle';
         $h_title_show            = ! empty( $h_title_show ) ? $h_title_show : 'no';
         $display_full_title      = ! empty( $display_full_title ) ? $display_full_title : 'no';
         $g_column                = ! empty( $g_column ) ? intval( $g_column ) : 3;
@@ -50,6 +50,13 @@ class wcpcsu_Shortcode
         $display_price           = ! empty( $display_price ) ? $display_price : 'yes';
         $display_ratings         = ! empty( $display_ratings ) ? $display_ratings : 'yes';
         $quick_view              = ! empty( $quick_view ) ? $quick_view : 'yes';
+
+        $header_position_class = '';
+        if( 'middle' == $header_position ) {
+            $header_position_class = '--middle';
+        } else { 
+            $header_position_class = '--right';
+        }
 
         $ribbon_args = array(
             'display_sale_ribbon'        => ! empty( $display_sale_ribbon ) ? $display_sale_ribbon : 'no',
@@ -78,19 +85,11 @@ class wcpcsu_Shortcode
         $cart_button_hover_color        = ! empty( $cart_button_hover_color[$theme] ) ? $cart_button_hover_color[$theme] : '#9A9A9A';
         $cart_button_hover_font_color   = ! empty( $cart_button_hover_font_color[$theme] ) ? $cart_button_hover_font_color[$theme] : '#ffffff';
         $ribbon_bg_color                = ! empty( $ribbon_bg_color[$theme] ) ? $ribbon_bg_color[$theme] : '#A4C741';
-        $action_icon_font_color         = ! empty( $action_icon_font_color[$theme] ) ? $action_icon_font_color[$theme] : '#363940';
-        $action_icon_hover_color        = ! empty( $action_icon_hover_color[$theme] ) ? $action_icon_hover_color[$theme] : '#363940';
-        $quick_view_button_color        = ! empty( $quick_view_button_color[$theme] ) ? $quick_view_button_color[$theme] : '#ffffff';
-        $quick_view_button_back_color   = ! empty( $quick_view_button_back_color[$theme] ) ? $quick_view_button_back_color[$theme] : '#363940';
-        $quick_view_button_hover_color  = ! empty( $quick_view_button_hover_color[$theme] ) ? $quick_view_button_hover_color[$theme] : '#ffffff';
-        $quick_view_button_hover_back_color   = ! empty( $quick_view_button_hover_back_color[$theme] ) ? $quick_view_button_hover_back_color[$theme] : '#000000';
+        $quick_view_icon_color          = ! empty( $quick_view_icon_color[$theme] ) ? $quick_view_icon_color[$theme] : '#ffffff';
+        $quick_view_icon_back_color     = ! empty( $quick_view_icon_back_color[$theme] ) ? $quick_view_icon_back_color[$theme] : '#ff5500';
 
         $paged                          =  wcpcsu_get_paged_num();
         $paged                          = ! empty( $paged ) ? $paged : '';
-        // if we have queried the product based on the ratings then let's remove the filter we added.
-        if ($products_type == "top_rated") {
-            remove_filter('posts_clauses', array(__CLASS__, 'order_by_rating_post_clauses'));
-        }
         $loop                           = $this->parse_query( $data_array );
 
         // carousel settings
@@ -128,43 +127,31 @@ class wcpcsu_Shortcode
         $pagi_active_border_color   = ! empty( $pagi_active_border_color ) ? $pagi_active_border_color : '#ff5500';
         $pagi_active_back_color     = ! empty( $pagi_active_back_color ) ? $pagi_active_back_color : '#ff5500';
         if( $loop->have_posts() ) { ?>
-        <div class="wpcu-products__header"> <!-- .wpcu-products__header--middle /.wpcu-products__header--right -->
-            <h2>The is the title</h2>
-        </div>
+
+            <?php if( 'yes' == $h_title_show ) { ?>
+            <div class="wpcu-products__header"> <!-- .wpcu-products__header--middle /.wpcu-products__header--right -->
+                <h2>The is the title</h2>
+            </div>
+            <?php } ?>
         <div
         class="wpcu-products wpcu-<?php echo $theme; ?> wpcu-lazy-load <?php echo ( 'carousel' == $layout ) ? 'wpcu-carousel' : ''; ?>"
         style="
-            --wpcu-headerFontSize: inherit;
-            --wpcu-headerFontColor: inherit;
-
-            --wpcu-productTitleSize: <?php echo $title_font_size; ?>px;
-            --wpcu-productTitleColor: <?php echo $title_font_color; ?>;
-            --wpcu-productTitleColorHover: <?php echo $title_hover_font_color; ?>;
-
-            --wpcu-productPriceSize: <?php echo $price_font_size; ?>px;
-            --wpcu-productPriceColor: <?php echo $price_font_color; ?>;
-
-            --wpcu-productRatingSize: <?php echo $ratings_size; ?>px;
-            --wpcu-productRatingColor: <?php echo $ratings_color; ?>;
-
-            --wpcu-buttonColor: <?php echo $cart_font_color; ?>;
-            --wpcu-buttonColorHover: <?php echo $cart_button_hover_font_color; ?>;
-            --wpcu-buttonBgColor: <?php echo $cart_bg_color; ?>;
-            --wpcu-buttonBgColorHover: <?php echo $cart_button_hover_color; ?>;
-
-            --wpcu-ribbonBgColor: <?php echo $ribbon_bg_color; ?>;
-
-            --wpcu-actionIconColor: <?php echo $action_icon_font_color; ?>;
-            --wpcu-actionIconColorHover: <?php echo $action_icon_hover_color; ?>;
-
-            --wpcu-productTypeColor: inherit;
-            --wpcu-productTypeSize: inherit;
-
-            --wpcu-quickViewBtnBg: <?php echo $quick_view_button_back_color; ?>;
-            --wpcu-quickViewBtnBgHover: <?php echo $quick_view_button_hover_back_color; ?>;
-            --wpcu-quickViewBtnColor: <?php echo $quick_view_button_color; ?>;
-            --wpcu-quickViewBtnColorHover: <?php echo $quick_view_button_hover_color; ?>;
-            --wpcu-quickViewBtnSize: inherit;
+            --headerFontSize: inherit;
+            --headerFontColor: inherit;
+            --productTitleSize: <?php echo $title_font_size; ?>px;
+            --productTitleColor: <?php echo $title_font_color; ?>;
+            --productTitleColorHover: <?php echo $title_hover_font_color; ?>;
+            --productPriceSize: <?php echo $price_font_size; ?>px;
+            --productPriceColor: <?php echo $price_font_color; ?>;
+            --productRatingSize: <?php echo $ratings_size; ?>px;
+            --productRatingColor: <?php echo $ratings_color; ?>;
+            --buttonColor: <?php echo $cart_font_color; ?>;
+            --buttonColorHover: <?php echo $cart_button_hover_font_color; ?>;
+            --buttonBgColor: <?php echo $cart_bg_color; ?>;
+            --buttonBgColorHover: <?php echo $cart_button_hover_color; ?>;
+            --ribbonBgColor: <?php echo $ribbon_bg_color; ?>;
+            --qvIconColor: <?php echo $quick_view_icon_color; ?>;
+            --qvBgColor: <?php echo $quick_view_icon_back_color; ?>;
         "
         <?php if( 'carousel' == $layout ) { ?>
         data-wpcu-items="4"
@@ -185,10 +172,10 @@ class wcpcsu_Shortcode
         <?php } ?>
         '
         data-wpcu-responsive='{
-            "575": {"slidesPerView": "<?php echo $carousel_mobile_column; ?>", "spaceBetween": "20"},
-            "767": {"slidesPerView": "<?php echo $carousel_tablet_column; ?>", "spaceBetween": "30"},
-            "991": {"slidesPerView": "<?php echo $carousel_laptop_column; ?>", "spaceBetween": "30"},
-            "1199": {"slidesPerView": "<?php echo $carousel_desktop_column; ?>", "spaceBetween": "30"}
+            "575": {"slidesPerView": "2", "spaceBetween": "20"},
+            "767": {"slidesPerView": "3", "spaceBetween": "30"},
+            "991": {"slidesPerView": "4", "spaceBetween": "30"},
+            "1199": {"slidesPerView": "4", "spaceBetween": "30"}
         }'
         <?php } ?>
         >
@@ -225,7 +212,7 @@ class wcpcsu_Shortcode
              } ?>
         </div><!-- ends: .wpcu-products -->
         <?php
-            if( 'theme_1' != $theme || 'theme_3' != $theme ) {
+            if( 'theme_2' == $theme ){
                 include WCPCSU_INC_DIR . 'template/quick-view.php';
             }
         ?>
@@ -243,179 +230,51 @@ class wcpcsu_Shortcode
         $paged                          =  wcpcsu_get_paged_num();
         $paged                          = ! empty( $paged ) ? $paged : '';
         $common_args = array(
-            'post_type' => 'product',
-            'posts_per_page' => !empty($total_products) ? intval($total_products) : 12,
-            'post_status' => 'publish',
-            'ignore_sticky_posts' => true,
+            'post_type'      => 'product',
+            'posts_per_page' => ! empty( $total_products ) ? intval( $total_products ) : 12,
+            'post_status'    => 'publish',
+            'meta_query'     => array(
+                array(
+                    'key'       => '_stock_status',
+                    'value'     => 'outofstock',
+                    'compare'   => 'NOT IN'
+                )
+            )
         );
-        if('grid' == $layout && 'yes' == $grid_pagination) {
+        if( 'grid' == $layout && 'yes' == $grid_pagination ) {
             $common_args['paged']    = $paged;
         }
-        $meta_queries = array();
-        // exclude the stock out products from  the query if the user has explicitly set the value to exclude stock out products from he query. and if the user did not set any value then also remove the out of stock products from the query by default. Because the behaviour of the old version was to exclude the stock out products by default.
-        if (empty($exclude_stock_out) || (!empty($exclude_stock_out) && 'yes' == $exclude_stock_out)) {
-            $meta_queries[] = array(
-                array(
-                    'key' => '_stock_status',
-                    'value' => 'outofstock',
-                    'compare' => 'NOT IN'
-                )
-            );
-        }
-
-        if(!empty($atts_cat)) {
-            $atts_args = array(
-                'product_cat' => !empty($atts_cat) ? sanitize_text_field($atts_cat) : ''
-            );
-
-            $args = array_merge($common_args, $atts_args);
-        } elseif ($products_type == "latest") {
-
-            $latest_args = array(
-                'product_cat' => !empty($latest_products_bycategory) ? sanitize_text_field($latest_products_bycategory) : ''
-            );
-
-            $args = array_merge($common_args, $latest_args);
-        } elseif ($products_type == "older") {
-            $older_args = array(
-                'product_cat' => !empty($older_products_bycategory) ? sanitize_text_field($older_products_bycategory) : '',
-                'orderby' => 'date',
-                'order' => 'ASC'
-            );
-            $args = array_merge($common_args, $older_args);
-        } elseif ($products_type == "random") {
-            $random_args = array(
-                'product_cat' => !empty($random_products_bycategory) ? sanitize_text_field($random_products_bycategory) : null,
-                'orderby' => 'rand',
-            );
-            $args = array_merge($common_args, $random_args);
-        } elseif ($products_type == "top_rated") {
-
-            $common_args['orderby'] = "meta_value_num";
-            $common_args['meta_key'] = "_wc_average_rating";
-            $common_args['order'] = 'DESC';
-            $common_args['product_cat'] = !empty($top_rated_products_bycategory) ? sanitize_text_field($top_rated_products_bycategory) : null;
-
+        if( $products_type == "latest" ) {
             $args = $common_args;
-            // add this filter to fetch the product that has rating in them.
-            add_filter('posts_clauses', array(__CLASS__, 'order_by_rating_post_clauses'));
-        } elseif ($products_type == "onsale") {
-            $onsale_args = array(
-                'meta_query' => WC()->query->get_meta_query(),
-                'post__in' => array_merge(array(0), wc_get_product_ids_on_sale()));
-            $args = array_merge($common_args, $onsale_args);
-        } elseif ($products_type == "bestselling") {
-            $bestselling_args = array(
-                'product_cat' => !empty($bestselling_products_bycategory) ? sanitize_text_field($bestselling_products_bycategory) : '',
-                'meta_key' => 'total_sales',
-                'orderby' => 'meta_value_num'
+        }
+        elseif( $products_type == "older" ) {
+            $older_args = array(
+                'orderby'     => 'date',
+                'order'       => 'ASC'
             );
-            $args = array_merge($common_args, $bestselling_args);
-        } elseif ($products_type == "featured") {
-
-            $meta_query = WC()->query->get_meta_query();
-            $tax_query = WC()->query->get_tax_query();
+            $args = array_merge( $common_args, $older_args );
+        }
+        elseif( $products_type == "featured" ) {
+            $meta_query  = WC()->query->get_meta_query();
+            $tax_query   = WC()->query->get_tax_query();
 
             $tax_query[] = array(
                 'taxonomy' => 'product_visibility',
-                'field' => 'name',
-                'terms' => 'featured',
+                'field'    => 'name',
+                'terms'    => 'featured',
                 'operator' => 'IN',
             );
-
-            // restrict featured post to the specific category(s) only
-            if (!empty($featured_products_bycategory)) {
-                $tax_query[] = array(
-                    'taxonomy' => 'product_cat',
-                    'terms' => $featured_products_bycategory,
-                    'field' => 'slug',
-                    'operator' => 'IN',
-
-                );
-
-            }
-
-
             $featured_args = array(
                 'meta_query' => $meta_query,
                 'tax_query' => $tax_query,
             );
-            $args = array_merge($common_args, $featured_args);
-        } elseif ($products_type == "category") {
-            $category_args = array(
-                'product_cat' => !empty($products_bycategory) ? sanitize_text_field($products_bycategory) : '',
-            );
-            $args = array_merge($common_args, $category_args);
-        } elseif ($products_type == "productsbyid") {
-            // convert the strings of products ids (eg. 99, 937, 90, 935, 87, 93, 930)  into an array of integers
-            $products_ids = !empty($products_byid) ?
-                array_map(function ($id) {
-                    return intval(trim($id));
-                }, explode(',', $products_byid))
-                : null;
-            $productsbyid_args = array(
-                'post__in' => $products_ids,
-                'orderby' => 'post__in',
-                'order' => 'ASC',
+            $args = array_merge( $common_args, $featured_args );
+        }
 
-            );
-            $args = array_merge($common_args, $productsbyid_args);
-        } elseif ($products_type == "productsbytag") {
-            $productsbytag_args = array(
-                'product_tag' => (!empty($products_bytag) ? $products_bytag : null)
-            );
-            $args = array_merge($common_args, $productsbytag_args);
-        } elseif ($products_type == "productsbyyear") {
-            $productsbyyear_args = array(
-                'year' => !empty($prodcuts_from_year) ? intval($prodcuts_from_year) : 0
-            );
-            $args = array_merge($common_args, $productsbyyear_args);
-        } elseif ($products_type == "productsbymonth") {
-            $productsbymonth_args = array(
-                'monthnum' => !empty($prodcuts_from_month) ? intval($prodcuts_from_month) : 0,
-                'year' => !empty($prodcuts_from_month_year) ? intval($prodcuts_from_month_year) : 0
-
-            );
-            $args = array_merge($common_args, $productsbymonth_args);
-        }elseif ($products_type == "productsbymonth") {
-            $productsbymonth_args = array(
-                'monthnum' => !empty($prodcuts_from_month) ? intval($prodcuts_from_month) : 0,
-                'year' => !empty($prodcuts_from_month_year) ? intval($prodcuts_from_month_year) : 0
-
-            );
-            $args = array_merge($common_args, $productsbymonth_args);
-        } else {
+        else {
             $args = $common_args;
         }
-
-        if ($products_type == "productsbysku") {
-            if (isset ($prodcuts_bysku)) {
-                $prodcuts_bysku = explode(',', $prodcuts_bysku);
-                $prodcuts_bysku = array_map('trim', $prodcuts_bysku);
-                $meta_queries[] = array(
-                    'key' => '_sku',
-                    'value' => $prodcuts_bysku,
-                    'compare' => 'IN',
-                );
-
-                $sku_args = array(
-                        'orderby' => '_sku',
-                        'order' => 'ASC',
-                    );
-                $args = array_merge($common_args, $sku_args);
-            }
-        }
-        if("latest" == $products_type && !empty($prodcuts_from_days_ago)) {
-            $args['date_query'] = array(
-                'column'=> 'post_date_gmt',
-                'after'=> $prodcuts_from_days_ago
-            );
-        }
-        $count_meta_queries = count($meta_queries);
-        if ($count_meta_queries) {
-            $args['meta_query'] = ($count_meta_queries > 1) ? array_merge(array('relation' => 'AND'), $meta_queries) : $meta_queries;
-        }
-        $loop = new WP_Query($args);
+        $loop = new WP_Query( $args );
 
         return $loop;
     }
@@ -439,7 +298,7 @@ class wcpcsu_Shortcode
                     $price = $variation->get_regular_price();
                     $sale = $variation->get_sale_price();
                     if ( $price != 0 && ! empty( $sale ) ) $percentage = ( $price - $sale ) / $price * 100;
-                    if ( ! empty( $percentage ) && $percentage > $max_percentage ) {
+                    if ( $percentage > $max_percentage ) {
                         $max_percentage = $percentage;
                     }
                 }
