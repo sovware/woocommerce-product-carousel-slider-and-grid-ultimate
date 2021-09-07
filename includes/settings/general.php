@@ -4,7 +4,7 @@ $layout                     = ! empty( $layout ) ? $layout : 'carousel';
 $h_title_show               = ! empty( $h_title_show ) ? $h_title_show : 'no';
 $display_full_title         = ! empty( $display_full_title ) ? $display_full_title : 'yes';
 $ribbon                     = ! empty( $ribbon ) ? $ribbon : 'discount';
-$header                     = ! empty( $header ) ? $header : 'center';
+$header_position            = ! empty( $header_position ) ? $header_position : 'middle';
 $total_products_label       = ( ! empty( $layout ) && 'grid' == $layout ) ? __( "Products Per Page",WCPCSU_TEXTDOMAIN ) : __("Total Products to Display",WCPCSU_TEXTDOMAIN );
 $theme                      = ! empty( $theme ) ? $theme : 'theme_1';
 $display_sale_ribbon        = ! empty( $display_sale_ribbon ) ? $display_sale_ribbon : 'no';
@@ -153,11 +153,10 @@ $discount_ribbon_position   = ! empty( $discount_ribbon_position ) ? $discount_r
                             for="wcpscup_products_type"><?php esc_html_e('Header Position', WCPCSU_TEXTDOMAIN); ?></label>
                         <ul class="cmb2-radio-list cmb2-list">
                             <li>
-                                <input type="radio" class="cmb2-option" name="wcpscu[header]" id="center" value="center"
-                                    <?php if( empty($header) || $header == "center" )  {echo "checked"; } ?>>
-                                <label for="center"><?php esc_html_e('Center', WCPCSU_TEXTDOMAIN); ?></label>
+                                <input type="radio" class="cmb2-option" name="wcpscu[header_position]" id="middle" value="middle"
+                                <?php checked('middle', $header_position, true);  ?>>
+                                <label for="center"><?php esc_html_e('Middle', WCPCSU_TEXTDOMAIN); ?></label>
                             </li>
-
 
                             <li>
                                 <input type="radio" class="cmb2-option" name="wcpscu[header]" id="left" value="left"

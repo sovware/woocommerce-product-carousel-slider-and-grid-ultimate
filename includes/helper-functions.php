@@ -7,7 +7,7 @@ if (!function_exists('wcpcsu_pagination')) {
      *
      * @return string
      */
-    function wcpcsu_pagination($custom_post_query, $paged = 1)
+    function wcpcsu_pagination( $custom_post_query, $paged = 1 )
     {
         $navigation = '';
         $largeNumber = 999999999; // we need a large number here
