@@ -28,6 +28,7 @@
         }
         @include e("cover-content--middle"){
             background: none;
+            width: 100%;
             padding: 20px;
             visibility: hidden;
             opacity: 0;

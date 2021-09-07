@@ -26,13 +26,17 @@
         text-decoration: none !important;
         transition: 0.3s ease;
         border: 1px solid transparent;
-        line-height: unset !important;
+        line-height: 15px !important;
 
         &:hover {
             text-decoration: none !important;
             background: var(--wpcu-buttonBgColorHover) !important;
             color: var(--wpcu-buttonColorHover) !important;
         }
+    }
+    .button.product_type_external{
+        max-width: 150px;
+        line-height: 15px !important;
     }
 
     @include m(outlined) {
@@ -81,18 +85,18 @@
 
     @include m(icon-circle) {
         a {
-            display: inline-flex;
+            display: inline-flex !important;
             align-items: center;
             justify-content: center;
             width: 40px;
             height: 40px;
             border-radius: 50%;
-            background: var(--wpcu-actionIconColor);
+            background: var(--wpcu-primaryColor);
 
             svg {
                 width: 14px;
                 height: 14px;
-                fill: var(--wpcu-actionIconColor);
+                fill: #fff;
             }
         }
     }

@@ -10,9 +10,11 @@
             .woocommerce{
                 a{
                     padding: 0;
-                    background: none;
+                    background: none !important;
+                    border: 0 none;
                     &:hover{
                         background: none;
+                        border: 0 none;
                     }
                     svg{
                         width: 18px;

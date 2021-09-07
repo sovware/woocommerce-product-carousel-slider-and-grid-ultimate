@@ -23,17 +23,25 @@
 
 /* Product subtitle */
 .wpcu-product__subtitle{
-    font-size: 14px;
-    color: #9192a3;
     display: block;
+    a{
+        font-size: 14px;
+        color: #9192a3;
+        display: block;
+        text-decoration: none !important;
+    }
 }
 
 
 /* Product type */
 .wpcu-product__type{
-    color: var(--wpcu-productTypeColor);
-    font-size: var(--wpcu-productTypeSize);
     display: block;
+    a{
+        color: var(--wpcu-productTypeColor);
+        font-size: var(--wpcu-productTypeSize);
+        display: block;
+        text-decoration: none !important;
+    }
 }
 
 /* Product excerpt */
@@ -212,6 +220,7 @@
     padding: 17px 10px;
     margin: 0 -15px;
     display: inline-flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     a{
@@ -231,6 +240,16 @@
         &:hover{
             svg{
                 fill: var(--wpcu-actionIconColorHover);
+            }
+        }
+        &.woosw-added{
+            text-decoration: none;
+            &:before{
+                margin-right: 0;
+                color: var(--wpcu-primaryColor);
+            }
+            svg{
+                display: none;
             }
         }
     }

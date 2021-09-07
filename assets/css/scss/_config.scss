@@ -87,10 +87,13 @@ $textDark: #000000;
     --wpcu-quickViewBtnColorHover: #fff;
     --wpcu-quickViewBtnSize: 14px;
 
-    /* card min height */
+    /* Card min height */
     --wpcu-cardMinHeight: 445px;
 
-    /* action icon btn */
+    /* Action icon btn */
     --wpcu-actionIconColor: #363940;
     --wpcu-actionIconColorHover: #ff5500;
+
+    /* Image Zoom on hover */
+    --wpcu-imgHoverScale: scale(1.2);
 }

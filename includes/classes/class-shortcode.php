@@ -131,8 +131,7 @@ class wcpcsu_Shortcode
         <div class="wpcu-products__header"> <!-- .wpcu-products__header--middle /.wpcu-products__header--right -->
             <h2>The is the title</h2>
         </div>
-        <div
-        class="wpcu-products wpcu-<?php echo $theme; ?> wpcu-lazy-load <?php echo ( 'carousel' == $layout ) ? 'wpcu-carousel' : ''; ?>"
+        <div class="wpcu-products wpcu-carousel--marquee wpcu-<?php echo $theme; ?> wpcu-lazy-load <?php echo ( 'carousel' == $layout ) ? 'wpcu-carousel' : ''; ?>"
         style="
             --wpcu-headerFontSize: inherit;
             --wpcu-headerFontColor: inherit;
@@ -165,6 +164,8 @@ class wcpcsu_Shortcode
             --wpcu-quickViewBtnColor: <?php echo $quick_view_button_color; ?>;
             --wpcu-quickViewBtnColorHover: <?php echo $quick_view_button_hover_color; ?>;
             --wpcu-quickViewBtnSize: inherit;
+
+            --wpcu-imgHoverScale: scale(1.2);
         "
         <?php if( 'carousel' == $layout ) { ?>
         data-wpcu-items="4"
@@ -175,19 +176,20 @@ class wcpcsu_Shortcode
         data-wpcu-autoplay='
         <?php if( 'yes' == $A_play ) { ?>
         {
-            "delay": "<?php echo $slide_time; ?>",
+            "delay": "0",
             "pauseOnMouseEnter": <?php echo ( 'true' == $stop_hover ) ? "true" : "false"; ?>,
             "disableOnInteraction": false,
-            "stopOnLastSlide": true
+            "stopOnLastSlide": true,
+            "reverseDirection": false
         }
         <?php } else { ?>
             false
         <?php } ?>
         '
         data-wpcu-responsive='{
-            "575": {"slidesPerView": "<?php echo $carousel_mobile_column; ?>", "spaceBetween": "20"},
-            "767": {"slidesPerView": "<?php echo $carousel_tablet_column; ?>", "spaceBetween": "30"},
-            "991": {"slidesPerView": "<?php echo $carousel_laptop_column; ?>", "spaceBetween": "30"},
+            "575": {"slidesPerView": "<?php echo $carousel_mobile_column; ?>", "spaceBetween": "20", "slidesPerGroup":"1"},
+            "767": {"slidesPerView": "<?php echo $carousel_tablet_column; ?>", "spaceBetween": "30", "slidesPerGroup":"1"},
+            "991": {"slidesPerView": "<?php echo $carousel_laptop_column; ?>", "spaceBetween": "30", "slidesPerGroup":"1"},
             "1199": {"slidesPerView": "<?php echo $carousel_desktop_column; ?>", "spaceBetween": "30"}
         }'
         <?php } ?>

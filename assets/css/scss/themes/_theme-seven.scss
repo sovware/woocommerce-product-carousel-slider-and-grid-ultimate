@@ -27,6 +27,7 @@
         }
         @include e(action-icons){
             margin-bottom: 10px;
+            display: flex;
         }
         @include e(content){
             &:hover{
