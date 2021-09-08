@@ -194,6 +194,7 @@
 /* Carousel default */
 .wpcu-carousel{
     overflow: hidden;
+    /* Carousel marquee effect */
     @include m("marquee"){
         .swiper-wrapper{
             transition: none !important;

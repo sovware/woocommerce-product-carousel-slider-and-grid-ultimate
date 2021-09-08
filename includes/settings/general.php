@@ -9,7 +9,7 @@ $total_products_label       = ( ! empty( $layout ) && 'grid' == $layout ) ? __( 
 $theme                      = ! empty( $theme ) ? $theme : 'theme_1';
 $display_sale_ribbon        = ! empty( $display_sale_ribbon ) ? $display_sale_ribbon : 'no';
 $sale_ribbon_position       = ! empty( $sale_ribbon_position ) ? $sale_ribbon_position : 'top_left';
-$display_featured_ribbon    = ! empty( $display_featured_ribbon ) ? $display_featured_ribbon : 'no';    
+$display_featured_ribbon    = ! empty( $display_featured_ribbon ) ? $display_featured_ribbon : 'no';
 $featured_ribbon_position   = ! empty( $featured_ribbon_position ) ? $featured_ribbon_position : 'top_right';
 $display_sold_out_ribbon    = ! empty( $display_sold_out_ribbon ) ? $display_sold_out_ribbon : 'no';
 $sold_out_ribbon_position   = ! empty( $sold_out_ribbon_position ) ? $sold_out_ribbon_position : 'bottom_left';
@@ -31,7 +31,9 @@ $discount_ribbon_position   = ! empty( $discount_ribbon_position ) ? $discount_r
                             <div class="cmd-switch-item cmd-switch-carousel-img" data-value="carousel">
                                 <span class="cmd-switch-item-icon"><i class="fas fa-check-square"></i></span>
                                 <img src="<?php echo WCPCSU_URL .'admin/img/carousel.jpg' ?>" alt="carousel">
-                                <input type="radio" name="wcpscu[layout]" class="wcpscu_radio_layout wcpscu_carousel_layout" value="carousel" <?php checked( $layout, 'carousel' ); ?>>
+                                <input type="radio" name="wcpscu[layout]"
+                                    class="wcpscu_radio_layout wcpscu_carousel_layout" value="carousel"
+                                    <?php checked( $layout, 'carousel' ); ?>>
                             </div>
                             <p><?php _e( 'Carousel', WCPCSU_TEXTDOMAIN );?></p>
                         </div>
@@ -39,7 +41,8 @@ $discount_ribbon_position   = ! empty( $discount_ribbon_position ) ? $discount_r
                             <div class=" cmd-switch-item cmd-switch-grid-img" data-value="grid">
                                 <span class="cmd-switch-item-icon"><i class="fas fa-check-square"></i></span>
                                 <img src="<?php echo WCPCSU_URL .'admin/img/grid.jpg' ?>" alt="grid">
-                                <input type="radio" name="wcpscu[layout]" class="wcpscu_radio_layout wcpscu_grid_layout" value="grid" <?php checked( $layout, 'grid' ); ?>>
+                                <input type="radio" name="wcpscu[layout]" class="wcpscu_radio_layout wcpscu_grid_layout"
+                                    value="grid" <?php checked( $layout, 'grid' ); ?>>
                             </div>
                             <p><?php _e( 'Grid', WCPCSU_TEXTDOMAIN );?></p>
                         </div>
@@ -54,7 +57,7 @@ $discount_ribbon_position   = ! empty( $discount_ribbon_position ) ? $discount_r
                 <div class="cmb-td">
                     <div class="cmb-theme-wrapper">
                         <select id="theme_" class="wcpscu_theme" name="wcpscu[theme]">
-                            <option value="theme_1" <?php selected( $theme, 'theme_1'); ?> >Theme-1</option>
+                            <option value="theme_1" <?php selected( $theme, 'theme_1'); ?>>Theme-1</option>
                             <option value="theme_2" <?php selected( $theme, 'theme_2'); ?>>Theme-2
                             </option>
                             <option value="theme_3" <?php selected( $theme, 'theme_3'); ?>>Theme-3
@@ -129,15 +132,17 @@ $discount_ribbon_position   = ! empty( $discount_ribbon_position ) ? $discount_r
                 <div class="cmb-td">
                     <ul class="cmb2-radio-list cmb2-list cmb2-radio-switch">
                         <li>
-                            <input type="radio" class="cmb2-option cmb2-radio-switch1 wpcpsu_display_header_title" name="wcpscu[h_title_show]"
-                                id="wcpscu[h_title_show]1" value="yes" <?php checked('yes', $h_title_show, true);  ?>>
+                            <input type="radio" class="cmb2-option cmb2-radio-switch1 wpcpsu_display_header_title"
+                                name="wcpscu[h_title_show]" id="wcpscu[h_title_show]1" value="yes"
+                                <?php checked('yes', $h_title_show, true);  ?>>
                             <label for="wcpscu[h_title_show]1">
                                 <?php esc_html_e('Yes', WCPCSU_TEXTDOMAIN); ?>
                             </label>
                         </li>
                         <li>
-                            <input type="radio" class="cmb2-option cmb2-radio-switch2 wpcpsu_display_header_title" name="wcpscu[h_title_show]"
-                                id="wcpscu[h_title_show]2" value="no" <?php checked('no', $h_title_show, true);  ?>>
+                            <input type="radio" class="cmb2-option cmb2-radio-switch2 wpcpsu_display_header_title"
+                                name="wcpscu[h_title_show]" id="wcpscu[h_title_show]2" value="no"
+                                <?php checked('no', $h_title_show, true);  ?>>
                             <label for="wcpscu[h_title_show]2">
                                 <?php esc_html_e('No', WCPCSU_TEXTDOMAIN); ?>
                             </label>
@@ -153,21 +158,21 @@ $discount_ribbon_position   = ! empty( $discount_ribbon_position ) ? $discount_r
                             for="wcpscup_products_type"><?php esc_html_e('Header Position', WCPCSU_TEXTDOMAIN); ?></label>
                         <ul class="cmb2-radio-list cmb2-list">
                             <li>
-                                <input type="radio" class="cmb2-option" name="wcpscu[header_position]" id="middle" value="middle"
-                                <?php checked('middle', $header_position); ?>>
+                                <input type="radio" class="cmb2-option" name="wcpscu[header_position]" id="middle"
+                                    value="middle" <?php checked('middle', $header_position); ?>>
                                 <label for="middle"><?php esc_html_e('Middle', WCPCSU_TEXTDOMAIN); ?></label>
                             </li>
 
 
                             <li>
-                                <input type="radio" class="cmb2-option" name="wcpscu[header_position]" id="left" value="left"
-                                    <?php checked('left', $header_position); ?>>
+                                <input type="radio" class="cmb2-option" name="wcpscu[header_position]" id="left"
+                                    value="left" <?php checked('left', $header_position); ?>>
                                 <label for="left"><?php esc_html_e('Left', WCPCSU_TEXTDOMAIN); ?></label>
                             </li>
 
                             <li>
-                                <input type="radio" class="cmb2-option" name="wcpscu[header_position]" id="right" value="right"
-                                    <?php checked('right', $header_position); ?>>
+                                <input type="radio" class="cmb2-option" name="wcpscu[header_position]" id="right"
+                                    value="right" <?php checked('right', $header_position); ?>>
                                 <label for="right"><?php esc_html_e('Right', WCPCSU_TEXTDOMAIN); ?></label>
                             </li>
 
@@ -200,8 +205,8 @@ $discount_ribbon_position   = ! empty( $discount_ribbon_position ) ? $discount_r
                 </div>
             </div>
 
-           <!--Product type-->
-           <div class="cmb-row cmb-type-multicheck">
+            <!--Product type-->
+            <div class="cmb-row cmb-type-multicheck">
                 <div class="cmb-th">
                     <label for="wcpscup_products_type"><?php esc_html_e('Products Type', WCPCSU_TEXTDOMAIN); ?></label>
                 </div>
@@ -209,84 +214,83 @@ $discount_ribbon_position   = ! empty( $discount_ribbon_position ) ? $discount_r
                     <ul class="cmb2-radio-list cmb2-list">
 
                         <li>
-                            <input type="radio" class="cmb2-option"
-                                   name="wcpscu[products_type]" id="wcpscup_products_type"
-                                   value="latest" <?php if( empty($products_type) || $products_type == "latest" )  {echo "checked"; } ?>
-                            >
-                            <label for="wcpscup_products_type"><?php esc_html_e('Latest Products', WCPCSU_TEXTDOMAIN); ?></label>
+                            <input type="radio" class="cmb2-option" name="wcpscu[products_type]"
+                                id="wcpscup_products_type" value="latest"
+                                <?php if( empty($products_type) || $products_type == "latest" )  {echo "checked"; } ?>>
+                            <label
+                                for="wcpscup_products_type"><?php esc_html_e('Latest Products', WCPCSU_TEXTDOMAIN); ?></label>
 
                             <!--Category Selection-->
                             <p class="cmb2-metabox-description specific-categories latest">
                                 <?php esc_html_e('Category (leave it blank to display the latest products from all categories):', WCPCSU_TEXTDOMAIN); ?>
                             </p>
-                            <input type="text" class="cmb2-text-medium"
-                                   name="wcpscu[latest_products_bycategory]" id="wcpscup_products_bycategory"
-                                   value="<?php if(!empty($latest_products_bycategory)) { echo esc_attr($latest_products_bycategory); } ?>"
-                                   placeholder="e.g. clothing, shoes, watches">
+                            <input type="text" class="cmb2-text-medium" name="wcpscu[latest_products_bycategory]"
+                                id="wcpscup_products_bycategory"
+                                value="<?php if(!empty($latest_products_bycategory)) { echo esc_attr($latest_products_bycategory); } ?>"
+                                placeholder="e.g. clothing, shoes, watches">
 
                             <!--Days Ago-->
                             <p class="cmb2-metabox-description specific-days">
                                 <?php esc_html_e('Timeframe (leave it blank to display the latest products from all days):', WCPCSU_TEXTDOMAIN); ?>
                             </p>
-                            <input type="text" class="cmb2-text-medium"
-                                   name="wcpscu[prodcuts_from_days_ago]" id="prodcuts_from_days_ago"
-                                   value="<?php if(!empty($prodcuts_from_days_ago)) { echo esc_attr($prodcuts_from_days_ago); } ?>"
-                                   placeholder="e.g. 90 days ago">
+                            <input type="text" class="cmb2-text-medium" name="wcpscu[prodcuts_from_days_ago]"
+                                id="prodcuts_from_days_ago"
+                                value="<?php if(!empty($prodcuts_from_days_ago)) { echo esc_attr($prodcuts_from_days_ago); } ?>"
+                                placeholder="e.g. 90 days ago">
                         </li>
 
 
                         <li>
-                            <input type="radio" class="cmb2-option"
-                                   name="wcpscu[products_type]" id="wcpscup_products_type9"
-                                   value="older" <?php checked('older', $products_type); ?>
-                            >
-                            <label for="wcpscup_products_type9"><?php esc_html_e('Older Products', WCPCSU_TEXTDOMAIN); ?></label>
+                            <input type="radio" class="cmb2-option" name="wcpscu[products_type]"
+                                id="wcpscup_products_type9" value="older" <?php checked('older', $products_type); ?>>
+                            <label
+                                for="wcpscup_products_type9"><?php esc_html_e('Older Products', WCPCSU_TEXTDOMAIN); ?></label>
 
                             <!--Category Selection-->
                             <p class="cmb2-metabox-description specific-categories older">
                                 <?php esc_html_e('Category (leave it blank to display the oldest products from all categories):', WCPCSU_TEXTDOMAIN); ?>
                             </p>
-                            <input type="text" class="cmb2-text-medium"
-                                   name="wcpscu[older_products_bycategory]" id="wcpscup_products_bycategory4"
-                                   value="<?php if(!empty($older_products_bycategory)) { echo esc_attr($older_products_bycategory); } ?>"
-                                   placeholder="e.g. clothing, shoes, watches">
+                            <input type="text" class="cmb2-text-medium" name="wcpscu[older_products_bycategory]"
+                                id="wcpscup_products_bycategory4"
+                                value="<?php if(!empty($older_products_bycategory)) { echo esc_attr($older_products_bycategory); } ?>"
+                                placeholder="e.g. clothing, shoes, watches">
                         </li>
 
 
 
                         <li>
-                            <input type="radio" class="cmb2-option"
-                                   name="wcpscu[products_type]" id="wcpscup_products_type_top_rated"
-                                   value="top_rated" <?php checked('top_rated', $products_type); ?>
-                            >
-                            <label for="wcpscup_products_type_top_rated"><?php esc_html_e('Top Rated Products', WCPCSU_TEXTDOMAIN); ?></label>
+                            <input type="radio" class="cmb2-option" name="wcpscu[products_type]"
+                                id="wcpscup_products_type_top_rated" value="top_rated"
+                                <?php checked('top_rated', $products_type); ?>>
+                            <label
+                                for="wcpscup_products_type_top_rated"><?php esc_html_e('Top Rated Products', WCPCSU_TEXTDOMAIN); ?></label>
 
                             <!--Category Selection-->
                             <p class="cmb2-metabox-description specific-categories top_rated">
                                 <?php esc_html_e('Category (leave it blank to display the Top Rated products from all categories):', WCPCSU_TEXTDOMAIN); ?>
                             </p>
-                            <input type="text" class="cmb2-text-medium"
-                                   name="wcpscu[top_rated_products_bycategory]" id="top_rated_products_bycategory"
-                                   value="<?php if(!empty($top_rated_products_bycategory)) { echo esc_attr($top_rated_products_bycategory); } ?>"
-                                   placeholder="e.g. clothing, shoes, watches">
+                            <input type="text" class="cmb2-text-medium" name="wcpscu[top_rated_products_bycategory]"
+                                id="top_rated_products_bycategory"
+                                value="<?php if(!empty($top_rated_products_bycategory)) { echo esc_attr($top_rated_products_bycategory); } ?>"
+                                placeholder="e.g. clothing, shoes, watches">
                         </li>
 
 
                         <li>
-                            <input type="radio" class="cmb2-option"
-                                   name="wcpscu[products_type]" id="wcpscup_products_type_rand"
-                                   value="random" <?php checked('random', $products_type); ?>
-                            >
-                            <label for="wcpscup_products_type_rand"><?php esc_html_e('Random Products', WCPCSU_TEXTDOMAIN); ?></label>
+                            <input type="radio" class="cmb2-option" name="wcpscu[products_type]"
+                                id="wcpscup_products_type_rand" value="random"
+                                <?php checked('random', $products_type); ?>>
+                            <label
+                                for="wcpscup_products_type_rand"><?php esc_html_e('Random Products', WCPCSU_TEXTDOMAIN); ?></label>
 
                             <!--Category Selection-->
                             <p class="cmb2-metabox-description specific-categories random">
                                 <?php esc_html_e('Category (leave it blank to display the Random products from all categories):', WCPCSU_TEXTDOMAIN); ?>
                             </p>
-                            <input type="text" class="cmb2-text-medium"
-                                   name="wcpscu[random_products_bycategory]" id="random_products_bycategory"
-                                   value="<?php if(!empty($random_products_bycategory)) { echo esc_attr($random_products_bycategory); } ?>"
-                                   placeholder="e.g. clothing, shoes, watches">
+                            <input type="text" class="cmb2-text-medium" name="wcpscu[random_products_bycategory]"
+                                id="random_products_bycategory"
+                                value="<?php if(!empty($random_products_bycategory)) { echo esc_attr($random_products_bycategory); } ?>"
+                                placeholder="e.g. clothing, shoes, watches">
                         </li>
 
 
@@ -294,150 +298,151 @@ $discount_ribbon_position   = ! empty( $discount_ribbon_position ) ? $discount_r
 
 
                         <li>
-                            <input type="radio" class="cmb2-option"
-                                   name="wcpscu[products_type]" id="wcpscup_products_type1"
-                                   value="onsale" <?php checked('onsale', $products_type); ?>
-                            >
-                            <label for="wcpscup_products_type1"><?php esc_html_e('On Sale Products', WCPCSU_TEXTDOMAIN); ?></label>
+                            <input type="radio" class="cmb2-option" name="wcpscu[products_type]"
+                                id="wcpscup_products_type1" value="onsale" <?php checked('onsale', $products_type); ?>>
+                            <label
+                                for="wcpscup_products_type1"><?php esc_html_e('On Sale Products', WCPCSU_TEXTDOMAIN); ?></label>
 
                             <p class="cmb2-metabox-description specific-categories onsale">
                                 <?php esc_html_e('Category (leave it blank to display the on-sale products from all categories):', WCPCSU_TEXTDOMAIN); ?>
                             </p>
-                            <input type="text" class="cmb2-text-medium"
-                                   name="wcpscu[onsale_products_bycategory]" id="wcpscup_products_bycategory1"
-                                   value="<?php if(!empty($onsale_products_bycategory)) { echo esc_attr($onsale_products_bycategory); }  ?>"
-                                   placeholder="e.g. clothing, shoes, watches">
+                            <input type="text" class="cmb2-text-medium" name="wcpscu[onsale_products_bycategory]"
+                                id="wcpscup_products_bycategory1"
+                                value="<?php if(!empty($onsale_products_bycategory)) { echo esc_attr($onsale_products_bycategory); }  ?>"
+                                placeholder="e.g. clothing, shoes, watches">
                         </li>
 
 
 
-                        <li><input type="radio" class="cmb2-option"
-                                   name="wcpscu[products_type]" id="wcpscup_products_type2"
-                                   value="bestselling" <?php checked('bestselling', $products_type); ?>
-                            >
-                            <label for="wcpscup_products_type2"><?php esc_html_e('Best Selling Products', WCPCSU_TEXTDOMAIN); ?></label>
+                        <li><input type="radio" class="cmb2-option" name="wcpscu[products_type]"
+                                id="wcpscup_products_type2" value="bestselling"
+                                <?php checked('bestselling', $products_type); ?>>
+                            <label
+                                for="wcpscup_products_type2"><?php esc_html_e('Best Selling Products', WCPCSU_TEXTDOMAIN); ?></label>
 
                             <p class="cmb2-metabox-description specific-categories bestselling">
                                 <?php esc_html_e('Category (leave it blank to display the best selling products from all categories):', WCPCSU_TEXTDOMAIN); ?>
                             </p>
-                            <input type="text" class="cmb2-text-medium"
-                                   name="wcpscu[bestselling_products_bycategory]" id="wcpscup_products_bycategory2"
-                                   value="<?php if(!empty($bestselling_products_bycategory)) { echo esc_attr($bestselling_products_bycategory); }  ?>"
-                                   placeholder="e.g. clothing, shoes, watches">
+                            <input type="text" class="cmb2-text-medium" name="wcpscu[bestselling_products_bycategory]"
+                                id="wcpscup_products_bycategory2"
+                                value="<?php if(!empty($bestselling_products_bycategory)) { echo esc_attr($bestselling_products_bycategory); }  ?>"
+                                placeholder="e.g. clothing, shoes, watches">
                         </li>
 
                         <li>
-                            <input type="radio" class="cmb2-option"
-                                   name="wcpscu[products_type]" id="wcpscup_products_type3"
-                                   value="featured" <?php checked('featured', $products_type); ?>
-                            >
-                            <label for="wcpscup_products_type3"><?php esc_html_e('Featured Products', WCPCSU_TEXTDOMAIN); ?></label>
+                            <input type="radio" class="cmb2-option" name="wcpscu[products_type]"
+                                id="wcpscup_products_type3" value="featured"
+                                <?php checked('featured', $products_type); ?>>
+                            <label
+                                for="wcpscup_products_type3"><?php esc_html_e('Featured Products', WCPCSU_TEXTDOMAIN); ?></label>
 
                             <p class="cmb2-metabox-description specific-categories featured">
                                 <?php esc_html_e('Category (leave it blank to display Latest products from all categories):', WCPCSU_TEXTDOMAIN); ?>
                             </p>
-                            <input type="text" class="cmb2-text-medium"
-                                   name="wcpscu[featured_products_bycategory]" id="wcpscup_products_bycategory3"
-                                   value="<?php if(!empty($featured_products_bycategory)) { echo esc_attr($featured_products_bycategory); } ?>"
-                                   placeholder="e.g. clothing, shoes, watches">
+                            <input type="text" class="cmb2-text-medium" name="wcpscu[featured_products_bycategory]"
+                                id="wcpscup_products_bycategory3"
+                                value="<?php if(!empty($featured_products_bycategory)) { echo esc_attr($featured_products_bycategory); } ?>"
+                                placeholder="e.g. clothing, shoes, watches">
                         </li>
 
 
 
                         <li>
-                            <input type="radio" class="cmb2-option"
-                                   name="wcpscu[products_type]" id="wcpscup_products_type10"
-                                   value="category" <?php checked('category', $products_type); ?>
-                            >
-                            <label for="wcpscup_products_type10"><?php esc_html_e('Category Products', WCPCSU_TEXTDOMAIN); ?></label>
+                            <input type="radio" class="cmb2-option" name="wcpscu[products_type]"
+                                id="wcpscup_products_type10" value="category"
+                                <?php checked('category', $products_type); ?>>
+                            <label
+                                for="wcpscup_products_type10"><?php esc_html_e('Category Products', WCPCSU_TEXTDOMAIN); ?></label>
 
-                            <input type="text" class="cmb2-text-medium"
-                                   name="wcpscu[products_bycategory]" id="wcpscup_products_bycategory5"
-                                   value="<?php if(!empty($products_bycategory)) { echo esc_attr($products_bycategory); } ?>"
-                                   placeholder="e.g. clothing, shoes, watches">
+                            <input type="text" class="cmb2-text-medium" name="wcpscu[products_bycategory]"
+                                id="wcpscup_products_bycategory5"
+                                value="<?php if(!empty($products_bycategory)) { echo esc_attr($products_bycategory); } ?>"
+                                placeholder="e.g. clothing, shoes, watches">
                         </li>
 
 
                         <li class="productsbyidw">
-                            <input type="radio" class="cmb2-option"
-                                   name="wcpscu[products_type]" id="wcpscup_products_type4"
-                                   value="productsbyid" <?php checked('productsbyid', $products_type); ?>
-                            >
-                            <label for="wcpscup_products_type4"><?php esc_html_e('Products by ID', WCPCSU_TEXTDOMAIN); ?></label>
+                            <input type="radio" class="cmb2-option" name="wcpscu[products_type]"
+                                id="wcpscup_products_type4" value="productsbyid"
+                                <?php checked('productsbyid', $products_type); ?>>
+                            <label
+                                for="wcpscup_products_type4"><?php esc_html_e('Products by ID', WCPCSU_TEXTDOMAIN); ?></label>
 
-                            <input type="text" class="cmb2-text-medium"
-                                   name="wcpscu[products_byid]" id="wcpscup_products_byid"
-                                   value="<?php if(!empty($products_byid)) { echo esc_attr($products_byid); } ?>"
-                                   placeholder="e.g. 10, 11, 18">
+                            <input type="text" class="cmb2-text-medium" name="wcpscu[products_byid]"
+                                id="wcpscup_products_byid"
+                                value="<?php if(!empty($products_byid)) { echo esc_attr($products_byid); } ?>"
+                                placeholder="e.g. 10, 11, 18">
                         </li>
 
 
 
                         <li>
-                            <input type="radio" class="cmb2-option"
-                                   name="wcpscu[products_type]" id="wcpscup_products_type5"
-                                   value="productsbysku" <?php checked('productsbysku', $products_type); ?>
-                            >
-                            <label for="wcpscup_products_type5"><?php esc_html_e('Products by SKU', WCPCSU_TEXTDOMAIN); ?></label>
+                            <input type="radio" class="cmb2-option" name="wcpscu[products_type]"
+                                id="wcpscup_products_type5" value="productsbysku"
+                                <?php checked('productsbysku', $products_type); ?>>
+                            <label
+                                for="wcpscup_products_type5"><?php esc_html_e('Products by SKU', WCPCSU_TEXTDOMAIN); ?></label>
 
-                            <input type="text" class="cmb2-text-medium"
-                                   name="wcpscu[prodcuts_bysku]" id="wcpscup_prodcuts_bysku"
-                                   value="<?php if(!empty($prodcuts_bysku)) { echo esc_attr($prodcuts_bysku); }?>"
-                                   placeholder="e.g. Irmne, lrer, s1">
+                            <input type="text" class="cmb2-text-medium" name="wcpscu[prodcuts_bysku]"
+                                id="wcpscup_prodcuts_bysku"
+                                value="<?php if(!empty($prodcuts_bysku)) { echo esc_attr($prodcuts_bysku); }?>"
+                                placeholder="e.g. Irmne, lrer, s1">
                         </li>
 
 
 
                         <li>
-                            <input type="radio" class="cmb2-option"
-                                   name="wcpscu[products_type]" id="wcpscup_products_type6"
-                                   value="productsbytag" <?php checked('productsbytag', $products_type); ?>
-                            >
-                            <label for="wcpscup_products_type6"><?php esc_html_e('Products by Tags', WCPCSU_TEXTDOMAIN); ?></label>
+                            <input type="radio" class="cmb2-option" name="wcpscu[products_type]"
+                                id="wcpscup_products_type6" value="productsbytag"
+                                <?php checked('productsbytag', $products_type); ?>>
+                            <label
+                                for="wcpscup_products_type6"><?php esc_html_e('Products by Tags', WCPCSU_TEXTDOMAIN); ?></label>
 
-                            <input type="text" class="cmb2-text-medium"
-                                   name="wcpscu[products_bytag]" id="wcpscup_products_bytag"
-                                   value="<?php if(!empty($products_bytag)) { echo esc_attr($products_bytag); } ?>"
-                                   placeholder="e.g. hoody, clothing">
+                            <input type="text" class="cmb2-text-medium" name="wcpscu[products_bytag]"
+                                id="wcpscup_products_bytag"
+                                value="<?php if(!empty($products_bytag)) { echo esc_attr($products_bytag); } ?>"
+                                placeholder="e.g. hoody, clothing">
                         </li>
 
 
 
                         <li>
-                            <input type="radio" class="cmb2-option"
-                                   name="wcpscu[products_type]" id="wcpscup_products_type7"
-                                   value="productsbyyear" <?php  checked('productsbyyear', $products_type); ?>
-                            >
-                            <label for="wcpscup_products_type7"><?php esc_html_e('Products by Year', WCPCSU_TEXTDOMAIN); ?></label>
+                            <input type="radio" class="cmb2-option" name="wcpscu[products_type]"
+                                id="wcpscup_products_type7" value="productsbyyear"
+                                <?php  checked('productsbyyear', $products_type); ?>>
+                            <label
+                                for="wcpscup_products_type7"><?php esc_html_e('Products by Year', WCPCSU_TEXTDOMAIN); ?></label>
 
-                            <input type="text" class="cmb2-text-small"
-                                   name="wcpscu[prodcuts_from_year]" id="wcpscup_prodcuts_from_year"
-                                   value="<?php if(!empty($prodcuts_from_year)) { echo esc_attr($prodcuts_from_year); } ?>"
-                                   placeholder="e.g. 2014">
+                            <input type="text" class="cmb2-text-small" name="wcpscu[prodcuts_from_year]"
+                                id="wcpscup_prodcuts_from_year"
+                                value="<?php if(!empty($prodcuts_from_year)) { echo esc_attr($prodcuts_from_year); } ?>"
+                                placeholder="e.g. 2014">
                         </li>
 
 
 
                         <li>
-                            <input type="radio" class="cmb2-option"
-                                   name="wcpscu[products_type]" id="wcpscup_products_type8"
-                                   value="productsbymonth" <?php checked('productsbymonth', $products_type); ?>
-                            >
-                            <label for="wcpscup_products_type8"><?php esc_html_e('Products by Month', WCPCSU_TEXTDOMAIN); ?></label>
+                            <input type="radio" class="cmb2-option" name="wcpscu[products_type]"
+                                id="wcpscup_products_type8" value="productsbymonth"
+                                <?php checked('productsbymonth', $products_type); ?>>
+                            <label
+                                for="wcpscup_products_type8"><?php esc_html_e('Products by Month', WCPCSU_TEXTDOMAIN); ?></label>
 
-                            <input type="text" class="cmb2-text-small"
-                                   name="wcpscu[prodcuts_from_month]" id="wcpscup_prodcuts_from_month"
-                                   value="<?php if(!empty($prodcuts_from_month)) { echo esc_attr($prodcuts_from_month); } ?>"
-                                   placeholder="e.g. 11">
+                            <input type="text" class="cmb2-text-small" name="wcpscu[prodcuts_from_month]"
+                                id="wcpscup_prodcuts_from_month"
+                                value="<?php if(!empty($prodcuts_from_month)) { echo esc_attr($prodcuts_from_month); } ?>"
+                                placeholder="e.g. 11">
 
-                            <input type="text" class="cmb2-text-small"
-                                   name="wcpscu[prodcuts_from_month_year]" id="wcpscup_prodcuts_from_month_year"
-                                   value="<?php if(!empty($prodcuts_from_month_year)) { echo esc_attr($prodcuts_from_month_year); }  ?>"
-                                   placeholder="2014">
+                            <input type="text" class="cmb2-text-small" name="wcpscu[prodcuts_from_month_year]"
+                                id="wcpscup_prodcuts_from_month_year"
+                                value="<?php if(!empty($prodcuts_from_month_year)) { echo esc_attr($prodcuts_from_month_year); }  ?>"
+                                placeholder="2014">
                         </li>
 
                     </ul>
-                    <p class="cmb2-metabox-description"><?php esc_html_e('What type of products to display in the carousel slider', WCPCSU_TEXTDOMAIN); ?></p>
+                    <p class="cmb2-metabox-description">
+                        <?php esc_html_e('What type of products to display in the carousel slider', WCPCSU_TEXTDOMAIN); ?>
+                    </p>
                 </div>
             </div>
 
@@ -469,8 +474,8 @@ $discount_ribbon_position   = ! empty( $discount_ribbon_position ) ? $discount_r
                     <!--Text for the sale ribbon-->
                     <div id="sale_ribbon_text_wrapper">
                         <label for="wcpscu_sale_ribbon_text">
-                                <?php esc_html_e( 'Text', WCPCSU_TEXTDOMAIN ); ?>
-                            </label>
+                            <?php esc_html_e( 'Text', WCPCSU_TEXTDOMAIN ); ?>
+                        </label>
                         <input type="text" class="cmb2-text-medium" name="wcpscu[sale_ribbon_text]"
                             id="wcpscu_sale_ribbon_text"
                             value="<?php echo !empty($sale_ribbon_text) ?  $sale_ribbon_text : esc_html__('Sale!', WCPCSU_TEXTDOMAIN); ?>"
@@ -480,15 +485,19 @@ $discount_ribbon_position   = ! empty( $discount_ribbon_position ) ? $discount_r
                     <!--Position of sale ribbon -->
                     <div id="sale_ribbon_text_wrapper">
                         <label for="sale_ribbon_position">
-                                <?php esc_html_e( 'Position', WCPCSU_TEXTDOMAIN ); ?>
+                            <?php esc_html_e( 'Position', WCPCSU_TEXTDOMAIN ); ?>
                         </label>
-                        <select id="sale_ribbon_position" class="sale_ribbon_position" name="wcpscu[sale_ribbon_position]">
-                            <option value="top_left" <?php selected( $sale_ribbon_position, 'top_left'); ?> >Top Left</option>
+                        <select id="sale_ribbon_position" class="sale_ribbon_position"
+                            name="wcpscu[sale_ribbon_position]">
+                            <option value="top_left" <?php selected( $sale_ribbon_position, 'top_left'); ?>>Top Left
+                            </option>
                             <option value="top_right" <?php selected( $sale_ribbon_position, 'top_right'); ?>>Top Right
                             </option>
-                            <option value="bottom_left" <?php selected( $sale_ribbon_position, 'bottom_left'); ?>>Bottom Left
+                            <option value="bottom_left" <?php selected( $sale_ribbon_position, 'bottom_left'); ?>>Bottom
+                                Left
                             </option>
-                            <option value="bottom_right" <?php selected( $sale_ribbon_position, 'bottom_right'); ?>>Bottom Right
+                            <option value="bottom_right" <?php selected( $sale_ribbon_position, 'bottom_right'); ?>>
+                                Bottom Right
                             </option>
                         </select>
                     </div>
@@ -501,7 +510,8 @@ $discount_ribbon_position   = ! empty( $discount_ribbon_position ) ? $discount_r
             <!--Display "Featured" Ribbon-->
             <div class="cmb-row cmb-type-radio" id="feature_ribbon_wrapper">
                 <div class="cmb-th">
-                    <label for="wcpscu_display_featured_ribbon"><?php esc_html_e('Display "Featured" Badge', WCPCSU_TEXTDOMAIN); ?></label>
+                    <label
+                        for="wcpscu_display_featured_ribbon"><?php esc_html_e('Display "Featured" Badge', WCPCSU_TEXTDOMAIN); ?></label>
                 </div>
                 <div class="cmb-td">
                     <ul class="cmb2-radio-list cmb2-list cmb2-radio-switch">
@@ -535,15 +545,20 @@ $discount_ribbon_position   = ! empty( $discount_ribbon_position ) ? $discount_r
                     <!--Position of Featured ribbon -->
                     <div id="featured_ribbon_text_wrapper">
                         <label for="featured_ribbon_position">
-                                <?php esc_html_e( 'Position', WCPCSU_TEXTDOMAIN ); ?>
+                            <?php esc_html_e( 'Position', WCPCSU_TEXTDOMAIN ); ?>
                         </label>
-                        <select id="featured_ribbon_position" class="featured_ribbon_position" name="wcpscu[featured_ribbon_position]">
-                            <option value="top_left" <?php selected( $featured_ribbon_position, 'top_left'); ?> >Top Left</option>
-                            <option value="top_right" <?php selected( $featured_ribbon_position, 'top_right'); ?>>Top Right
+                        <select id="featured_ribbon_position" class="featured_ribbon_position"
+                            name="wcpscu[featured_ribbon_position]">
+                            <option value="top_left" <?php selected( $featured_ribbon_position, 'top_left'); ?>>Top Left
                             </option>
-                            <option value="bottom_left" <?php selected( $featured_ribbon_position, 'bottom_left'); ?>>Bottom Left
+                            <option value="top_right" <?php selected( $featured_ribbon_position, 'top_right'); ?>>Top
+                                Right
                             </option>
-                            <option value="bottom_right" <?php selected( $featured_ribbon_position, 'bottom_right'); ?>>Bottom Right
+                            <option value="bottom_left" <?php selected( $featured_ribbon_position, 'bottom_left'); ?>>
+                                Bottom Left
+                            </option>
+                            <option value="bottom_right" <?php selected( $featured_ribbon_position, 'bottom_right'); ?>>
+                                Bottom Right
                             </option>
                         </select>
                     </div>
@@ -591,15 +606,20 @@ $discount_ribbon_position   = ! empty( $discount_ribbon_position ) ? $discount_r
                     <!--Position of Featured ribbon -->
                     <div id="sold_out_ribbon_text_wrapper">
                         <label for="sold_out_ribbon_position">
-                                <?php esc_html_e( 'Position', WCPCSU_TEXTDOMAIN ); ?>
+                            <?php esc_html_e( 'Position', WCPCSU_TEXTDOMAIN ); ?>
                         </label>
-                        <select id="sold_out_ribbon_position" class="sold_out_ribbon_position" name="wcpscu[sold_out_ribbon_position]">
-                            <option value="top_left" <?php selected( $sold_out_ribbon_position, 'top_left'); ?> >Top Left</option>
-                            <option value="top_right" <?php selected( $sold_out_ribbon_position, 'top_right'); ?>>Top Right
+                        <select id="sold_out_ribbon_position" class="sold_out_ribbon_position"
+                            name="wcpscu[sold_out_ribbon_position]">
+                            <option value="top_left" <?php selected( $sold_out_ribbon_position, 'top_left'); ?>>Top Left
                             </option>
-                            <option value="bottom_left" <?php selected( $sold_out_ribbon_position, 'bottom_left'); ?>>Bottom Left
+                            <option value="top_right" <?php selected( $sold_out_ribbon_position, 'top_right'); ?>>Top
+                                Right
                             </option>
-                            <option value="bottom_right" <?php selected( $sold_out_ribbon_position, 'bottom_right'); ?>>Bottom Right
+                            <option value="bottom_left" <?php selected( $sold_out_ribbon_position, 'bottom_left'); ?>>
+                                Bottom Left
+                            </option>
+                            <option value="bottom_right" <?php selected( $sold_out_ribbon_position, 'bottom_right'); ?>>
+                                Bottom Right
                             </option>
                         </select>
                     </div>
@@ -635,15 +655,20 @@ $discount_ribbon_position   = ! empty( $discount_ribbon_position ) ? $discount_r
                     <!--Position of Featured ribbon -->
                     <div id="discount_ribbon_text_wrapper">
                         <label for="discount_ribbon_position">
-                                <?php esc_html_e( 'Position', WCPCSU_TEXTDOMAIN ); ?>
+                            <?php esc_html_e( 'Position', WCPCSU_TEXTDOMAIN ); ?>
                         </label>
-                        <select id="discount_ribbon_position" class="discount_ribbon_position" name="wcpscu[discount_ribbon_position]">
-                            <option value="top_left" <?php selected( $discount_ribbon_position, 'top_left'); ?> >Top Left</option>
-                            <option value="top_right" <?php selected( $discount_ribbon_position, 'top_right'); ?>>Top Right
+                        <select id="discount_ribbon_position" class="discount_ribbon_position"
+                            name="wcpscu[discount_ribbon_position]">
+                            <option value="top_left" <?php selected( $discount_ribbon_position, 'top_left'); ?>>Top Left
                             </option>
-                            <option value="bottom_left" <?php selected( $discount_ribbon_position, 'bottom_left'); ?>>Bottom Left
+                            <option value="top_right" <?php selected( $discount_ribbon_position, 'top_right'); ?>>Top
+                                Right
                             </option>
-                            <option value="bottom_right" <?php selected( $discount_ribbon_position, 'bottom_right'); ?>>Bottom Right
+                            <option value="bottom_left" <?php selected( $discount_ribbon_position, 'bottom_left'); ?>>
+                                Bottom Left
+                            </option>
+                            <option value="bottom_right" <?php selected( $discount_ribbon_position, 'bottom_right'); ?>>
+                                Bottom Right
                             </option>
                         </select>
                     </div>
@@ -731,7 +756,8 @@ $discount_ribbon_position   = ! empty( $discount_ribbon_position ) ? $discount_r
                             <input type="radio" class="cmb2-option cmb2-radio-switch1" name="wcpscu[exclude_stock_out]"
                                 id="wcpscu_exclude_stock_out1" value="yes"
                                 <?php if(empty($exclude_stock_out) || 'yes' === $exclude_stock_out) { echo 'checked'; } ?>>
-                            <label for="wcpscu_exclude_stock_out1"><?php esc_html_e('Yes', WCPCSU_TEXTDOMAIN); ?></label>
+                            <label
+                                for="wcpscu_exclude_stock_out1"><?php esc_html_e('Yes', WCPCSU_TEXTDOMAIN); ?></label>
                         </li>
                         <li>
                             <input type="radio" class="cmb2-option cmb2-radio-switch2" name="wcpscu[exclude_stock_out]"
