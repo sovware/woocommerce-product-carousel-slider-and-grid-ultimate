@@ -162,10 +162,10 @@ class wcpcsu_Shortcode
         <?php } ?>
         '
         data-wpcu-responsive='{
-            "575": {"slidesPerView": "2", "spaceBetween": "20"},
-            "767": {"slidesPerView": "3", "spaceBetween": "30"},
-            "991": {"slidesPerView": "4", "spaceBetween": "30"},
-            "1199": {"slidesPerView": "4", "spaceBetween": "30"}
+            "0": {"slidesPerView": "1", "spaceBetween": "20"},
+            "768": {"slidesPerView": "2", "spaceBetween": "30"},
+            "992": {"slidesPerView": "3", "spaceBetween": "30"},
+            "1200": {"slidesPerView": "4", "spaceBetween": "30"}
         }'
         <?php } ?>
         >

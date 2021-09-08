@@ -59,8 +59,23 @@
 }
 
 /* Product image tweaks */
+.wpcu-product .wpcu-product__img {
+  /* Image zoom on hover effect */
+}
 .wpcu-product .wpcu-product__img img {
   width: 100%;
+  -webkit-transition: 0.4s ease;
+  -o-transition: 0.4s ease;
+  transition: 0.4s ease;
+}
+.wpcu-product .wpcu-product__img--hover-effect > a {
+  display: block;
+  overflow: hidden;
+}
+.wpcu-product .wpcu-product__img--hover-effect:hover img {
+  -webkit-transform: scale(1.15);
+      -ms-transform: scale(1.15);
+          transform: scale(1.15);
 }
 
 /* Lazy load */
