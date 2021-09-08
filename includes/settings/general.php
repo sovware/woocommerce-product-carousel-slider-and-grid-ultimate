@@ -4,7 +4,7 @@ $layout                     = ! empty( $layout ) ? $layout : 'carousel';
 $h_title_show               = ! empty( $h_title_show ) ? $h_title_show : 'no';
 $display_full_title         = ! empty( $display_full_title ) ? $display_full_title : 'yes';
 $ribbon                     = ! empty( $ribbon ) ? $ribbon : 'discount';
-$header                     = ! empty( $header ) ? $header : 'center';
+$header_position            = ! empty( $header_position ) ? $header_position : 'middle';
 $total_products_label       = ( ! empty( $layout ) && 'grid' == $layout ) ? __( "Products Per Page",WCPCSU_TEXTDOMAIN ) : __("Total Products to Display",WCPCSU_TEXTDOMAIN );
 $theme                      = ! empty( $theme ) ? $theme : 'theme_1';
 $display_sale_ribbon        = ! empty( $display_sale_ribbon ) ? $display_sale_ribbon : 'no';
@@ -23,7 +23,7 @@ $discount_ribbon_position   = ! empty( $discount_ribbon_position ) ? $discount_r
 
             <div class="cmb-row cmb-type-text-medium">
                 <div class="cmb-th">
-                    <label for="lcsp_slider_title"><?php esc_html_e('Layout', WCPCSU_TEXTDOMAIN); ?></label>
+                    <label for="layout"><?php esc_html_e('Layout', WCPCSU_TEXTDOMAIN); ?></label>
                 </div>
                 <div class="cmb-td">
                     <div class="cmd-switch">
@@ -129,45 +129,45 @@ $discount_ribbon_position   = ! empty( $discount_ribbon_position ) ? $discount_r
                 <div class="cmb-td">
                     <ul class="cmb2-radio-list cmb2-list cmb2-radio-switch">
                         <li>
-                            <input type="radio" class="cmb2-option cmb2-radio-switch1" name="wcpscu[h_title_show]"
+                            <input type="radio" class="cmb2-option cmb2-radio-switch1 wpcpsu_display_header_title" name="wcpscu[h_title_show]"
                                 id="wcpscu[h_title_show]1" value="yes" <?php checked('yes', $h_title_show, true);  ?>>
                             <label for="wcpscu[h_title_show]1">
                                 <?php esc_html_e('Yes', WCPCSU_TEXTDOMAIN); ?>
                             </label>
                         </li>
                         <li>
-                            <input type="radio" class="cmb2-option cmb2-radio-switch2" name="wcpscu[h_title_show]"
+                            <input type="radio" class="cmb2-option cmb2-radio-switch2 wpcpsu_display_header_title" name="wcpscu[h_title_show]"
                                 id="wcpscu[h_title_show]2" value="no" <?php checked('no', $h_title_show, true);  ?>>
                             <label for="wcpscu[h_title_show]2">
                                 <?php esc_html_e('No', WCPCSU_TEXTDOMAIN); ?>
                             </label>
                         </li>
                     </ul>
-                    <div class="cmb-td-medium">
-                        <label for="lcsp_slider_title"><?php esc_html_e('Header Title', WCPCSU_TEXTDOMAIN); ?></label>
-                        <input type="text" class="cmb2-text-medium" name="wcpscu[header_title]" id="lcsp_slider_title"
+                    <div class="cmb-td-medium wcpcsu_header_dependency">
+                        <label for="wcpcsu_header_title"><?php esc_html_e('Header Title', WCPCSU_TEXTDOMAIN); ?></label>
+                        <input type="text" class="cmb2-text-medium" name="wcpscu[header_title]" id="wcpcsu_header_title"
                             value="<?php echo !empty($header_title) ? esc_attr($header_title) : ''; ?>">
                     </div>
-                    <div class="cmb-td-multicheck">
+                    <div class="cmb-td-multicheck wcpcsu_header_dependency">
                         <label
                             for="wcpscup_products_type"><?php esc_html_e('Header Position', WCPCSU_TEXTDOMAIN); ?></label>
                         <ul class="cmb2-radio-list cmb2-list">
                             <li>
-                                <input type="radio" class="cmb2-option" name="wcpscu[header]" id="center" value="center"
-                                    <?php if( empty($header) || $header == "center" )  {echo "checked"; } ?>>
-                                <label for="center"><?php esc_html_e('Center', WCPCSU_TEXTDOMAIN); ?></label>
+                                <input type="radio" class="cmb2-option" name="wcpscu[header_position]" id="middle" value="middle"
+                                <?php checked('middle', $header_position); ?>>
+                                <label for="middle"><?php esc_html_e('Middle', WCPCSU_TEXTDOMAIN); ?></label>
                             </li>
 
 
                             <li>
-                                <input type="radio" class="cmb2-option" name="wcpscu[header]" id="left" value="left"
-                                    <?php checked('left', $header); ?>>
+                                <input type="radio" class="cmb2-option" name="wcpscu[header_position]" id="left" value="left"
+                                    <?php checked('left', $header_position); ?>>
                                 <label for="left"><?php esc_html_e('Left', WCPCSU_TEXTDOMAIN); ?></label>
                             </li>
 
                             <li>
-                                <input type="radio" class="cmb2-option" name="wcpscu[header]" id="right" value="right"
-                                    <?php checked('right', $header); ?>>
+                                <input type="radio" class="cmb2-option" name="wcpscu[header_position]" id="right" value="right"
+                                    <?php checked('right', $header_position); ?>>
                                 <label for="right"><?php esc_html_e('Right', WCPCSU_TEXTDOMAIN); ?></label>
                             </li>
 

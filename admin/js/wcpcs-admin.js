@@ -111,6 +111,21 @@ jQuery(document).ready(function ($) {
         }
     });
 
+    //header title
+    if( $("input[name='wcpscu[h_title_show]']:checked").val() === 'yes' ) {
+        $('.wcpcsu_header_dependency').show();
+    } else {
+        $('.wcpcsu_header_dependency').hide();
+    }
+
+    $('.wpcpsu_display_header_title').on('click', function(){
+        if( $(this).val() === 'yes' ) {
+            $('.wcpcsu_header_dependency').show();
+        } else {
+            $('.wcpcsu_header_dependency').hide();
+        }
+    });
+
     //navigation dependable
     if( $("input[name='wcpscu[nav_show]']:checked").val() === 'yes' ) {
         $('.wpcu_navigation_depend').show();
