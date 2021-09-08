@@ -187,10 +187,10 @@ class wcpcsu_Shortcode
         <?php } ?>
         '
         data-wpcu-responsive='{
-            "575": {"slidesPerView": "<?php echo $carousel_mobile_column; ?>", "spaceBetween": "20", "slidesPerGroup":"1"},
-            "767": {"slidesPerView": "<?php echo $carousel_tablet_column; ?>", "spaceBetween": "30", "slidesPerGroup":"1"},
-            "991": {"slidesPerView": "<?php echo $carousel_laptop_column; ?>", "spaceBetween": "30", "slidesPerGroup":"1"},
-            "1199": {"slidesPerView": "<?php echo $carousel_desktop_column; ?>", "spaceBetween": "30"}
+            "0": {"slidesPerView": "<?php echo $carousel_mobile_column; ?>", "spaceBetween": "20", "slidesPerGroup":"1"},
+            "768": {"slidesPerView": "<?php echo $carousel_tablet_column; ?>", "spaceBetween": "30", "slidesPerGroup":"1"},
+            "992": {"slidesPerView": "<?php echo $carousel_laptop_column; ?>", "spaceBetween": "30", "slidesPerGroup":"1"},
+            "1200": {"slidesPerView": "<?php echo $carousel_desktop_column; ?>", "spaceBetween": "30"}
         }'
         <?php } ?>
         >

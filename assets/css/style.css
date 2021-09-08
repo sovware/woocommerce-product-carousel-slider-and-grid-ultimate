@@ -69,6 +69,9 @@
   --wpcu-actionIconColorHover: #ff5500;
   /* Image Zoom on hover */
   --wpcu-imgHoverScale: scale(1.2);
+  /* Marquee Animation */
+  --wpcu-marqueeItemsWidth: -2930px;
+  --wpcu-marqueeSpeed: 10000ms;
 }
 
 /* General Styles */
@@ -304,6 +307,19 @@
 .wpcu-carousel {
   overflow: hidden;
 }
+.wpcu-carousel--marquee .swiper-wrapper {
+  -webkit-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
+}
+.wpcu-carousel--marquee:hover .swiper-wrapper {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+.wpcu-carousel--marquee .wpcu-carousel-nav {
+  display: none;
+}
+
 /* wpcu grid */
 .wpcu-row {
   display: -webkit-box;

@@ -196,7 +196,15 @@
     overflow: hidden;
     @include m("marquee"){
         .swiper-wrapper{
-            //animation: wpcu-marquee 2s linear infinite;
+            transition: none !important;
+        }
+        &:hover{
+            .swiper-wrapper{
+                animation-play-state: paused;
+            }
+        }
+        .wpcu-carousel-nav{
+            display: none;
         }
     }
 }

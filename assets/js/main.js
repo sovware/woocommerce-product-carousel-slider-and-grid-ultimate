@@ -43,7 +43,6 @@
         convertImages('img.wpcu-svg');
     })
 
-
     /* Check WPCU Carousel Data */
     let checkData = function (data, value) {
         return typeof data === 'undefined' ? value : data;
@@ -56,7 +55,6 @@
             spaceBetween: checkData(parseInt(el.dataset.wpcuMargin), 30),
             loop: checkData(JSON.parse(el.dataset.wpcuLoop.toLowerCase()), false),
             slidesPerGroup: checkData(parseInt(el.dataset.wpcuPerslide), 4),
-            loopFillGroupWithBlank: true,
             speed: checkData(parseInt(el.dataset.wpcuSpeed), 3000),
             autoplay: checkData(JSON.parse(el.dataset.wpcuAutoplay), {}),
             navigation: {
@@ -74,5 +72,33 @@
 
     /* Add to cart icon for theme-4, theme-5 and theme-11 */
     $(".wpcu-theme_4 .woocommerce a, .wpcu-theme_5 .woocommerce a, .wpcu-theme_9 .woocommerce a").html(`<img class="wpcu-svg" src="${main_js.handbag_svg}" alt="" />`);
+
+
+    /* Marquee wrapper value */
+    var wpcuStyles = document.createElement('style');
+    document.head.append(wpcuStyles);
+    wpcuStyles.innerHTML = `
+        .wpcu-carousel--marquee .swiper-wrapper{
+            animation: wpcuMarquee var(--wpcu-marqueeSpeed) linear infinite running;
+        }
+        @keyframes wpcuMarquee {
+            0% {
+                transform: translate(0, 0);
+            }
+            100% {
+                transform: translate(var(--wpcu-marqueeItemsWidth), 0);
+            }
+        }
+    `;
+    var wpcuMarqueeCarousel = document.querySelectorAll('.wpcu-carousel--marquee');
+    wpcuMarqueeCarousel.forEach(elm => {
+        var wpcuMarqueeCarouselItem = elm.querySelectorAll('.wpcu-product:not(.swiper-slide-duplicate)');
+        wpcuMarqueeCarouselItem.forEach(elmnt =>{
+            var wpcuMarqueeWrapperWidth = wpcuMarqueeCarouselItem.length * (elmnt.offsetWidth + checkData(parseInt(elm.dataset.wpcuMargin)));
+            elm.style.setProperty('--wpcu-marqueeItemsWidth', `-${wpcuMarqueeWrapperWidth}px`);
+            elm.style.setProperty('--wpcu-marqueeSpeed', `${checkData(parseInt(elm.dataset.wpcuSpeed))}ms`);
+        })
+
+    });
 
 })(jQuery);

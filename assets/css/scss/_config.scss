@@ -96,4 +96,9 @@ $textDark: #000000;
 
     /* Image Zoom on hover */
     --wpcu-imgHoverScale: scale(1.2);
+
+    /* Marquee Animation */
+    --wpcu-marqueeItemsWidth: -2930px;
+    --wpcu-marqueeSpeed: 10000ms;
+
 }
