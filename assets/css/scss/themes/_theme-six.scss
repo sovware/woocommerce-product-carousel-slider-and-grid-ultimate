@@ -100,4 +100,9 @@
             }
         }
     }
+
+    /* Carousel marquee fix */
+    &.wpcu-carousel--marquee{
+        padding-bottom: 20px;
+    }
 }

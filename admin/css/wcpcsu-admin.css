@@ -86,6 +86,10 @@ body.post-type-wcpcsu-custom-post {
     font-family: 'Roboto', sans-serif;
 }
 
+body.post-type-wcpcsu-custom-post #wpfooter{
+    position: static;
+}
+
 
 .lcsp-tabs-menu {
     margin-top: 30px;

@@ -3,8 +3,13 @@
 ===========================*/
 .wpcu-theme_11{
     &.wpcu-carousel{
-        padding-bottom: 25px;
-        margin-bottom: -25px;
+        .wpcu-product{
+            transition: 0.3s ease;
+            &:hover{
+                padding-bottom: 80px;
+                margin-top: -80px;
+            }
+        }
     }
     .wpcu-product{
         @include e(type){
@@ -57,5 +62,10 @@
                 }
             }
         }
+    }
+
+    /* Carousel marquee fix */
+    &.wpcu-carousel--marquee{
+        padding-bottom: 20px;
     }
 }
