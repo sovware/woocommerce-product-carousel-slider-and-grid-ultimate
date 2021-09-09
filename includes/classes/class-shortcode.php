@@ -120,7 +120,7 @@ class wcpcsu_Shortcode
         $pagi_active_border_color   = ! empty( $pagi_active_border_color ) ? $pagi_active_border_color : '#ff5500';
         $pagi_active_back_color     = ! empty( $pagi_active_back_color ) ? $pagi_active_back_color : '#ff5500';
         if( $loop->have_posts() ) { ?>
-        <div class="wpcu-products__header"> <!-- .wpcu-products__header--middle /.wpcu-products__header--right -->
+        <div class="wpcu-products__header wpcu-products__header--right"> <!-- .wpcu-products__header--middle /.wpcu-products__header--right -->
             <h2>The is the title</h2>
         </div>
         <div
