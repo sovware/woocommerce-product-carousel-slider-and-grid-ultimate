@@ -255,6 +255,9 @@
 /* Header style */
 .wpcu-products__header {
   margin: 0 0 30px !important;
+  max-width: 100% !important;
+  padding: 0 15px;
+  text-align: left;
 }
 
 .wpcu-products__header.wpcu-products__header--middle {
