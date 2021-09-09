@@ -26,6 +26,8 @@ class wcpcsu_Shortcode
         $value = is_array( $data_array ) ? $data_array : array();
         extract( $value );
         $rand_id                 = rand();
+        $header_font_size        = ! empty( $header_font_size ) ? $header_font_size : '20px';
+        $header_font_color        = ! empty( $header_font_color ) ? $header_font_color : '#303030';
         $total_products          = ! empty( $total_products ) ? $total_products : 6;
         $layout                  = ! empty( $layout ) ? $layout : 'carousel';
         $products_type           = ! empty( $products_type ) ? $products_type : 'latest';
@@ -36,7 +38,7 @@ class wcpcsu_Shortcode
 
         $display_cart            = ! empty( $display_cart ) ? $display_cart : 'yes';
         $ribbon                  = ! empty( $ribbon ) ? $ribbon : 'discount';
-        $header_position                  = ! empty( $header_position ) ? $header_position : 'middle';
+        $header_position         = ! empty( $header_position ) ? $header_position : 'middle';
         $h_title_show            = ! empty( $h_title_show ) ? $h_title_show : 'no';
         $display_full_title      = ! empty( $display_full_title ) ? $display_full_title : 'no';
         $g_column                = ! empty( $g_column ) ? intval( $g_column ) : 3;
@@ -136,14 +138,27 @@ class wcpcsu_Shortcode
         $pagi_active_color          = ! empty( $pagi_active_color ) ? $pagi_active_color : '#fff';
         $pagi_active_border_color   = ! empty( $pagi_active_border_color ) ? $pagi_active_border_color : '#ff5500';
         $pagi_active_back_color     = ! empty( $pagi_active_back_color ) ? $pagi_active_back_color : '#ff5500';
+
+        $header_class = '';
+
+        if( 'middle' == $header_position ) {
+            $header_class = 'wpcu-products__header--middle';
+        } elseif( 'right' == $header_position ) {
+            $header_class = 'wpcu-products__header--right';
+        }
+
         if( $loop->have_posts() ) { ?>
-        <div class="wpcu-products__header--middle"> <!-- .wpcu-products__header--middle /.wpcu-products__header--right -->
-            <h2>The is the title</h2>
+
+        <?php if( 'yes' == $h_title_show && ! empty( $header_title ) ) { ?>
+        <div class="wpcu-products__header--middle <?php echo $header_class; ?>"> <!-- .wpcu-products__header--middle /.wpcu-products__header--right -->
+            <h2><?php echo $header_title; ?></h2>
         </div>
+        <?php } ?>
+
         <div class="wpcu-products wpcu-carousel--marquee wpcu-<?php echo $theme; ?> wpcu-lazy-load <?php echo ( 'carousel' == $layout ) ? 'wpcu-carousel' : ''; ?>"
         style="
-            --wpcu-headerFontSize: inherit;
-            --wpcu-headerFontColor: inherit;
+            --wpcu-headerFontSize: <?php echo $header_font_size; ?>;
+            --wpcu-headerFontColor: <?php echo $header_font_color; ?>;
 
             --wpcu-productTitleSize: <?php echo $title_font_size; ?>px;
             --wpcu-productTitleColor: <?php echo $title_font_color; ?>;
@@ -152,7 +167,7 @@ class wcpcsu_Shortcode
             --wpcu-productPriceSize: <?php echo $price_font_size; ?>px;
             --wpcu-productPriceColor: <?php echo $price_font_color; ?>;
 
-            --wpcu-productRatingSize: <?php echo $ratings_size; ?>px;
+            --wpcu-productRatingSize: <?php echo $ratings_size; ?>;
             --wpcu-productRatingColor: <?php echo $ratings_color; ?>;
 
             --wpcu-buttonColor: <?php echo $cart_font_color; ?>;
@@ -196,17 +211,10 @@ class wcpcsu_Shortcode
         <?php } ?>
         '
         data-wpcu-responsive='{
-<<<<<<< HEAD
-            "575": {"slidesPerView": "2", "spaceBetween": "20"},
-            "767": {"slidesPerView": "3", "spaceBetween": "30"},
-            "991": {"slidesPerView": "4", "spaceBetween": "30"},
-            "1199": {"slidesPerView": "4", "spaceBetween": "30"}
-=======
             "575": {"slidesPerView": "<?php echo $carousel_mobile_column; ?>", "spaceBetween": "20", "slidesPerGroup":"1"},
             "767": {"slidesPerView": "<?php echo $carousel_tablet_column; ?>", "spaceBetween": "30", "slidesPerGroup":"1"},
             "991": {"slidesPerView": "<?php echo $carousel_laptop_column; ?>", "spaceBetween": "30", "slidesPerGroup":"1"},
             "1199": {"slidesPerView": "<?php echo $carousel_desktop_column; ?>", "spaceBetween": "30"}
->>>>>>> ec3eb7fb572f136fb54bc259286c3734307b773e
         }'
         <?php } ?>
         >

@@ -12,12 +12,8 @@
                         <div class="input-group">
                             <input type="text" class="cmb2-text-small" name="wcpscu[header_font_size]"
                                 id="wcpscu_header_title_font_size"
-                                value="<?php if(!empty($header_font_size)) { echo $header_font_size; }else { echo "24";} ?>"
+                                value="<?php if(!empty($header_font_size)) { echo $header_font_size; }else { echo "24px";} ?>"
                                 placeholder="e.g. 20">
-                            <div class="input-group-prepend">
-                                <div class="input-group-text" id="btnGroupAddon">px</span>
-                                </div>
-                            </div>
                         </div>
                     </div>
                     <div class="cmb-navigation-item">
