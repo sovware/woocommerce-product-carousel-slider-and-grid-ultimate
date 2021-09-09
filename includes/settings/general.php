@@ -15,6 +15,7 @@ $display_sold_out_ribbon    = ! empty( $display_sold_out_ribbon ) ? $display_sol
 $sold_out_ribbon_position   = ! empty( $sold_out_ribbon_position ) ? $sold_out_ribbon_position : 'bottom_left';
 $display_discount_ribbon    = ! empty( $display_discount_ribbon ) ? $display_discount_ribbon : 'no';
 $discount_ribbon_position   = ! empty( $discount_ribbon_position ) ? $discount_ribbon_position : 'bottom_right';
+$img_hover_effect           = ! empty( $img_hover_effect ) ? $img_hover_effect : 'yes';
 ?>
 
 <div id="lcsp-tab-5" class="lcsp-tab-content" style="display:block">
@@ -852,6 +853,27 @@ $discount_ribbon_position   = ! empty( $discount_ribbon_position ) ? $discount_r
                     </div>
                 </div>
             </div>
+
+            <!--Enable image hover effect-->
+            <div class="cmb-row cmb-type-radio">
+                <div class="cmb-th">
+                    <label for="wcpscu_img_hover_effect"><?php esc_html_e('Image Hover Effect', WCPCSU_TEXTDOMAIN); ?></label>
+                </div>
+                <div class="cmb-td">
+                    <ul class="cmb2-radio-list cmb2-list cmb2-radio-switch">
+                        <li><input type="radio" class="cmb2-option cmb2-radio-switch1" name="wcpscu[img_hover_effect]"
+                                id="wcpscu_img_hover_effect1" value="yes"
+                                <?php checked('yes', $img_hover_effect, true); ?>>
+                            <label for="wcpscu_img_hover_effect1"><?php esc_html_e('Yes', WCPCSU_TEXTDOMAIN); ?></label>
+                        </li>
+                        <li><input type="radio" class="cmb2-option cmb2-radio-switch2" name="wcpscu[img_hover_effect]"
+                                id="wcpscu_img_hover_effect2" value="no"
+                                <?php checked('no', $img_hover_effect, true); ?>> <label
+                                for="wcpscu_img_hover_effect2"><?php esc_html_e('No', WCPCSU_TEXTDOMAIN); ?></label></li>
+                    </ul>
+                </div>
+            </div>
+
         </div>
     </div> <!-- end cmb2-metabox -->
 </div> <!-- end cmb2-wrap -->

@@ -35,6 +35,7 @@ class wcpcsu_Shortcode
         $crop_image_width        = ! empty( $crop_image_width ) ? intval( $crop_image_width ) : 300;
         $crop_image_height       = ! empty( $crop_image_height ) ? intval( $crop_image_height ) : 300;
         $display_price           = ! empty( $display_price ) ? $display_price : 'yes';
+        $img_hover_effect        = ! empty( $img_hover_effect ) ? $img_hover_effect : 'yes';
 
         $display_cart            = ! empty( $display_cart ) ? $display_cart : 'yes';
         $ribbon                  = ! empty( $ribbon ) ? $ribbon : 'discount';

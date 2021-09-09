@@ -1,6 +1,6 @@
 <div class="wpcu-product <?php echo ( 'carousel' == $layout ) ? 'swiper-slide' : ''; ?>">
     <div class="wpcu-product__content">
-        <div class="wpcu-product__img wpcu-product__img--hover-effect">
+        <div class="wpcu-product__img <?php echo 'yes' == $img_hover_effect ? 'wpcu-product__img--hover-effect' : ''; ?>">
             <a href="<?php echo get_the_permalink(); ?>">
                 <img src="<?php echo $wpcsu_img; ?>" alt="<?php echo get_the_title(); ?>">
             </a>
