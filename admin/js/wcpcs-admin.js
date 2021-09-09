@@ -75,6 +75,12 @@ jQuery(document).ready(function ($) {
             $('.wcpscu_quickView_button').hide();
         }
 
+        if( $this.val() == 'theme_4' || $this.val() == 'theme_11' ) {
+            $('.wcpscu_cart_button').hide();
+        } else {
+            $('.wcpscu_cart_button').show();
+        }
+
         if( $this.val() == 'theme_4' || $this.val() == 'theme_5' || $this.val() == 'theme_6' || $this.val() == 'theme_7' || $this.val() == 'theme_8' || $this.val() == 'theme_9' || $this.val() == 'theme_10' || $this.val() == 'theme_11' || $this.val() == 'theme_12' || $this.val() == 'theme_13' || $this.val() == 'theme_14' ) {
             $('.wcpscu_action_icon').show();
         } else {
@@ -86,6 +92,12 @@ jQuery(document).ready(function ($) {
         $('.wcpscu_quickView_button').show();
     } else {
         $('.wcpscu_quickView_button').hide();
+    }
+
+    if( $('.wcpscu_theme').val() == 'theme_4' || $('.wcpscu_theme').val() == 'theme_11' ) {
+        $('.wcpscu_cart_button').hide();
+    } else {
+        $('.wcpscu_cart_button').show();
     }
 
     if( $('.wcpscu_theme').val() == 'theme_4' || $('.wcpscu_theme').val() == 'theme_5' || $('.wcpscu_theme').val() == 'theme_6' || $('.wcpscu_theme').val() == 'theme_7' || $('.wcpscu_theme').val() == 'theme_8' || $('.wcpscu_theme').val() == 'theme_9' || $('.wcpscu_theme').val() == 'theme_10' || $('.wcpscu_theme').val() == 'theme_11' || $('.wcpscu_theme').val() == 'theme_12' || $('.wcpscu_theme').val() == 'theme_13' || $('.wcpscu_theme').val() == 'theme_14' ) {

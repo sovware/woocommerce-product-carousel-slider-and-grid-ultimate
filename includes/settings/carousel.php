@@ -1,10 +1,11 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) die( 'Are you cheating??? Accessing this file directly is forbidden.' );
 $stop_hover             = ! empty( $stop_hover ) ? $stop_hover : 'no';
+$marquee                = ! empty( $marquee ) ? $marquee : 'no';
 $A_play                 = ! empty( $A_play ) ? $A_play : 'yes';
 $pagination             = ! empty( $pagination ) ? $pagination : 'yes';
 $scrol_direction        = ! empty( $scrol_direction ) ? $scrol_direction : 'left';
-$scrool                 = ! empty( $scrool ) ? $scrool : 'false';
+$scrool                 = ! empty( $scrool ) ? $scrool : 'per_item';
 $nav_show               = ! empty( $nav_show ) ? $nav_show : 'yes';
 $nav_position           = ! empty( $nav_position ) ? $nav_position : 'bottom-right';
 $carousel_pagination    = ! empty( $carousel_pagination ) ? $carousel_pagination : 'no';
@@ -79,6 +80,30 @@ $carousel_pagination    = ! empty( $carousel_pagination ) ? $carousel_pagination
                     </ul>
                 </div>
             </div>
+
+            <!--Stop on hover-->
+            <div class="cmb-row cmb-type-radio">
+                <div class="cmb-th">
+                    <label for="lcsp_marquee"><?php esc_html_e('Marquee', WCPCSU_TEXTDOMAIN); ?></label>
+                </div>
+                <div class="cmb-td">
+                    <ul class="cmb2-radio-list cmb2-list cmb2-radio-switch">
+                        <li><input type="radio" class="cmb2-option cmb2-radio-switch1" name="wcpscu[marquee]"
+                                id="lcsp_marquee1" value="yes" <?php checked('yes', $marquee, true); ?>>
+                            <label for="lcsp_marquee1">
+                                <?php esc_html_e('Yes', WCPCSU_TEXTDOMAIN); ?>
+                            </label>
+                        </li>
+                        <li><input type="radio" class="cmb2-option cmb2-radio-switch2" name="wcpscu[marquee]"
+                                id="lcsp_marquee2" value="no" <?php checked('no', $marquee, true);  ?>>
+                            <label for="lcsp_marquee2">
+                                <?php esc_html_e('No', WCPCSU_TEXTDOMAIN); ?>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
             <!--Items on desktop-->
             <div class="cmb-row cmb-type-text-medium">
                 <div class="cmb-th">
@@ -169,14 +194,14 @@ $carousel_pagination    = ! empty( $carousel_pagination ) ? $carousel_pagination
                 <div class="cmb-td">
                     <ul class="cmb2-radio-list cmb2-list">
                         <li>
-                            <input type="radio" class="cmb2-option" name="wcpscu[scrool]" id="lcsp_spp1" value="false"
-                                <?php checked('false', $scrool, true); ?>>
+                            <input type="radio" class="cmb2-option" name="wcpscu[scrool]" id="lcsp_spp1" value="per_item"
+                                <?php checked('per_item', $scrool, true); ?>>
                             <label for="lcsp_spp1">
                                 <?php esc_html_e('Per Item', WCPCSU_TEXTDOMAIN); ?>
                             </label>
                         </li>
-                        <li><input type="radio" class="cmb2-option" name="wcpscu[scrool]" id="lcsp_spp2" value="true"
-                                <?php checked('true', $scrool, true); ?>>
+                        <li><input type="radio" class="cmb2-option" name="wcpscu[scrool]" id="lcsp_spp2" value="per_page"
+                                <?php checked('per_page', $scrool, true); ?>>
                             <label for="lcsp_spp2">
                                 <?php esc_html_e('Per Page', WCPCSU_TEXTDOMAIN); ?>
                             </label>

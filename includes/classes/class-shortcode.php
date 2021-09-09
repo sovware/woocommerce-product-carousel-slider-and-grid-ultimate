@@ -107,7 +107,9 @@ class wcpcsu_Shortcode
         // carousel settings
         $slide_speed                = ! empty( $slide_speed ) ? $slide_speed : '2000';
         $A_play                     = ! empty( $A_play ) ? $A_play : 'yes';
+        $marquee                    = ! empty( $marquee ) ? $marquee : 'no';
         $repeat_product             = ! empty( $repeat_product ) ? $repeat_product : 'yes';
+        $scrool                     = ! empty( $scrool ) ? $scrool : 'per_item';
         $stop_hover                 = ! empty( $stop_hover ) ? $stop_hover : true;
         $carousel_desktop_column    = ! empty( $c_desktop ) ? $c_desktop : 4;
         $carousel_laptop_column     = ! empty( $c_desktop_small ) ? $c_desktop_small : 3;
@@ -155,7 +157,7 @@ class wcpcsu_Shortcode
         </div>
         <?php } ?>
 
-        <div class="wpcu-products wpcu-carousel--marquee wpcu-<?php echo $theme; ?> wpcu-lazy-load <?php echo ( 'carousel' == $layout ) ? 'wpcu-carousel' : ''; ?>"
+        <div class="wpcu-products <?php echo  'yes' == $marquee ? 'wpcu-carousel--marquee' : ''; ?> wpcu-<?php echo $theme; ?> wpcu-lazy-load <?php echo ( 'carousel' == $layout ) ? 'wpcu-carousel' : ''; ?>"
         style="
             --wpcu-headerFontSize: <?php echo $header_font_size; ?>;
             --wpcu-headerFontColor: <?php echo $header_font_color; ?>;
@@ -194,8 +196,8 @@ class wcpcsu_Shortcode
         <?php if( 'carousel' == $layout ) { ?>
         data-wpcu-items="4"
         data-wpcu-margin="30"
-        data-wpcu-loop="<?php echo ( 'yes' == $repeat_product ) ? 'true' : 'false'; ?>"
-        data-wpcu-perslide="1"
+        data-wpcu-loop="<?php echo ( 'yes' == $repeat_product && 'per_item' == $scrool ) ? 'true' : 'false'; ?>"
+        data-wpcu-perslide="2"
         data-wpcu-speed="<?php echo $slide_speed; ?>"
         data-wpcu-autoplay='
         <?php if( 'yes' == $A_play ) { ?>
@@ -211,10 +213,10 @@ class wcpcsu_Shortcode
         <?php } ?>
         '
         data-wpcu-responsive='{
-            "0": {"slidesPerView": "<?php echo $carousel_mobile_column; ?>", "spaceBetween": "20", "slidesPerGroup":"1"},
-            "768": {"slidesPerView": "<?php echo $carousel_tablet_column; ?>", "spaceBetween": "30", "slidesPerGroup":"1"},
-            "992": {"slidesPerView": "<?php echo $carousel_laptop_column; ?>", "spaceBetween": "30", "slidesPerGroup":"1"},
-            "1200": {"slidesPerView": "<?php echo $carousel_desktop_column; ?>", "spaceBetween": "30"}
+            "0": {"slidesPerView": "<?php echo $carousel_mobile_column; ?>", "spaceBetween": "20", "slidesPerGroup":"<?php echo 'per_item' == $scrool ? '1' : $carousel_mobile_column; ?>"},
+            "768": {"slidesPerView": "<?php echo $carousel_tablet_column; ?>", "spaceBetween": "30", "slidesPerGroup":"<?php echo 'per_item' == $scrool ? '1' : $carousel_tablet_column; ?>"},
+            "992": {"slidesPerView": "<?php echo $carousel_laptop_column; ?>", "spaceBetween": "30", "slidesPerGroup":"<?php echo 'per_item' == $scrool ? '1' : $carousel_laptop_column; ?>"},
+            "1200": {"slidesPerView": "<?php echo $carousel_desktop_column; ?>", "spaceBetween": "30", "slidesPerGroup":"<?php echo 'per_item' == $scrool ? '1' : $carousel_desktop_column; ?>"}
         }'
         <?php } ?>
         >
