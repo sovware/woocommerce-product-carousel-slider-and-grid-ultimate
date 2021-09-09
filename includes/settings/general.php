@@ -159,14 +159,14 @@ $discount_ribbon_position   = ! empty( $discount_ribbon_position ) ? $discount_r
                             </li>
 
                             <li>
-                                <input type="radio" class="cmb2-option" name="wcpscu[header]" id="left" value="left"
-                                    <?php checked('left', $header); ?>>
+                                <input type="radio" class="cmb2-option" name="wcpscu[header_position]" id="left" value="left"
+                                    <?php checked('left', $header_position); ?>>
                                 <label for="left"><?php esc_html_e('Left', WCPCSU_TEXTDOMAIN); ?></label>
                             </li>
 
                             <li>
-                                <input type="radio" class="cmb2-option" name="wcpscu[header]" id="right" value="right"
-                                    <?php checked('right', $header); ?>>
+                                <input type="radio" class="cmb2-option" name="wcpscu[header_position]" id="right" value="right"
+                                    <?php checked('right', $header_position); ?>>
                                 <label for="right"><?php esc_html_e('Right', WCPCSU_TEXTDOMAIN); ?></label>
                             </li>
 
