@@ -36,7 +36,7 @@ class wcpcsu_Shortcode
 
         $display_cart            = ! empty( $display_cart ) ? $display_cart : 'yes';
         $ribbon                  = ! empty( $ribbon ) ? $ribbon : 'discount';
-        $header                  = ! empty( $header ) ? $header : 'center';
+        $header_position         = ! empty( $header_position ) ? $header_position : 'middle';
         $h_title_show            = ! empty( $h_title_show ) ? $h_title_show : 'no';
         $display_full_title      = ! empty( $display_full_title ) ? $display_full_title : 'no';
         $g_column                = ! empty( $g_column ) ? intval( $g_column ) : 3;
@@ -119,10 +119,23 @@ class wcpcsu_Shortcode
         $pagi_active_color          = ! empty( $pagi_active_color ) ? $pagi_active_color : '#fff';
         $pagi_active_border_color   = ! empty( $pagi_active_border_color ) ? $pagi_active_border_color : '#ff5500';
         $pagi_active_back_color     = ! empty( $pagi_active_back_color ) ? $pagi_active_back_color : '#ff5500';
+
+        $header_class = '';
+
+        if( 'middle' == $header_position ) {
+            $header_class = 'wpcu-products__header--middle';
+        } elseif( 'right' == $header_position ) {
+            $header_class = 'wpcu-products__header--right';
+        }
+
         if( $loop->have_posts() ) { ?>
-        <div class="wpcu-products__header wpcu-products__header--right"> <!-- .wpcu-products__header--middle /.wpcu-products__header--right -->
-            <h2>The is the title</h2>
+
+        <?php if( 'yes' == $h_title_show && ! empty( $header_title ) ) { ?>
+        <div class="wpcu-products__header <?php echo $header_class; ?>"> <!-- .wpcu-products__header--middle /.wpcu-products__header--right -->
+            <h2><?php echo $header_title; ?></h2>
         </div>
+        <?php } ?>
+
         <div
         class="wpcu-products wpcu-<?php echo $theme; ?> wpcu-lazy-load <?php echo ( 'carousel' == $layout ) ? 'wpcu-carousel' : ''; ?>"
         style="
@@ -207,7 +220,9 @@ class wcpcsu_Shortcode
             }
         ?>
         <?php
+
         }else{
+
             _e('No products found', WCPCSU_TEXTDOMAIN);
         }
 
