@@ -254,7 +254,7 @@
 
 /* Header style */
 .wpcu-products__header {
-  margin-bottom: 30px;
+  margin: 0 0 30px !important;
 }
 
 .wpcu-products__header.wpcu-products__header--middle {
@@ -269,6 +269,7 @@
   font-size: var(--headerFontSize);
   color: var(--headerFontColor);
   font-weight: 500;
+  margin: 0 !important;
 }
 
 /* wpcu grid */
@@ -880,7 +881,7 @@
   color: var(--pagColor);
   margin: 5px;
   font-size: 14px;
-  text-decoration: none;
+  text-decoration: none !important;
   border: 1px solid var(--pagBorderColor);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -901,6 +902,9 @@
   -webkit-transition: 0.3s ease;
   -o-transition: 0.3s ease;
   transition: 0.3s ease;
+}
+.wpcu-pagination .pagination .nav-links .page-numbers:before, .wpcu-pagination .pagination .nav-links .page-numbers:after {
+  content: none;
 }
 
 .wpcu-pagination .pagination .nav-links .page-numbers svg {

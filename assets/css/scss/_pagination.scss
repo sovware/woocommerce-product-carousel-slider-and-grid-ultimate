@@ -28,7 +28,7 @@
     color: var(--pagColor);
     margin: 5px;
     font-size: 14px;
-    text-decoration: none;
+    text-decoration: none !important;
     border: 1px solid var(--pagBorderColor);
     display: flex;
     align-items: center;
@@ -41,6 +41,10 @@
     min-height: 34px;
     border-radius: 3px;
     transition: 0.3s ease;
+    &:before,
+    &:after{
+        content: none;
+    }
 }
 
 .wpcu-pagination .pagination .nav-links .page-numbers svg {

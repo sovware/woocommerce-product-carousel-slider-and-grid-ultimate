@@ -169,7 +169,7 @@
 
 /* Header style */
 .wpcu-products__header {
-    margin-bottom: 30px;
+    margin:0 0 30px !important;
 }
 
 .wpcu-products__header.wpcu-products__header--middle {
@@ -184,4 +184,5 @@
     font-size: var(--headerFontSize);
     color: var(--headerFontColor);
     font-weight: 500;
+    margin: 0 !important;
 }
