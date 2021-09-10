@@ -38,6 +38,8 @@ class wcpcsu_Shortcode
         $ribbon                  = ! empty( $ribbon ) ? $ribbon : 'discount';
         $header_position         = ! empty( $header_position ) ? $header_position : 'middle';
         $h_title_show            = ! empty( $h_title_show ) ? $h_title_show : 'no';
+        $header_font_size        = ! empty( $header_font_size ) ? $header_font_size : '24px';
+        $header_font_color       = ! empty( $header_font_color ) ? $header_font_color : '#303030';
         $display_full_title      = ! empty( $display_full_title ) ? $display_full_title : 'no';
         $g_column                = ! empty( $g_column ) ? intval( $g_column ) : 3;
         $g_tablet                = ! empty( $g_tablet ) ? intval( $g_tablet ) : 2;
@@ -139,8 +141,8 @@ class wcpcsu_Shortcode
         <div
         class="wpcu-products wpcu-<?php echo $theme; ?> wpcu-lazy-load <?php echo ( 'carousel' == $layout ) ? 'wpcu-carousel' : ''; ?>"
         style="
-            --headerFontSize: inherit;
-            --headerFontColor: inherit;
+            --headerFontSize: <?php echo $header_font_size; ?>;
+            --headerFontColor: <?php echo $header_font_color; ?>;
             --productTitleSize: <?php echo $title_font_size; ?>px;
             --productTitleColor: <?php echo $title_font_color; ?>;
             --productTitleColorHover: <?php echo $title_hover_font_color; ?>;
@@ -175,10 +177,10 @@ class wcpcsu_Shortcode
         <?php } ?>
         '
         data-wpcu-responsive='{
-            "0": {"slidesPerView": "1", "spaceBetween": "20"},
-            "768": {"slidesPerView": "2", "spaceBetween": "30"},
-            "992": {"slidesPerView": "3", "spaceBetween": "30"},
-            "1200": {"slidesPerView": "4", "spaceBetween": "30"}
+            "0": {"slidesPerView": "<?php echo $carousel_mobile_column; ?>", "spaceBetween": "20"},
+            "768": {"slidesPerView": "<?php echo $carousel_tablet_column; ?>", "spaceBetween": "30"},
+            "992": {"slidesPerView": "<?php echo $carousel_mobile_column; ?>", "spaceBetween": "30"},
+            "1200": {"slidesPerView": "<?php echo $carousel_desktop_column; ?>", "spaceBetween": "30"}
         }'
         <?php } ?>
         >
