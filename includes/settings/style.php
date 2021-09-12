@@ -237,7 +237,7 @@
                         <div class="theme_3">
                             <input type="text" class="cmb2-text-small cpa-color-picker"
                                 name="wcpscu[cart_button_hover_color][theme_3]" id="wcpscu_cart_button_hover_color"
-                                value="<?php echo ! empty( $cart_button_hover_color['theme_3'] ) ? esc_attr( $cart_button_hover_color['theme_3'] ) : '#f4f4f4'; ?>">
+                                value="<?php echo ! empty( $cart_button_hover_color['theme_3'] ) ? esc_attr( $cart_button_hover_color['theme_3'] ) : '#ffffff'; ?>">
                         </div>
                     </div>
                     <div class="cmb-navigation-item">
