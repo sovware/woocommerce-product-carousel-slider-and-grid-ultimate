@@ -299,7 +299,8 @@ class wcpcsu_Shortcode
             } else {
 
                 $max_percentage = 0;
-
+                $percentage = '';
+                
                 foreach ( $product->get_children() as $child_id ) {
                     $variation = wc_get_product( $child_id );
                     $price = $variation->get_regular_price();
