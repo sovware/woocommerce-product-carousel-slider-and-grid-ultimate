@@ -12,7 +12,7 @@
     });
 
     /* Replace all SVG images with inline SVG */
-    const convertImages = (query, callback) => {
+    let convertImages = (query, callback) => {
         const images = document.querySelectorAll(query);
         images.forEach(image => {
             fetch(image.src)
@@ -27,7 +27,7 @@
                     image.parentNode.replaceChild(svg, image);
                 })
                 .then(callback)
-                .catch(error => console.error(error))
+                .catch(error => console.error(error));
         });
     }
     convertImages('img.wpcu-svg');

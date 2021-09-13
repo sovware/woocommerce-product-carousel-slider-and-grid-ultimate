@@ -28,7 +28,20 @@
             <?php if( 'yes' == $display_ratings ) { ?>
                 <div class="wpcu-product__rating wpcu-mb-10">
                     <div class="wpcu-product__rating__stars" title="<?php echo $ratings; ?>%">
-                        <span style="width: <?php echo $ratings; ?>%;"></span>
+                        <div class="wpcu-product__rating__stars__wrap">
+                            <img class="wpcu-svg" src="<?php echo WCPCSU_URL .'assets/icons/star.svg' ?>" alt="">
+                            <img class="wpcu-svg" src="<?php echo WCPCSU_URL .'assets/icons/star.svg' ?>" alt="">
+                            <img class="wpcu-svg" src="<?php echo WCPCSU_URL .'assets/icons/star.svg' ?>" alt="">
+                            <img class="wpcu-svg" src="<?php echo WCPCSU_URL .'assets/icons/star.svg' ?>" alt="">
+                            <img class="wpcu-svg" src="<?php echo WCPCSU_URL .'assets/icons/star.svg' ?>" alt="">
+                        </div>
+                        <div class="wpcu-product__rating__stars__solid" style="width: <?php echo $ratings; ?>%;">
+                            <img class="wpcu-svg" src="<?php echo WCPCSU_URL .'assets/icons/star-solid.svg' ?>" alt="">
+                            <img class="wpcu-svg" src="<?php echo WCPCSU_URL .'assets/icons/star-solid.svg' ?>" alt="">
+                            <img class="wpcu-svg" src="<?php echo WCPCSU_URL .'assets/icons/star-solid.svg' ?>" alt="">
+                            <img class="wpcu-svg" src="<?php echo WCPCSU_URL .'assets/icons/star-solid.svg' ?>" alt="">
+                            <img class="wpcu-svg" src="<?php echo WCPCSU_URL .'assets/icons/star-solid.svg' ?>" alt="">
+                        </div>
                     </div>
                     <span class="wpcu-product__rating__total">(<?php echo $product->get_rating_count();?>)</span>
                 </div>
