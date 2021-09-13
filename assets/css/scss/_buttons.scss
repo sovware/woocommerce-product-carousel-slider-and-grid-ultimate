@@ -32,6 +32,7 @@
             text-decoration: none !important;
             background: var(--wpcu-buttonBgColorHover) !important;
             color: var(--wpcu-buttonColorHover) !important;
+            border-color: var(--wpcu-buttonBgColorHover) !important;
         }
     }
     .button.product_type_external{
@@ -146,4 +147,13 @@
 /* Button tweaks */
 .wpcu-button .button.added{
     display: none !important;
+}
+
+/* Button text decoration none */
+.wpcu-product .wpcu-button{
+    .button,
+    .added_to_cart,
+    .button.added{
+        text-decoration: none !important;
+    }
 }

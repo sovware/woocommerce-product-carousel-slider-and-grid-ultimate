@@ -153,16 +153,16 @@ class wcpcsu_Shortcode
         if( $loop->have_posts() ) { ?>
 
         <?php if( 'yes' == $h_title_show && ! empty( $header_title ) ) { ?>
-        <div class="wpcu-products__header--middle <?php echo $header_class; ?>"> <!-- .wpcu-products__header--middle /.wpcu-products__header--right -->
+        <div class="wpcu-products__header <?php echo $header_class; ?>" style="
+            --wpcu-headerFontSize: <?php echo $header_font_size; ?>px;
+            --wpcu-headerFontColor: <?php echo $header_font_color; ?>;
+        "> <!-- .wpcu-products__header--middle /.wpcu-products__header--right -->
             <h2><?php echo $header_title; ?></h2>
         </div>
         <?php } ?>
 
         <div class="wpcu-products <?php echo  'yes' == $marquee ? 'wpcu-carousel--marquee' : ''; ?> wpcu-<?php echo $theme; ?> wpcu-lazy-load <?php echo ( 'carousel' == $layout ) ? 'wpcu-carousel' : ''; ?>"
         style="
-            --wpcu-headerFontSize: <?php echo $header_font_size; ?>;
-            --wpcu-headerFontColor: <?php echo $header_font_color; ?>;
-
             --wpcu-productTitleSize: <?php echo $title_font_size; ?>px;
             --wpcu-productTitleColor: <?php echo $title_font_color; ?>;
             --wpcu-productTitleColorHover: <?php echo $title_hover_font_color; ?>;

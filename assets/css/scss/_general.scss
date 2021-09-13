@@ -1,7 +1,7 @@
 /* General Styles */
 .wpcu-products {
     max-width: 100% !important;
-    width: 100%;
+    width: 100% !important;
     padding: 0 15px;
     font-family: 'Rubik', sans-serif;
     position: relative;
@@ -70,23 +70,23 @@
     @include e(btn) {
         width: 40px;
         height: 40px;
-        border: 1px solid var(--wpcu-navBorderColor);
+        border: 1px solid var(--wpcu-navBorderColor) !important;
         display: inline-flex;
         align-items: center;
         justify-content: center;
         margin: 0 5px;
         cursor: pointer;
         transition: 0.3s ease;
-        background: var(--wpcu-navBgColor);
+        background: var(--wpcu-navBgColor) !important;
 
         svg {
             width: 6px;
-            fill: var(--wpcu-navArrowColor);
+            fill: var(--wpcu-navArrowColor) !important;
         }
 
         &:hover {
-            border-color: var(--wpcu-navBorderColorHover);
-            background: var(--wpcu-navBgColorHover);
+            border-color: var(--wpcu-navBorderColorHover) !important;
+            background: var(--wpcu-navBgColorHover) !important;
 
             svg {
                 fill: var(--wpcu-navArrowColorHover) !important;
@@ -173,21 +173,22 @@
 .wpcu-products__header {
     margin:0 0 30px !important;
     max-width: 100% !important;
+    width: 100% !important;
     padding: 0 15px;
-    text-align: left;
+    text-align: left !important;
 }
 
 .wpcu-products__header.wpcu-products__header--middle {
-    text-align: center;
+    text-align: center !important;
 }
 
 .wpcu-products__header.wpcu-products__header--right {
-    text-align: right;
+    text-align: right !important;
 }
 
 .wpcu-products__header h2 {
-    font-size: var(--headerFontSize);
-    color: var(--headerFontColor);
+    font-size: var(--wpcu-headerFontSize) !important;
+    color: var(--wpcu-headerFontColor) !important;
     font-weight: 500;
     margin: 0 !important;
 }

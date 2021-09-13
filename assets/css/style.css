@@ -77,7 +77,7 @@
 /* General Styles */
 .wpcu-products {
   max-width: 100% !important;
-  width: 100%;
+  width: 100% !important;
   padding: 0 15px;
   font-family: "Rubik", sans-serif;
   position: relative;
@@ -147,7 +147,7 @@
 .wpcu-carousel-nav__btn {
   width: 40px;
   height: 40px;
-  border: 1px solid var(--wpcu-navBorderColor);
+  border: 1px solid var(--wpcu-navBorderColor) !important;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -162,15 +162,15 @@
   -webkit-transition: 0.3s ease;
   -o-transition: 0.3s ease;
   transition: 0.3s ease;
-  background: var(--wpcu-navBgColor);
+  background: var(--wpcu-navBgColor) !important;
 }
 .wpcu-carousel-nav__btn svg {
   width: 6px;
-  fill: var(--wpcu-navArrowColor);
+  fill: var(--wpcu-navArrowColor) !important;
 }
 .wpcu-carousel-nav__btn:hover {
-  border-color: var(--wpcu-navBorderColorHover);
-  background: var(--wpcu-navBgColorHover);
+  border-color: var(--wpcu-navBorderColorHover) !important;
+  background: var(--wpcu-navBgColorHover) !important;
 }
 .wpcu-carousel-nav__btn:hover svg {
   fill: var(--wpcu-navArrowColorHover) !important;
@@ -285,21 +285,22 @@
 .wpcu-products__header {
   margin: 0 0 30px !important;
   max-width: 100% !important;
+  width: 100% !important;
   padding: 0 15px;
-  text-align: left;
+  text-align: left !important;
 }
 
 .wpcu-products__header.wpcu-products__header--middle {
-  text-align: center;
+  text-align: center !important;
 }
 
 .wpcu-products__header.wpcu-products__header--right {
-  text-align: right;
+  text-align: right !important;
 }
 
 .wpcu-products__header h2 {
-  font-size: var(--headerFontSize);
-  color: var(--headerFontColor);
+  font-size: var(--wpcu-headerFontSize) !important;
+  color: var(--wpcu-headerFontColor) !important;
   font-weight: 500;
   margin: 0 !important;
 }
@@ -505,6 +506,7 @@
   text-decoration: none !important;
   background: var(--wpcu-buttonBgColorHover) !important;
   color: var(--wpcu-buttonColorHover) !important;
+  border-color: var(--wpcu-buttonBgColorHover) !important;
 }
 .wpcu-button .button.product_type_external {
   max-width: 150px;
@@ -611,6 +613,13 @@
   display: none !important;
 }
 
+/* Button text decoration none */
+.wpcu-product .wpcu-button .button,
+.wpcu-product .wpcu-button .added_to_cart,
+.wpcu-product .wpcu-button .button.added {
+  text-decoration: none !important;
+}
+
 /* Badges */
 .wpcu-badge {
   height: 26px;
@@ -678,14 +687,18 @@
   text-decoration: none !important;
   font-size: var(--wpcu-productTitleSize) !important;
   font-weight: normal;
-  color: var(--wpcu-productTitleColor);
+  color: var(--wpcu-productTitleColor) !important;
   letter-spacing: normal;
   -webkit-transition: 0.3s ease;
   -o-transition: 0.3s ease;
   transition: 0.3s ease;
 }
 .wpcu-product__title a:hover {
-  color: var(--wpcu-productTitleColorHover);
+  color: var(--wpcu-productTitleColorHover) !important;
+}
+
+.wpcu-product .wpcu-product__title a {
+  text-decoration: none !important;
 }
 
 /* Product subtitle */
@@ -860,6 +873,8 @@
   -webkit-transition: 0.3s ease;
   -o-transition: 0.3s ease;
   transition: 0.3s ease;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 .wpcu-product__content:hover .wpcu-overlay-content-bottom {
   visibility: visible;
@@ -1282,11 +1297,11 @@
 }
 
 .wpcu-pagination .pagination .nav-links .page-numbers {
-  color: var(--wpcu-pagColor);
+  color: var(--wpcu-pagColor) !important;
   margin: 5px;
   font-size: 14px;
   text-decoration: none !important;
-  border: 1px solid var(--wpcu-pagBorderColor);
+  border: 1px solid var(--wpcu-pagBorderColor) !important;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1297,7 +1312,7 @@
       -ms-flex-pack: center;
           justify-content: center;
   padding: 0;
-  background: var(--wpcu-pagBgColor);
+  background: var(--wpcu-pagBgColor) !important;
   width: 34px;
   min-width: 34px;
   height: 34px;
@@ -1315,23 +1330,23 @@
 }
 
 .wpcu-pagination .pagination .nav-links .page-numbers svg {
-  fill: var(--wpcu-pagColor);
+  fill: var(--wpcu-pagColor) !important;
 }
 
 .wpcu-pagination .pagination .nav-links .page-numbers:hover svg {
-  fill: var(--wpcu-pagColorHover);
+  fill: var(--wpcu-pagColorHover) !important;
 }
 
 .wpcu-pagination .pagination .nav-links .page-numbers:hover {
-  background: var(--wpcu-pagBgColorHover);
-  border-color: var(--wpcu-pagBorderColorHover);
-  color: var(--wpcu-pagColorHover);
+  background: var(--wpcu-pagBgColorHover) !important;
+  border-color: var(--wpcu-pagBorderColorHover) !important;
+  color: var(--wpcu-pagColorHover) !important;
 }
 
 .wpcu-pagination .pagination .nav-links .page-numbers.current {
-  background: var(--wpcu-pagActiveBgColor);
-  border-color: var(--wpcu-pagActiveBorderColor);
-  color: var(--wpcu-pagActiveColor);
+  background: var(--wpcu-pagActiveBgColor) !important;
+  border-color: var(--wpcu-pagActiveBorderColor) !important;
+  color: var(--wpcu-pagActiveColor) !important;
 }
 
 /* Carousel bullets pagination */

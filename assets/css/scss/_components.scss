@@ -12,13 +12,16 @@
         text-decoration: none !important;
         font-size: var(--wpcu-productTitleSize) !important;
         font-weight: normal;
-        color: var(--wpcu-productTitleColor);
+        color: var(--wpcu-productTitleColor) !important;
         letter-spacing: normal;
         transition: 0.3s ease;
         &:hover{
-            color: var(--wpcu-productTitleColorHover);
+            color: var(--wpcu-productTitleColorHover) !important;
         }
     }
+}
+.wpcu-product .wpcu-product__title a{
+    text-decoration: none !important;
 }
 
 /* Product subtitle */
@@ -37,7 +40,7 @@
 .wpcu-product__type{
     display: block;
     a{
-        color: var(--wpcu-productTypeColor);
+        color: var(--wpcu-productTypeColor) ;
         font-size: var(--wpcu-productTypeSize);
         display: block;
         text-decoration: none !important;
@@ -178,6 +181,7 @@
             opacity: 0;
             pointer-events: none;
             transition: 0.3s ease;
+            box-sizing: border-box;
         }
     }
     @include e(content) {
