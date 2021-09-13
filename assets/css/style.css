@@ -632,51 +632,6 @@
 }
 
 /* Product rating */
-/* .wpcu-product__rating {
-    display: flex;
-    align-items: center;
-
-    @include e(stars) {
-        overflow: hidden;
-        margin: 0;
-        position: relative;
-        line-height: 1;
-        font-family: star;
-        text-align: left;
-        display: flex;
-        align-items: center;
-
-        &:before {
-            color: var(--wpcu-productRatingColor);
-            font-size: var(--wpcu-productRatingSize);
-            content: "\73\73\73\73\73";
-        }
-
-        span {
-            overflow: hidden;
-            top: 0;
-            left: 0;
-            position: absolute;
-            line-height: 1;
-            display: flex;
-            align-items: center;
-            &:before {
-                color: var(--wpcu-productRatingColor);
-                font-size: var(--wpcu-productRatingSize);
-                content: "\53\53\53\53\53";
-            }
-        }
-    }
-
-    .wpcu-product__rating__total {
-        font-size: 14px;
-        color: $textLight;
-        display: inline-block;
-        padding-left: 4px;
-        position: relative;
-        top: 2px;
-    }
-} */
 .wpcu-product__rating {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -684,6 +639,9 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+.wpcu-product__rating__stars {
+  position: relative;
 }
 .wpcu-product__rating__stars__wrap {
   display: -webkit-box;
@@ -695,6 +653,7 @@
 }
 .wpcu-product__rating__stars__wrap svg {
   width: var(--wpcu-productRatingSize);
+  fill: var(--wpcu-productRatingColor);
 }
 .wpcu-product__rating__stars__solid {
   display: -webkit-box;
@@ -703,9 +662,14 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
 }
 .wpcu-product__rating__stars__solid svg {
-  width: var(--wpcu-productRatingSize);
+  min-width: var(--wpcu-productRatingSize);
+  fill: var(--wpcu-productRatingColor);
 }
 .wpcu-product__rating .wpcu-product__rating__total {
   font-size: 14px;
@@ -993,6 +957,9 @@
 }
 .wpcu-pagination .pagination .nav-links .page-numbers:before, .wpcu-pagination .pagination .nav-links .page-numbers:after {
   content: none;
+}
+.wpcu-pagination .pagination .nav-links .page-numbers.prev, .wpcu-pagination .pagination .nav-links .page-numbers.next {
+  position: static;
 }
 
 .wpcu-pagination .pagination .nav-links .page-numbers svg {

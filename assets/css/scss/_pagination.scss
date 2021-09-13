@@ -45,6 +45,10 @@
     &:after{
         content: none;
     }
+    &.prev,
+    &.next{
+        position: static;
+    }
 }
 
 .wpcu-pagination .pagination .nav-links .page-numbers svg {
