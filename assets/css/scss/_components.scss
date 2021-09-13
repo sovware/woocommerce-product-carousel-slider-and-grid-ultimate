@@ -54,7 +54,7 @@
 }
 
 /* Product rating */
-.wpcu-product__rating {
+/* .wpcu-product__rating {
     display: flex;
     align-items: center;
 
@@ -65,6 +65,8 @@
         line-height: 1;
         font-family: star;
         text-align: left;
+        display: flex;
+        align-items: center;
 
         &:before {
             color: var(--wpcu-productRatingColor);
@@ -78,6 +80,8 @@
             left: 0;
             position: absolute;
             line-height: 1;
+            display: flex;
+            align-items: center;
             &:before {
                 color: var(--wpcu-productRatingColor);
                 font-size: var(--wpcu-productRatingSize);
@@ -86,6 +90,34 @@
         }
     }
 
+    .wpcu-product__rating__total {
+        font-size: 14px;
+        color: $textLight;
+        display: inline-block;
+        padding-left: 4px;
+        position: relative;
+        top: 2px;
+    }
+} */
+.wpcu-product__rating{
+    display: flex;
+    align-items: center;
+    @include e(stars){
+        @include e(wrap){
+            display: flex;
+            align-items: center;
+            svg{
+                width: var(--wpcu-productRatingSize);
+            }
+        }
+        @include e(solid){
+            display: flex;
+            align-items: center;
+            svg{
+                width: var(--wpcu-productRatingSize);
+            }
+        }
+    }
     .wpcu-product__rating__total {
         font-size: 14px;
         color: $textLight;
