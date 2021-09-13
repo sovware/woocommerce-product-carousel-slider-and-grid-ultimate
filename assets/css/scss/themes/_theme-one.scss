@@ -37,8 +37,7 @@
             margin: -6px 0;
 
             .wpcu-product__title,
-            .wpcu-product__price,
-            .wpcu-product__rating {
+            .wpcu-product__price {
                 padding: 6px 0;
             }
         }
@@ -48,9 +47,7 @@
         }
 
         @include e(rating) {
-            .woocommerce-product-rating {
-                justify-content: center;
-            }
+            justify-content: center;
         }
     }
 }

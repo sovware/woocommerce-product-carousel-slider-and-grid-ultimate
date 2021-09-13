@@ -55,49 +55,44 @@
 
 /* Product rating */
 .wpcu-product__rating {
+    display: flex;
+    align-items: center;
 
-    /* .star-rating {
-        margin: 0 !important;
-        font-size: var(--wpcu-productRatingSize) !important;
-        span {
-            padding-top: var(--wpcu-productRatingSize) !important;
-        }
+    @include e(stars) {
+        overflow: hidden;
+        margin: 0;
+        position: relative;
+        line-height: 1;
+        font-family: star;
+        text-align: left;
 
         &:before {
-            color: var(--wpcu-productRatingColor) !important;
-            font-size: var(--wpcu-productRatingSize) !important;
-            opacity: 1;
+            color: var(--wpcu-productRatingColor);
+            font-size: var(--wpcu-productRatingSize);
+            content: "\73\73\73\73\73";
         }
 
         span {
+            overflow: hidden;
+            top: 0;
+            left: 0;
+            position: absolute;
+            line-height: 1;
             &:before {
-                color: var(--wpcu-productRatingColor) !important;
-                font-size: var(--wpcu-productRatingSize) !important;
+                color: var(--wpcu-productRatingColor);
+                font-size: var(--wpcu-productRatingSize);
+                content: "\53\53\53\53\53";
             }
         }
-    } */
-
-    @include e(stars){
-        /* margin: 0 !important;
-        &:before,
-        &:after{
-            content: none !important;
-        }
-        span{
-            &:before,
-            &:after{
-                content: none !important;
-            }
-        } */
     }
 
-
-    @include e(total) {
+    .wpcu-product__rating__total {
         font-size: 14px;
         color: $textLight;
         display: inline-block;
         padding-left: 4px;
-        line-height: 14px;
+        position: relative;
+        top: 2px;
     }
 }
 
