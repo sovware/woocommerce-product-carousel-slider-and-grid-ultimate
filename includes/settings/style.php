@@ -12,8 +12,12 @@
                         <div class="input-group">
                             <input type="text" class="cmb2-text-small" name="wcpscu[header_font_size]"
                                 id="wcpscu_header_title_font_size"
-                                value="<?php if(!empty($header_font_size)) { echo $header_font_size; }else { echo "24px";} ?>"
+                                value="<?php if(!empty($header_font_size)) { echo $header_font_size; }else { echo "24";} ?>"
                                 placeholder="e.g. 20">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text" id="btnGroupAddon">px</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="cmb-navigation-item">
@@ -144,15 +148,15 @@
                         <div class="input-group">
                             <input type="text" class="cmb2-text-small theme_1" name="wcpscu[ratings_size][theme_1]"
                                 id="wcpscu_ratings_size"
-                                value="<?php echo ! empty( $ratings_size['theme_1'] ) ? esc_attr( $ratings_size['theme_1'] ) : '1em'; ?>">
+                                value="<?php echo ! empty( $ratings_size['theme_1'] ) ? esc_attr( $ratings_size['theme_1'] ) : '16'; ?>">
                             <input type="text" class="cmb2-text-small theme_2" name="wcpscu[ratings_size][theme_2]"
                                 id="wcpscu_ratings_size"
-                                value="<?php echo ! empty( $ratings_size['theme_2'] ) ? esc_attr( $ratings_size['theme_2'] ) : '1em'; ?>">
+                                value="<?php echo ! empty( $ratings_size['theme_2'] ) ? esc_attr( $ratings_size['theme_2'] ) : '16'; ?>">
                             <input type="text" class="cmb2-text-small theme_3" name="wcpscu[ratings_size][theme_3]"
                                 id="wcpscu_ratings_size"
-                                value="<?php echo ! empty( $ratings_size['theme_3'] ) ? esc_attr( $ratings_size['theme_3'] ) : '1em'; ?>">
+                                value="<?php echo ! empty( $ratings_size['theme_3'] ) ? esc_attr( $ratings_size['theme_3'] ) : '16'; ?>">
                             <div class="input-group-prepend">
-                                <div class="input-group-text" id="btnGroupAddon">em</span>
+                                <div class="input-group-text" id="btnGroupAddon">px</span>
                                 </div>
                             </div>
                         </div>
