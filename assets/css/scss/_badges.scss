@@ -9,7 +9,7 @@
 
     @include m(primary) {
         color: #fff;
-        background: var(--ribbonBgColor);
+        background: var(--wpcu-ribbonBgColor) !important;
     }
 
     @include m(sm) {

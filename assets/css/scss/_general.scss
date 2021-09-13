@@ -9,6 +9,7 @@
 
 /* Product image tweaks */
 .wpcu-product {
+    box-sizing: border-box;
     .wpcu-product__img{
         img {
             width: 100%;
@@ -68,26 +69,26 @@
     @include e(btn) {
         width: 40px;
         height: 40px;
-        border: 1px solid var(--navBorderColor);
+        border: 1px solid var(--wpcu-navBorderColor);
         display: inline-flex;
         align-items: center;
         justify-content: center;
         margin: 0 5px;
         cursor: pointer;
         transition: 0.3s ease;
-        background: var(--navBgColor);
+        background: var(--wpcu-navBgColor);
 
         svg {
             width: 6px;
-            fill: var(--navArrowColor);
+            fill: var(--wpcu-navArrowColor);
         }
 
         &:hover {
-            border-color: var(--navBorderColorHover);
-            background: var(--navBgColorHover);
+            border-color: var(--wpcu-navBorderColorHover);
+            background: var(--wpcu-navBgColorHover);
 
             svg {
-                fill: var(--navArrowColorHover) !important;
+                fill: var(--wpcu-navArrowColorHover) !important;
             }
         }
     }
@@ -131,13 +132,19 @@
         align-items: center;
         justify-content: space-between;
         z-index: 99;
-
+        margin: 0;
+        padding: 0;
+        pointer-events: none;
+        .wpcu-carousel-nav__btn{
+            margin: 0;
+            pointer-events: all;
+        }
         .wpcu-carousel-nav__btn--prev {
-            margin-left: -20px;
+            margin-left: 0;
         }
 
         .wpcu-carousel-nav__btn--next {
-            margin-right: -20px;
+            margin-right: 0;
         }
     }
 
@@ -184,8 +191,14 @@
 }
 
 .wpcu-products__header h2 {
-    font-size: var(--headerFontSize);
-    color: var(--headerFontColor);
+    font-size: var(--wpcu-headerFontSize) !important;
+    color: var(--wpcu-headerFontColor) !important;
     font-weight: 500;
     margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Carousel Style */
+.wpcu-carousel{
+    overflow: hidden;
 }

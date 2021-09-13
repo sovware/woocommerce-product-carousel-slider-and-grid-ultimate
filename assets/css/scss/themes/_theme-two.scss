@@ -32,11 +32,13 @@
                 justify-content: center;
             }
         }
-        &:hover{
-            .wpcu-product__cover-content--middle{
-                opacity: 1;
-                visibility: visible;
-                pointer-events: all;
+        @include e(content){
+            &:hover{
+                .wpcu-product__cover-content--middle{
+                    opacity: 1;
+                    visibility: visible;
+                    pointer-events: all;
+                }
             }
         }
     }

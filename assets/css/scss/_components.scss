@@ -10,15 +10,18 @@
 
     a {
         text-decoration: none !important;
-        font-size: var(--productTitleSize) !important;
+        font-size: var(--wpcu-productTitleSize) !important;
         font-weight: normal;
-        color: var(--productTitleColor);
+        color: var(--wpcu-productTitleColor) !important;
         letter-spacing: normal;
         transition: 0.3s ease;
         &:hover{
-            color: var(--productTitleColorHover);
+            color: var(--wpcu-productTitleColorHover) !important;
         }
     }
+}
+.wpcu-product .wpcu-product__title a{
+    text-decoration: none !important;
 }
 
 /* Product Price */
@@ -31,9 +34,9 @@
 
     @include e(sale) {
         display: inline-block;
-        font-size: var(--productPriceSize);
+        font-size: var(--wpcu-productPriceSize) !important;
         line-height: normal;
-        color: var(--productPriceColor);
+        color: var(--wpcu-productPriceColor) !important;
         margin: 0 4px;
     }
 
@@ -57,31 +60,48 @@
         align-items: center;
     }
 
-    .star-rating {
-        margin: 0;
-
+    /* .star-rating {
+        margin: 0 !important;
+        font-size: var(--wpcu-productRatingSize) !important;
         span {
-            padding-top: 12px;
+            padding-top: var(--wpcu-productRatingSize) !important;
         }
 
         &:before {
-            color: var(--productRatingColor);
-            font-size: var(--productRatingSize);
+            color: var(--wpcu-productRatingColor) !important;
+            font-size: var(--wpcu-productRatingSize) !important;
+            opacity: 1;
         }
 
         span {
             &:before {
-                color: var(--productRatingColor);
-                font-size: var(--productRatingSize);
+                color: var(--wpcu-productRatingColor) !important;
+                font-size: var(--wpcu-productRatingSize) !important;
+            }
+        }
+    } */
+
+    .star-rating{
+        margin: 0 !important;
+        &:before,
+        &:after{
+            content: none !important;
+        }
+        span{
+            &:before,
+            &:after{
+                content: none !important;
             }
         }
     }
+
 
     .total-rating {
         font-size: 14px;
         color: $textLight;
         display: inline-block;
         padding-left: 4px;
+        line-height: 14px;
     }
 }
 

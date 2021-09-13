@@ -14,8 +14,8 @@
     .added_to_cart,
     .button.added {
         min-height: 40px;
-        background: var(--buttonBgColor) !important;
-        color: var(--buttonColor) !important;
+        background: var(--wpcu-buttonBgColor) !important;
+        color: var(--wpcu-buttonColor) !important;
         border-radius: 0;
         text-transform: uppercase;
         font-size: 12px;
@@ -25,13 +25,15 @@
         justify-content: center;
         text-decoration: none !important;
         transition: 0.3s ease;
-        border: 1px solid transparent;
+        border: 1px solid transparent !important;
         line-height: unset !important;
+        text-align: center;
 
         &:hover {
             text-decoration: none !important;
-            background: var(--buttonBgColorHover) !important;
-            color: var(--buttonColorHover) !important;
+            background: var(--wpcu-buttonBgColorHover) !important;
+            color: var(--wpcu-buttonColorHover) !important;
+            border-color: var(--wpcu-buttonBgColorHover) !important;
         }
     }
 
@@ -42,9 +44,9 @@
             background: #fff !important;
             color: $textLight !important;
             &:hover{
-                color: var(--buttonColor) !important;
-                background: var(--buttonBgColorHover) !important;
-                border-color: var(--buttonBgColorHover) !important;
+                color: var(--wpcu-buttonColor) !important;
+                background: var(--wpcu-buttonBgColorHover) !important;
+                border-color: var(--wpcu-buttonBgColorHover) !important;
             }
         }
     }
@@ -79,12 +81,12 @@
             width: 40px;
             height: 40px;
             border-radius: 50%;
-            background: var(--qvBgColor);
+            background: var(--wpcu-qvBgColor);
 
             svg {
                 width: 14px;
                 height: 14px;
-                fill: var(--qvIconColor);
+                fill: var(--wpcu-qvIconColor);
             }
         }
     }
@@ -104,4 +106,13 @@
 /* Button tweaks */
 .wpcu-button .button.added{
     display: none !important;
+}
+
+/* Button text decoration none */
+.wpcu-product .wpcu-button{
+    .button,
+    .added_to_cart,
+    .button.added{
+        text-decoration: none !important;
+    }
 }

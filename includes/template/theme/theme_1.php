@@ -6,7 +6,7 @@
             </a>
 
             <?php wpcsu_ribbon_badge( $ribbon_args, $this->aazz_show_discount_percentage() ); ?>
-            
+
             <?php if( 'yes' == $display_cart ) { ?>
             <div class="wpcu-overlay-content-bottom">
                 <div class="wpcu-button">
@@ -19,7 +19,7 @@
             <?php if( 'yes' == $display_title ) { ?>
             <h2 class="wpcu-product__title"><a href="<?php echo get_the_permalink(); ?>"><?php echo get_the_title(); ?></a></h2>
             <?php } ?>
-            <?php if( 'yes' == $display_price && ! empty( $product->get_regular_price() ) ) { ?>       
+            <?php if( 'yes' == $display_price && ! empty( $product->get_regular_price() ) ) { ?>
             <div class="wpcu-product__price">
                 <?php
                 if( empty( $sale_price ) ) { ?>
@@ -38,6 +38,7 @@
                 <div class="atw_rating woocommerce">
                     <div class="woocommerce-product-rating">
                         <div class="star-rating" title="<?php echo $ratings; ?>%">
+                        
                             <span style="width: <?php echo $ratings; ?>%;"></span>
                         </div>
                         <span class="total-rating">(<?php echo $product->get_rating_count();?>)</span>
@@ -48,5 +49,4 @@
         </div>
     </div>
 </div><!-- ends: .wpcu-product -->
-        
-    
+
