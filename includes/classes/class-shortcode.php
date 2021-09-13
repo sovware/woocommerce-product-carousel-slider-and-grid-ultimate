@@ -221,7 +221,7 @@ class wcpcsu_Shortcode
         }'
         <?php } ?>
         >
-        <?php if( 'carousel' == $layout && ( 'top-left' == $nav_position || 'top-right' == $nav_position || 'top-middle' == $nav_position ) ) {
+        <?php if( 'carousel' == $layout && ( 'top-left' == $nav_position || 'top-right' == $nav_position || 'top-middle' == $nav_position || 'middle' == $nav_position) ) {
                 include WCPCSU_INC_DIR . 'template/navigation.php';
         } ?>
         <div class="<?php echo ( 'carousel' == $layout ) ? 'swiper-wrapper' : 'wpcu-row wpcu-column-' . $g_column . ' wpcu-column-md-' . $g_tablet . ' wpcu-column-sm-' . $g_mobile . ''; ?>">
