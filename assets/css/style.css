@@ -654,24 +654,20 @@
       }
   } */
 }
-.wpcu-product__rating .woocommerce-product-rating {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.wpcu-product__rating__stars {
+  /* margin: 0 !important;
+  &:before,
+  &:after{
+      content: none !important;
+  }
+  span{
+      &:before,
+      &:after{
+          content: none !important;
+      }
+  } */
 }
-.wpcu-product__rating .star-rating {
-  margin: 0 !important;
-}
-.wpcu-product__rating .star-rating:before, .wpcu-product__rating .star-rating:after {
-  content: none !important;
-}
-.wpcu-product__rating .star-rating span:before, .wpcu-product__rating .star-rating span:after {
-  content: none !important;
-}
-.wpcu-product__rating .total-rating {
+.wpcu-product__rating__total {
   font-size: 14px;
   color: #9192a3;
   display: inline-block;

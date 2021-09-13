@@ -34,17 +34,12 @@
             </div>
             <?php } ?>
             <?php if( 'yes' == $display_ratings ) { ?>
-            <div class="wpcu-product__rating">
-                <div class="atw_rating woocommerce">
-                    <div class="woocommerce-product-rating">
-                        <div class="star-rating" title="<?php echo $ratings; ?>%">
-                        
-                            <span style="width: <?php echo $ratings; ?>%;"></span>
-                        </div>
-                        <span class="total-rating">(<?php echo $product->get_rating_count();?>)</span>
+                <div class="wpcu-product__rating">
+                    <div class="wpcu-product__rating__stars" title="<?php echo $ratings; ?>%">
+                        <span style="width: <?php echo $ratings; ?>%;"></span>
                     </div>
+                    <span class="wpcu-product__rating__total">(<?php echo $product->get_rating_count();?>)</span>
                 </div>
-            </div>
             <?php } ?>
         </div>
     </div>

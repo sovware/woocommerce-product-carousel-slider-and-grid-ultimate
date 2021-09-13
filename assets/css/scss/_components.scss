@@ -55,10 +55,6 @@
 
 /* Product rating */
 .wpcu-product__rating {
-    .woocommerce-product-rating {
-        display: flex;
-        align-items: center;
-    }
 
     /* .star-rating {
         margin: 0 !important;
@@ -81,8 +77,8 @@
         }
     } */
 
-    .star-rating{
-        margin: 0 !important;
+    @include e(stars){
+        /* margin: 0 !important;
         &:before,
         &:after{
             content: none !important;
@@ -92,11 +88,11 @@
             &:after{
                 content: none !important;
             }
-        }
+        } */
     }
 
 
-    .total-rating {
+    @include e(total) {
         font-size: 14px;
         color: $textLight;
         display: inline-block;
