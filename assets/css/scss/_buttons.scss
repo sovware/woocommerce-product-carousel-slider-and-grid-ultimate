@@ -4,7 +4,7 @@
 */
 .wpcu-button {
     display: inline-block;
-
+    line-height: 0;
     p {
         margin: 0;
         display: inline-block;
@@ -18,7 +18,7 @@
         color: var(--wpcu-buttonColor) !important;
         border-radius: 0;
         text-transform: uppercase;
-        font-size: 12px;
+        font-size: var(--wpcu-buttonFontSize) !important;
         padding: 0 15px !important;
         display: flex !important;
         align-items: center;
@@ -27,6 +27,7 @@
         transition: 0.3s ease;
         border: 1px solid transparent;
         line-height: 15px !important;
+        text-align: center;
 
         &:hover {
             text-decoration: none !important;
@@ -38,6 +39,7 @@
     .button.product_type_external{
         max-width: 150px;
         line-height: 15px !important;
+        margin: 0 auto;
     }
 
     @include m(outlined) {
@@ -116,13 +118,13 @@
     @include m("white"){
         .button,
         .added_to_cart{
-            background: #fff !important;
-            border-color: var(--wpcu-borderColor);
+            background: var(--wpcu-buttonBgColor)!important;
+            border-color: var(--wpcu-borderColor) !important;
             color: var(--wpcu-buttonColor) !important;
             &:hover{
                 color: var(--wpcu-buttonColorHover) !important;
                 background: var(--wpcu-buttonBgColorHover) !important;
-                border-color: var(--wpcu-buttonBgColorHover);
+                border-color: var(--wpcu-buttonBgColorHover) !important;
             }
         }
     }
@@ -138,6 +140,8 @@
     justify-content: center;
     padding: 5px 15px;
     text-decoration: none !important;
+    line-height: 1.2 !important;
+    text-align: center;
     &:hover{
         background: var(--wpcu-quickViewBtnBgHover) !important;
         color: var(--wpcu-quickViewBtnColorHover) !important;

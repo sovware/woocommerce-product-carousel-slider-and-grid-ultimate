@@ -177,6 +177,7 @@ class wcpcsu_Shortcode
             --wpcu-buttonColorHover: <?php echo $cart_button_hover_font_color; ?>;
             --wpcu-buttonBgColor: <?php echo $cart_bg_color; ?>;
             --wpcu-buttonBgColorHover: <?php echo $cart_button_hover_color; ?>;
+            --wpcu-buttonFontSize: inherit;
 
             --wpcu-ribbonBgColor: <?php echo $ribbon_bg_color; ?>;
 

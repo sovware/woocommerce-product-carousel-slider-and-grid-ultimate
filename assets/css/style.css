@@ -33,6 +33,7 @@
   --wpcu-buttonColorHover: #fff;
   --wpcu-buttonBgColor: #ff5500;
   --wpcu-buttonBgColorHover: #d54500;
+  --wpcu-buttonFontSize: 12px;
   /* Ribbon */
   --wpcu-ribbonBgColor: #ff5500;
   --wpcu-ribbonBgColor2: #00b46a;
@@ -476,6 +477,7 @@
 */
 .wpcu-button {
   display: inline-block;
+  line-height: 0;
 }
 .wpcu-button p {
   margin: 0;
@@ -489,7 +491,7 @@
   color: var(--wpcu-buttonColor) !important;
   border-radius: 0;
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: var(--wpcu-buttonFontSize) !important;
   padding: 0 15px !important;
   display: -webkit-box !important;
   display: -ms-flexbox !important;
@@ -506,6 +508,7 @@
   transition: 0.3s ease;
   border: 1px solid transparent;
   line-height: 15px !important;
+  text-align: center;
 }
 .wpcu-button .button:hover,
 .wpcu-button .added_to_cart:hover,
@@ -518,6 +521,7 @@
 .wpcu-button .button.product_type_external {
   max-width: 150px;
   line-height: 15px !important;
+  margin: 0 auto;
 }
 .wpcu-button--outlined .button,
 .wpcu-button--outlined .added_to_cart {
@@ -581,15 +585,15 @@
 }
 .wpcu-button--white .button,
 .wpcu-button--white .added_to_cart {
-  background: #fff !important;
-  border-color: var(--wpcu-borderColor);
+  background: var(--wpcu-buttonBgColor) !important;
+  border-color: var(--wpcu-borderColor) !important;
   color: var(--wpcu-buttonColor) !important;
 }
 .wpcu-button--white .button:hover,
 .wpcu-button--white .added_to_cart:hover {
   color: var(--wpcu-buttonColorHover) !important;
   background: var(--wpcu-buttonBgColorHover) !important;
-  border-color: var(--wpcu-buttonBgColorHover);
+  border-color: var(--wpcu-buttonBgColorHover) !important;
 }
 
 /* Quick view button */
@@ -609,6 +613,8 @@
           justify-content: center;
   padding: 5px 15px;
   text-decoration: none !important;
+  line-height: 1.2 !important;
+  text-align: center;
 }
 .wpcu-quick-view-btn:hover {
   background: var(--wpcu-quickViewBtnBgHover) !important;
@@ -836,18 +842,22 @@
 .wpcu-product__cover-content--top-left {
   top: 20px;
   left: 20px;
+  text-align: left;
 }
 .wpcu-product__cover-content--top-right {
   top: 20px;
   right: 20px;
+  text-align: right;
 }
 .wpcu-product__cover-content--bottom-right {
   bottom: 20px;
   right: 20px;
+  text-align: right;
 }
 .wpcu-product__cover-content--bottom-left {
   left: 20px;
   bottom: 20px;
+  text-align: left;
 }
 .wpcu-product__cover-content--middle {
   top: 50%;
@@ -1857,10 +1867,10 @@
 .wpcu-theme_9 .wpcu-product__content:hover .wpcu-product__details .wpcu-product__price__sale,
 .wpcu-theme_9 .wpcu-product__content:hover .wpcu-product__details .wpcu-product__price s,
 .wpcu-theme_9 .wpcu-product__content:hover .wpcu-product__details .wpcu-badge {
-  color: #fff;
+  color: #fff !important;
 }
 .wpcu-theme_9 .wpcu-product__content:hover .wpcu-product__details .wpcu-badge {
-  border-color: #fff;
+  border-color: #fff !important;
 }
 
 /*===========================

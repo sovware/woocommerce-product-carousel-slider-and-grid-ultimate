@@ -140,18 +140,22 @@
     @include m(top-left){
         top: 20px;
         left: 20px;
+        text-align: left;
     }
     @include m(top-right){
         top: 20px;
         right: 20px;
+        text-align: right;
     }
     @include m(bottom-right){
         bottom: 20px;
         right: 20px;
+        text-align: right;
     }
     @include m(bottom-left){
         left: 20px;
         bottom: 20px;
+        text-align: left;
     }
     @include m(middle){
         top: 50%;
