@@ -133,13 +133,19 @@
         align-items: center;
         justify-content: space-between;
         z-index: 99;
-
+        margin: 0;
+        padding: 0;
+        pointer-events: none;
+        .wpcu-carousel-nav__btn{
+            margin: 0;
+            pointer-events: all;
+        }
         .wpcu-carousel-nav__btn--prev {
-            margin-left: -20px;
+            margin-left: 0;
         }
 
         .wpcu-carousel-nav__btn--next {
-            margin-right: -20px;
+            margin-right: 0;
         }
     }
 

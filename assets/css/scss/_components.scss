@@ -67,9 +67,9 @@
 
     @include e(sale) {
         display: inline-block;
-        font-size: var(--wpcu-productPriceSize);
+        font-size: var(--wpcu-productPriceSize) !important;
         line-height: normal;
-        color: var(--wpcu-productPriceColor);
+        color: var(--wpcu-productPriceColor) !important;
         margin: 0 4px;
     }
 
