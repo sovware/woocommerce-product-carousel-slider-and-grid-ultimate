@@ -1,0 +1,30 @@
+/*===========================
+ Style: Theme Fifteen
+===========================*/
+.wpcu-theme_15{
+    .wpcu-product{
+        @include e(content){
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 15px rgb(0 0 0 / 7%);
+            border-radius: 6px;
+            position: relative;
+            overflow: hidden;
+            &:hover{
+                .wpcu-product__details{
+                    bottom: 0;
+                }
+            }
+        }
+        @include e(details){
+            text-align: center;
+            position: absolute;
+            width: 100%;
+            left: 0;
+            bottom: -85px;
+            background: #fff;
+            padding: 20px 20px;
+            transition: bottom 0.3s ease;
+        }
+    }
+}

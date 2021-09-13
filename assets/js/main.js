@@ -98,7 +98,12 @@
             elm.style.setProperty('--wpcu-marqueeItemsWidth', `-${wpcuMarqueeWrapperWidth}px`);
             elm.style.setProperty('--wpcu-marqueeSpeed', `${checkData(parseInt(elm.dataset.wpcuSpeed))}ms`);
         })
+    });
 
+    /* Theme 15 tweaks */
+    var theme15items = document.querySelectorAll('.wpcu-theme_15 .wpcu-product__details__content');
+    theme15items.forEach(element => {
+        element.closest('.wpcu-product__content').style.paddingBottom = element.offsetHeight + "px";
     });
 
 })(jQuery);

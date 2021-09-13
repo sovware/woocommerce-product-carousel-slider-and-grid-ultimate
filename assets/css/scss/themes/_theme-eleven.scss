@@ -12,6 +12,7 @@
         }
     }
     .wpcu-product{
+        overflow: hidden;
         @include e(type){
             margin-top: 17px;
         }
