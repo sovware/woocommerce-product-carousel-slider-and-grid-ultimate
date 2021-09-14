@@ -77,34 +77,6 @@ $discount_ribbon_position   = ! empty( $discount_ribbon_position ) ? $discount_r
                 </div>
             </div>
 
-            <div class="cmb-row cmb-type-radio">
-                <div class="cmb-th">
-                    <label for="lcsp_ic">
-                        <?php esc_html_e('Display Full Title', WCPCSU_TEXTDOMAIN); ?>
-                    </label>
-                </div>
-                <div class="cmb-td">
-                    <ul class="cmb2-radio-list cmb2-list cmb2-radio-switch">
-                        <li>
-                            <input type="radio" class="cmb2-option  cmb2-radio-switch1"
-                                name="wcpscu[display_full_title]" id="wcpscu[display_full_title]1" value="yes"
-                                <?php checked('yes', $display_full_title, true);  ?>>
-                            <label for="wcpscu[display_full_title]1">
-                                <?php esc_html_e('Yes', WCPCSU_TEXTDOMAIN); ?>
-                            </label>
-                        </li>
-                        <li>
-                            <input type="radio" class="cmb2-option cmb2-radio-switch2" name="wcpscu[display_full_title]"
-                                id="wcpscu[display_full_title]2" value="no"
-                                <?php checked('no', $display_full_title, true);  ?>>
-                            <label for="wcpscu[display_full_title]2">
-                                <?php esc_html_e('No', WCPCSU_TEXTDOMAIN); ?>
-                            </label>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
             <!-- Total Products -->
             <div class="cmb-row cmb-type-text-medium">
                 <div class="cmb-th">
