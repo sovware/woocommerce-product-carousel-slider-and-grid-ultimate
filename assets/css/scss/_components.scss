@@ -244,6 +244,11 @@
                 display: none;
             }
         }
+        &.added{
+            svg{
+                fill: var(--wpcu-primaryColor) !important;
+            }
+        }
     }
     p.product{
         padding: 0 15px;
