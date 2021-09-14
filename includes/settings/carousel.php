@@ -324,14 +324,14 @@ $carousel_pagination    = ! empty( $carousel_pagination ) ? $carousel_pagination
                                 <?php esc_html_e('Dots Color', WCPCSU_TEXTDOMAIN); ?>
                             </label>
                             <input type="text" name="wcpscu[dots_color]" class="cpa-color-picker"
-                                value="<?php echo ! empty( $dots_color ) ? $dots_color : '#333'; ?>" />
+                                value="<?php echo ! empty( $dots_color ) ? $dots_color : '#b0b0b0'; ?>" />
                         </div>
                         <div class="cmb-navigation-item">
                             <label for="wcpscu[dots_active_color]">
                                 <?php esc_html_e('Dots Active Color', WCPCSU_TEXTDOMAIN); ?>
                             </label>
                             <input type="text" name="wcpscu[dots_active_color]" class="cpa-color-picker"
-                                value="<?php echo ! empty( $dots_active_color ) ? $dots_active_color : '#fff'; ?>" />
+                                value="<?php echo ! empty( $dots_active_color ) ? $dots_active_color : '#ff5500'; ?>" />
                         </div>
 
                     </div>

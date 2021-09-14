@@ -20,7 +20,7 @@ if( 'grid' == $layout ) {
 <?php } else { ?>
 <!-- wpcu-carousel-pagination -->
 <div class="wpcu-carousel-pagination" style="
-    --wpcu-pagColor: <?php echo $pagi_color; ?>;
-    --wpcu-pagColorHover: <?php echo $pagi_hover_color; ?>;
+    --wpcu-dotsColor: <?php echo $dots_color; ?>;
+    --wpcu-dotsActiveColor: <?php echo $dots_active_color; ?>;
 "></div>
 <?php } ?>
