@@ -103,7 +103,7 @@
     /* Theme 15 tweaks */
     var theme15items = document.querySelectorAll('.wpcu-theme_15 .wpcu-product__details__content');
     theme15items.forEach(element => {
-        element.closest('.wpcu-product__content').style.paddingBottom = element.offsetHeight + "px";
+        element.closest('.wpcu-product__content').style.paddingBottom = element.clientHeight + "px";
     });
 
 })(jQuery);
