@@ -1021,6 +1021,16 @@
       -ms-flex-direction: column;
           flex-direction: column;
 }
+.wpcu-product__action-icons--tiled a {
+  margin: 0;
+}
+.wpcu-product__action-icons--tiled p.product {
+  padding: 0 !important;
+}
+.wpcu-product__action-icons--tiled a:not(.button),
+.wpcu-product__action-icons--tiled .wpcu-button {
+  margin: 0 -1px;
+}
 
 /* Product card */
 .wpcu-product--card .wpcu-product__content {
