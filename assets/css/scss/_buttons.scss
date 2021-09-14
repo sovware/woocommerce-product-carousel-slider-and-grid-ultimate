@@ -46,8 +46,8 @@
         .button,
         .added_to_cart {
             border: 1px solid $borderColor;
-            background: #fff !important;
-            color: $textLight !important;
+            background: var(--wpcu-buttonBgColor) !important;
+            color: var(--wpcu-buttonColor) !important;
             &:hover{
                 color: var(--wpcu-buttonColor) !important;
                 background: var(--wpcu-buttonBgColorHover) !important;
@@ -105,13 +105,13 @@
     }
     @include m(light){
         .button{
-            background: #fff;
+            background: var(--wpcu-buttonBgColor);
             border-color: #fff;
-            color: $textDark !important;
+            color: var(--wpcu-buttonColor) !important;
             &:hover{
-                color: #fff !important;
-                border-color: $primary;
-                background: $primary;
+                color: var(--wpcu-buttonColorHover) !important;
+                border-color: var(--wpcu-buttonBgColorHover);
+                background: var(--wpcu-buttonBgColorHover);
             }
         }
     }

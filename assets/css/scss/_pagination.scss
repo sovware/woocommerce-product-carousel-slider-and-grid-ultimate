@@ -79,7 +79,12 @@
     justify-content: center;
     flex-wrap: wrap;
 }
-
-.wpcu-carousel-pagination .swiper-pagination-bullet-active {
-    background: #ff5500;
+.wpcu-carousel-pagination{
+    .swiper-pagination-bullet{
+        background: var(--wpcu-dotsColor) !important;
+        opacity: 1;
+    }
+    .swiper-pagination-bullet-active {
+        background: var(--wpcu-dotsActiveColor) !important;
+    }
 }

@@ -4,6 +4,7 @@
 .wpcu-theme_11{
     &.wpcu-carousel{
         .wpcu-product{
+            overflow: hidden;
             transition: 0.3s ease;
             &:hover{
                 padding-bottom: 80px;
@@ -12,7 +13,6 @@
         }
     }
     .wpcu-product{
-        overflow: hidden;
         @include e(type){
             margin-top: 17px;
         }

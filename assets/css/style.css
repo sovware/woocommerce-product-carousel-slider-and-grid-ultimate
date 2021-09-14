@@ -73,6 +73,9 @@
   /* Marquee Animation */
   --wpcu-marqueeItemsWidth: -2930px;
   --wpcu-marqueeSpeed: 10000ms;
+  /* Carousel Dots color */
+  --wpcu-dotsColor: #b0b0b0;
+  --wpcu-dotsActiveColor: #ff5500;
 }
 
 /* General Styles */
@@ -526,8 +529,8 @@
 .wpcu-button--outlined .button,
 .wpcu-button--outlined .added_to_cart {
   border: 1px solid #e4e4ed;
-  background: #fff !important;
-  color: #9192a3 !important;
+  background: var(--wpcu-buttonBgColor) !important;
+  color: var(--wpcu-buttonColor) !important;
 }
 .wpcu-button--outlined .button:hover,
 .wpcu-button--outlined .added_to_cart:hover {
@@ -574,14 +577,14 @@
   fill: #fff;
 }
 .wpcu-button--light .button {
-  background: #fff;
+  background: var(--wpcu-buttonBgColor);
   border-color: #fff;
-  color: #000000 !important;
+  color: var(--wpcu-buttonColor) !important;
 }
 .wpcu-button--light .button:hover {
-  color: #fff !important;
-  border-color: #ff5500;
-  background: #ff5500;
+  color: var(--wpcu-buttonColorHover) !important;
+  border-color: var(--wpcu-buttonBgColorHover);
+  background: var(--wpcu-buttonBgColorHover);
 }
 .wpcu-button--white .button,
 .wpcu-button--white .added_to_cart {
@@ -730,8 +733,8 @@
   display: block;
 }
 .wpcu-product__type a {
-  color: var(--wpcu-productTypeColor);
-  font-size: var(--wpcu-productTypeSize);
+  color: var(--wpcu-productTypeColor) !important;
+  font-size: var(--wpcu-productTypeSize) !important;
   display: block;
   text-decoration: none !important;
 }
@@ -796,8 +799,8 @@
           align-items: center;
 }
 .wpcu-product__rating__stars__wrap svg {
-  width: var(--wpcu-productRatingSize);
-  fill: var(--wpcu-productRatingColor);
+  width: var(--wpcu-productRatingSize) !important;
+  fill: var(--wpcu-productRatingColor) !important;
 }
 .wpcu-product__rating__stars__solid {
   display: -webkit-box;
@@ -812,8 +815,8 @@
   overflow: hidden;
 }
 .wpcu-product__rating__stars__solid svg {
-  min-width: var(--wpcu-productRatingSize);
-  fill: var(--wpcu-productRatingColor);
+  min-width: var(--wpcu-productRatingSize) !important;
+  fill: var(--wpcu-productRatingColor) !important;
 }
 .wpcu-product__rating .wpcu-product__rating__total {
   font-size: 14px;
@@ -929,7 +932,7 @@
   -webkit-transition: 0.3s ease;
   -o-transition: 0.3s ease;
   transition: 0.3s ease;
-  color: var(--wpcu-actionIconColor);
+  color: var(--wpcu-actionIconColor) !important;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -946,17 +949,17 @@
   -webkit-transition: 0.3s ease;
   -o-transition: 0.3s ease;
   transition: 0.3s ease;
-  fill: var(--wpcu-actionIconColor);
+  fill: var(--wpcu-actionIconColor) !important;
 }
 .wpcu-product__action-icons a:hover svg {
-  fill: var(--wpcu-actionIconColorHover);
+  fill: var(--wpcu-actionIconColorHover) !important;
 }
 .wpcu-product__action-icons a.woosw-added {
   text-decoration: none;
 }
 .wpcu-product__action-icons a.woosw-added:before {
   margin-right: 0;
-  color: var(--wpcu-primaryColor);
+  color: var(--wpcu-primaryColor) !important;
 }
 .wpcu-product__action-icons a.woosw-added svg {
   display: none;
@@ -1382,8 +1385,12 @@
       flex-wrap: wrap;
 }
 
+.wpcu-carousel-pagination .swiper-pagination-bullet {
+  background: var(--wpcu-dotsColor) !important;
+  opacity: 1;
+}
 .wpcu-carousel-pagination .swiper-pagination-bullet-active {
-  background: #ff5500;
+  background: var(--wpcu-dotsActiveColor) !important;
 }
 
 /*===========================
@@ -1906,6 +1913,7 @@
   /* Carousel marquee fix */
 }
 .wpcu-theme_11.wpcu-carousel .wpcu-product {
+  overflow: hidden;
   -webkit-transition: 0.3s ease;
   -o-transition: 0.3s ease;
   transition: 0.3s ease;
@@ -1913,9 +1921,6 @@
 .wpcu-theme_11.wpcu-carousel .wpcu-product:hover {
   padding-bottom: 80px;
   margin-top: -80px;
-}
-.wpcu-theme_11 .wpcu-product {
-  overflow: hidden;
 }
 .wpcu-theme_11 .wpcu-product__type {
   margin-top: 17px;

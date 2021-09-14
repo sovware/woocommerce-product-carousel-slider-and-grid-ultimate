@@ -40,8 +40,8 @@
 .wpcu-product__type{
     display: block;
     a{
-        color: var(--wpcu-productTypeColor) ;
-        font-size: var(--wpcu-productTypeSize);
+        color: var(--wpcu-productTypeColor) !important;
+        font-size: var(--wpcu-productTypeSize) !important;
         display: block;
         text-decoration: none !important;
     }
@@ -96,8 +96,8 @@
             display: flex;
             align-items: center;
             svg{
-                width: var(--wpcu-productRatingSize);
-                fill: var(--wpcu-productRatingColor);
+                width: var(--wpcu-productRatingSize) !important;
+                fill: var(--wpcu-productRatingColor) !important;
             }
         }
         @include e(solid){
@@ -108,8 +108,8 @@
             top: 0;
             overflow: hidden;
             svg{
-                min-width: var(--wpcu-productRatingSize);
-                fill: var(--wpcu-productRatingColor);
+                min-width: var(--wpcu-productRatingSize) !important;
+                fill: var(--wpcu-productRatingColor) !important;
             }
         }
     }
@@ -219,7 +219,7 @@
         font-size: 18px;
         padding: 0 15px;
         transition: 0.3s ease;
-        color: var(--wpcu-actionIconColor);
+        color: var(--wpcu-actionIconColor) !important;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -227,18 +227,18 @@
             width: 18px;
             height: auto;
             transition: 0.3s ease;
-            fill: var(--wpcu-actionIconColor);
+            fill: var(--wpcu-actionIconColor) !important;
         }
         &:hover{
             svg{
-                fill: var(--wpcu-actionIconColorHover);
+                fill: var(--wpcu-actionIconColorHover) !important;
             }
         }
         &.woosw-added{
             text-decoration: none;
             &:before{
                 margin-right: 0;
-                color: var(--wpcu-primaryColor);
+                color: var(--wpcu-primaryColor) !important;
             }
             svg{
                 display: none;
