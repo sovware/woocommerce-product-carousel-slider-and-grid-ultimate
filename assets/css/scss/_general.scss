@@ -69,23 +69,23 @@
     @include e(btn) {
         width: 40px;
         height: 40px;
-        border: 1px solid var(--wpcu-navBorderColor);
+        border: 1px solid var(--wpcu-navBorderColor) !important;
         display: inline-flex;
         align-items: center;
         justify-content: center;
         margin: 0 5px;
         cursor: pointer;
         transition: 0.3s ease;
-        background: var(--wpcu-navBgColor);
+        background: var(--wpcu-navBgColor) !important;
 
         svg {
             width: 6px;
-            fill: var(--wpcu-navArrowColor);
+            fill: var(--wpcu-navArrowColor) !important;
         }
 
         &:hover {
-            border-color: var(--wpcu-navBorderColorHover);
-            background: var(--wpcu-navBgColorHover);
+            border-color: var(--wpcu-navBorderColorHover) !important;
+            background: var(--wpcu-navBgColorHover) !important;
 
             svg {
                 fill: var(--wpcu-navArrowColorHover) !important;

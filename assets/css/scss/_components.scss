@@ -63,8 +63,8 @@
             display: flex;
             align-items: center;
             svg{
-                width: var(--wpcu-productRatingSize);
-                fill: var(--wpcu-productRatingColor);
+                width: var(--wpcu-productRatingSize) !important;
+                fill: var(--wpcu-productRatingColor) !important;
             }
         }
         @include e(solid){
@@ -75,8 +75,8 @@
             top: 0;
             overflow: hidden;
             svg{
-                min-width: var(--wpcu-productRatingSize);
-                fill: var(--wpcu-productRatingColor);
+                min-width: var(--wpcu-productRatingSize) !important;
+                fill: var(--wpcu-productRatingColor) !important;
             }
         }
     }

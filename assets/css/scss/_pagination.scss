@@ -25,16 +25,16 @@
 }
 
 .wpcu-pagination .pagination .nav-links .page-numbers {
-    color: var(--wpcu-pagColor);
+    color: var(--wpcu-pagColor) !important;
     margin: 5px;
     font-size: 14px;
     text-decoration: none !important;
-    border: 1px solid var(--wpcu-pagBorderColor);
+    border: 1px solid var(--wpcu-pagBorderColor) !important;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 0;
-    background: var(--wpcu-pagBgColor);
+    background: var(--wpcu-pagBgColor) !important;
     width: 34px;
     min-width: 34px;
     height: 34px;
@@ -52,23 +52,23 @@
 }
 
 .wpcu-pagination .pagination .nav-links .page-numbers svg {
-    fill: var(--wpcu-pagColor);
+    fill: var(--wpcu-pagColor) !important;
 }
 
 .wpcu-pagination .pagination .nav-links .page-numbers:hover svg {
-    fill: var(--wpcu-pagColorHover);
+    fill: var(--wpcu-pagColorHover) !important;
 }
 
 .wpcu-pagination .pagination .nav-links .page-numbers:hover {
-    background: var(--wpcu-pagBgColorHover);
-    border-color: var(--wpcu-pagBorderColorHover);
-    color: var(--wpcu-pagColorHover);
+    background: var(--wpcu-pagBgColorHover) !important;
+    border-color: var(--wpcu-pagBorderColorHover) !important;
+    color: var(--wpcu-pagColorHover) !important;
 }
 
 .wpcu-pagination .pagination .nav-links .page-numbers.current {
-    background: var(--wpcu-pagActiveBgColor);
-    border-color: var(--wpcu-pagActiveBorderColor);
-    color: var(--wpcu-pagActiveColor);
+    background: var(--wpcu-pagActiveBgColor) !important;
+    border-color: var(--wpcu-pagActiveBorderColor) !important;
+    color: var(--wpcu-pagActiveColor) !important;
 }
 
 /* Carousel bullets pagination */
@@ -80,6 +80,12 @@
     flex-wrap: wrap;
 }
 
-.wpcu-carousel-pagination .swiper-pagination-bullet-active {
-    background: #ff5500;
+.wpcu-carousel-pagination{
+    .swiper-pagination-bullet{
+        background: var(--wpcu-dotsColor) !important;
+        opacity: 1;
+    }
+    .swiper-pagination-bullet-active {
+        background: var(--wpcu-dotsActiveColor) !important;
+    }
 }
