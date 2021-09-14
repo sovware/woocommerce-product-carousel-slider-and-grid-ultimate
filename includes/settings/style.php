@@ -12,9 +12,12 @@
                         <div class="input-group">
                             <input type="text" class="cmb2-text-small" name="wcpscu[header_font_size]"
                                 id="wcpscu_header_title_font_size"
-                                value="<?php if(!empty($header_font_size)) { echo $header_font_size; }else { echo "24px";} ?>"
+                                value="<?php if(!empty($header_font_size)) { echo $header_font_size; }else { echo "24";} ?>"
                                 placeholder="e.g. 20px">
-
+                            <div class="input-group-prepend">
+                                <div class="input-group-text" id="btnGroupAddon">px</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="cmb-navigation-item">
@@ -378,43 +381,47 @@
                         <div class="input-group">
                             <input type="text" class="cmb2-text-small theme_1" name="wcpscu[ratings_size][theme_1]"
                                 id="wcpscu_ratings_size"
-                                value="<?php echo ! empty( $ratings_size['theme_1'] ) ? esc_attr( $ratings_size['theme_1'] ) : '1em'; ?>">
+                                value="<?php echo ! empty( $ratings_size['theme_1'] ) ? esc_attr( $ratings_size['theme_1'] ) : '16'; ?>">
                             <input type="text" class="cmb2-text-small theme_2" name="wcpscu[ratings_size][theme_2]"
                                 id="wcpscu_ratings_size"
-                                value="<?php echo ! empty( $ratings_size['theme_2'] ) ? esc_attr( $ratings_size['theme_2'] ) : '1em'; ?>">
+                                value="<?php echo ! empty( $ratings_size['theme_2'] ) ? esc_attr( $ratings_size['theme_2'] ) : '16'; ?>">
                             <input type="text" class="cmb2-text-small theme_3" name="wcpscu[ratings_size][theme_3]"
                                 id="wcpscu_ratings_size"
-                                value="<?php echo ! empty( $ratings_size['theme_3'] ) ? esc_attr( $ratings_size['theme_3'] ) : '1em'; ?>">
+                                value="<?php echo ! empty( $ratings_size['theme_3'] ) ? esc_attr( $ratings_size['theme_3'] ) : '16'; ?>">
                             <input type="text" class="cmb2-text-small theme_4" name="wcpscu[ratings_size][theme_4]"
                             id="wcpscu_ratings_size"
-                            value="<?php echo ! empty( $ratings_size['theme_4'] ) ? esc_attr( $ratings_size['theme_4'] ) : '16px'; ?>">
+                            value="<?php echo ! empty( $ratings_size['theme_4'] ) ? esc_attr( $ratings_size['theme_4'] ) : '16'; ?>">
                             <input type="text" class="cmb2-text-small theme_5" name="wcpscu[ratings_size][theme_5]"
                             id="wcpscu_ratings_size"
-                            value="<?php echo ! empty( $ratings_size['theme_5'] ) ? esc_attr( $ratings_size['theme_5'] ) : '16px'; ?>">
+                            value="<?php echo ! empty( $ratings_size['theme_5'] ) ? esc_attr( $ratings_size['theme_5'] ) : '16'; ?>">
                             <input type="text" class="cmb2-text-small theme_6" name="wcpscu[ratings_size][theme_6]"
                             id="wcpscu_ratings_size"
-                            value="<?php echo ! empty( $ratings_size['theme_6'] ) ? esc_attr( $ratings_size['theme_6'] ) : '16px'; ?>">
+                            value="<?php echo ! empty( $ratings_size['theme_6'] ) ? esc_attr( $ratings_size['theme_6'] ) : '16'; ?>">
                             <input type="text" class="cmb2-text-small theme_7" name="wcpscu[ratings_size][theme_7]"
                             id="wcpscu_ratings_size"
-                            value="<?php echo ! empty( $ratings_size['theme_7'] ) ? esc_attr( $ratings_size['theme_7'] ) : '16px'; ?>">
+                            value="<?php echo ! empty( $ratings_size['theme_7'] ) ? esc_attr( $ratings_size['theme_7'] ) : '16'; ?>">
                             <input type="text" class="cmb2-text-small theme_8" name="wcpscu[ratings_size][theme_8]"
                             id="wcpscu_ratings_size"
-                            value="<?php echo ! empty( $ratings_size['theme_8'] ) ? esc_attr( $ratings_size['theme_8'] ) : '16px'; ?>">
+                            value="<?php echo ! empty( $ratings_size['theme_8'] ) ? esc_attr( $ratings_size['theme_8'] ) : '16'; ?>">
                             <input type="text" class="cmb2-text-small theme_9" name="wcpscu[ratings_size][theme_9]"
                             id="wcpscu_ratings_size"
-                            value="<?php echo ! empty( $ratings_size['theme_9'] ) ? esc_attr( $ratings_size['theme_9'] ) : '16px'; ?>">
+                            value="<?php echo ! empty( $ratings_size['theme_9'] ) ? esc_attr( $ratings_size['theme_9'] ) : '16'; ?>">
                             <input type="text" class="cmb2-text-small theme_10" name="wcpscu[ratings_size][theme_10]"
                             id="wcpscu_ratings_size"
-                            value="<?php echo ! empty( $ratings_size['theme_10'] ) ? esc_attr( $ratings_size['theme_10'] ) : '16px'; ?>">
+                            value="<?php echo ! empty( $ratings_size['theme_10'] ) ? esc_attr( $ratings_size['theme_10'] ) : '16'; ?>">
                             <input type="text" class="cmb2-text-small theme_12" name="wcpscu[ratings_size][theme_12]"
                             id="wcpscu_ratings_size"
-                            value="<?php echo ! empty( $ratings_size['theme_12'] ) ? esc_attr( $ratings_size['theme_12'] ) : '15px'; ?>">
+                            value="<?php echo ! empty( $ratings_size['theme_12'] ) ? esc_attr( $ratings_size['theme_12'] ) : '15'; ?>">
                             <input type="text" class="cmb2-text-small theme_13" name="wcpscu[ratings_size][theme_13]"
                             id="wcpscu_ratings_size"
-                            value="<?php echo ! empty( $ratings_size['theme_13'] ) ? esc_attr( $ratings_size['theme_13'] ) : '15px'; ?>">
+                            value="<?php echo ! empty( $ratings_size['theme_13'] ) ? esc_attr( $ratings_size['theme_13'] ) : '15'; ?>">
                             <input type="text" class="cmb2-text-small theme_14" name="wcpscu[ratings_size][theme_14]"
                             id="wcpscu_ratings_size"
-                            value="<?php echo ! empty( $ratings_size['theme_14'] ) ? esc_attr( $ratings_size['theme_14'] ) : '15px'; ?>">
+                            value="<?php echo ! empty( $ratings_size['theme_14'] ) ? esc_attr( $ratings_size['theme_14'] ) : '15'; ?>">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text" id="btnGroupAddon">px</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="cmb-navigation-item">

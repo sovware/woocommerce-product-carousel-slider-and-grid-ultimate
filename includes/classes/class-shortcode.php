@@ -170,7 +170,7 @@ class wcpcsu_Shortcode
             --wpcu-productPriceSize: <?php echo $price_font_size; ?>px;
             --wpcu-productPriceColor: <?php echo $price_font_color; ?>;
 
-            --wpcu-productRatingSize: <?php echo $ratings_size; ?>;
+            --wpcu-productRatingSize: <?php echo $ratings_size; ?>px;
             --wpcu-productRatingColor: <?php echo $ratings_color; ?>;
 
             --wpcu-buttonColor: <?php echo $cart_font_color; ?>;
