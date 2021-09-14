@@ -160,7 +160,7 @@ $carousel_pagination    = ! empty( $carousel_pagination ) ? $carousel_pagination
                 </div>
             </div>
             <!--Scrolling-->
-            <div class="cmb-row cmb-type-radio">
+           <!--  <div class="cmb-row cmb-type-radio">
                 <div class="cmb-th">
                     <label for="lcsp_spp">
                         <?php esc_html_e('Scroll', WCPCSU_TEXTDOMAIN); ?>
@@ -183,7 +183,8 @@ $carousel_pagination    = ! empty( $carousel_pagination ) ? $carousel_pagination
                         </li>
                     </ul>
                 </div>
-            </div> <!-- end cmb2-metabox -->
+            </div> --> <!-- end cmb2-metabox -->
+
             <!-- Navigation show/hide -->
             <div class="cmb-row cmb-type-radio">
                 <div class="cmb-th">
