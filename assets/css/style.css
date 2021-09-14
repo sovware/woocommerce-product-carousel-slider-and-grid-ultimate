@@ -534,7 +534,7 @@
 }
 .wpcu-button--outlined .button:hover,
 .wpcu-button--outlined .added_to_cart:hover {
-  color: var(--wpcu-buttonColor) !important;
+  color: var(--wpcu-buttonColorHover) !important;
   background: var(--wpcu-buttonBgColorHover) !important;
   border-color: var(--wpcu-buttonBgColorHover) !important;
 }
@@ -963,6 +963,9 @@
 }
 .wpcu-product__action-icons a.woosw-added svg {
   display: none;
+}
+.wpcu-product__action-icons a.added svg {
+  fill: var(--wpcu-primaryColor) !important;
 }
 .wpcu-product__action-icons p.product {
   padding: 0 15px;
