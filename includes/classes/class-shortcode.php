@@ -211,7 +211,7 @@ class wcpcsu_Shortcode
             "pauseOnMouseEnter": <?php echo ( 'true' == $stop_hover ) ? "true" : "false"; ?>,
             "disableOnInteraction": false,
             "stopOnLastSlide": true,
-            "reverseDirection": false
+            "reverseDirection": <?php echo 'right_left' == $scrool_direction ? 'false' : 'true';?>
         }
         <?php } else { ?>
             false
