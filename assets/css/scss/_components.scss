@@ -301,6 +301,18 @@
     @include m(vertical){
         flex-direction: column;
     }
+    @include m(tiled){
+        a{
+            margin: 0;
+        }
+        p.product{
+            padding: 0 !important;
+        }
+        a:not(.button),
+        .wpcu-button{
+            margin: 0 -1px;
+        }
+    }
 }
 
 /* Product card */

@@ -258,9 +258,9 @@ class wcpcsu_Shortcode
              } ?>
         </div><!-- ends: .wpcu-products -->
         <?php
-            
+
                 include WCPCSU_INC_DIR . 'template/quick-view.php';
-            
+
         ?>
         <?php
         }else{
