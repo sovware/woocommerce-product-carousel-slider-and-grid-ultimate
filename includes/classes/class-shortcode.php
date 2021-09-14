@@ -204,7 +204,7 @@ class wcpcsu_Shortcode
         data-wpcu-perslide="2"
         data-wpcu-speed="<?php echo $slide_speed; ?>"
         data-wpcu-autoplay='
-        <?php if( 'yes' == $A_play ) { ?>
+        <?php if( 'yes' == $A_play && 'no' == $marquee ) { ?>
         {
             "delay": "0",
             "pauseOnMouseEnter": <?php echo ( 'true' == $stop_hover ) ? "true" : "false"; ?>,
@@ -257,9 +257,9 @@ class wcpcsu_Shortcode
              } ?>
         </div><!-- ends: .wpcu-products -->
         <?php
-            if( 'theme_2' == $theme ){
+            
                 include WCPCSU_INC_DIR . 'template/quick-view.php';
-            }
+            
         ?>
         <?php
         }else{
