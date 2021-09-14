@@ -129,6 +129,8 @@ class wcpcsu_Shortcode
 
         // carousel pagination settings
         $carousel_pagination        = ! empty( $carousel_pagination ) ? $carousel_pagination : 'no';
+        $dots_color                 = ! empty( $dots_color ) ? $dots_color : '#333';
+        $dots_active_color          = ! empty( $dots_active_color ) ? $dots_active_color : '#fff';
         //grid pagination settings
         $pagi_color                 = ! empty( $pagi_color ) ? $pagi_color : '#333';
         $pagi_border_color          = ! empty( $pagi_border_color ) ? $pagi_border_color : '#e4e4e4';
