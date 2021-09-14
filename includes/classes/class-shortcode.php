@@ -111,6 +111,7 @@ class wcpcsu_Shortcode
         $marquee                    = ! empty( $marquee ) ? $marquee : 'no';
         $repeat_product             = ! empty( $repeat_product ) ? $repeat_product : 'yes';
         $scrool                     = ! empty( $scrool ) ? $scrool : 'per_item';
+        $scrool_direction           = ! empty( $scrool_direction ) ? $scrool_direction : 'right_left';
         $stop_hover                 = ! empty( $stop_hover ) ? $stop_hover : true;
         $carousel_desktop_column    = ! empty( $c_desktop ) ? $c_desktop : 4;
         $carousel_laptop_column     = ! empty( $c_desktop_small ) ? $c_desktop_small : 3;
@@ -204,7 +205,7 @@ class wcpcsu_Shortcode
         data-wpcu-perslide="2"
         data-wpcu-speed="<?php echo $slide_speed; ?>"
         data-wpcu-autoplay='
-        <?php if( 'yes' == $A_play && 'no' == $marquee ) { ?>
+        <?php if( 'yes' == $A_play ) { ?>
         {
             "delay": "0",
             "pauseOnMouseEnter": <?php echo ( 'true' == $stop_hover ) ? "true" : "false"; ?>,

@@ -4,7 +4,7 @@ $stop_hover             = ! empty( $stop_hover ) ? $stop_hover : 'no';
 $marquee                = ! empty( $marquee ) ? $marquee : 'no';
 $A_play                 = ! empty( $A_play ) ? $A_play : 'yes';
 $pagination             = ! empty( $pagination ) ? $pagination : 'yes';
-$scrol_direction        = ! empty( $scrol_direction ) ? $scrol_direction : 'left';
+$scrool_direction       = ! empty( $scrool_direction ) ? $scrool_direction : 'right_left';
 $scrool                 = ! empty( $scrool ) ? $scrool : 'per_item';
 $nav_show               = ! empty( $nav_show ) ? $nav_show : 'yes';
 $nav_position           = ! empty( $nav_position ) ? $nav_position : 'bottom-right';
@@ -209,6 +209,33 @@ $carousel_pagination    = ! empty( $carousel_pagination ) ? $carousel_pagination
                     </ul>
                 </div>
             </div> <!-- end cmb2-metabox -->
+
+            <!--Scroll direction-->
+            <div class="cmb-row cmb-type-radio">
+                <div class="cmb-th">
+                    <label for="lcsp_spp">
+                        <?php esc_html_e('Scroll Direction', WCPCSU_TEXTDOMAIN); ?>
+                    </label>
+                </div>
+                <div class="cmb-td">
+                    <ul class="cmb2-radio-list cmb2-list">
+                        <li>
+                            <input type="radio" class="cmb2-option" name="wcpscu[scrool_direction]" id="wcpc_scrool_direction1" value="right_left"
+                                <?php checked('right_left', $scrool_direction, true); ?>>
+                            <label for="wcpc_scrool_direction1">
+                                <?php esc_html_e('Right to Left', WCPCSU_TEXTDOMAIN); ?>
+                            </label>
+                        </li>
+                        <li><input type="radio" class="cmb2-option" name="wcpscu[scrool_direction]" id="wcpc_scrool_direction2" value="left_right"
+                                <?php checked('left_right', $scrool_direction, true); ?>>
+                            <label for="wcpc_scrool_direction2">
+                                <?php esc_html_e('Left to Right', WCPCSU_TEXTDOMAIN); ?>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div> <!-- end cmb2-metabox -->
+
             <!-- Navigation show/hide -->
             <div class="cmb-row cmb-type-radio">
                 <div class="cmb-th">
