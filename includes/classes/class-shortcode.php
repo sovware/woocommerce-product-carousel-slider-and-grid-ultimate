@@ -207,7 +207,7 @@ class wcpcsu_Shortcode
         data-wpcu-autoplay='
         <?php if( 'yes' == $A_play ) { ?>
         {
-            "delay": "0",
+            "delay": "<?php echo $slide_time; ?>",
             "pauseOnMouseEnter": <?php echo ( 'true' == $stop_hover ) ? "true" : "false"; ?>,
             "disableOnInteraction": false,
             "stopOnLastSlide": true,
