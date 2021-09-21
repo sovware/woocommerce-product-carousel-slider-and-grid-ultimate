@@ -24,7 +24,16 @@
 
             </div>
             <div class="wpcu-product__details">
-                <span class="wpcu-product__type"><?php echo $product->get_categories(); ?></span>
+
+                <?php if( $categories ) { 
+                    foreach( $categories as $cat ) { ?>
+                        <span class="wpcu-product__type">
+                            <a><?php echo $cat->name; ?></a>
+                        </span> 
+                        <?php
+                    }   
+                    } ?>
+
                 <?php if( 'yes' == $display_title ) { ?>
                 <h2 class="wpcu-product__title wpcu-mb-5"><a href="<?php echo get_the_permalink(); ?>"><?php echo get_the_title(); ?></a></h2>
                 <?php } ?>
