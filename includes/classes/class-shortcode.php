@@ -233,6 +233,7 @@ class wcpcsu_Shortcode
             while($loop->have_posts()) : $loop->the_post();
             global $post,$product;
             $thumb = get_post_thumbnail_id();
+            $categories = get_the_terms( $product->get_id(), 'product_cat' );
             // crop the image if the cropping is enabled.
             if ('yes' === $img_crop){
                 $wpcsu_img = wpcsu_image_cropping($thumb, $crop_image_width, $crop_image_height, true, 100)['url'];

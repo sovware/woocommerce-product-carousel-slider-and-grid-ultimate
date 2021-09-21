@@ -13,8 +13,14 @@
                 <?php if( 'yes' == $display_title ) { ?>
                 <h2 class="wpcu-product__title wpcu-mb-5"><a href="<?php echo get_the_permalink(); ?>"><?php echo get_the_title(); ?></a></h2>
                 <?php } ?>
-                <span class="wpcu-product__subtitle"><?php echo $product->get_categories(); ?></span>
-
+                <?php if( $categories ) { 
+                    foreach( $categories as $cat ) { ?>
+                        <span class="wpcu-product__subtitle">
+                            <a><?php echo $cat->name; ?></a>
+                        </span> 
+                        <?php
+                    }   
+                    } ?>
                 <div class="wpcu-d-flex wpcu-space-between wpcu-mt-15 wpcu-mb-5">
                     <?php if( 'yes' == $display_price && ! empty( $product->get_regular_price() ) ) { ?>
                     <div class="wpcu-product__price wpcu-flex-center wpcu-flex-align-center">
