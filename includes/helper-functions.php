@@ -16,8 +16,8 @@ if (!function_exists('wcpcsu_pagination')) {
             'format' => '?paged=%#%',
             'current' => max( 1, $paged ),
             'total' => $custom_post_query->max_num_pages,
-            'prev_text' => apply_filters('wcpcsu_pagination_prev_text', '<img src="' .  WCPCSU_URL . 'assets/icons/arrow-left.svg" alt="" class="wpcu-svg">'),
-            'next_text' => apply_filters('wcpcsu_pagination_next_text', '<img src="' .  WCPCSU_URL . 'assets/icons/arrow-right.svg" alt="" class="wpcu-svg">'),
+            'prev_text' => apply_filters('wcpcsu_pagination_prev_text', '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="6" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 576 1024" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);"><path d="M528 0q14 0 24 10q4 3 6 7t3 8.5t1 9t-1 8.5t-3 8t-6 8L96 515l450 450q6 6 8.5 15t0 18t-8.5 15q-10 10-24.5 10t-24.5-10L23 539q-10-10-10-24t10-24L504 10q10-10 24-10z"/><rect x="0" y="0" width="576" height="1024" fill="rgba(0, 0, 0, 0)" /></svg>'),
+            'next_text' => apply_filters('wcpcsu_pagination_next_text', '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="6" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 576 1024" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);"><path d="M48 1023q-14 0-24.5-10T13 989t10-24l457-457L30 59q-6-7-8.5-16t0-17.5T30 10Q40 0 54.5 0T79 10l473 474q5 5 7.5 11.5t2.5 13t-2.5 12.5t-7.5 11L72 1013q-5 5-11.5 7.5T48 1023z"/><rect x="0" y="0" width="576" height="1024" fill="rgba(0, 0, 0, 0)" /></svg>'),
         ) );
         if( $links ) {
             $navigation = _navigation_markup($links, 'pagination', ' ');
@@ -49,8 +49,35 @@ if (!function_exists('wcpcsu_get_paged_num')) {
         return absint($paged);
 
     }
-
 }
+
+if (!function_exists('wpcu_ratings')) {
+    /**
+     * Get rating stars markup.
+     */
+    function wpcu_ratings($ratings)
+    {
+        ?>
+        <div class="wpcu-product__rating__stars" title="<?php echo $ratings; ?>%">
+            <div class="wpcu-product__rating__stars__wrap">
+                <?php
+                    for ($x = 0; $x <= 4; $x++) {
+                        echo '<svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32"><path d="M 16 2.125 L 15.09375 4.1875 L 11.84375 11.46875 L 3.90625 12.3125 L 1.65625 12.5625 L 3.34375 14.0625 L 9.25 19.40625 L 7.59375 27.21875 L 7.125 29.40625 L 9.09375 28.28125 L 16 24.28125 L 22.90625 28.28125 L 24.875 29.40625 L 24.40625 27.21875 L 22.75 19.40625 L 28.65625 14.0625 L 30.34375 12.5625 L 28.09375 12.3125 L 20.15625 11.46875 L 16.90625 4.1875 Z M 16 7.03125 L 18.5625 12.8125 L 18.8125 13.34375 L 19.375 13.40625 L 25.65625 14.0625 L 20.96875 18.28125 L 20.53125 18.6875 L 20.65625 19.25 L 21.96875 25.40625 L 16.5 22.28125 L 16 21.96875 L 15.5 22.28125 L 10.03125 25.40625 L 11.34375 19.25 L 11.46875 18.6875 L 11.03125 18.28125 L 6.34375 14.0625 L 12.625 13.40625 L 13.1875 13.34375 L 13.4375 12.8125 Z"/></svg>';
+                    }
+                ?>
+            </div>
+            <div class="wpcu-product__rating__stars__solid" style="width: <?php echo $ratings; ?>%;">
+                <?php
+                    for ($x = 0; $x <= 4; $x++) {
+                        echo '<svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32"><path d="M 30.335938 12.546875 L 20.164063 11.472656 L 16 2.132813 L 11.835938 11.472656 L 1.664063 12.546875 L 9.261719 19.394531 L 7.140625 29.398438 L 16 24.289063 L 24.859375 29.398438 L 22.738281 19.394531 Z"/></svg>';
+                    }
+                ?>
+            </div>
+        </div>
+        <?php
+    }
+}
+
 
 if ( ! function_exists('wpcsu_load_dependencies') ) :
     function wpcsu_load_dependencies( $files = 'all', $directory = WCPCSU_INC_DIR, $ext = '.php' )

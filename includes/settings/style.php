@@ -160,7 +160,7 @@
                                 id="wcpscu_title_font_color"
                                 value="<?php echo ! empty( $title_font_color['theme_14'] ) ? esc_attr( $title_font_color['theme_14'] ) : '#000000'; ?>">
                         </div>
-                        <div class="theme_15"> 
+                        <div class="theme_15">
                             <input type="text" class="cmb2-text-small cpa-color-picker" name="wcpscu[title_font_color][theme_15]"
                                 id="wcpscu_title_font_color"
                                 value="<?php echo ! empty( $title_font_color['theme_15'] ) ? esc_attr( $title_font_color['theme_15'] ) : '#000000'; ?>">
@@ -381,7 +381,7 @@
                                 id="wcpscu_price_font_color"
                                 value="<?php echo ! empty( $price_font_color['theme_14'] ) ? esc_attr( $price_font_color['theme_14'] ) : '#ff0000'; ?>">
                         </div>
-                        <div class="theme_15"> 
+                        <div class="theme_15">
                             <input type="text" class="cmb2-text-small cpa-color-picker theme_15" name="wcpscu[price_font_color][theme_15]"
                                 id="wcpscu_price_font_color"
                                 value="<?php echo ! empty( $price_font_color['theme_15'] ) ? esc_attr( $price_font_color['theme_15'] ) : '#ff0000'; ?>">
@@ -424,9 +424,9 @@
                             <input type="text" class="cmb2-text-small theme_8" name="wcpscu[ratings_size][theme_8]"
                             id="wcpscu_ratings_size"
                             value="<?php echo ! empty( $ratings_size['theme_8'] ) ? esc_attr( $ratings_size['theme_8'] ) : '16'; ?>">
-                            <input type="text" class="cmb2-text-small theme_9" name="wcpscu[ratings_size][theme_9]"
+                            <input type="text" class="cmb2-text-small theme_11" name="wcpscu[ratings_size][theme_11]"
                             id="wcpscu_ratings_size"
-                            value="<?php echo ! empty( $ratings_size['theme_9'] ) ? esc_attr( $ratings_size['theme_9'] ) : '16'; ?>">
+                            value="<?php echo ! empty( $ratings_size['theme_11'] ) ? esc_attr( $ratings_size['theme_11'] ) : '16'; ?>">
                             <input type="text" class="cmb2-text-small theme_10" name="wcpscu[ratings_size][theme_10]"
                             id="wcpscu_ratings_size"
                             value="<?php echo ! empty( $ratings_size['theme_10'] ) ? esc_attr( $ratings_size['theme_10'] ) : '16'; ?>">
@@ -490,18 +490,18 @@
                             id="wcpscu_ratings_color"
                             value="<?php echo ! empty( $ratings_color['theme_8'] ) ? esc_attr( $ratings_color['theme_8'] ) : '#feb507'; ?>">
                         </div>
-                        <div class="theme_9">
-                        <input type="text" class="cmb2-text-small cpa-color-picker" name="wcpscu[ratings_color][theme_9]"
-                            id="wcpscu_ratings_color"
-                            value="<?php echo ! empty( $ratings_color['theme_9'] ) ? esc_attr( $ratings_color['theme_9'] ) : '#feb507'; ?>">
-                        </div>
                         <div class="theme_10">
-                        <input type="text" class="cmb2-text-small cpa-color-picker" name="wcpscu[ratings_color][theme_10]"
+                            <input type="text" class="cmb2-text-small cpa-color-picker" name="wcpscu[ratings_color][theme_10]"
                             id="wcpscu_ratings_color"
                             value="<?php echo ! empty( $ratings_color['theme_10'] ) ? esc_attr( $ratings_color['theme_10'] ) : '#feb507'; ?>">
                         </div>
+                        <div class="theme_11">
+                            <input type="text" class="cmb2-text-small cpa-color-picker" name="wcpscu[ratings_color][theme_11]"
+                            id="wcpscu_ratings_color"
+                            value="<?php echo ! empty( $ratings_color['theme_11'] ) ? esc_attr( $ratings_color['theme_11'] ) : '#feb507'; ?>">
+                        </div>
                         <div class="theme_12">
-                        <input type="text" class="cmb2-text-small cpa-color-picker" name="wcpscu[ratings_color][theme_12]"
+                            <input type="text" class="cmb2-text-small cpa-color-picker" name="wcpscu[ratings_color][theme_12]"
                             id="wcpscu_ratings_color"
                             value="<?php echo ! empty( $ratings_color['theme_12'] ) ? esc_attr( $ratings_color['theme_12'] ) : '#feb507'; ?>">
                         </div>
