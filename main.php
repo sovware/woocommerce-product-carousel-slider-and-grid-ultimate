@@ -19,7 +19,7 @@ defined('ABSPATH') || die('Direct access is not allow');
  *
  * @since 1.0.0
  */
-Final class Woocmmerce_Product_carousel_slider_ultimate
+Final class Woocmmerce_Product_carousel_slider_ultimate_Pro
 {
 
     /**
@@ -47,7 +47,7 @@ Final class Woocmmerce_Product_carousel_slider_ultimate
     public $shortcode;
 
     /**
-     * Main Woocmmerce_Product_carousel_slider_ultimate Instance.
+     * Main Woocmmerce_Product_carousel_slider_ultimate_Pro Instance.
      *
      *
      * @since 1.0
@@ -56,11 +56,11 @@ Final class Woocmmerce_Product_carousel_slider_ultimate
      * @uses instanceof::adl_constants() Setup the constants needed.
      * @uses instanceof::wcpcsu_include() Include the required files.
      * @uses instanceof::wcpcsu_load_textdomain() load the language files.
-     * @return object|Woocmmerce_Product_carousel_slider_ultimate The one true Woocmmerce_Product_carousel_slider_ultimate
+     * @return object|Woocmmerce_Product_carousel_slider_ultimate_Pro The one true Woocmmerce_Product_carousel_slider_ultimate_Pro
      */
     public static function instance() {
-        if(!isset(self::$instance) && !(self::$instance instanceof Woocmmerce_Product_carousel_slider_ultimate)) {
-            self::$instance = new Woocmmerce_Product_carousel_slider_ultimate;
+        if(!isset(self::$instance) && !(self::$instance instanceof Woocmmerce_Product_carousel_slider_ultimate_Pro)) {
+            self::$instance = new Woocmmerce_Product_carousel_slider_ultimate_Pro;
             //if woocmmerce plugin not activate
             if ( !in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
                 add_action( 'admin_notices', array(self::$instance, 'WCPCSU_admin_notice') );
@@ -196,7 +196,7 @@ Final class Woocmmerce_Product_carousel_slider_ultimate
 } //end of class
 
 function WCPCSU() {
-    return Woocmmerce_Product_carousel_slider_ultimate::instance();
+    return Woocmmerce_Product_carousel_slider_ultimate_Pro::instance();
 }
 
 // Get WCPCSU ( Woocommerce Product Carousel Slider Ultimate plugin ) Running.
