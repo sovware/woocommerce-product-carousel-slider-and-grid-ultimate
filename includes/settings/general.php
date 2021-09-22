@@ -16,6 +16,7 @@ $sold_out_ribbon_position   = ! empty( $sold_out_ribbon_position ) ? $sold_out_r
 $display_discount_ribbon    = ! empty( $display_discount_ribbon ) ? $display_discount_ribbon : 'no';
 $discount_ribbon_position   = ! empty( $discount_ribbon_position ) ? $discount_ribbon_position : 'bottom_right';
 $img_hover_effect           = ! empty( $img_hover_effect ) ? $img_hover_effect : 'yes';
+$products_type              = ! empty( $products_type ) ? $products_type : 'latest';
 ?>
 
 <div id="lcsp-tab-5" class="lcsp-tab-content" style="display:block">
@@ -76,7 +77,6 @@ $img_hover_effect           = ! empty( $img_hover_effect ) ? $img_hover_effect :
                             <option value="theme_14" <?php selected( $theme, 'theme_14'); ?>>Theme-14</option>
                             <option value="theme_15" <?php selected( $theme, 'theme_15'); ?>>Theme-15</option>
                         </select>
-                        <a href="#">View All Themes</a>
                     </div>
                 </div>
             </div>
