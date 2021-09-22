@@ -275,14 +275,6 @@ $products_type              = ! empty( $products_type ) ? $products_type : 'late
                                 id="wcpscup_products_type1" value="onsale" <?php checked('onsale', $products_type); ?>>
                             <label
                                 for="wcpscup_products_type1"><?php esc_html_e('On Sale Products', WCPCSU_TEXTDOMAIN); ?></label>
-
-                            <p class="cmb2-metabox-description specific-categories onsale">
-                                <?php esc_html_e('Category (leave it blank to display the on-sale products from all categories):', WCPCSU_TEXTDOMAIN); ?>
-                            </p>
-                            <input type="text" class="cmb2-text-medium" name="wcpscu[onsale_products_bycategory]"
-                                id="wcpscup_products_bycategory1"
-                                value="<?php if(!empty($onsale_products_bycategory)) { echo esc_attr($onsale_products_bycategory); }  ?>"
-                                placeholder="e.g. clothing, shoes, watches">
                         </li>
 
 
