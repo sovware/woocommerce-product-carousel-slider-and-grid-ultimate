@@ -20,7 +20,7 @@ class wcpcsu_Shortcode
         $this->wcpcsu_style_files();
         // get the array of data from the post meta
         $enc_data = get_post_meta( $post_id, 'wcpscu', true );
-        $data_array = Woocmmerce_Product_carousel_slider_ultimate::unserialize_and_decode24( $enc_data );
+        $data_array = Woocmmerce_Product_carousel_slider_ultimate_Pro::unserialize_and_decode24( $enc_data );
 
 
         $value = is_array( $data_array ) ? $data_array : array();
