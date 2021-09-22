@@ -34,7 +34,6 @@
                     <?php if( 'yes' == $display_cart ) { ?>
                         <div class="wpcu-button wpcu-button--light wpcu-button--icon-circle">
                         <?php echo do_shortcode('[add_to_cart id="' . get_the_ID() . '" show_price = "false"]'); ?>
-                            <!-- <a href=""><img class="wpcu-svg" src="<?php echo WCPCSU_URL .'assets/icons/handbag.svg' ?>" alt="" /></a> -->
                         </div>
                     <?php } ?>
                 </div>
