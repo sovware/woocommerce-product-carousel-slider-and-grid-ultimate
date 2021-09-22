@@ -195,7 +195,9 @@ function WCPCSU() {
 }
 
 // Get WCPCSU ( Woocommerce Product Carousel Slider Ultimate plugin ) Running.
-WCPCSU();
+if( ! class_exists('Woocmmerce_Product_carousel_slider_ultimate_Pro') ){
+    WCPCSU();
+}
 function wpcsu_image_cropping( $attachmentId, $width, $height, $crop = true, $quality = 100 )
 {
     $resizer = new Wpcsu_Image_Resizer( $attachmentId );
