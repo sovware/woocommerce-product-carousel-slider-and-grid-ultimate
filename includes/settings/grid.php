@@ -1,5 +1,8 @@
 <?php
 $grid_pagination          = !empty($grid_pagination) ? $grid_pagination : 'no';
+$g_column                 = !empty($g_column) ? $g_column : '4';
+$g_tablet                 = !empty($g_tablet) ? $g_tablet : '2';
+$g_mobile                 = !empty($g_mobile) ? $g_mobile : '1';
 ?>
 <!--TAB 3  Grid setting -->
 <div id="lcsp-tab-3" class="lcsp-tab-content">
@@ -13,10 +16,10 @@ $grid_pagination          = !empty($grid_pagination) ? $grid_pagination : 'no';
                 </div>
                 <div class="cmb-td">
                     <select id="g_theme" name="wcpscu[g_column]">
-                        <option value="4">Column-4</option>
-                        <option value="1" <?php if(!empty($g_column) && $g_column == "1"){ echo "selected";}?>>Column-1</option>
-                        <option value="2" <?php if(!empty($g_column) && $g_column == "2"){ echo "selected";}?>>Column-2</option>
-                        <option value="3" <?php if(!empty($g_column) && $g_column == "3"){ echo "selected";}?>>Column-3</option>
+                        <option value="1" <?php selected('1', $g_column, true) ?>>Column-1</option>
+                        <option value="2" <?php selected('2', $g_column, true) ?>>Column-2</option>
+                        <option value="3" <?php selected('3', $g_column, true) ?>>Column-3</option>
+                        <option value="4" <?php selected('4', $g_column, true) ?>>Column-4</option>
                     </select>
                 </div>
             </div>
@@ -28,10 +31,10 @@ $grid_pagination          = !empty($grid_pagination) ? $grid_pagination : 'no';
                 </div>
                 <div class="cmb-td">
                     <select id="g_theme" name="wcpscu[g_tablet]">
-                        <option value="2">Column-2</option>
-                        <option value="1" <?php if(!empty($g_tablet) && $g_tablet == "1"){ echo "selected";}?>>Column-1</option>
-                        <option value="3" <?php if(!empty($g_tablet) && $g_tablet == "3"){ echo "selected";}?>>Column-3</option>
-                        <option value="4" <?php if(!empty($g_tablet) && $g_tablet == "4"){ echo "selected";}?>>Column-4</option>
+                        <option value="1" <?php selected('1', $g_tablet, true) ?>>Column-1</option>
+                        <option value="2" <?php selected('2', $g_tablet, true) ?>>Column-2</option>
+                        <option value="3" <?php selected('3', $g_tablet, true) ?>>Column-3</option>
+                        <option value="4" <?php selected('4', $g_tablet, true) ?>>Column-4</option>
                     </select>
                 </div>
             </div>
@@ -43,10 +46,10 @@ $grid_pagination          = !empty($grid_pagination) ? $grid_pagination : 'no';
                 </div>
                 <div class="cmb-td">
                     <select id="g_theme" name="wcpscu[g_mobile]">
-                        <option value="1">Column-1</option>
-                        <option value="2" <?php if(!empty($g_mobile) && $g_mobile == "2"){ echo "selected";}?>>Column-2</option>
-                        <option value="3" <?php if(!empty($g_mobile) && $g_mobile == "3"){ echo "selected";}?>>Column-3</option>
-                        <option value="4" <?php if(!empty($g_mobile) && $g_mobile == "4"){ echo "selected";}?>>Column-4</option>
+                        <option value="1" <?php selected('1', $g_mobile, true) ?>>Column-1</option>
+                        <option value="2" <?php selected('2', $g_mobile, true) ?>>Column-2</option>
+                        <option value="3" <?php selected('3', $g_mobile, true) ?>>Column-3</option>
+                        <option value="4" <?php selected('4', $g_mobile, true) ?>>Column-4</option>
                     </select>
                 </div>
             </div>
