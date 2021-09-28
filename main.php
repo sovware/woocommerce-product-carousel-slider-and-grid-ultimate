@@ -47,6 +47,12 @@ Final class Woocmmerce_Product_carousel_slider_ultimate_Pro
     public $shortcode;
 
     /**
+     * license
+     *@since 1.8.6
+     */
+    public $license;
+
+    /**
      * Main Woocmmerce_Product_carousel_slider_ultimate_Pro Instance.
      *
      *
@@ -70,11 +76,11 @@ Final class Woocmmerce_Product_carousel_slider_ultimate_Pro
             add_action('plugin_loaded',array( self::$instance,'wcpcsu_load_textdomain' ) );
             add_action('admin_enqueue_scripts',array(self::$instance, 'wcpcsu_enqueue_file'));
             add_action('template_redirect',array(self::$instance, 'template_enqueue_file'));
-            add_action('admin_menu',array(self::$instance,'upgrade_to_pro'));
             self::$instance->wcpcsu_include();
             self::$instance->custom_post = new Wcpcsu_Custom_Post();
             self::$instance->metabox = new Wcpcsu_Meta_Box();
             self::$instance->shortcode = new wcpcsu_Shortcode();
+            self::$instance->license = new Wcpcsu_License_Controller();
         }
 
         return self::$instance;
@@ -102,14 +108,19 @@ Final class Woocmmerce_Product_carousel_slider_ultimate_Pro
         if ( !defined('WCPCSU_LANG_DIR') ) { define('WCPCSU_LANG_DIR', dirname(plugin_basename( __FILE__ ) ) . '/languages'); }
         //custom post type id
         if ( !defined('WCPCSU_CUSTOM_POST_TYPE') ) { define('WCPCSU_CUSTOM_POST_TYPE', 'wcpcsu-custom-post'); }
-    }
 
-    public function upgrade_to_pro () {
-        add_submenu_page( 'edit.php?post_type=wcpcsu-custom-post', esc_html__( 'Support', WCPCSU_TEXTDOMAIN ), esc_html__( 'Usage & Support', WCPCSU_TEXTDOMAIN ), 'manage_options', 'support', array( self::$instance, 'support_view' ) );
-    }
-
-    public function support_view () {
-        include WCPCSU_INC_DIR . 'upgrade-pro.php';
+        //custom post type id
+        if (!defined('WCPCSU_VERSION')) {
+            define('WCPCSU_VERSION', '3.4.2');
+        }
+        // this is the URL our updater / license checker pings. This should be the URL of the site with EDD installed
+        if (!defined('WCPCSU_REMOTE_URL')) {
+            define('WCPCSU_REMOTE_URL', 'https://aazztech.com'); // IMPORTANT: change the name of this constant to something unique to prevent conflicts with other plugins using this system
+        }
+        // the download ID. This is the ID of your product in EDD and should match the download ID visible in your Downloads list (see example below)
+        if (!defined('WCPCSU_REMOTE_POST_ID')) {
+            define('WCPCSU_REMOTE_POST_ID', 4200); // IMPORTANT: change the name of this constant to something unique to prevent conflicts with other plugins using this system
+        }
     }
 
     /**
@@ -131,7 +142,24 @@ Final class Woocmmerce_Product_carousel_slider_ultimate_Pro
 
         require_once WCPCSU_INC_DIR . 'helper-functions.php';
         require_once WCPCSU_INC_DIR . 'wishlist/wishlist.php';
+        require_once WCPCSU_INC_DIR . 'license/class-license-controller.php';
         wpcsu_load_dependencies( 'all', WCPCSU_INC_DIR . 'classes/' );
+
+        if ( ! class_exists('EDD_SL_Plugin_Updater') ) {
+            // load our custom updater if it doesn't already exist 
+            include( dirname(__FILE__) . '/includes/license/EDD_SL_Plugin_Updater.php' );
+        }
+        // retrieve our license key from the DB
+        $license_key = trim( get_option('wcpcsup_license_key') );
+        // setup the updater
+        new EDD_SL_Plugin_Updater( WCPCSU_REMOTE_URL, __FILE__, array(
+            'version'       => WCPCSU_VERSION,        // current version number
+            'license'       => $license_key,    // license key (used get_option above to retrieve from DB)
+            'item_id'       => WCPCSU_REMOTE_POST_ID,    // id of this plugin
+            'author'        => 'AazzTech',    // author of this plugin
+            'url'           => home_url(),
+            'beta'          => false // set to true if you wish customers to receive update notifications of beta releases
+        ) );
     }
 
     public function WCPCSU_admin_notice() { ?>
