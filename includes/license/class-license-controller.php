@@ -5,10 +5,10 @@ class Wcpcsu_License_Controller
 {
     public function __construct()
     {
-        add_action('admin_menu', array($this, 'wcpcsup_license_menu'));
-        add_action('admin_init', array($this, 'wcpcsup_register_option'));
-        add_action('admin_init', array($this, 'wcpcsup_activate_license'));
-        add_action('admin_notices', array($this, 'wcpcsup_admin_notices'));
+        add_action('admin_menu', array( $this, 'wcpcsup_license_menu') );
+        add_action('admin_init', array( $this, 'wcpcsup_register_option') );
+        add_action('admin_init', array( $this, 'wcpcsup_activate_license') );
+        add_action('admin_notices', array( $this, 'wcpcsup_admin_notices') );
     }
 
     /**

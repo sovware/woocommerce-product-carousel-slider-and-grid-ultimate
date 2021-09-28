@@ -69,13 +69,13 @@ Final class Woocmmerce_Product_carousel_slider_ultimate_Pro
             self::$instance = new Woocmmerce_Product_carousel_slider_ultimate_Pro;
             //if woocmmerce plugin not activate
             if ( !in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
-                add_action( 'admin_notices', array(self::$instance, 'WCPCSU_admin_notice') );
+                add_action( 'admin_notices', array( self::$instance, 'WCPCSU_admin_notice') );
 
             }
             self::$instance->adl_constants();
             add_action('plugin_loaded',array( self::$instance,'wcpcsu_load_textdomain' ) );
             add_action('admin_enqueue_scripts',array(self::$instance, 'wcpcsu_enqueue_file'));
-            add_action('template_redirect',array(self::$instance, 'template_enqueue_file'));
+            add_action('template_redirect',array( self::$instance, 'template_enqueue_file'));
             self::$instance->wcpcsu_include();
             self::$instance->custom_post = new Wcpcsu_Custom_Post();
             self::$instance->metabox = new Wcpcsu_Meta_Box();
