@@ -2,6 +2,14 @@
  Style: Theme Eight
 ===========================*/
 .wpcu-theme_8{
+    .wpcu-product__content--res-fix{
+        .wpcu-product__action-icons--boxed .wpcu-button{
+            order: 2;
+            flex: 0 0 100%;
+            display: flex;
+            justify-content: center;
+        }
+    }
     .wpcu-product{
         @include e(img){
             position: relative;

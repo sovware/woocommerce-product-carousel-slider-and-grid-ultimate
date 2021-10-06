@@ -2,6 +2,14 @@
  Style: Theme Ten
 ===========================*/
 .wpcu-theme_10 {
+    .wpcu-product__content--res-fix{
+        .wpcu-product__action-icons--circle .wpcu-button{
+            order: 2;
+            flex: 0 0 100%;
+            display: flex;
+            justify-content: center;
+        }
+    }
     .wpcu-product {
         @include e(cover-content) {
             @include m(top-left) {
@@ -26,6 +34,9 @@
         }
         @include e(action-icons){
             padding: 0;
+            p.product{
+                padding: 0;
+            }
         }
         @include e(content){
             &:hover{

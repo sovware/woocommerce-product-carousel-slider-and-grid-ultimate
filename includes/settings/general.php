@@ -19,7 +19,7 @@ $img_hover_effect           = ! empty( $img_hover_effect ) ? $img_hover_effect :
 $products_type              = ! empty( $products_type ) ? $products_type : 'latest';
 ?>
 
-<div id="lcsp-tab-5" class="lcsp-tab-content" style="display:block">
+<div id="lcsp-tab-5" class="lcsp-tab-content">
     <div class="cmb2-wrap form-table">
         <div id="cmb2-metabox" class="cmb2-metabox cmb-field-list">
 

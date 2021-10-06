@@ -20,6 +20,21 @@
             })
         }
 
+
+        /* Theme buttons (.wpcu-product__action-icons--boxed) responsive fix */
+        function btnResFix(selector, breakPoint){
+            var selectElement = document.querySelectorAll(selector);
+            selectElement.forEach(elm=>{
+                if(elm.clientWidth < breakPoint){
+                    elm.classList.add('wpcu-product__content--res-fix');
+                }
+            })
+        }
+        btnResFix('.wpcu-theme_8 .wpcu-product__content', 300);
+        btnResFix('.wpcu-theme_7 .wpcu-product__content', 305);
+        btnResFix('.wpcu-theme_10 .wpcu-product__content', 320);
+
+
         /* Theme 15 tweaks */
         var theme15items = document.querySelectorAll('.wpcu-theme_15 .wpcu-product__details__content');
         theme15items.forEach(element => {

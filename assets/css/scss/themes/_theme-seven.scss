@@ -2,6 +2,12 @@
  Style: Theme Seven
 ===========================*/
 .wpcu-theme_7{
+    .wpcu-product__content--res-fix{
+        .wpcu-product__cover-content{
+            width: calc(100% - 30px);
+            height: calc(100% - 30px);
+        }
+    }
     .wpcu-product{
         @include e(details){
             margin-top: 17px;
