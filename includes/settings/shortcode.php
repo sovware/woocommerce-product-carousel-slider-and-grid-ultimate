@@ -4,16 +4,6 @@
             <div class="lcsp-withoutTab-content">
                 <div class="cmb2-wrap form-table">
                     <div id="cmb2-metabox">
-                        <div class="cmb2-metabox-header">
-                            <div class="div">
-                                <h4><span class="fas fa-cog"></span>Settings & Shortcode Generator</h4>
-                            </div>
-                            <div class="div">
-                                <a href="#">
-                                    <p><span class="fas fa-question-circle"></span>Support</p>
-                                </a>
-                            </div>
-                        </div>
                         <div class="cmb2-metabox-content">
                             <div class="cmb2-metabox-card cmb2-metabox-card2">
                                 <h6><?php esc_html_e('Shortcode',WCPCSU_TEXTDOMAIN); ?></h6>

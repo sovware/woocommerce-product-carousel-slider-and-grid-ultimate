@@ -25,6 +25,7 @@ defined('ABSPATH') || die('Direct access is not allow');
             <li><a href="#lcsp-tab-4"><span
                         class="fas fa-palette"></span><?php esc_html_e('Style Settings', WCPCSU_TEXTDOMAIN); ?></a></li>
         </ul>
+        <a href="#" class="lcsp-support"><span class="fas fa-question-circle"></span>Support</a>
     </div>
 
     <div class="lcsp-tab">

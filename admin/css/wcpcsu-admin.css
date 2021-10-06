@@ -90,10 +90,29 @@ body.post-type-wcpcsu-custom-post #wpfooter{
     position: static;
 }
 
-
-.lcsp-tabs-menu {
+.lcsp-tabs-menu-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     margin-top: 30px;
     margin-bottom: 15px;
+}
+.lcsp-tabs-menu-wrapper .lcsp-support{
+    color: #5A5F7D;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.lcsp-tabs-menu-wrapper .lcsp-support span{
+    display: inline-block;
+    margin-right: 4px;
+}
+
+.lcsp-tabs-menu {
+    margin: 0;
     clear: both;
     max-width: max-content;
     background: white;
@@ -812,8 +831,7 @@ ul.lcs_pro_features {
     flex-basis: 0;
     flex-grow: 1;
     max-width: 100%;
-    text-align: center;
-    padding: 40px 75px;
+    padding: 30px 40px;
 }
 
 .cmb2-metabox-card2 {
@@ -867,11 +885,7 @@ ul.lcs_pro_features {
 }
 
 .cmb2-metabox-card-textarea {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     margin-top: 18px;
-
 }
 
 .cmb2-metabox-header {

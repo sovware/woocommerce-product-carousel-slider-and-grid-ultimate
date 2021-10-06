@@ -22,7 +22,6 @@ $products_type              = ! empty( $products_type ) ? $products_type : 'late
 <div id="lcsp-tab-5" class="lcsp-tab-content">
     <div class="cmb2-wrap form-table">
         <div id="cmb2-metabox" class="cmb2-metabox cmb-field-list">
-
             <div class="cmb-row cmb-type-text-medium">
                 <div class="cmb-th">
                     <label for="layout"><?php esc_html_e('Layout', WCPCSU_TEXTDOMAIN); ?></label>
