@@ -27,7 +27,7 @@ class Wcpcsu_Meta_Box
         wp_nonce_field('wcpscu_action', 'wcpscu_nonce');
 
         $lcg_svalue = get_post_meta($post->ID, 'wcpscu', true);
-        $s_value = Woocmmerce_Product_carousel_slider_ultimate::unserialize_and_decode24($lcg_svalue);
+        $s_value = Woocmmerce_Product_carousel_slider_ultimate_Pro::unserialize_and_decode24($lcg_svalue);
         $value = is_array($s_value) ? $s_value : array();
         extract($value);
 
@@ -44,7 +44,7 @@ class Wcpcsu_Meta_Box
         // save the meta data if it is our post type lcg_mainpost post type
         if (!empty($_POST['post_type']) && (WCPCSU_CUSTOM_POST_TYPE == $_POST['post_type'])) {
 
-            $wcpscu = !empty($_POST['wcpscu']) ? Woocmmerce_Product_carousel_slider_ultimate::serialize_and_encode24($_POST['wcpscu']) : Woocmmerce_Product_carousel_slider_ultimate::serialize_and_encode24(array());
+            $wcpscu = !empty($_POST['wcpscu']) ? Woocmmerce_Product_carousel_slider_ultimate_Pro::serialize_and_encode24($_POST['wcpscu']) : Woocmmerce_Product_carousel_slider_ultimate_Pro::serialize_and_encode24(array());
 
             //save the meta value
             update_post_meta($post_id, "wcpscu", $wcpscu);

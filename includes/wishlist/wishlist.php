@@ -68,12 +68,12 @@ if ( ! function_exists( 'woosw_init' ) ) {
 
 					// add button for single
 					$woosw_button_position_single = apply_filters( 'woosw_button_position_single', get_option( 'woosw_button_position_single', '31' ) );
-					if ( $woosw_button_position_single != '0' ) {
+					/* if ( $woosw_button_position_single != '0' ) {
 						add_action( 'woocommerce_single_product_summary', array(
 							$this,
 							'add_button'
 						), $woosw_button_position_single );
-					}
+					} */
 
 					// added products
 					$woosw_key = self::get_key();

@@ -20,7 +20,7 @@ class wcpcsu_Shortcode
         $this->wcpcsu_style_files();
         // get the array of data from the post meta
         $enc_data = get_post_meta( $post_id, 'wcpscu', true );
-        $data_array = Woocmmerce_Product_carousel_slider_ultimate::unserialize_and_decode24( $enc_data );
+        $data_array = Woocmmerce_Product_carousel_slider_ultimate_Pro::unserialize_and_decode24( $enc_data );
 
 
         $value = is_array( $data_array ) ? $data_array : array();
@@ -277,51 +277,194 @@ class wcpcsu_Shortcode
         $paged                          =  wcpcsu_get_paged_num();
         $paged                          = ! empty( $paged ) ? $paged : '';
         $common_args = array(
-            'post_type'      => 'product',
-            'posts_per_page' => ! empty( $total_products ) ? intval( $total_products ) : 12,
-            'post_status'    => 'publish',
-            'meta_query'     => array(
-                array(
-                    'key'       => '_stock_status',
-                    'value'     => 'outofstock',
-                    'compare'   => 'NOT IN'
-                )
-            )
+            'post_type' => 'product',
+            'posts_per_page' => !empty($total_products) ? intval($total_products) : 12,
+            'post_status' => 'publish',
+            'ignore_sticky_posts' => true,
         );
-        if( 'grid' == $layout && 'yes' == $grid_pagination ) {
+        if('grid' == $layout && 'yes' == $grid_pagination) {
             $common_args['paged']    = $paged;
         }
-        if( $products_type == "latest" ) {
-            $args = $common_args;
-        }
-        elseif( $products_type == "older" ) {
-            $older_args = array(
-                'orderby'     => 'date',
-                'order'       => 'ASC'
+        $meta_queries = array();
+        // exclude the stock out products from  the query if the user has explicitly set the value to exclude stock out products from he query. and if the user did not set any value then also remove the out of stock products from the query by default. Because the behaviour of the old version was to exclude the stock out products by default.
+        if (empty($exclude_stock_out) || (!empty($exclude_stock_out) && 'yes' == $exclude_stock_out)) {
+            $meta_queries[] = array(
+                array(
+                    'key' => '_stock_status',
+                    'value' => 'outofstock',
+                    'compare' => 'NOT IN'
+                )
             );
-            $args = array_merge( $common_args, $older_args );
         }
-        elseif( $products_type == "featured" ) {
-            $meta_query  = WC()->query->get_meta_query();
-            $tax_query   = WC()->query->get_tax_query();
+        /*// exclude the stock out products from  the query if the user has explicitly set the value to exclude stock out products from he query. and if the user did not set any value then also remove the out of stock products from the query by default. Because the behaviour of the old version was to exclude the stock out products by default.
+        if (empty($exclude_stock_out) || (!empty($exclude_stock_out) && 'yes' == $exclude_stock_out)) {
+            $common_args['meta_query'] = array(
+                array(
+                    'key' => '_stock_status',
+                    'value' => 'outofstock',
+                    'compare' => 'NOT IN'
+                )
+            );
+        }*/
+
+        if(!empty($atts_cat)) {
+            $atts_args = array(
+                'product_cat' => !empty($atts_cat) ? sanitize_text_field($atts_cat) : ''
+            );
+
+            $args = array_merge($common_args, $atts_args);
+        } elseif ($products_type == "latest") {
+
+            $latest_args = array(
+                'product_cat' => !empty($latest_products_bycategory) ? sanitize_text_field($latest_products_bycategory) : ''
+            );
+
+            $args = array_merge($common_args, $latest_args);
+        } elseif ($products_type == "older") {
+            $older_args = array(
+                'product_cat' => !empty($older_products_bycategory) ? sanitize_text_field($older_products_bycategory) : '',
+                'orderby' => 'date',
+                'order' => 'ASC'
+            );
+            $args = array_merge($common_args, $older_args);
+        } elseif ($products_type == "random") {
+            $random_args = array(
+                'product_cat' => !empty($random_products_bycategory) ? sanitize_text_field($random_products_bycategory) : null,
+                'orderby' => 'rand',
+            );
+            $args = array_merge($common_args, $random_args);
+        } elseif ($products_type == "top_rated") {
+
+            $common_args['orderby'] = "meta_value_num";
+            $common_args['meta_key'] = "_wc_average_rating";
+            $common_args['order'] = 'DESC';
+            $common_args['product_cat'] = !empty($top_rated_products_bycategory) ? sanitize_text_field($top_rated_products_bycategory) : null;
+
+            $args = $common_args;
+            // add this filter to fetch the product that has rating in them.
+            add_filter('posts_clauses', array(__CLASS__, 'order_by_rating_post_clauses'));
+        } elseif ($products_type == "onsale") {
+            $onsale_args = array(
+                'meta_query' => WC()->query->get_meta_query(),
+                'post__in' => array_merge(array(0), wc_get_product_ids_on_sale()));
+            $args = array_merge($common_args, $onsale_args);
+        } elseif ($products_type == "bestselling") {
+            $bestselling_args = array(
+                'product_cat' => !empty($bestselling_products_bycategory) ? sanitize_text_field($bestselling_products_bycategory) : '',
+                'meta_key' => 'total_sales',
+                'orderby' => 'meta_value_num'
+            );
+            $args = array_merge($common_args, $bestselling_args);
+        } elseif ($products_type == "featured") {
+
+            $meta_query = WC()->query->get_meta_query();
+            $tax_query = WC()->query->get_tax_query();
 
             $tax_query[] = array(
                 'taxonomy' => 'product_visibility',
-                'field'    => 'name',
-                'terms'    => 'featured',
+                'field' => 'name',
+                'terms' => 'featured',
                 'operator' => 'IN',
             );
+
+            // restrict featured post to the specific category(s) only
+            if (!empty($featured_products_bycategory)) {
+                $tax_query[] = array(
+                    'taxonomy' => 'product_cat',
+                    'terms' => $featured_products_bycategory,
+                    'field' => 'slug',
+                    'operator' => 'IN',
+
+                );
+
+            }
+
+
             $featured_args = array(
                 'meta_query' => $meta_query,
                 'tax_query' => $tax_query,
             );
-            $args = array_merge( $common_args, $featured_args );
-        }
+            $args = array_merge($common_args, $featured_args);
+        } elseif ($products_type == "category") {
+            $category_args = array(
+                'product_cat' => !empty($products_bycategory) ? sanitize_text_field($products_bycategory) : '',
+            );
+            $args = array_merge($common_args, $category_args);
+        } elseif ($products_type == "productsbyid") {
+            // convert the strings of products ids (eg. 99, 937, 90, 935, 87, 93, 930)  into an array of integers
+            $products_ids = !empty($products_byid) ?
+                array_map(function ($id) {
+                    return intval(trim($id));
+                }, explode(',', $products_byid))
+                : null;
+            $productsbyid_args = array(
+                'post__in' => $products_ids,
+                'orderby' => 'post__in',
+                'order' => 'ASC',
 
-        else {
+            );
+            $args = array_merge($common_args, $productsbyid_args);
+        } elseif ($products_type == "productsbytag") {
+            $productsbytag_args = array(
+                'product_tag' => (!empty($products_bytag) ? $products_bytag : null)
+            );
+            $args = array_merge($common_args, $productsbytag_args);
+        } elseif ($products_type == "productsbyyear") {
+            $productsbyyear_args = array(
+                'year' => !empty($prodcuts_from_year) ? intval($prodcuts_from_year) : 0
+            );
+            $args = array_merge($common_args, $productsbyyear_args);
+        } elseif ($products_type == "productsbymonth") {
+            $productsbymonth_args = array(
+                'monthnum' => !empty($prodcuts_from_month) ? intval($prodcuts_from_month) : 0,
+                'year' => !empty($prodcuts_from_month_year) ? intval($prodcuts_from_month_year) : 0
+
+            );
+            $args = array_merge($common_args, $productsbymonth_args);
+        }elseif ($products_type == "productsbymonth") {
+            $productsbymonth_args = array(
+                'monthnum' => !empty($prodcuts_from_month) ? intval($prodcuts_from_month) : 0,
+                'year' => !empty($prodcuts_from_month_year) ? intval($prodcuts_from_month_year) : 0
+
+            );
+            $args = array_merge($common_args, $productsbymonth_args);
+        } else {
             $args = $common_args;
         }
-        $loop = new WP_Query( $args );
+
+        if ($products_type == "productsbysku") {
+            if (isset ($prodcuts_bysku)) {
+                $prodcuts_bysku = explode(',', $prodcuts_bysku);
+                $prodcuts_bysku = array_map('trim', $prodcuts_bysku);
+                $meta_queries[] = array(
+                    'key' => '_sku',
+                    'value' => $prodcuts_bysku,
+                    'compare' => 'IN',
+                );
+
+                $sku_args = array(
+                        'orderby' => '_sku',
+                        'order' => 'ASC',
+                    );
+                $args = array_merge($common_args, $sku_args);
+            }
+        }
+        if("latest" == $products_type && !empty($prodcuts_from_days_ago)) {
+            $args['date_query'] = array(
+                'column'=> 'post_date_gmt',
+                'after'=> $prodcuts_from_days_ago
+            );
+        }
+        $count_meta_queries = count($meta_queries);
+        if ($count_meta_queries) {
+            $args['meta_query'] = ($count_meta_queries > 1) ? array_merge(array('relation' => 'AND'), $meta_queries) : $meta_queries;
+        }
+        $loop = new WP_Query($args);
+
+        // if we have queried the product based on the ratings then let's remove the filter we added.
+        if ($products_type == "top_rated") {
+            remove_filter('posts_clauses', array(__CLASS__, 'order_by_rating_post_clauses'));
+        }
 
         return $loop;
     }
@@ -408,5 +551,20 @@ class wcpcsu_Shortcode
         $template = ob_get_clean();
 
         wp_send_json( $template );
+    }
+
+    /**
+     * Order by rating.
+     *
+     * @since  3.2.0
+     * @param  array $args Query args.
+     * @return array
+     */
+    public static function order_by_rating_post_clauses( $args ) {
+        global $wpdb;
+
+        $args['where']   .= " AND $wpdb->commentmeta.meta_key = 'rating' ";
+        $args['join']    .= "LEFT JOIN $wpdb->comments ON($wpdb->posts.ID = $wpdb->comments.comment_post_ID) LEFT JOIN $wpdb->commentmeta ON($wpdb->comments.comment_ID = $wpdb->commentmeta.comment_id)";
+        return $args;
     }
 }
