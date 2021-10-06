@@ -182,7 +182,7 @@ class wcpcsu_Shortcode
         data-wpcu-responsive='{
             "0": {"slidesPerView": "<?php echo $carousel_mobile_column; ?>", "spaceBetween": "20"},
             "768": {"slidesPerView": "<?php echo $carousel_tablet_column; ?>", "spaceBetween": "30"},
-            "992": {"slidesPerView": "<?php echo $carousel_mobile_column; ?>", "spaceBetween": "30"},
+            "992": {"slidesPerView": "<?php echo $carousel_laptop_column; ?>", "spaceBetween": "30"},
             "1200": {"slidesPerView": "<?php echo $carousel_desktop_column; ?>", "spaceBetween": "30"}
         }'
         <?php } ?>
