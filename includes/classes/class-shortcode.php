@@ -243,13 +243,6 @@ class wcpcsu_Shortcode
             'post_type'      => 'product',
             'posts_per_page' => ! empty( $total_products ) ? intval( $total_products ) : 12,
             'post_status'    => 'publish',
-            'meta_query'     => array(
-                array(
-                    'key'       => '_stock_status',
-                    'value'     => 'outofstock',
-                    'compare'   => 'NOT IN'
-                )
-            )
         );
         if( 'grid' == $layout && 'yes' == $grid_pagination ) {
             $common_args['paged']    = $paged;
