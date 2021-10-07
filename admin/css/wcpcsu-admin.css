@@ -95,7 +95,7 @@ body.post-type-wcpcsu-custom-post #wpfooter{
     align-items: center;
     justify-content: space-between;
     margin-top: 30px;
-    margin-bottom: 15px;
+    margin-bottom: 0;
 }
 .lcsp-tabs-menu-wrapper .lcsp-support{
     color: #5A5F7D;
@@ -116,8 +116,8 @@ body.post-type-wcpcsu-custom-post #wpfooter{
     clear: both;
     max-width: max-content;
     background: white;
-    padding: 6px;
-    border-radius: 4px;
+    padding: 0;
+    border-radius: 4px 4px 0 0;
     box-shadow: 0 3px 5px rgba(173, 180, 210, .05);
     display: flex;
     align-items: center;
@@ -127,18 +127,23 @@ body.post-type-wcpcsu-custom-post #wpfooter{
 .lcsp-tabs-menu li {
     float: left;
     margin-bottom: 0;
-    padding: 8px 15px;
+    padding: 11px 15px;
     font-weight: 500;
     line-height: 24px;
     font-size: 14px;
-    border-radius: 4px;
+    border-radius: 0;
     display: flex;
     align-items: center;
     justify-content: center;
+    border: 1px solid #E3E6EF;
 }
 
-.lcsp-tabs-menu li:not(:last-child) {
-    margin-right: 15px;
+.lcsp-tabs-menu li {
+    margin-right: -1px;
+}
+
+.lcsp-tabs-menu li.current{
+    margin-right: 0;
 }
 
 .lcsp-tabs-menu a:active,
@@ -163,8 +168,27 @@ body.post-type-wcpcsu-custom-post #wpfooter{
 
 .lcsp-tabs-menu li.current {
     position: relative;
-    background-color: rgba(131, 78, 255, .15);
+    background-color: #fff;
     z-index: 5;
+    border-right-color: #E3E6EF;
+    border-color: transparent;
+    position: relative;
+}
+.lcsp-tabs-menu li.current:not(:first-child){
+    border-left-color: #E3E6EF;
+}
+.lcsp-tabs-menu li.current:last-child{
+    border-right-color: #E3E6EF;
+}
+.lcsp-tabs-menu li.current::before{
+    position: absolute;
+    content: '';
+    width: calc(100% + 2px);
+    height: 2px;
+    border-radius: 4px;
+    background: #834EFF;
+    top: -1px;
+    left: -1px;
 }
 
 .lcsp-tabs-menu .current a span,
@@ -450,7 +474,7 @@ body.post-type-wcpcsu-custom-post #wpfooter{
     width: auto;
     border: none;
     box-shadow: 0 3px 5px rgba(173, 180, 210, .10);
-    border-radius: 4px;
+    border-radius: 0 4px 4px 4px;
     display: none;
 }
 
@@ -464,7 +488,7 @@ body.post-type-wcpcsu-custom-post #wpfooter{
     width: auto;
     border: none;
     box-shadow: 0 3px 5px rgba(173, 180, 210, .10);
-    border-radius: 4px;
+    border-radius: 0 4px 4px 4px;
 }
 
 #lcsp-tab-1 {
