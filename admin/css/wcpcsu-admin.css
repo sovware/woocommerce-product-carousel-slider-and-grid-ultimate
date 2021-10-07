@@ -420,8 +420,7 @@ body.post-type-wcpcsu-custom-post #wpfooter{
     color: #5A5F7D;
     text-align: center;
     width: 58px;
-    margin: 0;
-
+    margin: 0 !important;
 }
 
 .cmb-header-font-styles+.cmb-navigation-item {
@@ -977,9 +976,9 @@ ul.lcs_pro_features {
     font-size: 14px;
     font-weight: 400;
     line-height: 25px;
-    margin: 0;
-    margin-right: 15px;
+    margin: 5px 15px 10px 0 !important;
     padding: 0 15px;
+    display: block;
 }
 
 
