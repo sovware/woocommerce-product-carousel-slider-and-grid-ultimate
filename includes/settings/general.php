@@ -9,7 +9,7 @@ $total_products_label       = ( ! empty( $layout ) && 'grid' == $layout ) ? __( 
 $theme                      = ! empty( $theme ) ? $theme : 'theme_1';
 $display_sale_ribbon        = ! empty( $display_sale_ribbon ) ? $display_sale_ribbon : 'no';
 $sale_ribbon_position       = ! empty( $sale_ribbon_position ) ? $sale_ribbon_position : 'top_left';
-$display_featured_ribbon    = ! empty( $display_featured_ribbon ) ? $display_featured_ribbon : 'no';    
+$display_featured_ribbon    = ! empty( $display_featured_ribbon ) ? $display_featured_ribbon : 'no';
 $featured_ribbon_position   = ! empty( $featured_ribbon_position ) ? $featured_ribbon_position : 'top_right';
 $display_sold_out_ribbon    = ! empty( $display_sold_out_ribbon ) ? $display_sold_out_ribbon : 'no';
 $sold_out_ribbon_position   = ! empty( $sold_out_ribbon_position ) ? $sold_out_ribbon_position : 'bottom_left';
@@ -17,7 +17,7 @@ $display_discount_ribbon    = ! empty( $display_discount_ribbon ) ? $display_dis
 $discount_ribbon_position   = ! empty( $discount_ribbon_position ) ? $discount_ribbon_position : 'bottom_right';
 ?>
 
-<div id="lcsp-tab-5" class="lcsp-tab-content" style="display:block">
+<div id="lcsp-tab-5" class="lcsp-tab-content">
     <div class="cmb2-wrap form-table">
         <div id="cmb2-metabox" class="cmb2-metabox cmb-field-list">
 
