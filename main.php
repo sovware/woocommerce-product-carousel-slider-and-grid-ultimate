@@ -193,9 +193,6 @@ Final class Woocmmerce_Product_carousel_slider_ultimate
     /**
 	 * Initialize appsero tracking.
 	 *
-	 * Removed custom plugins meta data field in 7.0.5.4
-	 * since Appsero made this builtin.
-	 *
 	 * @see https://github.com/Appsero/client
 	 *
 	 * @return void
@@ -205,7 +202,7 @@ Final class Woocmmerce_Product_carousel_slider_ultimate
 			require_once WCPCSU_INC_DIR . 'appsero/src/Client.php';
 		}
 
-		$client = new \Appsero\Client( 'd9f81baf-2b03-49b1-b899-b4ee71c1d1b1', 'WooCommerce Product Carousel, Slider and Grid Ultimate', __FILE__ );
+		$client = new \Appsero\Client( 'a39a0a19-5945-4527-84b0-a13bcfac1faa', 'WooCommerce Product Carousel, Slider and Grid Ultimate', __FILE__ );
 
 		// Active insights
 		$client->insights()->init();
