@@ -312,6 +312,9 @@ body.post-type-wcpcsu-custom-post #wpfooter{
     border-bottom-left-radius: 0;
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
+.cmb2-wrap .cmb-product-columns .input-group input{
+    margin: 0 !important;
+}
 
 .cmb-product-columns .input-group-prepend .input-group-text {
     display: flex;
