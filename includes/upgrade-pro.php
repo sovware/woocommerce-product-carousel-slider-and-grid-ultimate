@@ -75,10 +75,10 @@
             </ul>
             <div class="wpcs-admin-extra-bottom">
                 <a target="_blank"
-                    href="https://aazztech.com/product/woocommerce-product-carousel-slider-grid-ultimate-pro/"
+                    href="https://wpwax.com/product/woocommerce-product-carousel-slider-grid-ultimate-pro/"
                     class="wpcs-feature-btn btn">View All Features</a>
                 <a target="_blank"
-                    href="https://aazztech.com/product/woocommerce-product-carousel-slider-grid-ultimate-pro/"
+                    href="https://wpwax.com/product/woocommerce-product-carousel-slider-grid-ultimate-pro/"
                     class="wpcs-version-btn btn">Get Pro Version</a>
             </div>
         </div>
