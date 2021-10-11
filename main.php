@@ -81,6 +81,8 @@ Final class Woocmmerce_Product_carousel_slider_ultimate_Pro
             self::$instance->metabox = new Wcpcsu_Meta_Box();
             self::$instance->shortcode = new wcpcsu_Shortcode();
             self::$instance->license = new Wcpcsu_License_Controller();
+            // Initialize appsero tracking
+			self::$instance->init_appsero();
         }
 
         return self::$instance;
