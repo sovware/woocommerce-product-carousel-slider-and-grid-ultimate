@@ -11,7 +11,7 @@ This plugin displays WooCommerce Product Carousel, Slider and Grid beautifully a
 
 == Description ==
 
-Live demo: <https://demo.aazztech.com/plugin/woocommerce-product-carousel-slider-and-grid-ultimate-demo-slider/>
+Live demo: <https://demo.wpwax.com/plugin/woocommerce-product-carousel-slider-and-grid-ultimate-demo-slider/>
 
 Would you like to increase sale of your WooCommerce based shop? This plugin can increase your sale by allowing you to display a very attractive WooCommerce Product Carousel, Slider and Grid on your website. With this awesome plugin, you can display your products in many ways that will attract your customers interest to buy them. No programming skill is required to use it. It is extremely easy to use with a SHORTCODE generated automatically for you by this plugin. You can create unlimited product Carousels, Sliders and Grids using this plugin.
 
@@ -69,11 +69,11 @@ More amazing features available in [__Pro version__](https://wpwax.com/product/w
 *   Marquee
 *   And many more…
 
-Live demo - Carousels/Slider: <https://demo.aazztech.com/plugin/woocommerce-product-carousel-slider-and-grid-ultimate-demo-slider/>
+Live demo - Carousels/Slider: <https://demo.wpwax.com/plugin/woocommerce-product-carousel-slider-and-grid-ultimate-demo-slider/>
 
-Live demo - Grid: <https://demo.aazztech.com/plugin/woocommerce-product-carousel-slider-and-grid-ultimate-demo-grid/>
+Live demo - Grid: <https://demo.wpwax.com/plugin/woocommerce-product-carousel-slider-and-grid-ultimate-demo-grid/>
 
-Widget Screenshots: <https://demo.aazztech.com/plugin/woocommerce-product-carousel-slider-and-grid-ultimate-demo-widget/>
+Widget Screenshots: <https://demo.wpwax.com/plugin/woocommerce-product-carousel-slider-and-grid-ultimate-demo-widget/>
 
 
 == Installation ==
