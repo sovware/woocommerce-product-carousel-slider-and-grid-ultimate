@@ -201,7 +201,7 @@ $discount_ribbon_position   = ! empty( $discount_ribbon_position ) ? $discount_r
                     <ul class="cmb2-radio-list-pro">
                         <p>Following options
                             available in <a
-                                href="https://aazztech.com/product/woocommerce-product-carousel-slider-grid-ultimate-pro"
+                                href="https://wpwax.com/product/woocommerce-product-carousel-slider-grid-ultimate-pro"
                                 target="_blank">Pro Version</a>:</p>
                         <li><input disabled type="radio" class="cmb2-option" name="wcpscu_products_type"
                                 id="wcpscu_ds_products_type" value="onsale"> <label
