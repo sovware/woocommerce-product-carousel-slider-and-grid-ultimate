@@ -203,6 +203,24 @@ Final class Woocmmerce_Product_carousel_slider_ultimate_Pro
     }
 
     /**
+	 * Initialize appsero tracking.
+	 *
+	 * @see https://github.com/Appsero/client
+	 *
+	 * @return void
+	 */
+	public function init_appsero() {
+		if ( ! class_exists( '\Appsero\Client' ) ) {
+			require_once WCPCSU_INC_DIR . 'appsero/src/Client.php';
+		}
+
+		$client = new \Appsero\Client( 'a39a0a19-5945-4527-84b0-a13bcfac1faa', 'WooCommerce Product Carousel, Slider and Grid Ultimate', __FILE__ );
+
+		// Active insights
+		$client->insights()->init();
+	}
+
+    /**
      * It will serialize and then encode the string using base64_encode() and return the encoded data
      * @param $data
      * @return string
