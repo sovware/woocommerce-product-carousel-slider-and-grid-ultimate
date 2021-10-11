@@ -2,8 +2,8 @@
 Contributors: wpwax
 Tags: woocommerce carousel, woocommerce slider, woocommerce grid, woocommerce product slider, woocommerce product carousel
 Requires at least: 4.0
-Tested up to: 5.6
-Stable tag: 1.7.6
+Tested up to: 5.8
+Stable tag: 1.8.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -54,7 +54,6 @@ More amazing features available in [__Pro version__](https://wpwax.com/product/w
 = Features of the Pro version =
 *   15 different themes for Carousel & Slider.
 *   15 different themes for Grid.
-*   3 different themes for widget.
 *   Add to Wishlist.
 *   Show total wishlist to any page/post via shortcode.
 *   On sale, Best Selling, Top Rated and Featured products display.
@@ -66,6 +65,8 @@ More amazing features available in [__Pro version__](https://wpwax.com/product/w
 *   Display/hide out of stock products.
 *   Enable/disable hover effect on product image.
 *   Scroll by per item or page.
+*   Scroll direction
+*   Marquee
 *   And many more…
 
 Live demo - Carousels/Slider: <https://demo.aazztech.com/plugin/woocommerce-product-carousel-slider-and-grid-ultimate-demo-slider/>
@@ -102,6 +103,12 @@ Post Grid and Carousel Ultimate plugin is very easy to use. Just follow the foll
 12. Backend: Style Settings
 
 == Changelog ==
+= 1.8.0 =
+* Add: WordPress 5.8 compatibility
+* Add: WooCommerce 5.7 compatibility
+* Improve: Performance
+* Improve: Design
+* Fix: Design issues
 = 1.7.6 =
 * Add: WordPress 5.6 compatibility
 * Add: WooCommerce 4.8 compatibility
