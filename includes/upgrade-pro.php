@@ -37,7 +37,7 @@
             <div class="postbox-inline-body">
                 <p>Need help? Get special care from our dedicated support team.</p>
                 <div class="wpcs-admin-extra-bottom">
-                    <a href="https://aazztech.com/support" class="wpcs-feature-btn btn">Get Support</a>
+                    <a href="https://wpwax.com/contact/" class="wpcs-feature-btn btn">Get Support</a>
                 </div>
 
             </div>
@@ -57,7 +57,6 @@
             <ul class="adl_pro_features">
                 <li> <span class="fas fa-check"></span> 15 different themes for Carousel & Slider</li>
                 <li> <span class="fas fa-check"></span> 15 different themes for Grid.</li>
-                <li> <span class="fas fa-check"></span> 3 different themes for Widget.</li>
                 <li> <span class="fas fa-check"></span> On sale, best selling, top rated and featured products display.
                 </li>
                 <li> <span class="fas fa-check"></span> Display by ID, sku, tags, category, month and year.</li>
@@ -70,6 +69,8 @@
                 <li> <span class="fas fa-check"></span> Display/hide out of stock products</li>
                 <li> <span class="fas fa-check"></span> Ready Ribbons & Custom Ribbons.</li>
                 <li> <span class="fas fa-check"></span> Scroll by per item or page</li>
+                <li> <span class="fas fa-check"></span> Scroll Direction</li>
+                <li> <span class="fas fa-check"></span> Marquee</li>
                 <li> <span class="fas fa-check"></span> And many more…</li>
             </ul>
             <div class="wpcs-admin-extra-bottom">
