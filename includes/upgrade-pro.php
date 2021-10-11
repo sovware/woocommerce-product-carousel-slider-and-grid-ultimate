@@ -24,12 +24,12 @@
                 <p><strong>Step - 1:</strong> Paste the shortcode on any page or post where you would like to display
                     the product carousel.</p>
 
-                <div class="postbox-inline-video">
+                <!-- <div class="postbox-inline-video">
                     <h3>Watch the Video</h3>
                     <iframe src="https://www.youtube-nocookie.com/embed/LKFHEx7AorE" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>
-                </div>
+                </div> -->
             </div>
         </div>
         <div class=" wpcs-admin-extra postbox">
