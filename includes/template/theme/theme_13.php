@@ -43,11 +43,11 @@
                     <div class="wpcu-product__price wpcu-flex-center wpcu-flex-align-center">
                         <?php
                         if( empty( $sale_price ) ) { ?>
-                        <span class="wpcu-product__price__sale">$<?php echo $product->get_regular_price(); ?></span>
+                        <span class="wpcu-product__price__sale"><?php echo get_woocommerce_currency_symbol() . $product->get_regular_price(); ?></span>
                         <?php
                         } else { ?>
-                        <s>$<?php echo $product->get_regular_price(); ?></s>
-                        <span class="wpcu-product__price__sale">$<?php echo $product->get_sale_price(); ?></span>
+                        <s><?php echo get_woocommerce_currency_symbol() . $product->get_regular_price(); ?></s>
+                        <span class="wpcu-product__price__sale"><?php echo get_woocommerce_currency_symbol() . $product->get_sale_price(); ?></span>
                         <span
                             class="wpcu-badge wpcu-badge--outlined wpcu-badge--rounded-circle">-<?php echo $this->aazz_show_discount_percentage(); ?></span>
                         <?php } ?>
@@ -61,7 +61,7 @@
                     <?php } ?>
                 </div>
                 <div class="wpcu-product__excerpt">
-                    <p>Vaserbo nerafaes sety krscak ertsvi tae asa loreo qui ratione voluptate kjahsau vehicula.</p>
+                    <p><?php echo get_the_excerpt();?></p>
                 </div>
             </div>
         </div>
