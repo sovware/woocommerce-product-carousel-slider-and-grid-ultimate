@@ -72,7 +72,7 @@ $discount_ribbon_position   = ! empty( $discount_ribbon_position ) ? $discount_r
                             <option disabled>Theme-14 (Pro)</option>
                             <option disabled>Theme-15 (Pro)</option>
                         </select>
-                        <a href="#">View All Themes</a>
+                        <a href="https://demo.wpwax.com/plugin/woocommerce-product-carousel-slider-and-grid-ultimate-demo-slider/">View All Themes</a>
                     </div>
                 </div>
             </div>
