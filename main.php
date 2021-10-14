@@ -56,6 +56,12 @@ if( ! in_array('woocommerce-product-carousel-slider-grid-ultimate-pro/main.php',
         public $license;
 
         /**
+         * Migration
+         *@since 1.8.6
+        */
+        public $migrate;
+
+        /**
          * Main Woocmmerce_Product_carousel_slider_ultimate_Pro Instance.
          *
          *
@@ -84,6 +90,7 @@ if( ! in_array('woocommerce-product-carousel-slider-grid-ultimate-pro/main.php',
                 self::$instance->metabox = new Wcpcsu_Meta_Box();
                 self::$instance->shortcode = new wcpcsu_Shortcode();
                 self::$instance->license = new Wcpcsu_License_Controller();
+                self::$instance->migrate = new Wcpcsu_Migration();
                 // Initialize appsero tracking
                 self::$instance->init_appsero();
             }
