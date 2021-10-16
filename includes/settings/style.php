@@ -515,7 +515,7 @@
                             id="wcpscu_ratings_color"
                             value="<?php echo ! empty( $ratings_color['theme_14'] ) ? esc_attr( $ratings_color['theme_14'] ) : '#feb507'; ?>">
                         </div>
-                        <div>
+                        <div class="theme_15">
                         <input type="text" class="cmb2-text-small cpa-color-picker" name="wcpscu[ratings_color][theme_15]"
                             id="wcpscu_ratings_color"
                             value="<?php echo ! empty( $ratings_color['theme_15'] ) ? esc_attr( $ratings_color['theme_15'] ) : '#feb507'; ?>">
