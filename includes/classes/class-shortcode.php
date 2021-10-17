@@ -6,6 +6,7 @@ class wcpcsu_Shortcode
     public function __construct ()
     {
         add_shortcode( 'wcpcsu', array( $this,'wcpcsu_shoortcode_method' ) );
+        add_shortcode( 'wcpcsup', array($this,'wcpcsu_shoortcode_method') );
         add_action( 'wp_ajax_ajax_quick_view', array( $this, 'ajax_quick_view' ) );
         add_action( 'wp_ajax_nopriv_ajax_quick_view', array( $this, 'ajax_quick_view') );
     }

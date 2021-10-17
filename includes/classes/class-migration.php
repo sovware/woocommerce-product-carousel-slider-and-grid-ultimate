@@ -9,6 +9,7 @@ class Wcpcsu_Migration
     }
 
     public function migrate_custom_post() {
+        
         $old_posts = get_posts( array( 'post_type'        => 'wcpcsu-custom-pro' ) );
         //$new_posts = get_posts( array( 'post_type'        => 'wcpcsu-custom-post' ) );
 
@@ -73,6 +74,7 @@ class Wcpcsu_Migration
            
             
         }
+
     }
 
    
