@@ -49,7 +49,6 @@ class Wcpcsu_Migration
                 $new_meta['title_hover_font_color'][$new_meta['theme']] = $get_meta['title_hover_font_color'];
                 $new_meta['price_font_size'][$new_meta['theme']] = $get_meta['price_font_size'];
                 $new_meta['price_font_color'][$new_meta['theme']] = $get_meta['price_font_color'];
-                $new_meta['ratings_size'][$new_meta['theme']] = $get_meta['ratings_size'];
                 $new_meta['ratings_color'][$new_meta['theme']] = $get_meta['ratings_color'];
                 $new_meta['cart_font_color'][$new_meta['theme']] = $get_meta['cart_font_color'];
                 $new_meta['cart_bg_color'][$new_meta['theme']] = $get_meta['cart_bg_color'];
