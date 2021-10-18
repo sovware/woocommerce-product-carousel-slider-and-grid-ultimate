@@ -11,9 +11,9 @@ class Wcpcsu_Migration
     public function migrate_custom_post() {
         
         $old_posts = get_posts( array( 'post_type'        => 'wcpcsu-custom-pro' ) );
-        //$new_posts = get_posts( array( 'post_type'        => 'wcpcsu-custom-post' ) );
+        $migration = get_option('wcpcsu_migration');
 
-        if( ! empty( $old_posts ) ) {
+        if( empty( $migration ) && ! empty( $old_posts ) ) {
             foreach( $old_posts as $old_post ) {
                 $get_post_meta = get_post_meta( $old_post->ID, 'wcpscup', true );
                 $get_meta      = Woocmmerce_Product_carousel_slider_ultimate_Pro::unserialize_and_decode24( $get_post_meta );
@@ -73,6 +73,8 @@ class Wcpcsu_Migration
            
             
         }
+
+        update_option( 'wcpcsu_migration', true );
 
     }
 

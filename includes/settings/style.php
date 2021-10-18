@@ -424,6 +424,9 @@
                             <input type="text" class="cmb2-text-small theme_8" name="wcpscu[ratings_size][theme_8]"
                             id="wcpscu_ratings_size"
                             value="<?php echo ! empty( $ratings_size['theme_8'] ) ? esc_attr( $ratings_size['theme_8'] ) : '16'; ?>">
+                            <input type="text" class="cmb2-text-small theme_9" name="wcpscu[ratings_size][theme_9]"
+                            id="wcpscu_ratings_size"
+                            value="<?php echo ! empty( $ratings_size['theme_9'] ) ? esc_attr( $ratings_size['theme_9'] ) : '16'; ?>">
                             <input type="text" class="cmb2-text-small theme_11" name="wcpscu[ratings_size][theme_11]"
                             id="wcpscu_ratings_size"
                             value="<?php echo ! empty( $ratings_size['theme_11'] ) ? esc_attr( $ratings_size['theme_11'] ) : '16'; ?>">
@@ -549,6 +552,16 @@
                             id="wcpscu_cart_font_color"
                             value="<?php echo ! empty( $cart_font_color['theme_3'] ) ? esc_attr( $cart_font_color['theme_3'] ) : '#000000'; ?>">
                         </div>
+                        <div class="theme_4">
+                        <input type="text" class="cmb2-text-small cpa-color-picker" name="wcpscu[cart_font_color][theme_4]"
+                            id="wcpscu_cart_font_color"
+                            value="<?php echo ! empty( $cart_font_color['theme_4'] ) ? esc_attr( $cart_font_color['theme_4'] ) : '#ffffff'; ?>">
+                        </div>
+                        <div class="theme_5">
+                        <input type="text" class="cmb2-text-small cpa-color-picker" name="wcpscu[cart_font_color][theme_5]"
+                            id="wcpscu_cart_font_color"
+                            value="<?php echo ! empty( $cart_font_color['theme_5'] ) ? esc_attr( $cart_font_color['theme_5'] ) : '#ffffff'; ?>">
+                        </div>
                         <div class="theme_6">
                         <input type="text" class="cmb2-text-small cpa-color-picker" name="wcpscu[cart_font_color][theme_6]"
                             id="wcpscu_cart_font_color"
@@ -573,6 +586,11 @@
                         <input type="text" class="cmb2-text-small cpa-color-picker" name="wcpscu[cart_font_color][theme_10]"
                             id="wcpscu_cart_font_color"
                             value="<?php echo ! empty( $cart_font_color['theme_10'] ) ? esc_attr( $cart_font_color['theme_10'] ) : '#ffffff'; ?>">
+                        </div>
+                        <div class="theme_11">
+                        <input type="text" class="cmb2-text-small cpa-color-picker" name="wcpscu[cart_font_color][theme_11]"
+                            id="wcpscu_cart_font_color"
+                            value="<?php echo ! empty( $cart_font_color['theme_11'] ) ? esc_attr( $cart_font_color['theme_11'] ) : '#ffffff'; ?>">
                         </div>
                         <div class="theme_12">
                         <input type="text" class="cmb2-text-small cpa-color-picker" name="wcpscu[cart_font_color][theme_12]"
@@ -960,6 +978,26 @@
                         <input type="text" class="cmb2-text-small cpa-color-picker" name="wcpscu[ribbon_bg_color][theme_10]"
                             id="wcpscu_ribbon_bg_color"
                             value="<?php echo ! empty( $ribbon_bg_color['theme_10'] ) ? esc_attr( $ribbon_bg_color['theme_10'] ) : '#00b46a'; ?>">
+                    </div>
+                    <div class="theme_11">
+                        <input type="text" class="cmb2-text-small cpa-color-picker" name="wcpscu[ribbon_bg_color][theme_11]"
+                            id="wcpscu_ribbon_bg_color"
+                            value="<?php echo ! empty( $ribbon_bg_color['theme_11'] ) ? esc_attr( $ribbon_bg_color['theme_11'] ) : '#00b46a'; ?>">
+                    </div>
+                    <div class="theme_12">
+                        <input type="text" class="cmb2-text-small cpa-color-picker" name="wcpscu[ribbon_bg_color][theme_12]"
+                            id="wcpscu_ribbon_bg_color"
+                            value="<?php echo ! empty( $ribbon_bg_color['theme_12'] ) ? esc_attr( $ribbon_bg_color['theme_12'] ) : '#00b46a'; ?>">
+                    </div>
+                    <div class="theme_13">
+                        <input type="text" class="cmb2-text-small cpa-color-picker" name="wcpscu[ribbon_bg_color][theme_13]"
+                            id="wcpscu_ribbon_bg_color"
+                            value="<?php echo ! empty( $ribbon_bg_color['theme_13'] ) ? esc_attr( $ribbon_bg_color['theme_13'] ) : '#00b46a'; ?>">
+                    </div>
+                    <div class="theme_14">
+                        <input type="text" class="cmb2-text-small cpa-color-picker" name="wcpscu[ribbon_bg_color][theme_14]"
+                            id="wcpscu_ribbon_bg_color"
+                            value="<?php echo ! empty( $ribbon_bg_color['theme_14'] ) ? esc_attr( $ribbon_bg_color['theme_14'] ) : '#00b46a'; ?>">
                     </div>
                     <div class="theme_15">
                         <input type="text" class="cmb2-text-small cpa-color-picker" name="wcpscu[ribbon_bg_color][theme_15]"
