@@ -270,14 +270,14 @@ $carousel_pagination    = ! empty( $carousel_pagination ) ? $carousel_pagination
                         </div>
                         <div class="cmb-navigation-item">
                             <label for="wcpscu[nav_back_hover_color]">
-                                <?php esc_html_e('Navigaiton Hover Background Color', WCPCSU_TEXTDOMAIN); ?>
+                                <?php esc_html_e('Navigation Hover Background Color', WCPCSU_TEXTDOMAIN); ?>
                             </label>
                             <input type="text" name="wcpscu[nav_back_hover_color]" class="cpa-color-picker"
                                 value="<?php echo ! empty( $nav_back_hover_color ) ? $nav_back_hover_color : '#ff5500'; ?>" />
                         </div>
                         <div class="cmb-navigation-item">
                             <label for="wcpscu[nav_border_hover]">
-                                <?php esc_html_e('Navigaiton Hover Border Color', WCPCSU_TEXTDOMAIN); ?>
+                                <?php esc_html_e('Navigation Hover Border Color', WCPCSU_TEXTDOMAIN); ?>
                             </label>
                             <input type="text" name="wcpscu[nav_border_hover]" class="cpa-color-picker"
                                 value="<?php echo ! empty( $nav_border_hover ) ? $nav_border_hover : '#ff5500'; ?>" />
