@@ -75,7 +75,7 @@ if( ! in_array('woocommerce-product-carousel-slider-grid-ultimate-pro/main.php',
                 add_action('template_redirect',array(self::$instance, 'template_enqueue_file'));
                 add_action('admin_menu',array(self::$instance,'upgrade_to_pro'));
                 if( empty( get_option('wcpcsu_dismiss_notice') ) ) {
-                    add_action( 'admin_notices', array( self::$instance, 'admin_notices') );
+                    //add_action( 'admin_notices', array( self::$instance, 'admin_notices') );
                 }
                 self::$instance->wcpcsu_include();
                 self::$instance->custom_post = new Wcpcsu_Custom_Post();
