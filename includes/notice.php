@@ -10,8 +10,8 @@ if( ! empty( $_GET['wcpcsu-dismiss-notice'] ) && 'true' == $_GET['wcpcsu-dismiss
     <?php
         echo wp_kses_post( sprintf(
             /* translators: %s: documentation URL */
-            __( 'This is testing <a href="%s">Learn more here.</a>', 'woocommerce-product-carousel-slider-and-grid-ultimate' ),
-            'https://wpwax.com/'
+            __( 'We are giving away 25 premium licenses to our users for FREE. Claim before it’s gone! To claim <a href="%s">Learn more here.</a>', 'woocommerce-product-carousel-slider-and-grid-ultimate' ),
+            'https://wpwax.com/contact'
         ) );
     ?>
     </p>
