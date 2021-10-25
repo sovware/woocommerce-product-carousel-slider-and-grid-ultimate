@@ -180,7 +180,7 @@ if( ! in_array('woocommerce-product-carousel-slider-grid-ultimate-pro/main.php',
 
             wp_localize_script('wcpcsu-swmodal-js','wcpcsu_quick_view',array(
                 'ajax_url'           => admin_url( 'admin-ajax.php' ),
-        
+
             ));
         }
 
@@ -202,7 +202,7 @@ if( ! in_array('woocommerce-product-carousel-slider-grid-ultimate-pro/main.php',
         public static function unserialize_and_decode24($data){
             return unserialize(base64_decode($data));
         }
-        
+
         /**
          * Initialize appsero tracking.
          *
