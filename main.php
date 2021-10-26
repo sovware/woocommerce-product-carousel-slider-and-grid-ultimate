@@ -3,7 +3,7 @@
 Plugin Name: WooCommerce Product Carousel, Slider and Grid Ultimate
 Plugin URI:  https://wpwax.com/product/woocommerce-product-carousel-slider-grid-ultimate-pro
 Description: It is a fully responsive and mobile friendly WooCommerce Product Carousel, Slider and Grid plugin which comes with lots of features.
-Version:     1.8.2
+Version:     1.8.3
 Author:      wpWax
 Author URI:  https://wpwax.com
 License:     GPL2
