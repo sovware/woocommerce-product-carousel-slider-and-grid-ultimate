@@ -11,7 +11,7 @@ if( ! isset( $_GET['wcpcsu-dismiss-notice'] ) ) { ?>
         <?php
             echo wp_kses_post( sprintf(
                 /* translators: %s: documentation URL */
-                __( 'We are giving away 25 premium licenses to our users for FREE. Claim before it’s gone! To claim <a href="%s">Contact us.</a>', 'woocommerce-product-carousel-slider-and-grid-ultimate' ),
+                __( 'We are giving away 25 premium licenses to our users for FREE. Claim before it’s gone! To claim <a href="%s" target="_blank">Contact us.</a>', 'woocommerce-product-carousel-slider-and-grid-ultimate' ),
                 'https://wpwax.com/contact'
             ) );
         ?>

@@ -160,14 +160,20 @@ if( ! in_array('woocommerce-product-carousel-slider-grid-ultimate-pro/main.php',
         }
 
         public function wcpcsu_enqueue_file () {
-            global $typenow;
-            if($typenow == WCPCSU_CUSTOM_POST_TYPE) {
+            global $typenow, $pagenow;
+
+            if( $typenow == WCPCSU_CUSTOM_POST_TYPE ) {
                 wp_enqueue_style('wcpcsu-admin-cmb2', WCPCSU_URL . 'admin/css/cmb2.min.css');
                 wp_enqueue_style('wcpcsu-admin', WCPCSU_URL . 'admin/css/wcpcsu-admin.css');
                 wp_enqueue_style('wp-color-picker');
                 wp_enqueue_script('wp-color-picker');
                 wp_enqueue_script('wcpcsu-admin-js', WCPCSU_URL . 'admin/js/wcpcs-admin.js', array('jquery'));
             }
+
+            if ( 'index.php' == $pagenow || 'plugins.php' == $pagenow || 'wcpcsu-custom-post' == $typenow ) {
+                wp_enqueue_style('wcpcsu-notice', WCPCSU_URL . 'admin/css/wcpcsu-notice.css');
+            }
+
         }
 
         public function template_enqueue_file () {
