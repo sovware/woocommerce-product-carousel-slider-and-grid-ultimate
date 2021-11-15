@@ -57,7 +57,7 @@ if ( ! function_exists( 'woosw_init' ) ) {
 					// shortcode
 					add_shortcode( 'woosw', array( $this, 'shortcode' ) );
 
-					add_shortcode( 'woosw_list', array( $this, 'list_shortcode' ) );
+					add_shortcode( 'wcpcsu_wishlist', array( $this, 'list_shortcode' ) );
 
 					// add button for archive
 					$woosw_button_position_archive = apply_filters( 'woosw_button_position_archive', get_option( 'woosw_button_position_archive', 'after_add_to_cart' ) );
