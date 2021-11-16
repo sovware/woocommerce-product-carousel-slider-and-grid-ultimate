@@ -66,7 +66,7 @@
                     <?php } ?>
                 </div>
                 <div class="wpcu-product__excerpt">
-                    <p><?php echo get_the_excerpt();?></p>
+                    <p><?php echo wp_trim_words( get_the_excerpt(), 10 );?></p>
                 </div>
             </div>
         </div>

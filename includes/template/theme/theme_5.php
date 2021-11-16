@@ -27,18 +27,22 @@
             <?php if( 'yes' == $display_title ) { ?>
             <h2 class="wpcu-product__title wpcu-mb-10 wpcu-text-center"><a href="<?php echo get_the_permalink(); ?>"><?php echo get_the_title(); ?></a></h2>
             <?php } ?>
-            <?php if( 'yes' == $display_price && ! empty( $product->get_regular_price() ) ) { ?>
+            <?php if( 'yes' == $display_price ) { ?>
             <div class="wpcu-product__price wpcu-flex-center">
-                <?php
-                if( empty( $sale_price ) ) { ?>
-                <span class="wpcu-product__price__sale"><?php echo get_woocommerce_currency_symbol() . $product->get_regular_price(); ?></span>
-                <?php
-                } else { ?>
-                <span class="wpcu-product__price__sale"><?php echo get_woocommerce_currency_symbol() . $product->get_sale_price(); ?></span>
-                <s><?php echo get_woocommerce_currency_symbol() . $product->get_regular_price(); ?></s>
-                <span
-                    class="wpcu-badge wpcu-badge--sm wpcu-badge--outlined wpcu-badge--rounded">-<?php echo $this->aazz_show_discount_percentage(); ?></span>
+                <?php if ( $product->is_type( 'simple' ) && ! empty( $product->get_regular_price() ) ) { ?>
+                    <?php
+                    if( empty( $sale_price ) ) { ?>
+                    <span class="wpcu-product__price__sale"><?php echo get_woocommerce_currency_symbol() . $product->get_regular_price(); ?></span>
+                    <?php
+                    } else { ?>
+                    <span class="wpcu-product__price__sale"><?php echo get_woocommerce_currency_symbol() . $product->get_sale_price(); ?></span>
+                    <s><?php echo get_woocommerce_currency_symbol() . $product->get_regular_price(); ?></s>
+                    <span
+                        class="wpcu-badge wpcu-badge--sm wpcu-badge--outlined wpcu-badge--rounded">-<?php echo $this->aazz_show_discount_percentage(); ?></span>
                 <?php } ?>
+                <?php } else { ?>
+                    <span class="wpcu-product__price__sale"><?php echo $product->get_price_html(); ?></span>
+                <?php }  ?>
             </div>
             <?php } ?>
         </div>
