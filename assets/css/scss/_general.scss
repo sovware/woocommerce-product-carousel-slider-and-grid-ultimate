@@ -2,7 +2,7 @@
 .wpcu-products {
     max-width: 100% !important;
     width: 100% !important;
-    padding: 0 15px;
+    padding: 0;
     font-family: 'Rubik', sans-serif;
     position: relative;
 
@@ -55,8 +55,8 @@
         border-right-color: transparent;
         animation: wpcu-rotate 2s linear infinite;
         position: absolute;
-        left: 50%;
-        top: 50%;
+        left: calc(50% - 25px);
+        top: calc(50% - 25px);
         transform: translate(-50%, -50%);
         z-index: 9999;
     }

@@ -25,6 +25,7 @@
             pointer-events: none;
             transition: 0.3s ease;
             box-shadow: 0 10px 10px rgba(#544d7c, 0.1);
+            box-sizing: border-box;
             .wpcu-button{
                 p{
                     display: block;

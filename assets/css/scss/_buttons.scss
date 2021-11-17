@@ -45,7 +45,7 @@
     @include m(outlined) {
         .button,
         .added_to_cart {
-            border: 1px solid $borderColor;
+            border: 1px solid $borderColor !important;
             background: var(--wpcu-buttonBgColor) !important;
             color: var(--wpcu-buttonColor) !important;
             &:hover{

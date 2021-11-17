@@ -50,7 +50,7 @@
                     background: #fff !important;
                     padding: 0 !important;
                     border-radius: 50%;
-                    border-color: #fff !important;
+                    border: 1px solid #fff !important;
                     &:hover{
                         background: #fff;
                         border: 1px solid #fff !important;
@@ -91,6 +91,9 @@
                     .wpcu-product__price s,
                     .wpcu-badge{
                         color: #fff !important;
+                    }
+                    .wpcu-product__price__sale ins bdi{
+                        color: var(--wpcu-primaryColor) !important;
                     }
                     .wpcu-badge{
                         border-color: #fff !important;

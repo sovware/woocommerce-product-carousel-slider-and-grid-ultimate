@@ -46,6 +46,7 @@
                 visibility: hidden;
                 opacity: 0;
                 height: 0;
+                box-sizing: border-box;
                 .wpcu-product__action-icons{
                     padding: 0;
                     .wpcu-button{
