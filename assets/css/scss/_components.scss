@@ -49,7 +49,7 @@
     del bdi {
         font-weight: 300;
         display: inline-block;
-        font-size: 14px;
+        font-size: var(--wpcu-productPriceSize) !important;
         color: $textLight;
         margin: 0;
         text-decoration: line-through;

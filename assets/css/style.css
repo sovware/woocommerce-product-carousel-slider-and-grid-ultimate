@@ -637,7 +637,7 @@
 .wpcu-product__price del bdi {
   font-weight: 300;
   display: inline-block;
-  font-size: 14px;
+  font-size: var(--wpcu-productPriceSize) !important;
   color: #9192a3;
   margin: 0;
   text-decoration: line-through;
