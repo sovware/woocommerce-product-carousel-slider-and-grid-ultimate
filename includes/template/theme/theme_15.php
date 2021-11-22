@@ -14,20 +14,11 @@
                     <?php } ?>
                     <?php if( 'yes' == $display_price ) { ?>
                         <div class="wpcu-product__price wpcu-flex-center wpcu-mb-10">
-                        <?php
-                        if( ! empty( $product->get_regular_price() ) ) {
-                            if(  empty( $sale_price ) ) { ?>
-                                <span class="wpcu-product__price__sale"><?php echo get_woocommerce_currency_symbol() . $product->get_regular_price(); ?></span>
-                                <?php
-                            } else { ?>
-                                <span class="wpcu-product__price__sale"><?php echo get_woocommerce_currency_symbol() . $product->get_sale_price(); ?></span>
-                                <s><?php echo get_woocommerce_currency_symbol() . $product->get_regular_price(); ?></s>
-                            <?php } ?>
-                        <?php } else { ?>
-                            <span class="wpcu-product__price__sale"><?php echo $product->get_price_html(); ?></span>
-                        <?php }  ?>
-                </div>
-                <?php } ?>
+
+                            <span class="wpcu-product__price__sale"><?php echo $product->get_price_html(); ?></span> 
+
+                        </div>
+                    <?php } ?>
                 <?php if( 'yes' == $display_ratings ) { ?>
                     <div class="wpcu-product__rating wpcu-flex-center">
                         <?php wpcu_ratings($ratings); ?>

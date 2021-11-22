@@ -32,10 +32,12 @@
                     <span class="wpcu-badge wpcu-badge--sm wpcu-badge--outlined wpcu-badge--rounded">-<?php echo $this->aazz_show_discount_percentage(); ?></span>
                     <?php } ?>
 
-                <?php } else { ?>
-                    <span class="wpcu-product__price__sale"><?php echo $product->get_price_html(); ?></span>
-                <?php }  ?>
-
+                <?php } ?>
+                    
+                <span class="wpcu-product__price__sale"><?php echo $product->get_price_html(); ?></span>
+                <?php if( ! empty( $sale_price ) ) { ?>
+                    <span class="wpcu-badge wpcu-badge--sm wpcu-badge--outlined wpcu-badge--rounded">-<?php echo $this->aazz_show_discount_percentage(); ?></span>
+                <?php } ?>    
             </div>
             <?php } ?>
             <?php if( 'yes' == $display_ratings ) { ?>
