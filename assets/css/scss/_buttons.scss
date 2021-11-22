@@ -69,7 +69,7 @@
     @include m(rounded-circle) {
         .button,
         .added_to_cart {
-            border-radius: 20px;
+            border-radius: 20px !important;
         }
     }
 
