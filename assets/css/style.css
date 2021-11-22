@@ -770,6 +770,9 @@
   color: #9192a3;
   font-size: 15px;
 }
+.wpcu-product__price ins, .wpcu-product__price del {
+  background: none;
+}
 .wpcu-product__price ins bdi,
 .wpcu-product__price .amount {
   display: inline-block;

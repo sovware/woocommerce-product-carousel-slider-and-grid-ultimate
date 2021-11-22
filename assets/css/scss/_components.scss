@@ -71,6 +71,9 @@
         color: #9192a3;
         font-size: 15px;
     }
+    ins, del{
+        background: none;
+    }
     ins bdi,
     .amount{
         display: inline-block;
