@@ -760,7 +760,18 @@
           align-items: center;
   margin: 0 -4px;
 }
-.wpcu-product__price ins bdi {
+.wpcu-product__price__sale {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #9192a3;
+  font-size: 15px;
+}
+.wpcu-product__price ins bdi,
+.wpcu-product__price .amount {
   display: inline-block;
   font-size: var(--wpcu-productPriceSize) !important;
   line-height: normal;
@@ -770,9 +781,9 @@
 .wpcu-product__price del bdi {
   font-weight: 300;
   display: inline-block;
-  font-size: 14px;
+  font-size: var(--wpcu-productPriceSize) !important;
   color: #9192a3;
-  margin: 0 4px;
+  margin: 0;
   text-decoration: line-through;
 }
 .wpcu-product__price__discount-badge {
