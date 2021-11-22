@@ -554,7 +554,7 @@
 }
 .wpcu-button--rounded-circle .button,
 .wpcu-button--rounded-circle .added_to_cart {
-  border-radius: 20px;
+  border-radius: 20px !important;
 }
 .wpcu-button--icon-circle a {
   display: -webkit-inline-box !important;
