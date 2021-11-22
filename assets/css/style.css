@@ -56,7 +56,7 @@
 .wpcu-products {
   max-width: 100% !important;
   width: 100%;
-  padding: 0 15px;
+  padding: 0;
   font-family: "Rubik", sans-serif;
   position: relative;
 }
@@ -1029,6 +1029,8 @@
   -webkit-transition: 0.3s ease;
   -o-transition: 0.3s ease;
   transition: 0.3s ease;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 .wpcu-theme_1 .wpcu-product__content:hover .wpcu-overlay-content-bottom {
   visibility: visible;
@@ -1069,6 +1071,7 @@
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+  z-index: 1;
 }
 .wpcu-theme_2 .wpcu-product__details {
   text-align: center;
