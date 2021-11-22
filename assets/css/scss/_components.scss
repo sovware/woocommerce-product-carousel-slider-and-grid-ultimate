@@ -32,20 +32,26 @@
     align-items: center;
     margin: 0 -4px;
 
-    ins bdi {
+    @include e(sale) {
+        display: inline-flex;
+        align-items: center;
+        color: #9192a3;
+        font-size: 15px;
+    }
+    ins bdi,
+    .amount{
         display: inline-block;
         font-size: var(--wpcu-productPriceSize) !important;
         line-height: normal;
         color: var(--wpcu-productPriceColor) !important;
         margin: 0 4px;
     }
-
-    del bdi{
+    del bdi {
         font-weight: 300;
         display: inline-block;
         font-size: 14px;
         color: $textLight;
-        margin: 0 4px;
+        margin: 0;
         text-decoration: line-through;
     }
 
