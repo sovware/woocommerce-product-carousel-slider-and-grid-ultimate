@@ -760,19 +760,20 @@
           align-items: center;
   margin: 0 -4px;
 }
-.wpcu-product__price__sale {
+.wpcu-product__price ins bdi {
   display: inline-block;
   font-size: var(--wpcu-productPriceSize) !important;
   line-height: normal;
   color: var(--wpcu-productPriceColor) !important;
   margin: 0 4px;
 }
-.wpcu-product__price s {
+.wpcu-product__price del bdi {
   font-weight: 300;
   display: inline-block;
   font-size: 14px;
   color: #9192a3;
   margin: 0 4px;
+  text-decoration: line-through;
 }
 .wpcu-product__price__discount-badge {
   margin: 0 4px;
