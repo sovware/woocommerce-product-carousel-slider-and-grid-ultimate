@@ -7,57 +7,70 @@ Stable tag: 1.8.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-This plugin displays WooCommerce Product Carousel, Slider and Grid beautifully and professionally and it comes with lots of features.
+The most intuitive solution to make your eCommerce site visually appealing. Create & customize WooCommerce product carousel, sliders, or grids easily
 
 == Description ==
 
-Live demo: <https://demo.wpwax.com/plugin/woocommerce-product-carousel-slider-and-grid-ultimate-demo-slider/>
+👉 [Demos](https://demo.wpwax.com/plugin/woocommerce-product-carousel-slider-and-grid-ultimate-demo-slider/) | [Pro Version](https://wpwax.com/product/woocommerce-product-carousel-slider-grid-ultimate-pro/) | [Documentation](https://directorist.com/product/category/themes/) | [Support](https://wpwax.com/contact/) 👈
 
-Would you like to increase sale of your WooCommerce based shop? This plugin can increase your sale by allowing you to display a very attractive WooCommerce Product Carousel, Slider and Grid on your website. With this awesome plugin, you can display your products in many ways that will attract your customers interest to buy them. No programming skill is required to use it. It is extremely easy to use with a SHORTCODE generated automatically for you by this plugin. You can create unlimited product Carousels, Sliders and Grids using this plugin.
+Are you looking to attract more users and generate more revenue on your WooCommerce based site? WooCommerce Product Carousel, Slider & Grid Ultimate plugin allows you to create appealing product sliders, carousels, grids on your site or shop that can increase revenue & sales. Anyone with zero technical knowledge can easily make the best use of the plugin as it comes with tons of preloaded features and customization options.
 
-You can generate dynamic shortcodes just by a few mouse click and then use the shortcode anywhere to display Carousel/Slider/Grid. The interface is extremely clean and easy to understand that a novice user can use this plugin without spending hours of valuable time reading online docs.
+It has a vast array of use cases and can benefit WooCommerce shop owners in multiple ways. You can create an unlimited number of carousels, sliders, or grids for Featured Products, Older Products, Latest Products, etc. The Product Slider Carousel can demonstrate myriad items in a smooth and effective manner on any page. It is 100% responsive and works flawlessly on all devices. 
+
+You can generate dynamic shortcodes and display product sliders in pages, posts, custom templates, and even widgets. This plugin also allows you to customize the sliders or grid, like show/hide product price, exclude out-of-stock products, show/hide add to cart button, responsiveness settings, etc. The most salutary feature of the plugin is the ability to create unlimited personalized sliders, carousels, grids for chosen products as well as for specific categories(Pro).
+
+== HERE’S WHAT USERS SAY ABOUT  WOOCOMMERCE PRODUCT CAROUSEL, SLIDER & GRID ULTIMATE ==
+
+>👨 __this app and the support are first class__
+
+>these guys were so helpful – i love the plugin and am using the free version; they still gave me support regardless 🙂
+- By @esolutionsni
+
+>💁 __FINALLY SOMETHING THAT WORKS!__
+
+>I just started using this and it’s beautiful! It works exactly how it should and did exactly what I needed. I tried 3 other plugins like this and it was terrible. Finally I found the solution!
+- By @jchretien
+
+>👨 __Very Functional Plugin for displaying products__
+
+>This plugin is an excellent addition to the Woocommerce product display. By allowing a Quick Look and a Favorites function it gives any site a professional look without all the programming. With the ability to utilize 15 different templates you can achieve just about any desired look in minutes. I purchased the multiple site license because I plan on using it on all my sites. My only suggestion is that it would be nice to be able to change and save the default settings to match personal tastes so you don’t have to change them with every new application. Other than that its a big bravo.
+- By @cavuapparel
 
 
-= Features of this plugin =
+= Features =
+*   100% Responsive and mobile-friendly.
 *   3 different themes for Carousel & Slider.
 *   3 different themes for Grid.
 *   Latest/Recent, Older and Featured products display.
-*   Unlimited products display.
-*   Unlimited Carousel, Slider and Grid.
+*   Display Unlimited products
+*   Create Unlimited Carousels, Sliders and Grids.
 *   Unique settings for each theme.
 *   Advanced Shortcode Generator.
 *   Advanced Settings Panel.
 *   Customize ribbon/badge
 *   Control number of products to display on desktop, tablet and mobile devices.
 *   Auto images resize and crop option.
-*   Image upscaling enable/disable.
 *   Autoplay control.
 *   Slide speed control.
-*   Mouse over stop option.
-*   Navigation arrows.
+*   Customize the Navigation option.
 *   Display/hide Product Title, Price, Star Ratings and Cart button.
-*   Navigational arrow color and background color change options.
 *   Product title font size, color, hover color change options.
 *   Price font size and color change options.
 *   Product Star Ratings size and color change options.
 *   Cart button background color, font size, font color change options.
 *   Quick View.
-*   100% Responsive and mobile friendly.
 *   Touch and Swipe enabled.
 *   Support all modern browsers.
 *   Very lightweight.
 *   Translation ready.
-*   Many more…
 
-More amazing features available in [__Pro version__](https://wpwax.com/product/woocommerce-product-carousel-slider-grid-ultimate-pro/).
-
-= Features of the Pro version =
+= FEATURES OF THE PRO VERSION =
 *   15 different themes for Carousel & Slider.
 *   15 different themes for Grid.
 *   Add to Wishlist.
-*   Show total wishlist to any page/post via shortcode.
-*   On sale, Best Selling, Top Rated and Featured products display.
-*   Display by ID, sku, tags, category, month and year.
+*   Show total wishlist on any page/post via shortcode.
+*   Display On sale, Best Selling, Top Rated, and Featured products.
+*   Display by ID, SKU, tags, category, month, and year.
 *   Display products randomly.
 *   Ready Ribbons & Custom Ribbons.
 *   Product excerpt and option to limit excerpt words.
@@ -68,12 +81,6 @@ More amazing features available in [__Pro version__](https://wpwax.com/product/w
 *   Scroll direction
 *   Marquee
 *   And many more…
-
-Live demo - Carousels/Slider: <https://demo.wpwax.com/plugin/woocommerce-product-carousel-slider-and-grid-ultimate-demo-slider/>
-
-Live demo - Grid: <https://demo.wpwax.com/plugin/woocommerce-product-carousel-slider-and-grid-ultimate-demo-grid/>
-
-Widget Screenshots: <https://demo.wpwax.com/plugin/woocommerce-product-carousel-slider-and-grid-ultimate-demo-widget/>
 
 
 == Installation ==
