@@ -202,7 +202,7 @@ class wcpcsu_Shortcode
                 $aazz_thumb = wp_get_attachment_image_src( get_post_thumbnail_id(get_the_ID()), 'large' );
                 $wpcsu_img = $aazz_thumb['0'];
             }
-            $wpcsu_img  = ! empty( $wpcsu_img ) ? $wpcsu_img : wc_placeholder_img_src();  
+            $wpcsu_img  = ! empty( $wpcsu_img ) ? $wpcsu_img : wc_placeholder_img_src();
             $sale_price = $product->get_sale_price();
             $ratings    = (($product->get_average_rating()/5)*100);
 

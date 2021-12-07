@@ -1,6 +1,6 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) die( 'Are you cheating??? Accessing this file directly is forbidden.' );
-$stop_hover             = ! empty( $stop_hover ) ? $stop_hover : 'no';
+$stop_hover             = ! empty( $stop_hover ) ? $stop_hover : 'false';
 $A_play                 = ! empty( $A_play ) ? $A_play : 'yes';
 $pagination             = ! empty( $pagination ) ? $pagination : 'yes';
 $scrol_direction        = ! empty( $scrol_direction ) ? $scrol_direction : 'left';
