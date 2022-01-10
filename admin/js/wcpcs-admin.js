@@ -172,6 +172,7 @@ jQuery(document).ready(function ($) {
 
     //product type
     $('#random_products_bycategory, #wcpscup_products_bycategory, #top_rated_products_bycategory, .specific-categories.top_rated, #wcpscup_products_bycategory1, #wcpscup_products_bycategory2, #wcpscup_products_bycategory3, #wcpscup_products_bycategory4, #wcpscup_products_bycategory5, #wcpscup_products_byid, #wcpscup_prodcuts_bysku, #wcpscup_products_bytag, #wcpscup_prodcuts_from_year, #wcpscup_prodcuts_from_month, #wcpscup_prodcuts_from_month_year, .specific-categories.latest, .specific-categories.older, .specific-categories.onsale, .specific-categories.bestselling, .specific-categories.featured, .specific-categories.random, #custom_ribbon, #prodcuts_from_days_ago, .specific-days').hide();
+    $('#category-sorting').hide();
 
     $('input[type="radio"]').click(function() {
         if($(this).attr('id') == 'wcpscup_products_type') {
@@ -284,9 +285,11 @@ jQuery(document).ready(function ($) {
     $('input[type="radio"]').click(function() {
         if($(this).attr('id') == 'wcpscup_products_type10') {
             $('#wcpscup_products_bycategory5').show();
+            $('#category-sorting').show();
         }
         else {
             $('#wcpscup_products_bycategory5').hide();
+            $('#category-sorting').hide();
         }
     });
 
@@ -334,6 +337,10 @@ jQuery(document).ready(function ($) {
     if( $('input[id=wcpscup_products_type_days_ago]').is(':checked') ) {
         $('#prodcuts_from_days_ago').addClass('wcpscup_active');
     }
+    var product_type = $(".products_type:checked").val();
     
+    if( product_type == 'category' ) {
+        $('#category-sorting').show();
+    } 
 
 });

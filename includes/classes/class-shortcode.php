@@ -55,6 +55,8 @@ class wcpcsu_Shortcode
         $display_ratings         = ! empty( $display_ratings ) ? $display_ratings : 'yes';
         $quick_view              = ! empty( $quick_view ) ? $quick_view : 'yes';
 
+        $category_sorting           = ! empty( $category_sorting ) ? $category_sorting : 'latest';
+
         $header_position_class = '';
         if( 'middle' == $header_position ) {
             $header_position_class = '--middle';
@@ -298,16 +300,6 @@ class wcpcsu_Shortcode
                 )
             );
         }
-        /*// exclude the stock out products from  the query if the user has explicitly set the value to exclude stock out products from he query. and if the user did not set any value then also remove the out of stock products from the query by default. Because the behaviour of the old version was to exclude the stock out products by default.
-        if (empty($exclude_stock_out) || (!empty($exclude_stock_out) && 'yes' == $exclude_stock_out)) {
-            $common_args['meta_query'] = array(
-                array(
-                    'key' => '_stock_status',
-                    'value' => 'outofstock',
-                    'compare' => 'NOT IN'
-                )
-            );
-        }*/
 
         if(!empty($atts_cat)) {
             $atts_args = array(
@@ -390,7 +382,21 @@ class wcpcsu_Shortcode
         } elseif ($products_type == "category") {
             $category_args = array(
                 'product_cat' => !empty($products_bycategory) ? sanitize_text_field($products_bycategory) : '',
+                
             );
+            
+            if( 'latest' == $category_sorting) {
+                $sorting = array(
+                    'orderby'     => 'date',
+                    'order'       => 'asc'
+                );
+            } else {
+                $sorting = array(
+                    'orderby'     => 'rand',
+                );
+            }
+            $category_args = array_merge( $category_args, $sorting );
+
             $args = array_merge($common_args, $category_args);
         } elseif ($products_type == "productsbyid") {
             // convert the strings of products ids (eg. 99, 937, 90, 935, 87, 93, 930)  into an array of integers

@@ -7,6 +7,7 @@ $ribbon                     = ! empty( $ribbon ) ? $ribbon : 'discount';
 $header_position            = ! empty( $header_position ) ? $header_position : 'middle';
 $total_products_label       = ( ! empty( $layout ) && 'grid' == $layout ) ? __( "Products Per Page",WCPCSU_TEXTDOMAIN ) : __("Total Products to Display",WCPCSU_TEXTDOMAIN );
 $theme                      = ! empty( $theme ) ? $theme : 'theme_1';
+$category_sorting           = ! empty( $category_sorting ) ? $category_sorting : 'latest';
 $display_sale_ribbon        = ! empty( $display_sale_ribbon ) ? $display_sale_ribbon : 'no';
 $sale_ribbon_position       = ! empty( $sale_ribbon_position ) ? $sale_ribbon_position : 'top_left';
 $display_featured_ribbon    = ! empty( $display_featured_ribbon ) ? $display_featured_ribbon : 'no';
@@ -186,7 +187,7 @@ $products_type              = ! empty( $products_type ) ? $products_type : 'late
                     <ul class="cmb2-radio-list cmb2-list">
 
                         <li>
-                            <input type="radio" class="cmb2-option" name="wcpscu[products_type]"
+                            <input type="radio" class="cmb2-option products_type" name="wcpscu[products_type]"
                                 id="wcpscup_products_type" value="latest"
                                 <?php if( empty($products_type) || $products_type == "latest" )  {echo "checked"; } ?>>
                             <label
@@ -196,7 +197,7 @@ $products_type              = ! empty( $products_type ) ? $products_type : 'late
                             <p class="cmb2-metabox-description specific-categories latest">
                                 <?php esc_html_e('Category (leave it blank to display the latest products from all categories):', WCPCSU_TEXTDOMAIN); ?>
                             </p>
-                            <input type="text" class="cmb2-text-medium" name="wcpscu[latest_products_bycategory]"
+                            <input type="text" class="cmb2-text-medium products_type" name="wcpscu[latest_products_bycategory]"
                                 id="wcpscup_products_bycategory"
                                 value="<?php if(!empty($latest_products_bycategory)) { echo esc_attr($latest_products_bycategory); } ?>"
                                 placeholder="e.g. clothing, shoes, watches">
@@ -312,7 +313,7 @@ $products_type              = ! empty( $products_type ) ? $products_type : 'late
 
 
                         <li>
-                            <input type="radio" class="cmb2-option" name="wcpscu[products_type]"
+                            <input type="radio" class="cmb2-option products_type" name="wcpscu[products_type]"
                                 id="wcpscup_products_type10" value="category"
                                 <?php checked('category', $products_type); ?>>
                             <label
@@ -407,6 +408,20 @@ $products_type              = ! empty( $products_type ) ? $products_type : 'late
                     <p class="cmb2-metabox-description">
                         <?php esc_html_e('What type of products to display in the carousel slider', WCPCSU_TEXTDOMAIN); ?>
                     </p>
+                </div>
+            </div>
+
+            <div class="cmb-row cmb-type-radio" id="category-sorting">
+                <div class="cmb-th">
+                    <label for="lcsp_ap"><?php esc_html_e('Category Sorting', WCPCSU_TEXTDOMAIN); ?></label>
+                </div>
+                <div class="cmb-td">
+                    <div class="cmb-theme-wrapper">
+                        <select id="theme_" class="wcpscu_theme" name="wcpscu[category_sorting]">
+                            <option value="latest" <?php selected( $theme, 'latest' ); ?>>Latest Products</option>
+                            <option value="rand" <?php selected( $theme, 'rand' ); ?>>Random Products
+                        </select>
+                    </div>
                 </div>
             </div>
 
