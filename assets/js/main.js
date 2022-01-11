@@ -5,10 +5,7 @@
     Version: 1.0
 */
 (function ($) {
-    /* Style reset in buttons p tag */
-    document.querySelectorAll('.wpcu-button p.woocommerce, p.product').forEach((el, id) => {
-        el.setAttribute('style', 'none');
-    });
+
 
     /* Onload event */
     window.addEventListener('load', () => {
