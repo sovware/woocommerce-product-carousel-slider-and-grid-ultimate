@@ -167,7 +167,7 @@ class wcpcsu_Shortcode
         </div>
         <?php } ?>
 
-        <div class="wpcu-products <?php echo  'yes' == $marquee ? 'wpcu-carousel--marquee' : ''; ?> wpcu-<?php echo $theme; ?> wpcu-lazy-load <?php echo ( 'carousel' == $layout ) ? 'wpcu-carousel' : ''; ?>"
+        <div class="wpcu-products <?php echo  'yes' == $marquee ? 'wpcu-carousel--marquee' : ''; ?> wpcu-<?php echo $theme; ?> <?php echo ( 'carousel' == $layout ) ? 'wpcu-carousel' : ''; ?>"
         style="
             --wpcu-productTitleSize: <?php echo $title_font_size; ?>px;
             --wpcu-productTitleColor: <?php echo $title_font_color; ?>;
@@ -388,7 +388,7 @@ class wcpcsu_Shortcode
             if( 'latest' == $category_sorting) {
                 $sorting = array(
                     'orderby'     => 'date',
-                    'order'       => 'asc'
+                    'order'       => 'desc'
                 );
             } else {
                 $sorting = array(
