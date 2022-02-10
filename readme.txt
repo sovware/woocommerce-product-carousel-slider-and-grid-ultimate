@@ -15,9 +15,15 @@ The most intuitive solution to make your eCommerce site visually appealing. Crea
 
 Are you looking to attract more users and generate more revenue on your WooCommerce based site? WooCommerce Product Carousel, Slider & Grid Ultimate plugin allows you to create appealing product sliders, carousels, grids on your site or shop that can increase revenue & sales. Anyone with zero technical knowledge can easily make the best use of the plugin as it comes with tons of preloaded features and customization options.
 
-It has a vast array of use cases and can benefit WooCommerce shop owners in multiple ways. You can create an unlimited number of carousels, sliders, or grids for Featured Products, Older Products, Latest Products, etc. The Product Slider Carousel can demonstrate myriad items in a smooth and effective manner on any page. It is 100% responsive and works flawlessly on all devices. 
+[youtube https://youtube.com/watch?v=gTqz7b67bM8]
+
+It has a vast array of use cases and can benefit WooCommerce shop owners in multiple ways. You can create an unlimited number of carousels, sliders, or grids for Featured Products, Older Products, Latest Products, etc. The WooCommerce Product Carousel, Slider & Grid Ultimate can demonstrate myriad items in a smooth and effective manner on any page. It is 100% responsive and works flawlessly on all devices. 
 
 You can generate dynamic shortcodes and display product sliders in pages, posts, custom templates, and even widgets. This plugin also allows you to customize the sliders or grid, like show/hide product price, exclude out-of-stock products, show/hide add to cart button, responsiveness settings, etc. The most salutary feature of the plugin is the ability to create unlimited personalized sliders, carousels, grids for chosen products as well as for specific categories(Pro).
+
+Here is a quick tour of the WooCommerce Product Carousel, Slider & Grid Ultimate plugin to help you get started
+
+[youtube https://www.youtube.com/watch?v=ujxepniffss]
 
 == HERE’S WHAT USERS SAY ABOUT  WOOCOMMERCE PRODUCT CAROUSEL, SLIDER & GRID ULTIMATE ==
 
