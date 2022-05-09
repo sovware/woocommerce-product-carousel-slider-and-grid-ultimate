@@ -26,103 +26,103 @@ class wcpcsu_Shortcode
         $value = is_array( $data_array ) ? $data_array : array();
         extract( $value );
         $rand_id                 = rand();
-        $total_products          = ! empty( $total_products ) ? $total_products : 6;
-        $layout                  = ! empty( $layout ) ? $layout : 'carousel';
-        $products_type           = ! empty( $products_type ) ? $products_type : 'latest';
-        $img_crop                = ! empty( $img_crop ) ? $img_crop : 'yes';
-        $crop_image_width        = ! empty( $crop_image_width ) ? intval( $crop_image_width ) : 300;
-        $crop_image_height       = ! empty( $crop_image_height ) ? intval( $crop_image_height ) : 300;
-        $display_price           = ! empty( $display_price ) ? $display_price : 'yes';
+        $total_products          = ! empty( $total_products ) ? intval( esc_attr( $total_products ) ) : 6;
+        $layout                  = ! empty( $layout ) ? esc_attr( $layout ) : 'carousel';
+        $products_type           = ! empty( $products_type ) ? esc_attr( $products_type ) : 'latest';
+        $img_crop                = ! empty( $img_crop ) ? esc_attr( $img_crop ) : 'yes';
+        $crop_image_width        = ! empty( $crop_image_width ) ? intval( esc_attr( $crop_image_width ) ) : 300;
+        $crop_image_height       = ! empty( $crop_image_height ) ? intval( esc_attr( $crop_image_height ) ) : 300;
+        $display_price           = ! empty( $display_price ) ? esc_attr( $display_price ) : 'yes';
 
-        $display_cart            = ! empty( $display_cart ) ? $display_cart : 'yes';
-        $ribbon                  = ! empty( $ribbon ) ? $ribbon : 'discount';
-        $header_position         = ! empty( $header_position ) ? $header_position : 'middle';
-        $h_title_show            = ! empty( $h_title_show ) ? $h_title_show : 'no';
-        $header_font_size        = ! empty( $header_font_size ) ? $header_font_size : '24px';
-        $header_font_color       = ! empty( $header_font_color ) ? $header_font_color : '#303030';
-        $display_full_title      = ! empty( $display_full_title ) ? $display_full_title : 'no';
-        $g_column                = ! empty( $g_column ) ? intval( $g_column ) : 3;
-        $g_tablet                = ! empty( $g_tablet ) ? intval( $g_tablet ) : 2;
-        $g_mobile                = ! empty( $g_mobile ) ? intval( $g_mobile ) : 1;
-        $grid_pagination         = ! empty( $grid_pagination ) ? $grid_pagination : 'no';
-        $slide_time              = ! empty( $slide_time )  ? $slide_time : '2000' ;
+        $display_cart            = ! empty( $display_cart ) ? esc_attr( $display_cart ) : 'yes';
+        $ribbon                  = ! empty( $ribbon ) ? esc_attr( $ribbon ) : 'discount';
+        $header_position         = ! empty( $header_position ) ? esc_attr( $header_position ) : 'middle';
+        $h_title_show            = ! empty( $h_title_show ) ? esc_attr( $h_title_show ) : 'no';
+        $header_font_size        = ! empty( $header_font_size ) ? esc_attr( $header_font_size ) : '24px';
+        $header_font_color       = ! empty( $header_font_color ) ? esc_attr( $header_font_color ) : '#303030';
+        $display_full_title      = ! empty( $display_full_title ) ? esc_attr( $display_full_title ) : 'no';
+        $g_column                = ! empty( $g_column ) ? intval( esc_attr( $g_column ) ) : 3;
+        $g_tablet                = ! empty( $g_tablet ) ? intval( esc_attr( $g_tablet ) ) : 2;
+        $g_mobile                = ! empty( $g_mobile ) ? intval( esc_attr( $g_mobile ) ) : 1;
+        $grid_pagination         = ! empty( $grid_pagination ) ? esc_attr( $grid_pagination ) : 'no';
+        $slide_time              = ! empty( $slide_time )  ? esc_attr( $slide_time ) : '2000' ;
 
-        $display_title           = ! empty( $display_title ) ? $display_title : 'yes';
-        $display_cart            = ! empty( $display_cart ) ? $display_cart : 'yes';
-        $display_price           = ! empty( $display_price ) ? $display_price : 'yes';
-        $display_ratings         = ! empty( $display_ratings ) ? $display_ratings : 'yes';
-        $quick_view              = ! empty( $quick_view ) ? $quick_view : 'yes';
+        $display_title           = ! empty( $display_title ) ? esc_attr( $display_title ) : 'yes';
+        $display_cart            = ! empty( $display_cart ) ? esc_attr( $display_cart ) : 'yes';
+        $display_price           = ! empty( $display_price ) ? esc_attr( $display_price ) : 'yes';
+        $display_ratings         = ! empty( $display_ratings ) ? esc_attr( $display_ratings ) : 'yes';
+        $quick_view              = ! empty( $quick_view ) ? esc_attr( $quick_view ) : 'yes';
 
         $ribbon_args = array(
-            'display_sale_ribbon'        => ! empty( $display_sale_ribbon ) ? $display_sale_ribbon : 'no',
-            'sale_ribbon_text'           => ! empty( $sale_ribbon_text ) ? $sale_ribbon_text : '',
-            'sale_ribbon_position'       => ! empty( $sale_ribbon_position ) ? $sale_ribbon_position : 'top_left',
-            'display_featured_ribbon'    => ! empty( $display_featured_ribbon ) ? $display_featured_ribbon : 'no',
-            'feature_ribbon_text'        => ! empty( $feature_ribbon_text ) ? $feature_ribbon_text : '',
-            'featured_ribbon_position'   => ! empty( $featured_ribbon_position ) ? $featured_ribbon_position : 'top_right',
-            'display_sold_out_ribbon'    => ! empty( $display_sold_out_ribbon ) ? $display_sold_out_ribbon : 'no',
-            'sold_out_ribbon_text'       => ! empty( $sold_out_ribbon_text ) ? $sold_out_ribbon_text : '',
-            'sold_out_ribbon_position'   => ! empty( $sold_out_ribbon_position ) ? $sold_out_ribbon_position : 'bottom_left',
-            'display_discount_ribbon'    => ! empty( $display_discount_ribbon ) ? $display_discount_ribbon : 'no',
-            'discount_ribbon_position'   => ! empty( $discount_ribbon_position ) ? $discount_ribbon_position : 'bottom_right',
+            'display_sale_ribbon'        => ! empty( $display_sale_ribbon ) ? esc_attr( $display_sale_ribbon ) : 'no',
+            'sale_ribbon_text'           => ! empty( $sale_ribbon_text ) ? esc_attr( $sale_ribbon_text ) : '',
+            'sale_ribbon_position'       => ! empty( $sale_ribbon_position ) ? esc_attr( $sale_ribbon_position ) : 'top_left',
+            'display_featured_ribbon'    => ! empty( $display_featured_ribbon ) ? esc_attr( $display_featured_ribbon ) : 'no',
+            'feature_ribbon_text'        => ! empty( $feature_ribbon_text ) ? esc_attr( $feature_ribbon_text ) : '',
+            'featured_ribbon_position'   => ! empty( $featured_ribbon_position ) ? esc_attr( $featured_ribbon_position ) : 'top_right',
+            'display_sold_out_ribbon'    => ! empty( $display_sold_out_ribbon ) ? esc_attr( $display_sold_out_ribbon ) : 'no',
+            'sold_out_ribbon_text'       => ! empty( $sold_out_ribbon_text ) ? esc_attr( $sold_out_ribbon_text ) : '',
+            'sold_out_ribbon_position'   => ! empty( $sold_out_ribbon_position ) ? esc_attr( $sold_out_ribbon_position ) : 'bottom_left',
+            'display_discount_ribbon'    => ! empty( $display_discount_ribbon ) ? esc_attr( $display_discount_ribbon ) : 'no',
+            'discount_ribbon_position'   => ! empty( $discount_ribbon_position ) ? esc_attr( $discount_ribbon_position ) : 'bottom_right',
         );
 
-        $theme                          = ! empty( $theme ) ? $theme : 'theme_1';
-        $title_font_size                = ! empty( $title_font_size[$theme] ) ? $title_font_size[$theme] : '16';
-        $title_font_color               = ! empty( $title_font_color[$theme] ) ? $title_font_color[$theme] : '#363940';
-        $title_hover_font_color         = ! empty( $title_hover_font_color[$theme] ) ? $title_hover_font_color[$theme] : '#ff5500';
-        $price_font_size                = ! empty( $price_font_size[$theme] ) ? $price_font_size[$theme] : '14';
-        $price_font_color               = ! empty( $price_font_color[$theme] ) ? $price_font_color[$theme] : '#ff5500';
-        $ratings_size                   = ! empty( $ratings_size[$theme] ) ? $ratings_size[$theme] : '1em';
-        $ratings_color                  = ! empty( $ratings_color[$theme] ) ? $ratings_color[$theme] : '#FEB507';
-        $cart_font_color                = ! empty( $cart_font_color[$theme] ) ? $cart_font_color[$theme] : '#ffffff';
-        $cart_bg_color                  = ! empty( $cart_bg_color[$theme] ) ? $cart_bg_color[$theme] : '#ff5500';
-        $cart_button_hover_color        = ! empty( $cart_button_hover_color[$theme] ) ? $cart_button_hover_color[$theme] : '#9A9A9A';
-        $cart_button_hover_font_color   = ! empty( $cart_button_hover_font_color[$theme] ) ? $cart_button_hover_font_color[$theme] : '#ffffff';
-        $ribbon_bg_color                = ! empty( $ribbon_bg_color[$theme] ) ? $ribbon_bg_color[$theme] : '#A4C741';
-        $quick_view_icon_color          = ! empty( $quick_view_icon_color[$theme] ) ? $quick_view_icon_color[$theme] : '#ffffff';
-        $quick_view_icon_back_color     = ! empty( $quick_view_icon_back_color[$theme] ) ? $quick_view_icon_back_color[$theme] : '#ff5500';
+        $theme                          = ! empty( $theme ) ? esc_attr( $theme ) : 'theme_1';
+        $title_font_size                = ! empty( $title_font_size[$theme] ) ? esc_attr( $title_font_size[$theme] ) : '16';
+        $title_font_color               = ! empty( $title_font_color[$theme] ) ? esc_attr( $title_font_color[$theme] ) : '#363940';
+        $title_hover_font_color         = ! empty( $title_hover_font_color[$theme] ) ? esc_attr( $title_hover_font_color[$theme] ) : '#ff5500';
+        $price_font_size                = ! empty( $price_font_size[$theme] ) ? esc_attr( $price_font_size[$theme] ) : '14';
+        $price_font_color               = ! empty( $price_font_color[$theme] ) ? esc_attr( $price_font_color[$theme] ) : '#ff5500';
+        $ratings_size                   = ! empty( $ratings_size[$theme] ) ? esc_attr( $ratings_size[$theme] ) : '1em';
+        $ratings_color                  = ! empty( $ratings_color[$theme] ) ? esc_attr( $ratings_color[$theme] ) : '#FEB507';
+        $cart_font_color                = ! empty( $cart_font_color[$theme] ) ? esc_attr( $cart_font_color[$theme] ) : '#ffffff';
+        $cart_bg_color                  = ! empty( $cart_bg_color[$theme] ) ? esc_attr( $cart_bg_color[$theme] ) : '#ff5500';
+        $cart_button_hover_color        = ! empty( $cart_button_hover_color[$theme] ) ? esc_attr( $cart_button_hover_color[$theme] ) : '#9A9A9A';
+        $cart_button_hover_font_color   = ! empty( $cart_button_hover_font_color[$theme] ) ? esc_attr( $cart_button_hover_font_color[$theme] ) : '#ffffff';
+        $ribbon_bg_color                = ! empty( $ribbon_bg_color[$theme] ) ? esc_attr( $ribbon_bg_color[$theme] ) : '#A4C741';
+        $quick_view_icon_color          = ! empty( $quick_view_icon_color[$theme] ) ? esc_attr( $quick_view_icon_color[$theme] ) : '#ffffff';
+        $quick_view_icon_back_color     = ! empty( $quick_view_icon_back_color[$theme] ) ? esc_attr( $quick_view_icon_back_color[$theme] ) : '#ff5500';
 
         $paged                          =  wcpcsu_get_paged_num();
         $paged                          = ! empty( $paged ) ? $paged : '';
         $loop                           = $this->parse_query( $data_array );
 
         // carousel settings
-        $slide_speed                = ! empty( $slide_speed ) ? $slide_speed : '2000';
-        $A_play                     = ! empty( $A_play ) ? $A_play : 'yes';
-        $repeat_product             = ! empty( $repeat_product ) ? $repeat_product : 'yes';
-        $stop_hover                 = ! empty( $stop_hover ) ? $stop_hover : true;
-        $carousel_desktop_column    = ! empty( $c_desktop ) ? $c_desktop : 4;
-        $carousel_laptop_column     = ! empty( $c_desktop_small ) ? $c_desktop_small : 3;
-        $carousel_tablet_column     = ! empty( $c_tablet ) ? $c_tablet : 2;
-        $carousel_mobile_column     = ! empty( $c_mobile ) ? $c_mobile : 1;
+        $slide_speed                = ! empty( $slide_speed ) ? esc_attr( $slide_speed ) : '2000';
+        $A_play                     = ! empty( $A_play ) ? esc_attr( $A_play ) : 'yes';
+        $repeat_product             = ! empty( $repeat_product ) ? esc_attr( $repeat_product ) : 'yes';
+        $stop_hover                 = ! empty( $stop_hover ) ? esc_attr( $stop_hover ) : true;
+        $carousel_desktop_column    = ! empty( $c_desktop ) ? esc_attr( $c_desktop ) : 4;
+        $carousel_laptop_column     = ! empty( $c_desktop_small ) ? esc_attr( $c_desktop_small ) : 3;
+        $carousel_tablet_column     = ! empty( $c_tablet ) ? esc_attr( $c_tablet ) : 2;
+        $carousel_mobile_column     = ! empty( $c_mobile ) ? esc_attr( $c_mobile ) : 1;
 
         // carousel navigation settings
-        $nav_show                   = ! empty( $nav_show ) ? $nav_show : 'yes';
-        $nav_position               = ! empty( $nav_position ) ? $nav_position : 'middle';
-        $nav_arrow_color            = ! empty( $nav_arrow_color ) ? $nav_arrow_color : '#333';
-        $nav_back_color             = ! empty( $nav_back_color ) ? $nav_back_color : '#fff';
-        $nav_border_color           = ! empty( $nav_border_color ) ? $nav_border_color : '#e4e4ed';
-        $nav_arrow_hover_color      = ! empty( $nav_arrow_hover_color ) ? $nav_arrow_hover_color : '#fff';
-        $nav_back_hover_color       = ! empty( $nav_back_hover_color ) ? $nav_back_hover_color : '#ff5500';
-        $nav_border_hover           = ! empty( $nav_border_hover ) ? $nav_border_hover : '#ff5500';
+        $nav_show                   = ! empty( $nav_show ) ? esc_attr( $nav_show ) : 'yes';
+        $nav_position               = ! empty( $nav_position ) ? esc_attr( $nav_position ) : 'middle';
+        $nav_arrow_color            = ! empty( $nav_arrow_color ) ? esc_attr( $nav_arrow_color ) : '#333';
+        $nav_back_color             = ! empty( $nav_back_color ) ? esc_attr( $nav_back_color ) : '#fff';
+        $nav_border_color           = ! empty( $nav_border_color ) ? esc_attr( $nav_border_color ) : '#e4e4ed';
+        $nav_arrow_hover_color      = ! empty( $nav_arrow_hover_color ) ? esc_attr( $nav_arrow_hover_color ) : '#fff';
+        $nav_back_hover_color       = ! empty( $nav_back_hover_color ) ? esc_attr( $nav_back_hover_color ) : '#ff5500';
+        $nav_border_hover           = ! empty( $nav_border_hover ) ? esc_attr( $nav_border_hover ) : '#ff5500';
 
         // carousel pagination settings
-        $carousel_pagination        = ! empty( $carousel_pagination ) ? $carousel_pagination : 'no';
-        $dots_color                 = ! empty( $dots_color ) ? $dots_color : '#333';
-        $dots_active_color          = ! empty( $dots_active_color ) ? $dots_active_color : '#fff';
+        $carousel_pagination        = ! empty( $carousel_pagination ) ? esc_attr( $carousel_pagination ) : 'no';
+        $dots_color                 = ! empty( $dots_color ) ? esc_attr( $dots_color ) : '#333';
+        $dots_active_color          = ! empty( $dots_active_color ) ? esc_attr( $dots_active_color ) : '#fff';
         //grid pagination settings
-        $pagi_color                 = ! empty( $pagi_color ) ? $pagi_color : '#333';
-        $pagi_border_color          = ! empty( $pagi_border_color ) ? $pagi_border_color : '#e4e4e4';
-        $pagi_back_color            = ! empty( $pagi_back_color ) ? $pagi_back_color : '#fff';
+        $pagi_color                 = ! empty( $pagi_color ) ? esc_attr( $pagi_color ) : '#333';
+        $pagi_border_color          = ! empty( $pagi_border_color ) ? esc_attr( $pagi_border_color ) : '#e4e4e4';
+        $pagi_back_color            = ! empty( $pagi_back_color ) ? esc_attr( $pagi_back_color ) : '#fff';
 
-        $pagi_hover_color           = ! empty( $pagi_hover_color ) ? $pagi_hover_color : '#fff';
-        $pagi_hover_border_color    = ! empty( $pagi_hover_border_color ) ? $pagi_hover_border_color : '#ff5500';
-        $pagi_hover_back_color      = ! empty( $pagi_hover_back_color ) ? $pagi_hover_back_color : '#ff5500';
+        $pagi_hover_color           = ! empty( $pagi_hover_color ) ? esc_attr( $pagi_hover_color ) : '#fff';
+        $pagi_hover_border_color    = ! empty( $pagi_hover_border_color ) ? esc_attr( $pagi_hover_border_color ) : '#ff5500';
+        $pagi_hover_back_color      = ! empty( $pagi_hover_back_color ) ? esc_attr( $pagi_hover_back_color ) : '#ff5500';
 
-        $pagi_active_color          = ! empty( $pagi_active_color ) ? $pagi_active_color : '#fff';
-        $pagi_active_border_color   = ! empty( $pagi_active_border_color ) ? $pagi_active_border_color : '#ff5500';
-        $pagi_active_back_color     = ! empty( $pagi_active_back_color ) ? $pagi_active_back_color : '#ff5500';
+        $pagi_active_color          = ! empty( $pagi_active_color ) ? esc_attr( $pagi_active_color ) : '#fff';
+        $pagi_active_border_color   = ! empty( $pagi_active_border_color ) ? esc_attr( $pagi_active_border_color ) : '#ff5500';
+        $pagi_active_back_color     = ! empty( $pagi_active_back_color ) ? esc_attr( $pagi_active_back_color ) : '#ff5500';
 
         $header_class = '';
 

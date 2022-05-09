@@ -1,9 +1,9 @@
 <?php
 /**
-Plugin Name: WooCommerce Product Carousel, Slider and Grid Ultimate
+Plugin Name: Product Carousel Slider & Grid Ultimate for WooCommerce
 Plugin URI:  https://wpwax.com/product/woocommerce-product-carousel-slider-grid-ultimate-pro
 Description: It is a fully responsive and mobile friendly WooCommerce Product Carousel, Slider and Grid plugin which comes with lots of features.
-Version:     1.8.6
+Version:     1.8.7
 Author:      wpWax
 Author URI:  https://wpwax.com
 License:     GPL2
@@ -11,7 +11,7 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Domain Path: /languages/
 Text Domain: woo-product-carousel-slider-and-grid-ultimate
 WC requires at least: 3.0
-WC tested up to: 6.1
+WC tested up to: 6.4
  */
 defined('ABSPATH') || die('Direct access is not allow');
 
@@ -67,7 +67,6 @@ if( ! in_array('woocommerce-product-carousel-slider-grid-ultimate-pro/main.php',
                 //if woocmmerce plugin not activate
                 if ( !in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
                     add_action( 'admin_notices', array(self::$instance, 'WCPCSU_admin_notice') );
-
                 }
                 self::$instance->adl_constants();
                 add_action('plugin_loaded',array( self::$instance,'wcpcsu_load_textdomain' ) );
@@ -142,8 +141,7 @@ if( ! in_array('woocommerce-product-carousel-slider-grid-ultimate-pro/main.php',
          * @since 1.0.0
          * @return void
          */
-        public function wcpcsu_include(){
-
+        public function wcpcsu_include() {
             require_once WCPCSU_INC_DIR . 'helper-functions.php';
             wpcsu_load_dependencies( 'all', WCPCSU_INC_DIR . 'classes/' );
         }
