@@ -42,12 +42,12 @@ class Wcpcsu_Meta_Box
 
 
         // save the meta data if it is our post type lcg_mainpost post type
-        if (!empty($_POST['post_type']) && (WCPCSU_CUSTOM_POST_TYPE == $_POST['post_type'])) {
+        if ( ! empty( $_POST['post_type'] ) && ( WCPCSU_CUSTOM_POST_TYPE == $_POST['post_type'] ) ) {
 
-            $wcpscu = !empty($_POST['wcpscu']) ? Woocmmerce_Product_carousel_slider_ultimate::serialize_and_encode24($_POST['wcpscu']) : Woocmmerce_Product_carousel_slider_ultimate::serialize_and_encode24(array());
+            $wcpscu = ! empty( $_POST['wcpscu'] ) ? Woocmmerce_Product_carousel_slider_ultimate::serialize_and_encode24( wcpcsu_sanitize_array( $_POST['wcpscu'] ) ) : Woocmmerce_Product_carousel_slider_ultimate::serialize_and_encode24( array() );
 
             //save the meta value
-            update_post_meta($post_id, "wcpscu", $wcpscu);
+            update_post_meta( $post_id, "wcpscu", $wcpscu );
 
         }
     }
