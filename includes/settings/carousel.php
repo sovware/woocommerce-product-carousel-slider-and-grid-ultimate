@@ -1,13 +1,13 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) die( 'Are you cheating??? Accessing this file directly is forbidden.' );
-$stop_hover             = ! empty( $stop_hover ) ? $stop_hover : 'false';
-$A_play                 = ! empty( $A_play ) ? $A_play : 'yes';
-$pagination             = ! empty( $pagination ) ? $pagination : 'yes';
-$scrol_direction        = ! empty( $scrol_direction ) ? $scrol_direction : 'left';
-$scrool                 = ! empty( $scrool ) ? $scrool : 'false';
-$nav_show               = ! empty( $nav_show ) ? $nav_show : 'yes';
-$nav_position           = ! empty( $nav_position ) ? $nav_position : 'bottom-right';
-$carousel_pagination    = ! empty( $carousel_pagination ) ? $carousel_pagination : 'no';
+$stop_hover             = ! empty( $stop_hover ) ? esc_attr( $stop_hover ) : 'false';
+$A_play                 = ! empty( $A_play ) ? esc_attr( $A_play ) : 'yes';
+$pagination             = ! empty( $pagination ) ? esc_attr( $pagination ) : 'yes';
+$scrol_direction        = ! empty( $scrol_direction ) ? esc_attr( $scrol_direction ) : 'left';
+$scrool                 = ! empty( $scrool ) ? esc_attr( $scrool ) : 'false';
+$nav_show               = ! empty( $nav_show ) ? esc_attr( $nav_show ) : 'yes';
+$nav_position           = ! empty( $nav_position ) ? esc_attr( $nav_position ) : 'bottom-right';
+$carousel_pagination    = ! empty( $carousel_pagination ) ? esc_attr( $carousel_pagination ) : 'no';
 ?>
 <!--TAB 2  Carousel setting -->
 <div id="lcsp-tab-2" class="lcsp-tab-content">

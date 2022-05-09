@@ -1,20 +1,20 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) die( 'Are you cheating??? Accessing this file directly is forbidden.' );
-$layout                     = ! empty( $layout ) ? $layout : 'carousel';
-$h_title_show               = ! empty( $h_title_show ) ? $h_title_show : 'no';
-$display_full_title         = ! empty( $display_full_title ) ? $display_full_title : 'yes';
-$ribbon                     = ! empty( $ribbon ) ? $ribbon : 'discount';
-$header_position            = ! empty( $header_position ) ? $header_position : 'middle';
+$layout                     = ! empty( $layout ) ? esc_attr( $layout ) : 'carousel';
+$h_title_show               = ! empty( $h_title_show ) ? esc_attr( $h_title_show ) : 'no';
+$display_full_title         = ! empty( $display_full_title ) ? esc_attr( $display_full_title ) : 'yes';
+$ribbon                     = ! empty( $ribbon ) ? esc_attr( $ribbon ) : 'discount';
+$header_position            = ! empty( $header_position ) ? esc_attr( $header_position ) : 'middle';
 $total_products_label       = ( ! empty( $layout ) && 'grid' == $layout ) ? __( "Products Per Page",WCPCSU_TEXTDOMAIN ) : __("Total Products to Display",WCPCSU_TEXTDOMAIN );
-$theme                      = ! empty( $theme ) ? $theme : 'theme_1';
-$display_sale_ribbon        = ! empty( $display_sale_ribbon ) ? $display_sale_ribbon : 'no';
-$sale_ribbon_position       = ! empty( $sale_ribbon_position ) ? $sale_ribbon_position : 'top_left';
-$display_featured_ribbon    = ! empty( $display_featured_ribbon ) ? $display_featured_ribbon : 'no';
-$featured_ribbon_position   = ! empty( $featured_ribbon_position ) ? $featured_ribbon_position : 'top_right';
-$display_sold_out_ribbon    = ! empty( $display_sold_out_ribbon ) ? $display_sold_out_ribbon : 'no';
-$sold_out_ribbon_position   = ! empty( $sold_out_ribbon_position ) ? $sold_out_ribbon_position : 'bottom_left';
-$display_discount_ribbon    = ! empty( $display_discount_ribbon ) ? $display_discount_ribbon : 'no';
-$discount_ribbon_position   = ! empty( $discount_ribbon_position ) ? $discount_ribbon_position : 'bottom_right';
+$theme                      = ! empty( $theme ) ? esc_attr( $theme ) : 'theme_1';
+$display_sale_ribbon        = ! empty( $display_sale_ribbon ) ? esc_attr( $display_sale_ribbon ) : 'no';
+$sale_ribbon_position       = ! empty( $sale_ribbon_position ) ? esc_attr( $sale_ribbon_position ) : 'top_left';
+$display_featured_ribbon    = ! empty( $display_featured_ribbon ) ? esc_attr( $display_featured_ribbon ) : 'no';
+$featured_ribbon_position   = ! empty( $featured_ribbon_position ) ? esc_attr( $featured_ribbon_position ) : 'top_right';
+$display_sold_out_ribbon    = ! empty( $display_sold_out_ribbon ) ? esc_attr( $display_sold_out_ribbon ) : 'no';
+$sold_out_ribbon_position   = ! empty( $sold_out_ribbon_position ) ? esc_attr( $sold_out_ribbon_position ) : 'bottom_left';
+$display_discount_ribbon    = ! empty( $display_discount_ribbon ) ? esc_attr( $display_discount_ribbon ) : 'no';
+$discount_ribbon_position   = ! empty( $discount_ribbon_position ) ? esc_attr( $discount_ribbon_position ) : 'bottom_right';
 ?>
 
 <div id="lcsp-tab-5" class="lcsp-tab-content">

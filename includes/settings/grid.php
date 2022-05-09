@@ -1,8 +1,8 @@
 <?php
-$grid_pagination          = !empty($grid_pagination) ? $grid_pagination : 'no';
-$g_column                 = !empty($g_column) ? $g_column : '4';
-$g_tablet                 = !empty($g_tablet) ? $g_tablet : '2';
-$g_mobile                 = !empty($g_mobile) ? $g_mobile : '1';
+$grid_pagination          = !empty($grid_pagination) ? esc_attr( $grid_pagination ) : 'no';
+$g_column                 = !empty($g_column) ? esc_attr( $g_column ) : '4';
+$g_tablet                 = !empty($g_tablet) ? esc_attr( $g_tablet ) : '2';
+$g_mobile                 = !empty($g_mobile) ? esc_attr( $g_mobile ) : '1';
 ?>
 <!--TAB 3  Grid setting -->
 <div id="lcsp-tab-3" class="lcsp-tab-content">

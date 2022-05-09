@@ -24,7 +24,7 @@
                         <label for="wcpscu_carousel_title_font_color"><?php esc_html_e('Font Color', WCPCSU_TEXTDOMAIN); ?></label>
                         <input type="text" class="cmb2-text-small cpa-color-picker" name="wcpscu[header_font_color]"
                             id="wcpscu_carousel_title_font_color"
-                            value="<?php if(!empty($header_font_color)) { echo $header_font_color; } else { echo "#303030"; } ?>">
+                            value="<?php if(!empty($header_font_color)) { echo esc_attr( $header_font_color ); } else { echo "#303030"; } ?>">
                     </div>
                 </div>
             </div>
