@@ -116,6 +116,10 @@ Post Grid and Carousel Ultimate plugin is very easy to use. Just follow the foll
 12. Backend: Style Settings
 
 == Changelog ==
+= 1.8.7 =
+* Fix: Security issue
+* Fix: Naming issue
+* Add: WooCommerce 6.1 compatibility
 = 1.8.6 =
 * Add: WordPress 5.9 compatibility
 * Add: WooCommerce 6.1 compatibility
