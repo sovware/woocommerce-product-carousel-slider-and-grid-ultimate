@@ -229,7 +229,7 @@ class wcpcsu_Shortcode
 
         }else{
 
-            _e('No products found', WCPCSU_TEXTDOMAIN);
+            _e('No products found', 'woocommerce-product-carousel-slider-and-grid-ultimate');
         }
 
         return ob_get_clean();
