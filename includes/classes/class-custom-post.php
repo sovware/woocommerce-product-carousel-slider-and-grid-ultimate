@@ -13,25 +13,25 @@ class Wcpcsu_Custom_Post
     public function wcpcsu_custom_post ()
     {
         $labels = array(
-            'name'               => _x( 'Woocommerce Product Ultimate', WCPCSU_TEXTDOMAIN ),
-            'singular_name'      => _x( 'Woocommerce Product Ultimate', WCPCSU_TEXTDOMAIN ),
-            'menu_name'          => _x( 'Woocommerce Product Ultimate', WCPCSU_TEXTDOMAIN ),
-            'name_admin_bar'     => _x( 'Woocommerce Product Ultimate', WCPCSU_TEXTDOMAIN ),
-            'add_new'            => _x( 'Add New', WCPCSU_TEXTDOMAIN ),
-            'add_new_item'       => __( 'Add New', WCPCSU_TEXTDOMAIN ),
-            'new_item'           => __( 'Add New', WCPCSU_TEXTDOMAIN ),
-            'edit_item'          => __( 'Edit Woocommerce Product Grid Carousel Slider Ultimate', WCPCSU_TEXTDOMAIN ),
-            'view_item'          => __( 'View Woocommerce Product Grid Carousel Slider Ultimate', WCPCSU_TEXTDOMAIN ),
-            'all_items'          => __( 'All Woocommerce Product Ultimate', WCPCSU_TEXTDOMAIN ),
-            'search_items'       => __( 'Search Woocommerce Product Grid Carousel Slider Ultimate', WCPCSU_TEXTDOMAIN ),
-            'parent_item_colon'  => __( 'Parent Woocommerce Product Grid Carousel Slider Ultimate:', WCPCSU_TEXTDOMAIN ),
-            'not_found'          => __( 'No Woocommerce Product Grid Carousel Slider Ultimate found.', WCPCSU_TEXTDOMAIN ),
-            'not_found_in_trash' => __( 'No Woocommerce Product Grid Carousel Slider Ultimate found in Trash.', WCPCSU_TEXTDOMAIN )
+            'name'               => _x( 'Woocommerce Product Ultimate', 'woocommerce-product-carousel-slider-and-grid-ultimate' ),
+            'singular_name'      => _x( 'Woocommerce Product Ultimate', 'woocommerce-product-carousel-slider-and-grid-ultimate' ),
+            'menu_name'          => _x( 'Woocommerce Product Ultimate', 'woocommerce-product-carousel-slider-and-grid-ultimate' ),
+            'name_admin_bar'     => _x( 'Woocommerce Product Ultimate', 'woocommerce-product-carousel-slider-and-grid-ultimate' ),
+            'add_new'            => _x( 'Add New', 'woocommerce-product-carousel-slider-and-grid-ultimate' ),
+            'add_new_item'       => __( 'Add New', 'woocommerce-product-carousel-slider-and-grid-ultimate' ),
+            'new_item'           => __( 'Add New', 'woocommerce-product-carousel-slider-and-grid-ultimate' ),
+            'edit_item'          => __( 'Edit Woocommerce Product Grid Carousel Slider Ultimate', 'woocommerce-product-carousel-slider-and-grid-ultimate' ),
+            'view_item'          => __( 'View Woocommerce Product Grid Carousel Slider Ultimate', 'woocommerce-product-carousel-slider-and-grid-ultimate' ),
+            'all_items'          => __( 'All Woocommerce Product Ultimate', 'woocommerce-product-carousel-slider-and-grid-ultimate' ),
+            'search_items'       => __( 'Search Woocommerce Product Grid Carousel Slider Ultimate', 'woocommerce-product-carousel-slider-and-grid-ultimate' ),
+            'parent_item_colon'  => __( 'Parent Woocommerce Product Grid Carousel Slider Ultimate:', 'woocommerce-product-carousel-slider-and-grid-ultimate' ),
+            'not_found'          => __( 'No Woocommerce Product Grid Carousel Slider Ultimate found.', 'woocommerce-product-carousel-slider-and-grid-ultimate' ),
+            'not_found_in_trash' => __( 'No Woocommerce Product Grid Carousel Slider Ultimate found in Trash.', 'woocommerce-product-carousel-slider-and-grid-ultimate' )
         );
 
         $args = array(
             'labels'             => $labels,
-            'description'        => __( 'Description.', WCPCSU_TEXTDOMAIN ),
+            'description'        => __( 'Description.', 'woocommerce-product-carousel-slider-and-grid-ultimate' ),
             'public'             => true,
             'publicly_queryable' => true,
             'show_ui'            => true,
@@ -53,10 +53,10 @@ class Wcpcsu_Custom_Post
     public function wcpcsu_post_columns ($columns) {
         $columns = array();
         $columns['cb']   = '<input type="checkbox" />';
-        $columns['title']   = esc_html__('All Titles', WCPCSU_TEXTDOMAIN);
-        $columns['wpcsp_shortcode_col']   = esc_html__('All Shortcodes', WCPCSU_TEXTDOMAIN);
-        //$columns['slider_id']   = esc_html__('Carousel ID # (helpful for widget) ', WCPCSU_TEXTDOMAIN); //uncomment when widgets added
-        $columns['date']   = esc_html__('Created at', WCPCSU_TEXTDOMAIN);
+        $columns['title']   = esc_html__('All Titles', 'woocommerce-product-carousel-slider-and-grid-ultimate');
+        $columns['wpcsp_shortcode_col']   = esc_html__('All Shortcodes', 'woocommerce-product-carousel-slider-and-grid-ultimate');
+        //$columns['slider_id']   = esc_html__('Carousel ID # (helpful for widget) ', 'woocommerce-product-carousel-slider-and-grid-ultimate'); //uncomment when widgets added
+        $columns['date']   = esc_html__('Created at', 'woocommerce-product-carousel-slider-and-grid-ultimate');
         return $columns;
     }
 

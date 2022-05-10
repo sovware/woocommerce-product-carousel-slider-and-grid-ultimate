@@ -14,7 +14,7 @@ class Wcpcsu_Meta_Box
     public function wcpcsu_meta_box ()
     {
         add_meta_box('wcpcsu_meta_box',
-            __('Settings & Shortcode Generator', WCPCSU_TEXTDOMAIN),
+            __('Settings & Shortcode Generator', 'woocommerce-product-carousel-slider-and-grid-ultimate'),
             array($this, 'wcpcsu_meta_box_input'),
             WCPCSU_CUSTOM_POST_TYPE,
             'normal'

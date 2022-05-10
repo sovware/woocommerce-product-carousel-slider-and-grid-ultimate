@@ -119,7 +119,7 @@ if( ! in_array('woocommerce-product-carousel-slider-grid-ultimate-pro/main.php',
         }
 
         public function upgrade_to_pro () {
-            add_submenu_page( 'edit.php?post_type=wcpcsu-custom-post', esc_html__( 'Support', WCPCSU_TEXTDOMAIN ), esc_html__( 'Usage & Support', WCPCSU_TEXTDOMAIN ), 'manage_options', 'support', array( self::$instance, 'support_view' ) );
+            add_submenu_page( 'edit.php?post_type=wcpcsu-custom-post', esc_html__( 'Support', 'woocommerce-product-carousel-slider-and-grid-ultimate' ), esc_html__( 'Usage & Support', 'woocommerce-product-carousel-slider-and-grid-ultimate' ), 'manage_options', 'support', array( self::$instance, 'support_view' ) );
         }
 
         public function support_view () {
@@ -131,7 +131,7 @@ if( ! in_array('woocommerce-product-carousel-slider-grid-ultimate-pro/main.php',
          */
         public function wcpcsu_load_textdomain()
         {
-            load_plugin_textdomain( WCPCSU_TEXTDOMAIN, false, WCPCSU_LANG_DIR );
+            load_plugin_textdomain( 'woocommerce-product-carousel-slider-and-grid-ultimate', false, WCPCSU_LANG_DIR );
         }
 
         /**
@@ -150,7 +150,7 @@ if( ! in_array('woocommerce-product-carousel-slider-grid-ultimate-pro/main.php',
             <div class="error">
                 <p>
                     <?php
-                    printf('%s <strong>%s</strong>', esc_html__('WooCommerce plugin is not activated. Please install and activate it to use', WCPCSU_TEXTDOMAIN), esc_html__('WooCommerce Product Carousel Slider Ultimate Plugin', WCPCSU_TEXTDOMAIN) );
+                    printf('%s <strong>%s</strong>', esc_html__('WooCommerce plugin is not activated. Please install and activate it to use', 'woocommerce-product-carousel-slider-and-grid-ultimate'), esc_html__('WooCommerce Product Carousel Slider Ultimate Plugin', 'woocommerce-product-carousel-slider-and-grid-ultimate') );
                     ?>
                 </p>
             </div>

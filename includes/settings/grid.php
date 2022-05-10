@@ -12,7 +12,7 @@ $g_mobile                 = !empty($g_mobile) ? esc_attr( $g_mobile ) : '1';
             <!--Select Column for desktop-->
             <div class="cmb-row cmb-type-radio">
                 <div class="cmb-th">
-                    <label for="lcsp_ap"><?php esc_html_e('Select Columns', WCPCSU_TEXTDOMAIN); ?></label>
+                    <label for="lcsp_ap"><?php esc_html_e('Select Columns', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?></label>
                 </div>
                 <div class="cmb-td">
                     <select id="g_theme" name="wcpscu[g_column]">
@@ -27,7 +27,7 @@ $g_mobile                 = !empty($g_mobile) ? esc_attr( $g_mobile ) : '1';
             <!--Select Column for Tablet-->
             <div class="cmb-row cmb-type-radio">
                 <div class="cmb-th">
-                    <label for="lcsp_ap"><?php esc_html_e('Select Columns for Tablet', WCPCSU_TEXTDOMAIN); ?></label>
+                    <label for="lcsp_ap"><?php esc_html_e('Select Columns for Tablet', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?></label>
                 </div>
                 <div class="cmb-td">
                     <select id="g_theme" name="wcpscu[g_tablet]">
@@ -42,7 +42,7 @@ $g_mobile                 = !empty($g_mobile) ? esc_attr( $g_mobile ) : '1';
             <!--Select Column for Mobile-->
             <div class="cmb-row cmb-type-radio">
                 <div class="cmb-th">
-                    <label for="lcsp_ap"><?php esc_html_e('Select Columns for Mobile', WCPCSU_TEXTDOMAIN); ?></label>
+                    <label for="lcsp_ap"><?php esc_html_e('Select Columns for Mobile', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?></label>
                 </div>
                 <div class="cmb-td">
                     <select id="g_theme" name="wcpscu[g_mobile]">
@@ -57,7 +57,7 @@ $g_mobile                 = !empty($g_mobile) ? esc_attr( $g_mobile ) : '1';
             <!--Pagination-->
             <div class="cmb-row cmb-type-radio">
                 <div class="cmb-th">
-                    <label for="lcsp_ap"><?php esc_html_e('Display Pagination', WCPCSU_TEXTDOMAIN); ?></label>
+                    <label for="lcsp_ap"><?php esc_html_e('Display Pagination', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?></label>
                 </div>
                 <div class="cmb-td">
                     <ul class="cmb2-radio-list cmb2-list">
@@ -66,14 +66,14 @@ $g_mobile                 = !empty($g_mobile) ? esc_attr( $g_mobile ) : '1';
                                    name="wcpscu[grid_pagination]"
                                    id="grid_pagination"
                                    value="yes" <?php checked('yes', $grid_pagination, true); ?>>
-                            <label for="grid_pagination"><?php esc_html_e('Yes', WCPCSU_TEXTDOMAIN); ?></label>
+                            <label for="grid_pagination"><?php esc_html_e('Yes', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?></label>
                         </li>
                         <li>
                             <input type="radio" class="cmb2-option"
                                    name="wcpscu[grid_pagination]"
                                    id="grid_pagination2"
                                    value="no" <?php checked('no', $grid_pagination, true); ?>>
-                            <label for="grid_pagination2"><?php esc_html_e('No', WCPCSU_TEXTDOMAIN); ?></label>
+                            <label for="grid_pagination2"><?php esc_html_e('No', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?></label>
                         </li>
                     </ul>
                 </div>
@@ -90,63 +90,63 @@ $g_mobile                 = !empty($g_mobile) ? esc_attr( $g_mobile ) : '1';
                     <div class="cmb-pagination">
                         <div class="cmb-pagination-item">
                             <label for="wcpscu[pagi_color]">
-                                <?php esc_html_e('Pagination Color', WCPCSU_TEXTDOMAIN); ?>
+                                <?php esc_html_e('Pagination Color', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?>
                             </label>
                             <input type="text" name="wcpscu[pagi_color]" class="cpa-color-picker"
                                 value="<?php echo ! empty( $pagi_color ) ? $pagi_color : "#333"; ?>" />
                         </div>
                         <div class="cmb-pagination-item">
                             <label for="wcpscu[pagi_border_color]">
-                                <?php esc_html_e('Pagination Border Color', WCPCSU_TEXTDOMAIN); ?>
+                                <?php esc_html_e('Pagination Border Color', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?>
                             </label>
                             <input type="text" name="wcpscu[pagi_border_color]" class="cpa-color-picker"
                                 value="<?php echo ! empty( $pagi_border_color ) ? $pagi_border_color : "#e4e4e4"; ?>" />
                         </div>
                         <div class="cmb-pagination-item">
                             <label for="wcpscu[pagi_back_color]">
-                                <?php esc_html_e('Pagination Background Color', WCPCSU_TEXTDOMAIN); ?>
+                                <?php esc_html_e('Pagination Background Color', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?>
                             </label>
                             <input type="text" name="wcpscu[pagi_back_color]" class="cpa-color-picker"
                                 value="<?php echo ! empty( $pagi_back_color ) ? $pagi_back_color : "#fff"; ?>" />
                         </div>
                         <div class="cmb-pagination-item">
                             <label for="wcpscu[pagi_hover_color]">
-                                <?php esc_html_e('Pagination Hover Color', WCPCSU_TEXTDOMAIN); ?>
+                                <?php esc_html_e('Pagination Hover Color', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?>
                             </label>
                             <input type="text" name="wcpscu[pagi_hover_color]" class="cpa-color-picker"
                                 value="<?php echo ! empty( $pagi_hover_color ) ? $pagi_hover_color : "#fff"; ?>" />
                         </div>
                         <div class="cmb-pagination-item">
                             <label for="wcpscu[pagi_hover_border_color]">
-                                <?php esc_html_e('Pagination Hover Border Color', WCPCSU_TEXTDOMAIN); ?>
+                                <?php esc_html_e('Pagination Hover Border Color', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?>
                             </label>
                             <input type="text" name="wcpscu[pagi_hover_border_color]" class="cpa-color-picker"
                                 value="<?php echo ! empty( $pagi_hover_border_color ) ? $pagi_hover_border_color : "#ff5500"; ?>" />
                         </div>
                         <div class="cmb-pagination-item">
                             <label for="wcpscu[pagi_hover_back_color]">
-                                <?php esc_html_e('Pagination Hover Background Color', WCPCSU_TEXTDOMAIN); ?>
+                                <?php esc_html_e('Pagination Hover Background Color', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?>
                             </label>
                             <input type="text" name="wcpscu[pagi_hover_back_color]" class="cpa-color-picker"
                                 value="<?php echo ! empty( $pagi_hover_back_color ) ? $pagi_hover_back_color : "#ff5500"; ?>" />
                         </div>
                         <div class="cmb-pagination-item">
                             <label for="wcpscu[pagi_active_color]">
-                                <?php esc_html_e('Pagination Active Color', WCPCSU_TEXTDOMAIN); ?>
+                                <?php esc_html_e('Pagination Active Color', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?>
                             </label>
                             <input type="text" name="wcpscu[pagi_active_color]" class="cpa-color-picker"
                                 value="<?php echo ! empty( $pagi_active_color ) ? $pagi_active_color : "#fff"; ?>" />
                         </div>
                         <div class="cmb-pagination-item">
                             <label for="wcpscu[pagi_active_border_color]">
-                                <?php esc_html_e('Pagination Active Border Color', WCPCSU_TEXTDOMAIN); ?>
+                                <?php esc_html_e('Pagination Active Border Color', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?>
                             </label>
                             <input type="text" name="wcpscu[pagi_active_border_color]" class="cpa-color-picker"
                                 value="<?php echo ! empty( $pagi_active_border_color ) ? $pagi_active_border_color : "#ff5500"; ?>" />
                         </div>
                         <div class="cmb-pagination-item">
                             <label for="wcpscu[pagi_active_back_color]">
-                                <?php esc_html_e('Pagination Active Background Color', WCPCSU_TEXTDOMAIN); ?>
+                                <?php esc_html_e('Pagination Active Background Color', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?>
                             </label>
                             <input type="text" name="wcpscu[pagi_active_back_color]" class="cpa-color-picker"
                                 value="<?php echo ! empty( $pagi_active_back_color ) ? $pagi_active_back_color : "#ff5500"; ?>" />
