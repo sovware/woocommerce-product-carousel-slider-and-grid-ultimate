@@ -219,7 +219,7 @@ if( ! in_array('woocommerce-product-carousel-slider-grid-ultimate-pro/main.php',
                 require_once WCPCSU_INC_DIR . 'appsero/src/Client.php';
             }
 
-            $client = new \Appsero\Client( 'a39a0a19-5945-4527-84b0-a13bcfac1faa', 'WooCommerce Product Carousel, Slider and Grid Ultimate', __FILE__ );
+            $client = new \Appsero\Client( 'a39a0a19-5945-4527-84b0-a13bcfac1faa', 'Product Carousel Slider & Grid Ultimate for WooCommerce', __FILE__ );
 
             // Active insights
             $client->insights()->init();
