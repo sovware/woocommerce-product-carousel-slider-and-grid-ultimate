@@ -68,7 +68,7 @@ class Wcpcsu_Custom_Post
                 break;
             case 'slider_id':
                 ?>
-                <strong><?= intval($post_id); ?></strong>
+                <strong><?php echo intval($post_id); ?></strong>
                 <?php
                 break;
 
