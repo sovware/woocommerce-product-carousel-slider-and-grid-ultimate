@@ -1,20 +1,20 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) die( 'Are you cheating??? Accessing this file directly is forbidden.' );
-$layout                     = ! empty( $layout ) ? esc_attr( $layout ) : 'carousel';
-$h_title_show               = ! empty( $h_title_show ) ? esc_attr( $h_title_show ) : 'no';
-$display_full_title         = ! empty( $display_full_title ) ? esc_attr( $display_full_title ) : 'yes';
-$ribbon                     = ! empty( $ribbon ) ? esc_attr( $ribbon ) : 'discount';
-$header_position            = ! empty( $header_position ) ? esc_attr( $header_position ) : 'middle';
+$layout                     = ! empty( $layout ) ? $layout : 'carousel';
+$h_title_show               = ! empty( $h_title_show ) ? $h_title_show : 'no';
+$display_full_title         = ! empty( $display_full_title ) ? $display_full_title : 'yes';
+$ribbon                     = ! empty( $ribbon ) ? $ribbon : 'discount';
+$header_position            = ! empty( $header_position ) ? $header_position : 'middle';
 $total_products_label       = ( ! empty( $layout ) && 'grid' == $layout ) ? __( "Products Per Page",'woocommerce-product-carousel-slider-and-grid-ultimate' ) : __("Total Products to Display",'woocommerce-product-carousel-slider-and-grid-ultimate' );
-$theme                      = ! empty( $theme ) ? esc_attr( $theme ) : 'theme_1';
-$display_sale_ribbon        = ! empty( $display_sale_ribbon ) ? esc_attr( $display_sale_ribbon ) : 'no';
-$sale_ribbon_position       = ! empty( $sale_ribbon_position ) ? esc_attr( $sale_ribbon_position ) : 'top_left';
-$display_featured_ribbon    = ! empty( $display_featured_ribbon ) ? esc_attr( $display_featured_ribbon ) : 'no';
-$featured_ribbon_position   = ! empty( $featured_ribbon_position ) ? esc_attr( $featured_ribbon_position ) : 'top_right';
-$display_sold_out_ribbon    = ! empty( $display_sold_out_ribbon ) ? esc_attr( $display_sold_out_ribbon ) : 'no';
-$sold_out_ribbon_position   = ! empty( $sold_out_ribbon_position ) ? esc_attr( $sold_out_ribbon_position ) : 'bottom_left';
-$display_discount_ribbon    = ! empty( $display_discount_ribbon ) ? esc_attr( $display_discount_ribbon ) : 'no';
-$discount_ribbon_position   = ! empty( $discount_ribbon_position ) ? esc_attr( $discount_ribbon_position ) : 'bottom_right';
+$theme                      = ! empty( $theme ) ? $theme : 'theme_1';
+$display_sale_ribbon        = ! empty( $display_sale_ribbon ) ? $display_sale_ribbon : 'no';
+$sale_ribbon_position       = ! empty( $sale_ribbon_position ) ? $sale_ribbon_position : 'top_left';
+$display_featured_ribbon    = ! empty( $display_featured_ribbon ) ? $display_featured_ribbon : 'no';
+$featured_ribbon_position   = ! empty( $featured_ribbon_position ) ? $featured_ribbon_position : 'top_right';
+$display_sold_out_ribbon    = ! empty( $display_sold_out_ribbon ) ? $display_sold_out_ribbon : 'no';
+$sold_out_ribbon_position   = ! empty( $sold_out_ribbon_position ) ? $sold_out_ribbon_position : 'bottom_left';
+$display_discount_ribbon    = ! empty( $display_discount_ribbon ) ? $display_discount_ribbon : 'no';
+$discount_ribbon_position   = ! empty( $discount_ribbon_position ) ? $discount_ribbon_position : 'bottom_right';
 ?>
 
 <div id="lcsp-tab-5" class="lcsp-tab-content">
@@ -31,7 +31,7 @@ $discount_ribbon_position   = ! empty( $discount_ribbon_position ) ? esc_attr( $
                             <div class="cmd-switch-item cmd-switch-carousel-img" data-value="carousel">
                                 <span class="cmd-switch-item-icon"><i class="fas fa-check-square"></i></span>
                                 <img src="<?php echo WCPCSU_URL .'admin/img/carousel.jpg' ?>" alt="carousel">
-                                <input type="radio" name="wcpscu[layout]" class="wcpscu_radio_layout wcpscu_carousel_layout" value="carousel" <?php checked( $layout, 'carousel' ); ?>>
+                                <input type="radio" name="wcpscu[layout]" class="wcpscu_radio_layout wcpscu_carousel_layout" value="carousel" <?php checked( esc_attr( $layout ), 'carousel' ); ?>>
                             </div>
                             <p><?php _e( 'Carousel', 'woocommerce-product-carousel-slider-and-grid-ultimate' );?></p>
                         </div>
@@ -39,7 +39,7 @@ $discount_ribbon_position   = ! empty( $discount_ribbon_position ) ? esc_attr( $
                             <div class=" cmd-switch-item cmd-switch-grid-img" data-value="grid">
                                 <span class="cmd-switch-item-icon"><i class="fas fa-check-square"></i></span>
                                 <img src="<?php echo WCPCSU_URL .'admin/img/grid.jpg' ?>" alt="grid">
-                                <input type="radio" name="wcpscu[layout]" class="wcpscu_radio_layout wcpscu_grid_layout" value="grid" <?php checked( $layout, 'grid' ); ?>>
+                                <input type="radio" name="wcpscu[layout]" class="wcpscu_radio_layout wcpscu_grid_layout" value="grid" <?php checked( esc_attr( $layout ), 'grid' ); ?>>
                             </div>
                             <p><?php _e( 'Grid', 'woocommerce-product-carousel-slider-and-grid-ultimate' );?></p>
                         </div>
@@ -54,10 +54,10 @@ $discount_ribbon_position   = ! empty( $discount_ribbon_position ) ? esc_attr( $
                 <div class="cmb-td">
                     <div class="cmb-theme-wrapper">
                         <select id="theme_" class="wcpscu_theme" name="wcpscu[theme]">
-                            <option value="theme_1" <?php selected( $theme, 'theme_1'); ?> >Theme-1</option>
-                            <option value="theme_2" <?php selected( $theme, 'theme_2'); ?>>Theme-2
+                            <option value="theme_1" <?php selected( esc_attr( $theme ), 'theme_1'); ?> >Theme-1</option>
+                            <option value="theme_2" <?php selected( esc_attr( $theme ), 'theme_2'); ?>>Theme-2
                             </option>
-                            <option value="theme_3" <?php selected( $theme, 'theme_3'); ?>>Theme-3
+                            <option value="theme_3" <?php selected( esc_attr( $theme ), 'theme_3'); ?>>Theme-3
                             </option>
                             <option disabled>Theme-4 (Pro)</option>
                             <option disabled>Theme-5 (Pro)</option>
@@ -81,11 +81,11 @@ $discount_ribbon_position   = ! empty( $discount_ribbon_position ) ? esc_attr( $
             <div class="cmb-row cmb-type-text-medium">
                 <div class="cmb-th">
                     <label for="wcpscu_total_products"
-                        id="wcpscu_total_pdt"><?php echo !empty($total_products_label) ? $total_products_label : __("Total Products to Display",'woocommerce-product-carousel-slider-and-grid-ultimate'); ?></label>
+                        id="wcpscu_total_pdt"><?php echo ! empty( $total_products_label ) ? esc_attr( $total_products_label ) : __("Total Products to Display",'woocommerce-product-carousel-slider-and-grid-ultimate'); ?></label>
                 </div>
                 <div class="cmb-td">
                     <input type="text" class="cmb2-text-small" name="wcpscu[total_products]" id="wcpscu_total_products"
-                        value="<?php echo !empty($total_products) ? intval($total_products) : 12; ?>">
+                        value="<?php echo ! empty( $total_products ) ? intval( esc_attr( $total_products ) ) : 12; ?>">
                     <p class="cmb2-metabox-description">
                         <?php esc_html_e('How many products to display in the carousel slider', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?>
                     </p>
@@ -102,14 +102,14 @@ $discount_ribbon_position   = ! empty( $discount_ribbon_position ) ? esc_attr( $
                     <ul class="cmb2-radio-list cmb2-list cmb2-radio-switch">
                         <li>
                             <input type="radio" class="cmb2-option cmb2-radio-switch1" name="wcpscu[h_title_show]"
-                                id="wcpscu[h_title_show]1" value="yes" <?php checked('yes', $h_title_show, true);  ?>>
+                                id="wcpscu[h_title_show]1" value="yes" <?php checked( 'yes', esc_attr( $h_title_show ), true );  ?>>
                             <label for="wcpscu[h_title_show]1">
                                 <?php esc_html_e('Yes', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?>
                             </label>
                         </li>
                         <li>
                             <input type="radio" class="cmb2-option cmb2-radio-switch2" name="wcpscu[h_title_show]"
-                                id="wcpscu[h_title_show]2" value="no" <?php checked('no', $h_title_show, true);  ?>>
+                                id="wcpscu[h_title_show]2" value="no" <?php checked( 'no', esc_attr( $h_title_show ), true );  ?>>
                             <label for="wcpscu[h_title_show]2">
                                 <?php esc_html_e('No', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?>
                             </label>
@@ -118,7 +118,7 @@ $discount_ribbon_position   = ! empty( $discount_ribbon_position ) ? esc_attr( $
                     <div class="cmb-td-medium">
                         <label for="lcsp_slider_title"><?php esc_html_e('Header Title', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?></label>
                         <input type="text" class="cmb2-text-medium" name="wcpscu[header_title]" id="lcsp_slider_title"
-                            value="<?php echo !empty($header_title) ? esc_attr($header_title) : ''; ?>">
+                            value="<?php echo ! empty( $header_title ) ? esc_attr( $header_title ) : ''; ?>">
                     </div>
                     <div class="cmb-td-multicheck">
                         <label
@@ -126,19 +126,19 @@ $discount_ribbon_position   = ! empty( $discount_ribbon_position ) ? esc_attr( $
                         <ul class="cmb2-radio-list cmb2-list">
                             <li>
                                 <input type="radio" class="cmb2-option" name="wcpscu[header_position]" id="middle" value="middle"
-                                <?php checked('middle', $header_position, true);  ?>>
+                                <?php checked( 'middle', esc_attr( $header_position ), true );  ?>>
                                 <label for="center"><?php esc_html_e('Middle', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?></label>
                             </li>
 
                             <li>
                                 <input type="radio" class="cmb2-option" name="wcpscu[header_position]" id="left" value="left"
-                                    <?php checked('left', $header_position); ?>>
+                                    <?php checked( 'left', esc_attr( $header_position ) ); ?>>
                                 <label for="left"><?php esc_html_e('Left', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?></label>
                             </li>
 
                             <li>
                                 <input type="radio" class="cmb2-option" name="wcpscu[header_position]" id="right" value="right"
-                                    <?php checked('right', $header_position); ?>>
+                                    <?php checked( 'right', esc_attr( $header_position ) ); ?>>
                                 <label for="right"><?php esc_html_e('Right', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?></label>
                             </li>
 
@@ -164,7 +164,7 @@ $discount_ribbon_position   = ! empty( $discount_ribbon_position ) ? esc_attr( $
                         <li>
                             <input type="radio" class="cmb2-option cmb2-radio-switch2" name="wcpscu[display_title]"
                                 id="wcpscu_display_title2" value="no"
-                                <?php if (!empty($display_title)) { checked('no', $display_title); } ?>>
+                                <?php if ( ! empty( $display_title ) ) { checked('no', esc_attr( $display_title ) ); } ?>>
                             <label for="wcpscu_display_title2"><?php esc_html_e('No', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?></label>
                         </li>
                     </ul>
@@ -186,12 +186,12 @@ $discount_ribbon_position   = ! empty( $discount_ribbon_position ) ? esc_attr( $
                         </li>
                         <li><input type="radio" class="cmb2-option" name="wcpscu[products_type]"
                                 id="wcpscu_products_type9" value="older"
-                                <?php if(!empty($products_type)) { checked('older', $products_type);}?>> <label
+                                <?php if( ! empty( $products_type ) ) { checked( 'older', esc_attr( $products_type ) ); } ?>> <label
                                 for="wcpscu_products_type9"><?php esc_html_e('Older Products', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?></label>
                         </li>
                         <li><input type="radio" class="cmb2-option" name="wcpscu[products_type]"
                                 id="wcpscu_products_type3" value="featured"
-                                <?php if(!empty($products_type)) { checked('featured', $products_type);} ?>> <label
+                                <?php if( ! empty( $products_type ) ) { checked('featured', esc_attr( $products_type ) ); } ?>> <label
                                 for="wcpscu_products_type3"><?php esc_html_e('Featured Products', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?></label>
                         </li>
                     </ul>
@@ -257,13 +257,13 @@ $discount_ribbon_position   = ! empty( $discount_ribbon_position ) ? esc_attr( $
                     <ul class="cmb2-radio-list cmb2-list cmb2-radio-switch">
                         <li><input type="radio" class="cmb2-option cmb2-radio-switch1"
                                 name="wcpscu[display_sale_ribbon]" id="wcpscu_display_sale_ribbon1" value="yes"
-                                <?php checked( $display_sale_ribbon, 'yes' ); ?>>
+                                <?php checked( esc_attr( $display_sale_ribbon ), 'yes' ); ?>>
                             <label
                                 for="wcpscu_display_sale_ribbon1"><?php esc_html_e('Yes', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?></label>
                         </li>
                         <li><input type="radio" class="cmb2-option cmb2-radio-switch2"
                                 name="wcpscu[display_sale_ribbon]" id="wcpscu_display_sale_ribbon2" value="no"
-                                <?php checked( $display_sale_ribbon, 'no' ); ?>>
+                                <?php checked( esc_attr( $display_sale_ribbon ), 'no' ); ?>>
                             <label
                                 for="wcpscu_display_sale_ribbon2"><?php esc_html_e('No', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?></label>
                         </li>
@@ -279,7 +279,7 @@ $discount_ribbon_position   = ! empty( $discount_ribbon_position ) ? esc_attr( $
                             </label>
                         <input type="text" class="cmb2-text-medium" name="wcpscu[sale_ribbon_text]"
                             id="wcpscu_sale_ribbon_text"
-                            value="<?php echo !empty($sale_ribbon_text) ?  $sale_ribbon_text : esc_html__('Sale!', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?>"
+                            value="<?php echo ! empty( $sale_ribbon_text ) ?  esc_attr( $sale_ribbon_text ) : esc_html__('Sale!', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?>"
                             placeholder="e.g. Sale!">
                     </div>
 
@@ -289,12 +289,12 @@ $discount_ribbon_position   = ! empty( $discount_ribbon_position ) ? esc_attr( $
                                 <?php esc_html_e( 'Position', 'woocommerce-product-carousel-slider-and-grid-ultimate' ); ?>
                         </label>
                         <select id="sale_ribbon_position" class="sale_ribbon_position" name="wcpscu[sale_ribbon_position]">
-                            <option value="top_left" <?php selected( $sale_ribbon_position, 'top_left'); ?> >Top Left</option>
-                            <option value="top_right" <?php selected( $sale_ribbon_position, 'top_right'); ?>>Top Right
+                            <option value="top_left" <?php selected( esc_attr( $sale_ribbon_position ), 'top_left'); ?> >Top Left</option>
+                            <option value="top_right" <?php selected( esc_attr( $sale_ribbon_position ), 'top_right'); ?>>Top Right
                             </option>
-                            <option value="bottom_left" <?php selected( $sale_ribbon_position, 'bottom_left'); ?>>Bottom Left
+                            <option value="bottom_left" <?php selected( esc_attr( $sale_ribbon_position ), 'bottom_left'); ?>>Bottom Left
                             </option>
-                            <option value="bottom_right" <?php selected( $sale_ribbon_position, 'bottom_right'); ?>>Bottom Right
+                            <option value="bottom_right" <?php selected( esc_attr( $sale_ribbon_position ), 'bottom_right'); ?>>Bottom Right
                             </option>
                         </select>
                     </div>
@@ -313,13 +313,13 @@ $discount_ribbon_position   = ! empty( $discount_ribbon_position ) ? esc_attr( $
                     <ul class="cmb2-radio-list cmb2-list cmb2-radio-switch">
                         <li><input type="radio" class="cmb2-option cmb2-radio-switch1"
                                 name="wcpscu[display_featured_ribbon]" id="wcpscu_display_featured_ribbon1" value="yes"
-                                <?php checked( $display_featured_ribbon, 'yes' ); ?>>
+                                <?php checked( esc_attr( $display_featured_ribbon ), 'yes' ); ?>>
                             <label
                                 for="wcpscu_display_featured_ribbon1"><?php esc_html_e('Yes', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?></label>
                         </li>
                         <li><input type="radio" class="cmb2-option cmb2-radio-switch2"
                                 name="wcpscu[display_featured_ribbon]" id="wcpscu_display_featured_ribbon2" value="no"
-                                <?php checked( $display_featured_ribbon, 'no' ); ?>>
+                                <?php checked( esc_attr( $display_featured_ribbon ), 'no' ); ?>>
                             <label
                                 for="wcpscu_display_featured_ribbon2"><?php esc_html_e('No', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?></label>
                         </li>
@@ -331,7 +331,7 @@ $discount_ribbon_position   = ! empty( $discount_ribbon_position ) ? esc_attr( $
                     <div id="feature_ribbon_text_wrapper">
                         <input type="text" class="cmb2-text-medium" name="wcpscu[feature_ribbon_text]"
                             id="wcpscu_feature_ribbon_text"
-                            value="<?php echo !empty($feature_ribbon_text) ?  $feature_ribbon_text : esc_html__('Featured!', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?>"
+                            value="<?php echo ! empty( $feature_ribbon_text ) ? esc_attr( $feature_ribbon_text ) : esc_html__('Featured!', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?>"
                             placeholder="e.g. Featured!">
                         <p class="cmb2-metabox-description">
                             <?php esc_html_e('Enter the text for the featured ribbon. Default text is "Featured!".', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?>
@@ -344,12 +344,12 @@ $discount_ribbon_position   = ! empty( $discount_ribbon_position ) ? esc_attr( $
                                 <?php esc_html_e( 'Position', 'woocommerce-product-carousel-slider-and-grid-ultimate' ); ?>
                         </label>
                         <select id="featured_ribbon_position" class="featured_ribbon_position" name="wcpscu[featured_ribbon_position]">
-                            <option value="top_left" <?php selected( $featured_ribbon_position, 'top_left'); ?> >Top Left</option>
-                            <option value="top_right" <?php selected( $featured_ribbon_position, 'top_right'); ?>>Top Right
+                            <option value="top_left" <?php selected( esc_attr( $featured_ribbon_position ), 'top_left'); ?> >Top Left</option>
+                            <option value="top_right" <?php selected( esc_attr( $featured_ribbon_position ), 'top_right'); ?>>Top Right
                             </option>
-                            <option value="bottom_left" <?php selected( $featured_ribbon_position, 'bottom_left'); ?>>Bottom Left
+                            <option value="bottom_left" <?php selected( esc_attr( $featured_ribbon_position ), 'bottom_left'); ?>>Bottom Left
                             </option>
-                            <option value="bottom_right" <?php selected( $featured_ribbon_position, 'bottom_right'); ?>>Bottom Right
+                            <option value="bottom_right" <?php selected( esc_attr( $featured_ribbon_position ), 'bottom_right'); ?>>Bottom Right
                             </option>
                         </select>
                     </div>
@@ -367,13 +367,13 @@ $discount_ribbon_position   = ! empty( $discount_ribbon_position ) ? esc_attr( $
                     <ul class="cmb2-radio-list cmb2-list cmb2-radio-switch">
                         <li><input type="radio" class="cmb2-option cmb2-radio-switch1"
                                 name="wcpscu[display_sold_out_ribbon]" id="wcpscu_display_sold_out_ribbon1" value="yes"
-                                <?php checked( $display_sold_out_ribbon, 'yes' ); ?>>
+                                <?php checked( esc_attr( $display_sold_out_ribbon ), 'yes' ); ?>>
                             <label
                                 for="wcpscu_display_sold_out_ribbon1"><?php esc_html_e('Yes', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?></label>
                         </li>
                         <li><input type="radio" class="cmb2-option cmb2-radio-switch2"
                                 name="wcpscu[display_sold_out_ribbon]" id="wcpscu_display_sold_out_ribbon2" value="no"
-                                <?php checked( $display_sold_out_ribbon, 'no' ); ?>>
+                                <?php checked( esc_attr( $display_sold_out_ribbon ), 'no' ); ?>>
                             <label
                                 for="wcpscu_display_sold_out_ribbon2"><?php esc_html_e('No', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?></label>
                         </li>
@@ -387,7 +387,7 @@ $discount_ribbon_position   = ! empty( $discount_ribbon_position ) ? esc_attr( $
                     <div id="sold_out_ribbon_text_wrapper">
                         <input type="text" class="cmb2-text-medium" name="wcpscu[sold_out_ribbon_text]"
                             id="wcpscu_sold_out_ribbon_text"
-                            value="<?php echo !empty($sold_out_ribbon_text) ?  $sold_out_ribbon_text : esc_html__('Sold Out!', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?>"
+                            value="<?php echo ! empty( $sold_out_ribbon_text ) ? esc_attr( $sold_out_ribbon_text ) : esc_html__('Sold Out!', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?>"
                             placeholder="e.g. Sold Out!">
                         <p class="cmb2-metabox-description">
                             <?php esc_html_e('Enter the text for the sold out ribbon. Default text is "Sold Out!".', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?>
@@ -400,12 +400,12 @@ $discount_ribbon_position   = ! empty( $discount_ribbon_position ) ? esc_attr( $
                                 <?php esc_html_e( 'Position', 'woocommerce-product-carousel-slider-and-grid-ultimate' ); ?>
                         </label>
                         <select id="sold_out_ribbon_position" class="sold_out_ribbon_position" name="wcpscu[sold_out_ribbon_position]">
-                            <option value="top_left" <?php selected( $sold_out_ribbon_position, 'top_left'); ?> >Top Left</option>
-                            <option value="top_right" <?php selected( $sold_out_ribbon_position, 'top_right'); ?>>Top Right
+                            <option value="top_left" <?php selected( esc_attr( $sold_out_ribbon_position ), 'top_left'); ?> >Top Left</option>
+                            <option value="top_right" <?php selected( esc_attr( $sold_out_ribbon_position ), 'top_right'); ?>>Top Right
                             </option>
-                            <option value="bottom_left" <?php selected( $sold_out_ribbon_position, 'bottom_left'); ?>>Bottom Left
+                            <option value="bottom_left" <?php selected( esc_attr( $sold_out_ribbon_position ), 'bottom_left'); ?>>Bottom Left
                             </option>
-                            <option value="bottom_right" <?php selected( $sold_out_ribbon_position, 'bottom_right'); ?>>Bottom Right
+                            <option value="bottom_right" <?php selected( esc_attr( $sold_out_ribbon_position ), 'bottom_right'); ?>>Bottom Right
                             </option>
                         </select>
                     </div>
@@ -423,13 +423,13 @@ $discount_ribbon_position   = ! empty( $discount_ribbon_position ) ? esc_attr( $
                     <ul class="cmb2-radio-list cmb2-list cmb2-radio-switch">
                         <li><input type="radio" class="cmb2-option cmb2-radio-switch1"
                                 name="wcpscu[display_discount_ribbon]" id="wcpscu_display_discount_ribbon1" value="yes"
-                                <?php checked( $display_discount_ribbon, 'yes' ); ?>>
+                                <?php checked( esc_attr( $display_discount_ribbon ), 'yes' ); ?>>
                             <label
                                 for="wcpscu_display_discount_ribbon1"><?php esc_html_e('Yes', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?></label>
                         </li>
                         <li><input type="radio" class="cmb2-option cmb2-radio-switch2"
                                 name="wcpscu[display_discount_ribbon]" id="wcpscu_display_discount_ribbon2" value="no"
-                                <?php checked( $display_discount_ribbon, 'no' ); ?>>
+                                <?php checked( esc_attr( $display_discount_ribbon ), 'no' ); ?>>
                             <label
                                 for="wcpscu_display_discount_ribbon2"><?php esc_html_e('No', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?></label>
                         </li>
@@ -444,12 +444,12 @@ $discount_ribbon_position   = ! empty( $discount_ribbon_position ) ? esc_attr( $
                                 <?php esc_html_e( 'Position', 'woocommerce-product-carousel-slider-and-grid-ultimate' ); ?>
                         </label>
                         <select id="discount_ribbon_position" class="discount_ribbon_position" name="wcpscu[discount_ribbon_position]">
-                            <option value="top_left" <?php selected( $discount_ribbon_position, 'top_left'); ?> >Top Left</option>
-                            <option value="top_right" <?php selected( $discount_ribbon_position, 'top_right'); ?>>Top Right
+                            <option value="top_left" <?php selected( esc_attr( $discount_ribbon_position ), 'top_left'); ?> >Top Left</option>
+                            <option value="top_right" <?php selected( esc_attr( $discount_ribbon_position ), 'top_right'); ?>>Top Right
                             </option>
-                            <option value="bottom_left" <?php selected( $discount_ribbon_position, 'bottom_left'); ?>>Bottom Left
+                            <option value="bottom_left" <?php selected( esc_attr( $discount_ribbon_position ), 'bottom_left'); ?>>Bottom Left
                             </option>
-                            <option value="bottom_right" <?php selected( $discount_ribbon_position, 'bottom_right'); ?>>Bottom Right
+                            <option value="bottom_right" <?php selected( esc_attr( $discount_ribbon_position ), 'bottom_right'); ?>>Bottom Right
                             </option>
                         </select>
                     </div>
@@ -472,7 +472,7 @@ $discount_ribbon_position   = ! empty( $discount_ribbon_position ) ? esc_attr( $
                         </li>
                         <li><input type="radio" class="cmb2-option cmb2-radio-switch2" name="wcpscu[display_price]"
                                 id="wcpscu_display_price2" value="no"
-                                <?php if (!empty($display_price)) { checked('no', $display_price); } ?>>
+                                <?php if ( ! empty( $display_price ) ) { checked( 'no', esc_attr( $display_price ) ) ; } ?>>
                             <label for="wcpscu_display_price2"><?php esc_html_e('No', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?></label>
                         </li>
                     </ul>
@@ -495,7 +495,7 @@ $discount_ribbon_position   = ! empty( $discount_ribbon_position ) ? esc_attr( $
                         </li>
                         <li><input type="radio" class="cmb2-option cmb2-radio-switch2" name="wcpscu[display_ratings]"
                                 id="wcpscu_display_ratings2" value="no"
-                                <?php if (!empty($display_ratings)) { checked('no', $display_ratings); } ?>>
+                                <?php if (!empty($display_ratings)) { checked('no', esc_attr( $display_ratings ) ); } ?>>
                             <label for="wcpscu_display_ratings2"><?php _e('No', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?></label>
                         </li>
                     </ul>
@@ -519,7 +519,7 @@ $discount_ribbon_position   = ! empty( $discount_ribbon_position ) ? esc_attr( $
                         <li>
                             <input type="radio" class="cmb2-option cmb2-radio-switch2" name="wcpscu[display_cart]"
                                 id="wcpscu_display_cart2" value="no"
-                                <?php if (!empty($display_cart)) { checked('no', $display_cart); } ?>>
+                                <?php if( ! empty( $display_cart ) ) { checked('no', esc_attr( $display_cart ) ); } ?>>
                             <label for="wcpscu_display_cart2"><?php esc_html_e('No', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?></label>
                         </li>
                     </ul>
@@ -542,7 +542,7 @@ $discount_ribbon_position   = ! empty( $discount_ribbon_position ) ? esc_attr( $
                         <li>
                             <input type="radio" class="cmb2-option cmb2-radio-switch2" name="wcpscu[quick_view]"
                                 id="wcpscu_quick_view2" value="no"
-                                <?php if (!empty($quick_view)) { checked('no', $quick_view); } ?>>
+                                <?php if( ! empty( $quick_view ) ) { checked( 'no', esc_attr( $quick_view ) ); } ?>>
                             <label for="wcpscu_quick_view2"><?php esc_html_e('No', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?></label>
                         </li>
                     </ul>
@@ -558,12 +558,12 @@ $discount_ribbon_position   = ! empty( $discount_ribbon_position ) ? esc_attr( $
                     <ul class="cmb2-radio-list cmb2-list cmb2-radio-switch">
                         <li><input type="radio" class="cmb2-option cmb2-radio-switch1" name="wcpscu[img_crop]"
                                 id="wcpscu_img_crop1" value="yes"
-                                <?php if( empty($img_crop) || $img_crop === "yes" ) {echo "checked"; } ?>>
+                                <?php if( empty( $img_crop ) || $img_crop === "yes" ) { echo "checked"; } ?>>
                             <label for="wcpscu_img_crop1"><?php esc_html_e('Yes', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?></label>
                         </li>
                         <li><input type="radio" class="cmb2-option cmb2-radio-switch2" name="wcpscu[img_crop]"
                                 id="wcpscu_img_crop2" value="no"
-                                <?php if( !empty($img_crop)) { checked( 'no', $img_crop); } ?>> <label
+                                <?php if( ! empty( $img_crop ) ) { checked( 'no', esc_attr( $img_crop ) ); } ?>> <label
                                 for="wcpscu_img_crop2"><?php esc_html_e('No', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?></label></li>
                     </ul>
                     <p class="cmb2-metabox-description">
@@ -588,7 +588,7 @@ $discount_ribbon_position   = ! empty( $discount_ribbon_position ) ? esc_attr( $
                                 for="wcpscu_crop_image_width"><?php esc_html_e('Width', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?></label>
                             <input type="text" class="cmb2-text-small" name="wcpscu[crop_image_width]"
                                 id="wcpscu_crop_image_width"
-                                value="<?php echo !empty($crop_image_width) ? intval($crop_image_width) : 350; ?>">
+                                value="<?php echo ! empty( $crop_image_width ) ? intval( esc_attr( $crop_image_width ) ) : 350; ?>">
                             <p class="cmb2-metabox-description">
                                 <?php esc_html_e('Image cropping width', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?>
                             </p>
@@ -598,7 +598,7 @@ $discount_ribbon_position   = ! empty( $discount_ribbon_position ) ? esc_attr( $
                                 for="wcpscu_crop_image_height"><?php esc_html_e('Height', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?></label>
                             <input type="text" class="cmb2-text-small" name="wcpscu[crop_image_height]"
                                 id="wcpscu_crop_image_height"
-                                value="<?php echo !empty($crop_image_height) ? intval($crop_image_height) : 250; ?>">
+                                value="<?php echo ! empty( $crop_image_height ) ? intval( esc_attr( $crop_image_height ) ) : 250; ?>">
                             <p class="cmb2-metabox-description">
                                 <?php esc_html_e('Image cropping height', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?>
                             </p>

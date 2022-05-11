@@ -1,13 +1,13 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) die( 'Are you cheating??? Accessing this file directly is forbidden.' );
-$stop_hover             = ! empty( $stop_hover ) ? esc_attr( $stop_hover ) : 'false';
-$A_play                 = ! empty( $A_play ) ? esc_attr( $A_play ) : 'yes';
-$pagination             = ! empty( $pagination ) ? esc_attr( $pagination ) : 'yes';
-$scrol_direction        = ! empty( $scrol_direction ) ? esc_attr( $scrol_direction ) : 'left';
-$scrool                 = ! empty( $scrool ) ? esc_attr( $scrool ) : 'false';
-$nav_show               = ! empty( $nav_show ) ? esc_attr( $nav_show ) : 'yes';
-$nav_position           = ! empty( $nav_position ) ? esc_attr( $nav_position ) : 'bottom-right';
-$carousel_pagination    = ! empty( $carousel_pagination ) ? esc_attr( $carousel_pagination ) : 'no';
+$stop_hover             = ! empty( $stop_hover ) ? $stop_hover : 'false';
+$A_play                 = ! empty( $A_play ) ? $A_play : 'yes';
+$pagination             = ! empty( $pagination ) ? $pagination : 'yes';
+$scrol_direction        = ! empty( $scrol_direction ) ? $scrol_direction : 'left';
+$scrool                 = ! empty( $scrool ) ? $scrool : 'false';
+$nav_show               = ! empty( $nav_show ) ? $nav_show : 'yes';
+$nav_position           = ! empty( $nav_position ) ? $nav_position : 'bottom-right';
+$carousel_pagination    = ! empty( $carousel_pagination ) ? $carousel_pagination : 'no';
 ?>
 <!--TAB 2  Carousel setting -->
 <div id="lcsp-tab-2" class="lcsp-tab-content">
@@ -23,12 +23,12 @@ $carousel_pagination    = ! empty( $carousel_pagination ) ? esc_attr( $carousel_
                     <ul class="cmb2-radio-list cmb2-list cmb2-radio-switch">
                         <li>
                             <input type="radio" class="cmb2-option wcpcu_auto_play cmb2-radio-switch1" name="wcpscu[A_play]"
-                                id="lcsp_ap1" value="yes" <?php checked('yes', $A_play, true); ?>>
+                                id="lcsp_ap1" value="yes" <?php checked( 'yes', esc_attr( $A_play ), true ); ?>>
                             <label for="lcsp_ap1"><?php esc_html_e('Yes', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?></label>
                         </li>
                         <li>
                             <input type="radio" class="cmb2-option wcpcu_auto_play cmb2-radio-switch2" name="wcpscu[A_play]"
-                                id="lcsp_ap2" value="no" <?php checked('no', $A_play, true); ?>>
+                                id="lcsp_ap2" value="no" <?php checked( 'no', esc_attr( $A_play ), true ); ?>>
                             <label for="lcsp_ap2"><?php esc_html_e('No', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?></label>
                         </li>
                     </ul>
@@ -45,12 +45,12 @@ $carousel_pagination    = ! empty( $carousel_pagination ) ? esc_attr( $carousel_
                         <li>
                             <input type="radio" class="cmb2-option cmb2-radio-switch1" name="wcpscu[repeat_product]"
                                 id="wcpscu_repeat_product1" value="yes"
-                                <?php if(empty($repeat_product) || 'yes' === $repeat_product) { echo 'checked'; } ?>>
+                                <?php checked( 'yes', esc_attr( $repeat_product ), true ); ?>>
                             <label for="wcpscu_repeat_product1"><?php esc_html_e('Yes', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?></label>
                         </li>
                         <li><input type="radio" class="cmb2-option cmb2-radio-switch2" name="wcpscu[repeat_product]"
                                 id="wcpscu_repeat_product2" value="no"
-                                <?php if (!empty($repeat_product)) { checked('no', $repeat_product); } ?>>
+                                <?php checked( 'no', esc_attr( $repeat_product ), true ); ?>>
                             <label for="wcpscu_repeat_product2"><?php _e('No', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?></label>
                         </li>
                     </ul>
@@ -65,13 +65,13 @@ $carousel_pagination    = ! empty( $carousel_pagination ) ? esc_attr( $carousel_
                 <div class="cmb-td">
                     <ul class="cmb2-radio-list cmb2-list cmb2-radio-switch">
                         <li><input type="radio" class="cmb2-option cmb2-radio-switch1" name="wcpscu[stop_hover]"
-                                id="lcsp_soh1" value="true" <?php checked('true', $stop_hover, true); ?>>
+                                id="lcsp_soh1" value="true" <?php checked( 'true', esc_attr( $stop_hover ), true ); ?>>
                             <label for="lcsp_soh1">
                                 <?php esc_html_e('Yes', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?>
                             </label>
                         </li>
                         <li><input type="radio" class="cmb2-option cmb2-radio-switch2" name="wcpscu[stop_hover]"
-                                id="lcsp_soh2" value="false" <?php checked('false', $stop_hover, true);  ?>>
+                                id="lcsp_soh2" value="false" <?php checked( 'false', esc_attr( $stop_hover ), true );  ?>>
                             <label for="lcsp_soh2">
                                 <?php esc_html_e('No', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?>
                             </label>
@@ -94,7 +94,7 @@ $carousel_pagination    = ! empty( $carousel_pagination ) ? esc_attr( $carousel_
                                 </div>
                             </div>
                             <input type="text" class="cmb2-text-small" name="wcpscu[c_desktop]" id="lcsp_li_desktop"
-                                value="<?php echo !empty($c_desktop) ? intval($c_desktop) : 4; ?>">
+                                value="<?php echo ! empty( $c_desktop ) ? intval( esc_attr( $c_desktop ) ) : 4; ?>">
                         </div>
                         <div class="input-group">
                             <div class="input-group-prepend">
@@ -103,7 +103,7 @@ $carousel_pagination    = ! empty( $carousel_pagination ) ? esc_attr( $carousel_
                             </div>
                             <input type="text" class="cmb2-text-small" name="wcpscu[c_desktop_small]"
                                 id="lcsp_li_desktop_small"
-                                value="<?php echo !empty($c_desktop_small) ? intval($c_desktop_small) : 3; ?>">
+                                value="<?php echo ! empty( $c_desktop_small ) ? intval( esc_attr( $c_desktop_small ) ) : 3; ?>">
                         </div>
                         <div class="input-group">
                             <div class="input-group-prepend">
@@ -111,7 +111,7 @@ $carousel_pagination    = ! empty( $carousel_pagination ) ? esc_attr( $carousel_
                                 </div>
                             </div>
                             <input type="text" class="cmb2-text-small" name="wcpscu[c_tablet]" id="lcsp_li_tablet"
-                                value="<?php echo !empty($c_tablet) ? intval($c_tablet) : 2; ?>">
+                                value="<?php echo ! empty( $c_tablet ) ? intval( esc_attr( $c_tablet ) ) : 2; ?>">
                         </div>
                         <div class="input-group">
                             <div class="input-group-prepend">
@@ -119,7 +119,7 @@ $carousel_pagination    = ! empty( $carousel_pagination ) ? esc_attr( $carousel_
                                 </div>
                             </div>
                             <input type="text" class="cmb2-text-small" name="wcpscu[c_mobile]" id="lcsp_li_mobile"
-                                value="<?php echo !empty($c_mobile) ? intval($c_mobile) : 1; ?>">
+                                value="<?php echo ! empty( esc_attr( $c_mobile ) ) ? intval( esc_attr( $c_mobile ) ) : 1; ?>">
                         </div>
                     </div>
 
@@ -138,7 +138,7 @@ $carousel_pagination    = ! empty( $carousel_pagination ) ? esc_attr( $carousel_
                 </div>
                 <div class="cmb-td">
                     <input type="text" class="cmb2-text-small" name="wcpscu[slide_speed]" id="wcpscu[slide_speed]"
-                        value="<?php echo !empty($slide_speed) ? intval($slide_speed) : 2000; ?>">
+                        value="<?php echo ! empty( $slide_speed ) ? intval( esc_attr( $slide_speed ) ) : 2000; ?>">
                     <p class="cmb2-metabox-description">
                         <?php esc_html_e('Here 1000 is equal to 1 second. So provide a speed accordingly', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?>
                     </p>
@@ -153,7 +153,7 @@ $carousel_pagination    = ! empty( $carousel_pagination ) ? esc_attr( $carousel_
                 </div>
                 <div class="cmb-td">
                     <input type="text" class="cmb2-text-small" name="wcpscu[slide_time]" id="wcpscu[slide_time]"
-                        value="<?php echo !empty($slide_time) ? intval($slide_time) : 2000; ?>">
+                        value="<?php echo ! empty( $slide_time ) ? intval( esc_attr( $slide_time ) ) : 2000; ?>">
                     <p class="cmb2-metabox-description">
                         <?php esc_html_e('Here 1000 is equal to 1 second. So provide a timeout accordingly', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?>
                     </p>
@@ -196,14 +196,14 @@ $carousel_pagination    = ! empty( $carousel_pagination ) ? esc_attr( $carousel_
                     <ul class="cmb2-radio-list cmb2-list  cmb2-radio-switch">
                         <li>
                             <input type="radio" class="cmb2-option wcpcu_navigation cmb2-radio-switch1" name="wcpscu[nav_show]"
-                                id="wcpscu[c10_nav]1" value="yes" <?php checked('yes', $nav_show, true);  ?>>
+                                id="wcpscu[c10_nav]1" value="yes" <?php checked( 'yes', esc_attr( $nav_show ), true );  ?>>
                             <label for="wcpscu[c10_nav]1">
                                 <?php esc_html_e('Yes', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?>
                             </label>
                         </li>
                         <li>
                             <input type="radio" class="cmb2-option wcpcu_navigation cmb2-radio-switch2" name="wcpscu[nav_show]"
-                                id="wcpscu[c10_nav]2" value="no" <?php checked('no', $nav_show, true);  ?>>
+                                id="wcpscu[c10_nav]2" value="no" <?php checked( 'no', esc_attr( $nav_show ), true );  ?>>
                             <label for="wcpscu[c10_nav]2">
                                 <?php esc_html_e('No', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?>
                             </label>
@@ -218,14 +218,14 @@ $carousel_pagination    = ! empty( $carousel_pagination ) ? esc_attr( $carousel_
                 <div class="cmb-td">
                     <div class="cmb-theme-wrapper">
                         <select id="theme_" class="wcpscu_theme" name="wcpscu[nav_position]">
-                            <option value="top-left" <?php selected( $nav_position, 'top-left'); ?> >Top Left</option>
-                            <option value="top-right" <?php selected( $nav_position, 'top-right'); ?>>Top Right
+                            <option value="top-left" <?php selected( esc_attr( $nav_position ), 'top-left'); ?> >Top Left</option>
+                            <option value="top-right" <?php selected( esc_attr( $nav_position ), 'top-right'); ?>>Top Right
                             </option>
-                            <option value="middle" <?php selected( $nav_position, 'middle'); ?>>Middle
+                            <option value="middle" <?php selected( esc_attr( $nav_position ), 'middle'); ?>>Middle
                             </option>
-                            <option value="bottom-left" <?php selected( $nav_position, 'bottom-left'); ?>>Bottom Left
+                            <option value="bottom-left" <?php selected( esc_attr( $nav_position ), 'bottom-left'); ?>>Bottom Left
                             </option>
-                            <option value="bottom-right" <?php selected( $nav_position, 'bottom-right'); ?>>Bottom Right
+                            <option value="bottom-right" <?php selected( esc_attr( $nav_position ), 'bottom-right'); ?>>Bottom Right
                             </option>
                         </select>
                     </div>
@@ -245,42 +245,42 @@ $carousel_pagination    = ! empty( $carousel_pagination ) ? esc_attr( $carousel_
                                 <?php esc_html_e('Navigation Arrow Color', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?>
                             </label>
                             <input type="text" name="wcpscu[nav_arrow_color]" class="cpa-color-picker"
-                                value="<?php echo ! empty( $nav_arrow_color ) ? $nav_arrow_color : '#333'; ?>" />
+                                value="<?php echo ! empty( $nav_arrow_color ) ? esc_attr( $nav_arrow_color ) : '#333'; ?>" />
                         </div>
                         <div class="cmb-navigation-item">
                             <label for="wcpscu[nav_back_color]">
                                 <?php esc_html_e('Navigation Background Color', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?>
                             </label>
                             <input type="text" name="wcpscu[nav_back_color]" class="cpa-color-picker"
-                                value="<?php echo ! empty( $nav_back_color ) ? $nav_back_color : '#fff'; ?>" />
+                                value="<?php echo ! empty( $nav_back_color ) ? esc_attr( $nav_back_color ) : '#fff'; ?>" />
                         </div>
                         <div class="cmb-navigation-item">
                             <label for="wcpscu[nav_border_color]">
                                 <?php esc_html_e('Navigation Border Color', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?>
                             </label>
                             <input type="text" name="wcpscu[nav_border_color]" class="cpa-color-picker"
-                                value="<?php echo ! empty( $nav_border_color ) ? $nav_border_color : '#e4e4ed'; ?>" />
+                                value="<?php echo ! empty( $nav_border_color ) ? esc_attr( $nav_border_color ) : '#e4e4ed'; ?>" />
                         </div>
                         <div class="cmb-navigation-item">
                             <label for="wcpscu[nav_arrow_hover_color]">
                                 <?php esc_html_e('Navigation Hover Arrow Color', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?>
                             </label>
                             <input type="text" name="wcpscu[nav_arrow_hover_color]" class="cpa-color-picker"
-                                value="<?php echo ! empty( $nav_arrow_hover_color ) ? $nav_arrow_hover_color : '#fff'; ?>" />
+                                value="<?php echo ! empty( $nav_arrow_hover_color ) ? esc_attr( $nav_arrow_hover_color ) : '#fff'; ?>" />
                         </div>
                         <div class="cmb-navigation-item">
                             <label for="wcpscu[nav_back_hover_color]">
                                 <?php esc_html_e('Navigation Hover Background Color', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?>
                             </label>
                             <input type="text" name="wcpscu[nav_back_hover_color]" class="cpa-color-picker"
-                                value="<?php echo ! empty( $nav_back_hover_color ) ? $nav_back_hover_color : '#ff5500'; ?>" />
+                                value="<?php echo ! empty( $nav_back_hover_color ) ? esc_attr( $nav_back_hover_color ) : '#ff5500'; ?>" />
                         </div>
                         <div class="cmb-navigation-item">
                             <label for="wcpscu[nav_border_hover]">
                                 <?php esc_html_e('Navigation Hover Border Color', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?>
                             </label>
                             <input type="text" name="wcpscu[nav_border_hover]" class="cpa-color-picker"
-                                value="<?php echo ! empty( $nav_border_hover ) ? $nav_border_hover : '#ff5500'; ?>" />
+                                value="<?php echo ! empty( $nav_border_hover ) ? esc_attr( $nav_border_hover ) : '#ff5500'; ?>" />
                         </div>
                     </div>
                 </div>
@@ -296,14 +296,14 @@ $carousel_pagination    = ! empty( $carousel_pagination ) ? esc_attr( $carousel_
                     <ul class="cmb2-radio-list cmb2-list  cmb2-radio-switch">
                         <li>
                             <input type="radio" class="cmb2-option wcpcu_carousel_pagination cmb2-radio-switch1" name="wcpscu[carousel_pagination]"
-                                id="wcpscu[carousel_pagination]1" value="yes" <?php checked('yes', $carousel_pagination, true);  ?>>
+                                id="wcpscu[carousel_pagination]1" value="yes" <?php checked( 'yes', esc_attr( $carousel_pagination ), true );  ?>>
                             <label for="wcpscu[carousel_pagination]1">
                                 <?php esc_html_e('Yes', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?>
                             </label>
                         </li>
                         <li>
                             <input type="radio" class="cmb2-option wcpcu_carousel_pagination cmb2-radio-switch2" name="wcpscu[carousel_pagination]"
-                                id="wcpscu[carousel_pagination]2" value="no" <?php checked('no', $carousel_pagination, true);  ?>>
+                                id="wcpscu[carousel_pagination]2" value="no" <?php checked( 'no', esc_attr( $carousel_pagination ), true );  ?>>
                             <label for="wcpscu[carousel_pagination]2">
                                 <?php esc_html_e('No', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?>
                             </label>
@@ -325,14 +325,14 @@ $carousel_pagination    = ! empty( $carousel_pagination ) ? esc_attr( $carousel_
                                 <?php esc_html_e('Dots Color', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?>
                             </label>
                             <input type="text" name="wcpscu[dots_color]" class="cpa-color-picker"
-                                value="<?php echo ! empty( $dots_color ) ? $dots_color : '#b0b0b0'; ?>" />
+                                value="<?php echo ! empty( $dots_color ) ? esc_attr( $dots_color ) : '#b0b0b0'; ?>" />
                         </div>
                         <div class="cmb-navigation-item">
                             <label for="wcpscu[dots_active_color]">
                                 <?php esc_html_e('Dots Active Color', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?>
                             </label>
                             <input type="text" name="wcpscu[dots_active_color]" class="cpa-color-picker"
-                                value="<?php echo ! empty( $dots_active_color ) ? $dots_active_color : '#ff5500'; ?>" />
+                                value="<?php echo ! empty( $dots_active_color ) ? esc_attr( $dots_active_color ) : '#ff5500'; ?>" />
                         </div>
 
                     </div>

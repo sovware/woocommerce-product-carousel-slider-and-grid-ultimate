@@ -12,10 +12,10 @@
                         <div class="input-group">
                             <input type="text" class="cmb2-text-small" name="wcpscu[header_font_size]"
                                 id="wcpscu_header_title_font_size"
-                                value="<?php if(!empty($header_font_size)) { echo $header_font_size; }else { echo "24";} ?>"
+                                value="<?php if( ! empty( $header_font_size ) ) { echo esc_attr( $header_font_size ); } else { echo "24";} ?>"
                                 placeholder="e.g. 20">
                             <div class="input-group-prepend">
-                                <div class="input-group-text" id="btnGroupAddon">px</span>
+                                <div class="input-group-text" id="btnGroupAddon"><?php esc_html_e('px', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?></span>
                                 </div>
                             </div>
                         </div>
@@ -110,7 +110,7 @@
                                 id="wcpscu_price_font_size"
                                 value="<?php echo ! empty( $price_font_size['theme_3'] ) ? esc_attr( $price_font_size['theme_3'] ) : '14'; ?>">
                             <div class="input-group-prepend">
-                                <div class="input-group-text" id="btnGroupAddon">px</span>
+                                <div class="input-group-text" id="btnGroupAddon"><?php esc_html_e('px', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?></span>
                                 </div>
                             </div>
                         </div>
@@ -156,7 +156,7 @@
                                 id="wcpscu_ratings_size"
                                 value="<?php echo ! empty( $ratings_size['theme_3'] ) ? esc_attr( $ratings_size['theme_3'] ) : '16'; ?>">
                             <div class="input-group-prepend">
-                                <div class="input-group-text" id="btnGroupAddon">px</span>
+                                <div class="input-group-text" id="btnGroupAddon"><?php esc_html_e('px', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?></span>
                                 </div>
                             </div>
                         </div>

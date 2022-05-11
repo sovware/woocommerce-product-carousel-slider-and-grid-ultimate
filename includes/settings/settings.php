@@ -15,11 +15,11 @@ defined('ABSPATH') || die('Direct access is not allow');
                         class="fas fa-code"></span><?php esc_html_e('Shortcodes', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?></a></li>
         <li><a href="#lcsp-tab-5"><span
                         class="fas fa-cog"></span><?php esc_html_e('General Settings', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?></a></li>
-            <li style="display: <?php if(!empty($layout) && $layout == "grid"){ echo "none";}else{ echo "block";}?>;"
+            <li style="display: <?php if( ! empty( $layout ) && $layout == "grid" ){ echo "none"; }else{ echo "block"; }?>;"
                 id="tab2"><a href="#lcsp-tab-2"><span
                         class="fas fa-sliders-h"></span><?php esc_html_e('Carousel Settings', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?></a>
             </li>
-            <li style="display: <?php if(!empty($layout) && $layout == "grid"){ echo "block";}else{ echo "none";}?>;"
+            <li style="display: <?php if( ! empty( $layout ) && $layout == "grid" ){ echo "block"; }else{ echo "none"; }?>;"
                 id="tab3"><a href="#lcsp-tab-3"><span
                         class="fas fa-th"></span><?php esc_html_e('Grid Settings', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?></a></li>
             <li><a href="#lcsp-tab-4"><span

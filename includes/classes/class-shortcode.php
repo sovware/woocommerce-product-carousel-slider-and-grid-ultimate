@@ -310,7 +310,7 @@ class wcpcsu_Shortcode
 
             }
 
-            return ! empty( $max_percentage ) ? round($max_percentage) . "%" : '';
+            return ! empty( $max_percentage ) ? round( $max_percentage ) . "%" : '';
 
         }
 
