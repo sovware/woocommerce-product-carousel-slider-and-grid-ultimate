@@ -11,8 +11,12 @@ defined('ABSPATH') || die('Direct access is not allow');
 <div id="lcsp-tabs-container">
     <div class="lcsp-tabs-menu-wrapper">
         <ul class="lcsp-tabs-menu">
-        <li class="current"><a href="#lcsp-tab-1"><span
-                        class="fas fa-code"></span><?php esc_html_e('Shortcodes', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?></a></li>
+        <li class="current">
+            <a href="#lcsp-tab-1">
+                <span class="fas fa-code"></span>
+                <?php esc_html_e('Shortcodes', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?>
+            </a>
+        </li>
         <li><a href="#lcsp-tab-5"><span
                         class="fas fa-cog"></span><?php esc_html_e('General Settings', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?></a></li>
             <li style="display: <?php if( ! empty( $layout ) && $layout == "grid" ){ echo "none"; }else{ echo "block"; }?>;"
