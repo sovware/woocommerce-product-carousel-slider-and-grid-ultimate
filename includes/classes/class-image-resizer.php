@@ -47,13 +47,13 @@ class Wpcsu_Image_Resizer
         }
 
         // Get the image file path
-        $filePath = parse_url($attachmentUrl);
-        $filePath = $_SERVER['DOCUMENT_ROOT'] . $filePath['path'];
+        $filePath = parse_url( $attachmentUrl );
+        $filePath = esc_attr( $_SERVER['DOCUMENT_ROOT'] ) . esc_attr( $filePath['path'] );
 
         // Additional handling for multisite
         if (is_multisite()) {
             global $blog_id;
-            $blogDetails = get_blog_details($blog_id);
+            $blogDetails = get_blog_details( esc_attr( $blog_id ) );
             $filePath    = str_replace($blogDetails->path . 'files/', '/wp-content/blogs.dir/'. $blog_id .'/files/', $filePath);
         }
 

@@ -315,7 +315,7 @@ $carousel_pagination    = ! empty( $carousel_pagination ) ? $carousel_pagination
             <div class="cmb-row cmb-type-radio wpcu_carousel_pagination_depend">
                 <div class="cmb-th">
                     <label for="wcpscu[dots_color]">
-                        Pagination Style
+                        <?php esc_html_e('Pagination Style', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?>
                     </label>
                 </div>
                 <div class="cmb-td">

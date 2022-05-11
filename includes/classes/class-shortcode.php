@@ -340,26 +340,26 @@ class wcpcsu_Shortcode
     public function ajax_quick_view() {
         $nonce          = ! empty( $_POST['nonce'] ) ? $_POST['nonce'] : '';
         $product_id     = ! empty( $_POST['product_id'] ) ? $_POST['product_id'] : '';
-        if( ! wp_verify_nonce( $nonce, 'wcpcsu_quick_view_' . $product_id ) ) {
+        if( ! wp_verify_nonce( esc_attr( $nonce ), 'wcpcsu_quick_view_' . esc_attr( $product_id ) ) ) {
             die();
         }
         ob_start();
-        $product     = wc_get_product( $product_id );
-        $wpcsu_thumb = wp_get_attachment_image_src( get_post_thumbnail_id( $product_id ), 'large' );
+        $product     = wc_get_product( esc_attr( $product_id ) );
+        $wpcsu_thumb = wp_get_attachment_image_src( get_post_thumbnail_id( esc_attr( $product_id ) ), 'large' );
         $wpcsu_img   = $wpcsu_thumb['0'];
         ?>
         <div>
-            <h2 class='wpcu-modal__product-title'><?php echo get_the_title( $product_id );?></h2>
+            <h2 class='wpcu-modal__product-title'><?php echo get_the_title( esc_attr( $product_id ) );?></h2>
             <?php if ( ! empty( $wpcsu_img ) ) { ?>
             <div class='wpcu-modal__product-image'>
-                <img src="<?php echo $wpcsu_img; ?>" alt="<?php echo get_the_title( $product_id );?>">
+                <img src="<?php echo $wpcsu_img; ?>" alt="<?php echo get_the_title( esc_attr( $product_id ) );?>">
             </div>
             <?php } ?>
             <div class='wpcu-modal__product-description'>
                 <?php echo $product->get_description(); ?>
             </div>
             <div class='wpcu-modal__product-price'><?php echo $product->get_price_html(); ?></div>
-            <div class='wpcu-modal__product-action'><?php echo do_shortcode('[add_to_cart id="' . $product_id . '" show_price = "false"]'); ?></div>
+            <div class='wpcu-modal__product-action'><?php echo wp_kses_post( do_shortcode('[add_to_cart id="' . esc_attr( $product_id ) . '" show_price = "false"]') ); ?></div>
         </div>
         <?php
         $template = ob_get_clean();
