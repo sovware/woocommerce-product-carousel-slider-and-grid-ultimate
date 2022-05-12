@@ -90,7 +90,8 @@ $carousel_pagination    = ! empty( $carousel_pagination ) ? $carousel_pagination
                     <div class="cmb-product-columns">
                         <div class="input-group">
                             <div class="input-group-prepend">
-                                <div class="input-group-text" id="btnGroupAddon"><span class="fas fa-desktop"></span>
+                                <div class="input-group-text" id="btnGroupAddon">
+                                    <img class="svg_compile" src="<?php echo WCPCSU_URL .'assets/icons/desktop.svg' ?>" >
                                 </div>
                             </div>
                             <input type="text" class="cmb2-text-small" name="wcpscu[c_desktop]" id="lcsp_li_desktop"
@@ -98,7 +99,8 @@ $carousel_pagination    = ! empty( $carousel_pagination ) ? $carousel_pagination
                         </div>
                         <div class="input-group">
                             <div class="input-group-prepend">
-                                <div class="input-group-text" id="btnGroupAddon"><span class="fas fa-laptop"></span>
+                                <div class="input-group-text" id="btnGroupAddon">
+                                  <img class="svg_compile" src="<?php echo WCPCSU_URL .'assets/icons/laptop.svg' ?>" >
                                 </div>
                             </div>
                             <input type="text" class="cmb2-text-small" name="wcpscu[c_desktop_small]"
@@ -107,7 +109,8 @@ $carousel_pagination    = ! empty( $carousel_pagination ) ? $carousel_pagination
                         </div>
                         <div class="input-group">
                             <div class="input-group-prepend">
-                                <div class="input-group-text" id="btnGroupAddon"><span class="fas fa-tablet-alt"></span>
+                                <div class="input-group-text" id="btnGroupAddon">
+                                    <img class="svg_compile" src="<?php echo WCPCSU_URL .'assets/icons/tab_mobile.svg' ?>" >
                                 </div>
                             </div>
                             <input type="text" class="cmb2-text-small" name="wcpscu[c_tablet]" id="lcsp_li_tablet"
@@ -115,7 +118,8 @@ $carousel_pagination    = ! empty( $carousel_pagination ) ? $carousel_pagination
                         </div>
                         <div class="input-group">
                             <div class="input-group-prepend">
-                                <div class="input-group-text" id="btnGroupAddon"><span class="fas fa-mobile-alt"></span>
+                                <div class="input-group-text" id="btnGroupAddon">
+                                   <img class="svg_compile" src="<?php echo WCPCSU_URL .'assets/icons/mobile.svg' ?>" >
                                 </div>
                             </div>
                             <input type="text" class="cmb2-text-small" name="wcpscu[c_mobile]" id="lcsp_li_mobile"

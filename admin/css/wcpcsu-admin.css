@@ -167,6 +167,18 @@ body.post-type-wcpcsu-custom-post #wpfooter{
     color: #A1A8C6;
 }
 
+.lcsp-tabs-menu li a svg{
+    width: 16px;
+    margin-right: 6px;
+    transition: 0.3s;
+    fill: #A1A8C6;
+}
+
+.lcsp-tabs-menu li a img{
+    width: 16px;
+    margin-right: 6px;
+}
+
 .lcsp-tabs-menu li.current {
     position: relative;
     background-color: #fff;
@@ -197,6 +209,9 @@ body.post-type-wcpcsu-custom-post #wpfooter{
     color: #834EFF;
 }
 
+.lcsp-tabs-menu .current a svg{
+    fill: #834EFF;
+}
 
 .cmb2-wrap input.cmb2-text-small,
 .cmb2-wrap input.cmb2-timepicker {
@@ -316,7 +331,9 @@ body.post-type-wcpcsu-custom-post #wpfooter{
 .cmb2-wrap .cmb-product-columns .input-group input{
     margin: 0 !important;
 }
-
+.cmb-product-columns .input-group-prepend .input-group-text svg{
+    fill:#5A5F7D ;
+}
 .cmb-product-columns .input-group-prepend .input-group-text {
     display: flex;
     align-items: center;

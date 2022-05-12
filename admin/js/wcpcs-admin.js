@@ -21,7 +21,7 @@ jQuery(document).ready(function ($) {
         });
     });
 
-    $(".cmd-switch-carousel").on('click',function (e) {
+    $(".cmd-switch-carousel").on('click', function (e) {
         e.preventDefault();
         $(".wcpscu_grid_layout").removeAttr('checked');
         $(".wcpscu_carousel_layout").attr('checked', true);
@@ -30,7 +30,7 @@ jQuery(document).ready(function ($) {
         $("#wcpscu_total_pdt").html("Total Products to Display");
     });
 
-    $(".cmd-switch-grid").on('click',function (e) {
+    $(".cmd-switch-grid").on('click', function (e) {
         e.preventDefault();
         $(".wcpscu_carousel_layout").removeAttr('checked');
         $(".wcpscu_grid_layout").attr('checked', true);
@@ -39,7 +39,32 @@ jQuery(document).ready(function ($) {
         $("#wcpscu_total_pdt").html("Products Per Page");
     });
 
+    /* Replace all SVG images with inline SVG */
+    document.querySelectorAll('img.svg_compile').forEach((el) => {
+        const imgID = el.getAttribute('id');
+        const imgClass = el.getAttribute('class');
+        const imgURL = el.getAttribute('src');
 
+        fetch(imgURL)
+            .then(data => data.text())
+            .then(response => {
+                const parser = new DOMParser();
+                const xmlDoc = parser.parseFromString(response, 'text/html');
+                let svg = xmlDoc.querySelector('svg');
+
+                if (typeof imgID !== 'undefined') {
+                    svg.setAttribute('id', imgID);
+                }
+
+                if (typeof imgClass !== 'undefined') {
+                    svg.setAttribute('class', imgClass + ' replaced-svg');
+                }
+
+                svg.removeAttribute('xmlns:a');
+
+                el.parentNode.replaceChild(svg, el);
+            })
+    });
 
 
 
@@ -62,14 +87,14 @@ jQuery(document).ready(function ($) {
     $('.wcpscu_radio_layout').hide();
 
     // autoplay dependable
-    if( $("input[name='wcpscu[A_play]']:checked").val() === 'yes' ) {
+    if ($("input[name='wcpscu[A_play]']:checked").val() === 'yes') {
         $('.wpcu_auto_play_depend').show();
     } else {
         $('.wpcu_auto_play_depend').hide();
     }
 
-    $('.wcpcu_auto_play').on('click', function(){ 
-        if( $(this).val() === 'yes' ) {
+    $('.wcpcu_auto_play').on('click', function () {
+        if ($(this).val() === 'yes') {
             $('.wpcu_auto_play_depend').show();
         } else {
             $('.wpcu_auto_play_depend').hide();
@@ -77,14 +102,14 @@ jQuery(document).ready(function ($) {
     });
 
     //navigation dependable
-    if( $("input[name='wcpscu[nav_show]']:checked").val() === 'yes' ) {
+    if ($("input[name='wcpscu[nav_show]']:checked").val() === 'yes') {
         $('.wpcu_navigation_depend').show();
     } else {
         $('.wpcu_navigation_depend').hide();
     }
 
-    $('.wcpcu_navigation').on('click', function(){ 
-        if( $(this).val() === 'yes' ) {
+    $('.wcpcu_navigation').on('click', function () {
+        if ($(this).val() === 'yes') {
             $('.wpcu_navigation_depend').show();
         } else {
             $('.wpcu_navigation_depend').hide();
@@ -92,19 +117,19 @@ jQuery(document).ready(function ($) {
     });
 
     //caraousel pagination dependable
-    if( $("input[name='wcpscu[carousel_pagination]']:checked").val() === 'yes' ) {
+    if ($("input[name='wcpscu[carousel_pagination]']:checked").val() === 'yes') {
         $('.wpcu_carousel_pagination_depend').show();
     } else {
         $('.wpcu_carousel_pagination_depend').hide();
     }
 
-    $('.wcpcu_carousel_pagination').on('click', function(){ 
-        if( $(this).val() === 'yes' ) {
+    $('.wcpcu_carousel_pagination').on('click', function () {
+        if ($(this).val() === 'yes') {
             $('.wpcu_carousel_pagination_depend').show();
         } else {
             $('.wpcu_carousel_pagination_depend').hide();
         }
     });
-    
+
 
 });
