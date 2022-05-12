@@ -888,10 +888,17 @@ ul.lcs_pro_features {
     flex-grow: 1;
     max-width: 100%;
     padding: 30px 40px;
+    text-align: center;
+}
+
+.cmb2-metabox-card .cmb2-metabox-card-textarea{
+    display: inline-flex;
+    justify-content: center;
 }
 
 .cmb2-metabox-card2 {
     border-right: 1px solid #F1F2F6;
+    
 }
 
 .cmb2-metabox-card h6 {
@@ -1161,12 +1168,9 @@ ul.lcs_pro_features {
 }
 
 .cmd-switch-item-icon .cmd-switch-item-icon__wrapper{
-    width: 16px;
-    height: 16px;
-    background: #00BC5E;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin-top: -2px;
+    margin-right: -2px;
+    display: block;
 }
 
 .cmd-switch-item img {
