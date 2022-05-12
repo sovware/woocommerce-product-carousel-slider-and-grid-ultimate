@@ -44,12 +44,11 @@ defined('ABSPATH') || die('Direct access is not allow');
 
     <div class="lcsp-tab">
         <?php
-                require_once WCPCSU_INC_DIR . 'settings/shortcode.php';
-                require_once WCPCSU_INC_DIR . 'settings/general.php';
-                require_once WCPCSU_INC_DIR . 'settings/carousel.php';
-                require_once WCPCSU_INC_DIR . 'settings/grid.php';
-                require_once WCPCSU_INC_DIR . 'settings/style.php';
-              ?>
-
+            require_once WCPCSU_INC_DIR . 'settings/shortcode.php';
+            require_once WCPCSU_INC_DIR . 'settings/general.php';
+            require_once WCPCSU_INC_DIR . 'settings/carousel.php';
+            require_once WCPCSU_INC_DIR . 'settings/grid.php';
+            require_once WCPCSU_INC_DIR . 'settings/style.php';
+        ?>
     </div> <!-- end lcsp-tab -->
 </div> <!-- end lcsp-tabs-container -->
