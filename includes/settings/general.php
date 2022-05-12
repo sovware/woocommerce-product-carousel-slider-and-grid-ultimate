@@ -133,9 +133,9 @@ $discount_ribbon_position   = ! empty( $discount_ribbon_position ) ? $discount_r
                             for="wcpscup_products_type"><?php esc_html_e('Header Position', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?></label>
                         <ul class="cmb2-radio-list cmb2-list">
                             <li>
-                                <input type="radio" class="cmb2-option" name="wcpscu[header_position]" id="middle" value="middle"
-                                <?php checked( 'middle', esc_attr( $header_position ), true );  ?>>
-                                <label for="middle"><?php esc_html_e('Middle', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?></label>
+                                <input type="radio" class="cmb2-option" name="wcpscu[header_position]" id="center" value="center"
+                                <?php checked( 'Center', esc_attr( $header_position ), true );  ?>>
+                                <label for="center"><?php esc_html_e('Center', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?></label>
                             </li>
 
                             <li>
