@@ -29,7 +29,11 @@ $discount_ribbon_position   = ! empty( $discount_ribbon_position ) ? $discount_r
                     <div class="cmd-switch">
                         <div class="cmd-switch-carousel <?php echo ( 'carousel' == $layout ) ? 'active' : ''; ?>">
                             <div class="cmd-switch-item cmd-switch-carousel-img" data-value="carousel">
-                                <span class="cmd-switch-item-icon"><i class="fas fa-check-square"></i></span>
+                                <span class="cmd-switch-item-icon">
+                                    <span class="cmd-switch-item-icon__wrapper">
+                                        <img class="svg_compile" src="<?php echo WCPCSU_URL .'assets/icons/checked.svg' ?>" >
+                                    </span>
+                                </span>
                                 <img src="<?php echo WCPCSU_URL .'admin/img/carousel.jpg' ?>" alt="carousel">
                                 <input type="radio" name="wcpscu[layout]" class="wcpscu_radio_layout wcpscu_carousel_layout" value="carousel" <?php checked( esc_attr( $layout ), 'carousel' ); ?>>
                             </div>
@@ -37,7 +41,11 @@ $discount_ribbon_position   = ! empty( $discount_ribbon_position ) ? $discount_r
                         </div>
                         <div class="cmd-switch-grid <?php echo ( 'grid' == $layout ) ? 'active' : ''; ?>">
                             <div class=" cmd-switch-item cmd-switch-grid-img" data-value="grid">
-                                <span class="cmd-switch-item-icon"><i class="fas fa-check-square"></i></span>
+                                <span class="cmd-switch-item-icon">
+                                    <span class="cmd-switch-item-icon__wrapper">
+                                        <img class="svg_compile" src="<?php echo WCPCSU_URL .'assets/icons/checked.svg' ?>" >
+                                    </span>
+                                </span>
                                 <img src="<?php echo WCPCSU_URL .'admin/img/grid.jpg' ?>" alt="grid">
                                 <input type="radio" name="wcpscu[layout]" class="wcpscu_radio_layout wcpscu_grid_layout" value="grid" <?php checked( esc_attr( $layout ), 'grid' ); ?>>
                             </div>
@@ -127,7 +135,7 @@ $discount_ribbon_position   = ! empty( $discount_ribbon_position ) ? $discount_r
                             <li>
                                 <input type="radio" class="cmb2-option" name="wcpscu[header_position]" id="middle" value="middle"
                                 <?php checked( 'middle', esc_attr( $header_position ), true );  ?>>
-                                <label for="center"><?php esc_html_e('Middle', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?></label>
+                                <label for="middle"><?php esc_html_e('Middle', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?></label>
                             </li>
 
                             <li>

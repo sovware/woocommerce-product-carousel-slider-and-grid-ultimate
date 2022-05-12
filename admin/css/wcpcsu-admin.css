@@ -105,10 +105,23 @@ body.post-type-wcpcsu-custom-post #wpfooter{
     align-items: center;
     font-size: 14px;
     font-weight: 500;
+    text-transform: capitalize;
+    transition: 0.3s;
+}
+
+.lcsp-tabs-menu-wrapper .lcsp-support:hover{
+    opacity: 0.7;
 }
 
 .lcsp-tabs-menu-wrapper .lcsp-support span{
     display: inline-block;
+    margin-right: 4px;
+}
+
+.lcsp-tabs-menu-wrapper .lcsp-support img{
+    margin-right: 4px;
+}
+.lcsp-tabs-menu-wrapper .lcsp-support svg{
     margin-right: 4px;
 }
 
@@ -167,6 +180,18 @@ body.post-type-wcpcsu-custom-post #wpfooter{
     color: #A1A8C6;
 }
 
+.lcsp-tabs-menu li a svg{
+    width: 16px;
+    margin-right: 6px;
+    transition: 0.3s;
+    fill: #A1A8C6;
+}
+
+.lcsp-tabs-menu li a img{
+    width: 16px;
+    margin-right: 6px;
+}
+
 .lcsp-tabs-menu li.current {
     position: relative;
     background-color: #fff;
@@ -197,6 +222,9 @@ body.post-type-wcpcsu-custom-post #wpfooter{
     color: #834EFF;
 }
 
+.lcsp-tabs-menu .current a svg{
+    fill: #834EFF;
+}
 
 .cmb2-wrap input.cmb2-text-small,
 .cmb2-wrap input.cmb2-timepicker {
@@ -316,7 +344,9 @@ body.post-type-wcpcsu-custom-post #wpfooter{
 .cmb2-wrap .cmb-product-columns .input-group input{
     margin: 0 !important;
 }
-
+.cmb-product-columns .input-group-prepend .input-group-text svg{
+    fill:#5A5F7D ;
+}
 .cmb-product-columns .input-group-prepend .input-group-text {
     display: flex;
     align-items: center;
@@ -1047,6 +1077,10 @@ ul.lcs_pro_features {
     text-align: center;
 }
 
+.cmd-switch >div{
+    cursor: pointer;
+}
+
 .cmd-switch-item {
 
     border: 2px solid #E3E6EF;
@@ -1124,6 +1158,15 @@ ul.lcs_pro_features {
 
 .cmd-switch-item-icon {
     display: none;
+}
+
+.cmd-switch-item-icon .cmd-switch-item-icon__wrapper{
+    width: 16px;
+    height: 16px;
+    background: #00BC5E;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .cmd-switch-item img {
