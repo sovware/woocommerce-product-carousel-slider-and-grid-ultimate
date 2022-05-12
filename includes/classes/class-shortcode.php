@@ -92,10 +92,10 @@ class wcpcsu_Shortcode
         $A_play                     = ! empty( $A_play ) ? $A_play : 'yes';
         $repeat_product             = ! empty( $repeat_product ) ? $repeat_product : 'yes';
         $stop_hover                 = ! empty( $stop_hover ) ? $stop_hover : true;
-        $carousel_desktop_column    = ! empty( $c_desktop ) ? $c_desktop : 4;
-        $carousel_laptop_column     = ! empty( $c_desktop_small ) ? $c_desktop_small : 3;
-        $carousel_tablet_column     = ! empty( $c_tablet ) ? $c_tablet : 2;
-        $carousel_mobile_column     = ! empty( $c_mobile ) ? $c_mobile : 1;
+        $carousel_desktop_column    = ! empty( $c_desktop ) ? intval( $c_desktop ) : 4;
+        $carousel_laptop_column     = ! empty( $c_desktop_small ) ? intval( $c_desktop_small ) : 3;
+        $carousel_tablet_column     = ! empty( $c_tablet ) ? intval( $c_tablet ) : 2;
+        $carousel_mobile_column     = ! empty( $c_mobile ) ? intval( $c_mobile ) : 1;
 
         // carousel navigation settings
         $nav_show                   = ! empty( $nav_show ) ? $nav_show : 'yes';

@@ -220,7 +220,7 @@ $carousel_pagination    = ! empty( $carousel_pagination ) ? $carousel_pagination
             <div class="cmb-row cmb-type-radio wpcu_navigation_depend">
                 <div class="cmb-th">
                     <label for="wcpscu[nav_arrow_color]">
-                        Navigation Style
+                        <?php esc_html_e( 'Navigation Style', 'woocommerce-product-carousel-slider-and-grid-ultimate' ); ?>
                     </label>
                 </div>
                 <div class="cmb-td">

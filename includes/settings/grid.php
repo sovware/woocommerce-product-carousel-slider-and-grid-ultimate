@@ -83,7 +83,7 @@ $g_mobile                 = ! empty( $g_mobile ) ? $g_mobile : '1';
             <div class="cmb-row cmb-type-radio">
                 <div class="cmb-th">
                     <label for="wcpscu[pagi_color]">
-                        Pagination Style
+                        <?php esc_html_e('Pagination Style', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?>
                     </label>
                 </div>
                 <div class="cmb-td">

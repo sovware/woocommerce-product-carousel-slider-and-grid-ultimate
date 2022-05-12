@@ -297,12 +297,17 @@ $discount_ribbon_position   = ! empty( $discount_ribbon_position ) ? $discount_r
                                 <?php esc_html_e( 'Position', 'woocommerce-product-carousel-slider-and-grid-ultimate' ); ?>
                         </label>
                         <select id="sale_ribbon_position" class="sale_ribbon_position" name="wcpscu[sale_ribbon_position]">
-                            <option value="top_left" <?php selected( esc_attr( $sale_ribbon_position ), 'top_left'); ?> >Top Left</option>
-                            <option value="top_right" <?php selected( esc_attr( $sale_ribbon_position ), 'top_right'); ?>>Top Right
+                            <option value="top_left" <?php selected( esc_attr( $sale_ribbon_position ), 'top_left'); ?> >
+                                <?php esc_html_e( 'Top Left', 'woocommerce-product-carousel-slider-and-grid-ultimate' ); ?>
                             </option>
-                            <option value="bottom_left" <?php selected( esc_attr( $sale_ribbon_position ), 'bottom_left'); ?>>Bottom Left
+                            <option value="top_right" <?php selected( esc_attr( $sale_ribbon_position ), 'top_right'); ?>>
+                                <?php esc_html_e( 'Top Right', 'woocommerce-product-carousel-slider-and-grid-ultimate' ); ?>
                             </option>
-                            <option value="bottom_right" <?php selected( esc_attr( $sale_ribbon_position ), 'bottom_right'); ?>>Bottom Right
+                            <option value="bottom_left" <?php selected( esc_attr( $sale_ribbon_position ), 'bottom_left'); ?>>
+                                <?php esc_html_e( 'Top Left', 'woocommerce-product-carousel-slider-and-grid-ultimate' ); ?>
+                            </option>
+                            <option value="bottom_right" <?php selected( esc_attr( $sale_ribbon_position ), 'bottom_right'); ?>>
+                                <?php esc_html_e( 'Top Right', 'woocommerce-product-carousel-slider-and-grid-ultimate' ); ?> 
                             </option>
                         </select>
                     </div>

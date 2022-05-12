@@ -221,15 +221,15 @@ if ( ! function_exists('wcpcsu_sanitize_array') ) {
      * @param array &$array The array of the data to sanitize
      * @return mixed
      */
-    function wcpcsu_sanitize_array(&$array)
+    function wcpcsu_sanitize_array( &$array )
     {
-        foreach ($array as &$value) {
-            if (!is_array($value)) {
+        foreach ( $array as &$value ) {
+            if ( ! is_array( $value ) ) {
                 // sanitize if value is not an array
-                $value = sanitize_text_field($value);
+                $value = sanitize_text_field( $value );
             } else {
                 // go inside this function again
-                wcpcsu_sanitize_array($value);
+                wcpcsu_sanitize_array( $value );
             }
         }
         return $array;

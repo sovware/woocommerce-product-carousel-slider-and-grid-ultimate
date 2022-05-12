@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WordPress Blank Pot v1.0.0\n"
-"POT-Creation-Date: 2022-05-10 10:07+0600\n"
+"POT-Creation-Date: 2022-05-12 11:43+0600\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Your Name <you@example.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -84,7 +84,7 @@ msgstr ""
 msgid "All Shortcodes"
 msgstr ""
 
-#: includes/classes/class-custom-post.php:59
+#: includes/classes/class-custom-post.php:58
 msgid "Created at"
 msgstr ""
 
@@ -92,7 +92,7 @@ msgstr ""
 msgid "Settings & Shortcode Generator"
 msgstr ""
 
-#: includes/classes/class-shortcode.php:232
+#: includes/classes/class-shortcode.php:238
 msgid "No products found"
 msgstr ""
 
@@ -113,25 +113,25 @@ msgid "Auto Play"
 msgstr ""
 
 #: includes/settings/carousel.php:27 includes/settings/carousel.php:49
-#: includes/settings/carousel.php:70 includes/settings/carousel.php:201
-#: includes/settings/carousel.php:301 includes/settings/general.php:107
-#: includes/settings/general.php:162 includes/settings/general.php:262
-#: includes/settings/general.php:318 includes/settings/general.php:372
-#: includes/settings/general.php:428 includes/settings/general.php:471
-#: includes/settings/general.php:494 includes/settings/general.php:517
-#: includes/settings/general.php:540 includes/settings/general.php:562
+#: includes/settings/carousel.php:75 includes/settings/carousel.php:186
+#: includes/settings/carousel.php:286 includes/settings/general.php:115
+#: includes/settings/general.php:170 includes/settings/general.php:270
+#: includes/settings/general.php:331 includes/settings/general.php:385
+#: includes/settings/general.php:441 includes/settings/general.php:484
+#: includes/settings/general.php:507 includes/settings/general.php:530
+#: includes/settings/general.php:553 includes/settings/general.php:575
 #: includes/settings/grid.php:69
 msgid "Yes"
 msgstr ""
 
-#: includes/settings/carousel.php:32 includes/settings/carousel.php:54
-#: includes/settings/carousel.php:76 includes/settings/carousel.php:208
-#: includes/settings/carousel.php:308 includes/settings/general.php:114
-#: includes/settings/general.php:168 includes/settings/general.php:268
-#: includes/settings/general.php:324 includes/settings/general.php:378
-#: includes/settings/general.php:434 includes/settings/general.php:476
-#: includes/settings/general.php:499 includes/settings/general.php:523
-#: includes/settings/general.php:546 includes/settings/general.php:567
+#: includes/settings/carousel.php:32 includes/settings/carousel.php:57
+#: includes/settings/carousel.php:82 includes/settings/carousel.php:193
+#: includes/settings/carousel.php:293 includes/settings/general.php:122
+#: includes/settings/general.php:176 includes/settings/general.php:276
+#: includes/settings/general.php:337 includes/settings/general.php:391
+#: includes/settings/general.php:447 includes/settings/general.php:489
+#: includes/settings/general.php:512 includes/settings/general.php:536
+#: includes/settings/general.php:559 includes/settings/general.php:580
 #: includes/settings/grid.php:76
 msgid "No"
 msgstr ""
@@ -140,87 +140,83 @@ msgstr ""
 msgid "Repeat Product"
 msgstr ""
 
-#: includes/settings/carousel.php:63
+#: includes/settings/carousel.php:67
 msgid "Stop on Hover"
 msgstr ""
 
-#: includes/settings/carousel.php:86
+#: includes/settings/carousel.php:92
 msgid "Products Column"
 msgstr ""
 
-#: includes/settings/carousel.php:127
+#: includes/settings/carousel.php:137
 msgid "Set products column(s) in different devices."
 msgstr ""
 
-#: includes/settings/carousel.php:136
+#: includes/settings/carousel.php:146
 msgid "Slide Speed"
 msgstr ""
 
-#: includes/settings/carousel.php:143
+#: includes/settings/carousel.php:153
 msgid "Here 1000 is equal to 1 second. So provide a speed accordingly"
 msgstr ""
 
-#: includes/settings/carousel.php:151
+#: includes/settings/carousel.php:161
 msgid "Slide Timeout"
 msgstr ""
 
-#: includes/settings/carousel.php:158
+#: includes/settings/carousel.php:168
 msgid "Here 1000 is equal to 1 second. So provide a timeout accordingly"
 msgstr ""
 
-#: includes/settings/carousel.php:166
-msgid "Scroll"
-msgstr ""
-
-#: includes/settings/carousel.php:175
-msgid "Per Item"
-msgstr ""
-
-#: includes/settings/carousel.php:181
-msgid "Per Page"
-msgstr ""
-
-#: includes/settings/carousel.php:192
+#: includes/settings/carousel.php:177
 msgid "Navigation Show"
 msgstr ""
 
-#: includes/settings/carousel.php:216
+#: includes/settings/carousel.php:201
 msgid "Navigation Position"
 msgstr ""
 
-#: includes/settings/carousel.php:245
+#: includes/settings/carousel.php:223
+msgid "Navigation Style"
+msgstr ""
+
+#: includes/settings/carousel.php:230
 msgid "Navigation Arrow Color"
 msgstr ""
 
-#: includes/settings/carousel.php:252
+#: includes/settings/carousel.php:237
 msgid "Navigation Background Color"
 msgstr ""
 
-#: includes/settings/carousel.php:259
+#: includes/settings/carousel.php:244
 msgid "Navigation Border Color"
 msgstr ""
 
-#: includes/settings/carousel.php:266
+#: includes/settings/carousel.php:251
 msgid "Navigation Hover Arrow Color"
 msgstr ""
 
-#: includes/settings/carousel.php:273
+#: includes/settings/carousel.php:258
 msgid "Navigation Hover Background Color"
 msgstr ""
 
-#: includes/settings/carousel.php:280
+#: includes/settings/carousel.php:265
 msgid "Navigation Hover Border Color"
 msgstr ""
 
-#: includes/settings/carousel.php:292
+#: includes/settings/carousel.php:277
 msgid "Pagination Show"
 msgstr ""
 
-#: includes/settings/carousel.php:325
+#: includes/settings/carousel.php:303 includes/settings/grid.php:86
+msgid "Pagination Style"
+msgstr ""
+
+#: includes/settings/carousel.php:310
 msgid "Dots Color"
 msgstr ""
 
-#: includes/settings/carousel.php:332
+#: includes/settings/carousel.php:317
 msgid "Dots Active Color"
 msgstr ""
 
@@ -228,7 +224,7 @@ msgstr ""
 msgid "Products Per Page"
 msgstr ""
 
-#: includes/settings/general.php:8 includes/settings/general.php:84
+#: includes/settings/general.php:8 includes/settings/general.php:92
 msgid "Total Products to Display"
 msgstr ""
 
@@ -236,215 +232,223 @@ msgstr ""
 msgid "Layout"
 msgstr ""
 
-#: includes/settings/general.php:36
+#: includes/settings/general.php:40
 msgid "Carousel"
 msgstr ""
 
-#: includes/settings/general.php:44
+#: includes/settings/general.php:52
 msgid "Grid"
 msgstr ""
 
-#: includes/settings/general.php:52
+#: includes/settings/general.php:60
 msgid "Select Theme"
 msgstr ""
 
-#: includes/settings/general.php:90
+#: includes/settings/general.php:98
 msgid "How many products to display in the carousel slider"
 msgstr ""
 
-#: includes/settings/general.php:98
+#: includes/settings/general.php:106
 msgid "Display Header"
 msgstr ""
 
-#: includes/settings/general.php:119
+#: includes/settings/general.php:127
 msgid "Header Title"
 msgstr ""
 
-#: includes/settings/general.php:125
+#: includes/settings/general.php:133
 msgid "Header Position"
 msgstr ""
 
-#: includes/settings/general.php:130
+#: includes/settings/general.php:138
 msgid "Middle"
 msgstr ""
 
-#: includes/settings/general.php:136
+#: includes/settings/general.php:144
 msgid "Left"
 msgstr ""
 
-#: includes/settings/general.php:142
+#: includes/settings/general.php:150
 msgid "Right"
 msgstr ""
 
-#: includes/settings/general.php:154
+#: includes/settings/general.php:162
 msgid "Display Product Title"
 msgstr ""
 
-#: includes/settings/general.php:177
+#: includes/settings/general.php:185
 msgid "Products Type"
 msgstr ""
 
-#: includes/settings/general.php:185
+#: includes/settings/general.php:193
 msgid "Latest Products"
 msgstr ""
 
-#: includes/settings/general.php:190
+#: includes/settings/general.php:198
 msgid "Older Products"
 msgstr ""
 
-#: includes/settings/general.php:195
+#: includes/settings/general.php:203
 msgid "Featured Products"
 msgstr ""
 
-#: includes/settings/general.php:199
+#: includes/settings/general.php:207
 msgid "What type of products to display in the carousel slider"
 msgstr ""
 
-#: includes/settings/general.php:208
+#: includes/settings/general.php:216
 msgid "On Sale Products"
 msgstr ""
 
-#: includes/settings/general.php:212
+#: includes/settings/general.php:220
 msgid "Best Selling Products"
 msgstr ""
 
-#: includes/settings/general.php:216
+#: includes/settings/general.php:224
 msgid "Top Rated Products"
 msgstr ""
 
-#: includes/settings/general.php:220
+#: includes/settings/general.php:228
 msgid "Random Products"
 msgstr ""
 
-#: includes/settings/general.php:224
+#: includes/settings/general.php:232
 msgid "Category Products"
 msgstr ""
 
-#: includes/settings/general.php:228
+#: includes/settings/general.php:236
 msgid "Products by ID"
 msgstr ""
 
-#: includes/settings/general.php:232
+#: includes/settings/general.php:240
 msgid "Products by SKU"
 msgstr ""
 
-#: includes/settings/general.php:236
+#: includes/settings/general.php:244
 msgid "Products by Tags"
 msgstr ""
 
-#: includes/settings/general.php:240
+#: includes/settings/general.php:248
 msgid "Products by Year"
 msgstr ""
 
-#: includes/settings/general.php:244
+#: includes/settings/general.php:252
 msgid "Products by Month"
 msgstr ""
 
-#: includes/settings/general.php:254
+#: includes/settings/general.php:262
 msgid "Display \"Sale\" Badge"
 msgstr ""
 
-#: includes/settings/general.php:272
+#: includes/settings/general.php:280
 msgid "Whether to show the \"Sale\" ribbon for On-Sale products or not"
 msgstr ""
 
-#: includes/settings/general.php:278
+#: includes/settings/general.php:286
 msgid "Text"
 msgstr ""
 
-#: includes/settings/general.php:282
+#: includes/settings/general.php:290
 msgid "Sale!"
 msgstr ""
 
-#: includes/settings/general.php:289 includes/settings/general.php:344
-#: includes/settings/general.php:400 includes/settings/general.php:444
+#: includes/settings/general.php:297 includes/settings/general.php:357
+#: includes/settings/general.php:413 includes/settings/general.php:457
 msgid "Position"
 msgstr ""
 
-#: includes/settings/general.php:310
+#: includes/settings/general.php:301 includes/settings/general.php:307
+msgid "Top Left"
+msgstr ""
+
+#: includes/settings/general.php:304 includes/settings/general.php:310
+msgid "Top Right"
+msgstr ""
+
+#: includes/settings/general.php:323
 msgid "Display \"Featured\" Badge"
 msgstr ""
 
-#: includes/settings/general.php:328
+#: includes/settings/general.php:341
 msgid ""
 "Whether to show the \"Featured\" ribbon for featured products or not."
 msgstr ""
 
-#: includes/settings/general.php:334
+#: includes/settings/general.php:347
 msgid "Featured!"
 msgstr ""
 
-#: includes/settings/general.php:337
+#: includes/settings/general.php:350
 msgid ""
 "Enter the text for the featured ribbon. Default text is \"Featured!\"."
 msgstr ""
 
-#: includes/settings/general.php:364
+#: includes/settings/general.php:377
 msgid "Display the \"Sold Out\" Badge"
 msgstr ""
 
-#: includes/settings/general.php:382 includes/settings/general.php:438
+#: includes/settings/general.php:395 includes/settings/general.php:451
 msgid ""
 "Whether to display the \"Sold Out\" ribbon for out-of-stock products "
 "or not"
 msgstr ""
 
-#: includes/settings/general.php:390
+#: includes/settings/general.php:403
 msgid "Sold Out!"
 msgstr ""
 
-#: includes/settings/general.php:393
+#: includes/settings/general.php:406
 msgid ""
 "Enter the text for the sold out ribbon. Default text is \"Sold Out!\"."
 msgstr ""
 
-#: includes/settings/general.php:420
+#: includes/settings/general.php:433
 msgid "Display the \"Discount\" Badge"
 msgstr ""
 
-#: includes/settings/general.php:464
+#: includes/settings/general.php:477
 msgid "Display Product Price"
 msgstr ""
 
-#: includes/settings/general.php:486
+#: includes/settings/general.php:499
 msgid "Display Product Ratings"
 msgstr ""
 
-#: includes/settings/general.php:509
+#: includes/settings/general.php:522
 msgid "Display \"Add to Cart\" Button"
 msgstr ""
 
-#: includes/settings/general.php:532
+#: includes/settings/general.php:545
 msgid "Display \"Quick View Icon\""
 msgstr ""
 
-#: includes/settings/general.php:555
+#: includes/settings/general.php:568
 msgid "Image Resize & Crop"
 msgstr ""
 
-#: includes/settings/general.php:570
+#: includes/settings/general.php:583
 msgid ""
 "If the product images are not in the same size, this feature is "
 "helpful. It automatically resizes and crops. "
 msgstr ""
 
-#: includes/settings/general.php:582
+#: includes/settings/general.php:595
 msgid "Image Size"
 msgstr ""
 
-#: includes/settings/general.php:588
+#: includes/settings/general.php:601
 msgid "Width"
 msgstr ""
 
-#: includes/settings/general.php:593
+#: includes/settings/general.php:606
 msgid "Image cropping width"
 msgstr ""
 
-#: includes/settings/general.php:598
+#: includes/settings/general.php:611
 msgid "Height"
 msgstr ""
 
-#: includes/settings/general.php:603
+#: includes/settings/general.php:616
 msgid "Image cropping height"
 msgstr ""
 
@@ -500,7 +504,7 @@ msgstr ""
 msgid "Pagination Active Background Color"
 msgstr ""
 
-#: includes/settings/settings.php:15
+#: includes/settings/settings.php:11
 msgid "Shortcodes"
 msgstr ""
 
@@ -508,15 +512,15 @@ msgstr ""
 msgid "General Settings"
 msgstr ""
 
-#: includes/settings/settings.php:20
+#: includes/settings/settings.php:23
 msgid "Carousel Settings"
 msgstr ""
 
-#: includes/settings/settings.php:24
+#: includes/settings/settings.php:29
 msgid "Grid Settings"
 msgstr ""
 
-#: includes/settings/settings.php:26
+#: includes/settings/settings.php:35
 msgid "Style Settings"
 msgstr ""
 
@@ -542,6 +546,11 @@ msgstr ""
 msgid "Font Size"
 msgstr ""
 
+#: includes/settings/style.php:18 includes/settings/style.php:50
+#: includes/settings/style.php:113 includes/settings/style.php:159
+msgid "px"
+msgstr ""
+
 #: includes/settings/style.php:24 includes/settings/style.php:56
 #: includes/settings/style.php:119 includes/settings/style.php:193
 msgid "Font Color"
@@ -549,10 +558,6 @@ msgstr ""
 
 #: includes/settings/style.php:34
 msgid "Product Title Font"
-msgstr ""
-
-#: includes/settings/style.php:50
-msgid "px"
 msgstr ""
 
 #: includes/settings/style.php:74
@@ -607,20 +612,20 @@ msgstr ""
 msgid "Icon Background Color"
 msgstr ""
 
-#: main.php:122
+#: main.php:112
 msgid "Support"
 msgstr ""
 
-#: main.php:122
+#: main.php:112
 msgid "Usage & Support"
 msgstr ""
 
-#: main.php:153
+#: main.php:143
 msgid ""
 "WooCommerce plugin is not activated. Please install and activate it to "
 "use"
 msgstr ""
 
-#: main.php:153
+#: main.php:143
 msgid "WooCommerce Product Carousel Slider Ultimate Plugin"
 msgstr ""
