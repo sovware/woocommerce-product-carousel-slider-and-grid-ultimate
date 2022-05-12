@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap');
 /* Default Overwrite */
 #poststuff #post-body.columns-2 {
     margin-right: 0;
@@ -84,7 +84,7 @@ div.error {
 /* //Extension css */
 
 body.post-type-wcpcsu-custom-post {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Rubik', sans-serif;
 }
 
 body.post-type-wcpcsu-custom-post #wpfooter{
