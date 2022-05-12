@@ -1,13 +1,7 @@
 <?php
 defined('ABSPATH') || die('Direct access is not allow');
 ?>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
-    crossorigin="anonymous" />
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 <!--TAB 1  Shortcode -->
-
 <div id="lcsp-tabs-container">
     <div class="lcsp-tabs-menu-wrapper">
         <ul class="lcsp-tabs-menu">

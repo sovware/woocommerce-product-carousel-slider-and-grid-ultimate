@@ -26,103 +26,103 @@ class wcpcsu_Shortcode
         $value = is_array( $data_array ) ? $data_array : array();
         extract( $value );
         $rand_id                 = rand();
-        $total_products          = ! empty( $total_products ) ? intval( esc_attr( $total_products ) ) : 6;
-        $layout                  = ! empty( $layout ) ? esc_attr( $layout ) : 'carousel';
-        $products_type           = ! empty( $products_type ) ? esc_attr( $products_type ) : 'latest';
-        $img_crop                = ! empty( $img_crop ) ? esc_attr( $img_crop ) : 'yes';
-        $crop_image_width        = ! empty( $crop_image_width ) ? intval( esc_attr( $crop_image_width ) ) : 300;
-        $crop_image_height       = ! empty( $crop_image_height ) ? intval( esc_attr( $crop_image_height ) ) : 300;
-        $display_price           = ! empty( $display_price ) ? esc_attr( $display_price ) : 'yes';
+        $total_products          = ! empty( $total_products ) ? intval( $total_products ) : 6;
+        $layout                  = ! empty( $layout ) ? $layout : 'carousel';
+        $products_type           = ! empty( $products_type ) ? $products_type : 'latest';
+        $img_crop                = ! empty( $img_crop ) ? $img_crop : 'yes';
+        $crop_image_width        = ! empty( $crop_image_width ) ? intval( $crop_image_width ) : 300;
+        $crop_image_height       = ! empty( $crop_image_height ) ? intval( $crop_image_height ) : 300;
+        $display_price           = ! empty( $display_price ) ? $display_price : 'yes';
 
-        $display_cart            = ! empty( $display_cart ) ? esc_attr( $display_cart ) : 'yes';
-        $ribbon                  = ! empty( $ribbon ) ? esc_attr( $ribbon ) : 'discount';
-        $header_position         = ! empty( $header_position ) ? esc_attr( $header_position ) : 'middle';
-        $h_title_show            = ! empty( $h_title_show ) ? esc_attr( $h_title_show ) : 'no';
-        $header_font_size        = ! empty( $header_font_size ) ? esc_attr( $header_font_size ) : '24px';
-        $header_font_color       = ! empty( $header_font_color ) ? esc_attr( $header_font_color ) : '#303030';
-        $display_full_title      = ! empty( $display_full_title ) ? esc_attr( $display_full_title ) : 'no';
-        $g_column                = ! empty( $g_column ) ? intval( esc_attr( $g_column ) ) : 3;
-        $g_tablet                = ! empty( $g_tablet ) ? intval( esc_attr( $g_tablet ) ) : 2;
-        $g_mobile                = ! empty( $g_mobile ) ? intval( esc_attr( $g_mobile ) ) : 1;
-        $grid_pagination         = ! empty( $grid_pagination ) ? esc_attr( $grid_pagination ) : 'no';
-        $slide_time              = ! empty( $slide_time )  ? esc_attr( $slide_time ) : '2000' ;
+        $display_cart            = ! empty( $display_cart ) ? $display_cart : 'yes';
+        $ribbon                  = ! empty( $ribbon ) ? $ribbon : 'discount';
+        $header_position         = ! empty( $header_position ) ? $header_position : 'middle';
+        $h_title_show            = ! empty( $h_title_show ) ? $h_title_show : 'no';
+        $header_font_size        = ! empty( $header_font_size ) ? $header_font_size : '24px';
+        $header_font_color       = ! empty( $header_font_color ) ? $header_font_color : '#303030';
+        $display_full_title      = ! empty( $display_full_title ) ? $display_full_title : 'no';
+        $g_column                = ! empty( $g_column ) ? intval( $g_column ) : 3;
+        $g_tablet                = ! empty( $g_tablet ) ? intval( $g_tablet ) : 2;
+        $g_mobile                = ! empty( $g_mobile ) ? intval( $g_mobile ) : 1;
+        $grid_pagination         = ! empty( $grid_pagination ) ? $grid_pagination : 'no';
+        $slide_time              = ! empty( $slide_time )  ? $slide_time : '2000' ;
 
-        $display_title           = ! empty( $display_title ) ? esc_attr( $display_title ) : 'yes';
-        $display_cart            = ! empty( $display_cart ) ? esc_attr( $display_cart ) : 'yes';
-        $display_price           = ! empty( $display_price ) ? esc_attr( $display_price ) : 'yes';
-        $display_ratings         = ! empty( $display_ratings ) ? esc_attr( $display_ratings ) : 'yes';
-        $quick_view              = ! empty( $quick_view ) ? esc_attr( $quick_view ) : 'yes';
+        $display_title           = ! empty( $display_title ) ? $display_title : 'yes';
+        $display_cart            = ! empty( $display_cart ) ? $display_cart : 'yes';
+        $display_price           = ! empty( $display_price ) ? $display_price : 'yes';
+        $display_ratings         = ! empty( $display_ratings ) ? $display_ratings : 'yes';
+        $quick_view              = ! empty( $quick_view ) ? $quick_view : 'yes';
 
         $ribbon_args = array(
-            'display_sale_ribbon'        => ! empty( $display_sale_ribbon ) ? esc_attr( $display_sale_ribbon ) : 'no',
-            'sale_ribbon_text'           => ! empty( $sale_ribbon_text ) ? esc_attr( $sale_ribbon_text ) : '',
-            'sale_ribbon_position'       => ! empty( $sale_ribbon_position ) ? esc_attr( $sale_ribbon_position ) : 'top_left',
-            'display_featured_ribbon'    => ! empty( $display_featured_ribbon ) ? esc_attr( $display_featured_ribbon ) : 'no',
-            'feature_ribbon_text'        => ! empty( $feature_ribbon_text ) ? esc_attr( $feature_ribbon_text ) : '',
-            'featured_ribbon_position'   => ! empty( $featured_ribbon_position ) ? esc_attr( $featured_ribbon_position ) : 'top_right',
-            'display_sold_out_ribbon'    => ! empty( $display_sold_out_ribbon ) ? esc_attr( $display_sold_out_ribbon ) : 'no',
-            'sold_out_ribbon_text'       => ! empty( $sold_out_ribbon_text ) ? esc_attr( $sold_out_ribbon_text ) : '',
-            'sold_out_ribbon_position'   => ! empty( $sold_out_ribbon_position ) ? esc_attr( $sold_out_ribbon_position ) : 'bottom_left',
-            'display_discount_ribbon'    => ! empty( $display_discount_ribbon ) ? esc_attr( $display_discount_ribbon ) : 'no',
-            'discount_ribbon_position'   => ! empty( $discount_ribbon_position ) ? esc_attr( $discount_ribbon_position ) : 'bottom_right',
+            'display_sale_ribbon'        => ! empty( $display_sale_ribbon ) ? $display_sale_ribbon : 'no',
+            'sale_ribbon_text'           => ! empty( $sale_ribbon_text ) ? $sale_ribbon_text : '',
+            'sale_ribbon_position'       => ! empty( $sale_ribbon_position ) ? $sale_ribbon_position : 'top_left',
+            'display_featured_ribbon'    => ! empty( $display_featured_ribbon ) ? $display_featured_ribbon : 'no',
+            'feature_ribbon_text'        => ! empty( $feature_ribbon_text ) ? $feature_ribbon_text : '',
+            'featured_ribbon_position'   => ! empty( $featured_ribbon_position ) ? $featured_ribbon_position : 'top_right',
+            'display_sold_out_ribbon'    => ! empty( $display_sold_out_ribbon ) ? $display_sold_out_ribbon : 'no',
+            'sold_out_ribbon_text'       => ! empty( $sold_out_ribbon_text ) ? $sold_out_ribbon_text : '',
+            'sold_out_ribbon_position'   => ! empty( $sold_out_ribbon_position ) ? $sold_out_ribbon_position : 'bottom_left',
+            'display_discount_ribbon'    => ! empty( $display_discount_ribbon ) ? $display_discount_ribbon : 'no',
+            'discount_ribbon_position'   => ! empty( $discount_ribbon_position ) ? $discount_ribbon_position : 'bottom_right',
         );
 
-        $theme                          = ! empty( $theme ) ? esc_attr( $theme ) : 'theme_1';
-        $title_font_size                = ! empty( $title_font_size[$theme] ) ? esc_attr( $title_font_size[$theme] ) : '16';
-        $title_font_color               = ! empty( $title_font_color[$theme] ) ? esc_attr( $title_font_color[$theme] ) : '#363940';
-        $title_hover_font_color         = ! empty( $title_hover_font_color[$theme] ) ? esc_attr( $title_hover_font_color[$theme] ) : '#ff5500';
-        $price_font_size                = ! empty( $price_font_size[$theme] ) ? esc_attr( $price_font_size[$theme] ) : '14';
-        $price_font_color               = ! empty( $price_font_color[$theme] ) ? esc_attr( $price_font_color[$theme] ) : '#ff5500';
-        $ratings_size                   = ! empty( $ratings_size[$theme] ) ? esc_attr( $ratings_size[$theme] ) : '1em';
-        $ratings_color                  = ! empty( $ratings_color[$theme] ) ? esc_attr( $ratings_color[$theme] ) : '#FEB507';
-        $cart_font_color                = ! empty( $cart_font_color[$theme] ) ? esc_attr( $cart_font_color[$theme] ) : '#ffffff';
-        $cart_bg_color                  = ! empty( $cart_bg_color[$theme] ) ? esc_attr( $cart_bg_color[$theme] ) : '#ff5500';
-        $cart_button_hover_color        = ! empty( $cart_button_hover_color[$theme] ) ? esc_attr( $cart_button_hover_color[$theme] ) : '#9A9A9A';
-        $cart_button_hover_font_color   = ! empty( $cart_button_hover_font_color[$theme] ) ? esc_attr( $cart_button_hover_font_color[$theme] ) : '#ffffff';
-        $ribbon_bg_color                = ! empty( $ribbon_bg_color[$theme] ) ? esc_attr( $ribbon_bg_color[$theme] ) : '#A4C741';
-        $quick_view_icon_color          = ! empty( $quick_view_icon_color[$theme] ) ? esc_attr( $quick_view_icon_color[$theme] ) : '#ffffff';
-        $quick_view_icon_back_color     = ! empty( $quick_view_icon_back_color[$theme] ) ? esc_attr( $quick_view_icon_back_color[$theme] ) : '#ff5500';
+        $theme                          = ! empty( $theme ) ? $theme : 'theme_1';
+        $title_font_size                = ! empty( $title_font_size[ $theme ] ) ? $title_font_size[ $theme ] : '16';
+        $title_font_color               = ! empty( $title_font_color[ $theme ] ) ? $title_font_color[ $theme ] : '#363940';
+        $title_hover_font_color         = ! empty( $title_hover_font_color[ $theme ] ) ? $title_hover_font_color[ $theme ] : '#ff5500';
+        $price_font_size                = ! empty( $price_font_size[ $theme ] ) ? $price_font_size[ $theme ] : '14';
+        $price_font_color               = ! empty( $price_font_color[ $theme ] ) ? $price_font_color[ $theme ] : '#ff5500';
+        $ratings_size                   = ! empty( $ratings_size[ $theme ] ) ? $ratings_size[ $theme ] : '1em';
+        $ratings_color                  = ! empty( $ratings_color[ $theme ] ) ? $ratings_color[ $theme ] : '#FEB507';
+        $cart_font_color                = ! empty( $cart_font_color[ $theme ] ) ? $cart_font_color[ $theme ] : '#ffffff';
+        $cart_bg_color                  = ! empty( $cart_bg_color[ $theme ] ) ? $cart_bg_color[ $theme ] : '#ff5500';
+        $cart_button_hover_color        = ! empty( $cart_button_hover_color[ $theme ] ) ? $cart_button_hover_color[ $theme ] : '#9A9A9A';
+        $cart_button_hover_font_color   = ! empty( $cart_button_hover_font_color[ $theme ] ) ? $cart_button_hover_font_color[ $theme ] : '#ffffff';
+        $ribbon_bg_color                = ! empty( $ribbon_bg_color[ $theme ] ) ? $ribbon_bg_color[ $theme ] : '#A4C741';
+        $quick_view_icon_color          = ! empty( $quick_view_icon_color[ $theme ] ) ? $quick_view_icon_color[ $theme ] : '#ffffff';
+        $quick_view_icon_back_color     = ! empty( $quick_view_icon_back_color[ $theme ] ) ? $quick_view_icon_back_color[ $theme ] : '#ff5500';
 
         $paged                          =  wcpcsu_get_paged_num();
         $paged                          = ! empty( $paged ) ? $paged : '';
         $loop                           = $this->parse_query( $data_array );
 
         // carousel settings
-        $slide_speed                = ! empty( $slide_speed ) ? esc_attr( $slide_speed ) : '2000';
-        $A_play                     = ! empty( $A_play ) ? esc_attr( $A_play ) : 'yes';
-        $repeat_product             = ! empty( $repeat_product ) ? esc_attr( $repeat_product ) : 'yes';
-        $stop_hover                 = ! empty( $stop_hover ) ? esc_attr( $stop_hover ) : true;
-        $carousel_desktop_column    = ! empty( $c_desktop ) ? esc_attr( $c_desktop ) : 4;
-        $carousel_laptop_column     = ! empty( $c_desktop_small ) ? esc_attr( $c_desktop_small ) : 3;
-        $carousel_tablet_column     = ! empty( $c_tablet ) ? esc_attr( $c_tablet ) : 2;
-        $carousel_mobile_column     = ! empty( $c_mobile ) ? esc_attr( $c_mobile ) : 1;
+        $slide_speed                = ! empty( $slide_speed ) ? $slide_speed : '2000';
+        $A_play                     = ! empty( $A_play ) ? $A_play : 'yes';
+        $repeat_product             = ! empty( $repeat_product ) ? $repeat_product : 'yes';
+        $stop_hover                 = ! empty( $stop_hover ) ? $stop_hover : true;
+        $carousel_desktop_column    = ! empty( $c_desktop ) ? $c_desktop : 4;
+        $carousel_laptop_column     = ! empty( $c_desktop_small ) ? $c_desktop_small : 3;
+        $carousel_tablet_column     = ! empty( $c_tablet ) ? $c_tablet : 2;
+        $carousel_mobile_column     = ! empty( $c_mobile ) ? $c_mobile : 1;
 
         // carousel navigation settings
-        $nav_show                   = ! empty( $nav_show ) ? esc_attr( $nav_show ) : 'yes';
-        $nav_position               = ! empty( $nav_position ) ? esc_attr( $nav_position ) : 'middle';
-        $nav_arrow_color            = ! empty( $nav_arrow_color ) ? esc_attr( $nav_arrow_color ) : '#333';
-        $nav_back_color             = ! empty( $nav_back_color ) ? esc_attr( $nav_back_color ) : '#fff';
-        $nav_border_color           = ! empty( $nav_border_color ) ? esc_attr( $nav_border_color ) : '#e4e4ed';
-        $nav_arrow_hover_color      = ! empty( $nav_arrow_hover_color ) ? esc_attr( $nav_arrow_hover_color ) : '#fff';
-        $nav_back_hover_color       = ! empty( $nav_back_hover_color ) ? esc_attr( $nav_back_hover_color ) : '#ff5500';
-        $nav_border_hover           = ! empty( $nav_border_hover ) ? esc_attr( $nav_border_hover ) : '#ff5500';
+        $nav_show                   = ! empty( $nav_show ) ? $nav_show : 'yes';
+        $nav_position               = ! empty( $nav_position ) ? $nav_position : 'middle';
+        $nav_arrow_color            = ! empty( $nav_arrow_color ) ? $nav_arrow_color : '#333';
+        $nav_back_color             = ! empty( $nav_back_color ) ? $nav_back_color : '#fff';
+        $nav_border_color           = ! empty( $nav_border_color ) ? $nav_border_color : '#e4e4ed';
+        $nav_arrow_hover_color      = ! empty( $nav_arrow_hover_color ) ? $nav_arrow_hover_color : '#fff';
+        $nav_back_hover_color       = ! empty( $nav_back_hover_color ) ? $nav_back_hover_color : '#ff5500';
+        $nav_border_hover           = ! empty( $nav_border_hover ) ? $nav_border_hover : '#ff5500';
 
         // carousel pagination settings
-        $carousel_pagination        = ! empty( $carousel_pagination ) ? esc_attr( $carousel_pagination ) : 'no';
-        $dots_color                 = ! empty( $dots_color ) ? esc_attr( $dots_color ) : '#333';
-        $dots_active_color          = ! empty( $dots_active_color ) ? esc_attr( $dots_active_color ) : '#fff';
+        $carousel_pagination        = ! empty( $carousel_pagination ) ? $carousel_pagination : 'no';
+        $dots_color                 = ! empty( $dots_color ) ? $dots_color : '#333';
+        $dots_active_color          = ! empty( $dots_active_color ) ? $dots_active_color : '#fff';
         //grid pagination settings
-        $pagi_color                 = ! empty( $pagi_color ) ? esc_attr( $pagi_color ) : '#333';
-        $pagi_border_color          = ! empty( $pagi_border_color ) ? esc_attr( $pagi_border_color ) : '#e4e4e4';
-        $pagi_back_color            = ! empty( $pagi_back_color ) ? esc_attr( $pagi_back_color ) : '#fff';
+        $pagi_color                 = ! empty( $pagi_color ) ? $pagi_color : '#333';
+        $pagi_border_color          = ! empty( $pagi_border_color ) ? $pagi_border_color : '#e4e4e4';
+        $pagi_back_color            = ! empty( $pagi_back_color ) ? $pagi_back_color : '#fff';
 
-        $pagi_hover_color           = ! empty( $pagi_hover_color ) ? esc_attr( $pagi_hover_color ) : '#fff';
-        $pagi_hover_border_color    = ! empty( $pagi_hover_border_color ) ? esc_attr( $pagi_hover_border_color ) : '#ff5500';
-        $pagi_hover_back_color      = ! empty( $pagi_hover_back_color ) ? esc_attr( $pagi_hover_back_color ) : '#ff5500';
+        $pagi_hover_color           = ! empty( $pagi_hover_color ) ? $pagi_hover_color : '#fff';
+        $pagi_hover_border_color    = ! empty( $pagi_hover_border_color ) ? $pagi_hover_border_color : '#ff5500';
+        $pagi_hover_back_color      = ! empty( $pagi_hover_back_color ) ? $pagi_hover_back_color : '#ff5500';
 
-        $pagi_active_color          = ! empty( $pagi_active_color ) ? esc_attr( $pagi_active_color ) : '#fff';
-        $pagi_active_border_color   = ! empty( $pagi_active_border_color ) ? esc_attr( $pagi_active_border_color ) : '#ff5500';
-        $pagi_active_back_color     = ! empty( $pagi_active_back_color ) ? esc_attr( $pagi_active_back_color ) : '#ff5500';
+        $pagi_active_color          = ! empty( $pagi_active_color ) ? $pagi_active_color : '#fff';
+        $pagi_active_border_color   = ! empty( $pagi_active_border_color ) ? $pagi_active_border_color : '#ff5500';
+        $pagi_active_back_color     = ! empty( $pagi_active_back_color ) ? $pagi_active_back_color : '#ff5500';
 
         $header_class = '';
 
@@ -135,42 +135,42 @@ class wcpcsu_Shortcode
         if( $loop->have_posts() ) { ?>
 
         <?php if( 'yes' == $h_title_show && ! empty( $header_title ) ) { ?>
-        <div class="wpcu-products__header <?php echo $header_class; ?>" style="
-        --wpcu-headerFontSize: <?php echo $header_font_size; ?>px;
-        --wpcu-headerFontColor: <?php echo $header_font_color; ?>;
+        <div class="wpcu-products__header <?php echo esc_attr( $header_class ); ?>" style="
+        --wpcu-headerFontSize: <?php echo esc_attr( $header_font_size ); ?>px;
+        --wpcu-headerFontColor: <?php echo esc_attr( $header_font_color ); ?>;
         "> <!-- .wpcu-products__header--middle /.wpcu-products__header--right -->
-            <h2><?php echo $header_title; ?></h2>
+            <h2><?php echo esc_attr( $header_title ); ?></h2>
         </div>
         <?php } ?>
 
         <div
-        class="wpcu-products wpcu-<?php echo $theme; ?> wpcu-lazy-load <?php echo ( 'carousel' == $layout ) ? 'wpcu-carousel' : ''; ?>"
+        class="wpcu-products wpcu-<?php echo esc_attr( $theme ); ?> wpcu-lazy-load <?php echo ( 'carousel' == $layout ) ? 'wpcu-carousel' : ''; ?>"
         style="
-            --wpcu-productTitleSize: <?php echo $title_font_size; ?>px;
-            --wpcu-productTitleColor: <?php echo $title_font_color; ?>;
-            --wpcu-productTitleColorHover: <?php echo $title_hover_font_color; ?>;
-            --wpcu-productPriceSize: <?php echo $price_font_size; ?>px;
-            --wpcu-productPriceColor: <?php echo $price_font_color; ?>;
-            --wpcu-productRatingSize: <?php echo $ratings_size; ?>px;
-            --wpcu-productRatingColor: <?php echo $ratings_color; ?>;
-            --wpcu-buttonColor: <?php echo $cart_font_color; ?>;
-            --wpcu-buttonColorHover: <?php echo $cart_button_hover_font_color; ?>;
-            --wpcu-buttonBgColor: <?php echo $cart_bg_color; ?>;
-            --wpcu-buttonBgColorHover: <?php echo $cart_button_hover_color; ?>;
-            --wpcu-ribbonBgColor: <?php echo $ribbon_bg_color; ?>;
-            --wpcu-qvIconColor: <?php echo $quick_view_icon_color; ?>;
-            --wpcu-qvBgColor: <?php echo $quick_view_icon_back_color; ?>;
+            --wpcu-productTitleSize: <?php echo esc_attr( $title_font_size ); ?>px;
+            --wpcu-productTitleColor: <?php echo esc_attr( $title_font_color ); ?>;
+            --wpcu-productTitleColorHover: <?php echo esc_attr( $title_hover_font_color ); ?>;
+            --wpcu-productPriceSize: <?php echo esc_attr( $price_font_size ); ?>px;
+            --wpcu-productPriceColor: <?php echo esc_attr( $price_font_color ); ?>;
+            --wpcu-productRatingSize: <?php echo esc_attr( $ratings_size ); ?>px;
+            --wpcu-productRatingColor: <?php echo esc_attr( $ratings_color ); ?>;
+            --wpcu-buttonColor: <?php echo esc_attr( $cart_font_color ); ?>;
+            --wpcu-buttonColorHover: <?php echo esc_attr( $cart_button_hover_font_color ); ?>;
+            --wpcu-buttonBgColor: <?php echo esc_attr( $cart_bg_color ); ?>;
+            --wpcu-buttonBgColorHover: <?php echo esc_attr( $cart_button_hover_color ); ?>;
+            --wpcu-ribbonBgColor: <?php echo esc_attr( $ribbon_bg_color ); ?>;
+            --wpcu-qvIconColor: <?php echo esc_attr( $quick_view_icon_color ); ?>;
+            --wpcu-qvBgColor: <?php echo esc_attr( $quick_view_icon_back_color ); ?>;
         "
         <?php if( 'carousel' == $layout ) { ?>
         data-wpcu-items="4"
         data-wpcu-margin="30"
         data-wpcu-loop="<?php echo ( 'yes' == $repeat_product ) ? 'true' : 'false'; ?>"
         data-wpcu-perslide="1"
-        data-wpcu-speed="<?php echo $slide_speed; ?>"
+        data-wpcu-speed="<?php echo esc_attr( $slide_speed ); ?>"
         data-wpcu-autoplay='
         <?php if( 'yes' == $A_play ) { ?>
         {
-            "delay": "<?php echo $slide_time; ?>",
+            "delay": "<?php echo esc_attr( $slide_time ); ?>",
             "pauseOnMouseEnter": <?php echo ( 'true' == $stop_hover ) ? "true" : "false"; ?>,
             "disableOnInteraction": false,
             "stopOnLastSlide": true
@@ -180,35 +180,41 @@ class wcpcsu_Shortcode
         <?php } ?>
         '
         data-wpcu-responsive='{
-            "0": {"slidesPerView": "<?php echo $carousel_mobile_column; ?>", "spaceBetween": "20"},
-            "768": {"slidesPerView": "<?php echo $carousel_tablet_column; ?>", "spaceBetween": "30"},
-            "992": {"slidesPerView": "<?php echo $carousel_laptop_column; ?>", "spaceBetween": "30"},
-            "1200": {"slidesPerView": "<?php echo $carousel_desktop_column; ?>", "spaceBetween": "30"}
+            "0": {"slidesPerView": "<?php echo esc_attr( $carousel_mobile_column ); ?>", "spaceBetween": "20"},
+            "768": {"slidesPerView": "<?php echo esc_attr( $carousel_tablet_column ); ?>", "spaceBetween": "30"},
+            "992": {"slidesPerView": "<?php echo esc_attr( $carousel_laptop_column ); ?>", "spaceBetween": "30"},
+            "1200": {"slidesPerView": "<?php echo esc_attr( $carousel_desktop_column ); ?>", "spaceBetween": "30"}
         }'
         <?php } ?>
         >
         <?php if( ( 'carousel' == $layout && 'yes' == $nav_show ) && ( 'top-left' == $nav_position || 'top-right' == $nav_position || 'top-middle' == $nav_position || 'middle' == $nav_position )  ) {
                 include WCPCSU_INC_DIR . 'template/navigation.php';
         } ?>
-        <div class="<?php echo ( 'carousel' == $layout ) ? 'swiper-wrapper' : 'wpcu-row wpcu-column-' . $g_column . ' wpcu-column-md-' . $g_tablet . ' wpcu-column-sm-' . $g_mobile . ''; ?>">
+        <div class="<?php echo ( 'carousel' == $layout ) ? 'swiper-wrapper' : 'wpcu-row wpcu-column-' . esc_attr( $g_column ) . ' wpcu-column-md-' . esc_attr( $g_tablet ) . ' wpcu-column-sm-' . esc_attr( $g_mobile ) . ''; ?>">
         <?php
-            while($loop->have_posts()) : $loop->the_post();
-            global $post,$product;
-            $thumb = get_post_thumbnail_id();
-            // crop the image if the cropping is enabled.
-            if ('yes' === $img_crop){
-                $wpcsu_img = wpcsu_image_cropping($thumb, $crop_image_width, $crop_image_height, true, 100)['url'];
-            }else{
-                $aazz_thumb = wp_get_attachment_image_src( get_post_thumbnail_id(get_the_ID()), 'large' );
-                $wpcsu_img = $aazz_thumb['0'];
-            }
-            $wpcsu_img  = ! empty( $wpcsu_img ) ? $wpcsu_img : wc_placeholder_img_src();
-            $sale_price = $product->get_sale_price();
-            $ratings    = (($product->get_average_rating()/5)*100);
+            
+            while( $loop->have_posts() ) : $loop->the_post();
 
-            include WCPCSU_INC_DIR . 'template/theme/' . $theme . '.php';
+                global $post,$product;
+
+                $thumb = get_post_thumbnail_id();
+
+                // crop the image if the cropping is enabled.
+                if ('yes' === $img_crop){
+                    $wpcsu_img = wpcsu_image_cropping( $thumb, $crop_image_width, $crop_image_height, true, 100 )['url'];
+                }else{
+                    $aazz_thumb = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'large' );
+                    $wpcsu_img = $aazz_thumb['0'];
+                }
+
+                $wpcsu_img  = ! empty( $wpcsu_img ) ? $wpcsu_img : wc_placeholder_img_src();
+                $sale_price = $product->get_sale_price();
+                $ratings    = ( ( $product->get_average_rating() / 5 ) * 100 );
+
+                include WCPCSU_INC_DIR . 'template/theme/' . $theme . '.php';
 
             endwhile;
+            
             wp_reset_postdata();
             ?>
 
@@ -339,7 +345,7 @@ class wcpcsu_Shortcode
 
     public function ajax_quick_view() {
         $nonce          = ! empty( $_POST['nonce'] ) ? $_POST['nonce'] : '';
-        $product_id     = ! empty( $_POST['product_id'] ) ? $_POST['product_id'] : '';
+        $product_id     = ! empty( $_POST['product_id'] ) ? intval( $_POST['product_id'] ) : '';
         if( ! wp_verify_nonce( esc_attr( $nonce ), 'wcpcsu_quick_view_' . esc_attr( $product_id ) ) ) {
             die();
         }
@@ -352,13 +358,13 @@ class wcpcsu_Shortcode
             <h2 class='wpcu-modal__product-title'><?php echo get_the_title( esc_attr( $product_id ) );?></h2>
             <?php if ( ! empty( $wpcsu_img ) ) { ?>
             <div class='wpcu-modal__product-image'>
-                <img src="<?php echo $wpcsu_img; ?>" alt="<?php echo get_the_title( esc_attr( $product_id ) );?>">
+                <img src="<?php echo esc_url( $wpcsu_img ); ?>" alt="<?php echo get_the_title( esc_attr( $product_id ) );?>">
             </div>
             <?php } ?>
             <div class='wpcu-modal__product-description'>
-                <?php echo $product->get_description(); ?>
+                <?php echo esc_attr( $product->get_description() ); ?>
             </div>
-            <div class='wpcu-modal__product-price'><?php echo $product->get_price_html(); ?></div>
+            <div class='wpcu-modal__product-price'><?php echo wp_kses_post( $product->get_price_html() ); ?></div>
             <div class='wpcu-modal__product-action'><?php echo wp_kses_post( do_shortcode('[add_to_cart id="' . esc_attr( $product_id ) . '" show_price = "false"]') ); ?></div>
         </div>
         <?php

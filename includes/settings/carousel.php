@@ -119,7 +119,7 @@ $carousel_pagination    = ! empty( $carousel_pagination ) ? $carousel_pagination
                                 </div>
                             </div>
                             <input type="text" class="cmb2-text-small" name="wcpscu[c_mobile]" id="lcsp_li_mobile"
-                                value="<?php echo ! empty( esc_attr( $c_mobile ) ) ? intval( esc_attr( $c_mobile ) ) : 1; ?>">
+                                value="<?php echo ! empty( $c_mobile ) ? intval( esc_attr( $c_mobile ) ) : 1; ?>">
                         </div>
                     </div>
 
@@ -159,31 +159,6 @@ $carousel_pagination    = ! empty( $carousel_pagination ) ? $carousel_pagination
                     </p>
                 </div>
             </div>
-            <!--Scrolling-->
-           <!--  <div class="cmb-row cmb-type-radio">
-                <div class="cmb-th">
-                    <label for="lcsp_spp">
-                        <?php esc_html_e('Scroll', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?>
-                    </label>
-                </div>
-                <div class="cmb-td">
-                    <ul class="cmb2-radio-list cmb2-list">
-                        <li>
-                            <input type="radio" class="cmb2-option" name="wcpscu[scrool]" id="lcsp_spp1" value="false"
-                                <?php checked('false', $scrool, true); ?>>
-                            <label for="lcsp_spp1">
-                                <?php esc_html_e('Per Item', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?>
-                            </label>
-                        </li>
-                        <li><input type="radio" class="cmb2-option" name="wcpscu[scrool]" id="lcsp_spp2" value="true"
-                                <?php checked('true', $scrool, true); ?>>
-                            <label for="lcsp_spp2">
-                                <?php esc_html_e('Per Page', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?>
-                            </label>
-                        </li>
-                    </ul>
-                </div>
-            </div> --> <!-- end cmb2-metabox -->
 
             <!-- Navigation show/hide -->
             <div class="cmb-row cmb-type-radio">

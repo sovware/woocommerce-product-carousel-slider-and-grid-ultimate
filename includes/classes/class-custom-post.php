@@ -5,12 +5,12 @@ class Wcpcsu_Custom_Post
 {
     public function __construct ()
     {
-        add_action('init',array($this,'wcpcsu_custom_post'));
-        add_filter('manage_'.WCPCSU_CUSTOM_POST_TYPE.'_posts_columns',array($this,'wcpcsu_post_columns'));
-        add_action('manage_'.WCPCSU_CUSTOM_POST_TYPE.'_posts_custom_column', array($this, 'wcpcsu_custom_column'), 10, 2);
+        add_action( 'init', array( $this,'wcpcsu_custom_post' ) );
+        add_filter( 'manage_'.WCPCSU_CUSTOM_POST_TYPE.'_posts_columns', array( $this,'wcpcsu_post_columns' ) );
+        add_action( 'manage_'.WCPCSU_CUSTOM_POST_TYPE.'_posts_custom_column', array( $this, 'wcpcsu_custom_column' ), 10, 2 );
     }
 
-    public function wcpcsu_custom_post ()
+    public function wcpcsu_custom_post()
     {
         $labels = array(
             'name'               => _x( 'Woocommerce Product Ultimate', 'woocommerce-product-carousel-slider-and-grid-ultimate' ),
@@ -42,7 +42,7 @@ class Wcpcsu_Custom_Post
             'has_archive'        => true,
             'hierarchical'       => false,
             'menu_position'      => null,
-            'supports'           => array( 'title'),
+            'supports'           => array( 'title' ),
             'menu_icon'          => 'dashicons-images-alt'
         );
 
@@ -50,25 +50,24 @@ class Wcpcsu_Custom_Post
         flush_rewrite_rules();
     }
 
-    public function wcpcsu_post_columns ($columns) {
+    public function wcpcsu_post_columns( $columns ) {
         $columns = array();
         $columns['cb']   = '<input type="checkbox" />';
         $columns['title']   = esc_html__('All Titles', 'woocommerce-product-carousel-slider-and-grid-ultimate');
         $columns['wpcsp_shortcode_col']   = esc_html__('All Shortcodes', 'woocommerce-product-carousel-slider-and-grid-ultimate');
-        //$columns['slider_id']   = esc_html__('Carousel ID # (helpful for widget) ', 'woocommerce-product-carousel-slider-and-grid-ultimate'); //uncomment when widgets added
         $columns['date']   = esc_html__('Created at', 'woocommerce-product-carousel-slider-and-grid-ultimate');
         return $columns;
     }
 
-    public function wcpcsu_custom_column ($column_name, $post_id) {
-        switch($column_name){
+    public function wcpcsu_custom_column( $column_name, $post_id ) {
+        switch( $column_name ) {
             case 'wpcsp_shortcode_col': ?>
-                <textarea style="resize: none; text-align: center; background-color: #0073aa; color: #fff;" cols="20" rows="1" onClick="this.select();" >[wcpcsu id="<?php echo intval($post_id);?>"]</textarea>
+                <textarea style="resize: none; text-align: center; background-color: #0073aa; color: #fff;" cols="20" rows="1" onClick="this.select();" >[wcpcsu id="<?php echo intval( esc_attr( $post_id ) );?>"]</textarea>
                 <?php
                 break;
             case 'slider_id':
                 ?>
-                <strong><?php echo intval($post_id); ?></strong>
+                <strong><?php echo intval( esc_attr( $post_id ) ); ?></strong>
                 <?php
                 break;
 
