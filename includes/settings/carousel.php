@@ -46,12 +46,16 @@ $carousel_pagination    = ! empty( $carousel_pagination ) ? $carousel_pagination
                             <input type="radio" class="cmb2-option cmb2-radio-switch1" name="wcpscu[repeat_product]"
                                 id="wcpscu_repeat_product1" value="yes"
                                 <?php checked( 'yes', esc_attr( $repeat_product ), true ); ?>>
-                            <label for="wcpscu_repeat_product1"><?php esc_html_e('Yes', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?></label>
+                            <label for="wcpscu_repeat_product1"><?php esc_html_e('Yes', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?>
+                            </label>
                         </li>
-                        <li><input type="radio" class="cmb2-option cmb2-radio-switch2" name="wcpscu[repeat_product]"
-                                id="wcpscu_repeat_product2" value="no"
-                                <?php checked( 'no', esc_attr( $repeat_product ), true ); ?>>
-                            <label for="wcpscu_repeat_product2"><?php _e('No', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?></label>
+                        <li>
+                            <input type="radio" class="cmb2-option cmb2-radio-switch2" name="wcpscu[repeat_product]"
+                                id="wcpscu_repeat_product2" value="false"
+                                <?php checked( 'false', esc_attr( $repeat_product ), true ); ?>>
+                            <label for="wcpscu_repeat_product2">
+                                <?php _e('No', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?>
+                            </label>
                         </li>
                     </ul>
                 </div>
@@ -64,13 +68,15 @@ $carousel_pagination    = ! empty( $carousel_pagination ) ? $carousel_pagination
                 </div>
                 <div class="cmb-td">
                     <ul class="cmb2-radio-list cmb2-list cmb2-radio-switch">
-                        <li><input type="radio" class="cmb2-option cmb2-radio-switch1" name="wcpscu[stop_hover]"
+                        <li>
+                            <input type="radio" class="cmb2-option cmb2-radio-switch1" name="wcpscu[stop_hover]"
                                 id="lcsp_soh1" value="true" <?php checked( 'true', esc_attr( $stop_hover ), true ); ?>>
                             <label for="lcsp_soh1">
                                 <?php esc_html_e('Yes', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?>
                             </label>
                         </li>
-                        <li><input type="radio" class="cmb2-option cmb2-radio-switch2" name="wcpscu[stop_hover]"
+                        <li>
+                            <input type="radio" class="cmb2-option cmb2-radio-switch2" name="wcpscu[stop_hover]"
                                 id="lcsp_soh2" value="false" <?php checked( 'false', esc_attr( $stop_hover ), true );  ?>>
                             <label for="lcsp_soh2">
                                 <?php esc_html_e('No', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?>

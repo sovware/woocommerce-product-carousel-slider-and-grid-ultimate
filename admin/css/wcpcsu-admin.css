@@ -1077,6 +1077,10 @@ ul.lcs_pro_features {
     text-align: center;
 }
 
+.cmd-switch >div{
+    cursor: pointer;
+}
+
 .cmd-switch-item {
 
     border: 2px solid #E3E6EF;
@@ -1154,6 +1158,15 @@ ul.lcs_pro_features {
 
 .cmd-switch-item-icon {
     display: none;
+}
+
+.cmd-switch-item-icon .cmd-switch-item-icon__wrapper{
+    width: 16px;
+    height: 16px;
+    background: #00BC5E;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .cmd-switch-item img {
