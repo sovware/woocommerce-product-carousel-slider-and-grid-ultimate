@@ -31,7 +31,7 @@
 
 .cmb-repeat-group-wrap .cmb2-wrap>.cmb-field-list>.cmb-row,
 .postbox-container .cmb2-wrap>.cmb-field-list>.cmb-row {
-    padding: 20px 0;
+    padding: 17.50px 0;
 }
 
 .notice,
@@ -497,7 +497,7 @@ body.post-type-wcpcsu-custom-post #wpfooter{
     margin-right: 15px;
     padding: 0 15px;
     position: relative;
-    width: 130px;
+    width: 250px;
 }
 
 /* .lcsp-tab*/
@@ -1040,7 +1040,7 @@ ul.lcs_pro_features {
     font-size: 14px;
     font-weight: 400;
     line-height: 25px;
-    margin: 5px 15px 10px 0 !important;
+    margin: 5px 15px 0 0 !important;
     padding: 0 15px;
     display: block;
 }
@@ -1254,6 +1254,18 @@ ul.lcs_pro_features {
     margin-top: 18px;
 }
 
+.cmb2-wrap input.cmb2-text-medium{
+    width: 200px;
+}
+.cmb2-wrap .cmb-td-medium input.cmb2-text-medium{
+    width: 300px;
+}
+
+.cmb-td-size label{
+    margin-bottom: -4px;
+}
+
+
 .cmb-td-multicheck {
     margin-top: 18px;
 }
@@ -1413,6 +1425,7 @@ input[type=radio]:checked::before {
 .postbox-inline-body p strong {
     font-size: 15px;
     color: #272B41;
+    margin-right: 4px;
 }
 
 
@@ -1445,6 +1458,8 @@ input[type=radio]:checked::before {
     font-size: 22px;
     font-weight: 500;
     line-height: 24px;
+    margin-bottom: 9px;
+    margin-top: 35px;
 }
 
 .wpcs-admin-extra-bottom {
@@ -1462,6 +1477,11 @@ input[type=radio]:checked::before {
     line-height: 25px;
     text-decoration: none;
     color: white;
+    transition: 0.3s;
+}
+
+.wpcs-admin-extra-bottom .btn:hover{
+    opacity: 0.7;
 }
 
 .wpcs-feature-btn {
