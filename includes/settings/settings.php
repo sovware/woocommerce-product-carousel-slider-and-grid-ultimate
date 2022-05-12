@@ -14,6 +14,7 @@ defined('ABSPATH') || die('Direct access is not allow');
         <li class="current">
             <a href="#lcsp-tab-1">
                 <span class="fas fa-code"></span>
+                <img src="<?php echo WCPCSU_URL .'assets/icons/code-solid.svg' ?>" >
                 <?php esc_html_e('Shortcodes', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?>
             </a>
         </li>
