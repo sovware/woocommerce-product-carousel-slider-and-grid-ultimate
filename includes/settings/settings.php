@@ -42,7 +42,10 @@ defined('ABSPATH') || die('Direct access is not allow');
                 </a>
             </li>
         </ul>
-        <a href="https://wpwax.com/contact/" class="lcsp-support"><span class="fas fa-question-circle"></span>Support</a>
+        <a href="https://wpwax.com/contact/" class="lcsp-support">
+            <img class="svg_compile" src="<?php echo WCPCSU_URL .'assets/icons/circle-support.svg' ?>" >
+            support
+        </a>
     </div>
 
     <div class="lcsp-tab">

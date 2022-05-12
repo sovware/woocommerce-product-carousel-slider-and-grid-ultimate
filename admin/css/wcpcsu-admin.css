@@ -105,10 +105,23 @@ body.post-type-wcpcsu-custom-post #wpfooter{
     align-items: center;
     font-size: 14px;
     font-weight: 500;
+    text-transform: capitalize;
+    transition: 0.3s;
+}
+
+.lcsp-tabs-menu-wrapper .lcsp-support:hover{
+    opacity: 0.7;
 }
 
 .lcsp-tabs-menu-wrapper .lcsp-support span{
     display: inline-block;
+    margin-right: 4px;
+}
+
+.lcsp-tabs-menu-wrapper .lcsp-support img{
+    margin-right: 4px;
+}
+.lcsp-tabs-menu-wrapper .lcsp-support svg{
     margin-right: 4px;
 }
 

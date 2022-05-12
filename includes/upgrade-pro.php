@@ -55,23 +55,23 @@
             </div>
 
             <ul class="adl_pro_features">
-                <li> <span class="fas fa-check"></span> 15 different themes for Carousel & Slider</li>
-                <li> <span class="fas fa-check"></span> 15 different themes for Grid.</li>
-                <li> <span class="fas fa-check"></span> On sale, best selling, top rated and featured products display.
+                <li> <span><img class="svg_compile" src="<?php echo WCPCSU_URL .'assets/icons/checked.svg' ?>" ></span> 15 different themes for Carousel & Slider</li>
+                <li> <span><img class="svg_compile" src="<?php echo WCPCSU_URL .'assets/icons/checked.svg' ?>" ></span> 15 different themes for Grid.</li>
+                <li> <span><img class="svg_compile" src="<?php echo WCPCSU_URL .'assets/icons/checked.svg' ?>" ></span> On sale, best selling, top rated and featured products display.
                 </li>
-                <li> <span class="fas fa-check"></span> Display by ID, sku, tags, category, month and year.</li>
-                <li> <span class="fas fa-check"></span> Display products randomly</li>
-                <li> <span class="fas fa-check"></span> Add to wishlist</li>
-                <li> <span class="fas fa-check"></span> Show total wishlist to any page/post via shortcode.</li>
-                <li> <span class="fas fa-check"></span> Product excerpt and option to limit excerpt words</li>
-                <li> <span class="fas fa-check"></span> Display/hide excerpt with font size and color change options
+                <li> <span><img class="svg_compile" src="<?php echo WCPCSU_URL .'assets/icons/checked.svg' ?>" ></span> Display by ID, sku, tags, category, month and year.</li>
+                <li> <span><img class="svg_compile" src="<?php echo WCPCSU_URL .'assets/icons/checked.svg' ?>" ></span> Display products randomly</li>
+                <li> <span><img class="svg_compile" src="<?php echo WCPCSU_URL .'assets/icons/checked.svg' ?>" ></span> Add to wishlist</li>
+                <li> <span><img class="svg_compile" src="<?php echo WCPCSU_URL .'assets/icons/checked.svg' ?>" ></span> Show total wishlist to any page/post via shortcode.</li>
+                <li> <span><img class="svg_compile" src="<?php echo WCPCSU_URL .'assets/icons/checked.svg' ?>" ></span> Product excerpt and option to limit excerpt words</li>
+                <li> <span><img class="svg_compile" src="<?php echo WCPCSU_URL .'assets/icons/checked.svg' ?>" ></span> Display/hide excerpt with font size and color change options
                 </li>
-                <li> <span class="fas fa-check"></span> Display/hide out of stock products</li>
-                <li> <span class="fas fa-check"></span> Ready Ribbons & Custom Ribbons.</li>
-                <li> <span class="fas fa-check"></span> Scroll by per item or page</li>
-                <li> <span class="fas fa-check"></span> Scroll Direction</li>
-                <li> <span class="fas fa-check"></span> Marquee</li>
-                <li> <span class="fas fa-check"></span> And many more…</li>
+                <li> <span><img class="svg_compile" src="<?php echo WCPCSU_URL .'assets/icons/checked.svg' ?>" ></span> Display/hide out of stock products</li>
+                <li> <span><img class="svg_compile" src="<?php echo WCPCSU_URL .'assets/icons/checked.svg' ?>" ></span> Ready Ribbons & Custom Ribbons.</li>
+                <li> <span><img class="svg_compile" src="<?php echo WCPCSU_URL .'assets/icons/checked.svg' ?>" ></span> Scroll by per item or page</li>
+                <li> <span><img class="svg_compile" src="<?php echo WCPCSU_URL .'assets/icons/checked.svg' ?>" ></span> Scroll Direction</li>
+                <li> <span><img class="svg_compile" src="<?php echo WCPCSU_URL .'assets/icons/checked.svg' ?>" ></span> Marquee</li>
+                <li> <span><img class="svg_compile" src="<?php echo WCPCSU_URL .'assets/icons/checked.svg' ?>" ></span> And many more…</li>
             </ul>
             <div class="wpcs-admin-extra-bottom">
                 <a target="_blank"
