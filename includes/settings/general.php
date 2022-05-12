@@ -31,7 +31,7 @@ $discount_ribbon_position   = ! empty( $discount_ribbon_position ) ? $discount_r
                             <div class="cmd-switch-item cmd-switch-carousel-img" data-value="carousel">
                                 <span class="cmd-switch-item-icon">
                                     <span class="cmd-switch-item-icon__wrapper">
-                                        <img class="svg_compile" src="<?php echo WCPCSU_URL .'assets/icons/checked.svg' ?>" >
+                                        <img class="svg_compile" src="<?php echo WCPCSU_URL .'assets/icons/square-check-solid.svg' ?>" >
                                     </span>
                                 </span>
                                 <img src="<?php echo WCPCSU_URL .'admin/img/carousel.jpg' ?>" alt="carousel">
@@ -43,7 +43,7 @@ $discount_ribbon_position   = ! empty( $discount_ribbon_position ) ? $discount_r
                             <div class=" cmd-switch-item cmd-switch-grid-img" data-value="grid">
                                 <span class="cmd-switch-item-icon">
                                     <span class="cmd-switch-item-icon__wrapper">
-                                        <img class="svg_compile" src="<?php echo WCPCSU_URL .'assets/icons/checked.svg' ?>" >
+                                        <img class="svg_compile" src="<?php echo WCPCSU_URL .'assets/icons/square-check-solid.svg' ?>" >
                                     </span>
                                 </span>
                                 <img src="<?php echo WCPCSU_URL .'admin/img/grid.jpg' ?>" alt="grid">
