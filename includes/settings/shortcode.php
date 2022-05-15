@@ -1,3 +1,11 @@
+<?php
+/**
+ * Exit if accessed directly
+ */
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+?>
 <div id="lcsp-tab-1" class="lcsp-tab-content">
     <div class="cmb2-wrap form-table">
         <div class="lcsp-withoutTab-content">
@@ -9,7 +17,7 @@
                             <p><?php esc_html_e('Copy this shortcode and paste on page or post where you want to display logos.Use PHP code to your themes file to display them.','woocommerce-product-carousel-slider-and-grid-ultimate'); ?>
                             </p>
                             <div class="cmb2-metabox-card-textarea">
-                                <textarea onClick="this.select();">[wcpcsu <?php echo 'id="' . esc_attr( $post->ID ) . '"';?>]</textarea>
+                                <textarea onClick="this.select();" style="font-family: monospace">[wcpcsu <?php echo 'id="' . esc_attr( $post->ID ) . '"';?>]</textarea>
                             </div>
                         </div>
                         <div class="cmb2-metabox-card cmb2-metabox-card3">
@@ -18,7 +26,7 @@
                             </p>
                             <div class="cmb2-metabox-card-textarea">
                                 <textarea
-                                onClick="this.select();"><?php echo '<?php echo do_shortcode("[wcpcsu id=\'"' . esc_attr( $post->ID ) . '"\']"); ?>'; ?></textarea>
+                                onClick="this.select();" style="font-family: monospace"><?php echo '<?php echo do_shortcode("[wcpcsu id=\'"' . esc_attr( $post->ID ) . '"\']"); ?>'; ?></textarea>
                             </div>
                         </div>
                     </div>

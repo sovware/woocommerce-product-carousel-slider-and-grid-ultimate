@@ -1,29 +1,34 @@
 <?php
-defined('ABSPATH') || die('Direct access is not allow');
+/**
+ * Exit if accessed directly
+ */
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 ?>
 <!--TAB 1  Shortcode -->
 <div id="lcsp-tabs-container">
     <div class="lcsp-tabs-menu-wrapper">
         <ul class="lcsp-tabs-menu">
-        <li class="current">
-            <a href="#lcsp-tab-1">
-                <img class="svg_compile" src="<?php echo WCPCSU_URL .'assets/icons/code-solid.svg' ?>" >
-                <?php esc_html_e('Shortcodes', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?>
-            </a>
-        </li>
-        <li>
-            <a href="#lcsp-tab-5">
-                <img class="svg_compile" src="<?php echo WCPCSU_URL .'assets/icons/gear-solid.svg' ?>" >
-                <?php esc_html_e('General Settings', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?>
-            </a>
-        </li>
-            <li style="display: <?php if( ! empty( $layout ) && $layout == "grid" ){ echo "none"; }else{ echo "block"; }?>;" id="tab2">
+            <li class="current">
+                <a href="#lcsp-tab-1">
+                    <img class="svg_compile" src="<?php echo WCPCSU_URL .'assets/icons/code-solid.svg' ?>" >
+                    <?php esc_html_e('Shortcodes', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?>
+                </a>
+            </li>
+            <li>
+                <a href="#lcsp-tab-5">
+                    <img class="svg_compile" src="<?php echo WCPCSU_URL .'assets/icons/gear-solid.svg' ?>" >
+                    <?php esc_html_e('General Settings', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?>
+                </a>
+            </li>
+            <li style="display: <?php echo ( ! empty( $layout ) && $layout == "grid" ) ? 'none' : 'block';?>;" id="tab2">
                 <a href="#lcsp-tab-2">
                     <img class="svg_compile" src="<?php echo WCPCSU_URL .'assets/icons/sliders-solid.svg' ?>" >
                     <?php esc_html_e('Carousel Settings', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?>
                 </a>
             </li>
-            <li style="display: <?php if( ! empty( $layout ) && $layout == "grid" ){ echo "block"; }else{ echo "none"; }?>;" id="tab3">
+            <li style="display: <?php echo ( ! empty( $layout ) && $layout == "grid" ) ? 'block' : 'none';?>;" id="tab3">
                 <a href="#lcsp-tab-3">
                     <img class="svg_compile" src="<?php echo WCPCSU_URL .'assets/icons/grid.svg' ?>" >
                     <?php esc_html_e('Grid Settings', 'woocommerce-product-carousel-slider-and-grid-ultimate'); ?>
