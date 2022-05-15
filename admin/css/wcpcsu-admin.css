@@ -1576,12 +1576,16 @@ h1.wpcs-admin-header {
         width: 360px;
     }
 
-    .lcsp-tabs-menu-wrapper {
-        flex-wrap: wrap;
-        align-items: start;
-        flex-direction: column;
+    .lcsp-tabs-menu li a {
+        justify-content: center;
     }
 
+    .lcsp-tabs-menu-wrapper .lcsp-support {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 1199.99px) {
     .lcsp-tabs-menu {
         order: 2;
         width: 100%;
@@ -1589,22 +1593,15 @@ h1.wpcs-admin-header {
     }
 
     .lcsp-tabs-menu li {
-        flex: 25%;
+        flex: 35%;
     }
-
-    .lcsp-tabs-menu li a {
-        justify-content: center;
-    }
-
     .lcsp-tabs-menu-wrapper .lcsp-support {
         order: 1;
-        margin-bottom: 10px;
     }
-}
-
-@media (max-width: 1199.99px) {
-    .lcsp-tabs-menu li {
-        flex: 35%;
+    .lcsp-tabs-menu-wrapper {
+        flex-wrap: wrap;
+        align-items: start;
+        flex-direction: column;
     }
 }
 
