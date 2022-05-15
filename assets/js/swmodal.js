@@ -16,10 +16,13 @@
             product_id : product_id,
             nonce : nonce
         },
-        success: function(html) {
+        success: function( html ) {
             $('.wpcu-modal').removeClass('wpcu-modal--loading');
             $('.wpcu-modal__body').empty().append(html);
         },
+        error: function error( _error ) {
+            console.log( _error );
+        }
 
     });
   });

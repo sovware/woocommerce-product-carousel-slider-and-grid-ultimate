@@ -17,7 +17,7 @@
         </div>
         <div class="wpcu-product__details">
             <?php if( 'yes' == $display_title ) { ?>
-            <h2 class="wpcu-product__title"><a href="<?php echo esc_url( get_the_permalink() ); ?>"><?php echo esc_attr( get_the_title() ); ?></a></h2>
+            <h2 class="wpcu-product__title"><a href="<?php echo esc_url( get_the_permalink() ); ?>"><?php echo esc_html( get_the_title() ); ?></a></h2>
             <?php } ?>
              <?php if( 'yes' == $display_price ) { ?>
             <div class="wpcu-product__price">
