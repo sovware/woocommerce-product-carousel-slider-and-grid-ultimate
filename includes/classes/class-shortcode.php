@@ -16,7 +16,17 @@ class wcpcsu_Shortcode
         $atts = shortcode_atts( array(
             'id'    =>  ''
         ), $atts );
-        $post_id =  ! empty( $atts['id'] ) ? $atts['id'] : '';
+        
+        if ( empty( $atts['id'] ) ) {
+            return;
+        }
+            
+        $post_id =  absint( $atts['id'] );
+        
+        if ( empty( $post_id ) ) {
+            return;
+        }
+
         $this->wcpcsu_style_files();
         // get the array of data from the post meta
         $enc_data = get_post_meta( $post_id, 'wcpscu', true );
