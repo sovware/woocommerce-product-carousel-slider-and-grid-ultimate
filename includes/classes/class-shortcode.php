@@ -245,7 +245,7 @@ class wcpcsu_Shortcode
 
         }else{
 
-            _e('No products found', 'woocommerce-product-carousel-slider-and-grid-ultimate');
+            esc_html_e('No products found', 'woocommerce-product-carousel-slider-and-grid-ultimate');
         }
 
         return ob_get_clean();
