@@ -14,7 +14,7 @@ if( 'grid' == $layout ) {
     --wpcu-pagActiveBgColor: <?php echo esc_attr( $pagi_active_back_color ); ?>;
 ">
     <?php
-    echo wp_kses_post( wcpcsu_pagination( $loop, $paged ) );
+    echo wcpcsu_pagination( $loop, $paged );
     ?>
 </div>
 <?php } else { ?>

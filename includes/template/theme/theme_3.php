@@ -26,7 +26,7 @@
 
                 <?php if( ! empty( $sale_price ) ) { ?>
 
-                    <span class="wpcu-badge wpcu-badge--sm wpcu-badge--outlined wpcu-badge--rounded">-<?php echo esc_attr( $this->aazz_show_discount_percentage() ); ?></span>
+                    <span class="wpcu-badge wpcu-badge--sm wpcu-badge--outlined wpcu-badge--rounded">-<?php echo esc_html( $this->aazz_show_discount_percentage() ); ?></span>
 
                 <?php } ?>
 
@@ -50,7 +50,7 @@
                             ?>
                         </div>
                     </div>
-                    <span class="wpcu-product__rating__total">(<?php echo esc_attr( $product->get_rating_count() ); ?>)</span>
+                    <span class="wpcu-product__rating__total">(<?php echo esc_html( $product->get_rating_count() ); ?>)</span>
                 </div>
             <?php } ?>
         </div>
