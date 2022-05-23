@@ -14,6 +14,7 @@ $scrool              = ! empty( $scrool ) ? $scrool : 'false';
 $nav_show            = ! empty( $nav_show ) ? $nav_show : 'yes';
 $nav_position        = ! empty( $nav_position ) ? $nav_position : 'bottom-right';
 $carousel_pagination = ! empty( $carousel_pagination ) ? $carousel_pagination : 'no';
+$repeat_product      = ! empty( $repeat_product ) ? $repeat_product : 'yes';
 ?>
 <!--TAB 2  Carousel setting -->
 <div id="lcsp-tab-2" class="lcsp-tab-content">
