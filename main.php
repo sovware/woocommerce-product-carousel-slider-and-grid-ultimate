@@ -1,9 +1,9 @@
 <?php
 /**
-Plugin Name: WooCommerce Product Carousel, Slider and Grid Ultimate Pro
+Plugin Name: Product Carousel Slider & Grid Ultimate Pro for WooCommerce
 Plugin URI:  https://wpwax.com/product/woocommerce-product-carousel-slider-grid-ultimate-pro
 Description: It is a fully responsive and mobile friendly WooCommerce Product Carousel, Slider and Grid plugin which comes with lots of features.
-Version:     3.6.1
+Version:     3.6.2
 Author:      wpWax
 Author URI:  https://wpwax.com
 License:     GPL2
@@ -11,7 +11,7 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Domain Path: /languages/
 Text Domain: woo-product-carousel-slider-and-grid-ultimate
 WC requires at least: 3.0
-WC tested up to: 5.9
+WC tested up to: 6.5
  */
 defined('ABSPATH') || die('Direct access is not allow');
 if( ! in_array('woocommerce-product-carousel-slider-grid-ultimate-pro/main.php', apply_filters('active_plugins', get_option('active_plugins'))) ) {
