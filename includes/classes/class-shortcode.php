@@ -15,9 +15,12 @@ class wcpcsu_Shortcode
         ob_start();
         global $product;
         $atts = shortcode_atts( array(
-            'id'    =>  ''
+            'id'     => '',
+            'layout' => '',
+            'theme'  => '',
         ), $atts );
         $post_id =  ! empty( $atts['id'] ) ? $atts['id'] : '';
+        
         $this->wcpcsu_style_files();
         // get the array of data from the post meta
         $enc_data = get_post_meta( $post_id, 'wcpscu', true );
@@ -26,6 +29,10 @@ class wcpcsu_Shortcode
 
         $value = is_array( $data_array ) ? $data_array : array();
         extract( $value );
+        // shortcode attribute
+        $layout = ! empty( $atts['layout'] ) ? $atts['layout'] : $layout;
+        $theme  = ! empty( $atts['theme'] ) ? $atts['theme'] : $theme;
+
         $rand_id                 = rand();
         $header_font_size        = ! empty( $header_font_size ) ? $header_font_size : '20px';
         $header_font_color        = ! empty( $header_font_color ) ? $header_font_color : '#303030';
@@ -174,7 +181,7 @@ class wcpcsu_Shortcode
             --wpcu-productPriceSize: <?php echo $price_font_size; ?>px;
             --wpcu-productPriceColor: <?php echo $price_font_color; ?>;
 
-            --wpcu-productRatingSize: <?php echo $ratings_size; ?>px;
+            --wpcu-productRatingSize: <?php echo $ratings_size; ?>;
             --wpcu-productRatingColor: <?php echo $ratings_color; ?>;
 
             --wpcu-buttonColor: <?php echo $cart_font_color; ?>;
