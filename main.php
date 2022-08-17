@@ -191,6 +191,13 @@ if( ! in_array('woocommerce-product-carousel-slider-grid-ultimate-pro/main.php',
                 wp_enqueue_style('wp-color-picker');
                 wp_enqueue_script('wp-color-picker');
                 wp_enqueue_script('wcpcsu-admin-js', WCPCSU_URL . 'admin/js/wcpcs-admin.js', array('jquery'));
+
+                wp_enqueue_style( 'wcpcsu-main', WCPCSU_URL . 'assets/css/style.css' );
+                wp_enqueue_style( 'wcpcsu-swmodal', WCPCSU_URL . 'assets/css/swmodal.css' );
+                wp_enqueue_style( 'wcpcsu-swiper', WCPCSU_URL . 'assets/css/swiper-bundle.min.css' );
+                wp_enqueue_script( 'wcpcsu-main-js', WCPCSU_URL . 'assets/js/main.js' );
+                wp_enqueue_script( 'wcpcsu-swmodal-js', WCPCSU_URL . 'assets/js/swmodal.js' );
+                wp_enqueue_script( 'wcpcsu-swiper-js', WCPCSU_URL . 'assets/js/swiper-bundle.min.js' );
             }
         }
 
