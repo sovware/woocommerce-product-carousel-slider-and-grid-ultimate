@@ -148,7 +148,24 @@ class Elementor_Hello_World_Widget_1 extends \Elementor\Widget_Base {
 			'theme'                => $settings['theme'] ? $settings['theme'] : 'theme_1',
 		);
 
-		$this->run_shortcode( 'wcpcsup', $atts );
+		if( is_admin() ) {
+			$this->display_image( $atts );
+		} else {
+			$this->run_shortcode( 'wcpcsup', $atts );
+		}
+	}
+
+	public function display_image( $atts ) {
+		$layout  = ! empty( $atts['layout'] ) ? $atts['layout'] : 'carousel';
+		$theme   = ! empty( $atts['theme'] ) ? $atts['theme'] . '.png' : 'theme_1.png';
+		$img_src = WCPCSU_URL . 'includes/elementor/assets/img/' . $layout . '/' . $theme;
+		ob_start();
+		?>
+		<div>
+			<img src="<?php echo esc_attr( $img_src ); ?>" alt="">
+		</div>
+		<?php
+		echo ob_get_clean();
 	}
 
 	public function run_shortcode( $shortcode, $atts = [] ) {
