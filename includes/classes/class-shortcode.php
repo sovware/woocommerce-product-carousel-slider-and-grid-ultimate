@@ -15,9 +15,57 @@ class wcpcsu_Shortcode
         ob_start();
         global $product;
         $atts = shortcode_atts( array(
-            'id'     => '',
-            'layout' => '',
-            'theme'  => '',
+            'id'                        => '',
+            'layout'                    => '',
+            'theme'                     => '',
+            'total_products'            => '',
+            'h_title_show'              => '',
+            'header_title'              => '',
+            'header_position'           => '',
+            'display_title'             => '',
+            'products_type'             => '',
+            'display_sale_ribbon'       => '',
+            'sale_ribbon_text'          => '',
+            'sale_ribbon_position'      => '',
+            'display_featured_ribbon'   => '',
+            'feature_ribbon_text'       => '',
+            'featured_ribbon_position'  => '',
+            'display_sold_out_ribbon'   => '',
+            'sold_out_ribbon_text'      => '',
+            'sold_out_ribbon_position'  => '',
+            'display_discount_ribbon'   => '',
+            'discount_ribbon_position'  => '',
+            'display_price'             => '',
+            'display_ratings'           => '',
+            'display_cart'              => '',
+            'exclude_stock_out'         => '',
+            'img_crop'                  => '',
+            'crop_image_width'          => '',
+            'crop_image_height'         => '',
+            'img_hover_effect'          => '',
+
+            'A_play'                    => '',
+            'repeat_product'            => '',
+            'stop_hover'                => '',
+            'marquee'                   => '',
+            'c_desktop'                 => '',
+            'c_desktop_small'           => '',
+            'c_tablet'                  => '',
+            'c_mobile'                  => '',
+            'slide_speed'               => '',
+            'slide_time'                => '',
+            'scrool_direction'          => '',
+            'nav_show'                  => '',
+            'nav_position'              => '',
+            'nav_arrow_color'           => '',
+            'nav_back_color'            => '',
+            'nav_border_color'          => '',
+            'nav_arrow_hover_color'     => '',
+            'nav_back_hover_color'      => '',
+            'nav_border_hover'          => '',
+            'carousel_pagination'       => '',
+            'dots_color'                => '',
+            'dots_active_color'         => '',
         ), $atts );
         $post_id =  ! empty( $atts['id'] ) ? $atts['id'] : '';
         
@@ -30,12 +78,62 @@ class wcpcsu_Shortcode
         $value = is_array( $data_array ) ? $data_array : array();
         extract( $value );
         // shortcode attribute
-        $layout = ! empty( $atts['layout'] ) ? $atts['layout'] : $layout;
-        $theme  = ! empty( $atts['theme'] ) ? $atts['theme'] : $theme;
+        $layout                     = ! empty( $atts['layout'] ) ? $atts['layout'] : $layout;
+        $theme                      = ! empty( $atts['theme'] ) ? $atts['theme'] : $theme;
+        $total_products             = ! empty( $atts['total_products'] ) ? $atts['total_products'] : $total_products;
+        $h_title_show               = ! empty( $atts['h_title_show'] ) ? $atts['h_title_show'] : $h_title_show;
+        $header_title               = ! empty( $atts['header_title'] ) ? $atts['header_title'] : $header_title;
+        $header_position            = ! empty( $atts['header_position'] ) ? $atts['header_position'] : $header_position;
+        $display_title              = ! empty( $atts['display_title'] ) ? $atts['display_title'] : $display_title;
+        $products_type              = ! empty( $atts['products_type'] ) ? $atts['products_type'] : $products_type;
+        $display_sale_ribbon        = ! empty( $atts['display_sale_ribbon'] ) ? $atts['display_sale_ribbon'] : $display_sale_ribbon;
+        $sale_ribbon_text           = ! empty( $atts['sale_ribbon_text'] ) ? $atts['sale_ribbon_text'] : $sale_ribbon_text;
+        $sale_ribbon_position       = ! empty( $atts['sale_ribbon_position'] ) ? $atts['sale_ribbon_position'] : $sale_ribbon_position;
+        $display_featured_ribbon    = ! empty( $atts['display_featured_ribbon'] ) ? $atts['display_featured_ribbon'] : $display_featured_ribbon;
+        $feature_ribbon_text        = ! empty( $atts['feature_ribbon_text'] ) ? $atts['feature_ribbon_text'] : $feature_ribbon_text;
+        $featured_ribbon_position   = ! empty( $atts['featured_ribbon_position'] ) ? $atts['featured_ribbon_position'] : $featured_ribbon_position;
+        $display_sold_out_ribbon    = ! empty( $atts['display_sold_out_ribbon'] ) ? $atts['display_sold_out_ribbon'] : $display_sold_out_ribbon;
+        $sold_out_ribbon_text       = ! empty( $atts['sold_out_ribbon_text'] ) ? $atts['sold_out_ribbon_text'] : $sold_out_ribbon_text;
+        $sold_out_ribbon_position   = ! empty( $atts['sold_out_ribbon_position'] ) ? $atts['sold_out_ribbon_position'] : $sold_out_ribbon_position;
+        $display_discount_ribbon    = ! empty( $atts['display_discount_ribbon'] ) ? $atts['display_discount_ribbon'] : $display_discount_ribbon;
+        $discount_ribbon_position   = ! empty( $atts['discount_ribbon_position'] ) ? $atts['discount_ribbon_position'] : $discount_ribbon_position;
+        $display_price              = ! empty( $atts['display_price'] ) ? $atts['display_price'] : $display_price;
+        $display_ratings            = ! empty( $atts['display_ratings'] ) ? $atts['display_ratings'] : $display_ratings;
+        $display_cart               = ! empty( $atts['display_cart'] ) ? $atts['display_cart'] : $display_cart;
+        $exclude_stock_out          = ! empty( $atts['exclude_stock_out'] ) ? $atts['exclude_stock_out'] : $exclude_stock_out;
+        $img_crop                   = ! empty( $atts['img_crop'] ) ? $atts['img_crop'] : $img_crop;
+        $crop_image_width           = ! empty( $atts['crop_image_width'] ) ? $atts['crop_image_width'] : $crop_image_width;
+        $crop_image_height          = ! empty( $atts['crop_image_height'] ) ? $atts['crop_image_height'] : $crop_image_height;
+        $img_hover_effect           = ! empty( $atts['img_hover_effect'] ) ? $atts['img_hover_effect'] : $img_hover_effect;
+        
+
+        $A_play                     = ! empty( $atts['A_play'] ) ? $atts['A_play'] : $A_play;
+        $repeat_product             = ! empty( $atts['repeat_product'] ) ? $atts['repeat_product'] : $repeat_product;
+        $stop_hover                 = ! empty( $atts['stop_hover'] ) ? $atts['stop_hover'] : $stop_hover;
+        $marquee                    = ! empty( $atts['marquee'] ) ? $atts['marquee'] : $marquee;
+        $c_desktop                  = ! empty( $atts['c_desktop'] ) ? $atts['c_desktop'] : $c_desktop;
+        $c_desktop_small            = ! empty( $atts['c_desktop_small'] ) ? $atts['c_desktop_small'] : $c_desktop_small;
+        $c_tablet                   = ! empty( $atts['c_tablet'] ) ? $atts['c_tablet'] : $c_tablet;
+        $c_mobile                   = ! empty( $atts['c_mobile'] ) ? $atts['c_mobile'] : $c_mobile;
+        $slide_speed                = ! empty( $atts['slide_speed'] ) ? $atts['slide_speed'] : $slide_speed;
+        $slide_time                 = ! empty( $atts['slide_time'] ) ? $atts['slide_time'] : $slide_time;
+        $scrool_direction           = ! empty( $atts['scrool_direction'] ) ? $atts['scrool_direction'] : $scrool_direction;
+        $nav_show                   = ! empty( $atts['nav_show'] ) ? $atts['nav_show'] : $nav_show;
+        $nav_position               = ! empty( $atts['nav_position'] ) ? $atts['nav_position'] : $nav_position;
+        $nav_arrow_color            = ! empty( $atts['nav_arrow_color'] ) ? $atts['nav_arrow_color'] : $nav_arrow_color;
+        $nav_back_color             = ! empty( $atts['nav_back_color'] ) ? $atts['nav_back_color'] : $nav_back_color;
+        $nav_border_color           = ! empty( $atts['nav_border_color'] ) ? $atts['nav_border_color'] : $nav_border_color;
+        $nav_arrow_hover_color      = ! empty( $atts['nav_arrow_hover_color'] ) ? $atts['nav_arrow_hover_color'] : $nav_arrow_hover_color;
+        $nav_back_hover_color       = ! empty( $atts['nav_back_hover_color'] ) ? $atts['nav_back_hover_color'] : $nav_back_hover_color;
+        $nav_border_hover           = ! empty( $atts['nav_border_hover'] ) ? $atts['nav_border_hover'] : $nav_border_hover;
+        $carousel_pagination        = ! empty( $atts['carousel_pagination'] ) ? $atts['carousel_pagination'] : $carousel_pagination;
+        $dots_color                 = ! empty( $atts['dots_color'] ) ? $atts['dots_color'] : $dots_color;
+        $dots_active_color          = ! empty( $atts['dots_active_color'] ) ? $atts['dots_active_color'] : $dots_active_color;
+
 
         $rand_id                 = rand();
         $header_font_size        = ! empty( $header_font_size ) ? $header_font_size : '20px';
-        $header_font_color        = ! empty( $header_font_color ) ? $header_font_color : '#303030';
+        $header_font_color       = ! empty( $header_font_color ) ? $header_font_color : '#303030';
         $total_products          = ! empty( $total_products ) ? $total_products : 6;
         $layout                  = ! empty( $layout ) ? $layout : 'carousel';
         $products_type           = ! empty( $products_type ) ? $products_type : 'latest';
@@ -111,7 +209,7 @@ class wcpcsu_Shortcode
 
         $paged                          =  wcpcsu_get_paged_num();
         $paged                          = ! empty( $paged ) ? $paged : '';
-        $loop                           = $this->parse_query( $data_array );
+        $loop                           = $this->parse_query( $data_array,$atts );
 
         // carousel settings
         $slide_speed                = ! empty( $slide_speed ) ? $slide_speed : '2000';
@@ -280,11 +378,14 @@ class wcpcsu_Shortcode
         return ob_get_clean();
     }
 
-    public function parse_query( $data_array ) {
+    public function parse_query( $data_array, $atts ) {
         $value = is_array( $data_array ) ? $data_array : array();
         extract( $value );
         $paged                          =  wcpcsu_get_paged_num();
         $paged                          = ! empty( $paged ) ? $paged : '';
+        $total_products                 = ! empty( $atts['total_products'] ) ? $atts['total_products'] : $total_products;
+        $products_type                  = ! empty( $atts['products_type'] ) ? $atts['products_type'] : $products_type;
+        $exclude_stock_out              = ! empty( $atts['exclude_stock_out'] ) ? $atts['exclude_stock_out'] : $exclude_stock_out;
         $common_args = array(
             'post_type' => 'product',
             'posts_per_page' => !empty($total_products) ? intval($total_products) : 12,
