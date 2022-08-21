@@ -43,7 +43,6 @@ class wcpcsu_Shortcode
             'crop_image_width'          => '',
             'crop_image_height'         => '',
             'img_hover_effect'          => '',
-
             'A_play'                    => '',
             'repeat_product'            => '',
             'stop_hover'                => '',
@@ -66,6 +65,40 @@ class wcpcsu_Shortcode
             'carousel_pagination'       => '',
             'dots_color'                => '',
             'dots_active_color'         => '',
+            'g_column'                  => '',
+            'g_tablet'                  => '',
+            'g_mobile'                  => '',
+            'grid_pagination'           => '',
+            'pagi_color'                => '',
+            'pagi_border_color'         => '',
+            'pagi_back_color'           => '',
+            'pagi_hover_color'          => '',
+            'pagi_hover_border_color'   => '',
+            'pagi_hover_back_color'     => '',
+            'pagi_active_border_color'  => '',
+            'pagi_active_back_color'    => '',
+
+            'header_font_size'          => '',
+            'header_font_color'         => '',
+            'title_font_size'           => '',
+            'title_font_color'          => '',
+            'title_hover_font_color'    => '',
+            'price_font_size'           => '',
+            'price_font_color'          => '',
+            'ratings_size'              => '',
+            'ratings_color'             => '',
+            'cart_font_color'           => '',
+            'cart_bg_color'             => '',
+            'cart_button_hover_color'   => '',
+            'cart_button_hover_font_color'    => '',
+            'action_icon_font_color'          => '',
+            'action_icon_hover_color'         => '',
+            'ribbon_bg_color'                 => '',
+            'quick_view_button_color'         => '',
+            'quick_view_button_back_color'    => '',
+            'quick_view_button_hover_color'   => '',
+            'quick_view_button_hover_back_color'    => '',
+
         ), $atts );
         $post_id =  ! empty( $atts['id'] ) ? $atts['id'] : '';
         
@@ -105,8 +138,6 @@ class wcpcsu_Shortcode
         $crop_image_width           = ! empty( $atts['crop_image_width'] ) ? $atts['crop_image_width'] : $crop_image_width;
         $crop_image_height          = ! empty( $atts['crop_image_height'] ) ? $atts['crop_image_height'] : $crop_image_height;
         $img_hover_effect           = ! empty( $atts['img_hover_effect'] ) ? $atts['img_hover_effect'] : $img_hover_effect;
-        
-
         $A_play                     = ! empty( $atts['A_play'] ) ? $atts['A_play'] : $A_play;
         $repeat_product             = ! empty( $atts['repeat_product'] ) ? $atts['repeat_product'] : $repeat_product;
         $stop_hover                 = ! empty( $atts['stop_hover'] ) ? $atts['stop_hover'] : $stop_hover;
@@ -129,6 +160,18 @@ class wcpcsu_Shortcode
         $carousel_pagination        = ! empty( $atts['carousel_pagination'] ) ? $atts['carousel_pagination'] : $carousel_pagination;
         $dots_color                 = ! empty( $atts['dots_color'] ) ? $atts['dots_color'] : $dots_color;
         $dots_active_color          = ! empty( $atts['dots_active_color'] ) ? $atts['dots_active_color'] : $dots_active_color;
+        $g_column                   = ! empty( $atts['g_column'] ) ? $atts['g_column'] : $g_column;
+        $g_tablet                   = ! empty( $atts['g_tablet'] ) ? $atts['g_tablet'] : $g_tablet;
+        $g_mobile                   = ! empty( $atts['g_mobile'] ) ? $atts['g_mobile'] : $g_mobile;
+        $grid_pagination            = ! empty( $atts['grid_pagination'] ) ? $atts['grid_pagination'] : $grid_pagination;
+        $pagi_color                 = ! empty( $atts['pagi_color'] ) ? $atts['pagi_color'] : $pagi_color;
+        $pagi_border_color          = ! empty( $atts['pagi_border_color'] ) ? $atts['pagi_border_color'] : $pagi_border_color;
+        $pagi_back_color            = ! empty( $atts['pagi_back_color'] ) ? $atts['pagi_back_color'] : $pagi_back_color;
+        $pagi_hover_color           = ! empty( $atts['pagi_hover_color'] ) ? $atts['pagi_hover_color'] : $pagi_hover_color;
+        $pagi_hover_border_color    = ! empty( $atts['pagi_hover_border_color'] ) ? $atts['pagi_hover_border_color'] : $pagi_hover_border_color;
+        $pagi_hover_back_color      = ! empty( $atts['pagi_hover_back_color'] ) ? $atts['pagi_hover_back_color'] : $pagi_hover_back_color;
+        $pagi_active_border_color   = ! empty( $atts['pagi_active_border_color'] ) ? $atts['pagi_active_border_color'] : $pagi_active_border_color;
+        $pagi_active_back_color     = ! empty( $atts['pagi_active_back_color'] ) ? $atts['pagi_active_back_color'] : $pagi_active_back_color;
 
 
         $rand_id                 = rand();
@@ -250,6 +293,31 @@ class wcpcsu_Shortcode
         $pagi_active_color          = ! empty( $pagi_active_color ) ? $pagi_active_color : '#fff';
         $pagi_active_border_color   = ! empty( $pagi_active_border_color ) ? $pagi_active_border_color : '#ff5500';
         $pagi_active_back_color     = ! empty( $pagi_active_back_color ) ? $pagi_active_back_color : '#ff5500';
+
+
+        //style shortcode act 
+        $header_font_size                       = ! empty( $atts['header_font_size'] ) ? $atts['header_font_size'] : $header_font_size;
+        $header_font_color                      = ! empty( $atts['header_font_color'] ) ? $atts['header_font_color'] : $header_font_color;
+        $title_font_size                        = ! empty( $atts['title_font_size'] ) ? $atts['title_font_size'] : $title_font_size;
+        $title_font_color                       = ! empty( $atts['title_font_color'] ) ? $atts['title_font_color'] : $title_font_color;
+        $title_hover_font_color                 = ! empty( $atts['title_hover_font_color'] ) ? $atts['title_hover_font_color'] : $title_hover_font_color;
+        $price_font_size                        = ! empty( $atts['price_font_size'] ) ? $atts['price_font_size'] : $price_font_size;
+        $price_font_color                       = ! empty( $atts['price_font_color'] ) ? $atts['price_font_color'] : $price_font_color;
+        $ratings_size                           = ! empty( $atts['ratings_size'] ) ? $atts['ratings_size'] : $ratings_size;
+        $ratings_color                          = ! empty( $atts['ratings_color'] ) ? $atts['ratings_color'] : $ratings_color;
+        $cart_font_color                        = ! empty( $atts['cart_font_color'] ) ? $atts['cart_font_color'] : $cart_font_color;
+        $cart_bg_color                          = ! empty( $atts['cart_bg_color'] ) ? $atts['cart_bg_color'] : $cart_bg_color;
+        $cart_button_hover_color                = ! empty( $atts['cart_button_hover_color'] ) ? $atts['cart_button_hover_color'] : $cart_button_hover_color;
+        $cart_button_hover_font_color           = ! empty( $atts['cart_button_hover_font_color'] ) ? $atts['cart_button_hover_font_color'] : $cart_button_hover_font_color;
+        $action_icon_font_color                 = ! empty( $atts['action_icon_font_color'] ) ? $atts['action_icon_font_color'] : $action_icon_font_color;
+        $action_icon_hover_color                = ! empty( $atts['action_icon_hover_color'] ) ? $atts['action_icon_hover_color'] : $action_icon_hover_color;
+        $ribbon_bg_color                        = ! empty( $atts['ribbon_bg_color'] ) ? $atts['ribbon_bg_color'] : $ribbon_bg_color;
+        $quick_view_button_color                = ! empty( $atts['quick_view_button_color'] ) ? $atts['quick_view_button_color'] : $quick_view_button_color;
+        $quick_view_button_back_color           = ! empty( $atts['quick_view_button_back_color'] ) ? $atts['quick_view_button_back_color'] : $quick_view_button_back_color;
+        $quick_view_button_hover_color          = ! empty( $atts['quick_view_button_hover_color'] ) ? $atts['quick_view_button_hover_color'] : $quick_view_button_hover_color;
+        $quick_view_button_hover_back_color     = ! empty( $atts['quick_view_button_hover_back_color'] ) ? $atts['quick_view_button_hover_back_color'] : $quick_view_button_hover_back_color;
+
+
 
         $header_class = '';
 

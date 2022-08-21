@@ -78,9 +78,21 @@ class Elementor_Hello_World_Widget_1 extends \Elementor\Widget_Base {
 				'id'      => 'theme',
 				'label'   => __( 'Theme', 'woocommerce-product-carousel-slider-and-ultimate' ),
 				'options' => array(
-					'theme_1' => __( 'Theme One', 'woocommerce-product-carousel-slider-and-ultimate' ),
-					'theme_2' => __( 'Theme Two', 'woocommerce-product-carousel-slider-and-ultimate' ),
-					'theme_3' => __( 'Theme Three', 'woocommerce-product-carousel-slider-and-ultimate' ),
+					'theme_1' => __( 'Theme 1', 'woocommerce-product-carousel-slider-and-ultimate' ),
+					'theme_2' => __( 'Theme 2', 'woocommerce-product-carousel-slider-and-ultimate' ),
+					'theme_3' => __( 'Theme 3', 'woocommerce-product-carousel-slider-and-ultimate' ),
+					'theme_4' => __( 'Theme 4', 'woocommerce-product-carousel-slider-and-ultimate' ),
+					'theme_5' => __( 'Theme 5', 'woocommerce-product-carousel-slider-and-ultimate' ),
+					'theme_6' => __( 'Theme 6', 'woocommerce-product-carousel-slider-and-ultimate' ),
+					'theme_7' => __( 'Theme 7', 'woocommerce-product-carousel-slider-and-ultimate' ),
+					'theme_8' => __( 'Theme 8', 'woocommerce-product-carousel-slider-and-ultimate' ),
+					'theme_9' => __( 'Theme 9', 'woocommerce-product-carousel-slider-and-ultimate' ),
+					'theme_10' => __( 'Theme 10', 'woocommerce-product-carousel-slider-and-ultimate' ),
+					'theme_11' => __( 'Theme 11', 'woocommerce-product-carousel-slider-and-ultimate' ),
+					'theme_12' => __( 'Theme 12', 'woocommerce-product-carousel-slider-and-ultimate' ),
+					'theme_13' => __( 'Theme 13', 'woocommerce-product-carousel-slider-and-ultimate' ),
+					'theme_14' => __( 'Theme 14', 'woocommerce-product-carousel-slider-and-ultimate' ),
+					'theme_15' => __( 'Theme 15', 'woocommerce-product-carousel-slider-and-ultimate' ),
 				),
 				'default' => 'theme_1',
 			),
@@ -468,6 +480,204 @@ class Elementor_Hello_World_Widget_1 extends \Elementor\Widget_Base {
 				'default' => '1',
 			),
 			array(
+				'type'      => Controls_Manager::SWITCHER,
+				'id'        => 'grid_pagination',
+				'label'     => __( 'Display Pagination', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'default'   => 'no',
+			),
+			array(
+				'type'      => Controls_Manager::COLOR,
+				'id'        => 'pagi_color',
+				'label'     => __( 'Pagination Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'default'   => '#333',
+			),
+			array(
+				'type'      => Controls_Manager::COLOR,
+				'id'        => 'pagi_border_color',
+				'label'     => __( 'Pagination Border Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'default'   => '#e4e4e4',
+			),
+			array(
+				'type'      => Controls_Manager::COLOR,
+				'id'        => 'pagi_back_color',
+				'label'     => __( 'Pagination Background Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'default'   => '#fff',
+			),
+			array(
+				'type'      => Controls_Manager::COLOR,
+				'id'        => 'pagi_hover_color',
+				'label'     => __( 'Pagination Hover Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'default'   => '#fff',
+			),
+			array(
+				'type'      => Controls_Manager::COLOR,
+				'id'        => 'pagi_hover_border_color',
+				'label'     => __( 'Pagination Hover Border Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'default'   => '#ff5500',
+			),
+			array(
+				'type'      => Controls_Manager::COLOR,
+				'id'        => 'pagi_hover_back_color',
+				'label'     => __( 'Pagination Hover Background Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'default'   => '#ff5500',
+			),
+			array(
+				'type'      => Controls_Manager::COLOR,
+				'id'        => 'pagi_active_color',
+				'label'     => __( 'Pagination Active Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'default'   => '#fff',
+			),
+			array(
+				'type'      => Controls_Manager::COLOR,
+				'id'        => 'pagi_active_border_color',
+				'label'     => __( 'Pagination Active Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'default'   => '#ff5500',
+			),
+			array(
+				'type'      => Controls_Manager::COLOR,
+				'id'        => 'pagi_active_back_color',
+				'label'     => __( 'Pagination Active Background Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'default'   => '#ff5500',
+			),
+			array(
+				'mode' => 'section_end',
+			),
+			array(
+				'mode'    => 'section_start',
+				'id'      => 'sec_style',
+				'label'   => __( 'Style', 'woocommerce-product-carousel-slider-and-ultimate' ),
+			),
+			array(
+				'type'      	=> Controls_Manager::TEXT,
+				'id'        	=> 'header_font_size',
+				'label'     	=> __( 'Header Font Size', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'description' 	=> 'px',
+				'default'   	=> 24,
+			),
+			array(
+				'type'      => Controls_Manager::COLOR,
+				'id'        => 'header_font_color',
+				'label'     => __( 'Header Font Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'default'   => '#303030',
+			),
+			array(
+				'type'      	=> Controls_Manager::TEXT,
+				'id'        	=> 'title_font_size',
+				'label'     	=> __( 'Product Title Font Size', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'description' 	=> 'px',
+				'default'   	=> 15,
+			),
+			array(
+				'type'      => Controls_Manager::COLOR,
+				'id'        => 'title_font_color',
+				'label'     => __( 'Product Title Font Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'default'   => '#363940',
+			),
+			array(
+				'type'      => Controls_Manager::COLOR,
+				'id'        => 'title_hover_font_color',
+				'label'     => __( 'Product Title Hover Font Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'default'   => '#ff5500',
+			),
+			array(
+				'type'      	=> Controls_Manager::TEXT,
+				'id'        	=> 'price_font_size',
+				'label'     	=> __( 'Product Price Font Size', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'description' 	=> 'px',
+				'default'   	=> 16,
+			),
+			array(
+				'type'      => Controls_Manager::COLOR,
+				'id'        => 'price_font_color',
+				'label'     => __( 'Product Price Font Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'default'   => '#ff5500',
+			),
+			array(
+				'type'      	=> Controls_Manager::TEXT,
+				'id'        	=> 'ratings_size',
+				'label'     	=> __( 'Product Rating Size', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'description' 	=> 'px',
+				'default'   	=> 16,
+			),
+			array(
+				'type'      => Controls_Manager::COLOR,
+				'id'        => 'ratings_color',
+				'label'     => __( 'Product Ratings Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'default'   => '#FEB507',
+			),
+			array(
+				'type'      => Controls_Manager::COLOR,
+				'id'        => 'cart_font_color',
+				'label'     => __( '"Add to Cart" Font Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'default'   => '#ffffff',
+			),
+			array(
+				'type'      => Controls_Manager::COLOR,
+				'id'        => 'cart_bg_color',
+				'label'     => __( '"Add to Cart" Background Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'default'   => '#ff5500',
+			),
+			array(
+				'type'      => Controls_Manager::COLOR,
+				'id'        => 'cart_button_hover_color',
+				'label'     => __( '"Add to Cart" Background Hover Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'default'   => '#9A9A9A',
+			),
+			array(
+				'type'      => Controls_Manager::COLOR,
+				'id'        => 'cart_button_hover_font_color',
+				'label'     => __( '"Add to Cart" Hover Font Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'default'   => '#ffffff',
+			),
+			array(
+				'type'      => Controls_Manager::COLOR,
+				'id'        => 'action_icon_font_color',
+				'label'     => __( 'Action Icon Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'default'   => '#363940',
+			),
+			array(
+				'type'      => Controls_Manager::COLOR,
+				'id'        => 'action_icon_hover_color',
+				'label'     => __( 'Action Icon Hover Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'default'   => '#ff5500',
+			),
+			array(
+				'type'      => Controls_Manager::COLOR,
+				'id'        => 'action_icon_hover_color',
+				'label'     => __( 'Action Icon Hover Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'default'   => '#ff5500',
+			),
+			array(
+				'type'      => Controls_Manager::COLOR,
+				'id'        => 'ribbon_bg_color',
+				'label'     => __( '"Ribbon" Background Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'default'   => '#ff5500',
+			),
+			array(
+				'type'      => Controls_Manager::COLOR,
+				'id'        => 'quick_view_button_color',
+				'label'     => __( '"Quick View" Button Font Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'default'   => '#ffffff',
+			),
+			array(
+				'type'      => Controls_Manager::COLOR,
+				'id'        => 'quick_view_button_back_color',
+				'label'     => __( '"Quick View" Button Background Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'default'   => '#363940',
+			),
+			array(
+				'type'      => Controls_Manager::COLOR,
+				'id'        => 'quick_view_button_hover_color',
+				'label'     => __( '"Quick View" Button Hover Font Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'default'   => '#ffffff',
+			),
+			array(
+				'type'      => Controls_Manager::COLOR,
+				'id'        => 'quick_view_button_hover_back_color',
+				'label'     => __( '"Quick View" Button Background Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'default'   => '#000000',
+			),
+			array(
 				'mode' => 'section_end',
 			),
 		);
@@ -483,7 +693,7 @@ class Elementor_Hello_World_Widget_1 extends \Elementor\Widget_Base {
 	}
 
 	public function get_icon() {
-		return 'eicon-code';
+		return 'eicon-carousel';
 	}
 
 	public function get_categories() {
@@ -491,7 +701,7 @@ class Elementor_Hello_World_Widget_1 extends \Elementor\Widget_Base {
 	}
 
 	public function get_keywords() {
-		return [ 'hello', 'world' ];
+		return [ 'woocommerce', 'product', 'woo', 'ultimate' ];
 	}
 
 	protected function render() {
@@ -525,7 +735,6 @@ class Elementor_Hello_World_Widget_1 extends \Elementor\Widget_Base {
 			'crop_image_width'              => $settings['crop_image_width'] ? $settings['crop_image_width'] : '350',
 			'crop_image_height'             => $settings['crop_image_height'] ? $settings['crop_image_height'] : '250',
 			'img_hover_effect'              => $settings['img_hover_effect'] ? $settings['img_hover_effect'] : 'theme_1',
-
 			'A_play'                 		=> $settings['A_play'] ? $settings['A_play'] : 'yes',
 			'repeat_product'                => $settings['repeat_product'] ? $settings['repeat_product'] : 'yes',
 			'stop_hover'                 	=> $settings['stop_hover'] ? $settings['stop_hover'] : 'no',
@@ -548,6 +757,40 @@ class Elementor_Hello_World_Widget_1 extends \Elementor\Widget_Base {
 			'carousel_pagination'           => $settings['carousel_pagination'] ? $settings['carousel_pagination'] : 'no',
 			'dots_color'                 	=> $settings['dots_color'] ? $settings['dots_color'] : '#333',
 			'dots_active_color'             => $settings['dots_active_color'] ? $settings['dots_active_color'] : '#fff',
+			'g_column'             			=> $settings['g_column'] ? $settings['g_column'] : '3',
+			'g_tablet'             			=> $settings['g_tablet'] ? $settings['g_tablet'] : '2',
+			'g_mobile'             			=> $settings['g_mobile'] ? $settings['g_mobile'] : '1',
+			'grid_pagination'             	=> $settings['grid_pagination'] ? $settings['grid_pagination'] : 'no',
+			'pagi_color'             		=> $settings['pagi_color'] ? $settings['pagi_color'] : '#333',
+			'pagi_border_color'             => $settings['pagi_border_color'] ? $settings['pagi_border_color'] : '#e4e4e4',
+			'pagi_back_color'             	=> $settings['pagi_back_color'] ? $settings['pagi_back_color'] : '#fff',
+			'pagi_hover_color'             	=> $settings['pagi_hover_color'] ? $settings['pagi_hover_color'] : '#fff',
+			'pagi_hover_border_color'       => $settings['pagi_hover_border_color'] ? $settings['pagi_hover_border_color'] : '#ff5500',
+			'pagi_hover_back_color'         => $settings['pagi_hover_back_color'] ? $settings['pagi_hover_back_color'] : '#ff5500',
+			'pagi_active_border_color'      => $settings['pagi_active_border_color'] ? $settings['pagi_active_border_color'] : '#ff5500',
+			'pagi_active_back_color'        => $settings['pagi_active_back_color'] ? $settings['pagi_active_back_color'] : '#ff5500',
+
+			'header_font_size'        		=> $settings['header_font_size'] ? $settings['header_font_size'] : '24',
+			'header_font_color'        		=> $settings['header_font_color'] ? $settings['header_font_color'] : '#303030',
+			'title_font_size'        		=> $settings['title_font_size'] ? $settings['title_font_size'] : '15',
+			'title_font_color'        		=> $settings['title_font_color'] ? $settings['title_font_color'] : '#363940',
+			'title_hover_font_color'        => $settings['title_hover_font_color'] ? $settings['title_hover_font_color'] : '#ff5500',
+			'price_font_size'        		=> $settings['price_font_size'] ? $settings['price_font_size'] : '16',
+			'price_font_color'        		=> $settings['price_font_color'] ? $settings['price_font_color'] : '#ff5500',
+			'ratings_size'        			=> $settings['ratings_size'] ? $settings['ratings_size'] : '16',
+			'ratings_color'        			=> $settings['ratings_color'] ? $settings['ratings_color'] : '#FEB507',
+			'cart_font_color'        		=> $settings['cart_font_color'] ? $settings['cart_font_color'] : '#ffffff',
+			'cart_bg_color'        			=> $settings['cart_bg_color'] ? $settings['cart_bg_color'] : '#ff5500',
+			'cart_button_hover_color'       => $settings['cart_button_hover_color'] ? $settings['cart_button_hover_color'] : '#9A9A9A',
+			'cart_button_hover_font_color'  => $settings['cart_button_hover_font_color'] ? $settings['cart_button_hover_font_color'] : '#ffffff',
+			'action_icon_font_color'        => $settings['action_icon_font_color'] ? $settings['action_icon_font_color'] : '#363940',
+			'action_icon_hover_color'       => $settings['action_icon_hover_color'] ? $settings['action_icon_hover_color'] : '#ff5500',
+			'ribbon_bg_color'        		=> $settings['ribbon_bg_color'] ? $settings['ribbon_bg_color'] : '#ff5500',
+			'quick_view_button_color'       => $settings['quick_view_button_color'] ? $settings['quick_view_button_color'] : '#ffffff',
+			'quick_view_button_back_color'        => $settings['quick_view_button_back_color'] ? $settings['quick_view_button_back_color'] : '#363940',
+			'quick_view_button_hover_color'        => $settings['quick_view_button_hover_color'] ? $settings['quick_view_button_hover_color'] : '#ffffff',
+			'quick_view_button_hover_back_color'        => $settings['quick_view_button_hover_back_color'] ? $settings['quick_view_button_hover_back_color'] : '#000000',
+
 		);
 
 		if( is_admin() ) {
