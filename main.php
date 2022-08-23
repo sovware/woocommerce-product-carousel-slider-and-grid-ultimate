@@ -132,6 +132,7 @@ if( ! in_array('woocommerce-product-carousel-slider-grid-ultimate-pro/main.php',
          * @return void
          */
         public function wcpcsu_include() {
+            require_once WCPCSU_INC_DIR . 'elementor/init.php';
             require_once WCPCSU_INC_DIR . 'helper-functions.php';
             wpcsu_load_dependencies( 'all', WCPCSU_INC_DIR . 'classes/' );
         }

@@ -21,13 +21,93 @@ class WCPCSU_Shortcode {
 
 	public function register( $atts, $content = null ) {
 		$atts = shortcode_atts( array(
-			'id' =>  0
+			'id' 						=>  0,
+			'layout'                    => '',
+            'theme'                     => '',
+            'total_products'            => '',
+            'h_title_show'              => '',
+            'header_title'              => '',
+            'header_position'           => '',
+            'display_title'             => '',
+            'products_type'             => '',
+            'display_sale_ribbon'       => '',
+            'sale_ribbon_text'          => '',
+            'sale_ribbon_position'      => '',
+            'display_featured_ribbon'   => '',
+            'feature_ribbon_text'       => '',
+            'featured_ribbon_position'  => '',
+            'display_sold_out_ribbon'   => '',
+            'sold_out_ribbon_text'      => '',
+            'sold_out_ribbon_position'  => '',
+            'display_discount_ribbon'   => '',
+            'discount_ribbon_position'  => '',
+            'display_price'             => '',
+            'display_ratings'           => '',
+            'display_cart'              => '',
+            'exclude_stock_out'         => '',
+            'img_crop'                  => '',
+            'crop_image_width'          => '',
+            'crop_image_height'         => '',
+            'img_hover_effect'          => '',
+            'A_play'                    => '',
+            'repeat_product'            => '',
+            'stop_hover'                => '',
+            'marquee'                   => '',
+            'c_desktop'                 => '',
+            'c_desktop_small'           => '',
+            'c_tablet'                  => '',
+            'c_mobile'                  => '',
+            'slide_speed'               => '',
+            'slide_time'                => '',
+            'scrool_direction'          => '',
+            'nav_show'                  => '',
+            'nav_position'              => '',
+            'nav_arrow_color'           => '',
+            'nav_back_color'            => '',
+            'nav_border_color'          => '',
+            'nav_arrow_hover_color'     => '',
+            'nav_back_hover_color'      => '',
+            'nav_border_hover'          => '',
+            'carousel_pagination'       => '',
+            'dots_color'                => '',
+            'dots_active_color'         => '',
+            'g_column'                  => '',
+            'g_tablet'                  => '',
+            'g_mobile'                  => '',
+            'grid_pagination'           => '',
+            'pagi_color'                => '',
+            'pagi_border_color'         => '',
+            'pagi_back_color'           => '',
+            'pagi_hover_color'          => '',
+            'pagi_hover_border_color'   => '',
+            'pagi_hover_back_color'     => '',
+            'pagi_active_border_color'  => '',
+            'pagi_active_back_color'    => '',
+
+            'header_font_size'          => '',
+            'header_font_color'         => '',
+            'title_font_size'           => '',
+            'title_font_color'          => '',
+            'title_hover_font_color'    => '',
+            'price_font_size'           => '',
+            'price_font_color'          => '',
+            'ratings_size'              => '',
+            'ratings_color'             => '',
+            'cart_font_color'           => '',
+            'cart_bg_color'             => '',
+            'cart_button_hover_color'   => '',
+            'cart_button_hover_font_color'    => '',
+            'action_icon_font_color'          => '',
+            'action_icon_hover_color'         => '',
+            'ribbon_bg_color'                 => '',
+            'quick_view_button_color'         => '',
+            'quick_view_button_back_color'    => '',
+            'quick_view_button_hover_color'   => '',
+            'quick_view_button_hover_back_color'    => '',
 		), $atts, self::SHORTCODE_TAG );
 		
 		$post_id = absint( $atts['id'] );
-		if ( empty( $post_id ) ) {
-			return;
-		}
+		
 
 		$this->wcpcsu_style_files();
 
@@ -37,6 +117,69 @@ class WCPCSU_Shortcode {
 		$value      = is_array( $data_array ) ? $data_array : array();
 
 		extract( $value );
+
+		// shortcode attribute
+        $layout                     = ! empty( $atts['layout'] ) ? $atts['layout'] : $layout;
+        $theme                      = ! empty( $atts['theme'] ) ? $atts['theme'] : $theme;
+        $total_products             = ! empty( $atts['total_products'] ) ? $atts['total_products'] : $total_products;
+        $h_title_show               = ! empty( $atts['h_title_show'] ) ? $atts['h_title_show'] : $h_title_show;
+        $header_title               = ! empty( $atts['header_title'] ) ? $atts['header_title'] : $header_title;
+        $header_position            = ! empty( $atts['header_position'] ) ? $atts['header_position'] : $header_position;
+        $display_title              = ! empty( $atts['display_title'] ) ? $atts['display_title'] : $display_title;
+        $products_type              = ! empty( $atts['products_type'] ) ? $atts['products_type'] : $products_type;
+        $display_sale_ribbon        = ! empty( $atts['display_sale_ribbon'] ) ? $atts['display_sale_ribbon'] : $display_sale_ribbon;
+        $sale_ribbon_text           = ! empty( $atts['sale_ribbon_text'] ) ? $atts['sale_ribbon_text'] : $sale_ribbon_text;
+        $sale_ribbon_position       = ! empty( $atts['sale_ribbon_position'] ) ? $atts['sale_ribbon_position'] : $sale_ribbon_position;
+        $display_featured_ribbon    = ! empty( $atts['display_featured_ribbon'] ) ? $atts['display_featured_ribbon'] : $display_featured_ribbon;
+        $feature_ribbon_text        = ! empty( $atts['feature_ribbon_text'] ) ? $atts['feature_ribbon_text'] : $feature_ribbon_text;
+        $featured_ribbon_position   = ! empty( $atts['featured_ribbon_position'] ) ? $atts['featured_ribbon_position'] : $featured_ribbon_position;
+        $display_sold_out_ribbon    = ! empty( $atts['display_sold_out_ribbon'] ) ? $atts['display_sold_out_ribbon'] : $display_sold_out_ribbon;
+        $sold_out_ribbon_text       = ! empty( $atts['sold_out_ribbon_text'] ) ? $atts['sold_out_ribbon_text'] : $sold_out_ribbon_text;
+        $sold_out_ribbon_position   = ! empty( $atts['sold_out_ribbon_position'] ) ? $atts['sold_out_ribbon_position'] : $sold_out_ribbon_position;
+        $display_discount_ribbon    = ! empty( $atts['display_discount_ribbon'] ) ? $atts['display_discount_ribbon'] : $display_discount_ribbon;
+        $discount_ribbon_position   = ! empty( $atts['discount_ribbon_position'] ) ? $atts['discount_ribbon_position'] : $discount_ribbon_position;
+        $display_price              = ! empty( $atts['display_price'] ) ? $atts['display_price'] : $display_price;
+        $display_ratings            = ! empty( $atts['display_ratings'] ) ? $atts['display_ratings'] : $display_ratings;
+        $display_cart               = ! empty( $atts['display_cart'] ) ? $atts['display_cart'] : $display_cart;
+        $exclude_stock_out          = ! empty( $atts['exclude_stock_out'] ) ? $atts['exclude_stock_out'] : $exclude_stock_out;
+        $img_crop                   = ! empty( $atts['img_crop'] ) ? $atts['img_crop'] : $img_crop;
+        $crop_image_width           = ! empty( $atts['crop_image_width'] ) ? $atts['crop_image_width'] : $crop_image_width;
+        $crop_image_height          = ! empty( $atts['crop_image_height'] ) ? $atts['crop_image_height'] : $crop_image_height;
+        $img_hover_effect           = ! empty( $atts['img_hover_effect'] ) ? $atts['img_hover_effect'] : $img_hover_effect;
+        $A_play                     = ! empty( $atts['A_play'] ) ? $atts['A_play'] : $A_play;
+        $repeat_product             = ! empty( $atts['repeat_product'] ) ? $atts['repeat_product'] : $repeat_product;
+        $stop_hover                 = ! empty( $atts['stop_hover'] ) ? $atts['stop_hover'] : $stop_hover;
+        $marquee                    = ! empty( $atts['marquee'] ) ? $atts['marquee'] : $marquee;
+        $c_desktop                  = ! empty( $atts['c_desktop'] ) ? $atts['c_desktop'] : $c_desktop;
+        $c_desktop_small            = ! empty( $atts['c_desktop_small'] ) ? $atts['c_desktop_small'] : $c_desktop_small;
+        $c_tablet                   = ! empty( $atts['c_tablet'] ) ? $atts['c_tablet'] : $c_tablet;
+        $c_mobile                   = ! empty( $atts['c_mobile'] ) ? $atts['c_mobile'] : $c_mobile;
+        $slide_speed                = ! empty( $atts['slide_speed'] ) ? $atts['slide_speed'] : $slide_speed;
+        $slide_time                 = ! empty( $atts['slide_time'] ) ? $atts['slide_time'] : $slide_time;
+        $scrool_direction           = ! empty( $atts['scrool_direction'] ) ? $atts['scrool_direction'] : $scrool_direction;
+        $nav_show                   = ! empty( $atts['nav_show'] ) ? $atts['nav_show'] : $nav_show;
+        $nav_position               = ! empty( $atts['nav_position'] ) ? $atts['nav_position'] : $nav_position;
+        $nav_arrow_color            = ! empty( $atts['nav_arrow_color'] ) ? $atts['nav_arrow_color'] : $nav_arrow_color;
+        $nav_back_color             = ! empty( $atts['nav_back_color'] ) ? $atts['nav_back_color'] : $nav_back_color;
+        $nav_border_color           = ! empty( $atts['nav_border_color'] ) ? $atts['nav_border_color'] : $nav_border_color;
+        $nav_arrow_hover_color      = ! empty( $atts['nav_arrow_hover_color'] ) ? $atts['nav_arrow_hover_color'] : $nav_arrow_hover_color;
+        $nav_back_hover_color       = ! empty( $atts['nav_back_hover_color'] ) ? $atts['nav_back_hover_color'] : $nav_back_hover_color;
+        $nav_border_hover           = ! empty( $atts['nav_border_hover'] ) ? $atts['nav_border_hover'] : $nav_border_hover;
+        $carousel_pagination        = ! empty( $atts['carousel_pagination'] ) ? $atts['carousel_pagination'] : $carousel_pagination;
+        $dots_color                 = ! empty( $atts['dots_color'] ) ? $atts['dots_color'] : $dots_color;
+        $dots_active_color          = ! empty( $atts['dots_active_color'] ) ? $atts['dots_active_color'] : $dots_active_color;
+        $g_column                   = ! empty( $atts['g_column'] ) ? $atts['g_column'] : $g_column;
+        $g_tablet                   = ! empty( $atts['g_tablet'] ) ? $atts['g_tablet'] : $g_tablet;
+        $g_mobile                   = ! empty( $atts['g_mobile'] ) ? $atts['g_mobile'] : $g_mobile;
+        $grid_pagination            = ! empty( $atts['grid_pagination'] ) ? $atts['grid_pagination'] : $grid_pagination;
+        $pagi_color                 = ! empty( $atts['pagi_color'] ) ? $atts['pagi_color'] : $pagi_color;
+        $pagi_border_color          = ! empty( $atts['pagi_border_color'] ) ? $atts['pagi_border_color'] : $pagi_border_color;
+        $pagi_back_color            = ! empty( $atts['pagi_back_color'] ) ? $atts['pagi_back_color'] : $pagi_back_color;
+        $pagi_hover_color           = ! empty( $atts['pagi_hover_color'] ) ? $atts['pagi_hover_color'] : $pagi_hover_color;
+        $pagi_hover_border_color    = ! empty( $atts['pagi_hover_border_color'] ) ? $atts['pagi_hover_border_color'] : $pagi_hover_border_color;
+        $pagi_hover_back_color      = ! empty( $atts['pagi_hover_back_color'] ) ? $atts['pagi_hover_back_color'] : $pagi_hover_back_color;
+        $pagi_active_border_color   = ! empty( $atts['pagi_active_border_color'] ) ? $atts['pagi_active_border_color'] : $pagi_active_border_color;
+        $pagi_active_back_color     = ! empty( $atts['pagi_active_back_color'] ) ? $atts['pagi_active_back_color'] : $pagi_active_back_color;
 
 		$rand_id                 = rand();
 		$total_products          = ! empty( $total_products ) ? intval( $total_products ) : 6;
@@ -136,6 +279,28 @@ class WCPCSU_Shortcode {
 		$pagi_active_color          = ! empty( $pagi_active_color ) ? $pagi_active_color : '#fff';
 		$pagi_active_border_color   = ! empty( $pagi_active_border_color ) ? $pagi_active_border_color : '#ff5500';
 		$pagi_active_back_color     = ! empty( $pagi_active_back_color ) ? $pagi_active_back_color : '#ff5500';
+
+		//style shortcode act 
+        $header_font_size                       = ! empty( $atts['header_font_size'] ) ? $atts['header_font_size'] : $header_font_size;
+        $header_font_color                      = ! empty( $atts['header_font_color'] ) ? $atts['header_font_color'] : $header_font_color;
+        $title_font_size                        = ! empty( $atts['title_font_size'] ) ? $atts['title_font_size'] : $title_font_size;
+        $title_font_color                       = ! empty( $atts['title_font_color'] ) ? $atts['title_font_color'] : $title_font_color;
+        $title_hover_font_color                 = ! empty( $atts['title_hover_font_color'] ) ? $atts['title_hover_font_color'] : $title_hover_font_color;
+        $price_font_size                        = ! empty( $atts['price_font_size'] ) ? $atts['price_font_size'] : $price_font_size;
+        $price_font_color                       = ! empty( $atts['price_font_color'] ) ? $atts['price_font_color'] : $price_font_color;
+        $ratings_size                           = ! empty( $atts['ratings_size'] ) ? $atts['ratings_size'] : $ratings_size;
+        $ratings_color                          = ! empty( $atts['ratings_color'] ) ? $atts['ratings_color'] : $ratings_color;
+        $cart_font_color                        = ! empty( $atts['cart_font_color'] ) ? $atts['cart_font_color'] : $cart_font_color;
+        $cart_bg_color                          = ! empty( $atts['cart_bg_color'] ) ? $atts['cart_bg_color'] : $cart_bg_color;
+        $cart_button_hover_color                = ! empty( $atts['cart_button_hover_color'] ) ? $atts['cart_button_hover_color'] : $cart_button_hover_color;
+        $cart_button_hover_font_color           = ! empty( $atts['cart_button_hover_font_color'] ) ? $atts['cart_button_hover_font_color'] : $cart_button_hover_font_color;
+        $action_icon_font_color                 = ! empty( $atts['action_icon_font_color'] ) ? $atts['action_icon_font_color'] : $action_icon_font_color;
+        $action_icon_hover_color                = ! empty( $atts['action_icon_hover_color'] ) ? $atts['action_icon_hover_color'] : $action_icon_hover_color;
+        $ribbon_bg_color                        = ! empty( $atts['ribbon_bg_color'] ) ? $atts['ribbon_bg_color'] : $ribbon_bg_color;
+        $quick_view_button_color                = ! empty( $atts['quick_view_button_color'] ) ? $atts['quick_view_button_color'] : $quick_view_button_color;
+        $quick_view_button_back_color           = ! empty( $atts['quick_view_button_back_color'] ) ? $atts['quick_view_button_back_color'] : $quick_view_button_back_color;
+        $quick_view_button_hover_color          = ! empty( $atts['quick_view_button_hover_color'] ) ? $atts['quick_view_button_hover_color'] : $quick_view_button_hover_color;
+        $quick_view_button_hover_back_color     = ! empty( $atts['quick_view_button_hover_back_color'] ) ? $atts['quick_view_button_hover_back_color'] : $quick_view_button_hover_back_color;
 
 		$header_class = '';
 
