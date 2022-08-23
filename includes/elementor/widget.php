@@ -1,8 +1,7 @@
 <?php
 
-use Elementor\Widget_Base;
 use Elementor\Controls_Manager;
-class Elementor_Hello_World_Widget_1 extends \Elementor\Widget_Base {
+class Elementor_Woo_Ultimate_Widget extends \Elementor\Widget_Base {
 
 	public function register_controls() {
 		$fields = $this->wpcsu_fields();
@@ -848,11 +847,11 @@ class Elementor_Hello_World_Widget_1 extends \Elementor\Widget_Base {
 	}
 
 	public function get_name() {
-		return 'woocommerce_ultimate_pro';
+		return 'woocommerce_ultimate';
 	}
 
 	public function get_title() {
-		return esc_html__( 'WooCommerce Ultimate Pro', 'woocommerce-product-carousel-slider-and-ultimate' );
+		return esc_html__( 'WooCommerce Ultimate', 'woocommerce-product-carousel-slider-and-ultimate' );
 	}
 
 	public function get_icon() {
