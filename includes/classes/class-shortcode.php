@@ -48,7 +48,6 @@ class WCPCSU_Shortcode {
             'img_crop'                  => '',
             'crop_image_width'          => '',
             'crop_image_height'         => '',
-            'img_hover_effect'          => '',
             'A_play'                    => '',
             'repeat_product'            => '',
             'stop_hover'                => '',
@@ -83,7 +82,6 @@ class WCPCSU_Shortcode {
             'pagi_hover_back_color'     => '',
             'pagi_active_border_color'  => '',
             'pagi_active_back_color'    => '',
-
             'header_font_size'          => '',
             'header_font_color'         => '',
             'title_font_size'           => '',
@@ -97,13 +95,7 @@ class WCPCSU_Shortcode {
             'cart_bg_color'             => '',
             'cart_button_hover_color'   => '',
             'cart_button_hover_font_color'    => '',
-            'action_icon_font_color'          => '',
-            'action_icon_hover_color'         => '',
-            'ribbon_bg_color'                 => '',
-            'quick_view_button_color'         => '',
-            'quick_view_button_back_color'    => '',
-            'quick_view_button_hover_color'   => '',
-            'quick_view_button_hover_back_color'    => '',
+            'ribbon_bg_color'          	=> '',
 		), $atts, self::SHORTCODE_TAG );
 		
 		$post_id = absint( $atts['id'] );
@@ -145,7 +137,6 @@ class WCPCSU_Shortcode {
         $img_crop                   = ! empty( $atts['img_crop'] ) ? $atts['img_crop'] : $img_crop;
         $crop_image_width           = ! empty( $atts['crop_image_width'] ) ? $atts['crop_image_width'] : $crop_image_width;
         $crop_image_height          = ! empty( $atts['crop_image_height'] ) ? $atts['crop_image_height'] : $crop_image_height;
-        $img_hover_effect           = ! empty( $atts['img_hover_effect'] ) ? $atts['img_hover_effect'] : $img_hover_effect;
         $A_play                     = ! empty( $atts['A_play'] ) ? $atts['A_play'] : $A_play;
         $repeat_product             = ! empty( $atts['repeat_product'] ) ? $atts['repeat_product'] : $repeat_product;
         $stop_hover                 = ! empty( $atts['stop_hover'] ) ? $atts['stop_hover'] : $stop_hover;
@@ -297,10 +288,6 @@ class WCPCSU_Shortcode {
         $action_icon_font_color                 = ! empty( $atts['action_icon_font_color'] ) ? $atts['action_icon_font_color'] : $action_icon_font_color;
         $action_icon_hover_color                = ! empty( $atts['action_icon_hover_color'] ) ? $atts['action_icon_hover_color'] : $action_icon_hover_color;
         $ribbon_bg_color                        = ! empty( $atts['ribbon_bg_color'] ) ? $atts['ribbon_bg_color'] : $ribbon_bg_color;
-        $quick_view_button_color                = ! empty( $atts['quick_view_button_color'] ) ? $atts['quick_view_button_color'] : $quick_view_button_color;
-        $quick_view_button_back_color           = ! empty( $atts['quick_view_button_back_color'] ) ? $atts['quick_view_button_back_color'] : $quick_view_button_back_color;
-        $quick_view_button_hover_color          = ! empty( $atts['quick_view_button_hover_color'] ) ? $atts['quick_view_button_hover_color'] : $quick_view_button_hover_color;
-        $quick_view_button_hover_back_color     = ! empty( $atts['quick_view_button_hover_back_color'] ) ? $atts['quick_view_button_hover_back_color'] : $quick_view_button_hover_back_color;
 
 		$header_class = '';
 
