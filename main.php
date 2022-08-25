@@ -73,6 +73,7 @@ if( ! in_array('woocommerce-product-carousel-slider-grid-ultimate-pro/main.php',
                 add_action('admin_enqueue_scripts',array(self::$instance, 'wcpcsu_enqueue_file'));
                 add_action('template_redirect',array(self::$instance, 'template_enqueue_file'));
                 add_action('admin_menu',array(self::$instance,'upgrade_to_pro'));
+                add_action( 'elementor/editor/after_enqueue_scripts', [ self::$instance, 'el_editor_script' ] );
                 self::$instance->wcpcsu_include();
                 self::$instance->custom_post = new Wcpcsu_Custom_Post();
                 self::$instance->metabox = new Wcpcsu_Meta_Box();
@@ -83,6 +84,10 @@ if( ! in_array('woocommerce-product-carousel-slider-grid-ultimate-pro/main.php',
 
             return self::$instance;
         }
+
+        public function el_editor_script() {
+			wp_enqueue_style( 'tgp-el-editor-style', WCPCSU_URL . 'includes/elementor/assets/style.css', [], $this->version );
+		}
 
         /**
          * Setup plugin constants.
