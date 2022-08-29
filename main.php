@@ -86,7 +86,7 @@ if( ! in_array('woocommerce-product-carousel-slider-grid-ultimate-pro/main.php',
         }
 
         public function el_editor_script() {
-			wp_enqueue_style( 'tgp-el-editor-style', WCPCSU_URL . 'includes/elementor/assets/style.css', [], $this->version );
+			wp_enqueue_style( 'wcpcsu-el-editor-style', WCPCSU_URL . 'includes/elementor/assets/style.css' );
 		}
 
         /**
