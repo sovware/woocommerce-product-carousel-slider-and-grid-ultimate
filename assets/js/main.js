@@ -4,6 +4,8 @@
     Author: wpWax
     Version: 1.0
 */
+
+document.addEventListener("DOMContentLoaded", function () {
 (function ($) {
     /* Style reset in buttons p tag */
     document.querySelectorAll('.wpcu-button p.woocommerce, p.product').forEach((el, id) => {
@@ -102,3 +104,5 @@
     });
 
 })(jQuery);
+
+});

@@ -1,3 +1,4 @@
+document.addEventListener("DOMContentLoaded", function () {
 (function ($) {
   // Modal
   let wpcuModal = document.querySelector('.wpcu-modal-js');
@@ -35,4 +36,5 @@
       }
   });
 
-})(jQuery)
+})(jQuery);
+});
