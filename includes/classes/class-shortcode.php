@@ -43,7 +43,7 @@ class wcpcsu_Shortcode
             'crop_image_width'          => '',
             'crop_image_height'         => '',
             'img_hover_effect'          => '',
-            'A_play'                    => '',
+            'auto_play'                 => '',
             'repeat_product'            => '',
             'stop_hover'                => '',
             'marquee'                   => '',
@@ -77,7 +77,6 @@ class wcpcsu_Shortcode
             'pagi_hover_back_color'     => '',
             'pagi_active_border_color'  => '',
             'pagi_active_back_color'    => '',
-
             'header_font_size'          => '',
             'header_font_color'         => '',
             'title_font_size'           => '',
@@ -138,7 +137,7 @@ class wcpcsu_Shortcode
         $crop_image_width           = ! empty( $atts['crop_image_width'] ) ? $atts['crop_image_width'] : $crop_image_width;
         $crop_image_height          = ! empty( $atts['crop_image_height'] ) ? $atts['crop_image_height'] : $crop_image_height;
         $img_hover_effect           = ! empty( $atts['img_hover_effect'] ) ? $atts['img_hover_effect'] : $img_hover_effect;
-        $A_play                     = ! empty( $atts['A_play'] ) ? $atts['A_play'] : $A_play;
+        $A_play                     = ! empty( $atts['auto_play'] ) ? $atts['auto_play'] : $A_play;
         $repeat_product             = ! empty( $atts['repeat_product'] ) ? $atts['repeat_product'] : $repeat_product;
         $stop_hover                 = ! empty( $atts['stop_hover'] ) ? $atts['stop_hover'] : $stop_hover;
         $marquee                    = ! empty( $atts['marquee'] ) ? $atts['marquee'] : $marquee;
@@ -252,7 +251,7 @@ class wcpcsu_Shortcode
 
         $paged                          =  wcpcsu_get_paged_num();
         $paged                          = ! empty( $paged ) ? $paged : '';
-        $loop                           = $this->parse_query( $data_array,$atts );
+        $loop                           = $this->parse_query( $data_array, $atts );
 
         // carousel settings
         $slide_speed                = ! empty( $slide_speed ) ? $slide_speed : '2000';
@@ -347,7 +346,7 @@ class wcpcsu_Shortcode
             --wpcu-productPriceSize: <?php echo $price_font_size; ?>px;
             --wpcu-productPriceColor: <?php echo $price_font_color; ?>;
 
-            --wpcu-productRatingSize: <?php echo $ratings_size; ?>;
+            --wpcu-productRatingSize: <?php echo $ratings_size; ?>px;
             --wpcu-productRatingColor: <?php echo $ratings_color; ?>;
 
             --wpcu-buttonColor: <?php echo $cart_font_color; ?>;

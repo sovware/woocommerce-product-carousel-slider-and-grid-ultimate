@@ -876,7 +876,7 @@ class Elementor_Woo_Ultimate_Widget extends \Elementor\Widget_Base {
 			'h_title_show'                 	=> $settings['h_title_show'] ? $settings['h_title_show'] : 'no',
 			'header_title'                 	=> $settings['header_title'] ? $settings['header_title'] : '',
 			'header_position'               => $settings['header_position'] ? $settings['header_position'] : 'middle',
-			'display_title'                 => $settings['display_title'] ? $settings['display_title'] : 'yes',
+			'display_title'                 => $settings['display_title'] ? $settings['display_title'] : 'no',
 			'products_type'                 => $settings['products_type'] ? $settings['products_type'] : 'latest',
 			'display_sale_ribbon'           => $settings['display_sale_ribbon'] ? $settings['display_sale_ribbon'] : 'no',
 			'sale_ribbon_text'              => $settings['sale_ribbon_text'] ? $settings['sale_ribbon_text'] : 'Sale!',
@@ -889,17 +889,17 @@ class Elementor_Woo_Ultimate_Widget extends \Elementor\Widget_Base {
 			'sold_out_ribbon_position'      => $settings['sold_out_ribbon_position'] ? $settings['sold_out_ribbon_position'] : 'bottom_left',
 			'display_discount_ribbon'       => $settings['display_discount_ribbon'] ? $settings['display_discount_ribbon'] : 'no',
 			'discount_ribbon_position'      => $settings['discount_ribbon_position'] ? $settings['discount_ribbon_position'] : 'bottom_right',
-			'display_price'                 => $settings['display_price'] ? $settings['display_price'] : 'yes',
-			'display_ratings'               => $settings['display_ratings'] ? $settings['display_ratings'] : 'yes',
-			'display_cart'                  => $settings['display_cart'] ? $settings['display_cart'] : 'yes',
-			'exclude_stock_out'             => $settings['exclude_stock_out'] ? $settings['exclude_stock_out'] : 'yes',
-			'img_crop'                 		=> $settings['img_crop'] ? $settings['img_crop'] : 'yes',
+			'display_price'                 => $settings['display_price'] ? $settings['display_price'] : 'no',
+			'display_ratings'               => $settings['display_ratings'] ? $settings['display_ratings'] : 'no',
+			'display_cart'                  => $settings['display_cart'] ? $settings['display_cart'] : 'no',
+			'exclude_stock_out'             => $settings['exclude_stock_out'] ? $settings['exclude_stock_out'] : 'no',
+			'img_crop'                 		=> $settings['img_crop'] ? $settings['img_crop'] : 'no',
 			'crop_image_width'              => $settings['crop_image_width'] ? $settings['crop_image_width'] : '350',
 			'crop_image_height'             => $settings['crop_image_height'] ? $settings['crop_image_height'] : '250',
 			'img_hover_effect'              => $settings['img_hover_effect'] ? $settings['img_hover_effect'] : 'theme_1',
-			'A_play'                 		=> $settings['A_play'] ? $settings['A_play'] : 'yes',
-			'repeat_product'                => $settings['repeat_product'] ? $settings['repeat_product'] : 'yes',
-			'stop_hover'                 	=> $settings['stop_hover'] ? $settings['stop_hover'] : 'no',
+			'auto_play'                 	=> $settings['A_play'] ? $settings['A_play'] : 'no',
+			'repeat_product'                => $settings['repeat_product'] ? $settings['repeat_product'] : 'no',
+			'stop_hover'                 	=> $settings['stop_hover'] ? false : true,
 			'marquee'                 		=> $settings['marquee'] ? $settings['marquee'] : 'no',
 			'c_desktop'                 	=> $settings['c_desktop'] ? $settings['c_desktop'] : '3',
 			'c_desktop_small'               => $settings['c_desktop_small'] ? $settings['c_desktop_small'] : '3',
@@ -908,7 +908,7 @@ class Elementor_Woo_Ultimate_Widget extends \Elementor\Widget_Base {
 			'slide_speed'                 	=> $settings['slide_speed'] ? $settings['slide_speed'] : '2000',
 			'slide_time'                 	=> $settings['slide_time'] ? $settings['slide_time'] : '2000',
 			'scrool_direction'              => $settings['scrool_direction'] ? $settings['scrool_direction'] : 'right_left',
-			'nav_show'                 		=> $settings['nav_show'] ? $settings['nav_show'] : 'yes',
+			'nav_show'                 		=> $settings['nav_show'] ? $settings['nav_show'] : 'no',
 			'nav_position'                 	=> $settings['nav_position'] ? $settings['nav_position'] : 'bottom-right',
 			'nav_arrow_color'               => $settings['nav_arrow_color'] ? $settings['nav_arrow_color'] : '#333',
 			'nav_back_color'                => $settings['nav_back_color'] ? $settings['nav_back_color'] : '#fff',
@@ -958,7 +958,7 @@ class Elementor_Woo_Ultimate_Widget extends \Elementor\Widget_Base {
 		if( is_admin() ) {
 			$this->display_image( $atts );
 		} else {
-			$this->run_shortcode( 'wcpcsup', $atts );
+			$this->run_shortcode( 'wcpcsu', $atts );
 		}
 	}
 
