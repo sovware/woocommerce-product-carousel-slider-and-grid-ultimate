@@ -954,12 +954,8 @@ class Elementor_Woo_Ultimate_Widget extends \Elementor\Widget_Base {
 			'quick_view_button_hover_back_color'        => $settings['quick_view_button_hover_back_color'] ? $settings['quick_view_button_hover_back_color'] : '#000000',
 
 		);
-
-		if( is_admin() ) {
-			$this->display_image( $atts );
-		} else {
-			$this->run_shortcode( 'wcpcsu', $atts );
-		}
+		$this->run_shortcode( 'wcpcsu', $atts );
+		
 	}
 
 	public function display_image( $atts ) {
