@@ -110,6 +110,9 @@ document.addEventListener("DOMContentLoaded", function () {
         setTimeout(() => {
             if (elementorFrontend.isEditMode()) {
                 alljs();
+                elementorFrontend.hooks.addAction('frontend/element_ready/widget', function() {
+                    alljs();
+                });
             }
         }, 6000);
     });
