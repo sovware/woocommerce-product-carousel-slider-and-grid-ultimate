@@ -55,7 +55,6 @@ document.addEventListener("DOMContentLoaded", function () {
         $(window).on('elementor/frontend/init', function () {
             setTimeout(() => {
                 if (elementorFrontend.isEditMode()) {
-                    alert('Function Called on Editmode');
                     alljs();
                     elementorFrontend.hooks.addAction('frontend/element_ready/widget', function() {
                         alljs();
