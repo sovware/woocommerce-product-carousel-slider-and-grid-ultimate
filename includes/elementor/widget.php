@@ -865,11 +865,8 @@ class Elementor_Woo_Ultimate_Widget extends \Elementor\Widget_Base {
 			'cart_button_hover_font_color'  => $settings['cart_button_hover_font_color'] ? $settings['cart_button_hover_font_color'] : '#ffffff',
 			'ribbon_bg_color'        		=> $settings['ribbon_bg_color'] ? $settings['ribbon_bg_color'] : '#ff5500',
 		);
-		if( is_admin() ) {
-			$this->display_image( $atts );
-		} else {
-			$this->run_shortcode( 'wcpcsu', $atts );
-		}
+		
+		$this->run_shortcode( 'wcpcsu', $atts );
 	}
 
 	public function display_image( $atts ) {
