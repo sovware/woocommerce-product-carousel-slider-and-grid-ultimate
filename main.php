@@ -73,7 +73,10 @@ if( ! in_array('woocommerce-product-carousel-slider-grid-ultimate-pro/main.php',
                 add_action('admin_enqueue_scripts',array(self::$instance, 'wcpcsu_enqueue_file'));
                 add_action('template_redirect',array(self::$instance, 'template_enqueue_file'));
                 add_action('admin_menu',array(self::$instance,'upgrade_to_pro'));
-                add_action( 'elementor/editor/after_enqueue_scripts', [ self::$instance, 'el_editor_script' ] );
+                add_action( 'elementor/preview/enqueue_styles', [ self::$instance, 'el_editor_style' ] );
+
+                add_action( 'elementor/preview/enqueue_scripts', [ self::$instance, 'el_editor_script' ] );
+
                 self::$instance->wcpcsu_include();
                 self::$instance->custom_post = new Wcpcsu_Custom_Post();
                 self::$instance->metabox = new Wcpcsu_Meta_Box();
@@ -84,10 +87,6 @@ if( ! in_array('woocommerce-product-carousel-slider-grid-ultimate-pro/main.php',
 
             return self::$instance;
         }
-
-        public function el_editor_script() {
-			wp_enqueue_style( 'wcpcsu-el-editor-style', WCPCSU_URL . 'includes/elementor/assets/style.css' );
-		}
 
         /**
          * Setup plugin constants.
@@ -183,6 +182,26 @@ if( ! in_array('woocommerce-product-carousel-slider-grid-ultimate-pro/main.php',
 
             ));
         }
+        
+        public function el_editor_style() {
+            wp_enqueue_style( 'wcpcsup-main', WCPCSU_URL . 'assets/css/style.css' );
+            wp_enqueue_style( 'wcpcsup-swmodal', WCPCSU_URL . 'assets/css/swmodal.css' );
+            wp_enqueue_style( 'wcpcsup-swiper', WCPCSU_URL . 'assets/css/swiper-bundle.min.css' );
+
+			wp_enqueue_style( 'wcpcsu-el-editor-style', WCPCSU_URL . 'includes/elementor/assets/style.css' );
+		}
+
+        public function el_editor_script() {
+            wp_enqueue_script( 'wcpcsup-main-js', WCPCSU_URL . 'assets/js/main.js' );
+            wp_enqueue_script( 'wcpcsup-swmodal-js', WCPCSU_URL . 'assets/js/swmodal.js' );
+            wp_enqueue_script( 'wcpcsup-swiper-js', WCPCSU_URL . 'assets/js/swiper-bundle.min.js' );
+
+            wp_localize_script('wcpcsup-swmodal-js','wcpcsu_quick_view',array(
+                'ajax_url'           => admin_url( 'admin-ajax.php' ),
+        
+            ));
+            
+		}
 
         /**
          * It will serialize and then encode the string using base64_encode() and return the encoded data
