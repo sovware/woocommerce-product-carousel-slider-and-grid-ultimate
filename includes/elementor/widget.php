@@ -60,7 +60,7 @@ class Elementor_Woo_Ultimate_Widget extends \Elementor\Widget_Base {
 			array(
 				'mode'    => 'section_start',
 				'id'      => 'sec_general',
-				'label'   => __( 'General', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'label'   => __( 'Layout', 'woocommerce-product-carousel-slider-and-ultimate' ),
 			),
 			array(
 				'type'    => Controls_Manager::SELECT,
@@ -94,12 +94,7 @@ class Elementor_Woo_Ultimate_Widget extends \Elementor\Widget_Base {
 					'theme_15' => __( 'Theme 15', 'woocommerce-product-carousel-slider-and-ultimate' ),
 				),
 				'default' => 'theme_1',
-			),
-			array(
-				'type'      => Controls_Manager::TEXT,
-				'id'        => 'total_products',
-				'label'     => __( 'Total Products to Display', 'woocommerce-product-carousel-slider-and-ultimate' ),
-				'default'   => 12,
+				'separator' => 'after'
 			),
 			array(
 				'type'      => Controls_Manager::SWITCHER,
@@ -131,12 +126,21 @@ class Elementor_Woo_Ultimate_Widget extends \Elementor\Widget_Base {
 				'condition'    => [
 					'h_title_show'          => 'yes',
 				],
+				'separator' => 'after'
 			),
 			array(
 				'type'      => Controls_Manager::SWITCHER,
 				'id'        => 'display_title',
 				'label'     => __( 'Display Product Title', 'woocommerce-product-carousel-slider-and-ultimate' ),
 				'default'   => 'yes',
+			),
+			array(
+				'mode' => 'section_end',
+			),
+			array(
+				'mode'    => 'section_start',
+				'id'      => 'sec_query',
+				'label'   => __( 'Query', 'woocommerce-product-carousel-slider-and-ultimate' ),
 			),
 			array(
 				'type'    => Controls_Manager::SELECT,
@@ -152,6 +156,26 @@ class Elementor_Woo_Ultimate_Widget extends \Elementor\Widget_Base {
 					'featured' 		=> __( 'Featured Products', 'woocommerce-product-carousel-slider-and-ultimate' ),
 				),
 				'default' => 'latest',
+			),
+			array(
+				'type'      => Controls_Manager::TEXT,
+				'id'        => 'total_products',
+				'label'     => __( 'Total Products to Display', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'default'   => 12,
+			),
+			array(
+				'type'      => Controls_Manager::SWITCHER,
+				'id'        => 'exclude_stock_out',
+				'label'     => __( 'Exclude Stock-out Products', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'default'   => 'yes',
+			),
+			array(
+				'mode' => 'section_end',
+			),
+			array(
+				'mode'    => 'section_start',
+				'id'      => 'sec_elements',
+				'label'   => __( 'Elements', 'woocommerce-product-carousel-slider-and-ultimate' ),
 			),
 			array(
 				'type'      => Controls_Manager::SWITCHER,
@@ -184,6 +208,7 @@ class Elementor_Woo_Ultimate_Widget extends \Elementor\Widget_Base {
 				'condition'    => [
 					'display_sale_ribbon'          => 'yes',
 				],
+				'separator' => 'after'
 			),
 			array(
 				'type'      => Controls_Manager::SWITCHER,
@@ -216,6 +241,7 @@ class Elementor_Woo_Ultimate_Widget extends \Elementor\Widget_Base {
 				'condition'    => [
 					'feature_ribbon_text'          => 'yes',
 				],
+				'separator' => 'after'
 			),
 			array(
 				'type'      => Controls_Manager::SWITCHER,
@@ -248,6 +274,7 @@ class Elementor_Woo_Ultimate_Widget extends \Elementor\Widget_Base {
 				'condition'    => [
 					'display_sold_out_ribbon'          => 'yes',
 				],
+				'separator' => 'after'
 			),
 			array(
 				'type'      => Controls_Manager::SWITCHER,
@@ -258,7 +285,7 @@ class Elementor_Woo_Ultimate_Widget extends \Elementor\Widget_Base {
 			array(
 				'type'    => Controls_Manager::SELECT,
 				'id'      => 'discount_ribbon_position',
-				'label'   => __( 'Sold Out Ribbon Position', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'label'   => __( 'Discount Ribbon Position', 'woocommerce-product-carousel-slider-and-ultimate' ),
 				'options' => array(
 					'top_left' 		=> __( 'Top Left', 'woocommerce-product-carousel-slider-and-ultimate' ),
 					'top_right' 	=> __( 'Top Right', 'woocommerce-product-carousel-slider-and-ultimate' ),
@@ -270,6 +297,7 @@ class Elementor_Woo_Ultimate_Widget extends \Elementor\Widget_Base {
 				'condition'    => [
 					'display_discount_ribbon'          => 'yes',
 				],
+				'separator' => 'after'
 			),
 			array(
 				'type'      => Controls_Manager::SWITCHER,
@@ -287,44 +315,6 @@ class Elementor_Woo_Ultimate_Widget extends \Elementor\Widget_Base {
 				'type'      => Controls_Manager::SWITCHER,
 				'id'        => 'display_cart',
 				'label'     => __( 'Display "Add to Cart" Button', 'woocommerce-product-carousel-slider-and-ultimate' ),
-				'default'   => 'yes',
-			),
-			array(
-				'type'      => Controls_Manager::SWITCHER,
-				'id'        => 'exclude_stock_out',
-				'label'     => __( 'Exclude Stock-out Products', 'woocommerce-product-carousel-slider-and-ultimate' ),
-				'default'   => 'yes',
-			),
-			array(
-				'type'      => Controls_Manager::SWITCHER,
-				'id'        => 'img_crop',
-				'label'     => __( 'Image Resize & Crop', 'woocommerce-product-carousel-slider-and-ultimate' ),
-				'default'   => 'yes',
-			),
-			array(
-				'type'      => Controls_Manager::TEXT,
-				'id'        => 'crop_image_width',
-				'label'     => __( 'Cropping Width', 'woocommerce-product-carousel-slider-and-ultimate' ),
-				'default'   => 350,
-				'classes' => 'tpg-padding-left',
-				'condition'    => [
-					'img_crop'          => 'yes',
-				],
-			),
-			array(
-				'type'      => Controls_Manager::TEXT,
-				'id'        => 'crop_image_height',
-				'label'     => __( 'Cropping Height', 'woocommerce-product-carousel-slider-and-ultimate' ),
-				'default'   => 250,
-				'classes' => 'tpg-padding-left',
-				'condition'    => [
-					'img_crop'          => 'yes',
-				],
-			),
-			array(
-				'type'      => Controls_Manager::SWITCHER,
-				'id'        => 'img_hover_effect',
-				'label'     => __( 'Image Hover Effect', 'woocommerce-product-carousel-slider-and-ultimate' ),
 				'default'   => 'yes',
 			),
 			array(
@@ -361,6 +351,7 @@ class Elementor_Woo_Ultimate_Widget extends \Elementor\Widget_Base {
 				'id'        => 'marquee',
 				'label'     => __( 'Marquee', 'woocommerce-product-carousel-slider-and-ultimate' ),
 				'default'   => 'no',
+				'separator' => 'after'
 			),
 			array(
 				'type'      => Controls_Manager::TEXT,
@@ -385,6 +376,7 @@ class Elementor_Woo_Ultimate_Widget extends \Elementor\Widget_Base {
 				'id'        => 'c_mobile',
 				'label'     => __( 'Mobile Columns', 'woocommerce-product-carousel-slider-and-ultimate' ),
 				'default'   => 1,
+				'separator' => 'after'
 			),
 			array(
 				'type'      => Controls_Manager::TEXT,
@@ -407,6 +399,7 @@ class Elementor_Woo_Ultimate_Widget extends \Elementor\Widget_Base {
 					'left_right' 	=> __( 'Left to Right', 'woocommerce-product-carousel-slider-and-ultimate' ),
 				),
 				'default' => 'right_left',
+				'separator' => 'after'
 			),
 			array(
 				'type'      => Controls_Manager::SWITCHER,
@@ -430,6 +423,7 @@ class Elementor_Woo_Ultimate_Widget extends \Elementor\Widget_Base {
 				'condition'    => [
 					'nav_show'          => 'yes',
 				],
+				'separator' => 'after'
 			),
 			
 			array(
@@ -485,6 +479,7 @@ class Elementor_Woo_Ultimate_Widget extends \Elementor\Widget_Base {
 					'4' 	=> __( 'Column-4', 'woocommerce-product-carousel-slider-and-ultimate' ),
 				),
 				'default' => '1',
+				'separator' => 'after'
 			),
 			array(
 				'type'      => Controls_Manager::SWITCHER,
@@ -492,100 +487,49 @@ class Elementor_Woo_Ultimate_Widget extends \Elementor\Widget_Base {
 				'label'     => __( 'Display Pagination', 'woocommerce-product-carousel-slider-and-ultimate' ),
 				'default'   => 'no',
 			),
+			
 			array(
-				'type'      => Controls_Manager::COLOR,
-				'id'        => 'pagi_color',
-				'label'     => __( 'Text Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
-				'default'   => '#333',
-				'classes' 	=> 'tpg-padding-left',
+				'mode' => 'section_end',
+			),
+			array(
+				'mode'    => 'section_start',
+				'id'      => 'sec_image',
+				'label'   => __( 'Image', 'woocommerce-product-carousel-slider-and-ultimate' ),
+			),
+			array(
+				'type'      => Controls_Manager::SWITCHER,
+				'id'        => 'img_crop',
+				'label'     => __( 'Image Resize & Crop', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'default'   => 'yes',
+			),
+			array(
+				'type'      => Controls_Manager::TEXT,
+				'id'        => 'crop_image_width',
+				'label'     => __( 'Cropping Width', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'default'   => 350,
 				'condition'    => [
-					'grid_pagination'       => 'yes',
+					'img_crop'          => 'yes',
 				],
 			),
 			array(
-				'type'      => Controls_Manager::COLOR,
-				'id'        => 'pagi_border_color',
-				'label'     => __( 'Border Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
-				'default'   => '#e4e4e4',
-				'classes' 	=> 'tpg-padding-left',
+				'type'      => Controls_Manager::TEXT,
+				'id'        => 'crop_image_height',
+				'label'     => __( 'Cropping Height', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'default'   => 250,
 				'condition'    => [
-					'grid_pagination'       => 'yes',
+					'img_crop'          => 'yes',
 				],
+				'separator' => 'after'
 			),
 			array(
-				'type'      => Controls_Manager::COLOR,
-				'id'        => 'pagi_back_color',
-				'label'     => __( 'Background Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
-				'default'   => '#fff',
-				'classes' 	=> 'tpg-padding-left',
-				'condition'    => [
-					'grid_pagination'       => 'yes',
-				],
-			),
-			array(
-				'type'      => Controls_Manager::COLOR,
-				'id'        => 'pagi_hover_color',
-				'label'     => __( 'Hover Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
-				'default'   => '#fff',
-				'classes' 	=> 'tpg-padding-left',
-				'condition'    => [
-					'grid_pagination'       => 'yes',
-				],
-			),
-			array(
-				'type'      => Controls_Manager::COLOR,
-				'id'        => 'pagi_hover_border_color',
-				'label'     => __( 'Hover Border Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
-				'default'   => '#ff5500',
-				'classes' 	=> 'tpg-padding-left',
-				'condition'    => [
-					'grid_pagination'       => 'yes',
-				],
-			),
-			array(
-				'type'      => Controls_Manager::COLOR,
-				'id'        => 'pagi_hover_back_color',
-				'label'     => __( 'Hover Background Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
-				'default'   => '#ff5500',
-				'classes' 	=> 'tpg-padding-left',
-				'condition'    => [
-					'grid_pagination'       => 'yes',
-				],
-			),
-			array(
-				'type'      => Controls_Manager::COLOR,
-				'id'        => 'pagi_active_color',
-				'label'     => __( 'Active Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
-				'default'   => '#fff',
-				'classes' 	=> 'tpg-padding-left',
-				'condition'    => [
-					'grid_pagination'       => 'yes',
-				],
-			),
-			array(
-				'type'      => Controls_Manager::COLOR,
-				'id'        => 'pagi_active_border_color',
-				'label'     => __( 'Active Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
-				'default'   => '#ff5500',
-				'classes' 	=> 'tpg-padding-left',
-				'condition'    => [
-					'grid_pagination'       => 'yes',
-				],
-			),
-			array(
-				'type'      => Controls_Manager::COLOR,
-				'id'        => 'pagi_active_back_color',
-				'label'     => __( 'Active Background Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
-				'default'   => '#ff5500',
-				'classes' 	=> 'tpg-padding-left',
-				'condition'    => [
-					'grid_pagination'       => 'yes',
-				],
+				'type'      => Controls_Manager::SWITCHER,
+				'id'        => 'img_hover_effect',
+				'label'     => __( 'Image Hover Effect', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'default'   => 'yes',
 			),
 			array(
 				'mode' => 'section_end',
 			),
-			
 			array(
 				'mode'    => 'section_start',
 				'tab'       => Controls_Manager::TAB_STYLE,
@@ -793,6 +737,10 @@ class Elementor_Woo_Ultimate_Widget extends \Elementor\Widget_Base {
 				'tab'     => Controls_Manager::TAB_STYLE,
 				'id'      => 'carousel_navigation',
 				'label'   => __( 'Carousel Navigation', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'condition' => array( 
+					'layout'   => 'carousel',
+					'nav_show' => 'yes'
+				)
 			),
 			array(
 				'type'      => Controls_Manager::COLOR,
@@ -838,6 +786,10 @@ class Elementor_Woo_Ultimate_Widget extends \Elementor\Widget_Base {
 				'tab'     => Controls_Manager::TAB_STYLE,
 				'id'      => 'carousel_dots',
 				'label'   => __( 'Carousel Dots Pagination', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'condition' => array( 
+					'layout'   				=> 'carousel',
+					'carousel_pagination' 	=> 'yes'
+				)
 			),
 			array(
 				'type'      => Controls_Manager::COLOR,
@@ -857,8 +809,66 @@ class Elementor_Woo_Ultimate_Widget extends \Elementor\Widget_Base {
 			array(
 				'mode'    => 'section_start',
 				'tab'     => Controls_Manager::TAB_STYLE,
-				'id'      => 'grid_pagination',
+				'id'      => 'grid_pagination_tab',
 				'label'   => __( 'Grid Pagination', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'condition'    => [
+					'layout'				=> 'grid',
+					'grid_pagination'       => 'yes',
+				],
+			),
+			array(
+				'type'      => Controls_Manager::COLOR,
+				'id'        => 'pagi_color',
+				'label'     => __( 'Text Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'default'   => '#333',
+			),
+			array(
+				'type'      => Controls_Manager::COLOR,
+				'id'        => 'pagi_border_color',
+				'label'     => __( 'Border Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'default'   => '#e4e4e4',
+			),
+			array(
+				'type'      => Controls_Manager::COLOR,
+				'id'        => 'pagi_back_color',
+				'label'     => __( 'Background Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'default'   => '#fff',
+			),
+			array(
+				'type'      => Controls_Manager::COLOR,
+				'id'        => 'pagi_hover_color',
+				'label'     => __( 'Hover Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'default'   => '#fff',
+			),
+			array(
+				'type'      => Controls_Manager::COLOR,
+				'id'        => 'pagi_hover_border_color',
+				'label'     => __( 'Hover Border Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'default'   => '#ff5500',
+			),
+			array(
+				'type'      => Controls_Manager::COLOR,
+				'id'        => 'pagi_hover_back_color',
+				'label'     => __( 'Hover Background Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'default'   => '#ff5500',
+			),
+			array(
+				'type'      => Controls_Manager::COLOR,
+				'id'        => 'pagi_active_color',
+				'label'     => __( 'Active Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'default'   => '#fff',
+			),
+			array(
+				'type'      => Controls_Manager::COLOR,
+				'id'        => 'pagi_active_border_color',
+				'label'     => __( 'Active Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'default'   => '#ff5500',
+			),
+			array(
+				'type'      => Controls_Manager::COLOR,
+				'id'        => 'pagi_active_back_color',
+				'label'     => __( 'Active Background Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'default'   => '#ff5500',
 			),
 			array(
 				'mode' => 'section_end',
