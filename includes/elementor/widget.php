@@ -431,92 +431,14 @@ class Elementor_Woo_Ultimate_Widget extends \Elementor\Widget_Base {
 					'nav_show'          => 'yes',
 				],
 			),
-			array(
-				'type'      => Controls_Manager::COLOR,
-				'id'        => 'nav_arrow_color',
-				'label'     => __( 'Arrow Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
-				'default'   => '#333',
-				'classes' => 'tpg-padding-left',
-				'condition'    => [
-					'nav_show'          => 'yes',
-				],
-			),
-			array(
-				'type'      => Controls_Manager::COLOR,
-				'id'        => 'nav_back_color',
-				'label'     => __( 'Background Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
-				'default'   => '#fff',
-				'classes' => 'tpg-padding-left',
-				'condition'    => [
-					'nav_show'          => 'yes',
-				],
-			),
-			array(
-				'type'      => Controls_Manager::COLOR,
-				'id'        => 'nav_border_color',
-				'label'     => __( 'Border Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
-				'default'   => '#e4e4ed',
-				'classes' 	=> 'tpg-padding-left',
-				'condition'    => [
-					'nav_show'          => 'yes',
-				],
-			),
-			array(
-				'type'      => Controls_Manager::COLOR,
-				'id'        => 'nav_arrow_hover_color',
-				'label'     => __( 'Arrow Hover Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
-				'default'   => '#fff',
-				'classes' 	=> 'tpg-padding-left',
-				'condition'    => [
-					'nav_show'          => 'yes',
-				],
-			),
-			array(
-				'type'      => Controls_Manager::COLOR,
-				'id'        => 'nav_back_hover_color',
-				'label'     => __( 'Hover Background Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
-				'default'   => '#ff5500',
-				'classes' 	=> 'tpg-padding-left',
-				'condition'    => [
-					'nav_show'          => 'yes',
-				],
-			),
-			array(
-				'type'      => Controls_Manager::COLOR,
-				'id'        => 'nav_border_hover',
-				'label'     => __( 'Hover Border Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
-				'default'   => '#ff5500',
-				'classes' 	=> 'tpg-padding-left',
-				'condition'    => [
-					'nav_show'          => 'yes',
-				],
-			),
+			
 			array(
 				'type'      => Controls_Manager::SWITCHER,
 				'id'        => 'carousel_pagination',
 				'label'     => __( 'Pagination Show', 'woocommerce-product-carousel-slider-and-ultimate' ),
 				'default'   => 'no',
 			),
-			array(
-				'type'      => Controls_Manager::COLOR,
-				'id'        => 'dots_color',
-				'label'     => __( 'Dots Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
-				'default'   => '#333',
-				'classes' 	=> 'tpg-padding-left',
-				'condition'    => [
-					'carousel_pagination'       => 'yes',
-				],
-			),
-			array(
-				'type'      => Controls_Manager::COLOR,
-				'id'        => 'dots_active_color',
-				'label'     => __( 'Dots Active Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
-				'default'   => '#fff',
-				'classes' 	=> 'tpg-padding-left',
-				'condition'    => [
-					'carousel_pagination'       => 'yes',
-				],
-			),
+			
 			array(
 				'mode' => 'section_end',
 			),
@@ -666,182 +588,281 @@ class Elementor_Woo_Ultimate_Widget extends \Elementor\Widget_Base {
 			
 			array(
 				'mode'    => 'section_start',
-				'id'      => 'sec_style',
-				'label'   => __( 'Style', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'tab'       => Controls_Manager::TAB_STYLE,
+				'id'      => 'header_title_tab',
+				'label'   => __( 'Header Title', 'woocommerce-product-carousel-slider-and-ultimate' ),
 			),
 			array(
 				'type'      	=> Controls_Manager::TEXT,
 				'id'        	=> 'header_font_size',
-				'label'     	=> __( 'Header Font Size', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'label'     	=> __( 'Font Size', 'woocommerce-product-carousel-slider-and-ultimate' ),
 				'description' 	=> 'px',
 				'default'   	=> 24,
-				'condition'    => [
-					'h_title_show'          => 'yes',
-				],
 			),
 			array(
 				'type'      => Controls_Manager::COLOR,
 				'id'        => 'header_font_color',
-				'label'     => __( 'Header Font Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'label'     => __( 'Font Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
 				'default'   => '#303030',
-				'condition'    => [
-					'h_title_show'          => 'yes',
-				],
+			),
+			array(
+				'mode' => 'section_end',
+			),
+			array(
+				'mode'    => 'section_start',
+				'tab'       => Controls_Manager::TAB_STYLE,
+				'id'      => 'product_title_tab',
+				'label'   => __( 'Product Title', 'woocommerce-product-carousel-slider-and-ultimate' ),
 			),
 			array(
 				'type'      	=> Controls_Manager::TEXT,
 				'id'        	=> 'title_font_size',
-				'label'     	=> __( 'Product Title Font Size', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'label'     	=> __( 'Font Size', 'woocommerce-product-carousel-slider-and-ultimate' ),
 				'description' 	=> 'px',
 				'default'   	=> 15,
-				'condition'    => [
-					'display_title'          => 'yes',
-				],
 			),
 			array(
 				'type'      => Controls_Manager::COLOR,
 				'id'        => 'title_font_color',
-				'label'     => __( 'Product Title Font Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'label'     => __( 'Font Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
 				'default'   => '#363940',
-				'condition'    => [
-					'display_title'          => 'yes',
-				],
 			),
 			array(
 				'type'      => Controls_Manager::COLOR,
 				'id'        => 'title_hover_font_color',
-				'label'     => __( 'Product Title Hover Font Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'label'     => __( 'Hover Font Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
 				'default'   => '#ff5500',
-				'condition'    => [
-					'display_title'          => 'yes',
-				],
+			),
+			array(
+				'mode' => 'section_end',
+			),
+			array(
+				'mode'    => 'section_start',
+				'tab'       => Controls_Manager::TAB_STYLE,
+				'id'      => 'price_tab',
+				'label'   => __( 'Product Price', 'woocommerce-product-carousel-slider-and-ultimate' ),
 			),
 			array(
 				'type'      	=> Controls_Manager::TEXT,
 				'id'        	=> 'price_font_size',
-				'label'     	=> __( 'Product Price Font Size', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'label'     	=> __( 'Font Size', 'woocommerce-product-carousel-slider-and-ultimate' ),
 				'description' 	=> 'px',
 				'default'   	=> 16,
-				'condition'    => [
-					'display_price'          => 'yes',
-				],
 			),
 			array(
 				'type'      => Controls_Manager::COLOR,
 				'id'        => 'price_font_color',
-				'label'     => __( 'Product Price Font Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'label'     => __( 'Font Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
 				'default'   => '#ff5500',
-				'condition'    => [
-					'display_price'          => 'yes',
-				],
+			),
+			array(
+				'mode' => 'section_end',
+			),
+			array(
+				'mode'    => 'section_start',
+				'tab'       => Controls_Manager::TAB_STYLE,
+				'id'      => 'rating_tab',
+				'label'   => __( 'Product Rating', 'woocommerce-product-carousel-slider-and-ultimate' ),
 			),
 			array(
 				'type'      	=> Controls_Manager::TEXT,
 				'id'        	=> 'ratings_size',
-				'label'     	=> __( 'Product Rating Size', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'label'     	=> __( 'Size', 'woocommerce-product-carousel-slider-and-ultimate' ),
 				'description' 	=> 'px',
 				'default'   	=> 16,
-				'condition'    => [
-					'display_rating'          => 'yes',
-				],
 			),
 			array(
 				'type'      => Controls_Manager::COLOR,
 				'id'        => 'ratings_color',
-				'label'     => __( 'Product Ratings Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'label'     => __( 'Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
 				'default'   => '#FEB507',
-				'condition'    => [
-					'display_rating'          => 'yes',
-				],
+			),
+			array(
+				'mode' => 'section_end',
+			),
+			array(
+				'mode'    => 'section_start',
+				'tab'       => Controls_Manager::TAB_STYLE,
+				'id'      => 'cart_tab',
+				'label'   => __( 'Add to Cart', 'woocommerce-product-carousel-slider-and-ultimate' ),
 			),
 			array(
 				'type'      => Controls_Manager::COLOR,
 				'id'        => 'cart_font_color',
-				'label'     => __( '"Add to Cart" Font Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'label'     => __( 'Font Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
 				'default'   => '#ffffff',
-				'condition'    => [
-					'display_cart'          => 'yes',
-				],
 			),
 			array(
 				'type'      => Controls_Manager::COLOR,
 				'id'        => 'cart_bg_color',
-				'label'     => __( '"Add to Cart" Background Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'label'     => __( 'Background Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
 				'default'   => '#ff5500',
-				'condition'    => [
-					'display_cart'          => 'yes',
-				],
 			),
 			array(
 				'type'      => Controls_Manager::COLOR,
 				'id'        => 'cart_button_hover_color',
-				'label'     => __( '"Add to Cart" Background Hover Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'label'     => __( 'Background Hover Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
 				'default'   => '#9A9A9A',
-				'condition'    => [
-					'display_cart'          => 'yes',
-				],
 			),
 			array(
 				'type'      => Controls_Manager::COLOR,
 				'id'        => 'cart_button_hover_font_color',
-				'label'     => __( '"Add to Cart" Hover Font Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'label'     => __( 'Hover Font Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
 				'default'   => '#ffffff',
-				'condition'    => [
-					'display_cart'          => 'yes',
-				],
+			),
+			array(
+				'mode' => 'section_end',
+			),
+			array(
+				'mode'    => 'section_start',
+				'tab'     => Controls_Manager::TAB_STYLE,
+				'id'      => 'action_tab',
+				'label'   => __( 'Action Icon', 'woocommerce-product-carousel-slider-and-ultimate' ),
 			),
 			array(
 				'type'      => Controls_Manager::COLOR,
 				'id'        => 'action_icon_font_color',
-				'label'     => __( 'Action Icon Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'label'     => __( 'Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
 				'default'   => '#363940',
 			),
 			array(
 				'type'      => Controls_Manager::COLOR,
 				'id'        => 'action_icon_hover_color',
-				'label'     => __( 'Action Icon Hover Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'label'     => __( 'Hover Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
 				'default'   => '#ff5500',
 			),
 			array(
 				'type'      => Controls_Manager::COLOR,
 				'id'        => 'action_icon_hover_color',
-				'label'     => __( 'Action Icon Hover Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'label'     => __( 'Hover Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
 				'default'   => '#ff5500',
+			),
+			array(
+				'mode' => 'section_end',
+			),
+			array(
+				'mode'    => 'section_start',
+				'tab'     => Controls_Manager::TAB_STYLE,
+				'id'      => 'ribbon_tab',
+				'label'   => __( 'Ribbon', 'woocommerce-product-carousel-slider-and-ultimate' ),
 			),
 			array(
 				'type'      => Controls_Manager::COLOR,
 				'id'        => 'ribbon_bg_color',
-				'label'     => __( '"Ribbon" Background Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'label'     => __( 'Background Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
 				'default'   => '#ff5500',
+			),
+			array(
+				'mode' => 'section_end',
+			),
+			array(
+				'mode'    => 'section_start',
+				'tab'     => Controls_Manager::TAB_STYLE,
+				'id'      => 'quick_view_tab',
+				'label'   => __( 'Quick View Button', 'woocommerce-product-carousel-slider-and-ultimate' ),
 			),
 			array(
 				'type'      => Controls_Manager::COLOR,
 				'id'        => 'quick_view_button_color',
-				'label'     => __( '"Quick View" Button Font Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'label'     => __( 'Font Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
 				'default'   => '#ffffff',
 			),
 			array(
 				'type'      => Controls_Manager::COLOR,
 				'id'        => 'quick_view_button_back_color',
-				'label'     => __( '"Quick View" Button Background Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'label'     => __( 'Background Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
 				'default'   => '#363940',
 			),
 			array(
 				'type'      => Controls_Manager::COLOR,
 				'id'        => 'quick_view_button_hover_color',
-				'label'     => __( '"Quick View" Button Hover Font Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'label'     => __( 'Hover Font Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
 				'default'   => '#ffffff',
 			),
 			array(
 				'type'      => Controls_Manager::COLOR,
 				'id'        => 'quick_view_button_hover_back_color',
-				'label'     => __( '"Quick View" Button Background Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'label'     => __( 'Background Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
 				'default'   => '#000000',
 			),
 			array(
 				'mode' => 'section_end',
 			),
-			
+			array(
+				'mode'    => 'section_start',
+				'tab'     => Controls_Manager::TAB_STYLE,
+				'id'      => 'carousel_navigation',
+				'label'   => __( 'Carousel Navigation', 'woocommerce-product-carousel-slider-and-ultimate' ),
+			),
+			array(
+				'type'      => Controls_Manager::COLOR,
+				'id'        => 'nav_arrow_color',
+				'label'     => __( 'Arrow Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'default'   => '#333',
+			),
+			array(
+				'type'      => Controls_Manager::COLOR,
+				'id'        => 'nav_back_color',
+				'label'     => __( 'Background Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'default'   => '#fff',
+			),
+			array(
+				'type'      => Controls_Manager::COLOR,
+				'id'        => 'nav_border_color',
+				'label'     => __( 'Border Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'default'   => '#e4e4ed',
+			),
+			array(
+				'type'      => Controls_Manager::COLOR,
+				'id'        => 'nav_arrow_hover_color',
+				'label'     => __( 'Arrow Hover Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'default'   => '#fff',
+			),
+			array(
+				'type'      => Controls_Manager::COLOR,
+				'id'        => 'nav_back_hover_color',
+				'label'     => __( 'Hover Background Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'default'   => '#ff5500',
+			),
+			array(
+				'type'      => Controls_Manager::COLOR,
+				'id'        => 'nav_border_hover',
+				'label'     => __( 'Hover Border Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'default'   => '#ff5500',
+			),
+			array(
+				'mode' => 'section_end',
+			),
+			array(
+				'mode'    => 'section_start',
+				'tab'     => Controls_Manager::TAB_STYLE,
+				'id'      => 'carousel_dots',
+				'label'   => __( 'Carousel Dots Pagination', 'woocommerce-product-carousel-slider-and-ultimate' ),
+			),
+			array(
+				'type'      => Controls_Manager::COLOR,
+				'id'        => 'dots_color',
+				'label'     => __( 'Dots Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'default'   => '#333',
+			),
+			array(
+				'type'      => Controls_Manager::COLOR,
+				'id'        => 'dots_active_color',
+				'label'     => __( 'Dots Active Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'default'   => '#fff',
+			),
+			array(
+				'mode' => 'section_end',
+			),
+			array(
+				'mode'    => 'section_start',
+				'tab'     => Controls_Manager::TAB_STYLE,
+				'id'      => 'grid_pagination',
+				'label'   => __( 'Grid Pagination', 'woocommerce-product-carousel-slider-and-ultimate' ),
+			),
+			array(
+				'mode' => 'section_end',
+			),
 		);
 		return $fields;
 	}
