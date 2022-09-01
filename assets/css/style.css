@@ -93,7 +93,12 @@
           box-sizing: border-box;
 }
 .wpcu-product .wpcu-product__img {
-  /* Image zoom on hover effect */
+  /* Image Zoom In hover effect */
+  /* Image Zoom Out hover effect */
+  /* Image Blur In hover effect */
+  /* Image Blur Out hover effect */
+  /* Image Grayscale In hover effect */
+  /* Image Grayscale Out hover effect */
 }
 .wpcu-product .wpcu-product__img img {
   width: 100%;
@@ -101,14 +106,97 @@
   -o-transition: 0.4s ease;
   transition: 0.4s ease;
 }
-.wpcu-product .wpcu-product__img--hover-effect > a {
+.wpcu-product .wpcu-product__img--zoom-in > a {
   display: block;
   overflow: hidden;
 }
-.wpcu-product .wpcu-product__img--hover-effect:hover img {
+.wpcu-product .wpcu-product__img--zoom-in img {
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+}
+.wpcu-product .wpcu-product__img--zoom-in:hover img {
   -webkit-transform: scale(1.15);
       -ms-transform: scale(1.15);
           transform: scale(1.15);
+}
+.wpcu-product .wpcu-product__img--zoom-out > a {
+  display: block;
+  overflow: hidden;
+}
+.wpcu-product .wpcu-product__img--zoom-out img {
+  -webkit-transform: scale(1.15);
+      -ms-transform: scale(1.15);
+          transform: scale(1.15);
+}
+.wpcu-product .wpcu-product__img--zoom-out:hover img {
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+}
+.wpcu-product .wpcu-product__img--blur-in > a {
+  display: block;
+  overflow: hidden;
+}
+.wpcu-product .wpcu-product__img--blur-in img {
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+}
+.wpcu-product .wpcu-product__img--blur-in:hover img {
+  -webkit-filter: blur(2px);
+          filter: blur(2px);
+  -webkit-transform: scale(1.15);
+      -ms-transform: scale(1.15);
+          transform: scale(1.15);
+}
+.wpcu-product .wpcu-product__img--blur-out > a {
+  display: block;
+  overflow: hidden;
+}
+.wpcu-product .wpcu-product__img--blur-out img {
+  -webkit-transform: scale(1.15);
+      -ms-transform: scale(1.15);
+          transform: scale(1.15);
+}
+.wpcu-product .wpcu-product__img--blur-out:hover img {
+  -webkit-filter: blur(2px);
+          filter: blur(2px);
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+}
+.wpcu-product .wpcu-product__img--grayscale-in > a {
+  display: block;
+  overflow: hidden;
+}
+.wpcu-product .wpcu-product__img--grayscale-in img {
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+}
+.wpcu-product .wpcu-product__img--grayscale-in:hover img {
+  -webkit-filter: grayscale(80%);
+          filter: grayscale(80%);
+  -webkit-transform: scale(1.15);
+      -ms-transform: scale(1.15);
+          transform: scale(1.15);
+}
+.wpcu-product .wpcu-product__img--grayscale-out > a {
+  display: block;
+  overflow: hidden;
+}
+.wpcu-product .wpcu-product__img--grayscale-out img {
+  -webkit-transform: scale(1.15);
+      -ms-transform: scale(1.15);
+          transform: scale(1.15);
+}
+.wpcu-product .wpcu-product__img--grayscale-out:hover img {
+  -webkit-filter: grayscale(80%);
+          filter: grayscale(80%);
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
 }
 
 /* Lazy load */

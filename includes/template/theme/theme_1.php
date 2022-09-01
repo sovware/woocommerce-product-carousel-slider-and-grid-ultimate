@@ -1,6 +1,16 @@
 <div class="wpcu-product <?php echo ( 'carousel' == $layout ) ? 'swiper-slide' : ''; ?>">
     <div class="wpcu-product__content">
-        <div class="wpcu-product__img wpcu-product__img--hover-effect">
+        <!-- wpcu-product__img--hover-effect -->
+    <!--    
+        Zoom In: wpcu-product__img--zoom-in
+        Zoom Out: wpcu-product__img--zoom-out
+        Blur In: wpcu-product__img--blur-in
+        Blur Out: wpcu-product__img--blur-out
+        Grayscale In: wpcu-product__img--grayscale-in
+        Grayscale Out: wpcu-product__img--grayscale-in
+    -->
+    
+        <div class="wpcu-product__img wpcu-product__img--blur-in">
             <a href="<?php echo get_the_permalink(); ?>">
                 <img src="<?php echo $wpcsu_img; ?>" alt="<?php echo get_the_title(); ?>">
             </a>

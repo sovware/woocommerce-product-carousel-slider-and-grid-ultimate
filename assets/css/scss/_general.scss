@@ -16,15 +16,103 @@
             width: 100%;
             transition: 0.4s ease;
         }
-        /* Image zoom on hover effect */
-        @include m(hover-effect){
+
+        /* Image Zoom In hover effect */
+        @include m(zoom-in){
             &>a{
-                display: block;
+                display: block; 
                 overflow: hidden;
+            }
+            img {
+                transform: scale(1);
             }
             &:hover{
                 img{
                     transform: scale(1.15);
+                }
+            }
+        }
+
+        /* Image Zoom Out hover effect */
+        @include m(zoom-out){
+            &>a{
+                display: block; 
+                overflow: hidden;
+            }
+            img {
+                transform: scale(1.15);
+            }
+            &:hover{
+                img{
+                    transform: scale(1);
+                }
+            }
+        }
+
+        /* Image Blur In hover effect */
+        @include m(blur-in){
+            &>a{
+                display: block; 
+                overflow: hidden;
+            }
+            img {
+                transform: scale(1);                
+            }
+            &:hover{
+                img{
+                    filter: blur(2px);
+                    transform: scale(1.15);
+                }
+            }
+        }
+
+        /* Image Blur Out hover effect */
+        @include m(blur-out){
+            &>a{
+                display: block; 
+                overflow: hidden;
+            }
+            img {
+                transform: scale(1.15);
+            }
+            &:hover{
+                img{
+                    filter: blur(2px);
+                    transform: scale(1);
+                }
+            }
+        }
+
+        /* Image Grayscale In hover effect */
+        @include m(grayscale-in){
+            &>a{
+                display: block; 
+                overflow: hidden;
+            }
+            img {
+                transform: scale(1);                
+            }
+            &:hover{
+                img{
+                    filter: grayscale(80%);
+                    transform: scale(1.15);
+                }
+            }
+        }
+
+        /* Image Grayscale Out hover effect */
+        @include m(grayscale-out){
+            &>a{
+                display: block; 
+                overflow: hidden;
+            }
+            img {
+                transform: scale(1.15);
+            }
+            &:hover{
+                img{
+                    filter: grayscale(80%);
+                    transform: scale(1);
                 }
             }
         }
