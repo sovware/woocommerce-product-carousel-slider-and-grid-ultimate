@@ -223,8 +223,9 @@ class Elementor_Woo_Ultimate_Widget extends \Elementor\Widget_Base {
 				'default'   => 'Featured!',
 				'classes' => 'tpg-padding-left',
 				'condition'    => [
-					'feature_ribbon_text'          => 'yes',
+					'display_featured_ribbon'          => 'yes',
 				],
+				'separator' => 'after'
 			),
 			array(
 				'type'    => Controls_Manager::SELECT,
@@ -688,7 +689,7 @@ class Elementor_Woo_Ultimate_Widget extends \Elementor\Widget_Base {
 				'mode'    => 'section_start',
 				'tab'     => Controls_Manager::TAB_STYLE,
 				'id'      => 'ribbon_tab',
-				'label'   => __( 'Ribbon', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'label'   => __( 'Badge', 'woocommerce-product-carousel-slider-and-ultimate' ),
 			),
 			array(
 				'type'      => Controls_Manager::COLOR,
@@ -736,7 +737,7 @@ class Elementor_Woo_Ultimate_Widget extends \Elementor\Widget_Base {
 				'mode'    => 'section_start',
 				'tab'     => Controls_Manager::TAB_STYLE,
 				'id'      => 'carousel_navigation',
-				'label'   => __( 'Carousel Navigation', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'label'   => __( 'Navigation', 'woocommerce-product-carousel-slider-and-ultimate' ),
 				'condition' => array( 
 					'layout'   => 'carousel',
 					'nav_show' => 'yes'
