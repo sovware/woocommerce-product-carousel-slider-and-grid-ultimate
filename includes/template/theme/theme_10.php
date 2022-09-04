@@ -14,7 +14,7 @@
             <?php if( 'yes' == $display_title ) { ?>
             <h2 class="wpcu-product__title wpcu-mb-15"><a href="<?php echo get_the_permalink(); ?>"><?php echo get_the_title(); ?></a></h2>
             <?php } ?>
-            <div class="wpcu-product__img wpcu-pos-relative <?php echo 'yes' == $img_hover_effect ? 'wpcu-product__img--hover-effect' : ''; ?>">
+            <div class="wpcu-product__img wpcu-pos-relative <?php echo 'yes' == $img_hover_effect ? $img_animation_class : ''; ?>">
                 <a href="<?php echo get_the_permalink(); ?>">
                     <img src="<?php echo $wpcsu_img; ?>" alt="<?php echo get_the_title(); ?>">
                 </a>

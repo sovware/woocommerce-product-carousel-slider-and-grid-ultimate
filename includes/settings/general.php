@@ -17,6 +17,7 @@ $display_discount_ribbon    = ! empty( $display_discount_ribbon ) ? $display_dis
 $discount_ribbon_position   = ! empty( $discount_ribbon_position ) ? $discount_ribbon_position : 'bottom_right';
 $img_hover_effect           = ! empty( $img_hover_effect ) ? $img_hover_effect : 'yes';
 $products_type              = ! empty( $products_type ) ? $products_type : 'latest';
+$img_animation                      = ! empty( $img_animation ) ? $img_animation : 'zoom-in';
 ?>
 
 <div id="lcsp-tab-5" class="lcsp-tab-content">
@@ -834,6 +835,27 @@ $products_type              = ! empty( $products_type ) ? $products_type : 'late
                                 <?php checked('no', $img_hover_effect, true); ?>> <label
                                 for="wcpscu_img_hover_effect2"><?php esc_html_e('No', WCPCSU_TEXTDOMAIN); ?></label></li>
                     </ul>
+                </div>
+            </div>
+
+            <!--Select theme-->
+            <div class="cmb-row cmb-type-radio">
+                <div class="cmb-th">
+                    <label for="lcsp_ap"><?php esc_html_e( 'Image Animation', WCPCSU_TEXTDOMAIN ); ?></label>
+                </div>
+                <div class="cmb-td">
+                    <div class="cmb-theme-wrapper">
+                        <select id="theme_" class="wcpscu_theme" name="wcpscu[img_animation]">
+                            <option value="zoom-in" <?php selected( $img_animation, 'zoom-in'); ?>>Zoom In</option>
+                            <option value="zoom-out" <?php selected( $img_animation, 'zoom-out'); ?>>Zoom Out
+                            </option>
+                            <option value="blur-in" <?php selected( $img_animation, 'blur-in'); ?>>Blur In
+                            </option>
+                            <option value="blur-out" <?php selected( $img_animation, 'blur-out'); ?>>Blur Out</option>
+                            <option value="grayscale-in" <?php selected( $img_animation, 'grayscale-in'); ?>>Grayscale In</option>
+                            <option value="grayscale-out" <?php selected( $img_animation, 'grayscale-out'); ?>>Grayscale Out</option>
+                        </select>
+                    </div>
                 </div>
             </div>
 

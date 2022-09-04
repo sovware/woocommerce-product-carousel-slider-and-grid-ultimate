@@ -7,10 +7,10 @@
         Blur In: wpcu-product__img--blur-in
         Blur Out: wpcu-product__img--blur-out
         Grayscale In: wpcu-product__img--grayscale-in
-        Grayscale Out: wpcu-product__img--grayscale-in
+        Grayscale Out: wpcu-product__img--grayscale-out
     -->
     
-        <div class="wpcu-product__img wpcu-product__img--blur-in">
+        <div class="wpcu-product__img <?php echo 'yes' == $img_hover_effect ? $img_animation_class : ''; ?>">
             <a href="<?php echo get_the_permalink(); ?>">
                 <img src="<?php echo $wpcsu_img; ?>" alt="<?php echo get_the_title(); ?>">
             </a>
