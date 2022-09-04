@@ -43,6 +43,7 @@ class wcpcsu_Shortcode
             'crop_image_width'          => '',
             'crop_image_height'         => '',
             'img_hover_effect'          => '',
+            'img_animation'          => '',
             'auto_play'                 => '',
             'repeat_product'            => '',
             'stop_hover'                => '',
@@ -137,6 +138,7 @@ class wcpcsu_Shortcode
         $crop_image_width           = ! empty( $atts['crop_image_width'] ) ? $atts['crop_image_width'] : $crop_image_width;
         $crop_image_height          = ! empty( $atts['crop_image_height'] ) ? $atts['crop_image_height'] : $crop_image_height;
         $img_hover_effect           = ! empty( $atts['img_hover_effect'] ) ? $atts['img_hover_effect'] : $img_hover_effect;
+        $img_animation              = ! empty( $atts['img_animation'] ) ? $atts['img_animation'] : $img_animation;
         $A_play                     = ! empty( $atts['auto_play'] ) ? $atts['auto_play'] : $A_play;
         $repeat_product             = ! empty( $atts['repeat_product'] ) ? $atts['repeat_product'] : $repeat_product;
         $stop_hover                 = ! empty( $atts['stop_hover'] ) ? $atts['stop_hover'] : $stop_hover;

@@ -529,6 +529,23 @@ class Elementor_Woo_Ultimate_Widget extends \Elementor\Widget_Base {
 				'default'   => 'yes',
 			),
 			array(
+				'type'    => Controls_Manager::SELECT,
+				'id'      => 'img_animation',
+				'label'   => __( 'Image Animation', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'options' => array(
+					'zoom-in' 		=> __( 'Zoom In', 'woocommerce-product-carousel-slider-and-ultimate' ),
+					'zoom-out' 		=> __( 'Zoom Out', 'woocommerce-product-carousel-slider-and-ultimate' ),
+					'blur-in' 		=> __( 'Blur In', 'woocommerce-product-carousel-slider-and-ultimate' ),
+					'blur-out' 		=> __( 'Blur Out', 'woocommerce-product-carousel-slider-and-ultimate' ),
+					'grayscale-in' 	=> __( 'Grayscale In', 'woocommerce-product-carousel-slider-and-ultimate' ),
+					'grayscale-out' => __( 'Grayscale Out', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				),
+				'default' => 'zoom-in',
+				'condition' => array( 
+					'img_hover_effect'   => 'yes',
+				)
+			),
+			array(
 				'mode' => 'section_end',
 			),
 			array(
@@ -929,6 +946,7 @@ class Elementor_Woo_Ultimate_Widget extends \Elementor\Widget_Base {
 			'crop_image_width'              => $settings['crop_image_width'] ? $settings['crop_image_width'] : '350',
 			'crop_image_height'             => $settings['crop_image_height'] ? $settings['crop_image_height'] : '250',
 			'img_hover_effect'              => $settings['img_hover_effect'] ? $settings['img_hover_effect'] : 'theme_1',
+			'img_animation'					=> $settings['img_animation'] ? $settings['img_animation'] : 'zoom-in',
 			'auto_play'                 	=> $settings['A_play'] ? $settings['A_play'] : 'no',
 			'repeat_product'                => $settings['repeat_product'] ? $settings['repeat_product'] : 'no',
 			'stop_hover'                 	=> $settings['stop_hover'] ? false : true,
