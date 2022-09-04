@@ -364,7 +364,7 @@ class Elementor_Woo_Ultimate_Widget extends \Elementor\Widget_Base {
 				'type'      => Controls_Manager::TEXT,
 				'id'        => 'c_desktop_small',
 				'label'     => __( 'Laptop Columns', 'woocommerce-product-carousel-slider-and-ultimate' ),
-				'default'   => 3,
+				'default'   => 2,
 			),
 			array(
 				'type'      => Controls_Manager::TEXT,
