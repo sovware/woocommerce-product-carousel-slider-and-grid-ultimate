@@ -98,7 +98,7 @@ class wcpcsu_Shortcode
             'quick_view_button_back_color'    => '',
             'quick_view_button_hover_color'   => '',
             'quick_view_button_hover_back_color'    => '',
-
+ 
         ), $atts );
         $post_id =  ! empty( $atts['id'] ) ? $atts['id'] : '';
         
@@ -335,32 +335,179 @@ class wcpcsu_Shortcode
 
         <?php if( 'yes' == $h_title_show && ! empty( $header_title ) ) { ?>
         <div class="wpcu-products__header <?php echo $header_class; ?>" style="
-            --wpcu-headerFontSize: <?php echo $header_font_size; ?>px;
-            --wpcu-headerFontColor: <?php echo $header_font_color; ?>;
+
+            --wpcu-headerFontSize: 24px;
+
+            --wpcu-headerFontColor: #303030;
+            --wpcu-headerFontColorHover: #333;
+
+            --wpcu-headerFontBgColor: #fff;
+            --wpcu-headerFontBgColorHover: #f9f9f9;
+
+            --wpcu-headerPaddingTop: 0px;
+            --wpcu-headerPaddingRight: 0px;
+            --wpcu-headerPaddingBottom: 0px;
+            --wpcu-headerPaddingLeft: 0px;
+
+            --wpcu-headerMarginTop: 0px;
+            --wpcu-headerMarginRight: 0px;
+            --wpcu-headerMarginBottom: 0px;
+            --wpcu-headerMarginLeft: 0px;
+
+            --wpcu-headerBorderRadiusTop: 0px;
+            --wpcu-headerBorderRadiusRight: 0px;
+            --wpcu-headerBorderRadiusBottom: 0px;
+            --wpcu-headerBorderRadiusLeft: 0px;
+
+            --wpcu-headerBorderType: solid;
+            --wpcu-headerBorderWidthTop: 1px;
+            --wpcu-headerBorderWidthRight: 1px;
+            --wpcu-headerBorderWidthBottom: 1px;
+            --wpcu-headerBorderWidthLeft: 1px;
+            --wpcu-headerBorderColor: #f9f9f9;
+            --wpcu-headerBorderColorHover: #f2f2f2;
+
+            --wpcu-headerTransitionDuration: all ease 0.3s;
+
         "> <!-- .wpcu-products__header--middle /.wpcu-products__header--right -->
             <h2><?php echo $header_title; ?></h2>
         </div>
         <?php } ?>
 
-        <div class="wpcu-products <?php echo  'yes' == $marquee ? 'wpcu-carousel--marquee' : ''; ?> wpcu-<?php echo $theme; ?> wpcu-lazy-load <?php echo ( 'carousel' == $layout ) ? 'wpcu-carousel' : ''; ?>"
-        style="
+        <div class="wpcu-products <?php echo  'yes' == $marquee ? 'wpcu-carousel--marquee' : ''; ?> wpcu-<?php echo $theme; ?> wpcu-lazy-load <?php echo ( 'carousel' == $layout ) ? 'wpcu-carousel' : ''; ?>" style="
+
+            --wpcu-buttonFontSize: inherit;
+
+            --wpcu-buttonColor: <?php echo $cart_font_color; ?>;
+            --wpcu-buttonColorHover: <?php echo $cart_button_hover_font_color; ?>;
+
+            --wpcu-buttonBgColor: <?php echo $cart_bg_color; ?>;
+            --wpcu-buttonBgColorHover: <?php echo $cart_button_hover_color; ?>;
+
+            --wpcu-buttonShadowColor: rgba(0, 0, 0, 0.1);
+            --wpcu-buttonShadowColorHover: rgba(0, 0, 0, 0.15);
+
+            --wpcu-buttonBorderType: solid;
+            --wpcu-buttonBorderWidthTop: 1px;
+            --wpcu-buttonBorderWidthRight: 1px;
+            --wpcu-buttonBorderWidthBottom: 1px;
+            --wpcu-buttonBorderWidthLeft: 1px;
+            --wpcu-buttonBorderColor: #f9f9f9;
+            --wpcu-buttonBorderColorHover: #f2f2f2;
+            
+            --wpcu-buttonBorderRadiusTop: 0px;
+            --wpcu-buttonBorderRadiusRight: 0px;
+            --wpcu-buttonBorderRadiusBottom: 0px;
+            --wpcu-buttonBorderRadiusLeft: 0px;
+            
+            --wpcu-buttonPaddingTop: 0px;
+            --wpcu-buttonPaddingRight: 0px;
+            --wpcu-buttonPaddingBottom: 0px;
+            --wpcu-buttonPaddingLeft: 0px;
+
+            --wpcu-buttonMarginTop: 0px;
+            --wpcu-buttonMarginRight: 0px;
+            --wpcu-buttonMarginBottom: 0px;
+            --wpcu-buttonMarginLeft: 0px;
+
+            --wpcu-buttonExtraIconSpacing: 0px;
+            --wpcu-buttonExtraIconSpacingHover: 0px;
+
+            --wpcu-buttonTransitionDuration: all ease 0.3s;  
+
+            
+            --wpcu-productOldPriceSize: <?php echo $price_font_size; ?>px;
+            --wpcu-productOldPriceColor: #333;
+
             --wpcu-productTitleSize: <?php echo $title_font_size; ?>px;
             --wpcu-productTitleColor: <?php echo $title_font_color; ?>;
             --wpcu-productTitleColorHover: <?php echo $title_hover_font_color; ?>;
 
             --wpcu-productPriceSize: <?php echo $price_font_size; ?>px;
             --wpcu-productPriceColor: <?php echo $price_font_color; ?>;
+            --wpcu-productPriceBgColor: #fff;
+            --wpcu-productPriceBorderColor: #fff;
+
+            --wpcu-headerPaddingTop: 0px;
+            --wpcu-headerPaddingRight: 0px;
+            --wpcu-headerPaddingBottom: 0px;
+            --wpcu-headerPaddingLeft: 0px;
+
+            --wpcu-productMarginTop: 0px;
+            --wpcu-productMarginRight: 0px;
+            --wpcu-productMarginBottom: 0px;
+            --wpcu-productMarginLeft: 0px;
+
+            --wpcu-productBorderRadiusTop: 0px;
+            --wpcu-productBorderRadiusRight: 0px;
+            --wpcu-productBorderRadiusBottom: 0px;
+            --wpcu-productBorderRadiusLeft: 0px;
+
+            --wpcu-productBorderType: solid;
+            --wpcu-productBorderWidthTop: 1px;
+            --wpcu-productBorderWidthRight: 1px;
+            --wpcu-productBorderWidthBottom: 1px;
+            --wpcu-productBorderWidthLeft: 1px;
+            --wpcu-productBorderColor: #f9f9f9;
 
             --wpcu-productRatingSize: <?php echo $ratings_size; ?>px;
             --wpcu-productRatingColor: <?php echo $ratings_color; ?>;
+            --wpcu-productRatingGutter: 0;
 
-            --wpcu-buttonColor: <?php echo $cart_font_color; ?>;
-            --wpcu-buttonColorHover: <?php echo $cart_button_hover_font_color; ?>;
-            --wpcu-buttonBgColor: <?php echo $cart_bg_color; ?>;
-            --wpcu-buttonBgColorHover: <?php echo $cart_button_hover_color; ?>;
-            --wpcu-buttonFontSize: inherit;
+            --wpcu-productRatingMarginTop: 0px;
+            --wpcu-productRatingMarginRight: 0px;
+            --wpcu-productRatingMarginBottom: 0px;
+            --wpcu-productRatingMarginLeft: 0px;
+
+
+            --wpcu-badgeFontSize: 12px;
+            --wpcu-badgeFontColor: #fff;
+            --wpcu-badgeFontBgColor: #ff5500;
+
+            --wpcu-badgePaddingTop: 0px;
+            --wpcu-badgePaddingRight: 0px;
+            --wpcu-badgePaddingBottom: 0px;
+            --wpcu-badgePaddingLeft: 0px;
+
+            --wpcu-badgeMarginTop: 0px;
+            --wpcu-badgeMarginRight: 0px;
+            --wpcu-badgeMarginBottom: 0px;
+            --wpcu-badgeMarginLeft: 0px;
+
+            --wpcu-badgeBorderRadiusTop: 0px;
+            --wpcu-badgeBorderRadiusRight: 0px;
+            --wpcu-badgeBorderRadiusBottom: 0px;
+            --wpcu-badgeBorderRadiusLeft: 0px;
+
+            --wpcu-badgeBorderType: solid;
+            --wpcu-badgeBorderWidthTop: 1px;
+            --wpcu-badgeBorderWidthRight: 1px;
+            --wpcu-badgeBorderWidthBottom: 1px;
+            --wpcu-badgeBorderWidthLeft: 1px;
+            --wpcu-badgeBorderColor: #ff5500;
+
+            --wpcu-badgeShadowColor: rgba(0, 0, 0, 0.1);
+            --wpcu-badgeShadowColorHover: rgba(0, 0, 0, 0.15);
+
+            --wpcu-badgeSaleFontColor: #fff;
+            --wpcu-badgeSaleFontBgColor: #ff5500;
+            --wpcu-badgeSaleBorderColor: #ff5500;
+
+            --wpcu-badgeFeatureFontColor: #fff;
+            --wpcu-badgeFeatureFontBgColor: #ff5500;
+            --wpcu-badgeFeatureBorderColor: #ff5500;
+
+            --wpcu-badgeDiscountFontColor: #fff;
+            --wpcu-badgeDiscountFontBgColor: #ff5500;
+            --wpcu-badgeDiscountBorderColor: #ff5500;
+
+            --wpcu-badgeSoldOutFontColor: #fff;
+            --wpcu-badgeSoldOutFontBgColor: #ff5500;
+            --wpcu-badgeSoldOutBorderColor: #ff5500;
+
 
             --wpcu-ribbonBgColor: <?php echo $ribbon_bg_color; ?>;
+            
 
             --wpcu-actionIconColor: <?php echo $action_icon_font_color; ?>;
             --wpcu-actionIconColorHover: <?php echo $action_icon_hover_color; ?>;
@@ -370,11 +517,13 @@ class wcpcsu_Shortcode
 
             --wpcu-quickViewBtnBg: <?php echo $quick_view_button_back_color; ?>;
             --wpcu-quickViewBtnBgHover: <?php echo $quick_view_button_hover_back_color; ?>;
+
             --wpcu-quickViewBtnColor: <?php echo $quick_view_button_color; ?>;
             --wpcu-quickViewBtnColorHover: <?php echo $quick_view_button_hover_color; ?>;
             --wpcu-quickViewBtnSize: inherit;
 
             --wpcu-imgHoverScale: scale(1.2);
+
         "
         <?php if( 'carousel' == $layout ) { ?>
         data-wpcu-items="4"
