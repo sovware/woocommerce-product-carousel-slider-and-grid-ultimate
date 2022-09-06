@@ -155,9 +155,9 @@
     margin: 0 -5px;
     padding: 0 15px;
 
-    @include e(btn) {
-        width: 40px;
-        height: 40px;
+    @include e(btn) { 
+        width: var(--wpcu-navBoxWidth);
+        height: var(--wpcu-navBoxHeight);
         border: 1px solid var(--wpcu-navBorderColor) !important;
         display: inline-flex;
         align-items: center;
@@ -285,7 +285,7 @@
     font-weight: var(--wpcu-headerFontWeight);
 
     color: var(--wpcu-headerFontColor) !important;
-    background-color: var(--wpcu-headerFontBgColor) !important;
+    background-color: var(--wpcu-headerBgColor) !important;
 
     padding-top: var(--wpcu-headerPaddingTop);
     padding-right: var(--wpcu-headerPaddingRight);
@@ -314,7 +314,7 @@
     &:hover {
         border-color: var(--wpcu-headerBorderColorHover);
         color: var(--wpcu-headerFontColorHover) !important;
-        background-color: var(--wpcu-headerFontBgColorHover) !important;
+        background-color: var(--wpcu-headerBgColorHover) !important;
     }
 }
 

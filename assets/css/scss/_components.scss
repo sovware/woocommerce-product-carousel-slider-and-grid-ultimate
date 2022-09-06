@@ -10,13 +10,38 @@
 
     a {
         text-decoration: none !important;
-        font-size: var(--wpcu-productTitleSize) !important;
-        font-weight: normal;
-        color: var(--wpcu-productTitleColor) !important;
         letter-spacing: normal;
         transition: 0.3s ease;
+        font-size: var(--wpcu-productTitleFontSize) !important;
+        font-weight: var(--wpcu-productTitleFontWeight);
+        color: var(--wpcu-productTitleColor) !important;
+        background-color: var(--wpcu-productBgColor) !important;
+
+        padding-top: var(--wpcu-productPaddingTop);
+        padding-right: var(--wpcu-productPaddingRight);
+        padding-bottom: var(--wpcu-productPaddingBottom);
+        padding-left: var(--wpcu-productPaddingLeft);
+
+        margin-top: var(--wpcu-productMarginTop);
+        margin-right: var(--wpcu-productMarginRight);
+        margin-bottom: var(--wpcu-productMarginBottom);
+        margin-left: var(--wpcu-productMarginLeft);
+
+        border-style: var(--wpcu-productBorderStyle);
+        border-top-width: var(--wpcu-productBorderWidthTop);
+        border-right-width: var(--wpcu-productBorderWidthRight);
+        border-bottom-width: var(--wpcu-productBorderWidthBottom);
+        border-left-width: var(--wpcu-productBorderWidthLeft);
+
+        border-top-left-radius: var(--wpcu-productBorderRadiusLeftTop);
+        border-top-right-radius: var(--wpcu-productBorderRadiusLeftRight);
+        border-bottom-right-radius: var(--wpcu-productBorderRadiusBottomRight);
+        border-bottom-left-radius: var(--wpcu-productBorderRadiusBottomLeft);
+        border-color: var(--wpcu-productBorderColor);
         &:hover{
             color: var(--wpcu-productTitleColorHover) !important;
+            background-color: var(--wpcu-productBgColorHover) !important;
+            border-color: var(--wpcu-productBorderColorHover) !important;
         }
     }
 }
@@ -85,8 +110,8 @@
     del bdi {
         font-weight: 300;
         display: inline-block;
-        font-size: var(--wpcu-productPriceSize) !important;
-        color: $textLight;
+        font-size: var(--wpcu-productOldPriceSize) !important;
+        color: var(--wpcu-productOldPriceColor) !important;
         margin: 0;
         text-decoration: line-through;
     }
@@ -100,14 +125,19 @@
 .wpcu-product__rating{
     display: flex;
     align-items: center;
+
+    margin-top: var(--wpcu-productRatingMarginTop);
+    margin-right: var(--wpcu-productRatingMarginRight);
+    margin-bottom: var(--wpcu-productRatingMarginBottom);
+    margin-left: var(--wpcu-productRatingMarginLeft);
     @include e(stars){
         position: relative;
         @include e(wrap){
             display: flex;
             align-items: center;
             svg{
-                width: var(--wpcu-productRatingSize) !important;
-                fill: var(--wpcu-productRatingColor) !important;
+                width: var(--wpcu-productRatingIconSize) !important;
+                fill: var(--wpcu-productRatingIconColor) !important;
             }
         }
         @include e(solid){
@@ -118,14 +148,14 @@
             top: 0;
             overflow: hidden;
             svg{
-                min-width: var(--wpcu-productRatingSize) !important;
-                fill: var(--wpcu-productRatingColor) !important;
+                min-width: var(--wpcu-productRatingIconSize) !important;
+                fill: var(--wpcu-productRatingIconColor) !important;
             }
         }
     }
     .wpcu-product__rating__total {
-        font-size: 14px;
-        color: $textLight;
+        font-size: var(--wpcu-productRatingFontSize);
+        color: var(--wpcu-productRatingTextColor);
         display: inline-block;
         padding-left: 4px;
         position: relative;

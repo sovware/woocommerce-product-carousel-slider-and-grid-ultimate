@@ -7,6 +7,54 @@
     font-size: 12px;
     padding: 0 12px;
 
+    color: var(--wpcu-badgeFontColor) !important;
+    background: var(--wpcu-badgeBgColor) !important;
+    font-size: var(--wpcu-badgeFontSize) !important;
+
+    padding-top: var(--wpcu-badgePaddingTop);
+    padding-right: var(--wpcu-badgePaddingRight);
+    padding-bottom: var(--wpcu-badgePaddingBottom);
+    padding-left: var(--wpcu-badgePaddingLeft);
+
+    margin-top: var(--wpcu-badgeMarginTop);
+    margin-right: var(--wpcu-badgeMarginRight);
+    margin-bottom: var(--wpcu-badgeMarginBottom);
+    margin-left: var(--wpcu-badgeMarginLeft);
+
+    border-style: var(--wpcu-badgeBorderStyle);
+    border-top-width: var(--wpcu-badgeBorderWidthTop);
+    border-right-width: var(--wpcu-badgeBorderWidthRight);
+    border-bottom-width: var(--wpcu-badgeBorderWidthBottom);
+    border-left-width: var(--wpcu-badgeBorderWidthLeft);
+
+    border-top-left-radius: var(--wpcu-badgeBorderRadiusLeftTop);
+    border-top-right-radius: var(--wpcu-badgeBorderRadiusLeftRight);
+    border-bottom-right-radius: var(--wpcu-badgeBorderRadiusBottomRight);
+    border-bottom-left-radius: var(--wpcu-badgeBorderRadiusBottomLeft);
+    border-color: var(--wpcu-badgeBorderColor);
+
+    @include m(sale) {
+        color: var(--wpcu-badgeSaleColor) !important;
+        background: var(--wpcu-badgeSaleBgColor) !important;
+        border-color: var(--wpcu-badgeSaleBorderColor) !important;
+    }
+    @include m(feature) {
+        color: var(--wpcu-badgeFeatureColor) !important;
+        background: var(--wpcu-badgeFeatureBgColor) !important;
+        border-color: var(--wpcu-badgeFeatureBorderColor) !important;
+    }
+    @include m(discount) {
+        color: var(--wpcu-badgeDiscountColor) !important;
+        background: var(--wpcu-badgeDiscountBgColor) !important;
+        border-color: var(--wpcu-badgeDiscountBorderColor) !important;
+    }
+    @include m(soldout) {
+        color: var(--wpcu-badgeSoldOutColor) !important;
+        background: var(--wpcu-badgeSoldOutBgColor) !important;
+        border-color: var(--wpcu-badgeSoldOutBorderColor) !important;
+    }
+
+
     @include m(primary) {
         color: #fff;
         background: var(--wpcu-ribbonBgColor);
