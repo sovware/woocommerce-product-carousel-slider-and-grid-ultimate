@@ -591,6 +591,15 @@ class Elementor_Woo_Ultimate_Widget extends \Elementor\Widget_Base {
 				'default'   => '#303030',
 			),
 			array(
+				'type'      => Controls_Manager::NUMBER,
+				'id'        => 'header_transition_duration',
+				'label'     => __( 'Transition Duration', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'default'   => '',
+				'min' => 0,
+				'max' => 5,
+				'step' => 0.1,
+			),
+			array(
 				'mode' => 'tab_end',
 			),
 			array(
@@ -1043,9 +1052,16 @@ class Elementor_Woo_Ultimate_Widget extends \Elementor\Widget_Base {
 			'pagi_hover_back_color'         => $settings['pagi_hover_back_color'] ? $settings['pagi_hover_back_color'] : '#ff5500',
 			'pagi_active_border_color'      => $settings['pagi_active_border_color'] ? $settings['pagi_active_border_color'] : '#ff5500',
 			'pagi_active_back_color'        => $settings['pagi_active_back_color'] ? $settings['pagi_active_back_color'] : '#ff5500',
-
 			'header_font_size'        		=> $settings['header_font_size'] ? $settings['header_font_size'] : '24',
 			'header_font_color'        		=> $settings['header_font_color'] ? $settings['header_font_color'] : '#303030',
+
+
+
+			'header_back_color'				=> $settings['header_back_color'] ? $settings['header_back_color'] : '',
+
+
+
+
 			'title_font_size'        		=> $settings['title_font_size'] ? $settings['title_font_size'] : '15',
 			'title_font_color'        		=> $settings['title_font_color'] ? $settings['title_font_color'] : '#363940',
 			'title_hover_font_color'        => $settings['title_hover_font_color'] ? $settings['title_hover_font_color'] : '#ff5500',

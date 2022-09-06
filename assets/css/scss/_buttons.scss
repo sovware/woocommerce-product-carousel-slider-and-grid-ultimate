@@ -14,20 +14,39 @@
     .added_to_cart,
     .button.added {
         min-height: 40px;
-        background: var(--wpcu-buttonBgColor) !important;
-        color: var(--wpcu-buttonColor) !important;
-        border-radius: 0;
-        text-transform: uppercase;
-        font-size: var(--wpcu-buttonFontSize) !important;
-        padding: 0 15px !important;
         display: flex !important;
         align-items: center;
         justify-content: center;
-        text-decoration: none !important;
-        transition: 0.3s ease;
-        border: 1px solid transparent;
-        line-height: 15px !important;
         text-align: center;
+        text-transform: uppercase;
+        line-height: 15px !important;
+        text-decoration: none !important;
+        color: var(--wpcu-buttonColor) !important;
+        background: var(--wpcu-buttonBgColor) !important;
+        font-size: var(--wpcu-buttonFontSize) !important;
+        transition: var(--wpcu-buttonTransitionDuration);
+
+        padding-top: var(--wpcu-buttonPaddingTop);
+        padding-right: var(--wpcu-buttonPaddingRight);
+        padding-bottom: var(--wpcu-buttonPaddingBottom);
+        padding-left: var(--wpcu-buttonPaddingLeft);
+    
+        margin-top: var(--wpcu-buttonMarginTop);
+        margin-right: var(--wpcu-buttonMarginRight);
+        margin-bottom: var(--wpcu-buttonMarginBottom);
+        margin-left: var(--wpcu-buttonMarginLeft);
+    
+        border-style: var(--wpcu-buttonBorderStyle);
+        border-top-width: var(--wpcu-buttonBorderWidthTop);
+        border-right-width: var(--wpcu-buttonBorderWidthRight);
+        border-bottom-width: var(--wpcu-buttonBorderWidthBottom);
+        border-left-width: var(--wpcu-buttonBorderWidthLeft);
+    
+        border-top-left-radius: var(--wpcu-buttonBorderRadiusLeftTop);
+        border-top-right-radius: var(--wpcu-buttonBorderRadiusLeftRight);
+        border-bottom-right-radius: var(--wpcu-buttonBorderRadiusBottomRight);
+        border-bottom-left-radius: var(--wpcu-buttonBorderRadiusBottomLeft);
+        border-color: var(--wpcu-buttonBorderColor);
 
         &:hover {
             text-decoration: none !important;
