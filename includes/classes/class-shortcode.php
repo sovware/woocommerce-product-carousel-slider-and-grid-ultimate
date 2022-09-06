@@ -336,13 +336,14 @@ class wcpcsu_Shortcode
         <?php if( 'yes' == $h_title_show && ! empty( $header_title ) ) { ?>
         <div class="wpcu-products__header <?php echo $header_class; ?>" style="
 
-            --wpcu-headerFontSize: 24px;
+            --wpcu-headerFontSize: 48px;
+            --wpcu-headerFontWeight: 500;
 
             --wpcu-headerFontColor: #303030;
-            --wpcu-headerFontColorHover: #333;
+            --wpcu-headerFontColorHover: inherit;
 
-            --wpcu-headerFontBgColor: #fff;
-            --wpcu-headerFontBgColorHover: #f9f9f9;
+            --wpcu-headerFontBgColor: inherit;
+            --wpcu-headerFontBgColorHover: inherit;
 
             --wpcu-headerPaddingTop: 0px;
             --wpcu-headerPaddingRight: 0px;
@@ -354,18 +355,18 @@ class wcpcsu_Shortcode
             --wpcu-headerMarginBottom: 0px;
             --wpcu-headerMarginLeft: 0px;
 
-            --wpcu-headerBorderRadiusTop: 0px;
-            --wpcu-headerBorderRadiusRight: 0px;
-            --wpcu-headerBorderRadiusBottom: 0px;
-            --wpcu-headerBorderRadiusLeft: 0px;
+            --wpcu-headerBorderRadiusLeftTop: 0px;
+            --wpcu-headerBorderRadiusLeftRight: 0px;
+            --wpcu-headerBorderRadiusBottomRight: 0px;
+            --wpcu-headerBorderRadiusBottomLeft: 0px;
 
-            --wpcu-headerBorderType: solid;
-            --wpcu-headerBorderWidthTop: 1px;
-            --wpcu-headerBorderWidthRight: 1px;
-            --wpcu-headerBorderWidthBottom: 1px;
-            --wpcu-headerBorderWidthLeft: 1px;
-            --wpcu-headerBorderColor: #f9f9f9;
-            --wpcu-headerBorderColorHover: #f2f2f2;
+            --wpcu-headerBorderStyle: none;
+            --wpcu-headerBorderWidthTop: 0px;
+            --wpcu-headerBorderWidthRight: 0px;
+            --wpcu-headerBorderWidthBottom: 0px;
+            --wpcu-headerBorderWidthLeft: 0px;
+            --wpcu-headerBorderColor: inherit;
+            --wpcu-headerBorderColorHover: inherit;
 
             --wpcu-headerTransitionDuration: all ease 0.3s;
 
@@ -378,32 +379,32 @@ class wcpcsu_Shortcode
 
             --wpcu-buttonFontSize: inherit;
 
-            --wpcu-buttonColor: <?php echo $cart_font_color; ?>;
-            --wpcu-buttonColorHover: <?php echo $cart_button_hover_font_color; ?>;
+            --wpcu-buttonColor: #fff;
+            --wpcu-buttonColorHover: #fff;
 
-            --wpcu-buttonBgColor: <?php echo $cart_bg_color; ?>;
-            --wpcu-buttonBgColorHover: <?php echo $cart_button_hover_color; ?>;
+            --wpcu-buttonBgColor: #ff5500;
+            --wpcu-buttonBgColorHover: #9A9A9A;
 
             --wpcu-buttonShadowColor: rgba(0, 0, 0, 0.1);
             --wpcu-buttonShadowColorHover: rgba(0, 0, 0, 0.15);
 
-            --wpcu-buttonBorderType: solid;
+            --wpcu-buttonBorderStyle: solid;
             --wpcu-buttonBorderWidthTop: 1px;
             --wpcu-buttonBorderWidthRight: 1px;
             --wpcu-buttonBorderWidthBottom: 1px;
             --wpcu-buttonBorderWidthLeft: 1px;
-            --wpcu-buttonBorderColor: #f9f9f9;
-            --wpcu-buttonBorderColorHover: #f2f2f2;
+            --wpcu-buttonBorderColor: transparent;
+            --wpcu-buttonBorderColorHover: transparent;
             
-            --wpcu-buttonBorderRadiusTop: 0px;
-            --wpcu-buttonBorderRadiusRight: 0px;
-            --wpcu-buttonBorderRadiusBottom: 0px;
-            --wpcu-buttonBorderRadiusLeft: 0px;
+            --wpcu-buttonBorderRadiusLeftTop: 0px;
+            --wpcu-buttonBorderRadiusLeftRight: 0px;
+            --wpcu-buttonBorderRadiusBottomRight: 0px;
+            --wpcu-buttonBorderRadiusBottomLeft: 0px;
             
             --wpcu-buttonPaddingTop: 0px;
-            --wpcu-buttonPaddingRight: 0px;
+            --wpcu-buttonPaddingRight: 15px;
             --wpcu-buttonPaddingBottom: 0px;
-            --wpcu-buttonPaddingLeft: 0px;
+            --wpcu-buttonPaddingLeft: 15px;
 
             --wpcu-buttonMarginTop: 0px;
             --wpcu-buttonMarginRight: 0px;
@@ -438,12 +439,12 @@ class wcpcsu_Shortcode
             --wpcu-productMarginBottom: 0px;
             --wpcu-productMarginLeft: 0px;
 
-            --wpcu-productBorderRadiusTop: 0px;
-            --wpcu-productBorderRadiusRight: 0px;
-            --wpcu-productBorderRadiusBottom: 0px;
-            --wpcu-productBorderRadiusLeft: 0px;
+            --wpcu-productBorderRadiusLeftTop: 0px;
+            --wpcu-productBorderRadiusLeftRight: 0px;
+            --wpcu-productBorderRadiusBottomRight: 0px;
+            --wpcu-productBorderRadiusBottomLeft: 0px;
 
-            --wpcu-productBorderType: solid;
+            --wpcu-productBorderStyle: solid;
             --wpcu-productBorderWidthTop: 1px;
             --wpcu-productBorderWidthRight: 1px;
             --wpcu-productBorderWidthBottom: 1px;
@@ -474,12 +475,12 @@ class wcpcsu_Shortcode
             --wpcu-badgeMarginBottom: 0px;
             --wpcu-badgeMarginLeft: 0px;
 
-            --wpcu-badgeBorderRadiusTop: 0px;
-            --wpcu-badgeBorderRadiusRight: 0px;
-            --wpcu-badgeBorderRadiusBottom: 0px;
-            --wpcu-badgeBorderRadiusLeft: 0px;
+            --wpcu-badgeBorderRadiusLeftTop: 0px;
+            --wpcu-badgeBorderRadiusLeftRight: 0px;
+            --wpcu-badgeBorderRadiusBottomRight: 0px;
+            --wpcu-badgeBorderRadiusBottomLeft: 0px;
 
-            --wpcu-badgeBorderType: solid;
+            --wpcu-badgeBorderStyle: solid;
             --wpcu-badgeBorderWidthTop: 1px;
             --wpcu-badgeBorderWidthRight: 1px;
             --wpcu-badgeBorderWidthBottom: 1px;

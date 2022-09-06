@@ -399,9 +399,35 @@
 
 .wpcu-products__header h2 {
   font-size: var(--wpcu-headerFontSize) !important;
+  font-weight: var(--wpcu-headerFontWeight);
   color: var(--wpcu-headerFontColor) !important;
-  font-weight: 500;
-  margin: 0 !important;
+  background-color: var(--wpcu-headerFontBgColor) !important;
+  padding-top: var(--wpcu-headerPaddingTop);
+  padding-right: var(--wpcu-headerPaddingRight);
+  padding-bottom: var(--wpcu-headerPaddingBottom);
+  padding-left: var(--wpcu-headerPaddingLeft);
+  margin-top: var(--wpcu-headerMarginTop);
+  margin-right: var(--wpcu-headerMarginRight);
+  margin-bottom: var(--wpcu-headerMarginBottom);
+  margin-left: var(--wpcu-headerMarginLeft);
+  border-style: var(--wpcu-headerBorderStyle);
+  border-top-width: var(--wpcu-headerBorderWidthTop);
+  border-right-width: var(--wpcu-headerBorderWidthRight);
+  border-bottom-width: var(--wpcu-headerBorderWidthBottom);
+  border-left-width: var(--wpcu-headerBorderWidthLeft);
+  border-top-left-radius: var(--wpcu-headerBorderRadiusLeftTop);
+  border-top-right-radius: var(--wpcu-headerBorderRadiusLeftRight);
+  border-bottom-right-radius: var(--wpcu-headerBorderRadiusBottomRight);
+  border-bottom-left-radius: var(--wpcu-headerBorderRadiusBottomLeft);
+  border-color: var(--wpcu-headerBorderColor);
+  -webkit-transition: var(--wpcu-headerTransitionDuration);
+  -o-transition: var(--wpcu-headerTransitionDuration);
+  transition: var(--wpcu-headerTransitionDuration);
+}
+.wpcu-products__header h2:hover {
+  border-color: var(--wpcu-headerBorderColorHover);
+  color: var(--wpcu-headerFontColorHover) !important;
+  background-color: var(--wpcu-headerFontBgColorHover) !important;
 }
 
 /* Carousel default */
@@ -578,12 +604,6 @@
 .wpcu-button .added_to_cart,
 .wpcu-button .button.added {
   min-height: 40px;
-  background: var(--wpcu-buttonBgColor) !important;
-  color: var(--wpcu-buttonColor) !important;
-  border-radius: 0;
-  text-transform: uppercase;
-  font-size: var(--wpcu-buttonFontSize) !important;
-  padding: 0 15px !important;
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important;
@@ -593,13 +613,34 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  text-decoration: none !important;
-  -webkit-transition: 0.3s ease;
-  -o-transition: 0.3s ease;
-  transition: 0.3s ease;
-  border: 1px solid transparent;
-  line-height: 15px !important;
   text-align: center;
+  text-transform: uppercase;
+  line-height: 15px !important;
+  text-decoration: none !important;
+  color: var(--wpcu-buttonColor) !important;
+  background: var(--wpcu-buttonBgColor) !important;
+  font-size: var(--wpcu-buttonFontSize) !important;
+  -webkit-transition: var(--wpcu-buttonTransitionDuration);
+  -o-transition: var(--wpcu-buttonTransitionDuration);
+  transition: var(--wpcu-buttonTransitionDuration);
+  padding-top: var(--wpcu-buttonPaddingTop);
+  padding-right: var(--wpcu-buttonPaddingRight);
+  padding-bottom: var(--wpcu-buttonPaddingBottom);
+  padding-left: var(--wpcu-buttonPaddingLeft);
+  margin-top: var(--wpcu-buttonMarginTop);
+  margin-right: var(--wpcu-buttonMarginRight);
+  margin-bottom: var(--wpcu-buttonMarginBottom);
+  margin-left: var(--wpcu-buttonMarginLeft);
+  border-style: var(--wpcu-buttonBorderStyle);
+  border-top-width: var(--wpcu-buttonBorderWidthTop);
+  border-right-width: var(--wpcu-buttonBorderWidthRight);
+  border-bottom-width: var(--wpcu-buttonBorderWidthBottom);
+  border-left-width: var(--wpcu-buttonBorderWidthLeft);
+  border-top-left-radius: var(--wpcu-buttonBorderRadiusLeftTop);
+  border-top-right-radius: var(--wpcu-buttonBorderRadiusLeftRight);
+  border-bottom-right-radius: var(--wpcu-buttonBorderRadiusBottomRight);
+  border-bottom-left-radius: var(--wpcu-buttonBorderRadiusBottomLeft);
+  border-color: var(--wpcu-buttonBorderColor);
 }
 .wpcu-button .button:hover,
 .wpcu-button .added_to_cart:hover,

@@ -278,13 +278,44 @@
 
 .wpcu-products__header.wpcu-products__header--right {
     text-align: right !important;
-}
+} 
 
 .wpcu-products__header h2 {
     font-size: var(--wpcu-headerFontSize) !important;
+    font-weight: var(--wpcu-headerFontWeight);
+
     color: var(--wpcu-headerFontColor) !important;
-    font-weight: 500;
-    margin: 0 !important;
+    background-color: var(--wpcu-headerFontBgColor) !important;
+
+    padding-top: var(--wpcu-headerPaddingTop);
+    padding-right: var(--wpcu-headerPaddingRight);
+    padding-bottom: var(--wpcu-headerPaddingBottom);
+    padding-left: var(--wpcu-headerPaddingLeft);
+
+    margin-top: var(--wpcu-headerMarginTop);
+    margin-right: var(--wpcu-headerMarginRight);
+    margin-bottom: var(--wpcu-headerMarginBottom);
+    margin-left: var(--wpcu-headerMarginLeft);
+
+    border-style: var(--wpcu-headerBorderStyle);
+    border-top-width: var(--wpcu-headerBorderWidthTop);
+    border-right-width: var(--wpcu-headerBorderWidthRight);
+    border-bottom-width: var(--wpcu-headerBorderWidthBottom);
+    border-left-width: var(--wpcu-headerBorderWidthLeft);
+
+    border-top-left-radius: var(--wpcu-headerBorderRadiusLeftTop);
+    border-top-right-radius: var(--wpcu-headerBorderRadiusLeftRight);
+    border-bottom-right-radius: var(--wpcu-headerBorderRadiusBottomRight);
+    border-bottom-left-radius: var(--wpcu-headerBorderRadiusBottomLeft);
+    border-color: var(--wpcu-headerBorderColor);
+
+    transition: var(--wpcu-headerTransitionDuration);
+
+    &:hover {
+        border-color: var(--wpcu-headerBorderColorHover);
+        color: var(--wpcu-headerFontColorHover) !important;
+        background-color: var(--wpcu-headerFontBgColorHover) !important;
+    }
 }
 
 /* Carousel default */
