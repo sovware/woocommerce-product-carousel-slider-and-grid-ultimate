@@ -57,6 +57,7 @@ class Elementor_Woo_Ultimate_Widget extends \Elementor\Widget_Base {
 
 	public function wpcsu_fields() {
 		$fields = array(
+			//layout section
 			array(
 				'mode'    => 'section_start',
 				'id'      => 'sec_general',
@@ -548,11 +549,21 @@ class Elementor_Woo_Ultimate_Widget extends \Elementor\Widget_Base {
 			array(
 				'mode' => 'section_end',
 			),
+			// header title style
 			array(
 				'mode'    => 'section_start',
 				'tab'       => Controls_Manager::TAB_STYLE,
 				'id'      => 'header_title_tab',
 				'label'   => __( 'Header Title', 'woocommerce-product-carousel-slider-and-ultimate' ),
+			),
+			array(
+				'mode'    => 'tabs_start',
+				'id'      => 'header_style_tab',
+			),
+			array(
+				'mode'    => 'tab_start',
+				'id'      => 'header_normal_tab',
+				'label'   => __( 'NORMAL', 'woocommerce-product-carousel-slider-and-ultimate' ),
 			),
 			array(
 				'type'      	=> Controls_Manager::TEXT,
@@ -564,8 +575,59 @@ class Elementor_Woo_Ultimate_Widget extends \Elementor\Widget_Base {
 			array(
 				'type'      => Controls_Manager::COLOR,
 				'id'        => 'header_font_color',
-				'label'     => __( 'Font Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'label'     => __( 'Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
 				'default'   => '#303030',
+			),
+			array(
+				'type'      => Controls_Manager::COLOR,
+				'id'        => 'header_back_color',
+				'label'     => __( 'Background Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'default'   => '#303030',
+			),
+			array(
+				'type'      => Controls_Manager::COLOR,
+				'id'        => 'header_border_color',
+				'label'     => __( 'Border Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'default'   => '#303030',
+			),
+			array(
+				'mode' => 'tab_end',
+			),
+			array(
+				'mode'    => 'tab_start',
+				'id'      => 'header_hover_tab',
+				'label'   => __( 'HOVER', 'woocommerce-product-carousel-slider-and-ultimate' ),
+			),
+			array(
+				'type'      	=> Controls_Manager::TEXT,
+				'id'        	=> 'header_hover_font_size',
+				'label'     	=> __( 'Font Size', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'description' 	=> 'px',
+				'default'   	=> 24,
+			),
+			array(
+				'type'      => Controls_Manager::COLOR,
+				'id'        => 'header_hover_font_color',
+				'label'     => __( 'Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'default'   => '#303030',
+			),
+			array(
+				'type'      => Controls_Manager::COLOR,
+				'id'        => 'header_hover_back_color',
+				'label'     => __( 'Background Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'default'   => '#303030',
+			),
+			array(
+				'type'      => Controls_Manager::COLOR,
+				'id'        => 'header_hover_border_color',
+				'label'     => __( 'Border Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'default'   => '#303030',
+			),
+			array(
+				'mode' => 'tab_end',
+			),
+			array(
+				'mode' => 'tabs_end',
 			),
 			array(
 				'mode' => 'section_end',
