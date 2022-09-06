@@ -50,9 +50,9 @@
 
         &:hover {
             text-decoration: none !important;
-            background: var(--wpcu-buttonBgColorHover) !important;
             color: var(--wpcu-buttonColorHover) !important;
-            border-color: var(--wpcu-buttonBgColorHover) !important;
+            background: var(--wpcu-buttonBgColorHover) !important;
+            border-color: var(--wpcu-buttonBorderColorHover) !important;
         }
     }
     .button.product_type_external{
