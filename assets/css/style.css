@@ -2314,3 +2314,7 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
+
+.elementor-widget-container .wpcu-product__price .wpcu-badge{
+  display: none;
+}
