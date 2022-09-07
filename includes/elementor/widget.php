@@ -1,6 +1,8 @@
 <?php
 
 use Elementor\Controls_Manager;
+use Elementor\Group_Control_Typography;
+use Elementor\Core\Schemes\Typography;
 class Elementor_Woo_Ultimate_Widget extends \Elementor\Widget_Base {
 
 	public function register_controls() {
@@ -600,6 +602,53 @@ class Elementor_Woo_Ultimate_Widget extends \Elementor\Widget_Base {
 				'step' => 0.1,
 			),
 			array(
+				'mode'		=> 'group',
+				'name'     	=> 'header_title_typography',
+				'type'		=> Group_Control_Typography::get_type(),
+				'selector' 	=> '{{WRAPPER}} .wpcu-products__header h2',
+				'scheme' => Typography::TYPOGRAPHY_3,
+			),
+			array(
+				'type'    => Controls_Manager::SELECT,
+				'id'      => 'header_border_type',
+				'label'   => __( 'Border Type', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'options' => array(
+					'none' 		=> __( 'None', 'woocommerce-product-carousel-slider-and-ultimate' ),
+					'solid' 	=> __( 'Solid', 'woocommerce-product-carousel-slider-and-ultimate' ),
+					'double' 	=> __( 'Double', 'woocommerce-product-carousel-slider-and-ultimate' ),
+					'dotted' 	=> __( 'Dotted', 'woocommerce-product-carousel-slider-and-ultimate' ),
+					'dashed' 	=> __( 'Dashed', 'woocommerce-product-carousel-slider-and-ultimate' ),
+					'groove' 	=> __( 'Groove', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				),
+				'default' => '',
+			),
+			array(
+				'mode'			=> 'responsive',
+				'type'      	=> Controls_Manager::DIMENSIONS,
+				'id'        	=> 'header_padding',
+				'label'     	=> __( 'Padding', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'size_units' => [ 'px' ],
+				'default' => [
+					'top' => 0,
+					'right' => 0,
+					'bottom' => 0,
+					'left' => 0,
+				],
+			),
+			array(
+				'mode'			=> 'responsive',
+				'type'      	=> Controls_Manager::DIMENSIONS,
+				'id'        	=> 'header_margin',
+				'label'     	=> __( 'Margin', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'size_units' => [ 'px' ],
+				'default' => [
+					'top' => 0,
+					'right' => 0,
+					'bottom' => 0,
+					'left' => 0,
+				],
+			),
+			array(
 				'mode' => 'tab_end',
 			),
 			array(
@@ -988,7 +1037,7 @@ class Elementor_Woo_Ultimate_Widget extends \Elementor\Widget_Base {
 
 	protected function render() {
 		$settings = $this->get_settings();
-
+		//var_dump( $settings['header_title_typography']);
 		$atts = array(
 			'layout'                => $settings['layout'] ? $settings['layout'] : 'carousel',
 			'theme'                 => $settings['theme'] ? $settings['theme'] : 'theme_1',
@@ -1058,9 +1107,18 @@ class Elementor_Woo_Ultimate_Widget extends \Elementor\Widget_Base {
 
 
 			'header_back_color'				=> $settings['header_back_color'] ? $settings['header_back_color'] : '',
+			'header_border_color'			=> $settings['header_border_color'] ? $settings['header_border_color'] : '',
+			'header_transition_duration'    => $settings['header_transition_duration'] ? $settings['header_transition_duration'] : '',
+			'header_border_type'			=> $settings['header_border_type'] ? $settings['header_border_type'] : '',
+			'header_padding_top'			=> $settings['header_padding']['top'] ? $settings['header_padding']['top'] : '',
+			'header_padding_right'			=> $settings['header_padding']['right'] ? $settings['header_padding']['right'] : '',
+			'header_padding_bottom'			=> $settings['header_padding']['bottom'] ? $settings['header_padding']['bottom'] : '',
+			'header_padding_left'			=> $settings['header_padding']['left'] ? $settings['header_padding']['left'] : '',
 
-
-
+			'header_margin_top'				=> $settings['header_margin']['top'] ? $settings['header_margin']['top'] : '',
+			'header_margin_right'			=> $settings['header_margin']['right'] ? $settings['header_margin']['right'] : '',
+			'header_margin_bottom'			=> $settings['header_margin']['bottom'] ? $settings['header_margin']['bottom'] : '',
+			'header_margin_left'			=> $settings['header_margin']['left'] ? $settings['header_margin']['left'] : '',
 
 			'title_font_size'        		=> $settings['title_font_size'] ? $settings['title_font_size'] : '15',
 			'title_font_color'        		=> $settings['title_font_color'] ? $settings['title_font_color'] : '#363940',
