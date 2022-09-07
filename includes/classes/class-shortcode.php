@@ -234,7 +234,7 @@ class wcpcsu_Shortcode
         $title_hover_font_color         = ! empty( $title_hover_font_color[$theme] ) ? $title_hover_font_color[$theme] : '#ff5500';
         $price_font_size                = ! empty( $price_font_size[$theme] ) ? $price_font_size[$theme] : '14';
         $price_font_color               = ! empty( $price_font_color[$theme] ) ? $price_font_color[$theme] : '#ff5500';
-        $ratings_size                   = ! empty( $ratings_size[$theme] ) ? $ratings_size[$theme] : '1em';
+        $ratings_size                   = ! empty( $ratings_size[$theme] ) ? $ratings_size[$theme] : '16';
         $ratings_color                  = ! empty( $ratings_color[$theme] ) ? $ratings_color[$theme] : '#FEB507';
         $cart_font_color                = ! empty( $cart_font_color[$theme] ) ? $cart_font_color[$theme] : '#ffffff';
         $cart_bg_color                  = ! empty( $cart_bg_color[$theme] ) ? $cart_bg_color[$theme] : '#ff5500';
