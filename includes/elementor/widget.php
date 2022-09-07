@@ -1,6 +1,8 @@
 <?php
 
 use Elementor\Controls_Manager;
+use Elementor\Group_Control_Typography;
+use Elementor\Core\Schemes\Typography;
 class Elementor_Woo_Ultimate_Widget extends \Elementor\Widget_Base {
 
 	public function register_controls() {
@@ -57,6 +59,7 @@ class Elementor_Woo_Ultimate_Widget extends \Elementor\Widget_Base {
 
 	public function wpcsu_fields() {
 		$fields = array(
+			//layout section
 			array(
 				'mode'    => 'section_start',
 				'id'      => 'sec_general',
@@ -548,6 +551,7 @@ class Elementor_Woo_Ultimate_Widget extends \Elementor\Widget_Base {
 			array(
 				'mode' => 'section_end',
 			),
+			// header title style
 			array(
 				'mode'    => 'section_start',
 				'tab'       => Controls_Manager::TAB_STYLE,
@@ -555,17 +559,179 @@ class Elementor_Woo_Ultimate_Widget extends \Elementor\Widget_Base {
 				'label'   => __( 'Header Title', 'woocommerce-product-carousel-slider-and-ultimate' ),
 			),
 			array(
-				'type'      	=> Controls_Manager::TEXT,
-				'id'        	=> 'header_font_size',
-				'label'     	=> __( 'Font Size', 'woocommerce-product-carousel-slider-and-ultimate' ),
-				'description' 	=> 'px',
-				'default'   	=> 24,
+				'mode'    => 'tabs_start',
+				'id'      => 'header_style_tab',
+			),
+			array(
+				'mode'    => 'tab_start',
+				'id'      => 'header_normal_tab',
+				'label'   => __( 'NORMAL', 'woocommerce-product-carousel-slider-and-ultimate' ),
 			),
 			array(
 				'type'      => Controls_Manager::COLOR,
 				'id'        => 'header_font_color',
-				'label'     => __( 'Font Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'label'     => __( 'Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
 				'default'   => '#303030',
+			),
+			array(
+				'type'      => Controls_Manager::COLOR,
+				'id'        => 'header_back_color',
+				'label'     => __( 'Background Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'selectors' 	=> [
+				'{{WRAPPER}} .wpcu-products__header' => 'background-color: {{VALUE}}'
+				],
+			),
+			array(
+				'type'      => Controls_Manager::COLOR,
+				'id'        => 'header_border_color',
+				'label'     => __( 'Border Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'selectors' 	=> [
+					'{{WRAPPER}} .wpcu-products__header' => 'border-color: {{VALUE}}'
+					],
+			),
+			array(
+				'type'      => Controls_Manager::NUMBER,
+				'id'        => 'header_transition_duration',
+				'label'     => __( 'Transition Duration', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'min' => 0,
+				'max' => 5,
+				'step' => 0.1,
+				'selectors' 	=> [
+					'{{WRAPPER}} .wpcu-products__header' => 'transition-duration: {{VALUE}} !important'
+					],
+			),
+			array(
+				'mode'		=> 'group',
+				'label'     => __( 'Typography', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'id'     	=> 'header_title_typography',
+				'type'		=> Group_Control_Typography::get_type(),
+				'selector' 	=> '{{WRAPPER}} .wpcu-products__header h2',
+				'scheme' => Typography::TYPOGRAPHY_3,
+			),
+			array(
+				'type'    => Controls_Manager::SELECT,
+				'id'      => 'header_border_type',
+				'label'   => __( 'Border Type', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'options' => array(
+					'none' 		=> __( 'None', 'woocommerce-product-carousel-slider-and-ultimate' ),
+					'solid' 	=> __( 'Solid', 'woocommerce-product-carousel-slider-and-ultimate' ),
+					'double' 	=> __( 'Double', 'woocommerce-product-carousel-slider-and-ultimate' ),
+					'dotted' 	=> __( 'Dotted', 'woocommerce-product-carousel-slider-and-ultimate' ),
+					'dashed' 	=> __( 'Dashed', 'woocommerce-product-carousel-slider-and-ultimate' ),
+					'groove' 	=> __( 'Groove', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				),
+				'selectors' 	=> [
+					'{{WRAPPER}} .wpcu-products__header' => 'border-style: {{VALUE}}'
+					],
+			),
+			array(
+				'mode'			=> 'responsive',
+				'type'      	=> Controls_Manager::DIMENSIONS,
+				'id'        	=> 'header_padding',
+				'label'     	=> __( 'Padding', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'selectors' => [
+					'{{WRAPPER}} .wpcu-products__header' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+				],
+			),
+			array(
+				'mode'			=> 'responsive',
+				'type'      	=> Controls_Manager::DIMENSIONS,
+				'id'        	=> 'header_margin',
+				'label'     	=> __( 'Margin', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'selectors' => [
+					'{{WRAPPER}} .wpcu-products__header' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}} !important;',
+				],
+			),
+			array(
+				'mode' => 'tab_end',
+			),
+			array(
+				'mode'    => 'tab_start',
+				'id'      => 'header_hover_tab',
+				'label'   => __( 'HOVER', 'woocommerce-product-carousel-slider-and-ultimate' ),
+			),
+			array(
+				'type'      => Controls_Manager::COLOR,
+				'id'        => 'header_hover_font_color',
+				'label'     => __( 'Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'default'   => '#303030',
+				'selectors' 	=> [
+					'{{WRAPPER}} .wpcu-products__header h2:hover' => 'color: {{VALUE}} !important'
+					],
+			),
+			array(
+				'type'      => Controls_Manager::COLOR,
+				'id'        => 'header_hover_back_color',
+				'label'     => __( 'Background Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'selectors' 	=> [
+				'{{WRAPPER}} .wpcu-products__header:hover' => 'background-color: {{VALUE}}'
+				],
+			),
+			array(
+				'type'      => Controls_Manager::COLOR,
+				'id'        => 'header_hover_border_color',
+				'label'     => __( 'Border Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'selectors' 	=> [
+					'{{WRAPPER}} .wpcu-products__header:hover' => 'border-color: {{VALUE}}'
+					],
+			),
+			array(
+				'type'      => Controls_Manager::NUMBER,
+				'id'        => 'header_hover_transition_duration',
+				'label'     => __( 'Transition Duration', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'min' => 0,
+				'max' => 5,
+				'step' => 0.1,
+				'selectors' 	=> [
+					'{{WRAPPER}} .wpcu-products__header:hover' => 'transition-duration: {{VALUE}} !important'
+					],
+			),
+			array(
+				'mode'		=> 'group',
+				'id'     	=> 'header_hover_title_typography',
+				'type'		=> Group_Control_Typography::get_type(),
+				'selector' 	=> '{{WRAPPER}} .wpcu-products__header h2:hover',
+				'scheme' => Typography::TYPOGRAPHY_3,
+			),
+			array(
+				'type'    => Controls_Manager::SELECT,
+				'id'      => 'header_hover_border_type',
+				'label'   => __( 'Border Type', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'options' => array(
+					'none' 		=> __( 'None', 'woocommerce-product-carousel-slider-and-ultimate' ),
+					'solid' 	=> __( 'Solid', 'woocommerce-product-carousel-slider-and-ultimate' ),
+					'double' 	=> __( 'Double', 'woocommerce-product-carousel-slider-and-ultimate' ),
+					'dotted' 	=> __( 'Dotted', 'woocommerce-product-carousel-slider-and-ultimate' ),
+					'dashed' 	=> __( 'Dashed', 'woocommerce-product-carousel-slider-and-ultimate' ),
+					'groove' 	=> __( 'Groove', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				),
+				'selectors' 	=> [
+					'{{WRAPPER}} .wpcu-products__header:hover' => 'border-style: {{VALUE}}'
+					],
+			),
+			array(
+				'mode'			=> 'responsive',
+				'type'      	=> Controls_Manager::DIMENSIONS,
+				'id'        	=> 'header_hover_padding',
+				'label'     	=> __( 'Padding', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'selectors' => [
+					'{{WRAPPER}} .wpcu-products__header:hover' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+				],
+			),
+			array(
+				'mode'			=> 'responsive',
+				'type'      	=> Controls_Manager::DIMENSIONS,
+				'id'        	=> 'header_hover_margin',
+				'label'     	=> __( 'Margin', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'selectors' => [
+					'{{WRAPPER}} .wpcu-products__header:hover' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}} !important;',
+				],
+			),
+			array(
+				'mode' => 'tab_end',
+			),
+			array(
+				'mode' => 'tabs_end',
 			),
 			array(
 				'mode' => 'section_end',
@@ -577,23 +743,180 @@ class Elementor_Woo_Ultimate_Widget extends \Elementor\Widget_Base {
 				'label'   => __( 'Product Title', 'woocommerce-product-carousel-slider-and-ultimate' ),
 			),
 			array(
-				'type'      	=> Controls_Manager::TEXT,
-				'id'        	=> 'title_font_size',
-				'label'     	=> __( 'Font Size', 'woocommerce-product-carousel-slider-and-ultimate' ),
-				'description' 	=> 'px',
-				'default'   	=> 15,
+				'mode'    => 'tabs_start',
+				'id'      => 'title_style_tab',
+			),
+			array(
+				'mode'    => 'tab_start',
+				'id'      => 'title_normal_tab',
+				'label'   => __( 'NORMAL', 'woocommerce-product-carousel-slider-and-ultimate' ),
 			),
 			array(
 				'type'      => Controls_Manager::COLOR,
 				'id'        => 'title_font_color',
-				'label'     => __( 'Font Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
-				'default'   => '#363940',
+				'label'     => __( 'Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'selectors' 	=> [
+					'{{WRAPPER}} .wpcu-product__title a' => 'color: {{VALUE}} !important'
+					],
+			),
+			array(
+				'type'      => Controls_Manager::COLOR,
+				'id'        => 'title_back_color',
+				'label'     => __( 'Background Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'selectors' 	=> [
+				'{{WRAPPER}} .wpcu-product__title' => 'background-color: {{VALUE}}'
+				],
+			),
+			array(
+				'type'      => Controls_Manager::COLOR,
+				'id'        => 'title_border_color',
+				'label'     => __( 'Border Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'selectors' 	=> [
+					'{{WRAPPER}} .wpcu-product__title' => 'border-color: {{VALUE}}'
+					],
+			),
+			array(
+				'type'      => Controls_Manager::NUMBER,
+				'id'        => 'title_transition_duration',
+				'label'     => __( 'Transition Duration', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'min' => 0,
+				'max' => 5,
+				'step' => 0.1,
+				'selectors' 	=> [
+					'{{WRAPPER}} .wpcu-product__title' => 'transition-duration: {{VALUE}} !important'
+					],
+			),
+			array(
+				'mode'		=> 'group',
+				'label'     => __( 'Typography', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'id'     	=> 'title_typography',
+				'type'		=> Group_Control_Typography::get_type(),
+				'selector' 	=> '{{WRAPPER}} .wpcu-product__title',
+				'scheme' => Typography::TYPOGRAPHY_3,
+			),
+			array(
+				'type'    => Controls_Manager::SELECT,
+				'id'      => 'title_border_type',
+				'label'   => __( 'Border Type', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'options' => array(
+					'none' 		=> __( 'None', 'woocommerce-product-carousel-slider-and-ultimate' ),
+					'solid' 	=> __( 'Solid', 'woocommerce-product-carousel-slider-and-ultimate' ),
+					'double' 	=> __( 'Double', 'woocommerce-product-carousel-slider-and-ultimate' ),
+					'dotted' 	=> __( 'Dotted', 'woocommerce-product-carousel-slider-and-ultimate' ),
+					'dashed' 	=> __( 'Dashed', 'woocommerce-product-carousel-slider-and-ultimate' ),
+					'groove' 	=> __( 'Groove', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				),
+				'selectors' 	=> [
+					'{{WRAPPER}} .wpcu-product__title' => 'border-style: {{VALUE}}'
+					],
+			),
+			array(
+				'mode'			=> 'responsive',
+				'type'      	=> Controls_Manager::DIMENSIONS,
+				'id'        	=> 'title_padding',
+				'label'     	=> __( 'Padding', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'selectors' => [
+					'{{WRAPPER}} .wpcu-product__title' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+				],
+			),
+			array(
+				'mode'			=> 'responsive',
+				'type'      	=> Controls_Manager::DIMENSIONS,
+				'id'        	=> 'title_margin',
+				'label'     	=> __( 'Margin', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'selectors' => [
+					'{{WRAPPER}} .wpcu-product__title' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}} !important;',
+				],
+			),
+			array(
+				'mode' => 'tab_end',
+			),
+			array(
+				'mode'    => 'tab_start',
+				'id'      => 'title_hover_tab',
+				'label'   => __( 'HOVER', 'woocommerce-product-carousel-slider-and-ultimate' ),
 			),
 			array(
 				'type'      => Controls_Manager::COLOR,
 				'id'        => 'title_hover_font_color',
-				'label'     => __( 'Hover Font Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
-				'default'   => '#ff5500',
+				'label'     => __( 'Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'selectors' 	=> [
+					'{{WRAPPER}} .wpcu-product__title a:hover' => 'color: {{VALUE}} !important'
+					],
+			),
+			array(
+				'type'      => Controls_Manager::COLOR,
+				'id'        => 'title_hover_back_color',
+				'label'     => __( 'Background Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'selectors' 	=> [
+				'{{WRAPPER}} .wpcu-product__title:hover' => 'background-color: {{VALUE}} !important'
+				],
+			),
+			array(
+				'type'      => Controls_Manager::COLOR,
+				'id'        => 'title_hover_border_color',
+				'label'     => __( 'Border Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'selectors' 	=> [
+					'{{WRAPPER}} .wpcu-product__title:hover' => 'border-color: {{VALUE}}'
+					],
+			),
+			array(
+				'type'      => Controls_Manager::NUMBER,
+				'id'        => 'title_hover_transition_duration',
+				'label'     => __( 'Transition Duration', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'min' => 0,
+				'max' => 5,
+				'step' => 0.1,
+				'selectors' 	=> [
+					'{{WRAPPER}} .wpcu-product__title:hover' => 'transition-duration: {{VALUE}} !important'
+					],
+			),
+			array(
+				'mode'		=> 'group',
+				'id'     	=> 'title_hover_title_typography',
+				'type'		=> Group_Control_Typography::get_type(),
+				'selector' 	=> '{{WRAPPER}} .wpcu-product__title:hover',
+				'scheme' => Typography::TYPOGRAPHY_3,
+			),
+			array(
+				'type'    => Controls_Manager::SELECT,
+				'id'      => 'title_hover_border_type',
+				'label'   => __( 'Border Type', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'options' => array(
+					'none' 		=> __( 'None', 'woocommerce-product-carousel-slider-and-ultimate' ),
+					'solid' 	=> __( 'Solid', 'woocommerce-product-carousel-slider-and-ultimate' ),
+					'double' 	=> __( 'Double', 'woocommerce-product-carousel-slider-and-ultimate' ),
+					'dotted' 	=> __( 'Dotted', 'woocommerce-product-carousel-slider-and-ultimate' ),
+					'dashed' 	=> __( 'Dashed', 'woocommerce-product-carousel-slider-and-ultimate' ),
+					'groove' 	=> __( 'Groove', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				),
+				'selectors' 	=> [
+					'{{WRAPPER}} .wpcu-product__title:hover' => 'border-style: {{VALUE}}'
+					],
+			),
+			array(
+				'mode'			=> 'responsive',
+				'type'      	=> Controls_Manager::DIMENSIONS,
+				'id'        	=> 'title_hover_padding',
+				'label'     	=> __( 'Padding', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'selectors' => [
+					'{{WRAPPER}} .wpcu-product__title:hover' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+				],
+			),
+			array(
+				'mode'			=> 'responsive',
+				'type'      	=> Controls_Manager::DIMENSIONS,
+				'id'        	=> 'title_hover_margin',
+				'label'     	=> __( 'Margin', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'selectors' => [
+					'{{WRAPPER}} .wpcu-product__title:hover' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}} !important;',
+				],
+			),
+			array(
+				'mode' => 'tab_end',
+			),
+			array(
+				'mode' => 'tabs_end',
 			),
 			array(
 				'mode' => 'section_end',
