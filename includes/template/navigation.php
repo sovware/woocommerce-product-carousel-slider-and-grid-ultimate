@@ -10,34 +10,12 @@
  -->
 <div class="wpcu-carousel-nav wpcu-carousel-nav--<?php echo $nav_position; ?>" style="
 
-    --wpcu-navArrowColor: #333;
-    --wpcu-navArrowColorHover: #fff;
-
-    --wpcu-navBgColor: #fff;
-    --wpcu-navBgColorHover: #ff5500;
-    
-    --wpcu-navBoxWidth: 40px;
-    --wpcu-navBoxWidthHover: 40px;
-    
-    --wpcu-navBoxHeight: 40px;
-    --wpcu-navBoxHeightHover: 40px;
-
-    --wpcu-navGutter: 0;
-    --wpcu-navVerticalPosition: 96%;
-
-    --wpcu-navBorderRadiusTop: 0px;
-    --wpcu-navBorderRadiusRight: 0px;
-    --wpcu-navBorderRadiusBottom: 0px;
-    --wpcu-navBorderRadiusLeft: 0px;
-
-    --wpcu-navBorderType: solid;
-    --wpcu-navBorderWidthTop: 1px;
-    --wpcu-navBorderWidthRight: 1px;
-    --wpcu-navBorderWidthBottom: 1px;
-    --wpcu-navBorderWidthLeft: 1px;
-
-    --wpcu-navBorderColor: #fff;
-    --wpcu-navBorderColorHover: #ff5500;
+  --wpcu-navArrowColor: <?php echo $nav_arrow_color; ?>;
+  --wpcu-navArrowColorHover: <?php echo $nav_arrow_hover_color; ?>;
+  --wpcu-navBgColor: <?php echo $nav_back_color; ?>;
+  --wpcu-navBgColorHover: <?php echo $nav_back_hover_color; ?>;
+  --wpcu-navBorderColor: <?php echo $nav_border_color; ?>;
+  --wpcu-navBorderColorHover: <?php echo $nav_border_hover; ?>;
 
 ">
     <div class="wpcu-carousel-nav__btn wpcu-carousel-nav__btn--prev">
