@@ -1172,6 +1172,31 @@ class Elementor_Woo_Ultimate_Widget extends \Elementor\Widget_Base {
 				'default'   => '#FEB507',
 			),
 			array(
+				'type'      => Controls_Manager::SLIDER,
+				'id'        => 'rating_gutter',
+				'label'     => __( 'Gutter', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'size_units' => [ 'px' ],
+				'range' => [
+					'px' => [
+						'min' => 0,
+						'max' => 25,
+					]
+				],
+				'selectors' 	=> [
+					'{{WRAPPER}} .wpcu-product__rating__stars .wpcu-product__rating__stars__wrap svg' => 'margin-right: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} .wpcu-product__rating__stars__wrap svg' => 'margin-left: {{SIZE}}{{UNIT}};',
+					],
+			),
+			array(
+				'mode'			=> 'responsive',
+				'type'      	=> Controls_Manager::DIMENSIONS,
+				'id'        	=> 'rating_margin',
+				'label'     	=> __( 'Margin', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'selectors' => [
+					'{{WRAPPER}} .wpcu-product__rating' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}} !important;',
+				],
+			),
+			array(
 				'mode' => 'section_end',
 			),
 			array(
