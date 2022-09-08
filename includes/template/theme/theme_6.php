@@ -36,7 +36,7 @@
                 </div>
                 <?php } ?>
                     <?php if( 'yes' == $display_cart ) { ?>
-                        <div class="wpcu-button wpcu-button--rounded">
+                        <div class="wpcu-button wpcu-cart wpcu-button--rounded">
                             <?php echo do_shortcode('[add_to_cart id="' . get_the_ID() . '" show_price = "false"]'); ?>
                         </div>
                     <?php } ?>

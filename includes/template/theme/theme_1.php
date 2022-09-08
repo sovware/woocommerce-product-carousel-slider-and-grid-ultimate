@@ -19,7 +19,7 @@
 
             <?php if( 'yes' == $display_cart ) { ?>
             <div class="wpcu-overlay-content-bottom">
-                <div class="wpcu-button">
+                <div class="wpcu-button wpcu-cart">
                     <?php echo do_shortcode('[add_to_cart id="' . get_the_ID() . '" show_price = "false"]'); ?>
                 </div>
             </div>
