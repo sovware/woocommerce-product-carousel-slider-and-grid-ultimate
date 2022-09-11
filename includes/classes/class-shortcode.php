@@ -403,7 +403,7 @@ class wcpcsu_Shortcode
         }'
         <?php } ?>
         >
-        <?php if( 'carousel' == $layout && ( 'top-left' == $nav_position || 'top-right' == $nav_position || 'top-middle' == $nav_position || 'middle' == $nav_position) ) {
+        <?php if( 'carousel' == $layout && 'yes' == $nav_show && ( 'top-left' == $nav_position || 'top-right' == $nav_position || 'top-middle' == $nav_position || 'middle' == $nav_position) ) {
                 include WCPCSU_INC_DIR . 'template/navigation.php';
         } ?>
         <div class="<?php echo ( 'carousel' == $layout ) ? 'swiper-wrapper' : 'wpcu-row wpcu-column-' . $g_column . ' wpcu-column-md-' . $g_tablet . ' wpcu-column-sm-' . $g_mobile . ''; ?>">
@@ -430,7 +430,7 @@ class wcpcsu_Shortcode
             ?>
 
             </div>
-            <?php if( 'carousel' == $layout && ( 'bottom-left' == $nav_position || 'bottom-right' == $nav_position || 'bottom-middle' == $nav_position ) ) {
+            <?php if( 'carousel' == $layout && 'yes' == $nav_show && ( 'bottom-left' == $nav_position || 'bottom-right' == $nav_position || 'bottom-middle' == $nav_position ) ) {
                 include WCPCSU_INC_DIR . 'template/navigation.php';
              } ?>
              <?php if( ( 'grid' == $layout && 'yes' == $grid_pagination ) || ( 'carousel' == $layout && 'yes' ==  $carousel_pagination ) ) {
