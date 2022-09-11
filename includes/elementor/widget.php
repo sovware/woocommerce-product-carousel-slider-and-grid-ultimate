@@ -1459,19 +1459,25 @@ class Elementor_Woo_Ultimate_Widget extends \Elementor\Widget_Base {
 				'type'      => Controls_Manager::COLOR,
 				'id'        => 'action_icon_font_color',
 				'label'     => __( 'Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
-				'default'   => '#363940',
+				'selectors' 	=> [
+					'{{WRAPPER}} .wpcu-theme_2 .wpcu-button--icon-circle svg' => 'fill: {{VALUE}} !important;'
+					],
 			),
 			array(
 				'type'      => Controls_Manager::COLOR,
 				'id'        => 'action_icon_hover_color',
 				'label'     => __( 'Hover Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
-				'default'   => '#ff5500',
+				'selectors' 	=> [
+					'{{WRAPPER}} .wpcu-theme_2 .wpcu-button--icon-circle svg:hover' => 'fill: {{VALUE}} !important;'
+					],
 			),
 			array(
 				'type'      => Controls_Manager::COLOR,
-				'id'        => 'action_icon_hover_color',
-				'label'     => __( 'Hover Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
-				'default'   => '#ff5500',
+				'id'        => 'action_icon_back_color',
+				'label'     => __( 'Background Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'selectors' 	=> [
+					'{{WRAPPER}} .wpcu-theme_2 .wpcu-button--icon-circle a' => 'background-color: {{VALUE}} !important;'
+					],
 			),
 			array(
 				'mode' => 'section_end',
