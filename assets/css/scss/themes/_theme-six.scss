@@ -52,12 +52,15 @@
                 .wpcu-button {
                     position: absolute;
                     left: 0;
-                    top: 0;
+                    bottom: 0;
                     opacity: 0;
                     visibility: hidden;
                     pointer-events: none;
                     transition: 0.3s ease;
                     z-index: 1;
+                    a {
+                        margin: 0;
+                    }
                 }
             }
         }
