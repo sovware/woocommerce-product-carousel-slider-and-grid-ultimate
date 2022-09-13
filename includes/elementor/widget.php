@@ -739,7 +739,7 @@ class Elementor_Woo_Ultimate_Widget extends \Elementor\Widget_Base {
 				'label'     => __( 'Typography', 'woocommerce-product-carousel-slider-and-ultimate' ),
 				'id'     	=> 'title_typography',
 				'type'		=> Group_Control_Typography::get_type(),
-				'selector' 	=> '{{WRAPPER}} .wpcu-product__title',
+				'selector' 	=> '{{WRAPPER}} .wpcu-product__title a',
 				'scheme' => Typography::TYPOGRAPHY_3,
 			),
 			array(

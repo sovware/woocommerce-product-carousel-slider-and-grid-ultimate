@@ -1,16 +1,16 @@
 /* Product title */
 .wpcu-product__title {
     margin: 0 !important;
-    line-height: normal !important;
-    font-size: unset !important;
-    font-family: inherit !important;
+    line-height: normal;
+    font-size: unset;
+    font-family: inherit;
     &::before{
         content: none;
     }
 
     a {
-        text-decoration: none !important;
-        font-size: var(--wpcu-productTitleSize) !important;
+        text-decoration: none;
+        font-size: var(--wpcu-productTitleSize);
         font-weight: normal;
         color: var(--wpcu-productTitleColor) !important;
         letter-spacing: normal;
@@ -21,7 +21,7 @@
     }
 }
 .wpcu-product .wpcu-product__title a{
-    text-decoration: none !important;
+    text-decoration: none;
 }
 
 /* Product Price */
@@ -44,7 +44,7 @@
     ins bdi,
     .amount{
         display: inline-block;
-        font-size: var(--wpcu-productPriceSize) !important;
+        font-size: var(--wpcu-productPriceSize);
         line-height: normal;
         color: var(--wpcu-productPriceColor) !important;
         margin: 0 4px;
@@ -52,7 +52,7 @@
     del bdi {
         font-weight: 300;
         display: inline-block;
-        font-size: var(--wpcu-productPriceSize) !important;
+        font-size: var(--wpcu-productPriceSize);
         color: $textLight;
         margin: 0;
         text-decoration: line-through;

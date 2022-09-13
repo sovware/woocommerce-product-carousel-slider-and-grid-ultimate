@@ -5,7 +5,7 @@
     Version: 1.0
 */
 /* Import font */
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap");
 :root {
   /* Grid/Carousel Header */
   --wpcu-headerFontSize: 24px;
@@ -283,7 +283,7 @@
 }
 
 .wpcu-products__header h2 {
-  font-size: var(--wpcu-headerFontSize) !important;
+  font-size: var(--wpcu-headerFontSize);
   color: var(--wpcu-headerFontColor) !important;
   font-weight: 500;
   margin: 0 !important;
@@ -453,18 +453,18 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  text-decoration: none !important;
+  text-decoration: none;
   -webkit-transition: 0.3s ease;
   -o-transition: 0.3s ease;
   transition: 0.3s ease;
   border: 1px solid transparent !important;
-  line-height: unset !important;
+  line-height: unset;
   text-align: center;
 }
 .wpcu-button .button:hover,
 .wpcu-button .added_to_cart:hover,
 .wpcu-button .button.added:hover {
-  text-decoration: none !important;
+  text-decoration: none;
   background: var(--wpcu-buttonBgColorHover) !important;
   color: var(--wpcu-buttonColorHover) !important;
   border-color: var(--wpcu-buttonBgColorHover) !important;
@@ -578,16 +578,16 @@
 /* Product title */
 .wpcu-product__title {
   margin: 0 !important;
-  line-height: normal !important;
-  font-size: unset !important;
-  font-family: inherit !important;
+  line-height: normal;
+  font-size: unset;
+  font-family: inherit;
 }
 .wpcu-product__title::before {
   content: none;
 }
 .wpcu-product__title a {
-  text-decoration: none !important;
-  font-size: var(--wpcu-productTitleSize) !important;
+  text-decoration: none;
+  font-size: var(--wpcu-productTitleSize);
   font-weight: normal;
   color: var(--wpcu-productTitleColor) !important;
   letter-spacing: normal;
@@ -600,7 +600,7 @@
 }
 
 .wpcu-product .wpcu-product__title a {
-  text-decoration: none !important;
+  text-decoration: none;
 }
 
 /* Product Price */
@@ -632,7 +632,7 @@
 .wpcu-product__price ins bdi,
 .wpcu-product__price .amount {
   display: inline-block;
-  font-size: var(--wpcu-productPriceSize) !important;
+  font-size: var(--wpcu-productPriceSize);
   line-height: normal;
   color: var(--wpcu-productPriceColor) !important;
   margin: 0 4px;
@@ -640,7 +640,7 @@
 .wpcu-product__price del bdi {
   font-weight: 300;
   display: inline-block;
-  font-size: var(--wpcu-productPriceSize) !important;
+  font-size: var(--wpcu-productPriceSize);
   color: #9192a3;
   margin: 0;
   text-decoration: line-through;
@@ -1160,8 +1160,4 @@
   opacity: 1;
   visibility: visible;
   pointer-events: all;
-}
-
-.elementor-widget-container .wpcu-product__price .wpcu-badge{
-  display: none;
 }
