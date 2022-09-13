@@ -941,7 +941,8 @@ class Elementor_Woo_Ultimate_Widget extends \Elementor\Widget_Base {
 				'id'        => 'price_font_color',
 				'label'     => __( 'Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
 				'selectors' 	=> [
-					'{{WRAPPER}} .wpcu-product__price__sale .amount' => 'color: {{VALUE}} !important'
+					'{{WRAPPER}} .wpcu-product__price__sale .amount' => 'color: {{VALUE}} !important',
+					'{{WRAPPER}} .wpcu-product__price__sale .amount bdi' => 'color: {{VALUE}} !important',
 					],
 			),
 			array(
@@ -949,7 +950,7 @@ class Elementor_Woo_Ultimate_Widget extends \Elementor\Widget_Base {
 				'id'        => 'old_price_font_color',
 				'label'     => __( 'Old Price Color', 'woocommerce-product-carousel-slider-and-ultimate' ),
 				'selectors' 	=> [
-					'{{WRAPPER}} .wpcu-product__price del bdi' => 'color: {{VALUE}} !important'
+					'{{WRAPPER}} .wpcu-products .wpcu-product__price del bdi' => 'color: {{VALUE}} !important'
 					],
 			),
 			array(
@@ -1645,6 +1646,9 @@ class Elementor_Woo_Ultimate_Widget extends \Elementor\Widget_Base {
 				'tab'     => Controls_Manager::TAB_STYLE,
 				'id'      => 'quick_view_tab',
 				'label'   => __( 'Quick View Button', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'condition' => [
+					'theme' => [ 'theme_8', 'theme_9' ]
+				],
 			),
 			array(
 				'mode'    => 'tabs_start',

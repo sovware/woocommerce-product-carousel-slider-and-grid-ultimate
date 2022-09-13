@@ -5,7 +5,9 @@
                 <a href="<?php echo get_the_permalink(); ?>">
                     <img src="<?php echo $wpcsu_img; ?>" alt="<?php echo get_the_title(); ?>">
                 </a>
-
+                <!-- content top left corner -->
+                <?php wpcsu_ribbon_badge( $ribbon_args, $this->aazz_show_discount_percentage() ); ?>
+                
                 <!-- Quick view button -->
                 <a href="" class="wpcu-quick-view-btn wpcu-btn-modal-js" data-wpcu-target="wpcu-product-01" data-product-id="<?php echo get_the_ID(); ?>" data-nonce="<?php  echo wp_create_nonce('wcpcsu_quick_view_' . get_the_ID() ); ?>">Quick View</a>
             </div>
