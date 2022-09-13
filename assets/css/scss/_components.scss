@@ -1,19 +1,19 @@
 /* Product title */
 .wpcu-product__title {
     margin: 0 !important;
-    line-height: normal !important;
-    font-size: unset !important;
-    font-family: inherit !important;
+    line-height: normal;
+    font-size: unset;
+    font-family: inherit;
+    font-size: var(--wpcu-productTitleSize);
+    letter-spacing: normal;
+    text-decoration: none;
+    font-weight: normal;
     &::before{
         content: none;
     }
 
     a {
-        text-decoration: none !important;
-        font-size: var(--wpcu-productTitleSize) !important;
-        font-weight: normal;
         color: var(--wpcu-productTitleColor) !important;
-        letter-spacing: normal;
         transition: 0.3s ease;
         &:hover{
             color: var(--wpcu-productTitleColorHover) !important;
@@ -21,7 +21,7 @@
     }
 }
 .wpcu-product .wpcu-product__title a{
-    text-decoration: none !important;
+    text-decoration: none;
 }
 
 /* Product subtitle */
@@ -31,7 +31,7 @@
         font-size: 14px;
         color: #9192a3;
         display: block;
-        text-decoration: none !important;
+        text-decoration: none;
     }
 }
 
@@ -41,9 +41,9 @@
     display: block;
     a{
         color: var(--wpcu-productTypeColor) !important;
-        font-size: var(--wpcu-productTypeSize) !important;
+        font-size: var(--wpcu-productTypeSize);
         display: block;
-        text-decoration: none !important;
+        text-decoration: none;
     }
 }
 
@@ -77,7 +77,7 @@
     ins bdi,
     .amount{
         display: inline-block;
-        font-size: var(--wpcu-productPriceSize) !important;
+        font-size: var(--wpcu-productPriceSize);
         line-height: normal;
         color: var(--wpcu-productPriceColor) !important;
         margin: 0 4px;
@@ -85,7 +85,7 @@
     del bdi {
         font-weight: 300;
         display: inline-block;
-        font-size: var(--wpcu-productPriceSize) !important;
+        font-size: var(--wpcu-productPriceSize);
         color: $textLight;
         margin: 0;
         text-decoration: line-through;

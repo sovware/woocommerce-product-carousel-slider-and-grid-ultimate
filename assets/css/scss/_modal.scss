@@ -48,7 +48,7 @@
     justify-content: center;
     border-radius: 50%;
     background: #f3f3f3;
-    text-decoration: none !important;
+    text-decoration: none;
 }
 
 .wpcu-modal .wpcu-modal-close span {
@@ -117,14 +117,14 @@
     color: var(--wpcu-buttonColor);
     background: var(--wpcu-buttonBgColor) !important;
     border: 0 none;
-    text-decoration: none !important;
+    text-decoration: none;
     display: inline-block;
 }
 
 .wpcu-modal .wpcu-modal__product-action p a:hover,
 .wpcu-modal .wpcu-modal__product-action p a:focus,
 .wpcu-modal .wpcu-modal__product-action p a:active {
-    text-decoration: none !important;
+    text-decoration: none;
     background: var(--wpcu-buttonBgColorHover) !important;
     color: var(--wpcu-buttonColorHover);
     border-radius: 5px;

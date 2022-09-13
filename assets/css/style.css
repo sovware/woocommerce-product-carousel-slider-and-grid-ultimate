@@ -398,7 +398,7 @@
 }
 
 .wpcu-products__header h2 {
-  font-size: var(--wpcu-headerFontSize) !important;
+  font-size: var(--wpcu-headerFontSize);
   color: var(--wpcu-headerFontColor) !important;
   font-weight: 500;
   margin: 0 !important;
@@ -582,7 +582,7 @@
   color: var(--wpcu-buttonColor) !important;
   border-radius: 0;
   text-transform: uppercase;
-  font-size: var(--wpcu-buttonFontSize) !important;
+  font-size: var(--wpcu-buttonFontSize);
   padding: 0 15px !important;
   display: -webkit-box !important;
   display: -ms-flexbox !important;
@@ -593,18 +593,18 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  text-decoration: none !important;
+  text-decoration: none;
   -webkit-transition: 0.3s ease;
   -o-transition: 0.3s ease;
   transition: 0.3s ease;
   border: 1px solid transparent;
-  line-height: 15px !important;
+  line-height: 15px;
   text-align: center;
 }
 .wpcu-button .button:hover,
 .wpcu-button .added_to_cart:hover,
 .wpcu-button .button.added:hover {
-  text-decoration: none !important;
+  text-decoration: none;
   background: var(--wpcu-buttonBgColorHover) !important;
   color: var(--wpcu-buttonColorHover) !important;
   border-color: var(--wpcu-buttonBgColorHover) !important;
@@ -692,7 +692,7 @@
   min-height: 32px;
   background: var(--wpcu-quickViewBtnBg) !important;
   color: var(--wpcu-quickViewBtnColor) !important;
-  font-size: var(--wpcu-quickViewBtnSize) !important;
+  font-size: var(--wpcu-quickViewBtnSize);
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important;
@@ -703,8 +703,8 @@
       -ms-flex-pack: center;
           justify-content: center;
   padding: 5px 15px;
-  text-decoration: none !important;
-  line-height: 1.2 !important;
+  text-decoration: none;
+  line-height: 1.2;
   text-align: center;
 }
 .wpcu-quick-view-btn:hover {
@@ -721,7 +721,7 @@
 .wpcu-product .wpcu-button .button,
 .wpcu-product .wpcu-button .added_to_cart,
 .wpcu-product .wpcu-button .button.added {
-  text-decoration: none !important;
+  text-decoration: none;
 }
 
 /* Badges */
@@ -780,19 +780,19 @@
 /* Product title */
 .wpcu-product__title {
   margin: 0 !important;
-  line-height: normal !important;
-  font-size: unset !important;
-  font-family: inherit !important;
+  line-height: normal;
+  font-size: unset;
+  font-family: inherit;
+  font-size: var(--wpcu-productTitleSize);
+  letter-spacing: normal;
+  text-decoration: none;
+  font-weight: normal;
 }
 .wpcu-product__title::before {
   content: none;
 }
 .wpcu-product__title a {
-  text-decoration: none !important;
-  font-size: var(--wpcu-productTitleSize) !important;
-  font-weight: normal;
   color: var(--wpcu-productTitleColor) !important;
-  letter-spacing: normal;
   -webkit-transition: 0.3s ease;
   -o-transition: 0.3s ease;
   transition: 0.3s ease;
@@ -802,7 +802,7 @@
 }
 
 .wpcu-product .wpcu-product__title a {
-  text-decoration: none !important;
+  text-decoration: none;
 }
 
 /* Product subtitle */
@@ -813,7 +813,7 @@
   font-size: 14px;
   color: #9192a3;
   display: block;
-  text-decoration: none !important;
+  text-decoration: none;
 }
 
 /* Product type */
@@ -822,9 +822,9 @@
 }
 .wpcu-product__type a {
   color: var(--wpcu-productTypeColor) !important;
-  font-size: var(--wpcu-productTypeSize) !important;
+  font-size: var(--wpcu-productTypeSize);
   display: block;
-  text-decoration: none !important;
+  text-decoration: none;
 }
 
 /* Product excerpt */
@@ -864,7 +864,7 @@
 .wpcu-product__price ins bdi,
 .wpcu-product__price .amount {
   display: inline-block;
-  font-size: var(--wpcu-productPriceSize) !important;
+  font-size: var(--wpcu-productPriceSize);
   line-height: normal;
   color: var(--wpcu-productPriceColor) !important;
   margin: 0 4px;
@@ -872,7 +872,7 @@
 .wpcu-product__price del bdi {
   font-weight: 300;
   display: inline-block;
-  font-size: var(--wpcu-productPriceSize) !important;
+  font-size: var(--wpcu-productPriceSize);
   color: #9192a3;
   margin: 0;
   text-decoration: line-through;
@@ -1310,7 +1310,7 @@
           justify-content: center;
   border-radius: 50%;
   background: #f3f3f3;
-  text-decoration: none !important;
+  text-decoration: none;
 }
 
 .wpcu-modal .wpcu-modal-close span {
@@ -1379,14 +1379,14 @@
   color: var(--wpcu-buttonColor);
   background: var(--wpcu-buttonBgColor) !important;
   border: 0 none;
-  text-decoration: none !important;
+  text-decoration: none;
   display: inline-block;
 }
 
 .wpcu-modal .wpcu-modal__product-action p a:hover,
 .wpcu-modal .wpcu-modal__product-action p a:focus,
 .wpcu-modal .wpcu-modal__product-action p a:active {
-  text-decoration: none !important;
+  text-decoration: none;
   background: var(--wpcu-buttonBgColorHover) !important;
   color: var(--wpcu-buttonColorHover);
   border-radius: 5px;
@@ -1436,7 +1436,7 @@
   color: var(--wpcu-pagColor) !important;
   margin: 5px;
   font-size: 14px;
-  text-decoration: none !important;
+  text-decoration: none;
   border: 1px solid var(--wpcu-pagBorderColor) !important;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2313,8 +2313,4 @@
   transition: bottom 0.3s ease;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-}
-
-.elementor-widget-container .wpcu-product__price .wpcu-badge{
-  display: none;
 }

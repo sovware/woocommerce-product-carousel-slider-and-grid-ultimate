@@ -18,19 +18,19 @@
         color: var(--wpcu-buttonColor) !important;
         border-radius: 0;
         text-transform: uppercase;
-        font-size: var(--wpcu-buttonFontSize) !important;
+        font-size: var(--wpcu-buttonFontSize);
         padding: 0 15px !important;
         display: flex !important;
         align-items: center;
         justify-content: center;
-        text-decoration: none !important;
+        text-decoration: none;
         transition: 0.3s ease;
         border: 1px solid transparent;
-        line-height: 15px !important;
+        line-height: 15px;
         text-align: center;
 
         &:hover {
-            text-decoration: none !important;
+            text-decoration: none;
             background: var(--wpcu-buttonBgColorHover) !important;
             color: var(--wpcu-buttonColorHover) !important;
             border-color: var(--wpcu-buttonBgColorHover) !important;
@@ -134,13 +134,13 @@
     min-height: 32px;
     background: var(--wpcu-quickViewBtnBg) !important;
     color: var(--wpcu-quickViewBtnColor) !important;
-    font-size: var(--wpcu-quickViewBtnSize) !important;
+    font-size: var(--wpcu-quickViewBtnSize);
     display: flex !important;
     align-items: center;
     justify-content: center;
     padding: 5px 15px;
-    text-decoration: none !important;
-    line-height: 1.2 !important;
+    text-decoration: none;
+    line-height: 1.2;
     text-align: center;
     &:hover{
         background: var(--wpcu-quickViewBtnBgHover) !important;
@@ -158,6 +158,6 @@
     .button,
     .added_to_cart,
     .button.added{
-        text-decoration: none !important;
+        text-decoration: none;
     }
 }
