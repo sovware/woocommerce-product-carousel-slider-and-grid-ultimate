@@ -6,6 +6,7 @@
 */
 /* Import font */
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap");
+/* Configurable scss files */
 :root {
   /* Default variables */
   --wpcu-primaryColor: #ff5500;
@@ -452,30 +453,35 @@
   -webkit-box-flex: 0;
       -ms-flex: 0 0 100%;
           flex: 0 0 100%;
+  width: 100%;
 }
 
 .wpcu-column-2 .wpcu-product {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 50%;
           flex: 0 0 50%;
+  width: 50%;
 }
 
 .wpcu-column-3 .wpcu-product {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 33.33%;
           flex: 0 0 33.33%;
+  width: 33.33%;
 }
 
 .wpcu-column-4 .wpcu-product {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 25%;
           flex: 0 0 25%;
+  width: 25%;
 }
 
 .wpcu-column-5 .wpcu-product {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 20%;
           flex: 0 0 20%;
+  width: 20%;
 }
 
 /* columns in mobile and tablet */
@@ -485,19 +491,16 @@
         -ms-flex: 0 0 100% !important;
             flex: 0 0 100% !important;
   }
-
   .wpcu-column-md-2 .wpcu-product {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 50%;
             flex: 0 0 50%;
   }
-
   .wpcu-column-md-3 .wpcu-product {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 33.33%;
             flex: 0 0 33.33%;
   }
-
   .wpcu-column-md-4 .wpcu-product {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 25%;
@@ -510,19 +513,16 @@
         -ms-flex: 0 0 100% !important;
             flex: 0 0 100% !important;
   }
-
   .wpcu-column-sm-2 .wpcu-product {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 50%;
             flex: 0 0 50%;
   }
-
   .wpcu-column-sm-3 .wpcu-product {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 33.33%;
             flex: 0 0 33.33%;
   }
-
   .wpcu-column-sm-4 .wpcu-product {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 25%;
@@ -1509,6 +1509,36 @@
   background: var(--wpcu-dotsActiveColor) !important;
 }
 
+/* Elementor widgets style fix */
+.elementor-widget-container .wpcu-theme_6 .wpcu-product--fix .wpcu-product__details .wpcu-d-flex {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.elementor-widget-container .wpcu-theme_6 .wpcu-product--fix .wpcu-product__details .wpcu-product__rating {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  margin-top: 5px;
+}
+.elementor-widget-container .wpcu-theme_6 .wpcu-product--fix .wpcu-product__content .wpcu-product-price-action .wpcu-button a {
+  padding: 13px !important;
+  font-size: 12px;
+  min-height: auto;
+}
+.elementor-widget-container .wpcu-theme_6 .wpcu-product--fix .wpcu-product__action-icons--boxed a {
+  width: 35px;
+  height: 35px;
+}
+.elementor-widget-container .wpcu-theme_6 .wpcu-product--fix .wpcu-product__action-icons--boxed a svg {
+  width: 15px;
+}
+.elementor-widget-container .wpcu-theme_7 .wpcu-product--fix .wpcu-product__cover-content--middle {
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  padding: 15px;
+}
+
+/* Grid styles */
 /*===========================
  Style: Theme One
 ===========================*/
@@ -1654,6 +1684,10 @@
 .wpcu-theme_4 .wpcu-product__details {
   margin-top: 17px;
 }
+.wpcu-theme_4 .wpcu-product__details .wpcu-d-flex {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
 .wpcu-theme_4 .wpcu-product__action-icons .woocommerce a {
   padding: 0;
   margin: 0;
@@ -1716,6 +1750,10 @@
 .wpcu-theme_6 .wpcu-product__details {
   margin-top: 17px;
 }
+.wpcu-theme_6 .wpcu-product__details .wpcu-d-flex {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
 .wpcu-theme_6 .wpcu-product__cover-content--top-left {
   top: 8px;
   left: 10px;
@@ -1750,7 +1788,7 @@
 .wpcu-theme_6 .wpcu-product__content .wpcu-product-price-action .wpcu-button {
   position: absolute;
   left: 0;
-  bottom: 0;
+  top: 0;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;

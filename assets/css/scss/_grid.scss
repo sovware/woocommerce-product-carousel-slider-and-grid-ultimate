@@ -21,22 +21,27 @@
 /* wpcu columns */
 .wpcu-column-1 .wpcu-product {
     flex: 0 0 100%;
+    width: 100%;
 }
 
 .wpcu-column-2 .wpcu-product {
     flex: 0 0 50%;
+    width: 50%;
 }
 
 .wpcu-column-3 .wpcu-product {
     flex: 0 0 33.33%;
+    width: 33.33%;
 }
 
 .wpcu-column-4 .wpcu-product {
     flex: 0 0 25%;
+    width: 25%;
 }
 
 .wpcu-column-5 .wpcu-product {
     flex: 0 0 20%;
+    width: 20%;
 }
 
 

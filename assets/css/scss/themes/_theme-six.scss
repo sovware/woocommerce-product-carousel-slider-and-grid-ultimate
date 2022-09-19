@@ -5,6 +5,9 @@
     .wpcu-product {
         @include e(details) {
             margin-top: 17px;
+            .wpcu-d-flex{
+                flex-wrap: wrap;
+            }
         }
 
         @include e(cover-content) {
@@ -52,7 +55,7 @@
                 .wpcu-button {
                     position: absolute;
                     left: 0;
-                    bottom: 0;
+                    top: 0;
                     opacity: 0;
                     visibility: hidden;
                     pointer-events: none;

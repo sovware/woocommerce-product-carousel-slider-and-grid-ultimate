@@ -5,6 +5,9 @@
     .wpcu-product{
         @include e(details){
             margin-top: 17px;
+            .wpcu-d-flex{
+                flex-wrap: wrap;
+            }
         }
         @include e(action-icons){
             .woocommerce{

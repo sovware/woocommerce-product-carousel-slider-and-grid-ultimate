@@ -20,7 +20,7 @@
         /* Image Zoom In hover effect */
         @include m(zoom-in){
             &>a{
-                display: block; 
+                display: block;
                 overflow: hidden;
             }
             img {
@@ -36,7 +36,7 @@
         /* Image Zoom Out hover effect */
         @include m(zoom-out){
             &>a{
-                display: block; 
+                display: block;
                 overflow: hidden;
             }
             img {
@@ -52,11 +52,11 @@
         /* Image Blur In hover effect */
         @include m(blur-in){
             &>a{
-                display: block; 
+                display: block;
                 overflow: hidden;
             }
             img {
-                transform: scale(1);                
+                transform: scale(1);
             }
             &:hover{
                 img{
@@ -69,7 +69,7 @@
         /* Image Blur Out hover effect */
         @include m(blur-out){
             &>a{
-                display: block; 
+                display: block;
                 overflow: hidden;
             }
             img {
@@ -86,11 +86,11 @@
         /* Image Grayscale In hover effect */
         @include m(grayscale-in){
             &>a{
-                display: block; 
+                display: block;
                 overflow: hidden;
             }
             img {
-                transform: scale(1);                
+                transform: scale(1);
             }
             &:hover{
                 img{
@@ -103,7 +103,7 @@
         /* Image Grayscale Out hover effect */
         @include m(grayscale-out){
             &>a{
-                display: block; 
+                display: block;
                 overflow: hidden;
             }
             img {

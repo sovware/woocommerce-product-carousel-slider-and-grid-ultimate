@@ -7,7 +7,8 @@
 
 /* Import font */
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap');
-//Configurable scss files
+
+/* Configurable scss files */
 @import "./scss/config";
 @import "./scss/general";
 @import "./scss/grid";
@@ -18,7 +19,9 @@
 @import "./scss/utilities";
 @import "./scss/modal";
 @import "./scss/pagination";
-//Grid styles
+@import "./scss/elementor";
+
+/* Grid styles */
 @import "./scss/themes/theme-one";
 @import "./scss/themes/theme-two";
 @import "./scss/themes/theme-three";
