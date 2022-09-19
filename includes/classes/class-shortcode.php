@@ -204,10 +204,7 @@ class wcpcsu_Shortcode
         $scrool                     = ! empty( $scrool ) ? $scrool : 'per_item';
         $scrool_direction           = ! empty( $scrool_direction ) ? $scrool_direction : 'right_left';
         $stop_hover                 = ! empty( $stop_hover ) ? $stop_hover : true;
-        $carousel_desktop_column    = ! empty( $c_desktop ) ? $c_desktop : 4;
-        $carousel_laptop_column     = ! empty( $c_desktop_small ) ? $c_desktop_small : 3;
-        $carousel_tablet_column     = ! empty( $c_tablet ) ? $c_tablet : 2;
-        $carousel_mobile_column     = ! empty( $c_mobile ) ? $c_mobile : 1;
+        
 
         // carousel navigation settings
         $nav_show                   = ! empty( $nav_show ) ? $nav_show : 'yes';
@@ -323,6 +320,11 @@ class wcpcsu_Shortcode
         $pagi_hover_back_color      = ! empty( $atts['pagi_hover_back_color'] ) ? $atts['pagi_hover_back_color'] : $pagi_hover_back_color;
         $pagi_active_border_color   = ! empty( $atts['pagi_active_border_color'] ) ? $atts['pagi_active_border_color'] : $pagi_active_border_color;
         $pagi_active_back_color     = ! empty( $atts['pagi_active_back_color'] ) ? $atts['pagi_active_back_color'] : $pagi_active_back_color;
+
+        $carousel_desktop_column    = ! empty( $c_desktop ) ? $c_desktop : 4;
+        $carousel_laptop_column     = ! empty( $c_desktop_small ) ? $c_desktop_small : 3;
+        $carousel_tablet_column     = ! empty( $c_tablet ) ? $c_tablet : 2;
+        $carousel_mobile_column     = ! empty( $c_mobile ) ? $c_mobile : 1;
 
 
 
