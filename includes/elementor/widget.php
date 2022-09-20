@@ -2751,22 +2751,15 @@ class Elementor_Woo_Ultimate_Widget extends \Elementor\Widget_Base {
 			'g_tablet'             			=> $settings['g_tablet'] ? $settings['g_tablet'] : '2',
 			'g_mobile'             			=> $settings['g_mobile'] ? $settings['g_mobile'] : '1',
 			'grid_pagination'             	=> $settings['grid_pagination'] ? $settings['grid_pagination'] : 'no',
-
-			'header_font_size'        		=> $settings['header_font_size'] ? $settings['header_font_size'] : '24',
 			'header_font_color'        		=> $settings['header_font_color'] ? $settings['header_font_color'] : '#303030',
-			'title_font_size'        		=> $settings['title_font_size'] ? $settings['title_font_size'] : '15',
 			'title_font_color'        		=> $settings['title_font_color'] ? $settings['title_font_color'] : '#363940',
 			'title_hover_font_color'        => $settings['title_hover_font_color'] ? $settings['title_hover_font_color'] : '#ff5500',
-			'price_font_size'        		=> $settings['price_font_size'] ? $settings['price_font_size'] : '16',
 			'price_font_color'        		=> $settings['price_font_color'] ? $settings['price_font_color'] : '#ff5500',
 			'ratings_size'        			=> $settings['ratings_size'] ? $settings['ratings_size'] : '16',
 			'ratings_color'        			=> $settings['ratings_color'] ? $settings['ratings_color'] : '#FEB507',
 			'cart_font_color'        		=> $settings['cart_font_color'] ? $settings['cart_font_color'] : '#ffffff',
 			'action_icon_font_color'        => $settings['action_icon_font_color'] ? $settings['action_icon_font_color'] : '#363940',
 			'action_icon_hover_color'       => $settings['action_icon_hover_color'] ? $settings['action_icon_hover_color'] : '#ff5500',
-			'quick_view_button_back_color'        => $settings['quick_view_button_back_color'] ? $settings['quick_view_button_back_color'] : '#363940',
-			'quick_view_button_hover_color'        => $settings['quick_view_button_hover_color'] ? $settings['quick_view_button_hover_color'] : '#ffffff',
-			'quick_view_button_hover_back_color'        => $settings['quick_view_button_hover_back_color'] ? $settings['quick_view_button_hover_back_color'] : '#000000',
 
 		);
 		$this->run_shortcode( 'wcpcsu', $atts );

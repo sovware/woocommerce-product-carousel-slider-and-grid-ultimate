@@ -232,7 +232,7 @@ class wcpcsu_Shortcode
         $pagi_active_color          = ! empty( $pagi_active_color ) ? $pagi_active_color : '#fff';
         $pagi_active_border_color   = ! empty( $pagi_active_border_color ) ? $pagi_active_border_color : '#ff5500';
         $pagi_active_back_color     = ! empty( $pagi_active_back_color ) ? $pagi_active_back_color : '#ff5500';
-
+        $header_title               = ! empty( $header_title ) ? $header_title : '';
 
         //style shortcode act 
         $header_font_size                       = ! empty( $atts['header_font_size'] ) ? $atts['header_font_size'] : $header_font_size;
