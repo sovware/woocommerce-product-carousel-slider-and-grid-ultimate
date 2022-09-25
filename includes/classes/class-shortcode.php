@@ -145,26 +145,24 @@ class wcpcsu_Shortcode
         $display_ratings         = ! empty( $display_ratings ) ? $display_ratings : 'yes';
         $quick_view              = ! empty( $quick_view ) ? $quick_view : 'yes';
 
+        $display_sale_ribbon        = ! empty( $display_sale_ribbon ) ? $display_sale_ribbon : 'no';
+        $sale_ribbon_text           = ! empty( $sale_ribbon_text ) ? $sale_ribbon_text : '';
+        $sale_ribbon_position       = ! empty( $sale_ribbon_position ) ? $sale_ribbon_position : 'top_left';
+        $display_featured_ribbon    = ! empty( $display_featured_ribbon ) ? $display_featured_ribbon : 'no';
+        $feature_ribbon_text        = ! empty( $feature_ribbon_text ) ? $feature_ribbon_text : '';
+        $featured_ribbon_position   = ! empty( $featured_ribbon_position ) ? $featured_ribbon_position : 'top_right';
+        $display_sold_out_ribbon    = ! empty( $display_sold_out_ribbon ) ? $display_sold_out_ribbon : 'no';
+        $sold_out_ribbon_text       = ! empty( $sold_out_ribbon_text ) ? $sold_out_ribbon_text : '';
+        $sold_out_ribbon_position   = ! empty( $sold_out_ribbon_position ) ? $sold_out_ribbon_position : 'bottom_left';
+        $display_discount_ribbon    = ! empty( $display_discount_ribbon ) ? $display_discount_ribbon : 'no';
+        $discount_ribbon_position   = ! empty( $discount_ribbon_position ) ? $discount_ribbon_position : 'bottom_right';
+
         $header_position_class = '';
         if( 'middle' == $header_position ) {
             $header_position_class = '--middle';
         } else {
             $header_position_class = '--right';
         }
-
-        $ribbon_args = array(
-            'display_sale_ribbon'        => ! empty( $display_sale_ribbon ) ? $display_sale_ribbon : 'no',
-            'sale_ribbon_text'           => ! empty( $sale_ribbon_text ) ? $sale_ribbon_text : '',
-            'sale_ribbon_position'       => ! empty( $sale_ribbon_position ) ? $sale_ribbon_position : 'top_left',
-            'display_featured_ribbon'    => ! empty( $display_featured_ribbon ) ? $display_featured_ribbon : 'no',
-            'feature_ribbon_text'        => ! empty( $feature_ribbon_text ) ? $feature_ribbon_text : '',
-            'featured_ribbon_position'   => ! empty( $featured_ribbon_position ) ? $featured_ribbon_position : 'top_right',
-            'display_sold_out_ribbon'    => ! empty( $display_sold_out_ribbon ) ? $display_sold_out_ribbon : 'no',
-            'sold_out_ribbon_text'       => ! empty( $sold_out_ribbon_text ) ? $sold_out_ribbon_text : '',
-            'sold_out_ribbon_position'   => ! empty( $sold_out_ribbon_position ) ? $sold_out_ribbon_position : 'bottom_left',
-            'display_discount_ribbon'    => ! empty( $display_discount_ribbon ) ? $display_discount_ribbon : 'no',
-            'discount_ribbon_position'   => ! empty( $discount_ribbon_position ) ? $discount_ribbon_position : 'bottom_right',
-        );
 
         $theme                          = ! empty( $theme ) ? $theme : 'theme_1';
         $title_font_size                = ! empty( $title_font_size[$theme] ) ? $title_font_size[$theme] : '16';
@@ -326,6 +324,19 @@ class wcpcsu_Shortcode
         $carousel_tablet_column     = ! empty( $c_tablet ) ? $c_tablet : 2;
         $carousel_mobile_column     = ! empty( $c_mobile ) ? $c_mobile : 1;
 
+        $ribbon_args = array(
+            'display_sale_ribbon'        => $display_sale_ribbon,
+            'sale_ribbon_text'           => $sale_ribbon_text,
+            'sale_ribbon_position'       => $sale_ribbon_position,
+            'display_featured_ribbon'    => $display_featured_ribbon,
+            'feature_ribbon_text'        => $feature_ribbon_text,
+            'featured_ribbon_position'   => $featured_ribbon_position,
+            'display_sold_out_ribbon'    => $display_sold_out_ribbon,
+            'sold_out_ribbon_text'       => $sold_out_ribbon_text,
+            'sold_out_ribbon_position'   => $sold_out_ribbon_position,
+            'display_discount_ribbon'    => $display_discount_ribbon,
+            'discount_ribbon_position'   => $discount_ribbon_position,
+        );
 
 
         $header_class = '';
