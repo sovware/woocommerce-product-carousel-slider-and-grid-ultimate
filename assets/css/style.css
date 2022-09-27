@@ -1161,3 +1161,7 @@
   visibility: visible;
   pointer-events: all;
 }
+
+.elementor-widget-container .wpcu-product__price .wpcu-badge--rounded {
+  display: none;
+}

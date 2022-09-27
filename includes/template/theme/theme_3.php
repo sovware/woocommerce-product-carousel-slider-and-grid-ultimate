@@ -22,7 +22,7 @@
              <?php if( 'yes' == $display_price ) { ?>
             <div class="wpcu-product__price">
 
-                <span class="wpcu-product__price__sale"><?php echo wp_kses_post( $product->get_price_html() ); ?></span>
+                <span class="wpcu-product__price__sale"><?php echo $product->get_price_html(); ?></span>
 
                 <?php if( ! empty( $sale_price ) ) { ?>
 

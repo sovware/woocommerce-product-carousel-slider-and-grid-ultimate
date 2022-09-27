@@ -135,20 +135,6 @@ class WCPCSU_Shortcode {
 		$display_ratings         = ! empty( $display_ratings ) ? $display_ratings : 'yes';
 		$quick_view              = ! empty( $quick_view ) ? $quick_view : 'yes';
 
-		$ribbon_args = array(
-			'display_sale_ribbon'        => ! empty( $display_sale_ribbon ) ? $display_sale_ribbon : 'no',
-			'sale_ribbon_text'           => ! empty( $sale_ribbon_text ) ? $sale_ribbon_text : '',
-			'sale_ribbon_position'       => ! empty( $sale_ribbon_position ) ? $sale_ribbon_position : 'top_left',
-			'display_featured_ribbon'    => ! empty( $display_featured_ribbon ) ? $display_featured_ribbon : 'no',
-			'feature_ribbon_text'        => ! empty( $feature_ribbon_text ) ? $feature_ribbon_text : '',
-			'featured_ribbon_position'   => ! empty( $featured_ribbon_position ) ? $featured_ribbon_position : 'top_right',
-			'display_sold_out_ribbon'    => ! empty( $display_sold_out_ribbon ) ? $display_sold_out_ribbon : 'no',
-			'sold_out_ribbon_text'       => ! empty( $sold_out_ribbon_text ) ? $sold_out_ribbon_text : '',
-			'sold_out_ribbon_position'   => ! empty( $sold_out_ribbon_position ) ? $sold_out_ribbon_position : 'bottom_left',
-			'display_discount_ribbon'    => ! empty( $display_discount_ribbon ) ? $display_discount_ribbon : 'no',
-			'discount_ribbon_position'   => ! empty( $discount_ribbon_position ) ? $discount_ribbon_position : 'bottom_right',
-		);
-
 		$theme                          = ! empty( $theme ) ? $theme : 'theme_1';
 		$title_font_size                = ! empty( $title_font_size[ $theme ] ) ? $title_font_size[ $theme ] : '16';
 		$title_font_color               = ! empty( $title_font_color[ $theme ] ) ? $title_font_color[ $theme ] : '#363940';
@@ -174,10 +160,7 @@ class WCPCSU_Shortcode {
 		$A_play                     = ! empty( $A_play ) ? $A_play : 'yes';
 		$repeat_product             = ! empty( $repeat_product ) ? $repeat_product : 'yes';
 		$stop_hover                 = ! empty( $stop_hover ) ? $stop_hover : true;
-		$carousel_desktop_column    = ! empty( $c_desktop ) ? intval( $c_desktop ) : 4;
-		$carousel_laptop_column     = ! empty( $c_desktop_small ) ? intval( $c_desktop_small ) : 3;
-		$carousel_tablet_column     = ! empty( $c_tablet ) ? intval( $c_tablet ) : 2;
-		$carousel_mobile_column     = ! empty( $c_mobile ) ? intval( $c_mobile ) : 1;
+		
 
 		// carousel navigation settings
 		$nav_show                   = ! empty( $nav_show ) ? $nav_show : 'yes';
@@ -283,6 +266,37 @@ class WCPCSU_Shortcode {
         $cart_button_hover_font_color           = ! empty( $atts['cart_button_hover_font_color'] ) ? $atts['cart_button_hover_font_color'] : $cart_button_hover_font_color;
         $ribbon_bg_color                        = ! empty( $atts['ribbon_bg_color'] ) ? $atts['ribbon_bg_color'] : $ribbon_bg_color;
 
+		$display_sale_ribbon        = ! empty( $display_sale_ribbon ) ? $display_sale_ribbon : 'no';
+        $sale_ribbon_text           = ! empty( $sale_ribbon_text ) ? $sale_ribbon_text : '';
+        $sale_ribbon_position       = ! empty( $sale_ribbon_position ) ? $sale_ribbon_position : 'top_left';
+        $display_featured_ribbon    = ! empty( $display_featured_ribbon ) ? $display_featured_ribbon : 'no';
+        $feature_ribbon_text        = ! empty( $feature_ribbon_text ) ? $feature_ribbon_text : '';
+        $featured_ribbon_position   = ! empty( $featured_ribbon_position ) ? $featured_ribbon_position : 'top_right';
+        $display_sold_out_ribbon    = ! empty( $display_sold_out_ribbon ) ? $display_sold_out_ribbon : 'no';
+        $sold_out_ribbon_text       = ! empty( $sold_out_ribbon_text ) ? $sold_out_ribbon_text : '';
+        $sold_out_ribbon_position   = ! empty( $sold_out_ribbon_position ) ? $sold_out_ribbon_position : 'bottom_left';
+        $display_discount_ribbon    = ! empty( $display_discount_ribbon ) ? $display_discount_ribbon : 'no';
+        $discount_ribbon_position   = ! empty( $discount_ribbon_position ) ? $discount_ribbon_position : 'bottom_right';
+
+		$ribbon_args = array(
+			'display_sale_ribbon'        => $display_sale_ribbon,
+            'sale_ribbon_text'           => $sale_ribbon_text,
+            'sale_ribbon_position'       => $sale_ribbon_position,
+            'display_featured_ribbon'    => $display_featured_ribbon,
+            'feature_ribbon_text'        => $feature_ribbon_text,
+            'featured_ribbon_position'   => $featured_ribbon_position,
+            'display_sold_out_ribbon'    => $display_sold_out_ribbon,
+            'sold_out_ribbon_text'       => $sold_out_ribbon_text,
+            'sold_out_ribbon_position'   => $sold_out_ribbon_position,
+            'display_discount_ribbon'    => $display_discount_ribbon,
+            'discount_ribbon_position'   => $discount_ribbon_position,
+		);
+
+		$carousel_desktop_column    = ! empty( $c_desktop ) ? intval( $c_desktop ) : 4;
+		$carousel_laptop_column     = ! empty( $c_desktop_small ) ? intval( $c_desktop_small ) : 3;
+		$carousel_tablet_column     = ! empty( $c_tablet ) ? intval( $c_tablet ) : 2;
+		$carousel_mobile_column     = ! empty( $c_mobile ) ? intval( $c_mobile ) : 1;
+
 		$header_class = '';
 
 		if( 'middle' == $header_position ) {
@@ -383,7 +397,7 @@ class WCPCSU_Shortcode {
 			<?php if( ( 'carousel' == $layout && 'yes' == $nav_show ) && ( 'bottom-left' == $nav_position || 'bottom-right' == $nav_position || 'bottom-middle' == $nav_position ) ) {
 				include WCPCSU_INC_DIR . 'template/navigation.php';
 			 } ?>
-			 <?php if( ( 'grid' == $layout && 'yes' == $grid_pagination ) || ( 'carousel' == $layout && 'yes' ==  $carousel_pagination ) ) {
+			 <?php if( ( 'carousel' == $layout && 'yes' == $grid_pagination ) || ( 'carousel' == $layout && 'yes' ==  $carousel_pagination ) ) {
 				include WCPCSU_INC_DIR . 'template/pagination.php';
 			 } ?>
 		</div><!-- ends: .wpcu-products -->
