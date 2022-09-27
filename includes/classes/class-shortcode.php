@@ -126,8 +126,6 @@ class wcpcsu_Shortcode
         $img_hover_effect        = ! empty( $img_hover_effect ) ? $img_hover_effect : 'yes';
         $img_animation           = ! empty( $img_animation ) ? $img_animation : 'zoom-in';
 
-        $img_animation_class     = 'wpcu-product__img--' . $img_animation;
-
         $display_cart            = ! empty( $display_cart ) ? $display_cart : 'yes';
         $ribbon                  = ! empty( $ribbon ) ? $ribbon : 'discount';
         $header_position         = ! empty( $header_position ) ? $header_position : 'middle';
@@ -337,6 +335,8 @@ class wcpcsu_Shortcode
             'display_discount_ribbon'    => $display_discount_ribbon,
             'discount_ribbon_position'   => $discount_ribbon_position,
         );
+
+        $img_animation_class     = 'wpcu-product__img--' . $img_animation;
 
 
         $header_class = '';
