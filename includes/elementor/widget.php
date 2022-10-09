@@ -243,7 +243,7 @@ class Elementor_Woo_Ultimate_Widget extends \Elementor\Widget_Base {
 				'default' => 'top_right',
 				'classes' => 'tpg-padding-left',
 				'condition'    => [
-					'feature_ribbon_text'          => 'yes',
+					'display_featured_ribbon'          => 'yes',
 				],
 				'separator' => 'after'
 			),
@@ -283,7 +283,7 @@ class Elementor_Woo_Ultimate_Widget extends \Elementor\Widget_Base {
 			array(
 				'type'      => Controls_Manager::SWITCHER,
 				'id'        => 'display_discount_ribbon',
-				'label'     => __( 'Display "Discount" Badge', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'label'     => __( 'Display "Discount Percentage" Badge', 'woocommerce-product-carousel-slider-and-ultimate' ),
 				'default'   => 'no',
 			),
 			array(
@@ -408,7 +408,7 @@ class Elementor_Woo_Ultimate_Widget extends \Elementor\Widget_Base {
 			array(
 				'type'      => Controls_Manager::SWITCHER,
 				'id'        => 'nav_show',
-				'label'     => __( 'Navigation Show', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'label'     => __( 'Enable Navigation', 'woocommerce-product-carousel-slider-and-ultimate' ),
 				'default'   => 'yes',
 			),
 			array(
@@ -433,7 +433,7 @@ class Elementor_Woo_Ultimate_Widget extends \Elementor\Widget_Base {
 			array(
 				'type'      => Controls_Manager::SWITCHER,
 				'id'        => 'carousel_pagination',
-				'label'     => __( 'Pagination Show', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'label'     => __( 'Enable Pagination', 'woocommerce-product-carousel-slider-and-ultimate' ),
 				'default'   => 'no',
 			),
 			
@@ -1001,6 +1001,21 @@ class Elementor_Woo_Ultimate_Widget extends \Elementor\Widget_Base {
 				],
 				'selectors' 	=> [
 					'{{WRAPPER}} .wpcu-product__price del bdi' => 'font-size: {{SIZE}}{{UNIT}} !important'
+					],
+			),
+			array(
+				'type'      => Controls_Manager::SLIDER,
+				'id'        => 'new_price_font_size',
+				'label'     => __( 'New Price Font Size', 'woocommerce-product-carousel-slider-and-ultimate' ),
+				'size_units' => [ 'px' ],
+				'range' => [
+					'px' => [
+						'min' => 10,
+						'max' => 100,
+					]
+				],
+				'selectors' 	=> [
+					'{{WRAPPER}} .wpcu-product__price .wpcu-product__price__sale .amount bdi' => 'font-size: {{SIZE}}{{UNIT}}'
 					],
 			),
 			array(
