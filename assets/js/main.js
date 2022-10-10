@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     breakpoints: checkData(JSON.parse(el.dataset.wpcuResponsive), {})
                 })
             });
-        }        
+        }
 
         alljs();
 
@@ -61,6 +61,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     });
                 }
             }, 6000);
+            setTimeout(() => {
+                alljs();
+            }, 0);
         });
 
     })(jQuery);
