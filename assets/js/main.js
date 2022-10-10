@@ -117,6 +117,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 smallColumnFix('.wpcu-theme_6');
                 smallColumnFix('.wpcu-theme_7');
             }, 6000);
+            setTimeout(() => {
+                alljs();
+            }, 0);
         });
 
         /* Issue fix in small product columns */
