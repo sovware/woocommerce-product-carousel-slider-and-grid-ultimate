@@ -83,9 +83,15 @@ if( ! in_array('woocommerce-product-carousel-slider-grid-ultimate-pro/main.php',
                 add_action('plugin_loaded',array( self::$instance,'wcpcsu_load_textdomain' ) );
                 add_action('admin_enqueue_scripts',array(self::$instance, 'wcpcsu_enqueue_file'));
                 add_action('template_redirect',array( self::$instance, 'template_enqueue_file'));
-                add_action( 'elementor/preview/enqueue_styles', [ self::$instance, 'elementor_enqueue_preview_style' ] );
 
+                //Elementor
+                add_action( 'elementor/preview/enqueue_styles', [ self::$instance, 'elementor_enqueue_preview_style' ] );
                 add_action( 'elementor/preview/enqueue_scripts', [ self::$instance, 'elementor_preview_enqueue_script' ] );
+
+                //Gutenberg
+                add_action( "enqueue_block_editor_assets", [ self::$instance, 'gutenberg_editor_scripts' ] );
+
+                add_action( "init", [ self::$instance, 'register_block' ] );
                 self::$instance->wcpcsu_include();
                 self::$instance->custom_post = new Wcpcsu_Custom_Post();
                 self::$instance->metabox = new Wcpcsu_Meta_Box();
@@ -235,6 +241,21 @@ if( ! in_array('woocommerce-product-carousel-slider-grid-ultimate-pro/main.php',
         
             ));
 		}
+
+        public function register_block() {
+            register_block_type(
+                'wcpcsup/block',
+                [
+                    'style'         => 'wcpcsu-main',
+                    'editor_style'  => 'wcpcsu-main-js',
+                    'editor_script' => 'wcpcsup-gutenberg-js'
+                ]
+            );
+        }
+
+        public function gutenberg_editor_scripts() {
+            wp_enqueue_script( 'wcpcsup-gutenberg-js', WCPCSU_URL . 'src/blocks/index.js', [ 'wp-plugins', 'wp-blocks', 'wp-editor', 'wp-edit-post', 'wp-i18n', 'wp-element', 'wp-components', 'wp-data'] );
+        }
 
         /**
          * Initialize appsero tracking.
