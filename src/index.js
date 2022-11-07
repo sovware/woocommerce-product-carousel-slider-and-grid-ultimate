@@ -1,0 +1,1 @@
+import './blocks/wcc-ultimate-block.js'
