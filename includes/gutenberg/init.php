@@ -29,7 +29,7 @@ function register_block() {
         'wcpcsup/block',
         [
             'style'           => 'wcpcsu-main',
-            'editor_style'    => 'wcpcsu-main-js',
+            'editor_script'    => 'wcpcsu-main-js',
             'editor_script'   => 'wcpcsup-gutenberg-js',
             'api_version'     => 2,
             'render_callback' => 'render_callback'
@@ -38,7 +38,7 @@ function register_block() {
 }
 
 function render_callback( $attr ) {
-    return do_shortcode("[wcpcsup id='357']");
+    return do_shortcode("[wcpcsup id='1487']");
 }
 
 add_action( 'init', 'register_block' );
