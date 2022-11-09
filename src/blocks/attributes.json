@@ -2,5 +2,12 @@
     "layout":{
       "type":"string",
       "default":"carousel"
+    },
+    "test":{
+      "type":"string",
+      "default":"#000",
+      "style": [{
+        "selector": ".wpcu-product .wpcu-product__title a { color: red !important; }"
+    }]
     }
 }

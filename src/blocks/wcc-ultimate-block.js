@@ -13,7 +13,9 @@ import {
 	ToggleControl,
 	TextControl,
 	Toolbar,
-	ToolbarButton
+	ToolbarButton,
+	ColorPicker,
+	ColorPalette
 } from '@wordpress/components';
 import blockAttributes from './attributes.json';
 
@@ -40,27 +42,41 @@ registerBlockType( 'wcpcsup/block', {
 
     edit({ attributes, setAttributes }){
         let {
-			layout
+			layout,
+			test
 		} = attributes;
+		const colors = [
+			{ name: 'red', slug: 'red', color: '#f00' },
+			{ name: 'white', color: '#fff' },
+			{ name: 'blue', color: '#00f' },
+		];
 		return(
             <Fragment>
                 <div { ...useBlockProps() }>
                     <InspectorControls>
                         <PanelBody title={ __( 'Layout', 'woocommerce-product-carousel-slider-and-ultimate' ) } initialOpen={ true }>
-                        <SelectControl
-							label={ __( 'Layout', 'directorist' ) }
-							labelPosition='side'
-							value={ layout }
-							options={ [
-								{ label: __( 'Carousel', 'woocommerce-product-carousel-slider-and-ultimate' ), value: 'carousel' },
-								{ label: __( 'Grid', 'woocommerce-product-carousel-slider-and-ultimate' ), value: 'grid' },
-							] }
-							onChange={ newState => setAttributes( { layout: newState } ) }
-						/>
+							<SelectControl
+								label={ __( 'Layout', 'directorist' ) }
+								labelPosition='side'
+								value={ layout }
+								options={ [
+									{ label: __( 'Carousel', 'woocommerce-product-carousel-slider-and-ultimate' ), value: 'carousel' },
+									{ label: __( 'Grid', 'woocommerce-product-carousel-slider-and-ultimate' ), value: 'grid' },
+								] }
+								onChange={ newState => setAttributes( { layout: newState } ) }
+							/>
+							test color
+							<ColorPicker 
+								name={ __( 'Laydsfsout', 'directorist' ) }
+								color={ test }
+								labelPosition='side'
+								onChange={ newState => setAttributes( { test: newState } ) }
+							/>
+							
                         </PanelBody>
                     </InspectorControls>
                 
-			     <ServerSideRender block="wcpcsup/block"/>
+			     <ServerSideRender block="wcpcsup/block" attributes={ attributes } />
                  </div>
             </Fragment>
 		)

@@ -32,12 +32,28 @@ function register_block() {
             'editor_style'    => 'wcpcsu-main-js',
             'editor_script'   => 'wcpcsup-gutenberg-js',
             'api_version'     => 2,
+            'attributes'      => array(
+                'layout'    => array(
+                    'type'      => 'string',
+                    'default'   => 'carousel',
+                ),
+                'test'    => array(
+                    'type'      => 'string',
+                    'default'   => '#00',
+                    'style' => [
+                        (object)[
+                            'selector'=>'.wpcu-product .wpcu-product__title a { color: red !important; }'
+                        ],
+                    ],
+                ),
+            ),
             'render_callback' => 'render_callback'
         ]
     );
 }
 
-function render_callback( $attr ) {
+function render_callback( $attributes ) {
+    //var_dump( $attributes );
     return do_shortcode("[wcpcsup id='357']");
 }
 

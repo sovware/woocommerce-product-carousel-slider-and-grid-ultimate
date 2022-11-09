@@ -47,8 +47,20 @@ __webpack_require__.r(__webpack_exports__);
       setAttributes
     } = _ref;
     let {
-      layout
+      layout,
+      test
     } = attributes;
+    const colors = [{
+      name: 'red',
+      slug: 'red',
+      color: '#f00'
+    }, {
+      name: 'white',
+      color: '#fff'
+    }, {
+      name: 'blue',
+      color: '#00f'
+    }];
     return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_4__.useBlockProps)(), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_4__.InspectorControls, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.PanelBody, {
       title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Layout', 'woocommerce-product-carousel-slider-and-ultimate'),
       initialOpen: true
@@ -66,8 +78,16 @@ __webpack_require__.r(__webpack_exports__);
       onChange: newState => setAttributes({
         layout: newState
       })
+    }), "test color", (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.ColorPicker, {
+      name: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Laydsfsout', 'directorist'),
+      color: test,
+      labelPosition: "side",
+      onChange: newState => setAttributes({
+        test: newState
+      })
     }))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)((_wordpress_server_side_render__WEBPACK_IMPORTED_MODULE_3___default()), {
-      block: "wcpcsup/block"
+      block: "wcpcsup/block",
+      attributes: attributes
     })));
   },
   save(_ref2) {
@@ -145,7 +165,7 @@ module.exports = window["wp"]["serverSideRender"];
   \************************************/
 /***/ (function(module) {
 
-module.exports = JSON.parse('{"layout":{"type":"string","default":"carousel"}}');
+module.exports = JSON.parse('{"layout":{"type":"string","default":"carousel"},"test":{"type":"string","default":"#000","style":[{"selector":".wpcu-product .wpcu-product__title a { color: red !important; }"}]}}');
 
 /***/ })
 
