@@ -4,12 +4,35 @@
     Author: wpWax
     Version: 1.0
 */
-
-
 document.addEventListener("DOMContentLoaded", function () {
     (function ($) {
 
+        window.onload = (event) => {
+            console.log('page is fully loaded');
+        };
+
+        document.addEventListener('DOMContentLoaded', function () {
+            console.log('Content Loaded');
+        });
+
+
         function alljs() {
+            console.log('JS Loaded');
+            
+            window.addEventListener('load', function() {
+                console.log('Loaded Window');
+                let lazyLoadContainer = document.querySelectorAll('.wpcu-lazy-load');
+                console.log({
+                    lazyLoadContainer: lazyLoadContainer,
+                });
+                if (lazyLoadContainer.length !== 0) {
+                    document.querySelectorAll('.wpcu-products').forEach((el) => {
+                        el.classList.remove('wpcu-lazy-load');
+                    })
+                }
+            });
+
+            
             /* Style reset in buttons p tag */
             document.querySelectorAll('.wpcu-button p.woocommerce, p.product').forEach((el, id) => {
                 el.setAttribute('style', 'none');
@@ -122,6 +145,11 @@ document.addEventListener("DOMContentLoaded", function () {
             }, 0);
         });
 
+        // window._wpLoadBlockEditor.then( function() {
+        //     console.log( 'hooray!' );
+        //     alljs();
+        // });
+
         /* Issue fix in small product columns */
         function smallColumnFix(theme) {
             let themeSixColumns = document.querySelectorAll(`.elementor-widget-container ${theme} .wpcu-product`);
@@ -133,4 +161,62 @@ document.addEventListener("DOMContentLoaded", function () {
         smallColumnFix('.wpcu-theme_7');
 
     })(jQuery);
-});
+})
+
+
+// document.addEventListener("DOMContentLoaded", function () {
+//     (function ($) {
+//         function alljs() {
+//             console.log('JS Loaded');
+
+//             var doc = document.querySelector('.wpcu-lazy-load');
+    
+//             /* Lazy load */
+//             document.addEventListener('load', function() {
+//                 console.log('Loaded Window');
+//                 var lazyLoadContainer = document.querySelector('.wpcu-lazy-load');
+//                 lazyLoadContainer.classList.remove('wpcu-lazy-load');
+//                 console.log({
+//                     lazyLoadContainer: lazyLoadContainer,
+//                 });
+//                 if (lazyLoadContainer.length !== 0) {
+//                     document.querySelectorAll('.wpcu-products').forEach((el) => {
+//                         el.classList.remove('wpcu-lazy-load');
+//                     })
+//                 }
+//             });
+
+//             // let lazyLoadContainer = document.querySelectorAll('.wpcu-lazy-load');
+//             // if (lazyLoadContainer.length !== 0) {
+//             //     document.querySelectorAll('.wpcu-products').forEach((el) => {
+//             //         el.classList.remove('wpcu-lazy-load');
+//             //     })
+//             // }
+            
+//             /* WPCU Carousel */
+//             let wpcuCarousel = document.querySelectorAll('.wpcu-carousel');
+//             wpcuCarousel.forEach(function (el) {
+//                 let swiper = new Swiper(el, {
+//                     slidesPerView: checkData(parseInt(el.dataset.wpcuItems), 4),
+//                     spaceBetween: checkData(parseInt(el.dataset.wpcuMargin), 30),
+//                     loop: checkData(JSON.parse(el.dataset.wpcuLoop.toLowerCase()), false),
+//                     slidesPerGroup: checkData(parseInt(el.dataset.wpcuPerslide), 4),
+//                     speed: checkData(parseInt(el.dataset.wpcuSpeed), 3000),
+//                     autoplay: checkData(JSON.parse(el.dataset.wpcuAutoplay), {}),
+//                     navigation: {
+//                         nextEl: '.wpcu-carousel-nav__btn--next',
+//                         prevEl: '.wpcu-carousel-nav__btn--prev',
+//                     },
+//                     pagination: {
+//                         el: '.wpcu-carousel-pagination',
+//                         type: 'bullets',
+//                         clickable: true
+//                     },
+//                     breakpoints: checkData(JSON.parse(el.dataset.wpcuResponsive), {})
+//                 })
+//             });
+//         }
+    
+//         alljs();
+//     })(jQuery);
+// })
