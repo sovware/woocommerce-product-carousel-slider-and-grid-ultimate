@@ -4,8 +4,10 @@
     Author: wpWax
     Version: 1.0
 */
-
-
+console.log('dsfdsf')
+jQuery( window ).on( 'wcpcsup/block', function() {
+    console.log('dsfdsf')
+} )
 document.addEventListener("DOMContentLoaded", function () {
     (function ($) {
 
@@ -104,6 +106,8 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         alljs();
+
+        
 
         /* Elementor Edit Mode */
         $(window).on('elementor/frontend/init', function () {
