@@ -3,11 +3,24 @@
       "type":"string",
       "default":"carousel"
     },
-    "test":{
+    "theme":{
       "type":"string",
-      "default":"#000",
-      "style": [{
-        "selector": ".wpcu-product .wpcu-product__title a { color: red !important; }"
-    }]
+      "default":"theme_1"
+    },
+    "h_title_show":{
+      "type":"boolean",
+      "default":false
+    },
+    "header_title":{
+      "type":"string",
+      "default": ""
+    },
+    "header_position":{
+      "type":"string",
+      "default": "middle"
+    },
+    "display_title":{
+      "type":"boolean",
+      "default": true
     }
 }

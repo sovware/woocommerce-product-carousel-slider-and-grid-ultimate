@@ -25,6 +25,10 @@ function register_block() {
 
     ));
 
+    $attributes = get_attributes_from_metadata( trailingslashit( __DIR__ ) );
+
+    //var_dump( $attributes );
+
     register_block_type(
         'wcpcsup/block',
         [
@@ -32,31 +36,50 @@ function register_block() {
             'editor_style'    => 'wcpcsu-main-js',
             'editor_script'   => 'wcpcsup-gutenberg-js',
             'api_version'     => 2,
-            'attributes'      => array(
-                'layout'    => array(
-                    'type'      => 'string',
-                    'default'   => 'carousel',
-                ),
-                'test'    => array(
-                    'type'      => 'string',
-                    'default'   => '#00',
-                    'style' => [
-                        (object)[
-                            'selector'=>'.wpcu-product .wpcu-product__title a { color: red !important; }'
-                        ],
-                    ],
-                ),
-            ),
+            'attributes'      => $attributes,
             'render_callback' => 'render_callback'
         ]
     );
 }
 
 function render_callback( $attributes ) {
-    //var_dump( $attributes );
-    return do_shortcode("[wcpcsup id='357']");
+    $attributes['h_title_show'] = ! empty( $attributes['h_title_show'] ) ? 'yes' : 'no';
+    $attributes['display_title'] = ! empty( $attributes['display_title'] ) ? 'yes' : 'no';
+
+    return run_shortcode( 'wcpcsu', $attributes );
+    //return do_shortcode("[wcpcsup id='357']");
 }
 
+function get_attributes_from_metadata( $file_or_folder ) {
+	$filename      = 'attributes.json';
+	$metadata_file = ( substr( $file_or_folder, -strlen( $filename ) ) !== $filename ) ?
+		trailingslashit( $file_or_folder ) . $filename :
+		$file_or_folder;
+
+	if ( ! file_exists( $metadata_file ) ) {
+		return [];
+	}
+
+	$metadata = json_decode( file_get_contents( $metadata_file ), true );
+
+	if ( empty( $metadata ) || ! is_array( $metadata )  ) {
+		return [];
+	}
+
+	return $metadata;
+}
+
+ function run_shortcode( $shortcode, $atts = [] ) {
+    $html = '';
+
+    foreach ( $atts as $key => $value ) {
+        $html .= sprintf( ' %s="%s"', $key, esc_html( $value ) );
+    }
+
+    $html = sprintf( '[%s%s]', $shortcode, $html );
+
+    return do_shortcode( $html );
+}
 add_action( 'init', 'register_block' );
 
 function add_rest_method( $endpoints ) {

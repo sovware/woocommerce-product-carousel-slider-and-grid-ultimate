@@ -48,24 +48,17 @@ __webpack_require__.r(__webpack_exports__);
     } = _ref;
     let {
       layout,
-      test
+      theme,
+      h_title_show,
+      header_title,
+      header_position,
+      display_title
     } = attributes;
-    const colors = [{
-      name: 'red',
-      slug: 'red',
-      color: '#f00'
-    }, {
-      name: 'white',
-      color: '#fff'
-    }, {
-      name: 'blue',
-      color: '#00f'
-    }];
     return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_4__.useBlockProps)(), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_4__.InspectorControls, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.PanelBody, {
       title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Layout', 'woocommerce-product-carousel-slider-and-ultimate'),
       initialOpen: true
     }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.SelectControl, {
-      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Layout', 'directorist'),
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Layout', 'woocommerce-product-carousel-slider-and-ultimate'),
       labelPosition: "side",
       value: layout,
       options: [{
@@ -78,12 +71,94 @@ __webpack_require__.r(__webpack_exports__);
       onChange: newState => setAttributes({
         layout: newState
       })
-    }), "test color", (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.ColorPicker, {
-      name: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Laydsfsout', 'directorist'),
-      color: test,
+    }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.SelectControl, {
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Theme', 'directorist'),
       labelPosition: "side",
+      value: theme,
+      options: [{
+        label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Theme 1', 'woocommerce-product-carousel-slider-and-ultimate'),
+        value: 'theme_1'
+      }, {
+        label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Theme 2', 'woocommerce-product-carousel-slider-and-ultimate'),
+        value: 'theme_2'
+      }, {
+        label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Theme 3', 'woocommerce-product-carousel-slider-and-ultimate'),
+        value: 'theme_3'
+      }, {
+        label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Theme 4', 'woocommerce-product-carousel-slider-and-ultimate'),
+        value: 'theme_4'
+      }, {
+        label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Theme 5', 'woocommerce-product-carousel-slider-and-ultimate'),
+        value: 'theme_5'
+      }, {
+        label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Theme 6', 'woocommerce-product-carousel-slider-and-ultimate'),
+        value: 'theme_6'
+      }, {
+        label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Theme 7', 'woocommerce-product-carousel-slider-and-ultimate'),
+        value: 'theme_7'
+      }, {
+        label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Theme 8', 'woocommerce-product-carousel-slider-and-ultimate'),
+        value: 'theme_8'
+      }, {
+        label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Theme 9', 'woocommerce-product-carousel-slider-and-ultimate'),
+        value: 'theme_9'
+      }, {
+        label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Theme 10', 'woocommerce-product-carousel-slider-and-ultimate'),
+        value: 'theme_10'
+      }, {
+        label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Theme 11', 'woocommerce-product-carousel-slider-and-ultimate'),
+        value: 'theme_11'
+      }, {
+        label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Theme 12', 'woocommerce-product-carousel-slider-and-ultimate'),
+        value: 'theme_12'
+      }, {
+        label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Theme 13', 'woocommerce-product-carousel-slider-and-ultimate'),
+        value: 'theme_13'
+      }, {
+        label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Theme 14', 'woocommerce-product-carousel-slider-and-ultimate'),
+        value: 'theme_14'
+      }, {
+        label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Theme 15', 'woocommerce-product-carousel-slider-and-ultimate'),
+        value: 'theme_15'
+      }],
       onChange: newState => setAttributes({
-        test: newState
+        theme: newState
+      })
+    }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.ToggleControl, {
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Header Title', 'directorist'),
+      checked: h_title_show,
+      onChange: newState => setAttributes({
+        h_title_show: newState
+      })
+    }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.TextControl, {
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Header Title', 'directorist'),
+      type: "text",
+      value: header_title,
+      onChange: newState => setAttributes({
+        header_title: newState
+      })
+    }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.SelectControl, {
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Header position', 'woocommerce-product-carousel-slider-and-ultimate'),
+      labelPosition: "side",
+      value: header_position,
+      options: [{
+        label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Middle', 'woocommerce-product-carousel-slider-and-ultimate'),
+        value: 'middle'
+      }, {
+        label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Left', 'woocommerce-product-carousel-slider-and-ultimate'),
+        value: 'left'
+      }, {
+        label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Right', 'woocommerce-product-carousel-slider-and-ultimate'),
+        value: 'right'
+      }],
+      onChange: newState => setAttributes({
+        header_position: newState
+      })
+    }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.ToggleControl, {
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Display Title', 'directorist'),
+      checked: display_title,
+      onChange: newState => setAttributes({
+        display_title: newState
       })
     }))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)((_wordpress_server_side_render__WEBPACK_IMPORTED_MODULE_3___default()), {
       block: "wcpcsup/block",
@@ -165,7 +240,7 @@ module.exports = window["wp"]["serverSideRender"];
   \************************************/
 /***/ (function(module) {
 
-module.exports = JSON.parse('{"layout":{"type":"string","default":"carousel"},"test":{"type":"string","default":"#000","style":[{"selector":".wpcu-product .wpcu-product__title a { color: red !important; }"}]}}');
+module.exports = JSON.parse('{"layout":{"type":"string","default":"carousel"},"theme":{"type":"string","default":"theme_1"},"h_title_show":{"type":"boolean","default":false},"header_title":{"type":"string","default":""},"header_position":{"type":"string","default":"middle"},"display_title":{"type":"boolean","default":true}}');
 
 /***/ })
 
