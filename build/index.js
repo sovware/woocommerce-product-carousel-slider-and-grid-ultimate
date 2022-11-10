@@ -78,11 +78,21 @@ __webpack_require__.r(__webpack_exports__);
       c_desktop_small,
       c_tablet,
       c_mobile,
+      slide_time,
       slide_speed,
       scrool_direction,
       nav_show,
       nav_position,
-      carousel_pagination
+      carousel_pagination,
+      g_column,
+      g_tablet,
+      g_mobile,
+      grid_pagination,
+      img_crop,
+      crop_image_width,
+      crop_image_height,
+      img_hover_effect,
+      img_animation
     } = attributes;
     return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_4__.useBlockProps)(), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_4__.InspectorControls, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.PanelBody, {
       title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Layout', 'woocommerce-product-carousel-slider-and-ultimate'),
@@ -503,6 +513,91 @@ __webpack_require__.r(__webpack_exports__);
       onChange: newState => setAttributes({
         carousel_pagination: newState
       })
+    })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.PanelBody, {
+      title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Grid', 'woocommerce-product-carousel-slider-and-ultimate'),
+      initialOpen: false
+    }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.TextControl, {
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Grid Columns', 'directorist'),
+      type: "text",
+      value: g_column,
+      onChange: newState => setAttributes({
+        g_column: newState
+      })
+    }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.TextControl, {
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Select Columns for Tablet', 'directorist'),
+      type: "text",
+      value: g_tablet,
+      onChange: newState => setAttributes({
+        g_tablet: newState
+      })
+    }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.TextControl, {
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Select Columns for Mobile', 'directorist'),
+      type: "text",
+      value: g_mobile,
+      onChange: newState => setAttributes({
+        g_mobile: newState
+      })
+    }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.ToggleControl, {
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Display Pagination', 'directorist'),
+      checked: grid_pagination,
+      onChange: newState => setAttributes({
+        grid_pagination: newState
+      })
+    })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.PanelBody, {
+      title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Image', 'woocommerce-product-carousel-slider-and-ultimate'),
+      initialOpen: false
+    }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.ToggleControl, {
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Image Resize & Crop', 'directorist'),
+      checked: img_crop,
+      onChange: newState => setAttributes({
+        img_crop: newState
+      })
+    }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.TextControl, {
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Cropping Width', 'directorist'),
+      type: "text",
+      value: crop_image_width,
+      onChange: newState => setAttributes({
+        crop_image_width: newState
+      })
+    }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.TextControl, {
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Cropping Height', 'directorist'),
+      type: "text",
+      value: crop_image_height,
+      onChange: newState => setAttributes({
+        crop_image_height: newState
+      })
+    }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.ToggleControl, {
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Image Hover Effect', 'directorist'),
+      checked: img_hover_effect,
+      onChange: newState => setAttributes({
+        img_hover_effect: newState
+      })
+    }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.SelectControl, {
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Image Animation', 'woocommerce-product-carousel-slider-and-ultimate'),
+      labelPosition: "side",
+      value: img_animation,
+      options: [{
+        label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Zoom In', 'woocommerce-product-carousel-slider-and-ultimate'),
+        value: 'zoom-in'
+      }, {
+        label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Zoom Out', 'woocommerce-product-carousel-slider-and-ultimate'),
+        value: 'zoom-out'
+      }, {
+        label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Blur In', 'woocommerce-product-carousel-slider-and-ultimate'),
+        value: 'blur-in'
+      }, {
+        label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Blur Out', 'woocommerce-product-carousel-slider-and-ultimate'),
+        value: 'blur-out'
+      }, {
+        label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Grayscale In', 'woocommerce-product-carousel-slider-and-ultimate'),
+        value: 'grayscale-in'
+      }, {
+        label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Grayscale Out', 'woocommerce-product-carousel-slider-and-ultimate'),
+        value: 'grayscale-out'
+      }],
+      onChange: newState => setAttributes({
+        img_animation: newState
+      })
     }))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)((_wordpress_server_side_render__WEBPACK_IMPORTED_MODULE_3___default()), {
       block: "wcpcsup/block",
       attributes: attributes
@@ -583,7 +678,7 @@ module.exports = window["wp"]["serverSideRender"];
   \************************************/
 /***/ (function(module) {
 
-module.exports = JSON.parse('{"layout":{"type":"string","default":"carousel"},"theme":{"type":"string","default":"theme_1"},"h_title_show":{"type":"boolean","default":false},"header_title":{"type":"string","default":""},"header_position":{"type":"string","default":"middle"},"display_title":{"type":"boolean","default":true},"products_type":{"type":"string","default":"latest"},"total_products":{"type":"string","default":"12"},"exclude_stock_out":{"type":"boolean","default":true},"display_sale_ribbon":{"type":"boolean","default":false},"sale_ribbon_text":{"type":"string","default":"Sale!"},"sale_ribbon_position":{"type":"string","default":"top_left"},"display_featured_ribbon":{"type":"boolean","default":false},"feature_ribbon_text":{"type":"string","default":"Featured!"},"featured_ribbon_position":{"type":"string","default":"top_right"},"display_sold_out_ribbon":{"type":"boolean","default":false},"sold_out_ribbon_text":{"type":"string","default":"Sold Out!"},"sold_out_ribbon_position":{"type":"string","default":"bottom_left"},"display_discount_ribbon":{"type":"boolean","default":false},"discount_ribbon_position":{"type":"string","default":"bottom_right"},"display_price":{"type":"boolean","default":true},"display_ratings":{"type":"boolean","default":true},"display_cart":{"type":"boolean","default":true},"A_play":{"type":"boolean","default":true},"repeat_product":{"type":"boolean","default":true},"stop_hover":{"type":"boolean","default":false},"marquee":{"type":"boolean","default":false},"c_desktop":{"type":"string","default":"2"},"c_desktop_small":{"type":"string","default":"2"},"c_tablet":{"type":"string","default":"2"},"c_mobile":{"type":"string","default":"1"},"slide_speed":{"type":"string","default":"2000"},"slide_time":{"type":"string","default":"2000"},"scrool_direction":{"type":"string","default":"right_left"},"nav_show":{"type":"boolean","default":true},"nav_position":{"type":"string","default":"bottom-right"},"carousel_pagination":{"type":"boolean","default":false}}');
+module.exports = JSON.parse('{"layout":{"type":"string","default":"carousel"},"theme":{"type":"string","default":"theme_1"},"h_title_show":{"type":"boolean","default":false},"header_title":{"type":"string","default":""},"header_position":{"type":"string","default":"middle"},"display_title":{"type":"boolean","default":true},"products_type":{"type":"string","default":"latest"},"total_products":{"type":"string","default":"12"},"exclude_stock_out":{"type":"boolean","default":true},"display_sale_ribbon":{"type":"boolean","default":false},"sale_ribbon_text":{"type":"string","default":"Sale!"},"sale_ribbon_position":{"type":"string","default":"top_left"},"display_featured_ribbon":{"type":"boolean","default":false},"feature_ribbon_text":{"type":"string","default":"Featured!"},"featured_ribbon_position":{"type":"string","default":"top_right"},"display_sold_out_ribbon":{"type":"boolean","default":false},"sold_out_ribbon_text":{"type":"string","default":"Sold Out!"},"sold_out_ribbon_position":{"type":"string","default":"bottom_left"},"display_discount_ribbon":{"type":"boolean","default":false},"discount_ribbon_position":{"type":"string","default":"bottom_right"},"display_price":{"type":"boolean","default":true},"display_ratings":{"type":"boolean","default":true},"display_cart":{"type":"boolean","default":true},"A_play":{"type":"boolean","default":true},"repeat_product":{"type":"boolean","default":true},"stop_hover":{"type":"boolean","default":false},"marquee":{"type":"boolean","default":false},"c_desktop":{"type":"string","default":"2"},"c_desktop_small":{"type":"string","default":"2"},"c_tablet":{"type":"string","default":"2"},"c_mobile":{"type":"string","default":"1"},"slide_speed":{"type":"string","default":"2000"},"slide_time":{"type":"string","default":"2000"},"scrool_direction":{"type":"string","default":"right_left"},"nav_show":{"type":"boolean","default":true},"nav_position":{"type":"string","default":"bottom-right"},"carousel_pagination":{"type":"boolean","default":false},"g_column":{"type":"string","default":"3"},"g_tablet":{"type":"string","default":"2"},"g_mobile":{"type":"string","default":"1"},"grid_pagination":{"type":"boolean","default":true},"img_crop":{"type":"boolean","default":true},"crop_image_width":{"type":"string","default":"350"},"crop_image_height":{"type":"string","default":"250"},"img_hover_effect":{"type":"boolean","default":true},"img_animation":{"type":"string","default":"zoom-in"}}');
 
 /***/ })
 

@@ -65,7 +65,6 @@ registerBlockType( 'wcpcsup/block', {
 			display_price,
 			display_ratings,
 			display_cart,
-
 			A_play,
 			repeat_product,
 			stop_hover,
@@ -74,11 +73,22 @@ registerBlockType( 'wcpcsup/block', {
 			c_desktop_small,
 			c_tablet,
 			c_mobile,
+			slide_time,
 			slide_speed,
 			scrool_direction,
 			nav_show,
 			nav_position,
-			carousel_pagination
+			carousel_pagination,
+			g_column,
+			g_tablet,
+			g_mobile,
+			grid_pagination,
+
+			img_crop,
+			crop_image_width,
+			crop_image_height,
+			img_hover_effect,
+			img_animation
 
 		} = attributes;
 		return(
@@ -419,6 +429,82 @@ registerBlockType( 'wcpcsup/block', {
 								label={ __( 'Enable Pagination', 'directorist' ) }
 								checked={ carousel_pagination }
 								onChange={ newState => setAttributes( { carousel_pagination: newState } ) }
+							/>
+							
+						</PanelBody>
+
+						<PanelBody title={ __( 'Grid', 'woocommerce-product-carousel-slider-and-ultimate' ) } initialOpen={ false }>
+
+							<TextControl
+								label={ __( 'Grid Columns', 'directorist' ) }
+								type='text'
+								value={ g_column }
+								onChange={ newState => setAttributes( { g_column: newState } ) }
+							/>
+
+							<TextControl
+								label={ __( 'Select Columns for Tablet', 'directorist' ) }
+								type='text'
+								value={ g_tablet }
+								onChange={ newState => setAttributes( { g_tablet: newState } ) }
+							/>
+
+							<TextControl
+								label={ __( 'Select Columns for Mobile', 'directorist' ) }
+								type='text'
+								value={ g_mobile }
+								onChange={ newState => setAttributes( { g_mobile: newState } ) }
+							/>
+
+							<ToggleControl
+								label={ __( 'Display Pagination', 'directorist' ) }
+								checked={ grid_pagination }
+								onChange={ newState => setAttributes( { grid_pagination: newState } ) }
+							/>
+
+						</PanelBody>
+
+						<PanelBody title={ __( 'Image', 'woocommerce-product-carousel-slider-and-ultimate' ) } initialOpen={ false }>
+
+							<ToggleControl
+								label={ __( 'Image Resize & Crop', 'directorist' ) }
+								checked={ img_crop }
+								onChange={ newState => setAttributes( { img_crop: newState } ) }
+							/>
+
+							<TextControl
+								label={ __( 'Cropping Width', 'directorist' ) }
+								type='text'
+								value={ crop_image_width }
+								onChange={ newState => setAttributes( { crop_image_width: newState } ) }
+							/>
+
+							<TextControl
+								label={ __( 'Cropping Height', 'directorist' ) }
+								type='text'
+								value={ crop_image_height }
+								onChange={ newState => setAttributes( { crop_image_height: newState } ) }
+							/>
+
+							<ToggleControl
+								label={ __( 'Image Hover Effect', 'directorist' ) }
+								checked={ img_hover_effect }
+								onChange={ newState => setAttributes( { img_hover_effect: newState } ) }
+							/>
+
+							<SelectControl
+								label={ __( 'Image Animation', 'woocommerce-product-carousel-slider-and-ultimate' ) }
+								labelPosition='side'
+								value={ img_animation }
+								options={ [
+									{ label: __( 'Zoom In', 'woocommerce-product-carousel-slider-and-ultimate' ), value: 'zoom-in' },
+									{ label: __( 'Zoom Out', 'woocommerce-product-carousel-slider-and-ultimate' ), value: 'zoom-out' },
+									{ label: __( 'Blur In', 'woocommerce-product-carousel-slider-and-ultimate' ), value: 'blur-in' },
+									{ label: __( 'Blur Out', 'woocommerce-product-carousel-slider-and-ultimate' ), value: 'blur-out' },
+									{ label: __( 'Grayscale In', 'woocommerce-product-carousel-slider-and-ultimate' ), value: 'grayscale-in' },
+									{ label: __( 'Grayscale Out', 'woocommerce-product-carousel-slider-and-ultimate' ), value: 'grayscale-out' }
+								] }
+								onChange={ newState => setAttributes( { img_animation: newState } ) }
 							/>
 
 						</PanelBody>
