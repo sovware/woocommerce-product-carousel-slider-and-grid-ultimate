@@ -90,5 +90,97 @@
   "display_cart":{
     "type":"boolean",
     "default": true
+  },
+  "A_play":{
+    "type":"boolean",
+    "default": true
+  },
+  "repeat_product":{
+    "type":"boolean",
+    "default": true
+  },
+  "stop_hover":{
+    "type":"boolean",
+    "default": false
+  },
+  "marquee":{
+    "type":"boolean",
+    "default": false
+  },
+  "c_desktop":{
+    "type":"string",
+    "default": "2"
+  },
+  "c_desktop_small":{
+    "type":"string",
+    "default": "2"
+  },
+  "c_tablet":{
+    "type":"string",
+    "default": "2"
+  },
+  "c_mobile":{
+    "type":"string",
+    "default": "1"
+  },
+  "slide_speed":{
+    "type":"string",
+    "default": "2000"
+  },
+  "slide_time":{
+    "type":"string",
+    "default": "2000"
+  },
+  "scrool_direction":{
+    "type":"string",
+    "default": "right_left"
+  },
+  "nav_show":{
+    "type":"boolean",
+    "default": true
+  },
+  "nav_position":{
+    "type":"string",
+    "default": "bottom-right"
+  },
+  "carousel_pagination":{
+    "type":"boolean",
+    "default": false
+  },
+  "g_column":{
+    "type":"string",
+    "default": "3"
+  },
+  "g_tablet":{
+    "type":"string",
+    "default": "2"
+  },
+  "g_mobile":{
+    "type":"string",
+    "default": "1"
+  },
+  "grid_pagination":{
+    "type":"boolean",
+    "default": true
+  },
+  "img_crop":{
+    "type":"boolean",
+    "default": true
+  },
+  "crop_image_width":{
+    "type":"string",
+    "default": "350"
+  },
+  "crop_image_height":{
+    "type":"string",
+    "default": "250"
+  },
+  "img_hover_effect":{
+    "type":"boolean",
+    "default": true
+  },
+  "img_animation":{
+    "type":"string",
+    "default": "zoom-in"
   }
 }

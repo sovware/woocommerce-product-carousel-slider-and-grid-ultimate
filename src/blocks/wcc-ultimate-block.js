@@ -51,7 +51,6 @@ registerBlockType( 'wcpcsup/block', {
 			products_type,
 			total_products,
 			exclude_stock_out,
-
 			display_sale_ribbon,
 			sale_ribbon_text,
 			sale_ribbon_position,
@@ -66,13 +65,38 @@ registerBlockType( 'wcpcsup/block', {
 			display_price,
 			display_ratings,
 			display_cart,
+			A_play,
+			repeat_product,
+			stop_hover,
+			marquee,
+			c_desktop,
+			c_desktop_small,
+			c_tablet,
+			c_mobile,
+			slide_time,
+			slide_speed,
+			scrool_direction,
+			nav_show,
+			nav_position,
+			carousel_pagination,
+			g_column,
+			g_tablet,
+			g_mobile,
+			grid_pagination,
+
+			img_crop,
+			crop_image_width,
+			crop_image_height,
+			img_hover_effect,
+			img_animation
+
 		} = attributes;
 		return(
             <Fragment>
                 <div { ...useBlockProps() }>
                     <InspectorControls>
 
-                        <PanelBody title={ __( 'Layout', 'woocommerce-product-carousel-slider-and-ultimate' ) } initialOpen={ true }>
+                        <PanelBody title={ __( 'Layout', 'woocommerce-product-carousel-slider-and-ultimate' ) } initialOpen={ false }>
 
 							<SelectControl
 								label={ __( 'Layout', 'woocommerce-product-carousel-slider-and-ultimate' ) }
@@ -297,6 +321,190 @@ registerBlockType( 'wcpcsup/block', {
 								label={ __( 'Display "Add to Cart" Button', 'directorist' ) }
 								checked={ display_cart }
 								onChange={ newState => setAttributes( { display_cart: newState } ) }
+							/>
+
+						</PanelBody>
+
+						<PanelBody title={ __( 'Carousel', 'woocommerce-product-carousel-slider-and-ultimate' ) } initialOpen={ false }>
+
+							<ToggleControl
+								label={ __( 'Auto Play', 'directorist' ) }
+								checked={ A_play }
+								onChange={ newState => setAttributes( { A_play: newState } ) }
+							/>
+
+							<ToggleControl
+								label={ __( 'Repeat Product', 'directorist' ) }
+								checked={ repeat_product }
+								onChange={ newState => setAttributes( { repeat_product: newState } ) }
+							/>
+
+							<ToggleControl
+								label={ __( 'Stop on Hover', 'directorist' ) }
+								checked={ stop_hover }
+								onChange={ newState => setAttributes( { stop_hover: newState } ) }
+							/>
+
+							<ToggleControl
+								label={ __( 'Marquee', 'directorist' ) }
+								checked={ marquee }
+								onChange={ newState => setAttributes( { marquee: newState } ) }
+							/>
+
+							<TextControl
+								label={ __( 'Products Columns', 'directorist' ) }
+								type='text'
+								value={ c_desktop }
+								onChange={ newState => setAttributes( { c_desktop: newState } ) }
+							/>
+
+							<TextControl
+								label={ __( 'Laptop Columns', 'directorist' ) }
+								type='text'
+								value={ c_desktop_small }
+								onChange={ newState => setAttributes( { c_desktop_small: newState } ) }
+							/>
+
+							<TextControl
+								label={ __( 'Tablet Columns', 'directorist' ) }
+								type='text'
+								value={ c_tablet }
+								onChange={ newState => setAttributes( { c_tablet: newState } ) }
+							/>
+
+							<TextControl
+								label={ __( 'Mobile Columns', 'directorist' ) }
+								type='text'
+								value={ c_mobile }
+								onChange={ newState => setAttributes( { c_mobile: newState } ) }
+							/>
+
+							<TextControl
+								label={ __( 'Slide Speed', 'directorist' ) }
+								type='text'
+								value={ slide_speed }
+								onChange={ newState => setAttributes( { slide_speed: newState } ) }
+							/>
+
+							<TextControl
+								label={ __( 'Slide Timeout', 'directorist' ) }
+								type='text'
+								value={ slide_time }
+								onChange={ newState => setAttributes( { slide_time: newState } ) }
+							/>
+
+							<SelectControl
+								label={ __( 'Scroll Direction', 'woocommerce-product-carousel-slider-and-ultimate' ) }
+								labelPosition='side'
+								value={ scrool_direction }
+								options={ [
+									{ label: __( 'Right to Left', 'woocommerce-product-carousel-slider-and-ultimate' ), value: 'right_left' },
+									{ label: __( 'Left to Right', 'woocommerce-product-carousel-slider-and-ultimate' ), value: 'left_right' }
+								] }
+								onChange={ newState => setAttributes( { scrool_direction: newState } ) }
+							/>
+
+							<ToggleControl
+								label={ __( 'Enable Navigation', 'directorist' ) }
+								checked={ nav_show }
+								onChange={ newState => setAttributes( { nav_show: newState } ) }
+							/>
+
+							<SelectControl
+								label={ __( 'Position', 'woocommerce-product-carousel-slider-and-ultimate' ) }
+								labelPosition='side'
+								value={ nav_position }
+								options={ [
+									{ label: __( 'Top Left', 'woocommerce-product-carousel-slider-and-ultimate' ), value: 'top-left' },
+									{ label: __( 'Top Right', 'woocommerce-product-carousel-slider-and-ultimate' ), value: 'top-right' },
+									{ label: __( 'Middle', 'woocommerce-product-carousel-slider-and-ultimate' ), value: 'middle' },
+									{ label: __( 'Bottom Left', 'woocommerce-product-carousel-slider-and-ultimate' ), value: 'bottom-left' },
+									{ label: __( 'Bottom Right', 'woocommerce-product-carousel-slider-and-ultimate' ), value: 'bottom-right' }
+
+								] }
+								onChange={ newState => setAttributes( { nav_position: newState } ) }
+							/>
+
+							<ToggleControl
+								label={ __( 'Enable Pagination', 'directorist' ) }
+								checked={ carousel_pagination }
+								onChange={ newState => setAttributes( { carousel_pagination: newState } ) }
+							/>
+							
+						</PanelBody>
+
+						<PanelBody title={ __( 'Grid', 'woocommerce-product-carousel-slider-and-ultimate' ) } initialOpen={ false }>
+
+							<TextControl
+								label={ __( 'Grid Columns', 'directorist' ) }
+								type='text'
+								value={ g_column }
+								onChange={ newState => setAttributes( { g_column: newState } ) }
+							/>
+
+							<TextControl
+								label={ __( 'Select Columns for Tablet', 'directorist' ) }
+								type='text'
+								value={ g_tablet }
+								onChange={ newState => setAttributes( { g_tablet: newState } ) }
+							/>
+
+							<TextControl
+								label={ __( 'Select Columns for Mobile', 'directorist' ) }
+								type='text'
+								value={ g_mobile }
+								onChange={ newState => setAttributes( { g_mobile: newState } ) }
+							/>
+
+							<ToggleControl
+								label={ __( 'Display Pagination', 'directorist' ) }
+								checked={ grid_pagination }
+								onChange={ newState => setAttributes( { grid_pagination: newState } ) }
+							/>
+
+						</PanelBody>
+
+						<PanelBody title={ __( 'Image', 'woocommerce-product-carousel-slider-and-ultimate' ) } initialOpen={ false }>
+
+							<ToggleControl
+								label={ __( 'Image Resize & Crop', 'directorist' ) }
+								checked={ img_crop }
+								onChange={ newState => setAttributes( { img_crop: newState } ) }
+							/>
+
+							<TextControl
+								label={ __( 'Cropping Width', 'directorist' ) }
+								type='text'
+								value={ crop_image_width }
+								onChange={ newState => setAttributes( { crop_image_width: newState } ) }
+							/>
+
+							<TextControl
+								label={ __( 'Cropping Height', 'directorist' ) }
+								type='text'
+								value={ crop_image_height }
+								onChange={ newState => setAttributes( { crop_image_height: newState } ) }
+							/>
+
+							<ToggleControl
+								label={ __( 'Image Hover Effect', 'directorist' ) }
+								checked={ img_hover_effect }
+								onChange={ newState => setAttributes( { img_hover_effect: newState } ) }
+							/>
+
+							<SelectControl
+								label={ __( 'Image Animation', 'woocommerce-product-carousel-slider-and-ultimate' ) }
+								labelPosition='side'
+								value={ img_animation }
+								options={ [
+									{ label: __( 'Zoom In', 'woocommerce-product-carousel-slider-and-ultimate' ), value: 'zoom-in' },
+									{ label: __( 'Zoom Out', 'woocommerce-product-carousel-slider-and-ultimate' ), value: 'zoom-out' },
+									{ label: __( 'Blur In', 'woocommerce-product-carousel-slider-and-ultimate' ), value: 'blur-in' },
+									{ label: __( 'Blur Out', 'woocommerce-product-carousel-slider-and-ultimate' ), value: 'blur-out' },
+									{ label: __( 'Grayscale In', 'woocommerce-product-carousel-slider-and-ultimate' ), value: 'grayscale-in' },
+									{ label: __( 'Grayscale Out', 'woocommerce-product-carousel-slider-and-ultimate' ), value: 'grayscale-out' }
+								] }
+								onChange={ newState => setAttributes( { img_animation: newState } ) }
 							/>
 
 						</PanelBody>

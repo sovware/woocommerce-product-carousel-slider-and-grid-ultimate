@@ -53,6 +53,15 @@ function render_callback( $attributes ) {
     $attributes['display_price']                = ! empty( $attributes['display_price'] ) ? 'yes' : 'no';
     $attributes['display_ratings']              = ! empty( $attributes['display_ratings'] ) ? 'yes' : 'no';
     $attributes['display_cart']                 = ! empty( $attributes['display_cart'] ) ? 'yes' : 'no';
+    $attributes['A_play']                       = ! empty( $attributes['A_play'] ) ? 'yes' : 'no';
+    $attributes['repeat_product']               = ! empty( $attributes['repeat_product'] ) ? 'yes' : 'no';
+    $attributes['stop_hover']                   = ! empty( $attributes['stop_hover'] ) ? 'yes' : 'no';
+    $attributes['marquee']                      = ! empty( $attributes['marquee'] ) ? 'yes' : 'no';
+    $attributes['nav_show']                     = ! empty( $attributes['nav_show'] ) ? 'yes' : 'no';
+    $attributes['carousel_pagination']          = ! empty( $attributes['carousel_pagination'] ) ? 'yes' : 'no';
+    $attributes['grid_pagination']              = ! empty( $attributes['grid_pagination'] ) ? 'yes' : 'no';
+    $attributes['grid_pagination']              = ! empty( $attributes['grid_pagination'] ) ? 'yes' : 'no';
+    $attributes['img_hover_effect']             = ! empty( $attributes['img_hover_effect'] ) ? 'yes' : 'no';
 
     return run_shortcode( 'wcpcsu', $attributes );
     //return do_shortcode("[wcpcsup id='357']");
