@@ -201,7 +201,7 @@
 }
 
 /* Lazy load */
-/* .wpcu-lazy-load {
+.wpcu-lazy-load {
   position: relative;
 }
 .wpcu-lazy-load:before {
@@ -230,7 +230,7 @@
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   z-index: 9999;
-} */
+}
 
 /* Carousel nav style */
 .wpcu-carousel-nav {
