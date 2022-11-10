@@ -93,7 +93,13 @@
                         color: #fff !important;
                     }
                     .wpcu-product__price__sale ins bdi{
-                        color: var(--wpcu-primaryColor) !important;
+                        color: #fff !important;
+                    }
+                    .wpcu-product__price__sale del bdi{
+                        color: var(--wpcu-productTitleColor) !important;
+                    }
+                    .wpcu-product__price__sale .amount bdi {
+                        color: #fff;
                     }
                     .wpcu-badge{
                         border-color: #fff !important;

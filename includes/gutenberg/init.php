@@ -33,7 +33,7 @@ function register_block() {
         'wcpcsup/block',
         [
             'style'           => 'wcpcsu-main',
-            'editor_style'    => 'wcpcsu-main-js',
+            'editor_script'    => 'wcpcsu-main-js',
             'editor_script'   => 'wcpcsup-gutenberg-js',
             'api_version'     => 2,
             'attributes'      => $attributes,
