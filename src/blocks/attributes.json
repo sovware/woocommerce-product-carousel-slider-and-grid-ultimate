@@ -90,5 +90,61 @@
   "display_cart":{
     "type":"boolean",
     "default": true
+  },
+  "A_play":{
+    "type":"boolean",
+    "default": true
+  },
+  "repeat_product":{
+    "type":"boolean",
+    "default": true
+  },
+  "stop_hover":{
+    "type":"boolean",
+    "default": false
+  },
+  "marquee":{
+    "type":"boolean",
+    "default": false
+  },
+  "c_desktop":{
+    "type":"string",
+    "default": "2"
+  },
+  "c_desktop_small":{
+    "type":"string",
+    "default": "2"
+  },
+  "c_tablet":{
+    "type":"string",
+    "default": "2"
+  },
+  "c_mobile":{
+    "type":"string",
+    "default": "1"
+  },
+  "slide_speed":{
+    "type":"string",
+    "default": "2000"
+  },
+  "slide_time":{
+    "type":"string",
+    "default": "2000"
+  },
+  "scrool_direction":{
+    "type":"string",
+    "default": "right_left"
+  },
+  "nav_show":{
+    "type":"boolean",
+    "default": true
+  },
+  "nav_position":{
+    "type":"string",
+    "default": "bottom-right"
+  },
+  "carousel_pagination":{
+    "type":"boolean",
+    "default": false
   }
 }

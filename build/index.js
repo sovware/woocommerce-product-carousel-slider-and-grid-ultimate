@@ -69,11 +69,24 @@ __webpack_require__.r(__webpack_exports__);
       discount_ribbon_position,
       display_price,
       display_ratings,
-      display_cart
+      display_cart,
+      A_play,
+      repeat_product,
+      stop_hover,
+      marquee,
+      c_desktop,
+      c_desktop_small,
+      c_tablet,
+      c_mobile,
+      slide_speed,
+      scrool_direction,
+      nav_show,
+      nav_position,
+      carousel_pagination
     } = attributes;
     return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_4__.useBlockProps)(), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_4__.InspectorControls, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.PanelBody, {
       title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Layout', 'woocommerce-product-carousel-slider-and-ultimate'),
-      initialOpen: true
+      initialOpen: false
     }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.SelectControl, {
       label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Layout', 'woocommerce-product-carousel-slider-and-ultimate'),
       labelPosition: "side",
@@ -372,6 +385,124 @@ __webpack_require__.r(__webpack_exports__);
       onChange: newState => setAttributes({
         display_cart: newState
       })
+    })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.PanelBody, {
+      title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Carousel', 'woocommerce-product-carousel-slider-and-ultimate'),
+      initialOpen: false
+    }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.ToggleControl, {
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Auto Play', 'directorist'),
+      checked: A_play,
+      onChange: newState => setAttributes({
+        A_play: newState
+      })
+    }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.ToggleControl, {
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Repeat Product', 'directorist'),
+      checked: repeat_product,
+      onChange: newState => setAttributes({
+        repeat_product: newState
+      })
+    }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.ToggleControl, {
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Stop on Hover', 'directorist'),
+      checked: stop_hover,
+      onChange: newState => setAttributes({
+        stop_hover: newState
+      })
+    }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.ToggleControl, {
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Marquee', 'directorist'),
+      checked: marquee,
+      onChange: newState => setAttributes({
+        marquee: newState
+      })
+    }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.TextControl, {
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Products Columns', 'directorist'),
+      type: "text",
+      value: c_desktop,
+      onChange: newState => setAttributes({
+        c_desktop: newState
+      })
+    }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.TextControl, {
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Laptop Columns', 'directorist'),
+      type: "text",
+      value: c_desktop_small,
+      onChange: newState => setAttributes({
+        c_desktop_small: newState
+      })
+    }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.TextControl, {
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Tablet Columns', 'directorist'),
+      type: "text",
+      value: c_tablet,
+      onChange: newState => setAttributes({
+        c_tablet: newState
+      })
+    }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.TextControl, {
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Mobile Columns', 'directorist'),
+      type: "text",
+      value: c_mobile,
+      onChange: newState => setAttributes({
+        c_mobile: newState
+      })
+    }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.TextControl, {
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Slide Speed', 'directorist'),
+      type: "text",
+      value: slide_speed,
+      onChange: newState => setAttributes({
+        slide_speed: newState
+      })
+    }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.TextControl, {
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Slide Timeout', 'directorist'),
+      type: "text",
+      value: slide_time,
+      onChange: newState => setAttributes({
+        slide_time: newState
+      })
+    }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.SelectControl, {
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Scroll Direction', 'woocommerce-product-carousel-slider-and-ultimate'),
+      labelPosition: "side",
+      value: scrool_direction,
+      options: [{
+        label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Right to Left', 'woocommerce-product-carousel-slider-and-ultimate'),
+        value: 'right_left'
+      }, {
+        label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Left to Right', 'woocommerce-product-carousel-slider-and-ultimate'),
+        value: 'left_right'
+      }],
+      onChange: newState => setAttributes({
+        scrool_direction: newState
+      })
+    }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.ToggleControl, {
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Enable Navigation', 'directorist'),
+      checked: nav_show,
+      onChange: newState => setAttributes({
+        nav_show: newState
+      })
+    }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.SelectControl, {
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Position', 'woocommerce-product-carousel-slider-and-ultimate'),
+      labelPosition: "side",
+      value: nav_position,
+      options: [{
+        label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Top Left', 'woocommerce-product-carousel-slider-and-ultimate'),
+        value: 'top-left'
+      }, {
+        label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Top Right', 'woocommerce-product-carousel-slider-and-ultimate'),
+        value: 'top-right'
+      }, {
+        label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Middle', 'woocommerce-product-carousel-slider-and-ultimate'),
+        value: 'middle'
+      }, {
+        label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Bottom Left', 'woocommerce-product-carousel-slider-and-ultimate'),
+        value: 'bottom-left'
+      }, {
+        label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Bottom Right', 'woocommerce-product-carousel-slider-and-ultimate'),
+        value: 'bottom-right'
+      }],
+      onChange: newState => setAttributes({
+        nav_position: newState
+      })
+    }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.ToggleControl, {
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Enable Pagination', 'directorist'),
+      checked: carousel_pagination,
+      onChange: newState => setAttributes({
+        carousel_pagination: newState
+      })
     }))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)((_wordpress_server_side_render__WEBPACK_IMPORTED_MODULE_3___default()), {
       block: "wcpcsup/block",
       attributes: attributes
@@ -452,7 +583,7 @@ module.exports = window["wp"]["serverSideRender"];
   \************************************/
 /***/ (function(module) {
 
-module.exports = JSON.parse('{"layout":{"type":"string","default":"carousel"},"theme":{"type":"string","default":"theme_1"},"h_title_show":{"type":"boolean","default":false},"header_title":{"type":"string","default":""},"header_position":{"type":"string","default":"middle"},"display_title":{"type":"boolean","default":true},"products_type":{"type":"string","default":"latest"},"total_products":{"type":"string","default":"12"},"exclude_stock_out":{"type":"boolean","default":true},"display_sale_ribbon":{"type":"boolean","default":false},"sale_ribbon_text":{"type":"string","default":"Sale!"},"sale_ribbon_position":{"type":"string","default":"top_left"},"display_featured_ribbon":{"type":"boolean","default":false},"feature_ribbon_text":{"type":"string","default":"Featured!"},"featured_ribbon_position":{"type":"string","default":"top_right"},"display_sold_out_ribbon":{"type":"boolean","default":false},"sold_out_ribbon_text":{"type":"string","default":"Sold Out!"},"sold_out_ribbon_position":{"type":"string","default":"bottom_left"},"display_discount_ribbon":{"type":"boolean","default":false},"discount_ribbon_position":{"type":"string","default":"bottom_right"},"display_price":{"type":"boolean","default":true},"display_ratings":{"type":"boolean","default":true},"display_cart":{"type":"boolean","default":true}}');
+module.exports = JSON.parse('{"layout":{"type":"string","default":"carousel"},"theme":{"type":"string","default":"theme_1"},"h_title_show":{"type":"boolean","default":false},"header_title":{"type":"string","default":""},"header_position":{"type":"string","default":"middle"},"display_title":{"type":"boolean","default":true},"products_type":{"type":"string","default":"latest"},"total_products":{"type":"string","default":"12"},"exclude_stock_out":{"type":"boolean","default":true},"display_sale_ribbon":{"type":"boolean","default":false},"sale_ribbon_text":{"type":"string","default":"Sale!"},"sale_ribbon_position":{"type":"string","default":"top_left"},"display_featured_ribbon":{"type":"boolean","default":false},"feature_ribbon_text":{"type":"string","default":"Featured!"},"featured_ribbon_position":{"type":"string","default":"top_right"},"display_sold_out_ribbon":{"type":"boolean","default":false},"sold_out_ribbon_text":{"type":"string","default":"Sold Out!"},"sold_out_ribbon_position":{"type":"string","default":"bottom_left"},"display_discount_ribbon":{"type":"boolean","default":false},"discount_ribbon_position":{"type":"string","default":"bottom_right"},"display_price":{"type":"boolean","default":true},"display_ratings":{"type":"boolean","default":true},"display_cart":{"type":"boolean","default":true},"A_play":{"type":"boolean","default":true},"repeat_product":{"type":"boolean","default":true},"stop_hover":{"type":"boolean","default":false},"marquee":{"type":"boolean","default":false},"c_desktop":{"type":"string","default":"2"},"c_desktop_small":{"type":"string","default":"2"},"c_tablet":{"type":"string","default":"2"},"c_mobile":{"type":"string","default":"1"},"slide_speed":{"type":"string","default":"2000"},"slide_time":{"type":"string","default":"2000"},"scrool_direction":{"type":"string","default":"right_left"},"nav_show":{"type":"boolean","default":true},"nav_position":{"type":"string","default":"bottom-right"},"carousel_pagination":{"type":"boolean","default":false}}');
 
 /***/ })
 
