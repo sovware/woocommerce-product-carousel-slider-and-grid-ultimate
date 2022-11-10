@@ -47,12 +47,31 @@ registerBlockType( 'wcpcsup/block', {
 			h_title_show,
 			header_title,
 			header_position,
-			display_title
+			display_title,
+			products_type,
+			total_products,
+			exclude_stock_out,
+
+			display_sale_ribbon,
+			sale_ribbon_text,
+			sale_ribbon_position,
+			display_featured_ribbon,
+			feature_ribbon_text,
+			featured_ribbon_position,
+			display_sold_out_ribbon,
+			sold_out_ribbon_text,
+			sold_out_ribbon_position,
+			display_discount_ribbon,
+			discount_ribbon_position,
+			display_price,
+			display_ratings,
+			display_cart,
 		} = attributes;
 		return(
             <Fragment>
                 <div { ...useBlockProps() }>
                     <InspectorControls>
+
                         <PanelBody title={ __( 'Layout', 'woocommerce-product-carousel-slider-and-ultimate' ) } initialOpen={ true }>
 
 							<SelectControl
@@ -103,14 +122,14 @@ registerBlockType( 'wcpcsup/block', {
 								onChange={ newState => setAttributes( { h_title_show: newState } ) }
 							/>
 
-							<TextControl
+							{ h_title_show ? <TextControl
 								label={ __( 'Header Title', 'directorist' ) }
 								type='text'
 								value={ header_title }
 								onChange={ newState => setAttributes( { header_title: newState } ) }
-							/>
+							/> : setAttributes( { header_title: '' } ) }
 
-							<SelectControl
+							{ h_title_show ? <SelectControl
 								label={ __( 'Header position', 'woocommerce-product-carousel-slider-and-ultimate' ) }
 								labelPosition='side'
 								value={ header_position }
@@ -120,7 +139,7 @@ registerBlockType( 'wcpcsup/block', {
 									{ label: __( 'Right', 'woocommerce-product-carousel-slider-and-ultimate' ), value: 'right' },
 								] }
 								onChange={ newState => setAttributes( { header_position: newState } ) }
-							/>
+							/> : setAttributes( { header_position: 'middle' } ) }
 
 							<ToggleControl
 								label={ __( 'Display Title', 'directorist' ) }
@@ -129,9 +148,162 @@ registerBlockType( 'wcpcsup/block', {
 							/>
 							
                         </PanelBody>
+
+						<PanelBody title={ __( 'Query', 'woocommerce-product-carousel-slider-and-ultimate' ) } initialOpen={ false }>
+
+							<SelectControl
+								label={ __( 'Product Type', 'woocommerce-product-carousel-slider-and-ultimate' ) }
+								labelPosition='side'
+								value={ products_type }
+								options={ [
+									{ label: __( 'Latest', 'woocommerce-product-carousel-slider-and-ultimate' ), value: 'latest' },
+									{ label: __( 'Older', 'woocommerce-product-carousel-slider-and-ultimate' ), value: 'older' },
+									{ label: __( 'Top Rated', 'woocommerce-product-carousel-slider-and-ultimate' ), value: 'top_rated' },
+									{ label: __( 'Random', 'woocommerce-product-carousel-slider-and-ultimate' ), value: 'random' },
+									{ label: __( 'On Sale', 'woocommerce-product-carousel-slider-and-ultimate' ), value: 'onsale' },
+									{ label: __( 'Best Selling', 'woocommerce-product-carousel-slider-and-ultimate' ), value: 'bestselling' },
+									{ label: __( 'Featured', 'woocommerce-product-carousel-slider-and-ultimate' ), value: 'featured' },
+								] }
+								onChange={ newState => setAttributes( { products_type: newState } ) }
+							/>
+
+							<TextControl
+								label={ __( 'Total Products to Display', 'directorist' ) }
+								type='text'
+								value={ total_products }
+								onChange={ newState => setAttributes( { total_products: newState } ) }
+							/>
+
+							<ToggleControl
+								label={ __( 'Exclude Stock-out Products', 'directorist' ) }
+								checked={ exclude_stock_out }
+								onChange={ newState => setAttributes( { exclude_stock_out: newState } ) }
+							/>
+
+						</PanelBody>
+
+						<PanelBody title={ __( 'Elements', 'woocommerce-product-carousel-slider-and-ultimate' ) } initialOpen={ false }>
+
+							<ToggleControl
+								label={ __( 'Display "Sale" Badge', 'directorist' ) }
+								checked={ display_sale_ribbon }
+								onChange={ newState => setAttributes( { display_sale_ribbon: newState } ) }
+							/>
+
+							<TextControl
+								label={ __( 'Sale Ribbon Text', 'directorist' ) }
+								type='text'
+								value={ sale_ribbon_text }
+								onChange={ newState => setAttributes( { sale_ribbon_text: newState } ) }
+							/>
+
+							<SelectControl
+								label={ __( 'Sale Ribbon Position', 'woocommerce-product-carousel-slider-and-ultimate' ) }
+								labelPosition='side'
+								value={ sale_ribbon_position }
+								options={ [
+									{ label: __( 'Top Left', 'woocommerce-product-carousel-slider-and-ultimate' ), value: 'top_left' },
+									{ label: __( 'Top Right', 'woocommerce-product-carousel-slider-and-ultimate' ), value: 'top_right' },
+									{ label: __( 'Bottom Left', 'woocommerce-product-carousel-slider-and-ultimate' ), value: 'bottom_left' },
+									{ label: __( 'Bottom Right', 'woocommerce-product-carousel-slider-and-ultimate' ), value: 'bottom_right' },
+								] }
+								onChange={ newState => setAttributes( { sale_ribbon_position: newState } ) }
+							/>
+
+							<ToggleControl
+								label={ __( 'Display "Featured" Badge', 'directorist' ) }
+								checked={ display_featured_ribbon }
+								onChange={ newState => setAttributes( { display_featured_ribbon: newState } ) }
+							/>
+
+							<TextControl
+								label={ __( 'Featured Ribbon Text', 'directorist' ) }
+								type='text'
+								value={ feature_ribbon_text }
+								onChange={ newState => setAttributes( { feature_ribbon_text: newState } ) }
+							/>
+
+							<SelectControl
+								label={ __( 'Featured Ribbon Position', 'woocommerce-product-carousel-slider-and-ultimate' ) }
+								labelPosition='side'
+								value={ featured_ribbon_position }
+								options={ [
+									{ label: __( 'Top Left', 'woocommerce-product-carousel-slider-and-ultimate' ), value: 'top_left' },
+									{ label: __( 'Top Right', 'woocommerce-product-carousel-slider-and-ultimate' ), value: 'top_right' },
+									{ label: __( 'Bottom Left', 'woocommerce-product-carousel-slider-and-ultimate' ), value: 'bottom_left' },
+									{ label: __( 'Bottom Right', 'woocommerce-product-carousel-slider-and-ultimate' ), value: 'bottom_right' },
+								] }
+								onChange={ newState => setAttributes( { featured_ribbon_position: newState } ) }
+							/>
+
+							<ToggleControl
+								label={ __( 'Display "Sold Out" Badge', 'directorist' ) }
+								checked={ display_sold_out_ribbon }
+								onChange={ newState => setAttributes( { display_sold_out_ribbon: newState } ) }
+							/>
+
+							<TextControl
+								label={ __( 'Sold Out Ribbon Text', 'directorist' ) }
+								type='text'
+								value={ sold_out_ribbon_text }
+								onChange={ newState => setAttributes( { sold_out_ribbon_text: newState } ) }
+							/>
+
+							<SelectControl
+								label={ __( 'Sold Out Ribbon Position', 'woocommerce-product-carousel-slider-and-ultimate' ) }
+								labelPosition='side'
+								value={ sold_out_ribbon_position }
+								options={ [
+									{ label: __( 'Top Left', 'woocommerce-product-carousel-slider-and-ultimate' ), value: 'top_left' },
+									{ label: __( 'Top Right', 'woocommerce-product-carousel-slider-and-ultimate' ), value: 'top_right' },
+									{ label: __( 'Bottom Left', 'woocommerce-product-carousel-slider-and-ultimate' ), value: 'bottom_left' },
+									{ label: __( 'Bottom Right', 'woocommerce-product-carousel-slider-and-ultimate' ), value: 'bottom_right' },
+								] }
+								onChange={ newState => setAttributes( { sold_out_ribbon_position: newState } ) }
+							/>
+
+							<ToggleControl
+								label={ __( 'Display "Discount Percentage" Badge', 'directorist' ) }
+								checked={ display_discount_ribbon }
+								onChange={ newState => setAttributes( { display_discount_ribbon: newState } ) }
+							/>
+
+							<SelectControl
+								label={ __( 'Discount Ribbon Position', 'woocommerce-product-carousel-slider-and-ultimate' ) }
+								labelPosition='side'
+								value={ discount_ribbon_position }
+								options={ [
+									{ label: __( 'Top Left', 'woocommerce-product-carousel-slider-and-ultimate' ), value: 'top_left' },
+									{ label: __( 'Top Right', 'woocommerce-product-carousel-slider-and-ultimate' ), value: 'top_right' },
+									{ label: __( 'Bottom Left', 'woocommerce-product-carousel-slider-and-ultimate' ), value: 'bottom_left' },
+									{ label: __( 'Bottom Right', 'woocommerce-product-carousel-slider-and-ultimate' ), value: 'bottom_right' },
+								] }
+								onChange={ newState => setAttributes( { discount_ribbon_position: newState } ) }
+							/>
+
+							<ToggleControl
+								label={ __( 'Display Product Price', 'directorist' ) }
+								checked={ display_price }
+								onChange={ newState => setAttributes( { display_price: newState } ) }
+							/>
+
+							<ToggleControl
+								label={ __( 'Display Product Ratings', 'directorist' ) }
+								checked={ display_ratings }
+								onChange={ newState => setAttributes( { display_ratings: newState } ) }
+							/>
+
+							<ToggleControl
+								label={ __( 'Display "Add to Cart" Button', 'directorist' ) }
+								checked={ display_cart }
+								onChange={ newState => setAttributes( { display_cart: newState } ) }
+							/>
+
+						</PanelBody>
+
                     </InspectorControls>
                 
-			     <ServerSideRender block="wcpcsup/block" attributes={ attributes } />
+			    	<ServerSideRender block="wcpcsup/block" attributes={ attributes } />
                  </div>
             </Fragment>
 		)

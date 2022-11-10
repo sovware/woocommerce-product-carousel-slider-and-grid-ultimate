@@ -43,8 +43,16 @@ function register_block() {
 }
 
 function render_callback( $attributes ) {
-    $attributes['h_title_show'] = ! empty( $attributes['h_title_show'] ) ? 'yes' : 'no';
-    $attributes['display_title'] = ! empty( $attributes['display_title'] ) ? 'yes' : 'no';
+    $attributes['h_title_show']                 = ! empty( $attributes['h_title_show'] ) ? 'yes' : 'no';
+    $attributes['display_title']                = ! empty( $attributes['display_title'] ) ? 'yes' : 'no';
+    $attributes['exclude_stock_out']            = ! empty( $attributes['exclude_stock_out'] ) ? 'yes' : 'no';
+    $attributes['display_sale_ribbon']          = ! empty( $attributes['display_sale_ribbon'] ) ? 'yes' : 'no';
+    $attributes['display_featured_ribbon']      = ! empty( $attributes['display_featured_ribbon'] ) ? 'yes' : 'no';
+    $attributes['display_sold_out_ribbon']      = ! empty( $attributes['display_sold_out_ribbon'] ) ? 'yes' : 'no';
+    $attributes['display_discount_ribbon']      = ! empty( $attributes['display_discount_ribbon'] ) ? 'yes' : 'no';
+    $attributes['display_price']                = ! empty( $attributes['display_price'] ) ? 'yes' : 'no';
+    $attributes['display_ratings']              = ! empty( $attributes['display_ratings'] ) ? 'yes' : 'no';
+    $attributes['display_cart']                 = ! empty( $attributes['display_cart'] ) ? 'yes' : 'no';
 
     return run_shortcode( 'wcpcsu', $attributes );
     //return do_shortcode("[wcpcsup id='357']");
