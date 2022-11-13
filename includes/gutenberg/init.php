@@ -12,7 +12,7 @@ function register_block() {
     wp_enqueue_style( 'wcpcsup-swmodal', WCPCSU_URL . 'assets/css/swmodal.css' );
     wp_enqueue_style( 'wcpcsup-swiper', WCPCSU_URL . 'assets/css/swiper-bundle.min.css' );
 
-    wp_enqueue_script( 'wcpcsup-main-js', WCPCSU_URL . 'assets/js/main.js', array( 'jQuery' ) );
+    wp_enqueue_script( 'wcpcsup-main-js', WCPCSU_URL . 'assets/js/main.js');
     wp_enqueue_script( 'wcpcsup-swmodal-js', WCPCSU_URL . 'assets/js/swmodal.js' );
     wp_enqueue_script( 'wcpcsup-swiper-js', WCPCSU_URL . 'assets/js/swiper-bundle.min.js' );
 

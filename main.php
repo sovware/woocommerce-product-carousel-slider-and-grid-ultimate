@@ -223,7 +223,7 @@ if( ! in_array('woocommerce-product-carousel-slider-grid-ultimate-pro/main.php',
 		}
 
         public function elementor_preview_enqueue_script() {
-            wp_enqueue_script( 'wcpcsup-main-js', WCPCSU_URL . 'assets/js/main.js' );
+            wp_enqueue_script( 'wcpcsup-main-js', WCPCSU_URL . 'assets/js/main.js', array('wp-element') );
             wp_enqueue_script( 'wcpcsup-swmodal-js', WCPCSU_URL . 'assets/js/swmodal.js' );
             wp_enqueue_script( 'wcpcsup-swiper-js', WCPCSU_URL . 'assets/js/swiper-bundle.min.js' );
 
