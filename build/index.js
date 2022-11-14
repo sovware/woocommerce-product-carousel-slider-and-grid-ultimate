@@ -123,10 +123,10 @@ function extra_js() {
 }
 (0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__.registerBlockType)('wcpcsup/block', {
   apiVersion: 2,
-  title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('ultimate', 'woocommerce-product-carousel-slider-and-ultimate'),
-  category: 'common',
-  keywords: ['ultimate', 'call to action'],
-  icon: 'admin-comments',
+  title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('WooCommerce Product Ultimate', 'woocommerce-product-carousel-slider-and-ultimate'),
+  category: 'widgets',
+  keywords: ['woocommerce', 'product', 'ultimate', 'wcc'],
+  icon: 'slides',
   supports: {
     html: false
   },

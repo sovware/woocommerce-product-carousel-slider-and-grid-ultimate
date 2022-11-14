@@ -115,13 +115,13 @@ function extra_js() {
 registerBlockType( 'wcpcsup/block', {
     apiVersion: 2,
 
-	title: __( 'ultimate', 'woocommerce-product-carousel-slider-and-ultimate' ),
+	title: __( 'WooCommerce Product Ultimate', 'woocommerce-product-carousel-slider-and-ultimate' ),
 
-	category: 'common',
+	category: 'widgets',
 
-    keywords: [ 'ultimate', 'call to action' ],
+    keywords: [ 'woocommerce', 'product', 'ultimate', 'wcc' ],
 
-    icon: 'admin-comments',
+    icon: 'slides',
 
     supports: {
 		html: false
@@ -138,8 +138,9 @@ registerBlockType( 'wcpcsup/block', {
 			useEffect( () => {
 				setTimeout(() => {
 					extra_js();
-				}, 5000);
-			});
+				}, 5000 );
+			} );
+
         let {
 			layout,
 			theme,
@@ -182,13 +183,11 @@ registerBlockType( 'wcpcsup/block', {
 			g_tablet,
 			g_mobile,
 			grid_pagination,
-
 			img_crop,
 			crop_image_width,
 			crop_image_height,
 			img_hover_effect,
 			img_animation
-
 		} = attributes;
 		return(
             <Fragment>
@@ -207,13 +206,6 @@ registerBlockType( 'wcpcsup/block', {
 								] }
 								onChange={ newState => setAttributes( { layout: newState } ) }
 							/>
-							
-							{/* <ColorPicker 
-								name={ __( 'Laydsfsout', 'directorist' ) }
-								color={ test }
-								labelPosition='side'
-								onChange={ newState => setAttributes( { test: newState } ) }
-							/> */}
 
 							<SelectControl
 								label={ __( 'Theme', 'directorist' ) }
