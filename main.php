@@ -73,9 +73,11 @@ if( ! in_array('woocommerce-product-carousel-slider-grid-ultimate-pro/main.php',
                 add_action('admin_enqueue_scripts',array(self::$instance, 'wcpcsu_enqueue_file'));
                 add_action('template_redirect',array(self::$instance, 'template_enqueue_file'));
                 add_action('admin_menu',array(self::$instance,'upgrade_to_pro'));
-                add_action( 'elementor/preview/enqueue_styles', [ self::$instance, 'el_preview_style' ] );
 
+                add_action( 'elementor/preview/enqueue_styles', [ self::$instance, 'el_preview_style' ] );
                 add_action( 'elementor/preview/enqueue_scripts', [ self::$instance, 'el_preview_script' ] );
+
+                add_action( 'enqueue_block_editor_assets', [ self::$instance, 'enqueue_block_editor_assets' ] );
 
                 self::$instance->wcpcsu_include();
                 self::$instance->custom_post = new Wcpcsu_Custom_Post();
@@ -136,6 +138,7 @@ if( ! in_array('woocommerce-product-carousel-slider-grid-ultimate-pro/main.php',
          * @return void
          */
         public function wcpcsu_include() {
+            require_once WCPCSU_INC_DIR . 'gutenberg/init.php';
             require_once WCPCSU_INC_DIR . 'elementor/init.php';
             require_once WCPCSU_INC_DIR . 'helper-functions.php';
             wpcsu_load_dependencies( 'all', WCPCSU_INC_DIR . 'classes/' );
@@ -201,6 +204,10 @@ if( ! in_array('woocommerce-product-carousel-slider-grid-ultimate-pro/main.php',
             ));
             
 		}
+
+        public function enqueue_block_editor_assets() {
+            wp_enqueue_style( 'wcpcsup-block-editor', WCPCSU_URL . 'admin/css/block-editor.css' );
+        }
 
         /**
          * It will serialize and then encode the string using base64_encode() and return the encoded data

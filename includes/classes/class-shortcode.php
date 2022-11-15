@@ -397,7 +397,7 @@ class WCPCSU_Shortcode {
 			<?php if( ( 'carousel' == $layout && 'yes' == $nav_show ) && ( 'bottom-left' == $nav_position || 'bottom-right' == $nav_position || 'bottom-middle' == $nav_position ) ) {
 				include WCPCSU_INC_DIR . 'template/navigation.php';
 			 } ?>
-			 <?php if( ( 'carousel' == $layout && 'yes' == $grid_pagination ) || ( 'carousel' == $layout && 'yes' ==  $carousel_pagination ) ) {
+			 <?php if( ( 'grid' == $layout && 'yes' == $grid_pagination ) || ( 'carousel' == $layout && 'yes' ==  $carousel_pagination ) ) {
 				include WCPCSU_INC_DIR . 'template/pagination.php';
 			 } ?>
 		</div><!-- ends: .wpcu-products -->
