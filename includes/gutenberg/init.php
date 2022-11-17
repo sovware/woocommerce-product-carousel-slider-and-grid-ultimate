@@ -1,18 +1,27 @@
 <?php 
+
 if( ! defined( 'ABSPATH' ) ) : exit(); endif; // No direct access allowed
 
 function register_block() {
-    //$asset_file = include( plugin_dir_path( __FILE__ ) . 'build/index.asset.php');
 
-    wp_enqueue_script( 'wcpcsup-gutenberg-js', WCPCSU_URL . 'build/index.js', [
-        'wp-block-editor', 'wp-blocks', 'wp-components', 'wp-element', 'wp-i18n', 'wp-server-side-render'
-    ] );
+    wp_enqueue_script( 
+        'wcpcsup-gutenberg-js', 
+        WCPCSU_URL . 'build/index.js', 
+        [
+        'wp-block-editor', 
+        'wp-blocks', 
+        'wp-components', 
+        'wp-element', 
+        'wp-i18n', 
+        'wp-server-side-render'
+        ] 
+    );
 
     wp_enqueue_style( 'wcpcsup-main', WCPCSU_URL . 'assets/css/style.css' );
     wp_enqueue_style( 'wcpcsup-swmodal', WCPCSU_URL . 'assets/css/swmodal.css' );
     wp_enqueue_style( 'wcpcsup-swiper', WCPCSU_URL . 'assets/css/swiper-bundle.min.css' );
 
-    wp_enqueue_script( 'wcpcsup-main-js', WCPCSU_URL . 'assets/js/main.js', array( 'jQuery' ) );
+    wp_enqueue_script( 'wcpcsup-main-js', WCPCSU_URL . 'assets/js/main.js');
     wp_enqueue_script( 'wcpcsup-swmodal-js', WCPCSU_URL . 'assets/js/swmodal.js' );
     wp_enqueue_script( 'wcpcsup-swiper-js', WCPCSU_URL . 'assets/js/swiper-bundle.min.js' );
 
@@ -26,8 +35,6 @@ function register_block() {
     ));
 
     $attributes = get_attributes_from_metadata( trailingslashit( __DIR__ ) );
-
-    //var_dump( $attributes );
 
     register_block_type(
         'wcpcsup/block',
@@ -63,7 +70,7 @@ function render_callback( $attributes ) {
     $attributes['img_hover_effect']             = ! empty( $attributes['img_hover_effect'] ) ? 'yes' : 'no';
 
     return run_shortcode( 'wcpcsu', $attributes );
-    //return do_shortcode("[wcpcsup id='357']");
+    
 }
 
 function get_attributes_from_metadata( $file_or_folder ) {
@@ -85,7 +92,7 @@ function get_attributes_from_metadata( $file_or_folder ) {
 	return $metadata;
 }
 
- function run_shortcode( $shortcode, $atts = [] ) {
+function run_shortcode( $shortcode, $atts = [] ) {
     $html = '';
 
     foreach ( $atts as $key => $value ) {
@@ -96,6 +103,7 @@ function get_attributes_from_metadata( $file_or_folder ) {
 
     return do_shortcode( $html );
 }
+
 add_action( 'init', 'register_block' );
 
 function add_rest_method( $endpoints ) {
@@ -111,5 +119,5 @@ function add_rest_method( $endpoints ) {
 
     return $endpoints;
 }
-add_filter( 'rest_endpoints', 'add_rest_method');
+//add_filter( 'rest_endpoints', 'add_rest_method');
 ?>
