@@ -305,33 +305,3 @@
     }
 }
 
-// Guterberg Style
-.wp-block-wcpcsup-block {
-    .wpcu-products {    
-        .product.woocommerce.add_to_cart_inline {
-            padding: 0 !important;
-            border: none !important;
-            max-width: 100%;
-            .button {
-                white-space: normal;
-            }
-        }
-        .wpcu-product__title {
-            font-size: var(--wpcu-productTitleSize) !important;
-        }
-        .wpcu-product__action-icons {
-            max-width: 100%;
-        }
-        .wpcu-product__cover-content--middle {
-            width: calc(100% - 30px);
-            height: calc(100% - 30px);
-            max-width: 100%;
-            max-height: 100%;
-        }
-    }
-    .wpcu-theme_15 {
-        .wpcu-product__content {
-            padding-bottom: 110px;
-        }
-    }
-}
