@@ -388,7 +388,7 @@ registerBlockType( 'wcpcsup/block', {
 
 						</PanelBody>
 
-						<PanelBody title={ __( 'Carousel', 'woocommerce-product-carousel-slider-and-ultimate' ) } initialOpen={ false }>
+						{ layout == 'carousel' ? <PanelBody title={ __( 'Carousel', 'woocommerce-product-carousel-slider-and-ultimate' ) } initialOpen={ false }>
 
 							<ToggleControl
 								label={ __( 'Auto Play', 'directorist' ) }
@@ -471,9 +471,9 @@ registerBlockType( 'wcpcsup/block', {
 								onChange={ newState => setAttributes( { carousel_pagination: newState } ) }
 							/>
 							
-						</PanelBody>
+						</PanelBody> : '' }
 
-						<PanelBody title={ __( 'Grid', 'woocommerce-product-carousel-slider-and-ultimate' ) } initialOpen={ false }>
+						{ layout == 'grid' ? <PanelBody title={ __( 'Grid', 'woocommerce-product-carousel-slider-and-ultimate' ) } initialOpen={ false }>
 
 							<TextControl
 								label={ __( 'Grid Columns', 'directorist' ) }
@@ -502,7 +502,7 @@ registerBlockType( 'wcpcsup/block', {
 								onChange={ newState => setAttributes( { grid_pagination: newState } ) }
 							/>
 
-						</PanelBody>
+						</PanelBody> : '' }
 
 						<PanelBody title={ __( 'Image', 'woocommerce-product-carousel-slider-and-ultimate' ) } initialOpen={ false }>
 

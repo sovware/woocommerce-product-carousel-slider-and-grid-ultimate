@@ -66,7 +66,6 @@ function render_callback( $attributes ) {
     $attributes['nav_show']                     = ! empty( $attributes['nav_show'] ) ? 'yes' : 'no';
     $attributes['carousel_pagination']          = ! empty( $attributes['carousel_pagination'] ) ? 'yes' : 'no';
     $attributes['grid_pagination']              = ! empty( $attributes['grid_pagination'] ) ? 'yes' : 'no';
-    $attributes['grid_pagination']              = ! empty( $attributes['grid_pagination'] ) ? 'yes' : 'no';
     $attributes['img_hover_effect']             = ! empty( $attributes['img_hover_effect'] ) ? 'yes' : 'no';
 
     return run_shortcode( 'wcpcsu', $attributes );
