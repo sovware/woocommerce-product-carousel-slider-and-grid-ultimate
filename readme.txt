@@ -2,8 +2,8 @@
 Contributors: wpwax
 Tags: woocommerce carousel, woocommerce slider, woocommerce grid, woocommerce product slider, woocommerce product carousel
 Requires at least: 4.0
-Tested up to: 6.0
-Stable tag: 3.6.2
+Tested up to: 6.1
+Stable tag: 3.7.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -102,6 +102,9 @@ Post Grid and Carousel Ultimate plugin is very easy to use. Just follow the foll
 12. Backend: Style Settings
 
 == Changelog ==
+= 3.7.0 =
+* Add: Elementor Support
+* Add: Gutenberg Support
 = 3.6.2 =
 * Add: WordPress 6.0 compatibility
 * Add: WooCommerce 6.5 compatibility
