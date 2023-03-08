@@ -3,7 +3,7 @@ Contributors: wpwax
 Tags: woocommerce carousel, woocommerce slider, woocommerce grid, woocommerce product slider, woocommerce product carousel
 Requires at least: 4.0
 Tested up to: 6.1
-Stable tag: 1.9.0
+Stable tag: 1.9.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -49,8 +49,8 @@ Here is a quick tour of the WooCommerce Product Carousel, Slider & Grid Ultimate
 *   100% Responsive and mobile-friendly.
 *   3 different themes for Carousel & Slider.
 *   3 different themes for Grid.
-*   Gutenberg Block [New]
-*   Elementor Page Builder Support [New]
+*   Gutenberg Block [New].
+*   Elementor Page Builder Support [New].
 *   Latest/Recent, Older and Featured products display.
 *   Display Unlimited products
 *   Create Unlimited Carousels, Sliders and Grids.
@@ -106,6 +106,16 @@ Introducing WooCommerce Product Carousel, Slider & Grid Ultimate Gutenberg Block
 👉 Like us on Facebook : [wpWax](https://www.facebook.com/wpwax)
 👉 Official YouTube Channel : [YouTube](https://www.youtube.com/c/wpWax)
 
+👉  [Directorist](https://wordpress.org/plugins/directorist/) – WordPress Business Directory Plugin with Classified Ads Listings
+
+👉  [HelpGent](https://wordpress.org/plugins/helpgent/) – Your Ultimate Help Agent for Video, Voice, and Text Messaging with Screen Record Facility
+
+👉  [Legal Pages](https://wordpress.org/plugins/legal-pages/) – Privacy Policy, Terms & Conditions, GDPR, CCPA, and Cookie Notice Generator
+
+👉  [Logo Showcase Ultimate](https://wordpress.org/plugins/logo-showcase-ultimate/) – Ultimate logo showcase plugin to create responsive logo carousel, logo slider & logo grid and display unlimited clients, partners, sponsors logos
+
+👉  [Post Grid, Slider & Carousel Ultimate](https://wordpress.org/plugins/post-grid-carousel-ultimate/) – The easiest and most useful plugin to display blog posts, pages, or custom posts in beautiful post layouts like post grid, post carousel & post slider
+
 
 == Installation ==
 
@@ -134,6 +144,8 @@ Post Grid and Carousel Ultimate plugin is very easy to use. Just follow the foll
 12. Backend: Style Settings
 
 == Changelog ==
+= 1.9.1 =
+* Add: WooCommerce 7.4 compatibility
 = 1.9.0 =
 * Add: Elementor support
 * Add: Gutenberg support
