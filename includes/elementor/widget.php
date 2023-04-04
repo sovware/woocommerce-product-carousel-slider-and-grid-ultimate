@@ -2289,7 +2289,7 @@ class Elementor_Woo_Ultimate_Widget extends \Elementor\Widget_Base {
 				'label'     => __( 'Box Shadow', 'woocommerce-product-carousel-slider-and-ultimate' ),
 				'id'     	=> 'grid_pagi_hover_shadow',
 				'type'		=> \Elementor\Group_Control_Box_Shadow::get_type(),
-				'selector' 	=> [ 
+				'selectors' 	=> [ 
 					'{{WRAPPER}} .wpcu-pagination .page-numbers:hover',
 					'{{WRAPPER}} .wpcu-pagination .nav-links .current',
 				]
@@ -2299,7 +2299,7 @@ class Elementor_Woo_Ultimate_Widget extends \Elementor\Widget_Base {
 				'label'     => __( 'Typography', 'woocommerce-product-carousel-slider-and-ultimate' ),
 				'id'     	=> 'grid_pagi_hover_typography',
 				'type'		=> Group_Control_Typography::get_type(),
-				'selector' 	=> [
+				'selectors' 	=> [
 					'{{WRAPPER}} .wpcu-pagination .page-numbers:hover',
 					'{{WRAPPER}} .wpcu-pagination .nav-links .current',
 				],
