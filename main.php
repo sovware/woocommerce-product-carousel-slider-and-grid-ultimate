@@ -79,6 +79,10 @@ if( ! in_array('woocommerce-product-carousel-slider-grid-ultimate-pro/main.php',
 
                 add_action( 'enqueue_block_editor_assets', [ self::$instance, 'enqueue_block_editor_assets' ] );
 
+                if( empty( get_option('wcpcsu_dismiss_discount_notice') ) ) {
+                    add_action( 'admin_notices', array( self::$instance, 'admin_notices') );
+                }
+
                 self::$instance->wcpcsu_include();
                 self::$instance->custom_post = new Wcpcsu_Custom_Post();
                 self::$instance->metabox = new Wcpcsu_Meta_Box();
@@ -88,6 +92,13 @@ if( ! in_array('woocommerce-product-carousel-slider-grid-ultimate-pro/main.php',
             }
 
             return self::$instance;
+        }
+
+        public function admin_notices() {
+            global $pagenow, $typenow;
+            if ( 'index.php' == $pagenow || 'plugins.php' == $pagenow || 'lcg_mainpost' == $typenow || 'lcg_shortcode' == $typenow ) {
+                require_once WCPCSU_INC_DIR . '/notice.php';
+            }
         }
 
         /**

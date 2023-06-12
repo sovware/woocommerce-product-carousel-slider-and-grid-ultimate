@@ -1,6 +1,6 @@
 ﻿=== Product Carousel Slider & Grid Ultimate for WooCommerce ===
 Contributors: wpwax
-Tags: woocommerce carousel, woocommerce slider, woocommerce grid, woocommerce product slider, woocommerce product carousel
+Tags: woocommerce carousel, woocommerce slider, woocommerce grid, woocommerce product slider, woocommerce product carousel, WooCommerce product display, WooCommerce product grid plugin, Dynamic product sliders, WooCommerce product carousel plugin, Customizable product sliders, Responsive WooCommerce carousel, WooCommerce product showcase
 Requires at least: 4.0
 Tested up to: 6.2
 Stable tag: 1.9.4
