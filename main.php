@@ -83,6 +83,9 @@ if( ! in_array('woocommerce-product-carousel-slider-grid-ultimate-pro/main.php',
                     add_action( 'admin_notices', array( self::$instance, 'admin_notices') );
                 }
 
+                if( empty( get_option('migrate_serialize_to_json') ) ) {
+                    add_action( 'admin_init', array( self::$instance, 'migrate_serialize_data') );
+                }
                 self::$instance->wcpcsu_include();
                 self::$instance->custom_post = new Wcpcsu_Custom_Post();
                 self::$instance->metabox = new Wcpcsu_Meta_Box();
@@ -92,6 +95,40 @@ if( ! in_array('woocommerce-product-carousel-slider-grid-ultimate-pro/main.php',
             }
 
             return self::$instance;
+        }
+
+        public function migrate_serialize_data() {
+            
+            if ( ! current_user_can( 'manage_options' ) ) {
+                return;
+            }
+
+            $args = array(
+                'post_type'      => WCPCSU_CUSTOM_POST_TYPE,
+            );
+
+            $query = new WP_Query( $args );
+            
+            // Check if there are posts in the query
+            if ( $query->have_posts() ) {
+                // Loop through each post
+                while ( $query->have_posts() ) {
+                    $query->the_post();
+                    $wcpscu_data = get_post_meta( get_the_ID(), 'wcpscu', true );
+                    
+                    if ( ! empty( $wcpscu_data ) && ! is_json_encoded( $wcpscu_data ) ) {
+                        $unserialized_data = unserialize( base64_decode( $wcpscu_data ) );
+                        
+                        $json_decode_data = Woocmmerce_Product_carousel_slider_ultimate::json_encoded( $unserialized_data );
+                        update_post_meta( get_the_ID(), 'wcpscu', $json_decode_data );
+                    }
+                }
+
+                // Restore the global post data
+                wp_reset_postdata();
+            }
+            update_option( 'migrate_serialize_to_json', true );
+
         }
 
         public function admin_notices() {
@@ -225,9 +262,8 @@ if( ! in_array('woocommerce-product-carousel-slider-grid-ultimate-pro/main.php',
          * @param $data
          * @return string
          */
-        public static function serialize_and_encode24($data)
-        {
-            return base64_encode(serialize($data));
+        public static function json_encoded( $data ) {
+            return json_encode( $data );
         }
 
         /**
@@ -235,8 +271,16 @@ if( ! in_array('woocommerce-product-carousel-slider-grid-ultimate-pro/main.php',
          * @param string $data Encoded strings that should be decoded and then unserialize
          * @return mixed
          */
-        public static function unserialize_and_decode24($data){
-            return unserialize(base64_decode($data));
+        public static function json_decoded( $data ) {
+        
+            $decoded_data = json_decode( $data, true );
+
+            
+            if ( json_last_error() === JSON_ERROR_NONE && is_array( $decoded_data ) ) {
+                return $decoded_data;
+            } else {
+                return array();
+            }
         }
 
         /**
