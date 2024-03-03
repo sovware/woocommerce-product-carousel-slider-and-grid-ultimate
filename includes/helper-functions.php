@@ -240,7 +240,17 @@ if ( ! function_exists( 'wcpcsu_sanitize_array' ) ) {
 		return $array;
 	}
 }
-function is_json_encoded($data) {
-    json_decode($data);
-    return (json_last_error() == JSON_ERROR_NONE);
+
+/**
+ * Checks if a string is a valid JSON-encoded string.
+ *
+ * @param string $data The string to be checked for JSON encoding.
+ *
+ * @return bool Returns true if the string is a valid JSON-encoded string, false otherwise.
+ */
+if ( ! function_exists( 'is_json_encoded' ) ) {
+	function is_json_encoded( $data ) {
+		json_decode( $data );
+		return (json_last_error() == JSON_ERROR_NONE);
+	}
 }

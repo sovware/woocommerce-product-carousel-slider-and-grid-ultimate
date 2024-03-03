@@ -258,7 +258,7 @@ if( ! in_array('woocommerce-product-carousel-slider-grid-ultimate-pro/main.php',
         }
 
         /**
-         * It will serialize and then encode the string using base64_encode() and return the encoded data
+         * Encodes a PHP value into its JSON representation.
          * @param $data
          * @return string
          */
@@ -267,9 +267,9 @@ if( ! in_array('woocommerce-product-carousel-slider-grid-ultimate-pro/main.php',
         }
 
         /**
-         * It will decode the data using base64_decode() and then unserialize the data and return it
-         * @param string $data Encoded strings that should be decoded and then unserialize
-         * @return mixed
+         * Decodes a JSON-encoded string into a PHP associative array.
+         * @param string $data The JSON-encoded string to be decoded.
+         * @return array Returns the decoded PHP associative array on success, or an empty array on failure.
          */
         public static function json_decoded( $data ) {
         
